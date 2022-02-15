@@ -33,7 +33,9 @@ See [README.md](https://slim-org.github.io/slim/documentation-hosting/) for more
 
 ## Continuous Testing
 
-TBD
+See [README.md](https://slim-org.github.io/slim/continuous-testing/) for more details.
+
+[INSERT MIND-MAP GRAPHIC HERE]
 
 # Contributions
 
