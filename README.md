@@ -1,4 +1,4 @@
-# About
+# SLIM
 
 > _A shared resource for discussing, iterating and referencing best practices in software lifecycle process improvements for multi-mission space and ground software_
 
