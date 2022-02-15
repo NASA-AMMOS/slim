@@ -1,6 +1,6 @@
 # About
 
-_A shared resource for discussing, iterating and referencing best practices in software lifecycle process improvements for multi-mission space and ground software_
+> _A shared resource for discussing, iterating and referencing best practices in software lifecycle process improvements for multi-mission space and ground software_
 
 Software Lifecycle Improvement & Modernization is a repository for best practices in the software development lifecycle. It represents both a community of contributors as well as a storage location for best practices documentation.
 
