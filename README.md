@@ -27,7 +27,13 @@ The list is sorted alphabetically.
 
 ## Documentation Hosting
 
+See [README.md](https://slim-org.github.io/slim/documentation-hosting/) for more details.
+
+[INSERT MIND-MAP GRAPHIC HERE]
+
 ## Continuous Testing
+
+TBD
 
 # Contributions
 
@@ -35,11 +41,19 @@ TBD
 
 ## Version Control
 
+TBD
+
 ## Issue Tracking
+
+TBD
 
 ## Communication Resources
 
+TBD
+
 ## Contribution Guidelines
+
+TBD
 
 # FAQ
 
