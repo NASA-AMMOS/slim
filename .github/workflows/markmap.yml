@@ -39,7 +39,7 @@ jobs:
           for item in "${array[@]}"; do
             markmap --no-open ${item} -o ${item%.*}.html
           done
-      - name: commit rendered markmap html files
+      - name: Commit rendered markmap html files
         run: |
         
           # Need to set Git user / email or Git will complain - setting to default GH Bot
