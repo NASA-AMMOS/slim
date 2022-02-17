@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta http-equiv="X-UA-Compatible" content="ie=edge">
+<title>Markmap</title>
+<style>
+* {
+  margin: 0;
+  padding: 0;
+}
+#mindmap {
+  display: block;
+  width: 100vw;
+  height: 100vh;
+}
+</style>
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/markmap-toolbar@0.2.0/dist/style.min.css">
+</head>
+<body>
+<svg id="mindmap"></svg>
+<script src="https://cdn.jsdelivr.net/npm/d3@6.7.0"></script><script src="https://cdn.jsdelivr.net/npm/markmap-view@0.2.7"></script><script src="https://cdn.jsdelivr.net/npm/markmap-toolbar@0.2.0/dist/index.umd.min.js"></script><script>(r => {
+          setTimeout(r);
+        })(() => {
+  const {
+    markmap,
+    mm
+  } = window;
+  const toolbar = new markmap.Toolbar();
+  toolbar.attach(mm);
+  const el = toolbar.render();
+  el.setAttribute('style', 'position:absolute;bottom:20px;right:20px');
+  document.body.append(el);
+})</script><script>((getMarkmap, getOptions, data) => {
+        const {
+          Markmap
+        } = getMarkmap();
+        window.mm = Markmap.create('svg#mindmap', getOptions == null ? void 0 : getOptions(), data);
+      })(() => window.markmap,null,{"t":"list_item","d":2,"p":{"lines":[0,1]},"v":"Documentation Best Practices","c":[{"t":"list_item","d":4,"p":{"lines":[1,2]},"v":"For Hosting","c":[{"t":"list_item","d":6,"p":{"lines":[2,3]},"v":"Of Source-Controlled (Static) Content","c":[{"t":"list_item","d":8,"p":{"lines":[3,4]},"v":"With Markdown support","c":[{"t":"list_item","d":10,"p":{"lines":[4,5]},"v":"Using Jekyll / GitHub Pages"},{"t":"list_item","d":10,"p":{"lines":[5,6]},"v":"Using ReadTheDocs"},{"t":"list_item","d":10,"p":{"lines":[6,7]},"v":"Using HUGO"},{"t":"list_item","d":10,"p":{"lines":[7,8]},"v":"GitBook"},{"t":"list_item","d":10,"p":{"lines":[8,9]},"v":"HUGO"}]},{"t":"list_item","d":8,"p":{"lines":[9,10]},"v":"With HTML support","c":[{"t":"list_item","d":10,"p":{"lines":[10,11]},"v":"Using HUGO"}]},{"t":"list_item","d":8,"p":{"lines":[11,12]},"v":"With Rich Editing Support (WYSIWYG)","c":[{"t":"list_item","d":10,"p":{"lines":[12,13]},"v":"GitBook"}]}]},{"t":"list_item","d":6,"p":{"lines":[13,14]},"v":"Of Non-Source-Controlled Content","c":[{"t":"list_item","d":8,"p":{"lines":[14,15]},"v":"With Rich Editing Support (WYSIWYG)","c":[{"t":"list_item","d":10,"p":{"lines":[15,16]},"v":"Using Drupal"},{"t":"list_item","d":10,"p":{"lines":[16,17]},"v":"Using WordPress"},{"t":"list_item","d":10,"p":{"lines":[17,18]},"v":"Using Joomla"},{"t":"list_item","d":10,"p":{"lines":[18,19]},"v":"Using Confluence"},{"t":"list_item","d":10,"p":{"lines":[19,20]},"v":"Using Degreed"}]},{"t":"list_item","d":8,"p":{"lines":[20,21]},"v":"With Markup Support","c":[{"t":"list_item","d":10,"p":{"lines":[21,22]},"v":"Using Confluence"},{"t":"list_item","d":10,"p":{"lines":[22,23]},"v":"Using Custom HTML Websites"},{"t":"list_item","d":10,"p":{"lines":[23,24]},"v":"Using MediaWiki"}]}]}]},{"t":"list_item","d":4,"p":{"lines":[24,25]},"v":"For Consistency / Standards","c":[{"t":"list_item","d":6,"p":{"lines":[25,26]},"v":"For Undirected Exploration / High-Level Navigation","c":[{"t":"list_item","d":8,"p":{"lines":[26,27]},"v":"Using HTML websites"},{"t":"list_item","d":8,"p":{"lines":[27,28]},"v":"Using Confluence / Wikis"},{"t":"list_item","d":8,"p":{"lines":[28,29]},"v":"Using Degreed"}]},{"t":"list_item","d":6,"p":{"lines":[29,30]},"v":"For Training Guides","c":[{"t":"list_item","d":8,"p":{"lines":[30,31]},"v":"Using Degreed"},{"t":"list_item","d":8,"p":{"lines":[31,32]},"v":"Using Markdown"},{"t":"list_item","d":8,"p":{"lines":[32,33]},"v":"Using Confluence / Wikis"}]},{"t":"list_item","d":6,"p":{"lines":[33,34]},"v":"For On-Boarding","c":[{"t":"list_item","d":8,"p":{"lines":[34,35]},"v":"New Developers","c":[{"t":"list_item","d":10,"p":{"lines":[35,36]},"v":"Using Slack"},{"t":"list_item","d":10,"p":{"lines":[36,37]},"v":"Using Degreed"},{"t":"list_item","d":10,"p":{"lines":[37,38]},"v":"Using Markdown / README.md's"}]},{"t":"list_item","d":8,"p":{"lines":[38,39]},"v":"New Testers","c":[{"t":"list_item","d":10,"p":{"lines":[39,40]},"v":"Using Slack"},{"t":"list_item","d":10,"p":{"lines":[40,41]},"v":"Using Degreed"},{"t":"list_item","d":10,"p":{"lines":[41,42]},"v":"Using Markdown / README.md's"}]},{"t":"list_item","d":8,"p":{"lines":[42,43]},"v":"New Users","c":[{"t":"list_item","d":10,"p":{"lines":[43,44]},"v":"Using Markdown / README.md's"},{"t":"list_item","d":10,"p":{"lines":[44,45]},"v":"Using HTML websites"},{"t":"list_item","d":10,"p":{"lines":[45,46]},"v":"Using PDFs"},{"t":"list_item","d":10,"p":{"lines":[46,47]},"v":"Using Infographics"}]}]},{"t":"list_item","d":6,"p":{"lines":[47,48]},"v":"For Advertising Software Packages / Applications","c":[{"t":"list_item","d":8,"p":{"lines":[48,49]},"v":"Using HTML Templates"},{"t":"list_item","d":8,"p":{"lines":[49,50]},"v":"Using Wiki Templates"},{"t":"list_item","d":8,"p":{"lines":[50,51]},"v":"Using Markdown Templates"}]},{"t":"list_item","d":6,"p":{"lines":[51,52]},"v":"For Developer Guides","c":[{"t":"list_item","d":8,"p":{"lines":[52,53]},"v":"Using Markdown Templates"},{"t":"list_item","d":8,"p":{"lines":[53,54]},"v":"Using HTML Templates"},{"t":"list_item","d":8,"p":{"lines":[54,55]},"v":"Using Wiki Templates"}]},{"t":"list_item","d":6,"p":{"lines":[55,56]},"v":"For User Guides","c":[{"t":"list_item","d":8,"p":{"lines":[56,57]},"v":"Using Markdown Templates"},{"t":"list_item","d":8,"p":{"lines":[57,58]},"v":"Using HTML Templates"},{"t":"list_item","d":8,"p":{"lines":[58,59]},"v":"Using Wiki Templates"}]},{"t":"list_item","d":6,"p":{"lines":[59,60]},"v":"For Operator Guides","c":[{"t":"list_item","d":8,"p":{"lines":[60,61]},"v":"For Manual Actions / Workarounds","c":[{"t":"list_item","d":10,"p":{"lines":[61,62]},"v":"Using Markdown Templates"},{"t":"list_item","d":10,"p":{"lines":[62,63]},"v":"Using HTML Templates"},{"t":"list_item","d":10,"p":{"lines":[63,64]},"v":"Using Wiki Templates"}]},{"t":"list_item","d":8,"p":{"lines":[64,65]},"v":"For General Cases","c":[{"t":"list_item","d":10,"p":{"lines":[65,66]},"v":"Using Markdown Templates"},{"t":"list_item","d":10,"p":{"lines":[66,67]},"v":"Using HTML Templates"},{"t":"list_item","d":10,"p":{"lines":[67,68]},"v":"Using Wiki Templates"}]}]}]}]})</script>
+</body>
+</html>
