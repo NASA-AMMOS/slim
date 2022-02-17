@@ -1,0 +1,61 @@
+* Documentation Best Practices
+    * For Hosting
+        * Of Source-Controlled (Static) Content
+            * Using Jekyll / GitHub Pages
+            * Using ReadTheDocs
+            * Using HUGO
+        * Of Non-Source-Controlled Content
+            * Supporting WYSIWYG
+                * Using Drupal
+                * Using WordPress
+                * Using Joomla
+                * Using Confluence
+                * Using Degreed
+            * Supporting Markup
+                * Using Confluence
+                * Using Custom HTML Websites
+                * Using Wikipedia
+    * For Consistency / Standards
+        * For Undirected Exploration / High-Level Navigation
+            * Using HTML websites
+            * Using Confluence / Wikis
+            * Using Degreed
+		* For Training Guides
+            * Using Degreed
+            * Using Markdown
+            * Using Confluence / Wikis
+        * For On-Boarding
+            * New Developers
+                * Using Slack
+                * Using Degreed
+                * Using Markdown / README.md's
+            * New Testers
+				* Using Slack
+                * Using Degreed
+                * Using Markdown / README.md's
+            * New Users
+                * Using Markdown / README.md's
+                * Using HTML websites
+                * Using PDFs
+                * Using Infographics
+        * For Advertising Software Packages / Applications
+            * Using HTML Templates
+            * Using Wiki Templates
+            * Using Markdown Templates
+        * For Developer Guides
+            * Using Markdown Templates
+            * Using HTML Templates
+            * Using Wiki Templates
+        * For User Guides
+            * Using Markdown Templates
+            * Using HTML Templates
+            * Using Wiki Templates
+        * For Operator Guides
+            * For Manual Actions / Workarounds
+                * Using Markdown Templates
+                * Using HTML Templates
+                * Using Wiki Templates
+            * For General Cases
+                * Using Markdown Templates
+                * Using HTML Templates
+                * Using Wiki Templates
