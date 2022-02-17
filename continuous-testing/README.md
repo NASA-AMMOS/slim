@@ -4,9 +4,9 @@ _single sentence purpose of best practice solution_
 
 Documentation for understanding use cases, i.e. scenarios important to people and the tools that may help.
 
-#### `use-cases/all.md` [(source)](https://github.com/nasa-ammos/slim/blob/main/continuous-testing/use-cases/all.md)
+#### `use-cases/markmap.md` [(source)](https://github.com/nasa-ammos/slim/blob/main/use-cases/markmap.md) [(rendered)](https://nasa-ammos.github.io/slim/continuous-testing/use-cases/markmap.html)
 
-- _Description:_ source file providing a relevant tree of possible use cases for this particular process improvement need mapped against tools that may help. A particular line entry within the file is either a use case category (has children nodes) or a technological solution (has no children nodes).
+- _Description:_ file providing a relevant tree of possible use cases for this particular process improvement need mapped against tools that may help. A particular line entry within the file is either a use case category (has children nodes) or a technological solution (has no children nodes).
 - _Directions:_ edit this file and submit pull-requests for changes. To render this file visually, compile the source `all.md` file using https://markmap.js.org or preview from https://markmap.js.org/repl
 
 # Reference Architectures
