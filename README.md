@@ -27,13 +27,13 @@ The list is sorted alphabetically.
 
 ## Documentation Hosting
 
-See [README.md](https://slim-org.github.io/slim/documentation-hosting/) for more details.
+See [README.md](https://nasa-ammos.github.io/slim/slim/documentation-hosting/) for more details.
 
 [INSERT MIND-MAP GRAPHIC HERE]
 
 ## Continuous Testing
 
-See [README.md](https://slim-org.github.io/slim/continuous-testing/) for more details.
+See [README.md](https://nasa-ammos.github.io/slim/slim/continuous-testing/) for more details.
 
 [INSERT MIND-MAP GRAPHIC HERE]
 
