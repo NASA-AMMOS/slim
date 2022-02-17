@@ -1,20 +1,27 @@
 * Documentation Best Practices
     * For Hosting
         * Of Source-Controlled (Static) Content
-            * Using Jekyll / GitHub Pages
-            * Using ReadTheDocs
-            * Using HUGO
+            * With Markdown support
+				* Using Jekyll / GitHub Pages
+				* Using ReadTheDocs
+				* Using HUGO
+				* GitBook
+				* HUGO
+			* With HTML support
+				* Using HUGO
+			* With Rich Editing Support (WYSIWYG)
+				* GitBook
         * Of Non-Source-Controlled Content
-            * Supporting WYSIWYG
+            * With Rich Editing Support (WYSIWYG)
                 * Using Drupal
                 * Using WordPress
                 * Using Joomla
                 * Using Confluence
                 * Using Degreed
-            * Supporting Markup
+            * With Markup Support
                 * Using Confluence
                 * Using Custom HTML Websites
-                * Using Wikipedia
+                * Using MediaWiki
     * For Consistency / Standards
         * For Undirected Exploration / High-Level Navigation
             * Using HTML websites
