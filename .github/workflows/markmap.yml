@@ -35,7 +35,7 @@ jobs:
         
           # Parse list of files using spaces
           # Loop through the aforementioned list and run markmap
-          IFS=" " read -a array <<< ${{ steps.filter.outputs.markdown_files }}
+          IFS=" " read -a array <<< "${{ steps.filter.outputs.markdown_files }}"
           for item in "${array[@]}"; do
             markmap --no-open ${item} -o ${item%.*}.html
           done
@@ -47,5 +47,6 @@ jobs:
           git config user.email 'github-actions[bot]@users.noreply.github.com' 
           
           # Commit only if there are changes (otherwise Workflow will error)
-          git diff --quiet HEAD || git commit -am "Markmap HTML (re)generated from source"
+          git add .
+          git commit -am "Markmap HTML (re)generated from source" || echo "Nothing to commit"
           git push
