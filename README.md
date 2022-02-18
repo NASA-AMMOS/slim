@@ -69,24 +69,8 @@ Once you have a tangible issue you're going to work against, you can begin the p
 
 ##### Recommended Process for Contributing a Best Practice Solution to SLIM
 
-```mermaid
-journey
-    title Process
-    section USE CASES
-      Research: 3: Contributor
-      Mind Maps: 3: Contributor
-      Feedback: 5: Contributor, Community
-    section REFERENCE ARCHITECTURES
-      Diagramming: 3: Contributor
-      Feedback: 5: Contributor, Community
-    section TRADE STUDIES
-      Diagramming: 3: Contributor
-      Feedback: 5: Contributor, Community
-     section STARTER KITS
-      Ideate: 5: Contributor, Community
-      Create: 3: Contributor
-      Infusion: 5: Contributor, Community
-```
+<img width="1083" alt="Screen Shot 2022-02-17 at 5 28 35 PM" src="https://user-images.githubusercontent.com/3129134/154600161-f2c998ad-851b-46a2-9c8c-deaf6801b305.png">
+
 
 ##### Understanding the Recommended Process
 
