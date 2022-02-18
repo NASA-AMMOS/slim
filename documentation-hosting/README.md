@@ -1,37 +1,30 @@
-_single sentence purpose of best practice solution_
+# Documentation Hosting Best Practice Guide
 
-# Use Cases
+This this guide, we explore best practices for documentation hosting - including for user guides, administrative guides, API documentation, discussions, and other documentation artifacts. 
 
-Documentation for understanding use cases, i.e. scenarios important to people and the tools that may help.
+## Use Cases
 
-#### `use-cases/markmap.md` [(source)](https://github.com/nasa-ammos/slim/blob/main/use-cases/markmap.md) [(rendered)](https://nasa-ammos.github.io/slim/documentation-hosting/use-cases/markmap.html)
+In this section, we provide information about potentially useful *use cases* for documentation hosting. The key idea is to provide some more nuanced context for the use cases such that technology (tool) solutions can be shared in context. 
 
-- _Description:_ source file providing a relevant tree of possible use cases for this particular process improvement need mapped against tools that may help. A particular line entry within the file is either a use case category (has children nodes) or a technological solution (has no children nodes).
-- _Directions:_ edit this file and submit pull-requests for changes. To render this file visually, compile the source `all.md` file using https://markmap.js.org or preview from https://markmap.js.org/repl
+See our [diagram](https://nasa-ammos.github.io/slim/documentation-hosting/use-cases/markmap.html) for detailed mappings of documentation hosting use cases
 
-# Reference Architectures
+* This diagram provides a relevant tree of possible use cases mapped against tools that we think may help. Read this diagram left-to-right as an English language statement. The parent nodes represent components of a use case, and the leaf nodes (far right) represent tool solutions we think are appropirate for the use case. 
+* Feel free to propose additional use cases or feedback for our mind map by submitting a pull request or issue to [the source file](https://github.com/nasa-ammos/slim/blob/main/documentation-hosting/use-cases/markmap.md). This file is used to render the above mind-map document visually, using https://markmap.js.org
 
-Documentation for specifiying suggested reference architectures for select use case scenarios. 
+## Reference Architectures
 
-#### `reference-architectures/ref-archi-XYZ.md` [(source)](https://github.com/nasa-ammos/slim/blob/main/reference-architectures/ref-archi-XYZ.md)
+In this section, we provide reference architectures that map to select use case scenarios from the above section. The key idea is to provide an architecture / flowchart that simplifies the understanding of how a particular class of tools to satisfy a use case could be put together to help with documentation hosting needs. 
 
-- _Description:_ source file providing a reference architecture for a given use case scenario
-- _Directions:_ edit this file and submit pull-requests for changes.
+*Further resources to be provided soon*
 
 # Trade Studies
 
-Documentation for understanding trade offs, feature comparisons, and metrics for a given set of reference architectures mapped to use case tool solutions. Choice of comparison points are solicited directly from community members feedback.
+Here we provide a table of trade offs, feature comparisons, and metrics for a given set of reference architectures mapped to use case tool solutions. Choice of comparison points are solicited directly from community members feedback.
 
-#### `trade-studies/trade-study-XYZ.md` [(source)](https://github.com/nasa-ammos/slim/blob/main/trade-studies/trade-study-XYZ.md)
-
-- _Description:_ source file providing a table of comparison trade offs
-- _Directions:_ edit this file and submit pull-requests for changes.
+*Further resources to be provided soon*
 
 # Starter Kits
 
-Code & configuration for encoding select reference architecture, with select tools chosen from trade studies, through automation. The key idea for starter kits is to work with folks in the SLIM community and create template solutions that can be easily modified and deployed to enact a process improvment change. These solutions should serve to both provide example implementations and references for getting started. 
+In this section, we provide code & configuration for encoding select reference architectures, with select tools chosen from trade studies, through automation. The key idea for starter kits is to work with folks in the SLIM community and create template solutions that can be easily modified and deployed to enact a process improvment change. These solutions should serve to both provide example implementations and references for getting started. 
 
-#### `starter-kits/starter-kit-XYZ/` [(source)](https://github.com/nasa-ammos/slim/blob/main/starter-kits/starter-kit-XYZ.md)
-
-- _Description:_ directory containing code or configuration representing a starter kit. A README.md file should be present.
-- _Directions:_ edit files within this directory and submit pull-requests for changes.
+*Further resources to be provided soon*
