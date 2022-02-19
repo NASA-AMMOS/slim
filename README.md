@@ -33,15 +33,15 @@ The following sections link to best practices resources developed by SLIM for pr
 
 The list is sorted alphabetically and is continually being added to.
 
-## Documentation Hosting
+## Documentation
 
-Best practice documentation hosting solutions for:
-* Choice of documentation hosting for user / devevelopment / administrative guides & specifications, including API references, forum discussions, etc. 
+Best practice documentation solutions for:
+* Choice of documentation building, hosting, editing for user / devevelopment / administrative guides & specifications, including API references, forum discussions, etc. 
   * Ex. GH Pages, ReadTheDocs, GitBook, Wikis etc.
 * Reference architecture for templating & auto-generation of documentation artifacts
 * Instantiation of documentation hosts and examples
 
-See [here](https://nasa-ammos.github.io/slim/documentation-hosting/) for more details.
+See [here](https://nasa-ammos.github.io/slim/documentation/) for more details.
 
 ## Continuous Testing
 
