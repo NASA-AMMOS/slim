@@ -1,68 +1,47 @@
-* Documentation Best Practices
-    * For Hosting
-        * Of Source-Controlled (Static) Content
-            * With Markdown support
-				* Using Jekyll / GitHub Pages
-				* Using ReadTheDocs
-				* Using HUGO
-				* GitBook
-				* HUGO
-			* With HTML support
-				* Using HUGO
-			* With Rich Editing Support (WYSIWYG)
-				* GitBook
-        * Of Non-Source-Controlled Content
-            * With Rich Editing Support (WYSIWYG)
-                * Using Drupal
-                * Using WordPress
-                * Using Joomla
-                * Using Confluence
-                * Using Degreed
-            * With Markup Support
-                * Using Confluence
-                * Using Custom HTML/JS/CSS Websites
-                * Using MediaWiki
-    * For Consistency / Standards
-        * For Undirected Exploration / High-Level Navigation
-            * Using HTML websites
-            * Using Confluence / Wikis
-            * Using Degreed
-		* For Training Guides
-            * Using Degreed
-            * Using Markdown
-            * Using Confluence / Wikis
-        * For On-Boarding
-            * New Developers
-                * Using Slack
-                * Using Degreed
-                * Using Markdown / README.md's
-            * New Testers
-				* Using Slack
-                * Using Degreed
-                * Using Markdown / README.md's
-            * New Users
-                * Using Markdown / README.md's
-                * Using HTML websites
-                * Using PDFs
-                * Using Infographics
-        * For Advertising Software Packages / Applications
-            * Using HTML Templates
-            * Using Wiki Templates
-            * Using Markdown Templates
-        * For Developer Guides
-            * Using Markdown Templates
-            * Using HTML Templates
-            * Using Wiki Templates
-        * For User Guides
-            * Using Markdown Templates
-            * Using HTML Templates
-            * Using Wiki Templates
-        * For Operator Guides
-            * For Manual Actions / Workarounds
-                * Using Markdown Templates
-                * Using HTML Templates
-                * Using Wiki Templates
-            * For General Cases
-                * Using Markdown Templates
-                * Using HTML Templates
-                * Using Wiki Templates
+* Documentation Hosting Best Practices
+    * For Building Docs from Source
+      * Of User / Admin / Dev Docs
+        * Using [RETYPE](https://retype.com/)
+        * Using [Jekyll](https://jekyllrb.com)
+        * Using [mdBook](https://rust-lang.github.io/mdBook/)
+        * Using [docusaurus](https://docusaurus.io/)
+        * Using [MkDocs](https://www.mkdocs.org/)
+        * Using [daux](http://daux.io/index.html)
+        * Using [docsify](https://docsify.js.org/#/)
+        * Using [DocFX](https://dotnet.github.io/docfx/)
+      * Of Code
+        * Of APIs
+          * Using [Swagger Codegen](https://swagger.io/tools/swagger-codegen/)
+        * Using [DocFX](https://dotnet.github.io/docfx/)
+      * Of Diagrams
+        * Using [Mermaid](https://mermaid-js.github.io/)
+        * Using [daux](http://daux.io/index.html)
+        * Using [RETYPE](https://retype.com/)
+    * For Hosting Docs
+      * On Self-Managed Hosts
+        * Of User / Admin / Dev Docs
+          * Using [BookStack](https://www.bookstackapp.com)
+          * Using [DocuWiki](https://www.dokuwiki.org/dokuwiki)
+        * Of Diagrams
+          * Using [BookStack](https://www.bookstackapp.com)
+      * On Third-Party Managed Hosts
+        * Of User / Admin / Dev Docs
+          * Using [GitHub Pages](https://pages.github.com)
+          * Using [Archbee](https://www.archbee.io)
+          * Using [GitBook](https://www.gitbook.com)
+          * Using [ReadTheDocs](https://readthedocs.org)
+          * Using [readme](https://readme.com/)
+          * Using [Confluence](https://www.atlassian.com/software/confluence)
+        * Of APIs
+          * Using [GitBook](https://www.gitbook.com)
+          * Using [Archbee](https://www.archbee.io)
+          * Using [readme](https://readme.com/)
+          * Using [SwaggerHub](https://swagger.io/tools/swaggerhub/)
+        * Of Mailing Lists / Discussions / Threads
+          * Using [GitHub Discussions](https://docs.github.com/en/discussions)
+          * Using [readme](https://readme.com/)
+        * Of Diagrams
+          * Using [LucidChart](https://www.lucidchart.com/pages/)
+    * For Editing Docs
+      * On Client-Side
+      * On Server-Side
