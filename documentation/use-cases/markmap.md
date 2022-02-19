@@ -1,4 +1,4 @@
-* Documentation Hosting Best Practices
+* Documentation Best Practices
     * For Building Docs from Source
       * Of User / Admin / Dev Docs
         * Using [RETYPE](https://retype.com/)
