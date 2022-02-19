@@ -42,6 +42,3 @@
           * Using [readme](https://readme.com/)
         * Of Diagrams
           * Using [LucidChart](https://www.lucidchart.com/pages/)
-    * For Editing Docs
-      * On Client-Side
-      * On Server-Side
