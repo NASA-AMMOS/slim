@@ -9,6 +9,8 @@
         * Using [daux](http://daux.io/index.html)
         * Using [docsify](https://docsify.js.org/#/)
         * Using [DocFX](https://dotnet.github.io/docfx/)
+        * Using [GitBook](https://www.gitbook.com)
+        * Using [ReadTheDocs](https://readthedocs.org)
       * Of Code
         * Of APIs
           * Using [Swagger Codegen](https://swagger.io/tools/swagger-codegen/)
