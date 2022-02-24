@@ -26,6 +26,7 @@
         * Of Code
           * Of APIs
             * Using [Swagger Codegen](https://swagger.io/tools/swagger-codegen/)
+            * Using [Redoc](https://github.com/Redocly/redoc)
           * Using [DocFX](https://dotnet.github.io/docfx/)
         * Of Diagrams
           * Using [Mermaid](https://mermaid-js.github.io/)
