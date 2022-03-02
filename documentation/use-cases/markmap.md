@@ -60,3 +60,19 @@
         * Using [GitHub Discussions](https://docs.github.com/en/discussions)
         * Using [Google Groups](https://support.google.com/groups/answer/2464926)
         * Using [Mailman](http://www.list.org)
+    * For Doc Categories
+      * For READMEs
+        * Using [README Maturity Model](https://github.com/LappleApple/feedmereadmes/blob/master/README-maturity-model.md)
+        * Using [Documentation Driven Development](https://blog.izs.me/2017/06/documentation-driven-development/)
+      * For Requirements
+      * For Architecture / Design
+        * Using [C4 model](https://c4model.com)
+      * For Inferface Control
+      * For Test Planning
+      * For Releases
+        * For Release Plans
+        * For Release Descriptions
+      * For Guides
+        * For User / Operator Guides
+        * For Admin Guides
+        * For Developer Guides
