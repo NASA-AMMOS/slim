@@ -65,9 +65,11 @@
         * Using [README Maturity Model](https://github.com/LappleApple/feedmereadmes/blob/master/README-maturity-model.md)
         * Using [Documentation Driven Development](https://blog.izs.me/2017/06/documentation-driven-development/)
       * For Requirements
+        * Using [NASA Systems Engineering Handbook](https://www.nasa.gov/seh/appendix-c-how-to-write-a-good-requirement)
       * For Architecture / Design
         * Using [C4 model](https://c4model.com)
       * For Inferface Control
+        * Using [NASA Systems Engineering Handbook](https://www.nasa.gov/seh/appendix-l-interface-requirements-document-outline)
       * For Test Planning
       * For Releases
         * For Release Plans
