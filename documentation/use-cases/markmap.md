@@ -53,8 +53,10 @@
           * Using [Archbee](https://www.archbee.io)
           * Using [readme](https://readme.com/)
           * Using [SwaggerHub](https://swagger.io/tools/swaggerhub/)
-        * Of Mailing Lists / Discussions / Threads
-          * Using [GitHub Discussions](https://docs.github.com/en/discussions)
-          * Using [readme](https://readme.com/)
         * Of Diagrams
           * Using [LucidChart](https://www.lucidchart.com/pages/)
+    * For Embedded Docs
+      * From Mailing Lists / Discussions / Threads
+        * Using [GitHub Discussions](https://docs.github.com/en/discussions)
+        * Using [Google Groups](https://support.google.com/groups/answer/2464926)
+        * Using [Mailman](http://www.list.org)
