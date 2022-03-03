@@ -1,7 +1,7 @@
 * Documentation Best Practices
     * For Building Docs
       * With a Content Management System (CMS)
-        * With Git-based Workflows
+        * With Git-based Workflows [📖 TRADE STUDY](https://github.com/NASA-AMMOS/slim/blob/main/documentation/trade-studies/trade-study-builddocs-cms-git.md)
           * Using [CrafterCMS](https://craftercms.org)
           * Using [GitBook](https://www.gitbook.com)
           * Using [netlifycms](https://www.netlifycms.org)
