@@ -45,7 +45,6 @@
       * On Third-Party Managed Hosts
         * Of User / Admin / Dev Docs
           * Using [GitHub Pages](https://pages.github.com)
-          * Using [Archbee](https://www.archbee.io)
           * Using [GitBook](https://www.gitbook.com)
           * Using [ReadTheDocs](https://readthedocs.org)
           * Using [readme](https://readme.com/)
@@ -53,7 +52,6 @@
           * Using [GitHub Wikis](https://docs.github.com/en/communities/documenting-your-project-with-wikis/about-wikis)
         * Of APIs
           * Using [GitBook](https://www.gitbook.com)
-          * Using [Archbee](https://www.archbee.io)
           * Using [readme](https://readme.com/)
           * Using [SwaggerHub](https://swagger.io/tools/swaggerhub/)
         * Of Diagrams
