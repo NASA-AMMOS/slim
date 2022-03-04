@@ -1,7 +1,7 @@
 * Documentation Best Practices
     * For Building Docs
       * With a Content Management System (CMS)
-        * With Git-based Workflows [📖 TRADE STUDY](https://github.com/NASA-AMMOS/slim/blob/main/documentation/trade-studies/trade-study-builddocs-cms-git.md)
+        * With Git-backed Support [📖 TRADE STUDY](https://github.com/NASA-AMMOS/slim/blob/main/documentation/trade-studies/trade-study-builddocs-cms-git.md)
           * Using [CrafterCMS](https://craftercms.org)
           * Using [GitBook](https://www.gitbook.com)
           * Using [netlifycms](https://www.netlifycms.org)
@@ -11,7 +11,9 @@
         * Using [BookStack](https://www.bookstackapp.com)
         * Using [DocuWiki](https://www.dokuwiki.org/dokuwiki)
         * Using [Strapi](https://strapi.io)
-        * Using [BookStack](https://www.bookstackapp.com)
+        * Using [readme](https://readme.com/)
+        * Using [Confluence](https://www.atlassian.com/software/confluence)
+        * Using [GitHub Wikis](https://docs.github.com/en/communities/documenting-your-project-with-wikis/about-wikis)
       * From Source Code
         * Of User / Admin / Dev Docs
           * Using [RETYPE](https://retype.com/)
@@ -48,6 +50,7 @@
           * Using [ReadTheDocs](https://readthedocs.org)
           * Using [readme](https://readme.com/)
           * Using [Confluence](https://www.atlassian.com/software/confluence)
+          * Using [GitHub Wikis](https://docs.github.com/en/communities/documenting-your-project-with-wikis/about-wikis)
         * Of APIs
           * Using [GitBook](https://www.gitbook.com)
           * Using [Archbee](https://www.archbee.io)
