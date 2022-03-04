@@ -1,4 +1,30 @@
 * Documentation Best Practices
+    * For Hosting Docs
+      * Of User / Admin / Dev Docs [📖 TRADE STUDY](https://github.com/NASA-AMMOS/slim/blob/main/documentation/trade-studies/trade-study-hostingdocs-user.md)
+        * On Git Repositories
+          * Using [CrafterCMS](https://craftercms.org)
+          * Using [GitBook](https://www.gitbook.com)
+          * Using [netlifycms](https://www.netlifycms.org)
+          * Using [Tina](https://tina.io)
+          * Using [Publii](https://getpublii.com)
+          * Using [Jeykll Admin](https://jekyll.github.io/jekyll-admin/)
+          * Using [GitHub Wikis](https://docs.github.com/en/communities/documenting-your-project-with-wikis/about-wikis)
+          * Using [GitHub Pages](https://pages.github.com)
+        * On Self-Managed Hosts
+          * Using [BookStack](https://www.bookstackapp.com)
+          * Using [DocuWiki](https://www.dokuwiki.org/dokuwiki)
+          * Using [Strapi](https://strapi.io)
+          * Using [Keystone](https://keystonejs.com)
+        * On Third-Party Managed Hosts
+          * Using [ReadTheDocs](https://readthedocs.org)
+          * Using [readme](https://readme.com/)
+          * Using [Confluence](https://www.atlassian.com/software/confluence)
+      * Of APIs
+        * Using [GitBook](https://www.gitbook.com)
+        * Using [readme](https://readme.com/)
+        * Using [SwaggerHub](https://swagger.io/tools/swaggerhub/)
+      * Of Diagrams
+        * Using [LucidChart](https://www.lucidchart.com/pages/)
     * For Building Docs
       * Of User / Admin / Dev Docs
         * Using [RETYPE](https://retype.com/)
@@ -20,40 +46,12 @@
         * Using [daux](http://daux.io/index.html)
         * Using [RETYPE](https://retype.com/)
         * Using [C4-builder](https://adrianvlupu.github.io/C4-Builder/#/)
-    * For Hosting Docs
-      * Of User / Admin / Dev Docs [📖 TRADE STUDY](https://github.com/NASA-AMMOS/slim/blob/main/documentation/trade-studies/trade-study-hostingdocs-user.md)
-        * From Git Repositories
-          * Using [CrafterCMS](https://craftercms.org)
-          * Using [GitBook](https://www.gitbook.com)
-          * Using [netlifycms](https://www.netlifycms.org)
-          * Using [Tina](https://tina.io)
-          * Using [Publii](https://getpublii.com)
-          * Using [Jeykll Admin](https://jekyll.github.io/jekyll-admin/)
-          * Using [GitHub Wikis](https://docs.github.com/en/communities/documenting-your-project-with-wikis/about-wikis)
-        * On Self-Managed Hosts
-          * Using [BookStack](https://www.bookstackapp.com)
-          * Using [DocuWiki](https://www.dokuwiki.org/dokuwiki)
-          * Using [Strapi](https://strapi.io)
-          * Using [Keystone](https://keystonejs.com)
-        * On Third-Party Managed Hosts
-          * Using [GitHub Pages](https://pages.github.com)
-          * Using [GitHub Wikis](https://docs.github.com/en/communities/documenting-your-project-with-wikis/about-wikis)
-          * Using [GitBook](https://www.gitbook.com)
-          * Using [ReadTheDocs](https://readthedocs.org)
-          * Using [readme](https://readme.com/)
-          * Using [Confluence](https://www.atlassian.com/software/confluence)
-      * Of APIs
-        * Using [GitBook](https://www.gitbook.com)
-        * Using [readme](https://readme.com/)
-        * Using [SwaggerHub](https://swagger.io/tools/swaggerhub/)
-      * Of Diagrams
-        * Using [LucidChart](https://www.lucidchart.com/pages/)
-    * For Embedded Docs
+    * For Embedding Docs
       * From Mailing Lists / Discussions / Threads
         * Using [GitHub Discussions](https://docs.github.com/en/discussions)
         * Using [Google Groups](https://support.google.com/groups/answer/2464926)
         * Using [Mailman](http://www.list.org)
-    * For Doc Categories
+    * For Writing Docs
       * For READMEs
         * Using [README Maturity Model](https://github.com/LappleApple/feedmereadmes/blob/master/README-maturity-model.md)
         * Using [Documentation Driven Development](https://blog.izs.me/2017/06/documentation-driven-development/)
