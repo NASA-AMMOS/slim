@@ -1,9 +1,0 @@
-| Tool Name    | Pricing    | Doc Build Time | GitHub Integration | Self-Hosting | Managed Hosting | Server or Client Side Tool | API Doc Gen Support | API Available | WYSIWYG Support | Templating Support |
-| ------------ | ---------- | -------------- | ------------------ | ------------ | --------------- | -------------------------- | ------------------- | ------------- | --------------- | ------------------ |
-| GitBook      | Free / $$$ | ***            | Yes                | No           | Yes             |                            |                     |               |                 |                    |
-| readme       | Free / $   | *              |                    |              |                 |                            |                     |               |                 |                    |
-| CrafterCMS   |            |                |                    |              |                 |                            |                     |               |                 |                    |
-| Tina         |            |                |                    |              |                 |                            |                     |               |                 |                    |
-| netlifycms   |            |                |                    |              |                 |                            |                     |               |                 |                    |
-| Publii       |            |                |                    |              |                 |                            |                     |               |                 |                    |
-| Jeykll Admin |            |                |                    |              |                 |                            |                     |               |                 |                    |

@@ -1,0 +1,15 @@
+| Tool Name    | Pricing            | Doc Build Time | Git-Backed | Self-Hosting | Managed Hosting | Server or Client Side Tool | API Doc Gen Support | API Available | WYSIWYG Support | Templating Support |
+| ------------ | ------------------ | -------------- | ---------- | ------------ | --------------- | -------------------------- | ------------------- | ------------- | --------------- | ------------------ |
+| GitBook      | Free for OSS / $$$ | ***            | Yes        | No           | Yes             |                            |                     |               |                 |                    |
+| readme       | Free tier / $      | *              | Yes        |              |                 |                            |                     |               |                 |                    |
+| CrafterCMS   |                    |                | Yes        |              |                 |                            |                     |               |                 |                    |
+| Tina         |                    |                | Yes        |              |                 |                            |                     |               |                 |                    |
+| netlifycms   |                    |                | Yes        |              |                 |                            |                     |               |                 |                    |
+| Publii       |                    |                | Yes        |              |                 |                            |                     |               |                 |                    |
+| Jeykll Admin |                    |                | Yes        |              |                 |                            |                     |               |                 |                    |
+| BookStack    |                    |                | No         |              |                 |                            |                     |               |                 |                    |
+| DocuWiki     |                    |                | No         |              |                 |                            |                     |               |                 |                    |
+| Strapi       |                    |                | No         |              |                 |                            |                     |               |                 |                    |
+| readme       |                    |                | No         |              |                 |                            |                     |               |                 |                    |
+| Confluence   | Free for OSS / $$  |                | No         |              |                 |                            |                     |               |                 |                    |
+| GitHub Wikis | Free               |                | Yes        |              |                 |                            |                     |               |                 |                    |
