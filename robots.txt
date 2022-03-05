@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://nasa-ammos.github.io/slim/sitemap.xml.gz
