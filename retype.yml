@@ -1,0 +1,11 @@
+input: .
+output: .retype
+url: # Add your website address here
+branding:
+  title: SLIM
+  label: Docs
+links:
+  - text: Find us on GitHub
+    link: https://github.com/nasa-ammos/slim
+footer:
+  copyright: "&copy; Copyright {{ year }}. All rights reserved."

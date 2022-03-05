@@ -27,13 +27,13 @@ Every financial fiscal quarter, SLIM convenes community members to solicit input
 
 More information on currently active needs being solicited from community members is available here: TBD
 
-# Best Practice Guides
+## Best Practice Guides
 
 The following sections link to best practices resources developed by SLIM for process improvement needs solicited by the wider SLIM community.
 
 The list is sorted alphabetically and is continually being added to.
 
-## Documentation
+### Documentation
 
 Best practice documentation solutions for:
 * Choice of documentation building, hosting, editing for user / devevelopment / administrative guides & specifications, including API references, forum discussions, etc. 
@@ -43,21 +43,21 @@ Best practice documentation solutions for:
 
 See [here](https://nasa-ammos.github.io/slim/documentation/) for more details.
 
-## Continuous Testing
+### Continuous Testing
 
 See [here](https://nasa-ammos.github.io/slim/continuous-testing/) for more details.
 
-# Contributions
+## Contributions
 
 Interested in getting involved with SLIM? The best way to get involved is to become a contributor. Below we talk about some of the types of contributions we welcome.
 
-### Contributing A Best Practice Guide
+#### Contributing A Best Practice Guide
 
 Researching, sharing, and disseminating best practices is the bread-and-butter of the SLIM effort. We welcome folks who wish to (1) help provide best practice solutions for active / open needs (link TBD) as well as those who'd like to contribute best practice solutions for new needs that you may alraedy have great solutions for. Additionally, we welcome (2) iterative improvements for existing best practice solutions already shared on the SLIM repository.
 
 Let's explore each of these sub categories for contributing best practices:
 
-#### For Creating a New Best Practice Guide
+##### For Creating a New Best Practice Guide
 
 The following is a checklist before you start work on developing new, best practice guide:
 1. Check if there are Issue Ticket(s) documenting a need for a best practice solution, feel free to create a ticket if none exist for your contribution
@@ -67,7 +67,7 @@ The following is a checklist before you start work on developing new, best pract
 
 Once you have a tangible issue you're going to work against, you can begin the process to contribute your best practice. The process is not strictly about code development or documentation, rather, it is a multi-step process to ensure your best practice solution is going to meet a tangible community need. We want to help make sure your best practice solution is not only incorporated into SLIM, but actively used! Note, we recommend engaging with the SLIM community throughout the process, but if you've already created some best practice solutions you just want to document, then you can skip some of the community soliciting steps below and get feedback directly as you're developing your documentation. The following flowchart provides guidance on the best recommended process for developing and sharing a best practice solution.
 
-##### Recommended Process for Contributing a Best Practice Solution to SLIM
+###### Recommended Process for Contributing a Best Practice Solution to SLIM
 
 <img width="1083" alt="Screen Shot 2022-02-17 at 5 28 35 PM" src="https://user-images.githubusercontent.com/3129134/154600161-f2c998ad-851b-46a2-9c8c-deaf6801b305.png">
 
@@ -92,7 +92,7 @@ journey
 ```
 -->
 
-##### Understanding the Recommended Process
+###### Understanding the Recommended Process
 
 To help you understand the recommended process diagrammed above, this section explains each component of the diagram:
 
@@ -121,26 +121,26 @@ To help you understand the recommended process diagrammed above, this section ex
   - `Create` - here's where you'll want to spend some dedicated time to create a starter kit. A starter kit can be anything that helps SLIM community members initialize an instance of your architecture that uses tools you've evaluated and fulfills a use case you explored. For example, for our "Documentation Hosting" process improvement need, we may create a starter kit that takes the form of a GitHub Action Workflow automatically generating documentation sites from customized markdown static content on GitHub. It's always a good idea to make your starter kit as generic as possible, including using environment variables to allow SLIM community members to customize the starter kit easily. Add your starter kit scripts or configuration to the `starter-kits/` folder within your best practices paretn folder.
   - `Infusion` - in this final step, it's time to share your entire solution with the SLIM community and optionally aid community members with infusing your starter kit into their development workflow, or helping them understand any one of your diagrams produced. The best way to kickstart infusion is to propose a formal pull-request for your entire best practices folder (so that it can be incorporated in to the SLIM documentation site) and announce the development work you've down to the community.
 
-#### For Adding Improvements to an Existing Best Practice Guide
+##### For Adding Improvements to an Existing Best Practice Guide
 
 TBD
 
-## Version Control
+### Version Control
 
 TBD
 
-## Issue Tracking
+### Issue Tracking
 
 TBD
 
-## Communication Resources
+### Communication Resources
 
 TBD
 
-## Contribution Guidelines
+### Contribution Guidelines
 
 TBD
 
-# FAQ
+## FAQ
 
 TBD
