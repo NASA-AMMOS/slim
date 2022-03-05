@@ -15,6 +15,7 @@
           * Using [DocuWiki](https://www.dokuwiki.org/dokuwiki)
           * Using [Strapi](https://strapi.io)
           * Using [Keystone](https://keystonejs.com)
+          * Using [Gatsby](https://www.gatsbyjs.com/use-cases/technical-documentation)
         * On Third-Party Managed Hosts
           * Using [ReadTheDocs](https://readthedocs.org)
           * Using [readme](https://readme.com/)
@@ -40,6 +41,7 @@
         * Of APIs
           * Using [Swagger Codegen](https://swagger.io/tools/swagger-codegen/)
           * Using [Redoc](https://github.com/Redocly/redoc)
+          * Using [GitBook](https://www.gitbook.com)
         * Using [DocFX](https://dotnet.github.io/docfx/)
       * Of Diagrams
         * Using [Mermaid](https://mermaid-js.github.io/)
