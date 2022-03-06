@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta http-equiv="X-UA-Compatible" content="ie=edge">
+<title>Markmap</title>
+<style>
+* {
+  margin: 0;
+  padding: 0;
+}
+#mindmap {
+  display: block;
+  width: 100vw;
+  height: 100vh;
+}
+</style>
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/markmap-toolbar@0.2.0/dist/style.min.css">
+</head>
+<body>
+<svg id="mindmap"></svg>
+<script src="https://cdn.jsdelivr.net/npm/d3@6.7.0"></script><script src="https://cdn.jsdelivr.net/npm/markmap-view@0.2.7"></script><script src="https://cdn.jsdelivr.net/npm/markmap-toolbar@0.2.0/dist/index.umd.min.js"></script><script>(r => {
+          setTimeout(r);
+        })(() => {
+  const {
+    markmap,
+    mm
+  } = window;
+  const toolbar = new markmap.Toolbar();
+  toolbar.attach(mm);
+  const el = toolbar.render();
+  el.setAttribute('style', 'position:absolute;bottom:20px;right:20px');
+  document.body.append(el);
+})</script><script>((getMarkmap, getOptions, data) => {
+        const {
+          Markmap
+        } = getMarkmap();
+        window.mm = Markmap.create('svg#mindmap', getOptions == null ? void 0 : getOptions(), data);
+      })(() => window.markmap,null,{"t":"list_item","d":2,"p":{"lines":[0,1]},"v":"Continuous Testing","c":[{"t":"list_item","d":4,"p":{"lines":[1,2]},"v":"For WebApps","c":[{"t":"list_item","d":6,"p":{"lines":[2,3]},"v":"Using Selenium"},{"t":"list_item","d":6,"p":{"lines":[3,4]},"v":"Using WebDriver"}]},{"t":"list_item","d":4,"p":{"lines":[4,5]},"v":"For API's","c":[{"t":"list_item","d":6,"p":{"lines":[5,6]},"v":"Using RESTAssured"}]},{"t":"list_item","d":4,"p":{"lines":[6,7]},"v":"For Backend","c":[{"t":"list_item","d":6,"p":{"lines":[7,8]},"v":"Using Chaos Monkey"},{"t":"list_item","d":6,"p":{"lines":[8,9]},"v":"Using Robot Framework"},{"t":"list_item","d":6,"p":{"lines":[9,10]},"v":"Using Cucumber Open"}]},{"t":"list_item","d":4,"p":{"lines":[10,11]},"v":"For Mobile"},{"t":"list_item","d":4,"p":{"lines":[11,12]},"v":"For Generating Reports","c":[{"t":"list_item","d":6,"p":{"lines":[12,13]},"v":"Using TestRail"},{"t":"list_item","d":6,"p":{"lines":[13,14]},"v":"Using Serenity"}]}]})</script>
+</body>
+</html>
