@@ -33,6 +33,10 @@ The following sections link to best practices resources developed by SLIM for pr
 
 The list is sorted alphabetically and is continually being added to.
 
+### Continuous Testing
+
+See [here](continuous-testing/README.md) for more details.
+
 ### Documentation
 
 Best practice documentation solutions for:
@@ -41,11 +45,7 @@ Best practice documentation solutions for:
 * Reference architecture for templating & auto-generation of documentation artifacts
 * Instantiation of documentation hosts and examples
 
-See [here](https://nasa-ammos.github.io/slim/documentation/) for more details.
-
-### Continuous Testing
-
-See [here](https://nasa-ammos.github.io/slim/continuous-testing/) for more details.
+See [here](documentation/README.md) for more details.
 
 ## Contributions
 
