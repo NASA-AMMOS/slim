@@ -1,6 +1,6 @@
 * Documentation Best Practices
     * For Hosting Docs
-      * Of User / Admin / Dev Docs [📖 TRADE STUDY](https://github.com/NASA-AMMOS/slim/blob/main/documentation/trade-studies/trade-study-hostingdocs-user.md)
+      * Of User / Admin / Dev Docs [📖 TRADE STUDY](../trade-studies/trade-study-hostingdocs-user)
         * On Git Repositories
           * Using [CrafterCMS](https://craftercms.org)
           * Using [GitBook](https://www.gitbook.com)
