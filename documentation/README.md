@@ -8,7 +8,7 @@ In this section, we provide information about potentially useful *use cases* for
 
 [See list of use cases](use-cases/README.md)
 
-# Trade Studies
+## Trade Studies
 
 Here we provide a table of trade offs, feature comparisons, and metrics for a given set of reference architectures mapped to use case tool solutions. Choice of comparison points are solicited directly from community members feedback.
 
@@ -20,7 +20,7 @@ In this section, we provide reference architectures that map to select use case 
 
 [See list of reference architectures](reference-architectures/README.md)
 
-# Starter Kits
+## Starter Kits
 
 In this section, we provide code & configuration for encoding select reference architectures, with select tools chosen from trade studies, through automation. The key idea for starter kits is to work with folks in the SLIM community and create template solutions that can be easily modified and deployed to enact a process improvment change. These solutions should serve to both provide example implementations and references for getting started. 
 

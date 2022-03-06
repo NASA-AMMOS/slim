@@ -9,3 +9,5 @@ links:
     link: https://github.com/nasa-ammos/slim
 footer:
   copyright: "&copy; Copyright {{ year }}. All rights reserved."
+include:
+  - "**/*markmap.html"
