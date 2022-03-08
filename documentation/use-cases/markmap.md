@@ -4,7 +4,6 @@
         * From Git Repositories
           * With WYSIWYG Support
             * Using [GitBook](https://www.gitbook.com)
-            * Using [Jeykll Admin](https://jekyll.github.io/jekyll-admin/)
             * Using [GitHub Wikis](https://docs.github.com/en/communities/documenting-your-project-with-wikis/about-wikis)
           * Using [GitHub Pages](https://pages.github.com)
           * Using [RETYPE](https://retype.com/)
