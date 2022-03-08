@@ -48,11 +48,15 @@
         * Using [daux](http://daux.io/index.html)
         * Using [RETYPE](https://retype.com/)
         * Using [C4-builder](https://adrianvlupu.github.io/C4-Builder/#/)
-    * For Embedding Docs
+    * For Embedded Docs
       * From Mailing Lists / Discussions / Threads
         * Using [GitHub Discussions](https://docs.github.com/en/discussions)
         * Using [Google Groups](https://support.google.com/groups/answer/2464926)
         * Using [Mailman](http://www.list.org)
+      * From Automated Sources
+        * From Logs
+        * From Reports
+        * From Alerts
     * For Writing Docs
       * For READMEs
         * Using [README Maturity Model](https://github.com/LappleApple/feedmereadmes/blob/master/README-maturity-model.md)
