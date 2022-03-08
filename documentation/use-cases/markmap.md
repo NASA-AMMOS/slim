@@ -5,7 +5,6 @@
           * With WYSIWYG Support
             * Using [GitBook](https://www.gitbook.com)
             * Using [netlifycms](https://www.netlifycms.org)
-            * Using [Tina](https://tina.io)
             * Using [Publii](https://getpublii.com)
             * Using [Jeykll Admin](https://jekyll.github.io/jekyll-admin/)
             * Using [GitHub Wikis](https://docs.github.com/en/communities/documenting-your-project-with-wikis/about-wikis)
