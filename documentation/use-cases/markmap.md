@@ -4,7 +4,6 @@
         * From Git Repositories
           * With WYSIWYG Support
             * Using [GitBook](https://www.gitbook.com)
-            * Using [Publii](https://getpublii.com)
             * Using [Jeykll Admin](https://jekyll.github.io/jekyll-admin/)
             * Using [GitHub Wikis](https://docs.github.com/en/communities/documenting-your-project-with-wikis/about-wikis)
           * Using [GitHub Pages](https://pages.github.com)
@@ -71,3 +70,7 @@
         * For User / Operator Guides
         * For Admin Guides
         * For Developer Guides
+    * For Publicizing Docs
+      * From Blogging Platforms
+        * Using [Publii](https://getpublii.com)
+      * From Website Platforms
