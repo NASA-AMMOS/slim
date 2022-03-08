@@ -1,15 +1,25 @@
 * Documentation Best Practices
-    * For Hosting Docs
+    * For Building / Maintaining / Hosting Docs
       * Of User / Admin / Dev Docs [📖 TRADE STUDY](../trade-studies/trade-study-hostingdocs-user)
-        * On Git Repositories
-          * Using [CrafterCMS](https://craftercms.org)
-          * Using [GitBook](https://www.gitbook.com)
-          * Using [netlifycms](https://www.netlifycms.org)
-          * Using [Tina](https://tina.io)
-          * Using [Publii](https://getpublii.com)
-          * Using [Jeykll Admin](https://jekyll.github.io/jekyll-admin/)
-          * Using [GitHub Wikis](https://docs.github.com/en/communities/documenting-your-project-with-wikis/about-wikis)
+        * From Git Repositories
+          * With WYSIWYG Support
+            * Using [CrafterCMS](https://craftercms.org)
+            * Using [GitBook](https://www.gitbook.com)
+            * Using [netlifycms](https://www.netlifycms.org)
+            * Using [Tina](https://tina.io)
+            * Using [Publii](https://getpublii.com)
+            * Using [Jeykll Admin](https://jekyll.github.io/jekyll-admin/)
+            * Using [GitHub Wikis](https://docs.github.com/en/communities/documenting-your-project-with-wikis/about-wikis)
           * Using [GitHub Pages](https://pages.github.com)
+          * Using [RETYPE](https://retype.com/)
+          * Using [Jekyll](https://jekyllrb.com)
+          * Using [mdBook](https://rust-lang.github.io/mdBook/)
+          * Using [docusaurus](https://docusaurus.io/)
+          * Using [MkDocs](https://www.mkdocs.org/)
+          * Using [daux](http://daux.io/index.html)
+          * Using [docsify](https://docsify.js.org/#/)
+          * Using [DocFX](https://dotnet.github.io/docfx/)
+          * Using [ReadTheDocs](https://readthedocs.org)
         * On Self-Managed Hosts
           * Using [BookStack](https://www.bookstackapp.com)
           * Using [DocuWiki](https://www.dokuwiki.org/dokuwiki)
@@ -20,34 +30,23 @@
           * Using [ReadTheDocs](https://readthedocs.org)
           * Using [readme](https://readme.com/)
           * Using [Confluence](https://www.atlassian.com/software/confluence)
+          * Using [GitBook](https://www.gitbook.com)
       * Of APIs
         * Using [GitBook](https://www.gitbook.com)
+        * Using [Redoc](https://github.com/Redocly/redoc)
+        * Using [Swagger](https://swagger.io/)
+        * Using [Redoc](https://github.com/Redocly/redoc)
         * Using [readme](https://readme.com/)
-        * Using [SwaggerHub](https://swagger.io/tools/swaggerhub/)
+        * Using [Swagger](https://swagger.io/)
+        * Using [GitBook](https://www.gitbook.com)
       * Of Diagrams
         * Using [LucidChart](https://www.lucidchart.com/pages/)
-    * For Building Docs
-      * Of User / Admin / Dev Docs
-        * Using [RETYPE](https://retype.com/)
-        * Using [Jekyll](https://jekyllrb.com)
-        * Using [mdBook](https://rust-lang.github.io/mdBook/)
-        * Using [docusaurus](https://docusaurus.io/)
-        * Using [MkDocs](https://www.mkdocs.org/)
-        * Using [daux](http://daux.io/index.html)
-        * Using [docsify](https://docsify.js.org/#/)
-        * Using [DocFX](https://dotnet.github.io/docfx/)
-        * Using [ReadTheDocs](https://readthedocs.org)
-      * Of Code
-        * Of APIs
-          * Using [Swagger Codegen](https://swagger.io/tools/swagger-codegen/)
-          * Using [Redoc](https://github.com/Redocly/redoc)
-          * Using [GitBook](https://www.gitbook.com)
-        * Using [DocFX](https://dotnet.github.io/docfx/)
-      * Of Diagrams
         * Using [Mermaid](https://mermaid-js.github.io/)
         * Using [daux](http://daux.io/index.html)
         * Using [RETYPE](https://retype.com/)
         * Using [C4-builder](https://adrianvlupu.github.io/C4-Builder/#/)
+      * Of Code
+        * Using [DocFX](https://dotnet.github.io/docfx/)
     * For Embedded Docs
       * From Mailing Lists / Discussions / Threads
         * Using [GitHub Discussions](https://docs.github.com/en/discussions)
