@@ -5,7 +5,6 @@
           * With WYSIWYG Support
             * Using [GitBook](https://www.gitbook.com)
             * Using [GitHub Wikis](https://docs.github.com/en/communities/documenting-your-project-with-wikis/about-wikis)
-          * Using [GitHub Pages](https://pages.github.com)
           * Using [RETYPE](https://retype.com/)
           * Using [Jekyll](https://jekyllrb.com)
           * Using [mdBook](https://rust-lang.github.io/mdBook/)
