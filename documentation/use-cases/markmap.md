@@ -14,30 +14,22 @@
           * Using [docsify](https://docsify.js.org/#/)
           * Using [DocFX](https://dotnet.github.io/docfx/)
           * Using [ReadTheDocs](https://readthedocs.org)
-        * On Self-Managed Hosts
-          * Using [BookStack](https://www.bookstackapp.com)
-          * Using [DocuWiki](https://www.dokuwiki.org/dokuwiki)
-          * Using [Strapi](https://strapi.io)
-          * Using [Keystone](https://keystonejs.com)
-          * Using [Gatsby](https://www.gatsbyjs.com/use-cases/technical-documentation)
         * On Third-Party Managed Hosts
           * Using [ReadTheDocs](https://readthedocs.org)
           * Using [readme](https://readme.com/)
           * Using [Confluence](https://www.atlassian.com/software/confluence)
           * Using [GitBook](https://www.gitbook.com)
+          * Using [GitHub Pages](https://pages.github.com)
+          * Using [Render](https://render.com)
+          * Using [Amazon S3](https://docs.aws.amazon.com/AmazonS3/latest/userguide/WebsiteHosting.html)
       * Of APIs
         * Using [GitBook](https://www.gitbook.com)
         * Using [Redoc](https://github.com/Redocly/redoc)
         * Using [Swagger](https://swagger.io/)
-        * Using [Redoc](https://github.com/Redocly/redoc)
         * Using [readme](https://readme.com/)
-        * Using [Swagger](https://swagger.io/)
-        * Using [GitBook](https://www.gitbook.com)
       * Of Diagrams
         * Using [LucidChart](https://www.lucidchart.com/pages/)
         * Using [Mermaid](https://mermaid-js.github.io/)
-        * Using [daux](http://daux.io/index.html)
-        * Using [RETYPE](https://retype.com/)
         * Using [C4-builder](https://adrianvlupu.github.io/C4-Builder/#/)
       * Of Code
         * Using [DocFX](https://dotnet.github.io/docfx/)
