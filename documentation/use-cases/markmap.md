@@ -3,7 +3,6 @@
       * Of User / Admin / Dev Docs [📖 TRADE STUDY](../trade-studies/trade-study-hostingdocs-user)
         * From Git Repositories
           * With WYSIWYG Support
-            * Using [CrafterCMS](https://craftercms.org)
             * Using [GitBook](https://www.gitbook.com)
             * Using [netlifycms](https://www.netlifycms.org)
             * Using [Tina](https://tina.io)
