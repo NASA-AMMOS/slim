@@ -6,7 +6,6 @@
             * Using [GitBook](https://www.gitbook.com)
             * Using [GitHub Wikis](https://docs.github.com/en/communities/documenting-your-project-with-wikis/about-wikis)
           * Using [RETYPE](https://retype.com/)
-          * Using [Jekyll](https://jekyllrb.com)
           * Using [mdBook](https://rust-lang.github.io/mdBook/)
           * Using [docusaurus](https://docusaurus.io/)
           * Using [MkDocs](https://www.mkdocs.org/)
