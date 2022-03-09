@@ -18,9 +18,6 @@
           * Using [readme](https://readme.com/)
           * Using [Confluence](https://www.atlassian.com/software/confluence)
           * Using [GitBook](https://www.gitbook.com)
-          * Using [GitHub Pages](https://pages.github.com)
-          * Using [Render](https://render.com)
-          * Using [Amazon S3](https://docs.aws.amazon.com/AmazonS3/latest/userguide/WebsiteHosting.html)
       * Of APIs
         * Using [GitBook](https://www.gitbook.com)
         * Using [Redoc](https://github.com/Redocly/redoc)
