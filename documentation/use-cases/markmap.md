@@ -2,20 +2,16 @@
     * For Building / Maintaining / Hosting Docs
       * Of User / Admin / Dev Docs [📖 TRADE STUDY](../trade-studies/trade-study-hostingdocs-user)
         * From Git Repositories
-          * With WYSIWYG Support
-            * Using [GitBook](https://www.gitbook.com)
-            * Using [GitHub Wikis](https://docs.github.com/en/communities/documenting-your-project-with-wikis/about-wikis)
+          * Using [GitBook](https://www.gitbook.com)
           * Using [RETYPE](https://retype.com/)
           * Using [mdBook](https://rust-lang.github.io/mdBook/)
           * Using [docusaurus](https://docusaurus.io/)
           * Using [MkDocs](https://www.mkdocs.org/)
           * Using [daux](http://daux.io/index.html)
           * Using [docsify](https://docsify.js.org/#/)
-          * Using [DocFX](https://dotnet.github.io/docfx/)
           * Using [ReadTheDocs](https://readthedocs.org)
         * On Third-Party Managed Hosts
           * Using [ReadTheDocs](https://readthedocs.org)
-          * Using [readme](https://readme.com/)
           * Using [Confluence](https://www.atlassian.com/software/confluence)
           * Using [GitBook](https://www.gitbook.com)
       * Of APIs
@@ -23,6 +19,7 @@
         * Using [Redoc](https://github.com/Redocly/redoc)
         * Using [Swagger](https://swagger.io/)
         * Using [readme](https://readme.com/)
+        * Using [Slate](https://github.com/slatedocs/slate)
       * Of Diagrams
         * Using [LucidChart](https://www.lucidchart.com/pages/)
         * Using [Mermaid](https://mermaid-js.github.io/)
