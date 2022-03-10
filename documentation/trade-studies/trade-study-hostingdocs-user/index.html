@@ -25,11 +25,11 @@
     
     <script>(function () { var el = document.documentElement, m = localStorage.getItem("/slim/doc_theme"), wm = window.matchMedia; if (m === "dark" || (!m && wm && wm("(prefers-color-scheme: dark)").matches)) { el.classList.add("dark") } else { el.classList.remove("dark") } })();</script>
 
-    <link href="/slim/resources/css/retype.css?v=1.11.2.700103025370" rel="stylesheet" data-turbo-track="reload" />
+    <link href="/slim/resources/css/retype.css?v=1.11.2.700190134557" rel="stylesheet" data-turbo-track="reload" />
 
-    <script type="text/javascript" src="/slim/resources/js/config.js?v=1.11.2.700103025370" defer data-turbo-track="reload"></script>
+    <script type="text/javascript" src="/slim/resources/js/config.js?v=1.11.2.700190134557" defer data-turbo-track="reload"></script>
     <script type="text/javascript" src="/slim/resources/js/retype.js?v=1.11.2" defer data-turbo-track="reload"></script>
-    <script id="lunr-js" type="text/javascript" src="/slim/resources/js/lunr.js?v=1.11.2.700103025370" defer></script>
+    <script id="lunr-js" type="text/javascript" src="/slim/resources/js/lunr.js?v=1.11.2.700190134557" defer></script>
 </head>
     <body>
         <div id="docs-app" class="relative text-base antialiased text-gray-700 bg-white font-body dark:bg-dark-850 dark:text-dark-300">
@@ -201,21 +201,21 @@
 <th>Teams &amp; Roles</th>
 <th>Comment Support</th>
 <th>Search</th>
-<th>Import Other Formats</th>
+<th>Import From Other Formats</th>
 <th>Export Other Formats</th>
 <th>Sharable Links</th>
 <th>Private Content</th>
 <th>Internationalization</th>
 <th>File Uploads</th>
 <th>Diagram Editing</th>
-<th>Analytics</th>
-<th>Custom JavaScript Support</th>
+<th>Usage Analytics</th>
+<th>Programmable Content</th>
 </tr>
 </thead>
 <tbody>
 <tr>
 <td><a href="https://www.gitbook.com">GitBook</a></td>
-<td><a href="https://www.gitbook.com/pricing">Free for OSS / $$$</a></td>
+<td><a href="https://www.gitbook.com/pricing">Free for OSS</a> / $$$</td>
 <td>Fast</td>
 <td><a href="https://docs.gitbook.com/integrations/git-sync">Yes</a></td>
 <td>No</td>
@@ -242,97 +242,41 @@
 <td>No</td>
 </tr>
 <tr>
-<td>readme</td>
-<td>Free tier / $</td>
-<td>Fast</td>
-<td>No</td>
-<td></td>
-<td></td>
-<td></td>
-<td></td>
-<td></td>
-<td></td>
-<td></td>
-<td></td>
-<td></td>
-<td></td>
-<td></td>
-<td></td>
-<td></td>
-<td></td>
-<td></td>
-<td></td>
-<td></td>
-<td></td>
-<td></td>
-<td></td>
-<td></td>
-<td></td>
-</tr>
-<tr>
 <td>Confluence</td>
-<td>Free for OSS / $$</td>
+<td><a href="https://www.atlassian.com/software/views/open-source-license-request">Free for OSS</a> / $$</td>
 <td></td>
 <td>No</td>
-<td></td>
-<td></td>
-<td></td>
-<td></td>
-<td></td>
-<td></td>
-<td></td>
-<td></td>
-<td></td>
-<td></td>
-<td></td>
-<td></td>
-<td></td>
-<td></td>
-<td></td>
-<td></td>
-<td></td>
-<td></td>
-<td></td>
-<td></td>
-<td></td>
-<td></td>
-</tr>
-<tr>
-<td>GitHub Wikis</td>
-<td>Free</td>
-<td></td>
+<td>No</td>
 <td>Yes</td>
-<td></td>
-<td></td>
-<td></td>
-<td></td>
-<td></td>
-<td></td>
-<td></td>
-<td></td>
-<td></td>
-<td></td>
-<td></td>
-<td></td>
-<td></td>
-<td></td>
-<td></td>
-<td></td>
-<td></td>
-<td></td>
-<td></td>
-<td></td>
-<td></td>
-<td></td>
+<td>No</td>
+<td><a href="https://developer.atlassian.com/server/confluence/confluence-server-rest-api/">Yes</a></td>
+<td>No (only non-free plugins)</td>
+<td>Yes</td>
+<td><a href="https://confluence.atlassian.com/doc/confluence-wiki-markup-251003035.html">Partial</a> (for embedded content)</td>
+<td>Yes</td>
+<td>Yes</td>
+<td><a href="https://confluence.atlassian.com/doc/create-a-template-296093779.html">Yes</a></td>
+<td>Yes</td>
+<td>Yes</td>
+<td>Yes</td>
+<td><a href="https://confluence.atlassian.com/doc/import-content-into-confluence-191141.html">Yes</a></td>
+<td><a href="https://confluence.atlassian.com/doc/export-content-to-word-pdf-html-and-xml-139475.html">Yes</a></td>
+<td>Yes</td>
+<td>Yes</td>
+<td><a href="https://confluence.atlassian.com/confeval/confluence-evaluator-resources/confluence-managing-content-in-multiple-language-translations">No</a></td>
+<td>Yes</td>
+<td>No (only non-free plugins)</td>
+<td>No (non-free plans only)</td>
+<td>No</td>
 </tr>
 <tr>
 <td>ReadTheDocs</td>
-<td>Free with ads</td>
+<td>Free (with ads)</td>
 <td></td>
-<td></td>
-<td></td>
-<td></td>
-<td></td>
+<td>Yes</td>
+<td>No</td>
+<td>Yes</td>
+<td>No</td>
 <td></td>
 <td></td>
 <td></td>
@@ -495,34 +439,6 @@
 </tr>
 <tr>
 <td>docsify</td>
-<td></td>
-<td></td>
-<td></td>
-<td></td>
-<td></td>
-<td></td>
-<td></td>
-<td></td>
-<td></td>
-<td></td>
-<td></td>
-<td></td>
-<td></td>
-<td></td>
-<td></td>
-<td></td>
-<td></td>
-<td></td>
-<td></td>
-<td></td>
-<td></td>
-<td></td>
-<td></td>
-<td></td>
-<td></td>
-</tr>
-<tr>
-<td>DocFX</td>
 <td></td>
 <td></td>
 <td></td>
