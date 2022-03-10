@@ -1,6 +1,3 @@
----
-order: 9
----
 # Trade Studies
 
 
