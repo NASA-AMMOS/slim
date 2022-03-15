@@ -1,3 +1,4 @@
+``` README-sw-proj-template.md
 <!-- Header block for project -->
 <hr>
 
@@ -132,3 +133,4 @@ Ex. @github-user-1 @github-user-2
 ## License
 
 [Link to license OR filled out here]
+```
