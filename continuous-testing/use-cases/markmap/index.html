@@ -25,11 +25,11 @@
     
     <script>(function () { var el = document.documentElement, m = localStorage.getItem("/slim/doc_theme"), wm = window.matchMedia; if (m === "dark" || (!m && wm && wm("(prefers-color-scheme: dark)").matches)) { el.classList.add("dark") } else { el.classList.remove("dark") } })();</script>
 
-    <link href="/slim/resources/css/retype.css?v=1.11.2.700700089523" rel="stylesheet" data-turbo-track="reload" />
+    <link href="/slim/resources/css/retype.css?v=1.11.2.700849189740" rel="stylesheet" data-turbo-track="reload" />
 
-    <script type="text/javascript" src="/slim/resources/js/config.js?v=1.11.2.700700089523" defer data-turbo-track="reload"></script>
+    <script type="text/javascript" src="/slim/resources/js/config.js?v=1.11.2.700849189740" defer data-turbo-track="reload"></script>
     <script type="text/javascript" src="/slim/resources/js/retype.js?v=1.11.2" defer data-turbo-track="reload"></script>
-    <script id="lunr-js" type="text/javascript" src="/slim/resources/js/lunr.js?v=1.11.2.700700089523" defer></script>
+    <script id="lunr-js" type="text/javascript" src="/slim/resources/js/lunr.js?v=1.11.2.700849189740" defer></script>
 </head>
     <body>
         <div id="docs-app" class="relative text-base antialiased text-gray-700 bg-white font-body dark:bg-dark-850 dark:text-dark-300">
@@ -186,26 +186,107 @@
 <ul>
 <li>Continuous Testing
 <ul>
-<li>For WebApps
+<li>For Development APIs
 <ul>
-<li>Using Selenium</li>
-<li>Using WebDriver</li>
+<li>Unit Testing
+<ul>
+<li>xUnit (e.g. Junit[Java], PyUnit[Python], NUnit[C#], CppUnit[C++]</li>
+<li>Tools
+<ul>
+<li>Java</li>
+<li>Python</li>
+<li>C#</li>
+<li>C/C++</li>
 </ul>
 </li>
-<li>For API&#x27;s
-<ul>
-<li>Using RESTAssured</li>
 </ul>
 </li>
-<li>For Backend
+<li>Integration, Dependency and Stub Mocking
+<ul>
+<li>Simulate dependencies</li>
+<li>Stub out coupled services for planned results</li>
+<li>Mock specific application behavior</li>
+<li>Tools
+<ul>
+<li>Java
+<ul>
+<li>Mockito</li>
+<li>EasyMock</li>
+<li>JMock</li>
+</ul>
+</li>
+<li>Python
+*</li>
+<li>C#</li>
+<li>C/C++</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>Code Quality Analysis
+<ul>
+<li>Semmle</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>For Web Applications
+<ul>
+<li>Service Endpoints (APIs)
+<ul>
+<li>Messaging-based
+<ul>
+<li>RESTful Services</li>
+<li>SOAP</li>
+<li>Tools (JSON/XML)
+<ul>
+<li>Using Apache JMeter</li>
+<li>Using Insomnia</li>
+<li>Using Paw</li>
+<li>Using Postman</li>
+<li>Using REST-Assured (REST, RPC)</li>
+<li>Using SOAPUI</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>Procedure-based
+<ul>
+<li>RPC
+<ul>
+<li>Using Shell/Powershell</li>
+<li>Using PortQry</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>Web Interfaces (browsers)
+<ul>
+<li>Using Cypress</li>
+<li>Using Playwright</li>
+<li>Using Robot Framework</li>
+<li>Using Selenium + Add-on
+<ul>
+<li>Cucumber* (Java + others) / Behave (Python) / Specflow (C#)</li>
+<li>Watir (Ruby)</li>
+<li>Home Grown</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>For Backend (Load testing?)
 <ul>
 <li>Using Chaos Monkey</li>
 <li>Using Robot Framework</li>
 <li>Using Cucumber Open</li>
+<li>For Mobile</li>
 </ul>
 </li>
-<li>For Mobile</li>
-<li>For Generating Reports
+<li>For Reporting
 <ul>
 <li>Using TestRail</li>
 <li>Using Serenity</li>
