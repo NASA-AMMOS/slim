@@ -1,6 +1,3 @@
----
-order: 10
----
 # Use Cases
 
 For all use cases below, we provide two resources: 
@@ -9,6 +6,10 @@ For all use cases below, we provide two resources:
   
 ## All Use Cases
 
+**Preview of mind-map:**
+<!-- RETYPE embedded markmap document -->
 [!embed el="embed"](markmap.html)
 
-[!button Fullscreen](markmap.html) [!button Markdown](markmap.md)
+**Versions:**
+<!-- RETYPE buttons -->
+[!button Full Visualization](markmap.html) [!button Markdown](markmap.md)
