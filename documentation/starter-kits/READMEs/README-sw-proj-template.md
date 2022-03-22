@@ -148,6 +148,10 @@
 
 <!-- ☝️ Replace with a text describing how people may contribute to your project, or link to your contibution guide directly ☝️ -->
 
+[Provide a link to OR share text of your code of conduct]
+
+For guidance on how to interact with our team, please see our code of conduct located at: [CODE_OF_CONDUCT.md](CODE_OF_CONDUCT.md)
+
 ## License
 
 [Link to license OR filled out here]
