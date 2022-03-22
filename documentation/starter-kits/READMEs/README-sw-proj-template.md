@@ -2,17 +2,12 @@
 <hr>
 
 <div align="center">
-
-<span style="display:block;text-align:center">
-
-    ![](https://uri-to-your-logo-image)
-    <!-- ☝️ Replace with your logo (if applicable) ☝️ -->
-
-</span>
-
+    <span style="display:block;text-align:center">
+        [Your logo image here (if applicable)]
+        <!-- ☝️ Replace with your logo (if applicable) via ![](https://uri-to-your-logo-image) ☝️ -->
+    </span>
     <h1 align="center">[Your Repo / Proj Name Here]</h1>
     <!-- ☝️ Replace with your repo name ☝️ -->
-
 </div>
 
 <pre align="center">
@@ -22,11 +17,11 @@
 
 <!-- Header block for project -->
 
-![](https://img.shields.io/github/action/your_org/your_repo) ![](https://img.shields.io/github/action/your_org/your_repo) ![](https://img.shields.io/github/action/your_org/your_repo) 
-<!-- ☝️ Add badges via: https://shields.io ☝️ -->
+[Badges (see: https://shields.io)]
+<!-- ☝️ Add badges via: https://shields.io e.g. ![](https://img.shields.io/github/your_chosen_action/your_org/your_repo) ☝️ -->
 
-![[Screenshot of your software, if applicable]](https://uri-to-your-screenshot)
-<!-- ☝️ Screenshot of your software (if applicable) ☝️ -->
+[Screenshot of your software, if applicable]
+<!-- ☝️ Screenshot of your software (if applicable) via ![](https://uri-to-your-screenshot) ☝️ -->
 
 [More detailed description of your repository here]
 <!-- ☝️ Replace with a more detailed description of your repository, including why it was made and whom its intended for.  ☝️ -->
@@ -58,8 +53,6 @@
 
 ### Setup Instructions
 
-[Modify as/if needed]
-
 1. Bullet point
 2. List 
 3. Of 
@@ -69,8 +62,6 @@
 <!-- ☝️ Replace with a bullet-point list of how to set up your software prior to running ☝️ -->
 
 ### Run Instructions
-
-[Modify as/if needed and add any customizations for your code]
 
 1. Bullet point
 2. List 
@@ -83,8 +74,6 @@
 
 ### Build Instructions (if applicable)
 
-[Modify as/if needed and add any customizations for your code]
-
 1. Bullet point
 2. List 
 3. Of 
@@ -95,8 +84,6 @@
 <!-- ☝️ Replace with a bullet-point list of your build instructions, including expected results ☝️ -->
 
 ### Test Instructions (if applicable)
-
-[Modify as/if needed and add any customizations for your code]
 
 1. Bullet point
 2. List 
