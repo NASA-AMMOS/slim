@@ -16,20 +16,22 @@
     <meta property="og:url" content="https://nasa-ammos.github.io/slim/documentation/starter-kits/">
     <meta property="og:title" content="Starter Kits">
     <meta property="og:description" content="This page contains starter kit information, which represent templates, code and configuration to help you get started quickly with documentation best...">
+    <meta property="og:image" content="https://img.shields.io/badge/Contributor%20Covenant-2.1-4baaaa.svg">
 
     <!-- Twitter -->
     <meta property="twitter:card" content="summary_large_image">
     <meta property="twitter:url" content="https://nasa-ammos.github.io/slim/documentation/starter-kits/">
     <meta property="twitter:title" content="Starter Kits">
     <meta property="twitter:description" content="This page contains starter kit information, which represent templates, code and configuration to help you get started quickly with documentation best...">
+    <meta property="twitter:image" content="https://img.shields.io/badge/Contributor%20Covenant-2.1-4baaaa.svg">
     
     <script>(function () { var el = document.documentElement, m = localStorage.getItem("/slim/doc_theme"), wm = window.matchMedia; if (m === "dark" || (!m && wm && wm("(prefers-color-scheme: dark)").matches)) { el.classList.add("dark") } else { el.classList.remove("dark") } })();</script>
 
-    <link href="/slim/resources/css/retype.css?v=1.11.2.701224786421" rel="stylesheet" data-turbo-track="reload" />
+    <link href="/slim/resources/css/retype.css?v=1.11.2.701382206856" rel="stylesheet" data-turbo-track="reload" />
 
-    <script type="text/javascript" src="/slim/resources/js/config.js?v=1.11.2.701224786421" defer data-turbo-track="reload"></script>
+    <script type="text/javascript" src="/slim/resources/js/config.js?v=1.11.2.701382206856" defer data-turbo-track="reload"></script>
     <script type="text/javascript" src="/slim/resources/js/retype.js?v=1.11.2" defer data-turbo-track="reload"></script>
-    <script id="lunr-js" type="text/javascript" src="/slim/resources/js/lunr.js?v=1.11.2.701224786421" defer></script>
+    <script id="lunr-js" type="text/javascript" src="/slim/resources/js/lunr.js?v=1.11.2.701382206856" defer></script>
 </head>
     <body>
         <div id="docs-app" class="relative text-base antialiased text-gray-700 bg-white font-body dark:bg-dark-850 dark:text-dark-300">
@@ -184,10 +186,10 @@
     </h1>
 </doc-anchor-target>
 <p>This page contains starter kit information, which represent templates, code and configuration to help you get started quickly with documentation best practices described in this overall guide. Please see categories and links below for details.</p>
-<doc-anchor-target id="readme-templates">
+<doc-anchor-target id="readme">
     <h2>
-        <doc-anchor-trigger class="header-anchor-trigger" to="#readme-templates">#</doc-anchor-trigger>
-        <span>README Templates</span>
+        <doc-anchor-trigger class="header-anchor-trigger" to="#readme">#</doc-anchor-trigger>
+        <span>README</span>
     </h2>
 </doc-anchor-target>
 <p>This section contains links to sample <code v-pre>README.md</code> templates that can be used to help developers and users understand your repository consisely and clearly. For each readme template provided below, see the <code v-pre>Markdown</code> version for the raw template which you can copy/paste into your own <code v-pre>README.md</code>, and see the <code v-pre>Demo</code> for a working example of the template in action.</p>
@@ -198,7 +200,7 @@
     </h3>
 </doc-anchor-target>
 <p>This template is meant for general software projects <code v-pre>README.md</code> files, including both interpreted as well as compiled language code.</p>
-<p>See the below two:</p>
+<p>Starter Kit:</p>
 <ul>
 <li><a href="https://github.com/nasa-ammos/slim/blob/main/documentation/starter-kits/READMEs/README-sw-proj-template.md">Markdown</a> of template</li>
 <li><a href="https://github.com/riverma/terraformly/blob/main/README.md">Demo</a> of template</li>
@@ -209,6 +211,70 @@
 <li>ReactJS</li>
 <li>VueJS</li>
 <li>Apache Kafka</li>
+</ul>
+<doc-anchor-target id="code-of-conduct">
+    <h2>
+        <doc-anchor-trigger class="header-anchor-trigger" to="#code-of-conduct">#</doc-anchor-trigger>
+        <span>Code of Conduct</span>
+    </h2>
+</doc-anchor-target>
+<p>The code of conduct is typically a document that provides guidance to a project team on <em>how</em> the team members should interact with each other. It identifies behaviors that are deemed problematic, provides contact information for addressing grievences, and finally lists key responses that team leadership should / will take for problematic behavior. Below are some examples to expedite the incorporation of a code of conduct.</p>
+<doc-anchor-target id="contributor-covenant-template">
+    <h3>
+        <doc-anchor-trigger class="header-anchor-trigger" to="#contributor-covenant-template">#</doc-anchor-trigger>
+        <span>Contributor Covenant Template</span>
+    </h3>
+</doc-anchor-target>
+<p>This is a community-developed code of conduct that has been <a href="https://www.contributor-covenant.org/adopters/">adopted by many open source projects</a>. It provides a fairly standard code of conduct that (1) explicitly identifies problematic behavior that&#x27;s deemed unacceptable in team interactions, (2) who to contact if problematic behavior is identified, and (3) tiers of how team leadership can respond.</p>
+<p>Starter Kit:</p>
+<ul>
+<li><a href="https://www.contributor-covenant.org/version/2/1/code_of_conduct/code_of_conduct.md">Markdown</a> of template</li>
+<li><a href="https://github.com/riverma/terraformly/blob/main/CODE_OF_CONDUCT.md">Demo</a> of template and <a href="https://github.com/riverma/terraformly">demo</a> of badge</li>
+<li><a href="https://www.contributor-covenant.org">Webpage</a> for more information</li>
+</ul>
+<p>To leverage this template, make sure to do the following:</p>
+<ol>
+<li>Talk with your team about leveraging this template, and seek wide agreement before you adopt</li>
+<li>Copy the template text, and place in a file within your repository called <code v-pre>CODE_OF_CONDUCT.md</code></li>
+<li>Replace the <code v-pre>[INSERT CONTACT METHOD]</code> text within the file with a person, private e-mail list, or other form of contact for grievances to be addressed to</li>
+<li>Add the contributor covenant badge (<img src="https://img.shields.io/badge/Contributor%20Covenant-2.1-4baaaa.svg" alt="" />) to your <code v-pre>README.md</code> file (example below)</li>
+</ol>
+<div class="codeblock-wrapper"><doc-codeblock>
+<pre class="language-none"><code v-pre class="language-none">[![Contributor Covenant](https://img.shields.io/badge/Contributor%20Covenant-2.1-4baaaa.svg)](code_of_conduct.md)</code></pre>
+</doc-codeblock></div>
+<doc-anchor-target id="contributing-guides">
+    <h3>
+        <doc-anchor-trigger class="header-anchor-trigger" to="#contributing-guides">#</doc-anchor-trigger>
+        <span>Contributing Guides</span>
+    </h3>
+</doc-anchor-target>
+<p>A contribution guide is an important document directed at <em>new contributors</em> to your project - to help them in understanding what and how they may contribute. It can be used to outline expected requirements prior to contributions (i.e. acceptance of licensing terms, signing off on any developer agreements required) as well as to ensure the quality of contributions are in-line with expected project norms. If a developer asks how to contribute, this is the guide to point them to, and if patches are submitted to a project but are missing essential ingredients, this is again the guide to point new developers to.</p>
+<p>We provide a collections of sample contribution guide templates below, but please keep in mind to modify and adapt to your project as needed.</p>
+<doc-anchor-target id="limited-contributions-template">
+    <h4>
+        <doc-anchor-trigger class="header-anchor-trigger" to="#limited-contributions-template">#</doc-anchor-trigger>
+        <span>Limited Contributions Template</span>
+    </h4>
+</doc-anchor-target>
+<p>This template is meant for projects that only accept bug-reports and issues, not necessarily code patches or other diverse artifacts.</p>
+<p>(TBD)</p>
+<doc-anchor-target id="standard-codeissues-contributions-template">
+    <h4>
+        <doc-anchor-trigger class="header-anchor-trigger" to="#standard-codeissues-contributions-template">#</doc-anchor-trigger>
+        <span>Standard (Code/Issues) Contributions Template</span>
+    </h4>
+</doc-anchor-target>
+<p>(TBD)</p>
+<doc-anchor-target id="full-feature-codeissuesdocsetc-contributions-template">
+    <h4>
+        <doc-anchor-trigger class="header-anchor-trigger" to="#full-feature-codeissuesdocsetc-contributions-template">#</doc-anchor-trigger>
+        <span>Full Feature (Code/Issues/Docs/etc.) Contributions Template</span>
+    </h4>
+</doc-anchor-target>
+<p>(TBD)</p>
+<p>This template was influenced by the following sources:</p>
+<ul>
+<li><a href="https://opensource.guide/how-to-contribute/">Open Source Guide</a></li>
 </ul>
 
 
