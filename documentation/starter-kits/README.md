@@ -41,3 +41,26 @@ To leverage this template, make sure to do the following:
 ```
 [![Contributor Covenant](https://img.shields.io/badge/Contributor%20Covenant-2.1-4baaaa.svg)](code_of_conduct.md)
 ```
+
+### Contributing Guides
+
+A contribution guide is an important document directed at *new contributors* to your project - to help them in understanding what and how they may contribute. It can be used to outline expected requirements prior to contributions (i.e. acceptance of licensing terms, signing off on any developer agreements required) as well as to ensure the quality of contributions are in-line with expected project norms. If a developer asks how to contribute, this is the guide to point them to, and if patches are submitted to a project but are missing essential ingredients, this is again the guide to point new developers to.
+
+We provide a collections of sample contribution guide templates below, but please keep in mind to modify and adapt to your project as needed.
+
+#### Limited Contributions Template
+
+This template is meant for projects that only accept bug-reports and issues, not necessarily code patches or other diverse artifacts. 
+
+(TBD)
+
+#### Standard (Code/Issues) Contributions Template
+
+(TBD)
+
+#### Full Feature (Code/Issues/Docs/etc.) Contributions Template
+
+(TBD)
+
+This template was influenced by the following sources:
+- [Open Source Guide](https://opensource.guide/how-to-contribute/)
