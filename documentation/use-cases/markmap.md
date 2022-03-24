@@ -36,12 +36,13 @@
         * From Reports
         * From Alerts
     * For Writing Docs
-      * For READMEs
-        * Via Templates
-          * Using a Software Project Template [🏁 STARTER KIT](../starter-kits/READMEs/README-sw-proj-template.md)
-        * Via Literature
-          * Using [README Maturity Model](https://github.com/LappleApple/feedmereadmes/blob/master/README-maturity-model.md)
-          * Using [Documentation Driven Development](https://blog.izs.me/2017/06/documentation-driven-development/)
+      * For Open Source Project Files
+        * For READMEs
+          * Using a Software Project Template [🏁 STARTER KIT](../starter-kits/#software-project-template)
+        * For CODE_OF_CONDUCT
+          * Using Contributor Covenant [🏁 STARTER KIT](../starter-kits/#contributor-covenant-template)
+        * For Contributor Guides
+          * Using Contributing Guide Template [🏁 STARTER KIT](../starter-kits/#contributing-guide-template)
       * For Requirements
         * Using [NASA Systems Engineering Handbook](https://www.nasa.gov/seh/appendix-c-how-to-write-a-good-requirement)
       * For Architecture / Design
