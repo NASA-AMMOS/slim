@@ -22,7 +22,7 @@ This starter kit template was developed by evaluating best `README.md` practices
 
 ## Code of Conduct
 
-The code of conduct is typically a document that provides guidance to a project team on *how* the team members should interact with each other. It identifies behaviors that are deemed problematic, provides contact information for addressing grievances, and finally lists key responses that team leadership should / will take for problematic behavior. Below are some examples to expedite the incorporation of a code of conduct.
+The code of conduct is typically a document that provides guidance to a project team on *how* the team members should interact with each other. It identifies behaviors that are helpful for building a better development community, provides contact information for addressing grievances (should they arise), and finally lists key responses that team leadership should / will take for dealing with unexpected behavior. Below are some examples to expedite the incorporation of a code of conduct.
 
 ### Contributor Covenant Template
 
@@ -44,7 +44,7 @@ To leverage this template, make sure to do the following:
 
 ## Contributing Guides
 
-A contribution guide is an important document directed at *new contributors* to your project - to help them in understanding what and how they may contribute. It can be used to outline expected requirements prior to contributions (i.e. acceptance of licensing terms, signing off on any developer agreements required) as well as to ensure the quality of contributions are in-line with expected project norms. If a developer asks how to contribute, this is the guide to point them to, and if patches are submitted to a project but are missing essential ingredients, this is again the guide to point new developers to.
+A contribution guide is an important document directed at *new contributors* to your project - to help them in understanding what and how they may contribute. It can be used to outline expected requirements prior to contributions (i.e. acceptance of licensing terms, signing off on any developer agreements required) as well as to ensure the quality of contributions are in-line with expected project norms. If a developer asks how to contribute, please point them to this guide. This guide also itemizes essential ingredients necessary for a successful patch submission.
 
 We provide a sample contribution guide template below, but please keep in mind to:
 - Modify and adapt to your project as needed. You may not need all features of the template guide. 
@@ -55,7 +55,7 @@ We provide a sample contribution guide template below, but please keep in mind t
 This template covers the following contributions areas:
 - Prerequisites to contributing
 - Development process
-- Ways to contribute, including: issues, code, documentation, media, questions, etc.
+- Ways to contribute: issues, code, documentation, media and questions, among other types of contributions
 
 Starter Kit:
 - [Markdown](https://github.com/nasa-ammos/slim/blob/main/documentation/starter-kits/CONTRIBUTING/CONTRIBUTING.md) of template

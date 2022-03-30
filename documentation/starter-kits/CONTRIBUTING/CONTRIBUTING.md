@@ -44,7 +44,7 @@ Our project integrates contributions from many people, and so we'd like to outli
 ```mermaid
 flowchart TD
     repo_proj[(Our Repository)]-->|Fork|repo_fork[(Your Forked Repository)]
-    repo_fork-->|Generate|patch(Your Patch)
+    repo_fork-->|Generate|patch(Your Changes)
     patch-->|Submit|pr(Pull Request)
     pr==>|Approved|repo_proj
     pr-->|Changes Requested|repo_fork
@@ -74,7 +74,7 @@ Issue #248 - Show an example commit message title
 
 This makes sure that tickets are updated on GitHub with references to commits that are related to them.
 
-Commit should always be atomic. Keep solutions isolated whenever possible. Filler commits such as "clean up white space" or "fix typo" should be [rebased](https://git-scm.com/docs/git-rebase) out before making a pull request (to prevent deluge of trivial commits). Please ensure your commit history is clean and meaningful!
+Commit should always be atomic. Keep solutions isolated whenever possible. Filler commits such as "clean up white space" or "fix typo" should be merged together before making a pull request, and significant sub-feature branches should be [rebased](https://www.youtube.com/results?search_query=git+rebase) to preserve commit history. Please ensure your commit history is clean and meaningful!
 
 ### Submit a Pull Request
 
@@ -82,17 +82,19 @@ Pull requests are the core way our project will receive your patch contributions
 
 Please make sure to provide a meaningful text description to your pull requests, whenever submitted. Use the following template:
 ```
+## Purpose
+- Clear, easy-to-understand sentences outlining the purpose of the PR
 ## Issues
-- issue-XYZ
-- issue-XYZ
+- Links to relevant issues
+- Example: issue-XYZ
 ## Proposed Changes
 - [ADD] ...
 - [CHANGE] ...
 - [FIX] ...
 ## Testing
-- Test results available at ...
-- Tested on operating system ...
-- Run tests via ...
+- Provide some proof you've tested your changes 
+- Example: test results available at ...
+- Example: tested on operating system ...
 ```
 
 **Working on your first Pull Request?** See guide: [How to Contribute to an Open Source Project on GitHub](https://kcd.im/pull-request)
@@ -193,7 +195,7 @@ Please be sure to:
 Reviewing others' contributions is a great way to learn about best practices in both contributions as well as software. 
 
 Take a look at our pull requests tracking system [INSERT LINK FOR PULL REQUESTS TRACKING SYSTEM], and try the following options for providing a review:
-1. Read the code / patch associated with the pull-request, and take not of any coding, bug, or documentation abnormalities if found
+1. Read the code / patch associated with the pull-request, and take note of any coding, bug, or documentation issues if found
 2. Try to recreate the pull-request patch on your local machine, and report if it has issues with your system in particular
 3. Scan over suggested feedback from other contributors, and provide feedback if necessary
 
