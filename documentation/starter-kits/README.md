@@ -64,7 +64,7 @@ Starter Kit:
 To leverage this template, make sure to do the following:
 1. Talk with your team about leveraging this template, and seek wide agreement before you adopt
 2. Copy the template text, and place in a file within your repository called `CONTRIBUTING.md` 
-3. Replace the `[INSERT ...]` text within the file specifics for your project
+3. Replace the `INSERT ...` text within the file with specifics for your project
 4. Add a link to the `CONTRIBUTING.md` to your `README.md` file within the `Contributing` section
 
 This template was influenced by the following sources:

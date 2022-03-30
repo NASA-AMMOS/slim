@@ -30,7 +30,7 @@ Our Code of Conduct helps facilitate a positive interaction environment for ever
 
 ### Developer Environment
 
-For patch contributions, see our [Developer Documentation](YOUR DEVELOPMENT GUIDE LINK HERE) for more details on how to set up your local environment, to best contribute to our project. 
+For patch contributions, see our [Developer Documentation](INSERT YOUR DEVELOPMENT GUIDE LINK HERE) for more details on how to set up your local environment, to best contribute to our project. 
 
 At a minimum however to submit patches (if using Git), you'll want to ensure you have:
 1. An account on the Version Control System our project uses (i.e. GitHub).
@@ -44,7 +44,7 @@ Our project integrates contributions from many people, and so we'd like to outli
 ```mermaid
 flowchart TD
     repo_proj[(Our Repository)]-->|Fork|repo_fork[(Your Forked Repository)]
-    repo_fork-->|Generate|patch(Your Changes)
+    repo_fork-->|Make|patch(Your Changes)
     patch-->|Submit|pr(Pull Request)
     pr==>|Approved|repo_proj
     pr-->|Changes Requested|repo_fork
@@ -183,7 +183,7 @@ Here's some guidance on submitting a new feature issue:
 
 Security vulnerabilities should **not** be filed to the regular issue tracking system.
 
-Report your security vulnerabilities by: [INSERT SECURITY VULNERABILITY E-MAIL / SUBMISSION FORM HERE]
+Report your security vulnerabilities to: [INSERT SECURITY VULNERABILITY E-MAIL / SUBMISSION FORM HERE]
 
 Please be sure to:
 * Indicate the severity of the vulnerability
