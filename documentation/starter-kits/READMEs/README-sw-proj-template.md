@@ -72,6 +72,14 @@
 
 <!-- ☝️ Replace with a bullet-point list of your run instructions, including expected results ☝️ -->
 
+### Usage Examples
+
+* Provide list of a few common usage examples for running your software here. 
+* Link to your documentation for more examples and details.
+* Provide screenshots! They can be extremely helpful in verifying results.
+
+<!-- ☝️ Replace with a bullet-point list of your usage examples, including screenshots if possible ☝️ -->
+
 ### Build Instructions (if applicable)
 
 1. Bullet point
@@ -96,20 +104,9 @@
 
 ## Changelog
 
-[Link to releases page OR filled out below]
+[Link to your CHANGELOG.md]
 
-* 0.2.1
-    * CHANGE: Fixed dead links in docs
-* 0.2.0
-    * CHANGE: Deprecated ...
-    * ADD: New ABC feature
-* 0.1.1
-    * FIX: bug where XYZ happened
-* 0.1.0
-    * Inital working release
-    * CHANGE: Rename `foo()` to `bar()`
-* 0.0.1
-    * ADD: Feature 1 and 2 implemented
+[Additional link to your releases page if you have one]
 
 <!-- ☝️ Replace with a bullet-point list of your release notes like above, or just link to your releases page ☝️ -->
 
