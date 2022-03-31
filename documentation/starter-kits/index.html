@@ -27,11 +27,11 @@
     
     <script>(function () { var el = document.documentElement, m = localStorage.getItem("/slim/doc_theme"), wm = window.matchMedia; if (m === "dark" || (!m && wm && wm("(prefers-color-scheme: dark)").matches)) { el.classList.add("dark") } else { el.classList.remove("dark") } })();</script>
 
-    <link href="/slim/resources/css/retype.css?v=1.11.2.701382352131" rel="stylesheet" data-turbo-track="reload" />
+    <link href="/slim/resources/css/retype.css?v=1.11.2.702064086723" rel="stylesheet" data-turbo-track="reload" />
 
-    <script type="text/javascript" src="/slim/resources/js/config.js?v=1.11.2.701382352131" defer data-turbo-track="reload"></script>
+    <script type="text/javascript" src="/slim/resources/js/config.js?v=1.11.2.702064086723" defer data-turbo-track="reload"></script>
     <script type="text/javascript" src="/slim/resources/js/retype.js?v=1.11.2" defer data-turbo-track="reload"></script>
-    <script id="lunr-js" type="text/javascript" src="/slim/resources/js/lunr.js?v=1.11.2.701382352131" defer></script>
+    <script id="lunr-js" type="text/javascript" src="/slim/resources/js/lunr.js?v=1.11.2.702064086723" defer></script>
 </head>
     <body>
         <div id="docs-app" class="relative text-base antialiased text-gray-700 bg-white font-body dark:bg-dark-850 dark:text-dark-300">
@@ -192,7 +192,7 @@
         <span>README</span>
     </h2>
 </doc-anchor-target>
-<p>This section contains links to sample <code v-pre>README.md</code> templates that can be used to help developers and users understand your repository consisely and clearly. For each readme template provided below, see the <code v-pre>Markdown</code> version for the raw template which you can copy/paste into your own <code v-pre>README.md</code>, and see the <code v-pre>Demo</code> for a working example of the template in action.</p>
+<p>This section contains links to sample <code v-pre>README.md</code> templates that can be used to help developers and users understand your repository concisely and clearly. For each readme template provided below, see the <code v-pre>Markdown</code> version for the raw template which you can copy/paste into your own <code v-pre>README.md</code>, and see the <code v-pre>Demo</code> for a working example of the template in action.</p>
 <doc-anchor-target id="software-project-template">
     <h3>
         <doc-anchor-trigger class="header-anchor-trigger" to="#software-project-template">#</doc-anchor-trigger>
@@ -218,7 +218,7 @@
         <span>Code of Conduct</span>
     </h2>
 </doc-anchor-target>
-<p>The code of conduct is typically a document that provides guidance to a project team on <em>how</em> the team members should interact with each other. It identifies behaviors that are deemed problematic, provides contact information for addressing grievences, and finally lists key responses that team leadership should / will take for problematic behavior. Below are some examples to expedite the incorporation of a code of conduct.</p>
+<p>The code of conduct is typically a document that provides guidance to a project team on <em>how</em> the team members should interact with each other. It identifies behaviors that are helpful for building a better development community, provides contact information for addressing grievances (should they arise), and finally lists key responses that team leadership should / will take for dealing with unexpected behavior. Below are some examples to expedite the incorporation of a code of conduct.</p>
 <doc-anchor-target id="contributor-covenant-template">
     <h3>
         <doc-anchor-trigger class="header-anchor-trigger" to="#contributor-covenant-template">#</doc-anchor-trigger>
@@ -248,34 +248,73 @@
         <span>Contributing Guides</span>
     </h2>
 </doc-anchor-target>
-<p>A contribution guide is an important document directed at <em>new contributors</em> to your project - to help them in understanding what and how they may contribute. It can be used to outline expected requirements prior to contributions (i.e. acceptance of licensing terms, signing off on any developer agreements required) as well as to ensure the quality of contributions are in-line with expected project norms. If a developer asks how to contribute, this is the guide to point them to, and if patches are submitted to a project but are missing essential ingredients, this is again the guide to point new developers to.</p>
-<p>We provide a collections of sample contribution guide templates below, but please keep in mind to modify and adapt to your project as needed.</p>
-<doc-anchor-target id="limited-contributions-template">
+<p>A contribution guide is an important document directed at <em>new contributors</em> to your project - to help them in understanding what and how they may contribute. It can be used to outline expected requirements prior to contributions (i.e. acceptance of licensing terms, signing off on any developer agreements required) as well as to ensure the quality of contributions are in-line with expected project norms. If a developer asks how to contribute, please point them to this guide. This guide also itemizes essential ingredients necessary for a successful patch submission.</p>
+<p>We provide a sample contribution guide template below, but please keep in mind to:</p>
+<ul>
+<li>Modify and adapt to your project as needed. You may not need all features of the template guide.</li>
+<li>Replace all instances of <code v-pre>[INSERT ...]</code> within the template with your project&#x27;s specific environment.</li>
+</ul>
+<doc-anchor-target id="contributing-guide-template">
     <h3>
-        <doc-anchor-trigger class="header-anchor-trigger" to="#limited-contributions-template">#</doc-anchor-trigger>
-        <span>Limited Contributions Template</span>
+        <doc-anchor-trigger class="header-anchor-trigger" to="#contributing-guide-template">#</doc-anchor-trigger>
+        <span>Contributing Guide Template</span>
     </h3>
 </doc-anchor-target>
-<p>This template is meant for projects that only accept bug-reports and issues, not necessarily code patches or other diverse artifacts.</p>
-<p>(TBD)</p>
-<doc-anchor-target id="standard-codeissues-contributions-template">
-    <h3>
-        <doc-anchor-trigger class="header-anchor-trigger" to="#standard-codeissues-contributions-template">#</doc-anchor-trigger>
-        <span>Standard (Code/Issues) Contributions Template</span>
-    </h3>
-</doc-anchor-target>
-<p>(TBD)</p>
-<doc-anchor-target id="full-feature-codeissuesdocsetc-contributions-template">
-    <h3>
-        <doc-anchor-trigger class="header-anchor-trigger" to="#full-feature-codeissuesdocsetc-contributions-template">#</doc-anchor-trigger>
-        <span>Full Feature (Code/Issues/Docs/etc.) Contributions Template</span>
-    </h3>
-</doc-anchor-target>
-<p>(TBD)</p>
+<p>This template covers the following contributions areas:</p>
+<ul>
+<li>Prerequisites to contributing</li>
+<li>Development process</li>
+<li>Ways to contribute: issues, code, documentation, media and questions, among other types of contributions</li>
+</ul>
+<p>Starter Kit:</p>
+<ul>
+<li><a href="https://github.com/nasa-ammos/slim/blob/main/documentation/starter-kits/CONTRIBUTING/CONTRIBUTING.md">Markdown</a> of template</li>
+<li><a href="https://github.com/riverma/terraformly/blob/main/CONTRIBUTING.md">Demo</a> of template</li>
+</ul>
+<p>To leverage this template, make sure to do the following:</p>
+<ol>
+<li>Talk with your team about leveraging this template, and seek wide agreement before you adopt</li>
+<li>Copy the template text, and place in a file within your repository called <code v-pre>CONTRIBUTING.md</code></li>
+<li>Replace the <code v-pre>INSERT ...</code> text within the file with specifics for your project</li>
+<li>Add a link to the <code v-pre>CONTRIBUTING.md</code> to your <code v-pre>README.md</code> file within the <code v-pre>Contributing</code> section</li>
+</ol>
 <p>This template was influenced by the following sources:</p>
 <ul>
 <li><a href="https://opensource.guide/how-to-contribute/">Open Source Guide</a></li>
+<li><a href="https://reactjs.org/docs/how-to-contribute.html">Facebook React Contribution Guide</a></li>
+<li><a href="https://github.com/NASA-AMMOS">NASA-AMMOS Repositories</a></li>
+<li><a href="https://github.com/kubernetes/community/tree/master/contributors/guide">Kubernetes Contributors Guide</a></li>
+<li><a href="https://scikit-learn.org/dev/developers/contributing.html">SciKit Learn Contributors Guide</a></li>
+<li><a href="https://docs.djangoproject.com/en/dev/internals/contributing">Django Contributors Guide</a></li>
 </ul>
+<doc-anchor-target id="change-log">
+    <h2>
+        <doc-anchor-trigger class="header-anchor-trigger" to="#change-log">#</doc-anchor-trigger>
+        <span>Change Log</span>
+    </h2>
+</doc-anchor-target>
+<p>A change log provides a <em>human readable</em> list of significant changes, additions, deprecations, removals for software over time. It is meant to be able to be read by <em>people</em>. Change logs should be documented within a file called <code v-pre>CHANGELOG.md</code> and be updated per key release. See <a href="https://semver.org">semantic release</a> for guidance on releasing cycles and versioning of your software.</p>
+<p><span class="docs-emoji">&#x26A0;&#xFE0F;</span> A <code v-pre>CHANGELOG.md</code> can replicate wording from a releases page (e.g. GitHub Releases), but should not be left out <em>in place of</em> a releases page. Down-stream inheritors of your software may not have access to your releases page, and will expect a <code v-pre>CHANGELOG.md</code> to be present as part of your software distribution.</p>
+<doc-anchor-target id="keep-a-changelog">
+    <h3>
+        <doc-anchor-trigger class="header-anchor-trigger" to="#keep-a-changelog">#</doc-anchor-trigger>
+        <span>Keep a Changelog</span>
+    </h3>
+</doc-anchor-target>
+<p>This change log standard seeks to provide a template for <em>human readable</em> change logs, among other key guidance on the change logging process.</p>
+<p>Starter Kit:</p>
+<ul>
+<li><a href="https://keepachangelog.com/en/1.0.0/#how">Guidance</a></li>
+<li><a href="https://github.com/olivierlacan/keep-a-changelog/blob/main/CHANGELOG.md">Demo</a></li>
+<li><a href="https://keepachangelog.com/en/1.0.0/">Webpage</a></li>
+</ul>
+<p>To leverage this template, make sure to do the following:</p>
+<ol>
+<li>Talk with your team about leveraging this template, and seek wide agreement before you adopt</li>
+<li>Copy the demo <code v-pre>CHANGELOG.md</code> above, and place in a file within your repository called <code v-pre>CHANGELOG.md</code></li>
+<li>Edit the <code v-pre>CHANGELOG.md</code> file with your specific release information. If you have many historic releases prior to the creation of this file, mark the latest release as the first entry, and commit to updating this for future releases as the happen.</li>
+<li>Add an entry to your <code v-pre>README.md</code> under the <code v-pre>Changelog</code> section to point to your <code v-pre>CHANGELOG.md</code> file.</li>
+</ol>
 
 
 
