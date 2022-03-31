@@ -1,26 +1,58 @@
 * Continuous Testing
     * For Development APIs
-        * Unit Testing
-            * xUnit (e.g. Junit\[Java\], PyUnit\[Python\], NUnit\[C#\], CppUnit\[C++\]
-            * Tools
-                * Java
-                * Python
-                * C#
-                * C/C++
-        * Integration, Dependency and Stub Mocking
+        * Unit Testing, Integration, Dependency and Stub Mocking
+            * xUnit for build-time testing
             * Simulate dependencies
             * Stub out coupled services for planned results
             * Mock specific application behavior
             * Tools
                 * Java
+                    * JUnit
                     * Mockito
                     * EasyMock
                     * JMock
                 * Python
-                    * 
+                    * PyUnit
+                    * PyTest
+                    * Nose2
+                    * Mock
                 * C#
+                    * NUnit
+                    * Moq
+                    * NSubstitute
+                    * FakeItEasy
                 * C/C++
-        * Code Quality Analysis
+                    * cUnit/CppUnit
+                    * CMock
+                    * cpp-stub
+                    * googletest
+    * For Code Analysis
+        * Static Analysis (Format, structure and standards compliance)
+            * Java
+              * Jacoco
+              * PMD
+              * Cobertura
+              * FindBugs
+            * Python
+                * PyLint
+                * Pyflakes
+                * Mypy
+                * Prospector
+            * C#
+                * StyleCop
+                * Gendarme
+                * Nitriq
+            * C/C++
+        * Dynamic Analysis (performance, coverage, complexity)
+            * Java
+            * Python
+                * PyLint
+            * C#
+            * C/C++
+        * Code Quality (unified, both dynamic and static analyses)
+            * Sonar
+            * 
+        * Security
             * Semmle
     * For Web Applications
         * Service Endpoints (APIs)
@@ -46,11 +78,15 @@
                 * Cucumber* (Java + others) / Behave (Python) / Specflow (C#)
                 * Watir (Ruby)
                 * Home Grown
-    * For Backend (Load testing?)
+    * For Load testing
+        * Using Apache JMeter
         * Using Chaos Monkey
         * Using Robot Framework
         * Using Cucumber Open
         * For Mobile
     * For Reporting
-        * Using TestRail
-        * Using Serenity
+        * Continuous Integration and Deployment
+            * 
+        * Test Reporting
+            * Using TestRail
+            * Using Serenity
