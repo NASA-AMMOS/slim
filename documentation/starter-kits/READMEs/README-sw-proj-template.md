@@ -70,13 +70,15 @@
 5. Instructions (with optional screenshots)
 6. And expected outputs (with optional screenshots)
 
+<!-- ☝️ Replace with a bullet-point list of your run instructions, including expected results ☝️ -->
+
 ### Usage Examples
 
 * Provide list of a few common usage examples for running your software here. 
 * Link to your documentation for more examples and details.
 * Provide screenshots! They can be extremely helpful in verifying results.
 
-<!-- ☝️ Replace with a bullet-point list of your run instructions, including expected results ☝️ -->
+<!-- ☝️ Replace with a bullet-point list of your usage examples, including screenshots if possible ☝️ -->
 
 ### Build Instructions (if applicable)
 
