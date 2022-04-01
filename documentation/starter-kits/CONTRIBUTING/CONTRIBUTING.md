@@ -30,12 +30,12 @@ Our Code of Conduct helps facilitate a positive interaction environment for ever
 
 ### Developer Environment
 
-For patch contributions, see our [Developer Documentation](INSERT YOUR DEVELOPMENT GUIDE LINK HERE) for more details on how to set up your local environment, to best contribute to our project. 
+For patch contributions, see our [Developer Documentation]([INSERT YOUR DEVELOPMENT GUIDE LINK HERE]) for more details on how to set up your local environment, to best contribute to our project. 
 
 At a minimum however to submit patches (if using Git), you'll want to ensure you have:
 1. An account on the Version Control System our project uses (i.e. GitHub).
 2. The Version Control System client (i.e. Git) installed on your local machine.
-3. The ability to edit, build, and test our project on your local machine. Again, see our `README` or detailed developer guide for more details 
+3. The ability to edit, build, and test our project on your local machine. Again, see our `README.md` or detailed developer guide for more details 
 
 ## Our Development Process
 
@@ -62,7 +62,7 @@ Make sure people are aware you're working on a patch! Check out our issue tracki
 
 ### Make your Modifications
 
-Within your local development environment, this is the stage at which you'll propose your changes, and commit those changes back to version control. See the `README` or development guide for more specifics on what you'll need as prerequisites to setup your local development environment.
+Within your local development environment, this is the stage at which you'll propose your changes, and commit those changes back to version control. See the `README.md` or development guide for more specifics on what you'll need as prerequisites to setup your local development environment.
 
 #### Commit Messages
 
@@ -84,13 +84,13 @@ Please make sure to provide a meaningful text description to your pull requests,
 ```
 ## Purpose
 - Clear, easy-to-understand sentences outlining the purpose of the PR
-## Issues
-- Links to relevant issues
-- Example: issue-XYZ
 ## Proposed Changes
 - [ADD] ...
 - [CHANGE] ...
 - [FIX] ...
+## Issues
+- Links to relevant issues
+- Example: issue-XYZ
 ## Testing
 - Provide some proof you've tested your changes 
 - Example: test results available at ...
@@ -194,7 +194,7 @@ Please be sure to:
 
 Reviewing others' contributions is a great way to learn about best practices in both contributions as well as software. 
 
-Take a look at our pull requests tracking system [INSERT LINK FOR PULL REQUESTS TRACKING SYSTEM], and try the following options for providing a review:
+Take a look at our [pull requests tracking system]([INSERT LINK FOR PULL REQUESTS TRACKING SYSTEM]), and try the following options for providing a review:
 1. Read the code / patch associated with the pull-request, and take note of any coding, bug, or documentation issues if found
 2. Try to recreate the pull-request patch on your local machine, and report if it has issues with your system in particular
 3. Scan over suggested feedback from other contributors, and provide feedback if necessary

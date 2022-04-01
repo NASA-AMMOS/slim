@@ -14,6 +14,12 @@ Starter Kit:
 - [Markdown](https://github.com/nasa-ammos/slim/blob/main/documentation/starter-kits/READMEs/README-sw-proj-template.md) of template
 - [Demo](https://github.com/riverma/terraformly/blob/main/README.md) of template
 
+To leverage this template, make sure to do the following:
+1. Talk with your team about leveraging this template, and seek wide agreement before you adopt
+2. Copy the template text, and place in a file within your repository called `README.md` 
+3. Search and replace the `[INSERT ...` text within the file with specifics for your project
+4. Add a link to the `CONTRIBUTING.md` to your `README.md` file within the `Contributing` section
+
 This starter kit template was developed by evaluating best `README.md` practices in the following organizations:
 - NASA-AMMOS
 - ReactJS 
@@ -36,7 +42,7 @@ Starter Kit:
 To leverage this template, make sure to do the following:
 1. Talk with your team about leveraging this template, and seek wide agreement before you adopt
 2. Copy the template text, and place in a file within your repository called `CODE_OF_CONDUCT.md` 
-3. Replace the `[INSERT CONTACT METHOD]` text within the file with a person, private e-mail list, or other form of contact for grievances to be addressed to
+3. Search and replace the `[INSERT CONTACT METHOD]` text within the file with a person, private e-mail list, or other form of contact for grievances to be addressed to
 4. Add the contributor covenant badge (![](https://img.shields.io/badge/Contributor%20Covenant-2.1-4baaaa.svg)) to your `README.md` file (example below)
 ```
 [![Contributor Covenant](https://img.shields.io/badge/Contributor%20Covenant-2.1-4baaaa.svg)](code_of_conduct.md)
@@ -64,7 +70,7 @@ Starter Kit:
 To leverage this template, make sure to do the following:
 1. Talk with your team about leveraging this template, and seek wide agreement before you adopt
 2. Copy the template text, and place in a file within your repository called `CONTRIBUTING.md` 
-3. Replace the `INSERT ...` text within the file with specifics for your project
+3. Search and replace the `[INSERT ...` text within the file with specifics for your project
 4. Add a link to the `CONTRIBUTING.md` to your `README.md` file within the `Contributing` section
 
 This template was influenced by the following sources:
@@ -87,6 +93,7 @@ This change log standard seeks to provide a template for *human readable* change
 
 Starter Kit:
 - [Guidance](https://keepachangelog.com/en/1.0.0/#how)
+- [Demo](https://github.com/riverma/terraformly/blob/main/CHANGELOG.md)
 - [Demo](https://github.com/olivierlacan/keep-a-changelog/blob/main/CHANGELOG.md)
 - [Webpage](https://keepachangelog.com/en/1.0.0/)
 
