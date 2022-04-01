@@ -27,11 +27,11 @@
     
     <script>(function () { var el = document.documentElement, m = localStorage.getItem("/slim/doc_theme"), wm = window.matchMedia; if (m === "dark" || (!m && wm && wm("(prefers-color-scheme: dark)").matches)) { el.classList.add("dark") } else { el.classList.remove("dark") } })();</script>
 
-    <link href="/slim/resources/css/retype.css?v=1.11.2.702064086723" rel="stylesheet" data-turbo-track="reload" />
+    <link href="/slim/resources/css/retype.css?v=1.11.2.702090248116" rel="stylesheet" data-turbo-track="reload" />
 
-    <script type="text/javascript" src="/slim/resources/js/config.js?v=1.11.2.702064086723" defer data-turbo-track="reload"></script>
+    <script type="text/javascript" src="/slim/resources/js/config.js?v=1.11.2.702090248116" defer data-turbo-track="reload"></script>
     <script type="text/javascript" src="/slim/resources/js/retype.js?v=1.11.2" defer data-turbo-track="reload"></script>
-    <script id="lunr-js" type="text/javascript" src="/slim/resources/js/lunr.js?v=1.11.2.702064086723" defer></script>
+    <script id="lunr-js" type="text/javascript" src="/slim/resources/js/lunr.js?v=1.11.2.702090248116" defer></script>
 </head>
     <body>
         <div id="docs-app" class="relative text-base antialiased text-gray-700 bg-white font-body dark:bg-dark-850 dark:text-dark-300">
@@ -205,6 +205,13 @@
 <li><a href="https://github.com/nasa-ammos/slim/blob/main/documentation/starter-kits/READMEs/README-sw-proj-template.md">Markdown</a> of template</li>
 <li><a href="https://github.com/riverma/terraformly/blob/main/README.md">Demo</a> of template</li>
 </ul>
+<p>To leverage this template, make sure to do the following:</p>
+<ol>
+<li>Talk with your team about leveraging this template, and seek wide agreement before you adopt</li>
+<li>Copy the template text, and place in a file within your repository called <code v-pre>README.md</code></li>
+<li>Search and replace the <code v-pre>[INSERT ...</code> text within the file with specifics for your project</li>
+<li>Add a link to the <code v-pre>CONTRIBUTING.md</code> to your <code v-pre>README.md</code> file within the <code v-pre>Contributing</code> section</li>
+</ol>
 <p>This starter kit template was developed by evaluating best <code v-pre>README.md</code> practices in the following organizations:</p>
 <ul>
 <li>NASA-AMMOS</li>
@@ -236,7 +243,7 @@
 <ol>
 <li>Talk with your team about leveraging this template, and seek wide agreement before you adopt</li>
 <li>Copy the template text, and place in a file within your repository called <code v-pre>CODE_OF_CONDUCT.md</code></li>
-<li>Replace the <code v-pre>[INSERT CONTACT METHOD]</code> text within the file with a person, private e-mail list, or other form of contact for grievances to be addressed to</li>
+<li>Search and replace the <code v-pre>[INSERT CONTACT METHOD]</code> text within the file with a person, private e-mail list, or other form of contact for grievances to be addressed to</li>
 <li>Add the contributor covenant badge (<img src="https://img.shields.io/badge/Contributor%20Covenant-2.1-4baaaa.svg" alt="" />) to your <code v-pre>README.md</code> file (example below)</li>
 </ol>
 <div class="codeblock-wrapper"><doc-codeblock>
@@ -275,7 +282,7 @@
 <ol>
 <li>Talk with your team about leveraging this template, and seek wide agreement before you adopt</li>
 <li>Copy the template text, and place in a file within your repository called <code v-pre>CONTRIBUTING.md</code></li>
-<li>Replace the <code v-pre>INSERT ...</code> text within the file with specifics for your project</li>
+<li>Search and replace the <code v-pre>[INSERT ...</code> text within the file with specifics for your project</li>
 <li>Add a link to the <code v-pre>CONTRIBUTING.md</code> to your <code v-pre>README.md</code> file within the <code v-pre>Contributing</code> section</li>
 </ol>
 <p>This template was influenced by the following sources:</p>
@@ -305,6 +312,7 @@
 <p>Starter Kit:</p>
 <ul>
 <li><a href="https://keepachangelog.com/en/1.0.0/#how">Guidance</a></li>
+<li><a href="https://github.com/riverma/terraformly/blob/main/CHANGELOG.md">Demo</a></li>
 <li><a href="https://github.com/olivierlacan/keep-a-changelog/blob/main/CHANGELOG.md">Demo</a></li>
 <li><a href="https://keepachangelog.com/en/1.0.0/">Webpage</a></li>
 </ul>

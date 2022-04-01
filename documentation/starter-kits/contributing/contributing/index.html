@@ -25,11 +25,11 @@
     
     <script>(function () { var el = document.documentElement, m = localStorage.getItem("/slim/doc_theme"), wm = window.matchMedia; if (m === "dark" || (!m && wm && wm("(prefers-color-scheme: dark)").matches)) { el.classList.add("dark") } else { el.classList.remove("dark") } })();</script>
 
-    <link href="/slim/resources/css/retype.css?v=1.11.2.702064086723" rel="stylesheet" data-turbo-track="reload" />
+    <link href="/slim/resources/css/retype.css?v=1.11.2.702090248116" rel="stylesheet" data-turbo-track="reload" />
 
-    <script type="text/javascript" src="/slim/resources/js/config.js?v=1.11.2.702064086723" defer data-turbo-track="reload"></script>
+    <script type="text/javascript" src="/slim/resources/js/config.js?v=1.11.2.702090248116" defer data-turbo-track="reload"></script>
     <script type="text/javascript" src="/slim/resources/js/retype.js?v=1.11.2" defer data-turbo-track="reload"></script>
-    <script id="lunr-js" type="text/javascript" src="/slim/resources/js/lunr.js?v=1.11.2.702064086723" defer></script>
+    <script id="lunr-js" type="text/javascript" src="/slim/resources/js/lunr.js?v=1.11.2.702090248116" defer></script>
     <script id="mermaid-js" type="text/javascript" src="/slim/resources/js/mermaid.js?v=1.11.2" defer></script>
 </head>
     <body>
@@ -233,12 +233,12 @@
         <span>Developer Environment</span>
     </h3>
 </doc-anchor-target>
-<p>For patch contributions, see our [Developer Documentation](INSERT YOUR DEVELOPMENT GUIDE LINK HERE) for more details on how to set up your local environment, to best contribute to our project.</p>
+<p>For patch contributions, see our [Developer Documentation]([INSERT YOUR DEVELOPMENT GUIDE LINK HERE]) for more details on how to set up your local environment, to best contribute to our project.</p>
 <p>At a minimum however to submit patches (if using Git), you&#x27;ll want to ensure you have:</p>
 <ol>
 <li>An account on the Version Control System our project uses (i.e. GitHub).</li>
 <li>The Version Control System client (i.e. Git) installed on your local machine.</li>
-<li>The ability to edit, build, and test our project on your local machine. Again, see our <code v-pre>README</code> or detailed developer guide for more details</li>
+<li>The ability to edit, build, and test our project on your local machine. Again, see our <code v-pre>README.md</code> or detailed developer guide for more details</li>
 </ol>
 <doc-anchor-target id="our-development-process">
     <h2>
@@ -274,7 +274,7 @@
         <span>Make your Modifications</span>
     </h3>
 </doc-anchor-target>
-<p>Within your local development environment, this is the stage at which you&#x27;ll propose your changes, and commit those changes back to version control. See the <code v-pre>README</code> or development guide for more specifics on what you&#x27;ll need as prerequisites to setup your local development environment.</p>
+<p>Within your local development environment, this is the stage at which you&#x27;ll propose your changes, and commit those changes back to version control. See the <code v-pre>README.md</code> or development guide for more specifics on what you&#x27;ll need as prerequisites to setup your local development environment.</p>
 <doc-anchor-target id="commit-messages">
     <h4>
         <doc-anchor-trigger class="header-anchor-trigger" to="#commit-messages">#</doc-anchor-trigger>
@@ -298,13 +298,13 @@
 <div class="codeblock-wrapper"><doc-codeblock>
 <pre class="language-none"><code v-pre class="language-none">## Purpose
 - Clear, easy-to-understand sentences outlining the purpose of the PR
-## Issues
-- Links to relevant issues
-- Example: issue-XYZ
 ## Proposed Changes
 - [ADD] ...
 - [CHANGE] ...
 - [FIX] ...
+## Issues
+- Links to relevant issues
+- Example: issue-XYZ
 ## Testing
 - Provide some proof you've tested your changes 
 - Example: test results available at ...
@@ -454,7 +454,7 @@
     </h4>
 </doc-anchor-target>
 <p>Reviewing others&#x27; contributions is a great way to learn about best practices in both contributions as well as software.</p>
-<p>Take a look at our pull requests tracking system [INSERT LINK FOR PULL REQUESTS TRACKING SYSTEM], and try the following options for providing a review:</p>
+<p>Take a look at our [pull requests tracking system]([INSERT LINK FOR PULL REQUESTS TRACKING SYSTEM]), and try the following options for providing a review:</p>
 <ol>
 <li>Read the code / patch associated with the pull-request, and take note of any coding, bug, or documentation issues if found</li>
 <li>Try to recreate the pull-request patch on your local machine, and report if it has issues with your system in particular</li>
