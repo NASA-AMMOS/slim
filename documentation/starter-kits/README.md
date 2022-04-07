@@ -93,8 +93,8 @@ This change log standard seeks to provide a template for *human readable* change
 
 Starter Kit:
 - [Guidance](https://keepachangelog.com/en/1.0.0/#how)
-- [Demo](https://github.com/riverma/terraformly/blob/main/CHANGELOG.md)
-- [Demo](https://github.com/olivierlacan/keep-a-changelog/blob/main/CHANGELOG.md)
+- [Demo 1](https://github.com/riverma/terraformly/blob/main/CHANGELOG.md)
+- [Demo 2](https://github.com/olivierlacan/keep-a-changelog/blob/main/CHANGELOG.md)
 - [Webpage](https://keepachangelog.com/en/1.0.0/)
 
 To leverage this template, make sure to do the following:
