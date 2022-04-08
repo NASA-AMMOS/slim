@@ -102,3 +102,25 @@ To leverage this template, make sure to do the following:
 2. Copy the demo `CHANGELOG.md` above, and place in a file within your repository called `CHANGELOG.md` 
 3. Edit the `CHANGELOG.md` file with your specific release information. If you have many historic releases prior to the creation of this file, mark the latest release as the first entry, and commit to updating this for future releases as the happen.
 4. Add an entry to your `README.md` under the `Changelog` section to point to your `CHANGELOG.md` file.
+
+## Issue Templates
+
+Issue tickets help development teams keep the language of bug, feature, and other types of issues readable and consistent. Templates appear whenever a person submits a new issue, and helps guide that person in providing the key information that gives developers context for a given issue.
+
+### GitHub Issues (Markdown)
+
+GitHub issue markdown templates provide pre-filled structure, in markdown format, for people to enter issue information. Please see the [documentation](https://docs.github.com/en/communities/using-templates-to-encourage-useful-issues-and-pull-requests/about-issue-and-pull-request-templates) on GitHub templates for more details.
+
+Starter Kits:
+- [Bug Report](https://github.com/nasa-ammos/slim/blob/main/documentation/starter-kits/ISSUE_TEMPLATES/github/bug_report.yml)
+- [New Feature](https://github.com/nasa-ammos/slim/blob/main/documentation/starter-kits/ISSUE_TEMPLATES/github/new_feature.yml)
+
+### GitHub Issues (Forms)
+
+GitHub issue forms are a method to provide a _form like_ experience when filling out a new issue ticket. Please see the [documentation](https://docs.github.com/en/communities/using-templates-to-encourage-useful-issues-and-pull-requests/configuring-issue-templates-for-your-repository#creating-issue-forms) on GitHub forms for more details.
+
+⚠️ NOTE: GitHub issue forms are currently in beta. When using a third-party issue tracking system like ZenHub, the templates will not be usable in that system. 
+
+Starter Kits:
+- [Bug Report](https://github.com/nasa-ammos/slim/blob/main/documentation/starter-kits/ISSUE_TEMPLATES/github/bug_report.yml)
+- [New Feature](https://github.com/nasa-ammos/slim/blob/main/documentation/starter-kits/ISSUE_TEMPLATES/github/new_feature.yml)
