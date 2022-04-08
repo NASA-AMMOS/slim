@@ -11,15 +11,15 @@ assignees: ''
 
 > Have you checked for duplicate issue tickets?
 
-- [ ] Yes - I've already checked
-- [ ] No - I haven't checked
+- Ex. Yes - I've already checked
+- Ex. No - I haven't checked
 
 **Alternatives considered**
 
 > Have you considered alternative solutions to your feature request?
 
-- [ ] Yes - and alternatives don't suffice
-- [ ] No - I haven't considered
+- Ex. Yes - and alternatives don't suffice
+- Ex. No - I haven't considered
 
 **Related problems**
 

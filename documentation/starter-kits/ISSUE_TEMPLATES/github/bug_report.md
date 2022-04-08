@@ -11,8 +11,8 @@ assignees: ''
 
 > Have you checked for duplicate issue tickets?
 
-- [ ] Yes - I've already checked
-- [ ] No - I haven't checked
+- Ex. Yes - I've already checked
+- Ex. No - I haven't checked
 
 **Describe the bug**
 

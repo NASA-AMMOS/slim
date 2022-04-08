@@ -112,8 +112,18 @@ Issue tickets help development teams keep the language of bug, feature, and othe
 GitHub issue markdown templates provide pre-filled structure, in markdown format, for people to enter issue information. Please see the [documentation](https://docs.github.com/en/communities/using-templates-to-encourage-useful-issues-and-pull-requests/about-issue-and-pull-request-templates) on GitHub templates for more details.
 
 Starter Kits:
-- [Bug Report](https://github.com/nasa-ammos/slim/blob/main/documentation/starter-kits/ISSUE_TEMPLATES/github/bug_report.yml)
-- [New Feature](https://github.com/nasa-ammos/slim/blob/main/documentation/starter-kits/ISSUE_TEMPLATES/github/new_feature.yml)
+- [Bug Report](https://github.com/nasa-ammos/slim/blob/main/documentation/starter-kits/ISSUE_TEMPLATES/github/bug_report.md)
+- [New Feature](https://github.com/nasa-ammos/slim/blob/main/documentation/starter-kits/ISSUE_TEMPLATES/github/new_feature.md)
+
+
+To leverage these template, make sure to do the following:
+1. Talk with your team about leveraging this template, and seek wide agreement before you adopt
+2. Create a new folder within your GitHub repository with the following path: `.github/ISSUE_TEMPLATE`
+3. Copy the Bug Report and New Feature template files above into the following paths:
+   1. `.github/ISSUE_TEMPLATE/bug_report.md`
+   2. `.github/ISSUE_TEMPLATE/new_feature.md`
+4. Commit the above two files
+5. Navigate to your issues tab within GitHub, and you should see options to use your new templates appear
 
 ### GitHub Issues (Forms)
 
@@ -124,3 +134,13 @@ GitHub issue forms are a method to provide a _form like_ experience when filling
 Starter Kits:
 - [Bug Report](https://github.com/nasa-ammos/slim/blob/main/documentation/starter-kits/ISSUE_TEMPLATES/github/bug_report.yml)
 - [New Feature](https://github.com/nasa-ammos/slim/blob/main/documentation/starter-kits/ISSUE_TEMPLATES/github/new_feature.yml)
+
+
+To leverage these template, make sure to do the following:
+1. Talk with your team about leveraging this template, and seek wide agreement before you adopt
+2. Create a new folder within your GitHub repository with the following path: `.github/ISSUE_TEMPLATE`
+3. Copy the Bug Report and New Feature template files above into the following paths:
+   1. `.github/ISSUE_TEMPLATE/bug_report.yml`
+   2. `.github/ISSUE_TEMPLATE/new_feature.yml`
+4. Commit the above two files
+5. Navigate to your issues tab within GitHub, and you should see options to use your new templates appear
