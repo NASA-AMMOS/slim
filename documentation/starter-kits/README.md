@@ -122,7 +122,7 @@ To leverage these template, make sure to do the following:
 3. Copy the Bug Report and New Feature template files above into the following paths:
    1. `.github/ISSUE_TEMPLATE/bug_report.md`
    2. `.github/ISSUE_TEMPLATE/new_feature.md`
-4. Commit the above two files
+4. Commit the above two files to the `main` branch
 5. Navigate to your issues tab within GitHub, and you should see options to use your new templates appear
 
 ### GitHub Issues (Forms)
@@ -142,5 +142,24 @@ To leverage these template, make sure to do the following:
 3. Copy the Bug Report and New Feature template files above into the following paths:
    1. `.github/ISSUE_TEMPLATE/bug_report.yml`
    2. `.github/ISSUE_TEMPLATE/new_feature.yml`
-4. Commit the above two files
+4. Commit the above two files to the `main` branch
 5. Navigate to your issues tab within GitHub, and you should see options to use your new templates appear
+
+## Pull Request Templates
+
+Pull requests are the currency for how contributions are made to projects. Having a pre-filled out pull request template offers guidance to your potential developers on how to contribute to your project.
+
+### GitHub Pull Request Template (General)
+
+GitHub provides a mechanism to automatically display a template whenever a potential contributor proposes a pull request to your repository. Please see the [documentation](https://docs.github.com/en/communities/using-templates-to-encourage-useful-issues-and-pull-requests/creating-a-pull-request-template-for-your-repository) on GitHub for details. 
+
+Starter Kits:
+- [Pull Request Template](https://github.com/nasa-ammos/slim/blob/main/documentation/starter-kits/ISSUE_TEMPLATES/github/PULL_REQUEST_TEMPLATE.md)
+
+To leverage this template, make sure to do the following:
+1. Talk with your team about leveraging this template, and seek wide agreement before you adopt
+2. Create a new folder within your GitHub repository with the following path: `.github/`
+3. Copy the Pull Request Template template file above into the following path:
+   1. `.github/PULL_REQUEST_TEMPLATE.md`
+4. Commit the above file to the `main` branch
+5. Whenever you propose a new pull request, your new templates should appear in the text box
