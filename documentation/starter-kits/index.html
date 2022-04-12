@@ -27,11 +27,11 @@
     
     <script>(function () { var el = document.documentElement, m = localStorage.getItem("/slim/doc_theme"), wm = window.matchMedia; if (m === "dark" || (!m && wm && wm("(prefers-color-scheme: dark)").matches)) { el.classList.add("dark") } else { el.classList.remove("dark") } })();</script>
 
-    <link href="/slim/resources/css/retype.css?v=1.11.2.702090248116" rel="stylesheet" data-turbo-track="reload" />
+    <link href="/slim/resources/css/retype.css?v=1.11.2.703117322361" rel="stylesheet" data-turbo-track="reload" />
 
-    <script type="text/javascript" src="/slim/resources/js/config.js?v=1.11.2.702090248116" defer data-turbo-track="reload"></script>
+    <script type="text/javascript" src="/slim/resources/js/config.js?v=1.11.2.703117322361" defer data-turbo-track="reload"></script>
     <script type="text/javascript" src="/slim/resources/js/retype.js?v=1.11.2" defer data-turbo-track="reload"></script>
-    <script id="lunr-js" type="text/javascript" src="/slim/resources/js/lunr.js?v=1.11.2.702090248116" defer></script>
+    <script id="lunr-js" type="text/javascript" src="/slim/resources/js/lunr.js?v=1.11.2.703117322361" defer></script>
 </head>
     <body>
         <div id="docs-app" class="relative text-base antialiased text-gray-700 bg-white font-body dark:bg-dark-850 dark:text-dark-300">
@@ -312,8 +312,8 @@
 <p>Starter Kit:</p>
 <ul>
 <li><a href="https://keepachangelog.com/en/1.0.0/#how">Guidance</a></li>
-<li><a href="https://github.com/riverma/terraformly/blob/main/CHANGELOG.md">Demo</a></li>
-<li><a href="https://github.com/olivierlacan/keep-a-changelog/blob/main/CHANGELOG.md">Demo</a></li>
+<li><a href="https://github.com/riverma/terraformly/blob/main/CHANGELOG.md">Demo 1</a></li>
+<li><a href="https://github.com/olivierlacan/keep-a-changelog/blob/main/CHANGELOG.md">Demo 2</a></li>
 <li><a href="https://keepachangelog.com/en/1.0.0/">Webpage</a></li>
 </ul>
 <p>To leverage this template, make sure to do the following:</p>
@@ -322,6 +322,94 @@
 <li>Copy the demo <code v-pre>CHANGELOG.md</code> above, and place in a file within your repository called <code v-pre>CHANGELOG.md</code></li>
 <li>Edit the <code v-pre>CHANGELOG.md</code> file with your specific release information. If you have many historic releases prior to the creation of this file, mark the latest release as the first entry, and commit to updating this for future releases as the happen.</li>
 <li>Add an entry to your <code v-pre>README.md</code> under the <code v-pre>Changelog</code> section to point to your <code v-pre>CHANGELOG.md</code> file.</li>
+</ol>
+<doc-anchor-target id="issue-templates">
+    <h2>
+        <doc-anchor-trigger class="header-anchor-trigger" to="#issue-templates">#</doc-anchor-trigger>
+        <span>Issue Templates</span>
+    </h2>
+</doc-anchor-target>
+<p>Issue tickets help development teams keep the language of bug, feature, and other types of issues readable and consistent. Templates appear whenever a person submits a new issue, and helps guide that person in providing the key information that gives developers context for a given issue.</p>
+<doc-anchor-target id="github-issues-markdown">
+    <h3>
+        <doc-anchor-trigger class="header-anchor-trigger" to="#github-issues-markdown">#</doc-anchor-trigger>
+        <span>GitHub Issues (Markdown)</span>
+    </h3>
+</doc-anchor-target>
+<p>GitHub issue markdown templates provide pre-filled structure, in markdown format, for people to enter issue information. Please see the <a href="https://docs.github.com/en/communities/using-templates-to-encourage-useful-issues-and-pull-requests/about-issue-and-pull-request-templates">documentation</a> on GitHub templates for more details.</p>
+<p>Starter Kits:</p>
+<ul>
+<li><a href="https://github.com/nasa-ammos/slim/blob/main/documentation/starter-kits/ISSUE_TEMPLATES/github/bug_report.md">Bug Report</a></li>
+<li><a href="https://github.com/nasa-ammos/slim/blob/main/documentation/starter-kits/ISSUE_TEMPLATES/github/new_feature.md">New Feature</a></li>
+</ul>
+<p>To leverage these template, make sure to do the following:</p>
+<ol>
+<li>Talk with your team about leveraging this template, and seek wide agreement before you adopt</li>
+<li>Create a new folder within your GitHub repository with the following path: <code v-pre>.github/ISSUE_TEMPLATE</code></li>
+<li>Copy the Bug Report and New Feature template files above into the following paths:
+<ol>
+<li><code v-pre>.github/ISSUE_TEMPLATE/bug_report.md</code></li>
+<li><code v-pre>.github/ISSUE_TEMPLATE/new_feature.md</code></li>
+</ol>
+</li>
+<li>Commit the above two files to the <code v-pre>main</code> branch</li>
+<li>Navigate to your issues tab within GitHub, and you should see options to use your new templates appear</li>
+</ol>
+<doc-anchor-target id="github-issues-forms">
+    <h3>
+        <doc-anchor-trigger class="header-anchor-trigger" to="#github-issues-forms">#</doc-anchor-trigger>
+        <span>GitHub Issues (Forms)</span>
+    </h3>
+</doc-anchor-target>
+<p>GitHub issue forms are a method to provide a <em>form like</em> experience when filling out a new issue ticket. Please see the <a href="https://docs.github.com/en/communities/using-templates-to-encourage-useful-issues-and-pull-requests/configuring-issue-templates-for-your-repository#creating-issue-forms">documentation</a> on GitHub forms for more details.</p>
+<p><span class="docs-emoji">&#x26A0;&#xFE0F;</span> NOTE: GitHub issue forms are currently in beta. When using a third-party issue tracking system like ZenHub, the templates will not be usable in that system.</p>
+<p>Starter Kits:</p>
+<ul>
+<li><a href="https://github.com/nasa-ammos/slim/blob/main/documentation/starter-kits/ISSUE_TEMPLATES/github/bug_report.yml">Bug Report</a></li>
+<li><a href="https://github.com/nasa-ammos/slim/blob/main/documentation/starter-kits/ISSUE_TEMPLATES/github/new_feature.yml">New Feature</a></li>
+</ul>
+<p>To leverage these template, make sure to do the following:</p>
+<ol>
+<li>Talk with your team about leveraging this template, and seek wide agreement before you adopt</li>
+<li>Create a new folder within your GitHub repository with the following path: <code v-pre>.github/ISSUE_TEMPLATE</code></li>
+<li>Copy the Bug Report and New Feature template files above into the following paths:
+<ol>
+<li><code v-pre>.github/ISSUE_TEMPLATE/bug_report.yml</code></li>
+<li><code v-pre>.github/ISSUE_TEMPLATE/new_feature.yml</code></li>
+</ol>
+</li>
+<li>Commit the above two files to the <code v-pre>main</code> branch</li>
+<li>Navigate to your issues tab within GitHub, and you should see options to use your new templates appear</li>
+</ol>
+<doc-anchor-target id="pull-request-templates">
+    <h2>
+        <doc-anchor-trigger class="header-anchor-trigger" to="#pull-request-templates">#</doc-anchor-trigger>
+        <span>Pull Request Templates</span>
+    </h2>
+</doc-anchor-target>
+<p>Pull requests are the currency for how contributions are made to projects. Having a pre-filled out pull request template offers guidance to your potential developers on how to contribute to your project.</p>
+<doc-anchor-target id="github-pull-request-template-general">
+    <h3>
+        <doc-anchor-trigger class="header-anchor-trigger" to="#github-pull-request-template-general">#</doc-anchor-trigger>
+        <span>GitHub Pull Request Template (General)</span>
+    </h3>
+</doc-anchor-target>
+<p>GitHub provides a mechanism to automatically display a template whenever a potential contributor proposes a pull request to your repository. Please see the <a href="https://docs.github.com/en/communities/using-templates-to-encourage-useful-issues-and-pull-requests/creating-a-pull-request-template-for-your-repository">documentation</a> on GitHub for details.</p>
+<p>Starter Kits:</p>
+<ul>
+<li><a href="https://github.com/nasa-ammos/slim/blob/main/documentation/starter-kits/ISSUE_TEMPLATES/github/PULL_REQUEST_TEMPLATE.md">Pull Request Template</a></li>
+</ul>
+<p>To leverage this template, make sure to do the following:</p>
+<ol>
+<li>Talk with your team about leveraging this template, and seek wide agreement before you adopt</li>
+<li>Create a new folder within your GitHub repository with the following path: <code v-pre>.github/</code></li>
+<li>Copy the Pull Request Template template file above into the following path:
+<ol>
+<li><code v-pre>.github/PULL_REQUEST_TEMPLATE.md</code></li>
+</ol>
+</li>
+<li>Commit the above file to the <code v-pre>main</code> branch</li>
+<li>Whenever you propose a new pull request, your new templates should appear in the text box</li>
 </ol>
 
 
