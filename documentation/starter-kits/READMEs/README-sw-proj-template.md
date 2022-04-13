@@ -26,13 +26,29 @@
 [INSERT MORE DETAILED DESCRIPTION OF YOUR REPOSITORY HERE]
 <!-- ☝️ Replace with a more detailed description of your repository, including why it was made and whom its intended for.  ☝️ -->
 
+[INSERT LIST OF IMPORTANT PROJECT / REPO LINKS HERE]
+<!-- example links>
+[Website](INSERT WEBSITE LINK HERE) | [Docs/Wiki](INSERT DOCS/WIKI SITE LINK HERE) | [Discussion Board](INSERT DISCUSSION BOARD LINK HERE) | [Issue Tracker](INSERT ISSUE TRACKER LINK HERE)
+-->
+
 ## Features
 
 * [INSERT LIST OF FEATURES IMPORTANT TO YOUR USERS HERE]
   
 <!-- ☝️ Replace with a bullet-point list of your features ☝️ -->
 
+## Contents
+
+* [Quick Start](#quick-start)
+* [Changelog](#changelog)
+* [FAQ](#frequently-asked-questions-faq)
+* [Contributing Guide](#contributing)
+* [License](#license)
+* [Support](#support)
+
 ## Quick Start
+
+This guide provides a quick way to get started with our project. Please see our [docs]([INSERT LINK TO DOCS SITE / WIKI HERE]) for a more comprehensive overview.
 
 ### Requirements
 
@@ -72,7 +88,7 @@
 
 ## Changelog
 
-See our [CHANGELOG.md]([INSERT LINK TO YOUR CHANGELOG.md]) for a history of our changes.
+See our [CHANGELOG.md](CHANGELOG.md) for a history of our changes.
 
 See our [releases page]([INSERT LINK TO YOUR RELEASES PAGE]) for our key versioned releases.
 
@@ -81,6 +97,9 @@ See our [releases page]([INSERT LINK TO YOUR RELEASES PAGE]) for our key version
 ## Frequently Asked Questions (FAQ)
 
 [INSERT LINK TO FAQ PAGE OR PROVIDE FAQ INLINE HERE]
+<!-- example link to FAQ PAGE>
+Questions about our project? Please see our: [FAQ]([INSERT LINK TO FAQ / DISCUSSION BOARD])
+-->
 
 <!-- example FAQ inline format>
 1. Question 1
@@ -98,6 +117,9 @@ No questions yet. Propose a question to be added here by reaching out to our con
 ## Contributing
 
 [INSERT LINK TO CONTRIBUTING GUIDE OR FILL INLINE HERE]
+<!-- example link to CONTRIBUTING.md>
+Interested in contributing to our project? Please see our: [CONTRIBUTING.md](CONTRIBUTING.md)
+-->
 
 <!-- example inline contributing guide>
 1. Create an GitHub issue ticket describing what changes you need (e.g. issue-1)
@@ -108,18 +130,16 @@ No questions yet. Propose a question to be added here by reaching out to our con
 **Working on your first pull request?** See guide: [How to Contribute to an Open Source Project on GitHub](https://kcd.im/pull-request)
 -->
 
-<!-- ☝️ Replace with a text describing how people may contribute to your project, or link to your contribution guide directly ☝️ -->
-
 [INSERT LINK TO YOUR CODE_OF_CONDUCT.md OR SHARE TEXT HERE]
-
 <!-- example link to CODE_OF_CONDUCT.md>
 For guidance on how to interact with our team, please see our code of conduct located at: [CODE_OF_CONDUCT.md](CODE_OF_CONDUCT.md)
 -->
 
+<!-- ☝️ Replace with a text describing how people may contribute to your project, or link to your contribution guide directly ☝️ -->
+
 ## License
 
-See our: [LICENSE]([INSERT LINK TO LICENSE])
-
+See our: [LICENSE](LICENSE)
 <!-- ☝️ Replace with the text of your copyright and license, or directly link to your license file ☝️ -->
 
 ## Support
