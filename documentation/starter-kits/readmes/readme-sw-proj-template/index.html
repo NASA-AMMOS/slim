@@ -25,11 +25,11 @@
     
     <script>(function () { var el = document.documentElement, m = localStorage.getItem("/slim/doc_theme"), wm = window.matchMedia; if (m === "dark" || (!m && wm && wm("(prefers-color-scheme: dark)").matches)) { el.classList.add("dark") } else { el.classList.remove("dark") } })();</script>
 
-    <link href="/slim/resources/css/retype.css?v=1.11.2.703117322361" rel="stylesheet" data-turbo-track="reload" />
+    <link href="/slim/resources/css/retype.css?v=1.11.2.703193775888" rel="stylesheet" data-turbo-track="reload" />
 
-    <script type="text/javascript" src="/slim/resources/js/config.js?v=1.11.2.703117322361" defer data-turbo-track="reload"></script>
+    <script type="text/javascript" src="/slim/resources/js/config.js?v=1.11.2.703193775888" defer data-turbo-track="reload"></script>
     <script type="text/javascript" src="/slim/resources/js/retype.js?v=1.11.2" defer data-turbo-track="reload"></script>
-    <script id="lunr-js" type="text/javascript" src="/slim/resources/js/lunr.js?v=1.11.2.703117322361" defer></script>
+    <script id="lunr-js" type="text/javascript" src="/slim/resources/js/lunr.js?v=1.11.2.703193775888" defer></script>
 </head>
     <body>
         <div id="docs-app" class="relative text-base antialiased text-gray-700 bg-white font-body dark:bg-dark-850 dark:text-dark-300">
@@ -201,6 +201,10 @@
 <!-- ☝️ Screenshot of your software (if applicable) via ![](https://uri-to-your-screenshot) ☝️ -->
 <p>[INSERT MORE DETAILED DESCRIPTION OF YOUR REPOSITORY HERE]</p>
 <!-- ☝️ Replace with a more detailed description of your repository, including why it was made and whom its intended for.  ☝️ -->
+<p>[INSERT LIST OF IMPORTANT PROJECT / REPO LINKS HERE]</p>
+<!-- example links>
+[Website](INSERT WEBSITE LINK HERE) | [Docs/Wiki](INSERT DOCS/WIKI SITE LINK HERE) | [Discussion Board](INSERT DISCUSSION BOARD LINK HERE) | [Issue Tracker](INSERT ISSUE TRACKER LINK HERE)
+-->
 <doc-anchor-target id="features">
     <h2>
         <doc-anchor-trigger class="header-anchor-trigger" to="#features">#</doc-anchor-trigger>
@@ -211,12 +215,27 @@
 <li>[INSERT LIST OF FEATURES IMPORTANT TO YOUR USERS HERE]</li>
 </ul>
 <!-- ☝️ Replace with a bullet-point list of your features ☝️ -->
+<doc-anchor-target id="contents">
+    <h2>
+        <doc-anchor-trigger class="header-anchor-trigger" to="#contents">#</doc-anchor-trigger>
+        <span>Contents</span>
+    </h2>
+</doc-anchor-target>
+<ul>
+<li><doc-anchor-trigger to="#quick-start">Quick Start</doc-anchor-trigger></li>
+<li><doc-anchor-trigger to="#changelog">Changelog</doc-anchor-trigger></li>
+<li><doc-anchor-trigger to="#frequently-asked-questions-faq">FAQ</doc-anchor-trigger></li>
+<li><doc-anchor-trigger to="#contributing">Contributing Guide</doc-anchor-trigger></li>
+<li><doc-anchor-trigger to="#license">License</doc-anchor-trigger></li>
+<li><doc-anchor-trigger to="#support">Support</doc-anchor-trigger></li>
+</ul>
 <doc-anchor-target id="quick-start">
     <h2>
         <doc-anchor-trigger class="header-anchor-trigger" to="#quick-start">#</doc-anchor-trigger>
         <span>Quick Start</span>
     </h2>
 </doc-anchor-target>
+<p>This guide provides a quick way to get started with our project. Please see our [docs]([INSERT LINK TO DOCS SITE / WIKI HERE]) for a more comprehensive overview.</p>
 <doc-anchor-target id="requirements">
     <h3>
         <doc-anchor-trigger class="header-anchor-trigger" to="#requirements">#</doc-anchor-trigger>
@@ -283,7 +302,7 @@
         <span>Changelog</span>
     </h2>
 </doc-anchor-target>
-<p>See our [CHANGELOG.md]([INSERT LINK TO YOUR CHANGELOG.md]) for a history of our changes.</p>
+<p>See our <a href="CHANGELOG.md">CHANGELOG.md</a> for a history of our changes.</p>
 <p>See our [releases page]([INSERT LINK TO YOUR RELEASES PAGE]) for our key versioned releases.</p>
 <!-- ☝️ Replace with links to your changelog and releases page ☝️ -->
 <doc-anchor-target id="frequently-asked-questions-faq">
@@ -293,6 +312,9 @@
     </h2>
 </doc-anchor-target>
 <p>[INSERT LINK TO FAQ PAGE OR PROVIDE FAQ INLINE HERE]</p>
+<!-- example link to FAQ PAGE>
+Questions about our project? Please see our: [FAQ]([INSERT LINK TO FAQ / DISCUSSION BOARD])
+-->
 <!-- example FAQ inline format>
 1. Question 1
    - Answer to question 1
@@ -310,6 +332,9 @@ No questions yet. Propose a question to be added here by reaching out to our con
     </h2>
 </doc-anchor-target>
 <p>[INSERT LINK TO CONTRIBUTING GUIDE OR FILL INLINE HERE]</p>
+<!-- example link to CONTRIBUTING.md>
+Interested in contributing to our project? Please see our: [CONTRIBUTING.md](CONTRIBUTING.md)
+-->
 <!-- example inline contributing guide>
 1. Create an GitHub issue ticket describing what changes you need (e.g. issue-1)
 2. [Fork](INSERT LINK TO YOUR REPO FORK PAGE HERE, e.g. https://github.com/my_org/my_repo/fork) this repo
@@ -318,18 +343,18 @@ No questions yet. Propose a question to be added here by reaching out to our con
 
 **Working on your first pull request?** See guide: [How to Contribute to an Open Source Project on GitHub](https://kcd.im/pull-request)
 -->
-<!-- ☝️ Replace with a text describing how people may contribute to your project, or link to your contribution guide directly ☝️ -->
 <p>[INSERT LINK TO YOUR CODE_OF_CONDUCT.md OR SHARE TEXT HERE]</p>
 <!-- example link to CODE_OF_CONDUCT.md>
 For guidance on how to interact with our team, please see our code of conduct located at: [CODE_OF_CONDUCT.md](CODE_OF_CONDUCT.md)
 -->
+<!-- ☝️ Replace with a text describing how people may contribute to your project, or link to your contribution guide directly ☝️ -->
 <doc-anchor-target id="license">
     <h2>
         <doc-anchor-trigger class="header-anchor-trigger" to="#license">#</doc-anchor-trigger>
         <span>License</span>
     </h2>
 </doc-anchor-target>
-<p>See our: [LICENSE]([INSERT LINK TO LICENSE])</p>
+<p>See our: <a href="LICENSE">LICENSE</a></p>
 <!-- ☝️ Replace with the text of your copyright and license, or directly link to your license file ☝️ -->
 <doc-anchor-target id="support">
     <h2>
