@@ -20,14 +20,14 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
   - Use cases diagram
   - Starter kits
     - Starter kit for unit testing
-      - JUnit testing (guide to follow)
-      - PyUnit testing (guide to follow)
+      - JUnit testing (user guide)
+      - PyUnit testing (user guide)
   - Reference architectures
     - Java unit test using JUnit in Jenkins
 - Continuous Integration
   - Use cases diagram
   - Starter kits
     - Continuous integration (CI)
-      - Jenkins project setup / configuration (guide to follow)
+      - Jenkins project setup / configuration (user guide)
   - Reference architectures
     - Building and deploying a project to Artifactory
