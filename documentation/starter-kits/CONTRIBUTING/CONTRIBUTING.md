@@ -172,12 +172,6 @@ Here's some guidance on submitting a new feature issue:
 1. Navigate to our issue tracking system and file a new issue
 2. Select a new feature template (if available) for your issue
    1. Fill out the template fields to the best of your ability
-3. Follow the general guidelines below for extra information about your bug
-   1. Include a code snippet if you have it showcasing the bug
-   2. Provide reproducible steps of how to recreate the bug
-   3. If the bug triggers an exception or error message, include the *full message* or *stacktrace*
-   4. Provide information about your operating system and the version of our project you're using
-
 
 #### Submitting Security Vulnerability Issues
 
