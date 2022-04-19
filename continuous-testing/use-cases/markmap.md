@@ -1,6 +1,6 @@
 * Continuous Testing
     * For Development APIs
-        * For Unit Testing, Integration, Dependency and Stub Mocking
+        * For unit testing, integration, dependency and stub mocking
             * For module testing
                 * Using xUnit
                     * (Java) JUnit [:checkered_flag: STARTER KIT](../starter-kits/#unit-teting-with-java)
