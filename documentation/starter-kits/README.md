@@ -14,6 +14,12 @@ Starter Kit:
 - [Markdown](https://github.com/nasa-ammos/slim/blob/main/documentation/starter-kits/READMEs/README-sw-proj-template.md) of template
 - [Demo](https://github.com/riverma/terraformly/blob/main/README.md) of template
 
+To leverage this template, make sure to do the following:
+1. Talk with your team about leveraging this template, and seek wide agreement before you adopt
+2. Copy the template text, and place in a file within your repository called `README.md` 
+3. Search and replace the `[INSERT ...` text within the file with specifics for your project
+4. Add a link to the `CONTRIBUTING.md` to your `README.md` file within the `Contributing` section
+
 This starter kit template was developed by evaluating best `README.md` practices in the following organizations:
 - NASA-AMMOS
 - ReactJS 
@@ -36,7 +42,7 @@ Starter Kit:
 To leverage this template, make sure to do the following:
 1. Talk with your team about leveraging this template, and seek wide agreement before you adopt
 2. Copy the template text, and place in a file within your repository called `CODE_OF_CONDUCT.md` 
-3. Replace the `[INSERT CONTACT METHOD]` text within the file with a person, private e-mail list, or other form of contact for grievances to be addressed to
+3. Search and replace the `[INSERT CONTACT METHOD]` text within the file with a person, private e-mail list, or other form of contact for grievances to be addressed to
 4. Add the contributor covenant badge (![](https://img.shields.io/badge/Contributor%20Covenant-2.1-4baaaa.svg)) to your `README.md` file (example below)
 ```
 [![Contributor Covenant](https://img.shields.io/badge/Contributor%20Covenant-2.1-4baaaa.svg)](code_of_conduct.md)
@@ -64,7 +70,7 @@ Starter Kit:
 To leverage this template, make sure to do the following:
 1. Talk with your team about leveraging this template, and seek wide agreement before you adopt
 2. Copy the template text, and place in a file within your repository called `CONTRIBUTING.md` 
-3. Replace the `INSERT ...` text within the file with specifics for your project
+3. Search and replace the `[INSERT ...` text within the file with specifics for your project
 4. Add a link to the `CONTRIBUTING.md` to your `README.md` file within the `Contributing` section
 
 This template was influenced by the following sources:
@@ -87,7 +93,8 @@ This change log standard seeks to provide a template for *human readable* change
 
 Starter Kit:
 - [Guidance](https://keepachangelog.com/en/1.0.0/#how)
-- [Demo](https://github.com/olivierlacan/keep-a-changelog/blob/main/CHANGELOG.md)
+- [Demo 1](https://github.com/riverma/terraformly/blob/main/CHANGELOG.md)
+- [Demo 2](https://github.com/olivierlacan/keep-a-changelog/blob/main/CHANGELOG.md)
 - [Webpage](https://keepachangelog.com/en/1.0.0/)
 
 To leverage this template, make sure to do the following:
@@ -95,3 +102,64 @@ To leverage this template, make sure to do the following:
 2. Copy the demo `CHANGELOG.md` above, and place in a file within your repository called `CHANGELOG.md` 
 3. Edit the `CHANGELOG.md` file with your specific release information. If you have many historic releases prior to the creation of this file, mark the latest release as the first entry, and commit to updating this for future releases as the happen.
 4. Add an entry to your `README.md` under the `Changelog` section to point to your `CHANGELOG.md` file.
+
+## Issue Templates
+
+Issue tickets help development teams keep the language of bug, feature, and other types of issues readable and consistent. Templates appear whenever a person submits a new issue, and helps guide that person in providing the key information that gives developers context for a given issue.
+
+### GitHub Issues (Markdown)
+
+GitHub issue markdown templates provide pre-filled structure, in markdown format, for people to enter issue information. Please see the [documentation](https://docs.github.com/en/communities/using-templates-to-encourage-useful-issues-and-pull-requests/about-issue-and-pull-request-templates) on GitHub templates for more details.
+
+Starter Kits:
+- [Bug Report](https://github.com/nasa-ammos/slim/blob/main/documentation/starter-kits/ISSUE_TEMPLATES/github/bug_report.md)
+- [New Feature](https://github.com/nasa-ammos/slim/blob/main/documentation/starter-kits/ISSUE_TEMPLATES/github/new_feature.md)
+
+
+To leverage these template, make sure to do the following:
+1. Talk with your team about leveraging this template, and seek wide agreement before you adopt
+2. Create a new folder within your GitHub repository with the following path: `.github/ISSUE_TEMPLATE`
+3. Copy the Bug Report and New Feature template files above into the following paths:
+   1. `.github/ISSUE_TEMPLATE/bug_report.md`
+   2. `.github/ISSUE_TEMPLATE/new_feature.md`
+4. Commit the above two files to the `main` branch
+5. Navigate to your issues tab within GitHub, and you should see options to use your new templates appear
+
+### GitHub Issues (Forms)
+
+GitHub issue forms are a method to provide a _form like_ experience when filling out a new issue ticket. Please see the [documentation](https://docs.github.com/en/communities/using-templates-to-encourage-useful-issues-and-pull-requests/configuring-issue-templates-for-your-repository#creating-issue-forms) on GitHub forms for more details.
+
+⚠️ NOTE: GitHub issue forms are currently in beta. When using a third-party issue tracking system like ZenHub, the templates will not be usable in that system. 
+
+Starter Kits:
+- [Bug Report](https://github.com/nasa-ammos/slim/blob/main/documentation/starter-kits/ISSUE_TEMPLATES/github/bug_report.yml)
+- [New Feature](https://github.com/nasa-ammos/slim/blob/main/documentation/starter-kits/ISSUE_TEMPLATES/github/new_feature.yml)
+
+
+To leverage these template, make sure to do the following:
+1. Talk with your team about leveraging this template, and seek wide agreement before you adopt
+2. Create a new folder within your GitHub repository with the following path: `.github/ISSUE_TEMPLATE`
+3. Copy the Bug Report and New Feature template files above into the following paths:
+   1. `.github/ISSUE_TEMPLATE/bug_report.yml`
+   2. `.github/ISSUE_TEMPLATE/new_feature.yml`
+4. Commit the above two files to the `main` branch
+5. Navigate to your issues tab within GitHub, and you should see options to use your new templates appear
+
+## Pull Request Templates
+
+Pull requests are the currency for how contributions are made to projects. Having a pre-filled out pull request template offers guidance to your potential developers on how to contribute to your project.
+
+### GitHub Pull Request Template (General)
+
+GitHub provides a mechanism to automatically display a template whenever a potential contributor proposes a pull request to your repository. Please see the [documentation](https://docs.github.com/en/communities/using-templates-to-encourage-useful-issues-and-pull-requests/creating-a-pull-request-template-for-your-repository) on GitHub for details. 
+
+Starter Kits:
+- [Pull Request Template](https://github.com/nasa-ammos/slim/blob/main/documentation/starter-kits/ISSUE_TEMPLATES/github/PULL_REQUEST_TEMPLATE.md)
+
+To leverage this template, make sure to do the following:
+1. Talk with your team about leveraging this template, and seek wide agreement before you adopt
+2. Create a new folder within your GitHub repository with the following path: `.github/`
+3. Copy the Pull Request Template template file above into the following path:
+   1. `.github/PULL_REQUEST_TEMPLATE.md`
+4. Commit the above file to the `main` branch
+5. Whenever you propose a new pull request, your new templates should appear in the text box
