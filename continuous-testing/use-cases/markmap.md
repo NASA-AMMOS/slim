@@ -1,151 +1,134 @@
 * Continuous Testing
     * For Development APIs
         * For Unit Testing, Integration, Dependency and Stub Mocking
-            * xUnit for build-time testing
-            * Simulate dependencies
-            * Stub out coupled services for planned results
-            * Mock specific application behavior
-            * Tools
-                * Java
-                    * JUnit
+            * For module testing
+                * Using xUnit
+                    * (Java) JUnit [:checkered_flag: STARTER KIT](../starter-kits/#unit-teting-with-java)
+                    * (Python) PyUnit [:checkered_flag: STARTER KIT](../starter-kits/#unit-teting-with-python)
+                    * (C#) NUnit
+                    * (C/C++) cUnit/CppUnit
+            * For mocking, stubbing and simulating test services
+                * Using Java
                     * Mockito
                     * EasyMock
                     * JMock
-                * Python
-                    * PyUnit
+                * Using Python
                     * PyTest
                     * Nose2
                     * Mock
-                * C#
-                    * NUnit
+                * Using C#
                     * Moq
                     * NSubstitute
                     * FakeItEasy
-                * C/C++
-                    * cUnit/CppUnit
+                * Using C/C++
                     * CMock
                     * cpp-stub
                     * googletest
     * For Code Analysis
-        * For Static Analysis
-            * Code formatting
-            * Application structure and layout
-            * Compliance with development standards
-            * Tools
-                * Java
-                    * PMD
+        * For static analysis
+            * For formatting, standards and structure
+                * Using Java
                     * Checkstyle
                     * Spotbugs
-                * Python
+                    * PMD
+                * Using Python
                     * PyLint
                     * Pyflakes
-                    * Mypy
-                    * Prospector
                     * PMD
-                * C#
+                * Using C#
                     * StyleCop
                     * Gendarme
-                    * Nitriq
                     * PMD
-                * C/C++
+                * Using C/C++
                     * CppCheck
                     * Clang Static Analyzer / tidy
-                    * CppDepend
-                    * Sourcetrail
                     * PMD
-                    * FlawFinder
-        * For Dynamic Analysis
-            * Runtime performance
-            * Testing coverage
-            * Code complexity
-            * Tools
-                * Java
-                    * JProfiler
-                    * JMeter
+        * For dynamic analysis
+            * For test coverage
+                * Using Java
                     * Jacoco
                     * Cobertura
+                * Using Python
+                    * Coverage
+                    * PyTest-cov
+                * Using C#
+                    * OpenCover
+                    * NCover
+                * Using C/C++
+                    * Gcov
+                    * lcov
+            * For complexity analysis and runtime performance
+                * Using Java
+                    * JProfiler
+                    * JMeter
                     * JPF
-                * Python
-                    * Typo
+                * Using Python
                     * Scalene
                     * sys.settrace()/inspect/pdb
-                * C#
-                  * VS Debugger
-                  * Performance Profiler
-                  * Parasoft Ensure
-                  * ANTS Profiler
-                * C/C++
-                    * Gcov
+                * Using C#
+                    * Performance Profiler
+                    * Parasoft Ensure
+                    * ANTS Profiler
+                * Using C/C++
                     * Valgrind
                     * LLVM/Clang
-        * For Code Quality (unified, both dynamic and static analyses)
-            * Unified analysis of static and dynamic code metrics
-            * Tools
-                * SonarQube
-                * Coverity
-        * For Security
-            * Verify and report vulnerabilities
-            * Check code security
-            * Tools
-                * Semmle
-                * Veracode
+        * For security
+            * For vulnerability reporting and code checks
+                * Using most languages
+                    * Scrub
+                    * Veracode
     * For Web Applications
-        * For Service Endpoints (APIs)
-            * Messaging-based
-                * RESTful Services
-                * SOAP
-                * Tools (JSON/XML)
-                    * Using Apache JMeter
-                    * Using Insomnia
-                    * Using Paw
-                    * Using Postman
-                    * Using REST-Assured (REST, RPC)
-                    * Using SOAPUI
-            * Procedure-based
-                * Initiate remote processing
-                * RPC
-                    * Using Shell/Powershell
-                    * Using PortQry
-        * For Web Interfaces (browsers)
-            * Using Cypress
-            * Using Playwright
-            * Using Robot Framework
-            * Using Selenium + Add-on
-                * Cucumber* (Java + others) / Behave (Python) / Specflow (C#)
-                * Watir (Ruby)
-                * Home Grown
+        * For service endpoints (APIs)
+            * For RESTful endpoints
+                * Using API platforms
+                    * Apache JMeter
+                    * Insomnia
+                    * Paw
+                    * Postman
+                    * REST-Assured (REST, RPC)
+                    * SOAPUI
+            * For procedural-based endpoints
+                * Using RPC/remote processing
+                    * Shell/Powershell
+                    * PortQry
+        * For web interfaces
+            * For user interaction
+                * Using browser simulation
+                    * Cypress
+                    * Playwright
+                    * Robot Framework
+                    * Selenium + Cucumber* (Java + others) / Behave (Python) / Specflow (C#)
+                    * Selenium + Watir (Ruby)
+                    * Selenium + Home Grown
     * For Load testing
-        * Failure profiles
-        * Resource requirements
-        * Maximize performance
-        * Tools
-            * Apache JMeter
-            * Chaos Monkey
-            * Robot Framework
-            * Cucumber Open
+        * For failure profiles and resource analysis
+            * For server deployments
+                * Using request automation
+                    * Apache JMeter
+                    * Chaos Monkey
+                    * Robot Framework
+                    * Cucumber Open
     * For Mobile
-        * UI and viewability
-        * Accessibility
-        * Feature parity with Web implementation or requirements
-        * Tools
-            * Selendroid
-            * BrowserStack
-            * MonkeyTalk
-            * Espresso + XCUI
+        * For feature validation
+            * For UI views and accessibility
+                * Using mobile device simulation
+                    * Selendroid
+                    * BrowserStack
+                    * MonkeyTalk
+                    * Espresso + XCUI
     * For Reporting
-        * For Continuous Integration and Deployment
-            * Test and verify commits
-            * Customizations on commit or build
-            * Build stability using containerization or standards
-            * Tools
-                * JenkinsCI
-                * GitHub Actions
-                * Custom Tooling
-        * For Test Reporting
-            * Monitor code compliance
-            * Unit testing success or failure
-            * Integration test results
-            * Tools
-                * TestRail
-                * JenkinsCI
-                * Serenity
+        * For Continuous Reporting
+            * For unified analyses (dynamic and static)
+                * Using a Web application
+                    * SonarQube
+                    * Coverity
+            * For status reporting
+                * Using build platforms 
+                    * Testrail API reporting
+                    * Jenkins Code Coverage API Plugin
+                    * Travis CI using Code Climate or Codecov
+            * For real-time validation and stability
+                * Using CI/CD Platforms
+                    * JenkinsCI
+                    * GitHub Actions
+                    * Custom Tooling
