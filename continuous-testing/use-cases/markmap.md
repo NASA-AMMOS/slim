@@ -3,8 +3,8 @@
         * For unit testing, integration, dependency and stub mocking
             * For module testing
                 * Using xUnit
-                    * (Java) JUnit [:checkered_flag: STARTER KIT](../starter-kits/#unit-teting-with-java)
-                    * (Python) PyUnit [:checkered_flag: STARTER KIT](../starter-kits/#unit-teting-with-python)
+                    * (Java) JUnit [&#x1F3C1; STARTER KIT](../starter-kits/#unit-teting-with-java)
+                    * (Python) PyUnit [&#x1F3C1; STARTER KIT](../starter-kits/#unit-teting-with-python)
                     * (C#) NUnit
                     * (C/C++) cUnit/CppUnit
             * For mocking, stubbing and simulating test services
