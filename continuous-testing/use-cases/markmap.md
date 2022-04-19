@@ -1,11 +1,10 @@
 * Continuous Testing
     * For Development APIs
-        * For module testing
-            * Using xUnit
-                * (Java) JUnit [&#x1F3C1; STARTER KIT](../starter-kits/#unit-teting-with-java)
-                * (Python) PyUnit [&#x1F3C1; STARTER KIT](../starter-kits/#unit-teting-with-python)
-                * (C#) NUnit
-                * (C/C++) cUnit/CppUnit
+        * For module testing (xUnit)
+            * (Java) JUnit [&#x1F3C1; STARTER KIT](../starter-kits/#unit-teting-with-java)
+            * (Python) PyUnit [&#x1F3C1; STARTER KIT](../starter-kits/#unit-teting-with-python)
+            * (C#) NUnit
+            * (C/C++) cUnit/CppUnit
         * For mocking, stubbing and simulating test services
             * Using Java
                 * Mockito
@@ -71,9 +70,8 @@
                     * Valgrind
                     * LLVM/Clang
         * For security
-            * Using most languages
-                * Scrub
-                * Veracode
+            * Scrub
+            * Veracode
     * For Web Applications
         * For Service Endpoints (APIs)
             * For RESTful endpoints
@@ -87,19 +85,17 @@
                 * Shell/Powershell
                 * PortQry
         * For User Interfaces (UIs)
-            * Using browser simulation
-                * Cypress
-                * Playwright
-                * Robot Framework
-                * Selenium + Cucumber* (Java + others) / Behave (Python) / Specflow (C#)
-                * Selenium + Watir (Ruby)
-                * Selenium + Home Grown
-    * For Load testing
-        * Using request automation
-            * Apache JMeter
-            * Chaos Monkey
+            * Cypress
+            * Playwright
             * Robot Framework
-            * Cucumber Open
+            * Selenium + Cucumber* (Java + others) / Behave (Python) / Specflow (C#)
+            * Selenium + Watir (Ruby)
+            * Selenium + Home Grown
+    * For Load testing
+        * Apache JMeter
+        * Chaos Monkey
+        * Robot Framework
+        * Cucumber Open
     * For Mobile
         * Selendroid
         * BrowserStack
@@ -107,16 +103,13 @@
         * Espresso + XCUI
     * For Reporting
         * For unified analyses (dynamic and static)
-            * Using a Web application
-                * SonarQube
-                * Coverity
+            * SonarQube
+            * Coverity
         * For status reporting
-            * Using build platforms 
-                * Testrail API reporting
-                * Jenkins Code Coverage API Plugin
-                * Travis CI using Code Climate or Codecov
+            * Testrail API reporting
+            * Jenkins Code Coverage API Plugin
+            * Travis CI using Code Climate or Codecov
         * For real-time validation and stability
-            * Using CI/CD Platforms
-                * JenkinsCI
-                * GitHub Actions
-                * Custom Tooling
+            * JenkinsCI
+            * GitHub Actions
+            * Custom Tooling
