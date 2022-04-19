@@ -25,11 +25,11 @@
     
     <script>(function () { var el = document.documentElement, m = localStorage.getItem("/slim/doc_theme"), wm = window.matchMedia; if (m === "dark" || (!m && wm && wm("(prefers-color-scheme: dark)").matches)) { el.classList.add("dark") } else { el.classList.remove("dark") } })();</script>
 
-    <link href="/slim/resources/css/retype.css?v=1.11.2.703622006544" rel="stylesheet" data-turbo-track="reload" />
+    <link href="/slim/resources/css/retype.css?v=1.11.2.703706989827" rel="stylesheet" data-turbo-track="reload" />
 
-    <script type="text/javascript" src="/slim/resources/js/config.js?v=1.11.2.703622006544" defer data-turbo-track="reload"></script>
+    <script type="text/javascript" src="/slim/resources/js/config.js?v=1.11.2.703706989827" defer data-turbo-track="reload"></script>
     <script type="text/javascript" src="/slim/resources/js/retype.js?v=1.11.2" defer data-turbo-track="reload"></script>
-    <script id="lunr-js" type="text/javascript" src="/slim/resources/js/lunr.js?v=1.11.2.703622006544" defer></script>
+    <script id="lunr-js" type="text/javascript" src="/slim/resources/js/lunr.js?v=1.11.2.703706989827" defer></script>
     <script id="mermaid-js" type="text/javascript" src="/slim/resources/js/mermaid.js?v=1.11.2" defer></script>
 </head>
     <body>
@@ -240,6 +240,19 @@
 <li>The Version Control System client (i.e. Git) installed on your local machine.</li>
 <li>The ability to edit, build, and test our project on your local machine. Again, see our <code v-pre>README.md</code> or detailed developer guide for more details</li>
 </ol>
+<doc-anchor-target id="communication-channels">
+    <h3>
+        <doc-anchor-trigger class="header-anchor-trigger" to="#communication-channels">#</doc-anchor-trigger>
+        <span>Communication Channels</span>
+    </h3>
+</doc-anchor-target>
+<p>Before contributing changes to our project, it&#x27;s a great idea to be familiar with our communication channels and to socialize your potential contributions to get feedback early. This will help give you context for your contributions, no matter their form.</p>
+<p>Our communication channels are:</p>
+<ul>
+<li>[Issue tracking system]([INSERT LINK TO ISSUE TRACKING SYSTEM]) - a regularly monitored area to report issues with our software or propose changes</li>
+<li>[Discussion board](INSERT LINK TO DISCUSSION BOARD OR MAILING LIST) - an permanently archived place to hold conversations related to our project, and to propose as well as show+tell topics to the contributor team. This resource can be searched for old discussions.</li>
+<li>[INSERT ADDITIONAL COMMUNICATION CHANNELS FOR YOUR PROJECT, EX: SLACK, TWITTER, YOUTUBE, ETC.]</li>
+</ul>
 <doc-anchor-target id="our-development-process">
     <h2>
         <doc-anchor-trigger class="header-anchor-trigger" to="#our-development-process">#</doc-anchor-trigger>
@@ -267,7 +280,18 @@
         <span>Find or File an Issue</span>
     </h4>
 </doc-anchor-target>
-<p>Make sure people are aware you&#x27;re working on a patch! Check out our issue tracking system and find an open issue you&#x27;d like to work against, or alternatively file a new issue and mention you&#x27;re working on a patch.</p>
+<p>Make sure people are aware you&#x27;re working on a patch! Check out our [issue tracking system]([INSERT LINK TO YOUR ISSUE TRACKING SYSTEM]) and find an open issue you&#x27;d like to work against, or alternatively file a new issue and mention you&#x27;re working on a patch.</p>
+<doc-anchor-target id="choose-the-right-branch-to-fork">
+    <h4>
+        <doc-anchor-trigger class="header-anchor-trigger" to="#choose-the-right-branch-to-fork">#</doc-anchor-trigger>
+        <span>Choose the Right Branch to Fork</span>
+    </h4>
+</doc-anchor-target>
+<p>Our project typically has the following branches available, make sure to fork either the default branch or a branch someone else already tagged with a particular issue ticket you&#x27;re working with.</p>
+<ul>
+<li>(default) <code v-pre>main</code>[INSERT DEFAULT VCS BRANCH NAME HERE]</li>
+<li>[INSERT ADDITIONAL TYPICAL VCS BRANCH NAMES HERE]</li>
+</ul>
 <doc-anchor-target id="make-your-modifications">
     <h3>
         <doc-anchor-trigger class="header-anchor-trigger" to="#make-your-modifications">#</doc-anchor-trigger>
@@ -287,6 +311,7 @@
 </doc-codeblock></div>
 <p>This makes sure that tickets are updated on GitHub with references to commits that are related to them.</p>
 <p>Commit should always be atomic. Keep solutions isolated whenever possible. Filler commits such as &quot;clean up white space&quot; or &quot;fix typo&quot; should be merged together before making a pull request, and significant sub-feature branches should be <a href="https://www.youtube.com/results?search_query=git+rebase">rebased</a> to preserve commit history. Please ensure your commit history is clean and meaningful!</p>
+<p>Additionally, remember to &quot;Sign-Off&quot; on your commits to align with our <doc-anchor-trigger to="#developer-certificate-of-origin-dco">Developer Certificate of Origin (DCO) policy</doc-anchor-trigger>.</p>
 <doc-anchor-target id="submit-a-pull-request">
     <h3>
         <doc-anchor-trigger class="header-anchor-trigger" to="#submit-a-pull-request">#</doc-anchor-trigger>
@@ -344,7 +369,7 @@
 <p><em>Do you like to talk about new features, changes, requests?</em></p>
 </blockquote>
 <p>Issue tickets are a very simple way to get involved in our project. It also helps new contributors get an understanding of the project more comprehensively. This is a great place to get started with the project if you&#x27;re not sure where to start.</p>
-<p>See our list of issues at: [INSERT YOUR ISSUE TRACKING PAGE]</p>
+<p>See our list of issues at: [INSERT LINK TO YOUR ISSUE TRACKING SYSTEM]</p>
 <doc-anchor-target id="cleaning-up-duplicate-issues">
     <h4>
         <doc-anchor-trigger class="header-anchor-trigger" to="#cleaning-up-duplicate-issues">#</doc-anchor-trigger>
@@ -367,14 +392,14 @@
     </h4>
 </doc-anchor-target>
 <p>Issue tickets can vary in complexity, and issues labeled with <code v-pre>good first issue</code> labels are often a great way to get started with the project as a newcomer.</p>
-<p>Take a look at our issue tracking manager, and filter by <code v-pre>good first issue</code> for issues that are low-complexity, and that will help you get familiar with our issue tracking and patch submission process.</p>
+<p>Take a look at our [issue tracking system]([INSERT LINK TO YOUR ISSUE TRACKING SYSTEM]), and filter by <code v-pre>good first issue</code> for issues that are low-complexity, and that will help you get familiar with our issue tracking and patch submission process.</p>
 <doc-anchor-target id="suggesting-new-issue-labels">
     <h4>
         <doc-anchor-trigger class="header-anchor-trigger" to="#suggesting-new-issue-labels">#</doc-anchor-trigger>
         <span>Suggesting New Issue Labels</span>
     </h4>
 </doc-anchor-target>
-<p>Labels within an issue tracking manager are a great way to quickly sort through tickets. The project may not yet have labels to cover the full variety of issue tickets. Take a look through our list of issues, and if you notice a set of issue tickets that seem similar but are not categorized with an existing label, go ahead submit a request within one of the issues you&#x27;ve looked at with the following text:</p>
+<p>Labels within our [issue tracking system]([INSERT LINK TO YOUR ISSUE TRACKING SYSTEM]) are a great way to quickly sort through tickets. The project may not yet have labels to cover the full variety of issue tickets. Take a look through our list of issues, and if you notice a set of issue tickets that seem similar but are not categorized with an existing label, go ahead submit a request within one of the issues you&#x27;ve looked at with the following text:</p>
 <div class="codeblock-wrapper"><doc-codeblock>
 <pre class="language-none"><code v-pre class="language-none">I've noticed several other issues that are of the same category as this issue. Shall we make a new label for these types of issues?</code></pre>
 </doc-codeblock></div>
@@ -386,11 +411,11 @@
 </doc-anchor-target>
 <p>Resolving bugs is a priority for our project. We welcome bug reports. However, please make sure to do the following prior to submitting a bug report:</p>
 <ul>
-<li><strong>Check for duplicates</strong> - there may be a bug report already describing your issue, so check the issue tracking system first</li>
+<li><strong>Check for duplicates</strong> - there may be a bug report already describing your issue, so check the [issue tracking system]([INSERT LINK TO YOUR ISSUE TRACKING SYSTEM]) first</li>
 </ul>
 <p>Here&#x27;s some guidance on submitting a bug issue:</p>
 <ol>
-<li>Navigate to our issue tracking system and file a new issue</li>
+<li>Navigate to our [issue tracking system]([INSERT LINK TO YOUR ISSUE TRACKING SYSTEM]) and file a new issue</li>
 <li>Select a bug template (if available) for your issue
 <ol>
 <li>Fill out the template fields to the best of your ability, including output snippets or screenshots where applicable</li>
@@ -413,12 +438,12 @@
 </doc-anchor-target>
 <p>We welcome new feature requests to help grow our project. However, please make sure to do the following prior to submitting a bug report:</p>
 <ul>
-<li><strong>Check for duplicates</strong> - there may be a new feature issue already describing your issue, so check the issue tracking system first</li>
+<li><strong>Check for duplicates</strong> - there may be a new feature issue already describing your issue, so check the [issue tracking system]([INSERT LINK TO YOUR ISSUE TRACKING SYSTEM]) first</li>
 <li><strong>Consider alternatives</strong> - is your feature really needed? Or is there a feature within our project or with a third-party that may help you achieve what you want?</li>
 </ul>
 <p>Here&#x27;s some guidance on submitting a new feature issue:</p>
 <ol>
-<li>Navigate to our issue tracking system and file a new issue</li>
+<li>Navigate to our [issue tracking system]([INSERT LINK TO YOUR ISSUE TRACKING SYSTEM]) and file a new issue</li>
 <li>Select a new feature template (if available) for your issue
 <ol>
 <li>Fill out the template fields to the best of your ability</li>
@@ -458,42 +483,190 @@
         <span><span class="docs-emoji">&#x1F4BB;</span>  Code</span>
     </h3>
 </doc-anchor-target>
-<p>TBD</p>
+<p><span class="docs-emoji">&#x26A0;&#xFE0F;</span> It&#x27;s <strong>highly</strong> advised that you take a look at our [issue tracking system]([INSERT LINK TO YOUR ISSUE TRACKING SYSTEM]) before considering any code contributions. Here&#x27;s some guidelines:</p>
+<ol>
+<li>Check if any duplicate issues exist that cover your code contribution idea / task, and add comments to those tickets with your thoughts.</li>
+<li>If no duplicates exist, create a new issue ticket and get a conversation started before making code changes using our <doc-anchor-trigger to="#communication-channels">communication channels</doc-anchor-trigger>.</li>
+</ol>
+<p>Once you have a solid issue ticket in hand and are ready to work on code, you&#x27;ll want to:</p>
+<ol>
+<li>Ensure you have development <doc-anchor-trigger to="#prerequisites">prerequisites</doc-anchor-trigger> cleared.</li>
+<li>Have your <doc-anchor-trigger to="#developer-environment">development environment</doc-anchor-trigger> set up properly.</li>
+<li>Go through our <doc-anchor-trigger to="#our-development-process">development process</doc-anchor-trigger>, including proposing changes to our project.</li>
+</ol>
+<p>Some guidelines for code-specific contributions:</p>
+<ul>
+<li><strong>Do your homework</strong> - read-up on necessary documentation, like <code v-pre>README.md</code>s, developer documentation, and pre-existing code to see the intention and context necessary to make your contribution a success. It&#x27;s important to <em>communicate</em> what you&#x27;re working on through our project <doc-anchor-trigger to="#communication-channels">communication channels</doc-anchor-trigger> and get buy-in from frequent contributors - this will help the project be more receptive to your contributions!</li>
+<li><strong>Ask questions</strong> - its important to ask questions while you work on your contributions, to check-in with frequent contributors on the style and the set of expectations to make your code contribution work well with pre-existing project code. Use our <doc-anchor-trigger to="#communication-channels">communication channels</doc-anchor-trigger></li>
+<li><strong>Keep positive</strong> - code contributions, by their nature, have direct impacts on the output and functionality of the project. Keep a positive spirit as your code is reviewed, and take it in stride if core contributors take time to review, give you suggestions for your code or respectfully decline your contribution. This is all part of the process for quality open source development.</li>
+<li><strong>Comments</strong> - include <em>useful</em> comments throughout your code that explain the intention of a code block, not a step-by-step analysis. See our <doc-anchor-trigger to="#inline-code-documentation">inline code documentation</doc-anchor-trigger> section for specifics.</li>
+</ul>
+<p>[INSERT ADDITIONAL SECTIONS HERE FOR MORE SPECIFIC CLASSES OF CODE CONTRIBUTIONS DEPENDING ON YOUR MODULES, LANGUAGES, PLATFORMS IN USE BY YOUR PROJECT. THE MORE DETAILS YOU OFFER, THE MORE LIKELY SOMEONE IS TO UNDERSTAND HOW TO CONTRIBUTE]</p>
+<!-- EXAMPLE: APIs, PyTest, etc. -->
 <doc-anchor-target id="documentation">
     <h3>
         <doc-anchor-trigger class="header-anchor-trigger" to="#documentation">#</doc-anchor-trigger>
         <span><span class="docs-emoji">&#x1F4D6;</span> Documentation</span>
     </h3>
 </doc-anchor-target>
-<p>TBD</p>
-<doc-anchor-target id="media">
-    <h3>
-        <doc-anchor-trigger class="header-anchor-trigger" to="#media">#</doc-anchor-trigger>
-        <span><span class="docs-emoji">&#x1F4F7;</span> Media</span>
-    </h3>
+<p>Documentation is the core way our users and contributors learn about the project. We place a high value on the quality, thoroughness, and readability of our documentation. Writing or editing documentation is an excellent way to contribute to our project without performing active coding.</p>
+<p><span class="docs-emoji">&#x26A0;&#xFE0F;</span> It&#x27;s <strong>highly</strong> advised that you take a look at our [issue-tracking system]([INSERT LINK TO YOUR ISSUE TRACKING SYSTEM]) before considering any documentation contributions. Here&#x27;s some guidelines:</p>
+<ol>
+<li>Check if any duplicate issues exist that cover your documentation contribution idea / task, and add comments to those tickets with your thoughts.</li>
+<li>If no duplicates exist, create a new issue ticket and get a conversation started before making documentation changes.</li>
+</ol>
+<p>Some guidelines for documentation best practices (summarized from Google&#x27;s <a href="https://google.github.io/styleguide/docguide/best_practices.html">excellent documentation guide</a>):</p>
+<ul>
+<li><strong>Minimum viable docs</strong> - don&#x27;t do less documentation than your users / developers need, but also don&#x27;t do more</li>
+<li><strong>Changed code = changed docs</strong> - if your code has changed, remember to update your documentation</li>
+<li><strong>Delete old docs</strong> - continually clean your documentation tree, and remove outdated docs regularly</li>
+</ul>
+<doc-anchor-target id="documentation-organization">
+    <h4>
+        <doc-anchor-trigger class="header-anchor-trigger" to="#documentation-organization">#</doc-anchor-trigger>
+        <span>Documentation Organization</span>
+    </h4>
 </doc-anchor-target>
-<p>TBD</p>
+<p>The overall structure of our project documentation is as follows:</p>
+<ul>
+<li>Source-controlled documentation
+<ul>
+<li><a href="README.md">README.md</a> - top-level information about how to run, build, and contribute to the project</li>
+<li><a href="CODE_OF_CONDUCT.md">CODE_OF_CONDUCT.md</a> - best practices and guidance on how to work well with other people in the project, and suggestions on dealing with interpersonal issues</li>
+<li><a href="">CONTRIBUTING.md</a> - guidance on contributing to the project</li>
+<li><code v-pre>*.[INSERT YOUR CODING LANGUAGE FILE EXTENSIONS HERE]</code> - inline documentation available inside code files</li>
+</ul>
+</li>
+<li>[INSERT ADDITIONAL DOCUMENTATION CLASSES AND ORGANIZATION STRUCTURE HERE, SEE EXAMPLE IN COMMENTS BELOW]</li>
+</ul>
+<!-- EXAMPLE:
+- Source-controlled documentation
+  - [README.md](README.md) - top-level information about how to run, build, and contribute to the project
+  - [CODE_OF_CONDUCT.md](CODE_OF_CONDUCT.md) - best practices and guidance on how to work well with other people in the project, and suggestions on dealing with interpersonal issues
+  - [CONTRIBUTING.md](CONTRIBUTING.md) - guidance on contributing to the project
+  - `*.py` - inline documentation available inside code files' function headers and code blocks
+  - [docs/](docs/)` - top-level directory containing source-controlled documentation built into statically hosted files on our documentation website
+- Hosted documentation
+  - [Wiki Main-page]()
+    - [Wiki Sub-page 1]()
+    - [Wiki Sub-page 2]() 
+- Discussion Boards
+  - [Discussion Board Topic 1]()
+  - [Discussion Board Topic 2]()
+- YouTube.com video tutorials
+  - [Channel page 1]()
+  - [Channel page 2]()
+- Application Programming Interface (API) documentation
+  - [Sub-module 1]()
+  - [Sub-module 2]()
+- etc.
+-->
+<p>For directions on contributing to our source-controlled documentation:</p>
+<ol>
+<li>Ensure you have development <doc-anchor-trigger to="#prerequisites">prerequisites</doc-anchor-trigger> cleared.</li>
+<li>Have your <doc-anchor-trigger to="#developer-environment">development environment</doc-anchor-trigger> set up properly.</li>
+<li>Go through our <doc-anchor-trigger to="#our-development-process">development process</doc-anchor-trigger>, including proposing changes to our project.</li>
+</ol>
+<!-- OPTIONAL FOR HOSTED DOCUMENTATION >
+For directions on contributing to our hosted documentation:
+1. 
+2. 
+3. 
+
+[INSERT HOSTED DOCUMENTATION PLATFORM SPECIFIC INSTRUCTIONS HERE FOR HOW TO CONTRIBUTE]
+-->
+<doc-anchor-target id="writing-style">
+    <h4>
+        <doc-anchor-trigger class="header-anchor-trigger" to="#writing-style">#</doc-anchor-trigger>
+        <span>Writing Style</span>
+    </h4>
+</doc-anchor-target>
+<p>To ensure documentation is readable and consistent by newcomers and experts alike, here are some suggestions on writing style for English:</p>
+<ul>
+<li>Use gender neutral pronouns (they/their/them) instead of he/she/his/her</li>
+<li>Avoid qualifiers that minimize the difficulty of a task at hand, e.g. avoid words like “easily”, “simply”, “just”, “merely”, “straightforward”, etc. Readers&#x27; expertise may not match your own, and qualifying complexity may deter some readers if the task does not match their level of experience. That being said, if a particular task is difficult or complex, do mention that.</li>
+</ul>
+<doc-anchor-target id="common-wording">
+    <h4>
+        <doc-anchor-trigger class="header-anchor-trigger" to="#common-wording">#</doc-anchor-trigger>
+        <span>Common Wording</span>
+    </h4>
+</doc-anchor-target>
+<p>Below are some commonly used words you&#x27;ll want to leverage in your documentation contributions:</p>
+<ul>
+<li><strong>GitHub</strong> - one word, and capitalization of the &#x27;G&#x27; and the &#x27;H&#x27;</li>
+<li>[INSERT YOUR PROJECT SPECIFIC COMMON TERMS AND HOW TO USE THEM]</li>
+</ul>
+<doc-anchor-target id="inline-code-documentation">
+    <h4>
+        <doc-anchor-trigger class="header-anchor-trigger" to="#inline-code-documentation">#</doc-anchor-trigger>
+        <span>Inline Code Documentation</span>
+    </h4>
+</doc-anchor-target>
+<p>For language-specific guidance on code documentation, including style guides, see <a href="https://google.github.io/styleguide/">Google&#x27;s list of language style guides</a> for a variety of languages.</p>
+<p>Additionally, take a look at Google&#x27;s recommendations on <a href="https://google.github.io/styleguide/docguide/best_practices.html#documentation-is-the-story-of-your-code">inline code documentation</a> for best practices.</p>
+<doc-anchor-target id="media">
+    <h4>
+        <doc-anchor-trigger class="header-anchor-trigger" to="#media">#</doc-anchor-trigger>
+        <span>Media</span>
+    </h4>
+</doc-anchor-target>
+<p>Media, such as such as images, videos, sound files, etc., are an excellent way to explain documentation to a wider audience more easily. Include media in your contributions as often as possible.</p>
+<p>When including media into our version-control system, it is recommended to use formats such as:</p>
+<ul>
+<li>Diagrams: <a href="https://mermaid-js.github.io/mermaid/#/">Mermaid</a> format</li>
+<li>Images: JPEG format</li>
+<li>Videos: H264 MPEG format</li>
+<li>Sounds: MP3 format</li>
+</ul>
+<!-- ADD TO OR MODIFY ABOVE DEFAULT SUGGESTIONS -->
 <doc-anchor-target id="questions">
     <h3>
         <doc-anchor-trigger class="header-anchor-trigger" to="#questions">#</doc-anchor-trigger>
         <span><span class="docs-emoji">&#x2753;</span> Questions</span>
     </h3>
 </doc-anchor-target>
-<p>TBD</p>
+<p>Answering questions is an excellent way to learn more about our project, as well as get better known in our project community.</p>
+<p>Here are just a few ways you can help answer questions for our project:</p>
+<ul>
+<li>Answer open questions in our [discussion forum]([INSERT LINK TO DISCUSSION FORUM])</li>
+<li>Answer open questions mentioned in our [issue tracking system]([INSERT LINK TO YOUR ISSUE TRACKING SYSTEM])</li>
+</ul>
+<!-- ADD TO OR MODIFY DEPENDING ON YOUR COMMUNICATION CHANNELS LISTED AT THE BEGINNING OF THIS DOCUMENT-->
+<p>When answering questions, keep the following in mind:</p>
+<ul>
+<li>Be polite and friendly. See our <a href="CODE_OF_CONDUCT.md">Code of Conduct</a> recommendations as you interact with others in the team.</li>
+<li>Repeat the specific question you are answering, followed by your suggestion.</li>
+<li>If suggesting code, repeat the line of code that needs to be altered, followed by your alteration</li>
+<li>Include any post-steps or checks to verify your answer can be reproduced</li>
+</ul>
 <doc-anchor-target id="design">
     <h3>
         <doc-anchor-trigger class="header-anchor-trigger" to="#design">#</doc-anchor-trigger>
         <span><span class="docs-emoji">&#x1F3A8;</span> Design</span>
     </h3>
 </doc-anchor-target>
-<p>TBD</p>
+<p>Design files can help to guide new features and new areas of expansion for our project. We welcome these kinds of contributions.</p>
+<p>Here are just a few ways you can help provide design recommendations for our project:</p>
+<ul>
+<li>Create visual mockups or diagrams to increase usability of our project applications. This can apply to user interfaces, documentation structuring, or even code architecture diagrams.</li>
+<li>Conduct user research to understand user needs better. Save your findings within spreadsheets that the project team / contributors can review.</li>
+<li>Create art, such as logos or icons, to support the user experience for the project</li>
+</ul>
+<p>Each of the above can be contributed directly to repository code, and you should use our <doc-anchor-trigger to="#our-development-process">development process</doc-anchor-trigger> to contribute your additions.</p>
 <doc-anchor-target id="meetups">
     <h3>
         <doc-anchor-trigger class="header-anchor-trigger" to="#meetups">#</doc-anchor-trigger>
         <span><span class="docs-emoji">&#x1F39F;&#xFE0F;</span> Meetups</span>
     </h3>
 </doc-anchor-target>
-<p>TBD</p>
+<p>A great way to contribute towards our project goals is to socialize and encourage people to meet and learn more about each other. Consider ideas like:</p>
+<ul>
+<li>Propose workshops or meetups regarding some topic within our project</li>
+<li>Help point project contributors and community members to conferences and publications where they may socialize their unique innovations</li>
+<li>Schedule in-person or virtual happy-hours to help create a more social atmosphere within the project community</li>
+</ul>
+<p>For the above ideas, use our <doc-anchor-trigger to="#communication-channels">communication channels</doc-anchor-trigger> to propose get-togethers.</p>
 
 
 
