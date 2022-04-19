@@ -78,57 +78,48 @@
                     * Scrub
                     * Veracode
     * For Web Applications
-        * For service endpoints (APIs)
+        * For Service Endpoints (APIs)
             * For RESTful endpoints
-                * Using API platforms
-                    * Apache JMeter
-                    * Insomnia
-                    * Paw
-                    * Postman
-                    * REST-Assured (REST, RPC)
-                    * SOAPUI
-            * For procedural-based endpoints
-                * Using RPC/remote processing
-                    * Shell/Powershell
-                    * PortQry
-        * For web interfaces
-            * For user interaction
-                * Using browser simulation
-                    * Cypress
-                    * Playwright
-                    * Robot Framework
-                    * Selenium + Cucumber* (Java + others) / Behave (Python) / Specflow (C#)
-                    * Selenium + Watir (Ruby)
-                    * Selenium + Home Grown
+                * Apache JMeter
+                * Insomnia
+                * Paw
+                * Postman
+                * REST-Assured (REST, RPC)
+                * SOAPUI
+            * Using RPC/remote processing
+                * Shell/Powershell
+                * PortQry
+        * For User Interfaces (UIs)
+            * Using browser simulation
+                * Cypress
+                * Playwright
+                * Robot Framework
+                * Selenium + Cucumber* (Java + others) / Behave (Python) / Specflow (C#)
+                * Selenium + Watir (Ruby)
+                * Selenium + Home Grown
     * For Load testing
-        * For failure profiles and resource analysis
-            * For server deployments
-                * Using request automation
-                    * Apache JMeter
-                    * Chaos Monkey
-                    * Robot Framework
-                    * Cucumber Open
+        * Using request automation
+            * Apache JMeter
+            * Chaos Monkey
+            * Robot Framework
+            * Cucumber Open
     * For Mobile
-        * For feature validation
-            * For UI views and accessibility
-                * Using mobile device simulation
-                    * Selendroid
-                    * BrowserStack
-                    * MonkeyTalk
-                    * Espresso + XCUI
+        * Selendroid
+        * BrowserStack
+        * MonkeyTalk
+        * Espresso + XCUI
     * For Reporting
-        * For Continuous Reporting
-            * For unified analyses (dynamic and static)
-                * Using a Web application
-                    * SonarQube
-                    * Coverity
-            * For status reporting
-                * Using build platforms 
-                    * Testrail API reporting
-                    * Jenkins Code Coverage API Plugin
-                    * Travis CI using Code Climate or Codecov
-            * For real-time validation and stability
-                * Using CI/CD Platforms
-                    * JenkinsCI
-                    * GitHub Actions
-                    * Custom Tooling
+        * For unified analyses (dynamic and static)
+            * Using a Web application
+                * SonarQube
+                * Coverity
+        * For status reporting
+            * Using build platforms 
+                * Testrail API reporting
+                * Jenkins Code Coverage API Plugin
+                * Travis CI using Code Climate or Codecov
+        * For real-time validation and stability
+            * Using CI/CD Platforms
+                * JenkinsCI
+                * GitHub Actions
+                * Custom Tooling
