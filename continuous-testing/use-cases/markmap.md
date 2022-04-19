@@ -1,48 +1,46 @@
 * Continuous Testing
     * For Development APIs
-        * For unit testing, integration, dependency and stub mocking
-            * For module testing
-                * Using xUnit
-                    * (Java) JUnit [&#x1F3C1; STARTER KIT](../starter-kits/#unit-teting-with-java)
-                    * (Python) PyUnit [&#x1F3C1; STARTER KIT](../starter-kits/#unit-teting-with-python)
-                    * (C#) NUnit
-                    * (C/C++) cUnit/CppUnit
-            * For mocking, stubbing and simulating test services
-                * Using Java
-                    * Mockito
-                    * EasyMock
-                    * JMock
-                * Using Python
-                    * PyTest
-                    * Nose2
-                    * Mock
-                * Using C#
-                    * Moq
-                    * NSubstitute
-                    * FakeItEasy
-                * Using C/C++
-                    * CMock
-                    * cpp-stub
-                    * googletest
+        * For module testing
+            * Using xUnit
+                * (Java) JUnit [&#x1F3C1; STARTER KIT](../starter-kits/#unit-teting-with-java)
+                * (Python) PyUnit [&#x1F3C1; STARTER KIT](../starter-kits/#unit-teting-with-python)
+                * (C#) NUnit
+                * (C/C++) cUnit/CppUnit
+        * For mocking, stubbing and simulating test services
+            * Using Java
+                * Mockito
+                * EasyMock
+                * JMock
+            * Using Python
+                * PyTest
+                * Nose2
+                * Mock
+            * Using C#
+                * Moq
+                * NSubstitute
+                * FakeItEasy
+            * Using C/C++
+                * CMock
+                * cpp-stub
+                * googletest
     * For Code Analysis
         * For static analysis
-            * For formatting, standards and structure
-                * Using Java
-                    * Checkstyle
-                    * Spotbugs
-                    * PMD
-                * Using Python
-                    * PyLint
-                    * Pyflakes
-                    * PMD
-                * Using C#
-                    * StyleCop
-                    * Gendarme
-                    * PMD
-                * Using C/C++
-                    * CppCheck
-                    * Clang Static Analyzer / tidy
-                    * PMD
+            * Using Java
+                * Checkstyle
+                * Spotbugs
+                * PMD
+            * Using Python
+                * PyLint
+                * Pyflakes
+                * PMD
+            * Using C#
+                * StyleCop
+                * Gendarme
+                * PMD
+            * Using C/C++
+                * CppCheck
+                * Clang Static Analyzer / tidy
+                * PMD
         * For dynamic analysis
             * For test coverage
                 * Using Java
@@ -73,10 +71,9 @@
                     * Valgrind
                     * LLVM/Clang
         * For security
-            * For vulnerability reporting and code checks
-                * Using most languages
-                    * Scrub
-                    * Veracode
+            * Using most languages
+                * Scrub
+                * Veracode
     * For Web Applications
         * For Service Endpoints (APIs)
             * For RESTful endpoints
