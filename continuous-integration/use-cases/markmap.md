@@ -6,23 +6,23 @@
             * Build tooling (e.g. [Maven plugins](https://maven.apache.org/plugins/index.html), [SetupTools](https://github.com/pypa/setuptools), [Make](https://www.gnu.org/software/make/))
             * [Checksum hashing](https://en.wikipedia.org/wiki/Hash_function)
         * For credentialing
-            * keystore ([Jenkins Credentials Binding Plugin](https://plugins.jenkins.io/credentials-binding/), et. al.)[&#x1F3C1; STARTER KIT](../starter-kits/#jenkins-project-setup-and-configuration)
+            * keystore ([Jenkins Credentials Binding Plugin](https://plugins.jenkins.io/credentials-binding/), et. al.) [&#x1F3C1; STARTER KIT](../starter-kits/#jenkins-project-setup-and-configuration)
             * [ssh](https://www.openssh.com/)
             * [oauth](https://oauth.net/)
         * For executing and reporting tests
-            * [Jenkins plugins](https://plugins.jenkins.io/)[&#x1F3C1; STARTER KIT](../starter-kits/#jenkins-project-setup-and-configuration)
+            * [Jenkins plugins](https://plugins.jenkins.io/) [&#x1F3C1; STARTER KIT](../starter-kits/#jenkins-project-setup-and-configuration)
             * [TravisCI Build Addons](https://docs.travis-ci.com/user/addons/)
-            * (Java) [Maven plugins](https://maven.apache.org/plugins/index.html)[&#x1F3C1; STARTER KIT](../starter-kits/#jenkins-project-setup-and-configuration)
+            * (Java) [Maven plugins](https://maven.apache.org/plugins/index.html) [&#x1F3C1; STARTER KIT](../starter-kits/#jenkins-project-setup-and-configuration)
             * (Python) [SetupTools](https://github.com/pypa/setuptools)
             * (C#) [NUnit](https://nunit.org/)
             * (C/C++) [Make](https://www.gnu.org/software/make/)/[Cmake](https://cmake.org/)
             * (Node.js) [npm-test](https://docs.npmjs.com/cli/v8/commands/npm-test)
     * For Compilation
         * For build integration and reporting
-            * [Jenkins](https://www.jenkins.io/)[&#x1F3C1; STARTER KIT](../starter-kits/#jenkins-project-setup-and-configuration)
+            * [Jenkins](https://www.jenkins.io/) [&#x1F3C1; STARTER KIT](../starter-kits/#jenkins-project-setup-and-configuration)
             * [TravisCI](https://travis-ci.org/)
         * For automation, dependencies and packaging
-            * (Java) [Maven](https://maven.apache.org/)[&#x1F3C1; STARTER KIT](../starter-kits/#jenkins-project-setup-and-configuration)
+            * (Java) [Maven](https://maven.apache.org/) [&#x1F3C1; STARTER KIT](../starter-kits/#jenkins-project-setup-and-configuration)
             * (Python) [SetupTools](https://github.com/pypa/setuptools)/[Pip](https://pip.pypa.io/en/stable/)
             * (C#) [NuGet](https://www.nuget.org/)
             * (C/C++) [Make](https://www.gnu.org/software/make/)/[Cmake](https://cmake.org/)
@@ -49,11 +49,11 @@
             * [RPM](https://rpm.org/)
             * [JAR](https://docs.oracle.com/javase/tutorial/deployment/jar/index.html), [WAR](https://en.wikipedia.org/wiki/WAR_(file_format))
         * For releasing software
-            * [Jenkins](https://www.jenkins.io/)[&#x1F3C1; STARTER KIT](../starter-kits/#jenkins-project-setup-and-configuration)
+            * [Jenkins](https://www.jenkins.io/) [&#x1F3C1; STARTER KIT](../starter-kits/#jenkins-project-setup-and-configuration)
             * [Github Actions](https://github.com/features/actions)
         * For storing build artifacts
             * Using software libraries
-                * [Artifactory](https://jfrog.com/artifactory/)[&#x1F3C1; STARTER KIT](../starter-kits/#jenkins-project-setup-and-configuration)
+                * [Artifactory](https://jfrog.com/artifactory/) [&#x1F3C1; STARTER KIT](../starter-kits/#jenkins-project-setup-and-configuration)
                 * [Nexus](https://www.sonatype.com/products/repository-oss)
             * Using OSS delivery
                 * (Java) [Maven Central](https://search.maven.org/)
