@@ -46,7 +46,7 @@
     * For Release Management
         * For packaging
             * [Docker](https://www.docker.com/)
-            * Archiving (tar, zip, gz)
+            * Archiving ([tar](https://ss64.com/bash/tar.html), [zip](https://ss64.com/bash/zip.html), [gz](https://ss64.com/bash/gzip.html))
             * [RPM](https://rpm.org/)
             * [JAR](https://docs.oracle.com/javase/tutorial/deployment/jar/index.html), [WAR](https://en.wikipedia.org/wiki/WAR_(file_format))
         * For releasing software
