@@ -2,7 +2,7 @@
     * For Development APIs
         * For module testing (xUnit)
             * (Java) [JUnit](https://junit.org/junit5/) [&#x1F3C1; STARTER KIT](../starter-kits/#unit-teting-with-java)
-            * (Python) [PyUnit](https://docs.python.org/3/library/unittest.html#module-unittest) [&#x1F3C1; STARTER KIT](../starter-kits/#unit-teting-with-python)
+            * (Python) [PyUnit](https://docs.python.org/3/library/unittest.html#module-unittest) [&#x1F3C1; STARTER KIT](../starter-kits/#unit-testing-with-python)
             * (C#) [NUnit](https://nunit.org/)
             * (C/C++) [cUnit](http://cunit.sourceforge.net/)/[CppUnit](https://freedesktop.org/wiki/Software/cppunit/)
         * For mocking, stubbing and simulating test services
