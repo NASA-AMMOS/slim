@@ -164,7 +164,7 @@ Here's some guidance on submitting a bug issue:
    3. If the bug triggers an exception or error message, include the *full message* or *stacktrace*
    4. Provide information about your operating system and the version of our project you're using
 
-#### Submitting New Best Practice Guide Request
+#### Submitting New Best Practice Guide Requests
 
 We welcome new best practice guides / process improvement guides to help grow best practice guides. However, please make sure to do the following prior to submitting a request:
 - **Check for duplicates** - there may be an issue ticket already describing your request, so check the [issue tracking system](https://github.com/NASA-AMMOS/slim/issues) first
@@ -176,7 +176,7 @@ Here's some guidance on submitting a new best practice guide request:
 2. Select the new best practice guide request template button
    1. Fill out the template fields to the best of your ability
 
-#### Submitting Best Practice Guide Change / Improvement Request
+#### Submitting Best Practice Guide Change / Improvement Requests
 
 We welcome changes and improvements to our existing best practice guides. However, please make sure to do the following prior to submitting a request:
 - **Check for duplicates** - there may be an issue ticket already describing your change / improvement request, so check the [issue tracking system](https://github.com/NASA-AMMOS/slim/issues) first
@@ -185,6 +185,26 @@ We welcome changes and improvements to our existing best practice guides. Howeve
 Here's some guidance on submitting a best practice guide change request:
 1. Navigate to our [issue tracking system](https://github.com/NASA-AMMOS/slim/issues) and file a new issue
 2. Select the new best practice guide change / improvement request template button
+   1. Fill out the template fields to the best of your ability
+
+#### Submitting Process Improvement Need Requests
+
+Process improvement need requests are the atomic needs that represent SLIM community challenges. Needs are often aggregated together to develop comprehensive guides. You can help us identify and fill out needs that can help SLIM assess which process improvement needs are most important. However, please make sure to do the following prior to submitting a request:
+- **Check for duplicates** - there may be an issue ticket already describing your change / improvement request, so check the [issue tracking system](https://github.com/NASA-AMMOS/slim/issues) first
+
+Here's some guidance on submitting a process improvement need request:
+1. Navigate to our [issue tracking system](https://github.com/NASA-AMMOS/slim/issues) and file a new issue
+2. Select the new process improvement need request template button
+   1. Fill out the template fields to the best of your ability
+
+#### Submitting Website Feature Requests
+
+Our SLIM website is constantly evolving, and you can help us by submitting reqeuests for new features. However, please make sure to do the following prior to submitting a request:
+- **Check for duplicates** - there may be an issue ticket already describing your change / improvement request, so check the [issue tracking system](https://github.com/NASA-AMMOS/slim/issues) first
+
+Here's some guidance on submitting a website feature request:
+1. Navigate to our [issue tracking system](https://github.com/NASA-AMMOS/slim/issues) and file a new issue
+2. Select the website feature request template button
    1. Fill out the template fields to the best of your ability
 
 #### Submitting Security Vulnerability Issues

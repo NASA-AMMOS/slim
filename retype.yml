@@ -7,14 +7,10 @@ branding:
 links:
   - text: Find us on GitHub
     link: https://github.com/nasa-ammos/slim
-  - text: Code of Conduct
-    link: https://github.com/NASA-AMMOS/slim/blob/main/CODE_OF_CONDUCT.md
 footer:
   copyright: "&copy; Copyright {{ year }}. All rights reserved."
 include:
   - "**/*markmap.html"
-exclude:
-  - "CODE_OF_CONDUCT.md"
 edit:
   repo: "https://github.com/nasa-ammos/slim"   # The URL where the source files for this project are located.
   base: ""   # Optional base path to a directory within the above repo.
