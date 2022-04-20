@@ -8,7 +8,7 @@ links:
   - text: Find us on GitHub
     link: https://github.com/nasa-ammos/slim
   - text: Code of Conduct
-    link: https://nasa-ammos.github.io/slim/code_of_conduct
+    link: https://github.com/NASA-AMMOS/slim/blob/main/CODE_OF_CONDUCT.md
 footer:
   copyright: "&copy; Copyright {{ year }}. All rights reserved."
 include:
