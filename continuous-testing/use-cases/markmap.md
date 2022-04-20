@@ -96,11 +96,11 @@
         * Using all platforms
             * [Appium](https://appium.io/)
         * Using Android
-        * [Selenium/Selendroid](http://selendroid.io/)
-        * [Espresso](https://developer.android.com/training/testing/espresso)
+            * [Selenium/Selendroid](http://selendroid.io/)
+            * [Espresso](https://developer.android.com/training/testing/espresso)
         * Using iOS
-        * [Selenium/ios-driver](http://ios-driver.github.io/ios-driver/)
-        * [XCTest](https://developer.apple.com/documentation/xctest)
+            * [Selenium/ios-driver](http://ios-driver.github.io/ios-driver/)
+            * [XCTest](https://developer.apple.com/documentation/xctest)
     * For Reporting
         * For unified analyses (dynamic and static)
             * [SonarQube](https://www.sonarqube.org/)
