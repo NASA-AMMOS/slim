@@ -1,0 +1,47 @@
+name: Improve a Best Practice Guide
+description: Suggest improvements to an existing best practice guide
+title: "[Improve Best Practice Guide]: "
+labels: "enhancement"
+body:
+  - type: markdown
+    attributes:
+      value: |
+        > _Thanks for filing a new best practice guide request. We appreciate your time and effort. Please answer a few questions._
+  - type: dropdown
+    id: checked-for-duplicates
+    attributes:
+      label: Checked for duplicates
+      description: Have you checked for duplicate issue tickets?
+      multiple: false
+      options:
+        - "Yes - I've already checked"
+        - "No - I haven't checked"
+    validations:
+      required: yes
+  - type: input
+    id: guide
+    attributes:
+      label: Best Practice Guide
+      description: Which best practice guide are you looking to improve?
+      placeholder: Tell us which guide
+    validations:
+      required: true
+  - type: checkboxes
+    id: sections
+    attributes:
+      label: Best Practice Guide Sections
+      description: Which sections within the best practice guide would you like to improve? Check all that apply.
+      options:
+        - label: Use Cases
+        - label: Trade Studies
+        - label: Reference Architectures
+        - label: Starter Kits
+  - type: textarea
+    id: need
+    attributes:
+      label: Describe the improvement
+      description: Please help us understand the need more fully the ideas you have for improvement to an existing guide. 
+      placeholder: Tell us the need
+      value: "We need additional use cases such as [...] as well as starter kits for [...]"
+    validations:
+      required: true
