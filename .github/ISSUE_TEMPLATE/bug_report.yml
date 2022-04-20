@@ -18,11 +18,22 @@ body:
         - "No - I haven't checked"
     validations:
       required: yes
+  - type: dropdown
+    id: website-or-best-practice-guide
+    attributes:
+      label: Website or Best Practice Guide?
+      description: Does the bug have to do with the SLIM website or a best practice guide?
+      multiple: false
+      options:
+        - "SLIM Website"
+        - "A Best Practice Guide"
+    validations:
+      required: yes
   - type: textarea
     id: description
     attributes:
       label: Describe the bug
-      description: A clear and concise description of what the bug is. Plain-text snippets preferred but screenshots welcome.
+      description: A clear and concise description of what the bug is. If the bug has to do with a best practice guide, be sure to mention which guide. Plain-text snippets preferred but screenshots welcome.
       placeholder: Tell us what you saw
       value: "When I did [...] action, I noticed [...]"
     validations:
