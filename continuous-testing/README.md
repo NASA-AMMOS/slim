@@ -1,6 +1,6 @@
 # Continuous Testing Guide
 
-This this guide, we explore best practices for continuous testing - including exploring sceanrios such as automated invocation of unit, regression, and integration tests.
+This this guide, we explore best practices for continuous testing - including exploring scenarios such as automated invocation of unit, regression and integration tests.
 
 ## Use Cases
 
