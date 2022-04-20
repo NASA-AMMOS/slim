@@ -22,6 +22,6 @@ In this section, we provide reference architectures that map to select use case 
 
 ## Starter Kits
 
-In this section, we provide code and configuration for encoding select reference architectures, with select tools chosen from trade studies, through to automation. The key idea for starter kits is to work with folks in the SLIM community to create template solutions that can be easily modified and deployed to enact a process improvment change. These solutions should serve to both provide example implementations and concrete references for getting started. 
+In this section, we provide code and configuration for encoding select reference architectures, with select tools chosen from trade studies, through to automation. The key idea for starter kits is to work with folks in the SLIM community to create template solutions that can be easily modified and deployed to enact a process improvement change. These solutions should serve to both provide example implementations and concrete references for getting started. 
 
 [See list of starter kits](starter-kits/README.md)
