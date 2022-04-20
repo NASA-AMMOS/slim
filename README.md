@@ -1,142 +1,132 @@
-# SLIM
+<!-- Header block for project -->
+<hr>
 
-> _A shared resource for discussing, iterating and referencing best practices in software lifecycle process improvements for multi-mission space and ground software_
+<div align="center">
 
-Software Lifecycle Improvement & Modernization (SLIM) is a project focused on collecting, developing, and disseminating best practices and process improvement strategies in the NASA multi-mission software development lifecycle ecosystems. SLIM represents both a community of contributors as well as a continually evolving repository for best practices documentation.
+![logo](https://user-images.githubusercontent.com/3129134/163255685-857aa780-880f-4c09-b08c-4b53bf4af54d.png)
 
-## Scope
+<h1 align="center">[INSERT YOUR REPO / PROJ NAME HERE]</h1>
+<!-- ☝️ Replace with your repo name ☝️ -->
 
-There are three key areas within the software development lifecycle improvement space that SLIM focuses on providing best practice guidance for:
+</div>
 
-- Software Lifecycle Pipelines
-  - Continuous integration (CI), continuous deployment (CD), continuous testing (CT) etc.
-  - Ex: best practice architectures and starting kits for automated code coverage tests
-- Information Sharing
-  - Documentation design, on-boarding, training, etc.
-  - Ex: consistent documentation templates for on-boarding new team members
-  - Ex: best practices in documentation hosting architectures and tools
-- Governance
-  - Roles & responsibilities organization, etc.
-  - Ex: best processes for triaging feature requests among team members
+<pre align="center">[INSERT A SINGLE SENTENCE DESCRIBING THE PURPOSE OF YOUR REPO / PROJ]</pre>
+<!-- ☝️ Replace with a single sentence describing the purpose of your repo / proj ☝️ -->
+
+<!-- Header block for project -->
+
+[INSERT YOUR BADGES HERE (SEE: https://shields.io)] [![Contributor Covenant](https://img.shields.io/badge/Contributor%20Covenant-2.1-4baaaa.svg)](code_of_conduct.md)
+<!-- ☝️ Add badges via: https://shields.io e.g. ![](https://img.shields.io/github/your_chosen_action/your_org/your_repo) ☝️ -->
+
+[INSERT SCREENSHOT OF YOUR SOFTWARE, IF APPLICABLE]
+<!-- ☝️ Screenshot of your software (if applicable) via ![](https://uri-to-your-screenshot) ☝️ -->
+
+[INSERT MORE DETAILED DESCRIPTION OF YOUR REPOSITORY HERE]
+<!-- ☝️ Replace with a more detailed description of your repository, including why it was made and whom its intended for.  ☝️ -->
+
+[INSERT LIST OF IMPORTANT PROJECT / REPO LINKS HERE]
+<!-- example links>
+[Website](INSERT WEBSITE LINK HERE) | [Docs/Wiki](INSERT DOCS/WIKI SITE LINK HERE) | [Discussion Board](INSERT DISCUSSION BOARD LINK HERE) | [Issue Tracker](INSERT ISSUE TRACKER LINK HERE)
+-->
+
+## Features
+
+* [INSERT LIST OF FEATURES IMPORTANT TO YOUR USERS HERE]
   
-More details TBD.
+<!-- ☝️ Replace with a bullet-point list of your features ☝️ -->
 
-## Process
+## Contents
 
-Every financial fiscal quarter, SLIM convenes community members to solicit input on outstanding process improvement needs, including the respective needs' relative ranking in importance / criticality. A few needs are chosen to focus active contributor time upon - seeking to develop best practice documentation and starter kits for. 
+* [Quick Start](#quick-start)
+* [Changelog](#changelog)
+* [FAQ](#frequently-asked-questions-faq)
+* [Contributing Guide](#contributing)
+* [License](#license)
+* [Support](#support)
 
-More information on currently active needs being solicited from community members is available here: TBD
+## Quick Start
 
-## Best Practice Guides
+This guide provides a quick way to get started with our project. Please see our [docs]([INSERT LINK TO DOCS SITE / WIKI HERE]) for a more comprehensive overview.
 
-The following sections link to best practices resources developed by SLIM for process improvement needs solicited by the wider SLIM community.
+### Requirements
 
-The list is sorted alphabetically and is continually being added to.
+* [INSERT LIST OF REQUIREMENTS HERE]
+  
+<!-- ☝️ Replace with a numbered list of your requirements, including hardware if applicable ☝️ -->
 
-### Continuous Testing
+### Setup Instructions
 
-See [here](continuous-testing/README.md) for more details.
+1. [INSERT STEP-BY-STEP SETUP INSTRUCTIONS HERE, WITH OPTIONAL SCREENSHOTS]
+   
+<!-- ☝️ Replace with a numbered list of how to set up your software prior to running ☝️ -->
 
-### Documentation
+### Run Instructions
 
-Best practice documentation solutions for:
-* Choice of documentation building, hosting, editing for user / devevelopment / administrative guides & specifications, including API references, forum discussions, etc. 
-  * Ex. GH Pages, ReadTheDocs, GitBook, Wikis etc.
-* Reference architecture for templating & auto-generation of documentation artifacts
-* Instantiation of documentation hosts and examples
+1. [INSERT STEP-BY-STEP RUN INSTRUCTIONS HERE, WITH OPTIONAL SCREENSHOTS]
 
-See [here](documentation/README.md) for more details.
+<!-- ☝️ Replace with a numbered list of your run instructions, including expected results ☝️ -->
 
-## Contributions
+### Usage Examples
 
-Interested in getting involved with SLIM? The best way to get involved is to become a contributor. Below we talk about some of the types of contributions we welcome.
+* [INSERT LIST OF COMMON USAGE EXAMPLES HERE, WITH OPTIONAL SCREENSHOTS]
 
-#### Contributing A Best Practice Guide
+<!-- ☝️ Replace with a list of your usage examples, including screenshots if possible, and link to external documentation for details ☝️ -->
 
-Researching, sharing, and disseminating best practices is the bread-and-butter of the SLIM effort. We welcome folks who wish to (1) help provide best practice solutions for active / open needs (link TBD) as well as those who'd like to contribute best practice solutions for new needs that you may alraedy have great solutions for. Additionally, we welcome (2) iterative improvements for existing best practice solutions already shared on the SLIM repository.
+### Build Instructions (if applicable)
 
-Let's explore each of these sub categories for contributing best practices:
+1. [INSERT STEP-BY-STEP BUILD INSTRUCTIONS HERE, WITH OPTIONAL SCREENSHOTS]
 
-##### For Creating a New Best Practice Guide
+<!-- ☝️ Replace with a numbered list of your build instructions, including expected results / outputs with optional screenshots ☝️ -->
 
-The following is a checklist before you start work on developing new, best practice guide:
-1. Check if there are Issue Ticket(s) documenting a need for a best practice solution, feel free to create a ticket if none exist for your contribution
-2. Check the Forum for any conversations regarding the best practice need(s) to ensure you have any needed context. Feel free to reach out and ask the community for feedback if you have ideas you'd like to discuss
-3. Fork the SLIM repository into your own GitHub account so that you can work independently and eventually propose a pull request back to the SLIM project
-4. Run the GitHub Actions Workflow for generating a Best Practices directory tree for you to work within (DIRECTIONS TBD)
+### Test Instructions (if applicable)
 
-Once you have a tangible issue you're going to work against, you can begin the process to contribute your best practice. The process is not strictly about code development or documentation, rather, it is a multi-step process to ensure your best practice solution is going to meet a tangible community need. We want to help make sure your best practice solution is not only incorporated into SLIM, but actively used! Note, we recommend engaging with the SLIM community throughout the process, but if you've already created some best practice solutions you just want to document, then you can skip some of the community soliciting steps below and get feedback directly as you're developing your documentation. The following flowchart provides guidance on the best recommended process for developing and sharing a best practice solution.
+1. [INSERT STEP-BY-STEP TEST INSTRUCTIONS HERE, WITH OPTIONAL SCREENSHOTS]
 
-###### Recommended Process for Contributing a Best Practice Solution to SLIM
+<!-- ☝️ Replace with a numbered list of your test instructions, including expected results / outputs with optional screenshots ☝️ -->
 
-```mermaid
-journey
-    title Process
-    section USE CASES
-      Research: 3: Contributor
-      Mind Maps: 3: Contributor
-      Feedback: 5: Contributor, Community
-    section REFERENCE ARCHITECTURES
-      Diagramming: 3: Contributor
-      Feedback: 5: Contributor, Community
-    section TRADE STUDIES
-      Diagramming: 3: Contributor
-      Feedback: 5: Contributor, Community
-     section STARTER KITS
-      Ideate: 5: Contributor, Community
-      Create: 3: Contributor
-      Infusion: 5: Contributor, Community
-```
+## Changelog
 
-###### Understanding the Recommended Process
+See our [CHANGELOG.md](CHANGELOG.md) for a history of our changes.
 
-To help you understand the recommended process diagrammed above, this section explains each component of the diagram:
+See our [releases page]([INSERT LINK TO YOUR RELEASES PAGE]) for our key versioned releases.
 
-- `USE CASES` - the first phase of work, focused on researching, documenting, and getting feedback on relevant use cases for a given process improvement need
-  - `Research` - search the internet, read books, articles, and talk to folks to understand *which* scenarios and use cases may apply to the process improvement need. For example, if the need is something like *"Living documentation best practices for development lifecycle artifacts"* then some use cases could involve things like `Automated PyDoc documentation generation from code`, `User guide generation from static GitHub flavored Markdown`. Basically, consult the community and literature to get specific on the pressing use case scenarios for this need, and identify tools that may help support or satisfy this need.
-  - `Diagramming` - here you'll want to *diagram* the research you've collected on scenario / use cases and tools in a format that SLIM community members can easily understand and comment on. The diagramming approach we're recommending with use cases is to create a *mind-map*. See the [Wikipedia article](https://en.wikipedia.org/wiki/Mind_map) on mind mapping for more information about the technique. To generate consistent mind map digrams, we're suggesting you use a tool called [MarkMap](https://github.com/gera2ld/markmap) both because it creates interactive mind-maps and because it support diagrams being version controlled and easily edited by multiple people. What you'll want to do is to edit the `/use-cases/markmap.md` document in your local directory with use case and tool information you've researched. Add parent nodes for use cases and leaf nodes for tools within the markdown file. The use cases should come first, and be broken down into categories that logically model the tree of use cases you've collected. You can be as limited or as comprehensive as you like with the use cases, the key is to make sure the use cases are readable. A suggestion is to prefix the parent / child node relationships in this file with English-language perpositions (e.g. In, From, To) for the use case information and the keyword "Using" for the tool information. For example, a parent-child relationship within your markdown file to help share best practices for documentation hosting could be:
-    ```
-    * Documentation Best Practices
-        * For Hosting
-            * Of Source-Controlled (Static) Content
-                * With Markdown support
-                    *   Using Jekyll / GitHub Pages
-    ```
-    Once you've documented your use cases and tools within the respective `markmap.md` file, you'll just need to add and commit your file to GitHub, where an automated GitHub Action (markmap) will auto-generate an equivalent `markmap.html` rendering of your markdown file and commit it to the same directory where you've stored the `markmap.md` file (inside the `use-cases` directory). 
-  - `Feedback` - this is the step to take a pause in your development, and reach out to the SLIM community to get feedback on:
-    - The coverage of use cases in your mindmap rendering (e.g. are you missing critical use cases?)
-    - An assessment of *which* use case(s) are highest priority to the community. You'll use this to help provide some focus on the scope of reference architectures you should document for your use cases
-- `REFERENCE ARCHITECTURES`
-  - `Diagramming` - in this step, you'll want to review the feedback you've received from the SLIM community on your use case mindmaps, and select the highest priorty use cases to create an architectural reference diagram for. It's a little bit of an art at this point, but you'll want to keep the level of abstraction high enough that specific tool solutions can be interchanged but your diagram will still remain valid. The key idea here is to provide a reference architecture that's largely tool-agnostic, and can be used by SLIM community members easily to understand how a best practice solution data or process flow may look like. The recommended diagramming tool here is to leverage the [Mermaid](https://mermaid-js.github.io/mermaid/#/) markdown diagramming tool that has native GitHub integrations. This way, again, diagrams can be easily understood, version controlled, and edited by multiple people. We recommend you [this tutorial](https://github.blog/2022-02-14-include-diagrams-markdown-files-mermaid/) to get started with this framework, and document your flow chart architecture diagram in `/reference-architectures/ref-archi-XYZ.md`. We also recommend you edit your mind-map markdown files to link to your reference architecture diagrams using hyperlinks. See Markmap [examples](https://markmap.js.org/repl) for hyperlinking.
-  - `Feedback` - now is again the time to reach out to the SLIM community and get feedback on your new diagram. Specifically, its a good idea to get request feedback on whether the diagram makes sense and has large coverage over the use cases you're exploring, and also to gather feedback on the most important criteria for evaluating whether a given architecture (along with its tools of choice). You'll use these criteria to help document trade studies between tools of interest in the next step.
-- `TRADE STUDIES` 
-  - `Diagramming` - in this step, you'll want to do some research on important metric criteria by which to evaluate possible tools documented in your use case diagram and applicable to the architecture diagram you generated in previous steps. We recommend using markdown tables to create your trade studies, this way the documentation you write can be easily viewed, version controlled, and modified by multiple people. Add your diagrams to the `trade-studies/` folder within your best practices parent folder.
-  - `Feedback` - again, it's a good idea to reach out to the SLIM community and gain feedback on your latest diagram
-- `STARTER KITS`
-  - `Feedback` - in this step, we ask you to reach out to the SLIM community for ideas and feedback on the most useful starter kits to create, reflecting use cases, architecture diagrams, and metric analyses that you've produced. Once you get feedback on a highly useful starter kit scenario, its time to start coding or configuring a sample starter kit
-  - `Create` - here's where you'll want to spend some dedicated time to create a starter kit. A starter kit can be anything that helps SLIM community members initialize an instance of your architecture that uses tools you've evaluated and fulfills a use case you explored. For example, for our "Documentation Hosting" process improvement need, we may create a starter kit that takes the form of a GitHub Action Workflow automatically generating documentation sites from customized markdown static content on GitHub. It's always a good idea to make your starter kit as generic as possible, including using environment variables to allow SLIM community members to customize the starter kit easily. Add your starter kit scripts or configuration to the `starter-kits/` folder within your best practices paretn folder.
-  - `Infusion` - in this final step, it's time to share your entire solution with the SLIM community and optionally aid community members with infusing your starter kit into their development workflow, or helping them understand any one of your diagrams produced. The best way to kickstart infusion is to propose a formal pull-request for your entire best practices folder (so that it can be incorporated in to the SLIM documentation site) and announce the development work you've down to the community.
+<!-- ☝️ Replace with links to your changelog and releases page ☝️ -->
 
-##### For Adding Improvements to an Existing Best Practice Guide
+## Frequently Asked Questions (FAQ)
 
-TBD
+[INSERT LINK TO FAQ PAGE OR PROVIDE FAQ INLINE HERE]
+<!-- example link to FAQ PAGE>
+Questions about our project? Please see our: [FAQ]([INSERT LINK TO FAQ / DISCUSSION BOARD])
+-->
 
-### Version Control
+<!-- example FAQ inline format>
+1. Question 1
+   - Answer to question 1
+2. Question 2
+   - Answer to question 2
+-->
 
-TBD
+<!-- example FAQ inline with no questions yet>
+No questions yet. Propose a question to be added here by reaching out to our contributors! See support section below.
+-->
 
-### Issue Tracking
+<!-- ☝️ Replace with a list of frequently asked questions from your project, or post a link to your FAQ on a discussion board ☝️ -->
 
-TBD
+## Contributing
 
-### Communication Resources
+Interested in contributing to our project? Please see our: [CONTRIBUTING.md](CONTRIBUTING.md)
 
-TBD
+## License
 
-### Contribution Guidelines
+See our: [LICENSE](LICENSE)
 
-TBD
+## Support
 
-## FAQ
+[INSERT CONTACT INFORMATION OR PROFILE LINKS TO MAINTAINERS AMONG COMMITTER LIST]
 
-TBD
+<!-- example list of contacts>
+Key points of contact are: [@github-user-1](link to github profile) [@github-user-2](link to github profile)
+-->
+
+<!-- ☝️ Replace with the key individuals who should be contacted for questions ☝️ -->
+
