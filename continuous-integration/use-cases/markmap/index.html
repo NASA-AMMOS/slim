@@ -7,21 +7,21 @@
     <meta name="turbo-cache-control" content="no-cache">
 
     <!-- Primary Meta Tags -->
-    <title>Continuous Testing Guide</title>
-    <meta name="title" content="Continuous Testing Guide">
-    <meta name="description" content="This this guide, we explore best practices for continuous testing - including exploring scenarios such as automated invocation of unit, regression..." />
+    <title>All Use Cases</title>
+    <meta name="title" content="All Use Cases">
+    <meta name="description" content="Continuous Integration" />
 
     <!-- Open Graph / Facebook -->
     <meta property="og:type" content="website">
-    <meta property="og:url" content="https://nasa-ammos.github.io/slim/continuous-testing/">
-    <meta property="og:title" content="Continuous Testing Guide">
-    <meta property="og:description" content="This this guide, we explore best practices for continuous testing - including exploring scenarios such as automated invocation of unit, regression...">
+    <meta property="og:url" content="https://nasa-ammos.github.io/slim/continuous-integration/use-cases/markmap/">
+    <meta property="og:title" content="All Use Cases">
+    <meta property="og:description" content="Continuous Integration">
 
     <!-- Twitter -->
     <meta property="twitter:card" content="summary_large_image">
-    <meta property="twitter:url" content="https://nasa-ammos.github.io/slim/continuous-testing/">
-    <meta property="twitter:title" content="Continuous Testing Guide">
-    <meta property="twitter:description" content="This this guide, we explore best practices for continuous testing - including exploring scenarios such as automated invocation of unit, regression...">
+    <meta property="twitter:url" content="https://nasa-ammos.github.io/slim/continuous-integration/use-cases/markmap/">
+    <meta property="twitter:title" content="All Use Cases">
+    <meta property="twitter:description" content="Continuous Integration">
     
     <script>(function () { var el = document.documentElement, m = localStorage.getItem("/slim/doc_theme"), wm = window.matchMedia; if (m === "dark" || (!m && wm && wm("(prefers-color-scheme: dark)").matches)) { el.classList.add("dark") } else { el.classList.remove("dark") } })();</script>
 
@@ -183,45 +183,136 @@
                 <div id="docs-sidebar-right-toggle"></div>
                
                 <!-- Page content  -->
-<doc-anchor-target id="continuous-testing-guide" class="break-words">
+<doc-anchor-target id="all-use-cases" class="break-words">
     <h1>
-        <doc-anchor-trigger class="header-anchor-trigger" to="#continuous-testing-guide">#</doc-anchor-trigger>
-        <span>Continuous Testing Guide</span>
+        <doc-anchor-trigger class="header-anchor-trigger" to="#all-use-cases">#</doc-anchor-trigger>
+        <span>All Use Cases</span>
     </h1>
 </doc-anchor-target>
-<p>This this guide, we explore best practices for continuous testing - including exploring scenarios such as automated invocation of unit, regression and integration tests.</p>
-<doc-anchor-target id="use-cases">
-    <h2>
-        <doc-anchor-trigger class="header-anchor-trigger" to="#use-cases">#</doc-anchor-trigger>
-        <span>Use Cases</span>
-    </h2>
-</doc-anchor-target>
-<p>In this section, we provide information about potentially useful <em>use cases</em> for continuous testing. The key idea is to provide some more nuanced context for the use cases such that technology (tool) solutions can be shared in context.</p>
-<p><a href="use-cases/">See list of use cases</a></p>
-<doc-anchor-target id="trade-studies">
-    <h2>
-        <doc-anchor-trigger class="header-anchor-trigger" to="#trade-studies">#</doc-anchor-trigger>
-        <span>Trade Studies</span>
-    </h2>
-</doc-anchor-target>
-<p>Here we provide a table of trade offs, feature comparisons, and metrics for a given set of reference architectures mapped to use case tool solutions. Choice of comparison points are solicited directly from community member feedback.</p>
-<p><a href="trade-studies/">See list of trade studies</a></p>
-<doc-anchor-target id="reference-architectures">
-    <h2>
-        <doc-anchor-trigger class="header-anchor-trigger" to="#reference-architectures">#</doc-anchor-trigger>
-        <span>Reference Architectures</span>
-    </h2>
-</doc-anchor-target>
-<p>In this section, we provide reference architectures that map to select use case scenarios from the above section. The key idea is to provide an architecture / flowchart that simplifies the understanding of how a particular class of tools to satisfy a use case could be put together to help with continuous testing needs.</p>
-<p><a href="reference-architectures/">See list of reference architectures</a></p>
-<doc-anchor-target id="starter-kits">
-    <h2>
-        <doc-anchor-trigger class="header-anchor-trigger" to="#starter-kits">#</doc-anchor-trigger>
-        <span>Starter Kits</span>
-    </h2>
-</doc-anchor-target>
-<p>In this section, we provide code and configuration for encoding select reference architectures, with select tools chosen from trade studies, through to automation. The key idea for starter kits is to work with folks in the SLIM community to create template solutions that can be easily modified and deployed to enact a process improvement change. These solutions should serve to both provide example implementations and concrete references for getting started.</p>
-<p><a href="starter-kits/">See list of starter kits</a></p>
+<ul>
+<li>Continuous Integration
+<ul>
+<li>For Analysis and Testing
+<ul>
+<li>For verification, notification and assembly
+<ul>
+<li>Using <a href="https://git-scm.com/docs/githooks">Git hooks</a></li>
+<li>Using <a href="https://github.com/features/actions">Github Actions</a></li>
+<li>Implementing build tooling (e.g. <a href="https://maven.apache.org/plugins/index.html">Maven plugins</a>, <a href="https://github.com/pypa/setuptools">SetupTools</a>, <a href="https://www.gnu.org/software/make/">Make</a>)</li>
+<li>Using <a href="https://en.wikipedia.org/wiki/Hash_function">Checksum hashing</a></li>
+</ul>
+</li>
+<li>For credentialing
+<ul>
+<li>Implementing keystore (<a href="https://plugins.jenkins.io/credentials-binding/">Jenkins Credentials Binding Plugin</a>, et. al.) <a href="../../starter-kits/#jenkins-project-setup-and-configuration">🏁 STARTER KIT(TBD)</a></li>
+<li>Using <a href="https://www.openssh.com/">ssh</a></li>
+<li>Using <a href="https://oauth.net/">oauth</a></li>
+</ul>
+</li>
+<li>For executing and reporting tests
+<ul>
+<li>Using <a href="https://plugins.jenkins.io/">Jenkins plugins</a> <a href="../../starter-kits/#jenkins-project-setup-and-configuration">🏁 STARTER KIT(TBD)</a></li>
+<li>Using <a href="https://docs.travis-ci.com/user/addons/">TravisCI Build Addons</a></li>
+<li>Using (Java) <a href="https://maven.apache.org/plugins/index.html">Maven plugins</a> <a href="../../starter-kits/#jenkins-project-setup-and-configuration">🏁 STARTER KIT(TBD)</a></li>
+<li>Using (Python) <a href="https://github.com/pypa/setuptools">SetupTools</a></li>
+<li>Using (C#) <a href="https://nunit.org/">NUnit</a></li>
+<li>Using (C/C++) <a href="https://www.gnu.org/software/make/">Make</a>/<a href="https://cmake.org/">Cmake</a></li>
+<li>Using (Node.js) <a href="https://docs.npmjs.com/cli/v8/commands/npm-test">npm-test</a></li>
+<li>Using (any) <a href="https://github.jpl.nasa.gov/MIPL/testrail-connector">Testrail Connector</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li>For Compilation
+<ul>
+<li>For build integration and reporting
+<ul>
+<li>Using <a href="https://www.jenkins.io/">Jenkins</a> <a href="../../starter-kits/#jenkins-project-setup-and-configuration">🏁 STARTER KIT(TBD)</a></li>
+<li>Using <a href="https://travis-ci.org/">TravisCI</a></li>
+</ul>
+</li>
+<li>For dependency management and packaging
+<ul>
+<li>Using (Java) <a href="https://maven.apache.org/">Maven</a> <a href="../../starter-kits/#jenkins-project-setup-and-configuration">🏁 STARTER KIT(TBD)</a></li>
+<li>Using (Python) <a href="https://github.com/pypa/setuptools">SetupTools</a>/<a href="https://pip.pypa.io/en/stable/">Pip</a></li>
+<li>Using (C#) <a href="https://www.nuget.org/">NuGet</a></li>
+<li>Using (C/C++) <a href="https://www.gnu.org/software/make/">Make</a>/<a href="https://cmake.org/">Cmake</a></li>
+<li>Using (Node.js) <a href="https://www.npmjs.com/">npm</a></li>
+<li>Using (any) <a href="https://ant.apache.org/">Ant</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li>For Orchestration
+<ul>
+<li>For deploying services
+<ul>
+<li>Using workflows
+<ul>
+<li>Using <a href="https://puppet.com/">Puppet</a></li>
+<li>Using <a href="https://www.ansible.com/">Ansible</a></li>
+<li>Using <a href="https://www.chef.io/">Chef</a></li>
+</ul>
+</li>
+<li>Using scripts
+<ul>
+<li>Using <a href="https://www.python.org/">Python</a></li>
+<li>Implementing platform scripting [<a href="https://www.gnu.org/software/bash/manual/html_node/What-is-a-shell_003f.html">shell</a>, <a href="https://docs.microsoft.com/en-us/powershell/">Powershell</a>]</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>For cloud or datacenter deployments
+<ul>
+<li>Using <a href="https://www.terraform.io/">Terraform</a></li>
+<li>Using <a href="https://kubernetes.io/">Kubernetes</a></li>
+<li>Using <a href="https://aws.amazon.com/cloudformation/">CloudFormation</a></li>
+<li>Using <a href="https://github.com/saltstack/salt">SaltStack</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li>For Release Management
+<ul>
+<li>For packaging
+<ul>
+<li>Using <a href="https://www.docker.com/">Docker</a></li>
+<li>Implementing archiving (<a href="https://ss64.com/bash/tar.html">tar</a>, <a href="https://ss64.com/bash/zip.html">zip</a>, <a href="https://ss64.com/bash/gzip.html">gz</a>)</li>
+<li>Using <a href="https://rpm.org/">RPM</a></li>
+<li>Using <a href="https://docs.oracle.com/javase/tutorial/deployment/jar/index.html">JAR</a>, <a href="https://en.wikipedia.org/wiki/WAR_(file_format)">WAR</a></li>
+</ul>
+</li>
+<li>For releasing software
+<ul>
+<li>Using <a href="https://www.jenkins.io/">Jenkins</a> <a href="../../starter-kits/#jenkins-project-setup-and-configuration">🏁 STARTER KIT(TBD)</a></li>
+<li>Using <a href="https://travis-ci.org/">TravisCI</a></li>
+<li>Using <a href="https://github.com/features/actions">Github Actions</a></li>
+</ul>
+</li>
+<li>For storing build artifacts
+<ul>
+<li>Using software repositories
+<ul>
+<li>Using <a href="https://jfrog.com/artifactory/">Artifactory</a> <a href="../../starter-kits/#jenkins-project-setup-and-configuration">🏁 STARTER KIT(TBD)</a></li>
+<li>Using <a href="https://www.sonatype.com/products/repository-oss">Nexus</a></li>
+</ul>
+</li>
+<li>Using OSS repositories
+<ul>
+<li>Using (Java) <a href="https://search.maven.org/">Maven Central</a></li>
+<li>Using (Python) <a href="https://pypi.org/">PyPi</a></li>
+<li>Using (C#) <a href="https://www.nuget.org/">Nuget</a></li>
+<li>Using (C/C++) <a href="http://yum.baseurl.org/">yum</a>, <a href="https://rpm-software-management.github.io/">dnf</a></li>
+<li>Using (Node.js) <a href="https://www.npmjs.com/">npm</a></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
 
 
 
@@ -231,7 +322,7 @@
             </div>
 
             <div class="flex flex-wrap items-center justify-between mt-14">
-    <a class="my-2.5 inline-flex items-center text-sm whitespace-nowrap text-blue-500 dark:text-blue-400 hover:text-blue-700 hover:underline" href="https://github.com/nasa-ammos/slim/blob/main/continuous-testing/README.md" target="_blank" rel="noopener">
+    <a class="my-2.5 inline-flex items-center text-sm whitespace-nowrap text-blue-500 dark:text-blue-400 hover:text-blue-700 hover:underline" href="https://github.com/nasa-ammos/slim/blob/main/continuous-integration/use-cases/markmap.md" target="_blank" rel="noopener">
         <svg class="mr-1.5" xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="currentColor" overflow="visible"><path d="M20 12c-.55 0-1 .45-1 1v7c0 .55-.45 1-1 1H4c-.55 0-1-.45-1-1V6c0-.55.45-1 1-1h7c.55 0 1-.45 1-1s-.45-1-1-1H4C2.35 3 1 4.35 1 6v14c0 1.65 1.35 3 3 3h14c1.65 0 3-1.35 3-3v-7c0-.55-.45-1-1-1z" /><path d="M22.21 1.79c-1.18-1.18-3.24-1.18-4.41 0l-9.5 9.5c-.13.13-.22.29-.26.46l-1 4c-.08.34.01.7.26.95.18.2.44.3.7.3.08 0 .16-.01.24-.03l4-1c.18-.04.34-.13.46-.26l9.5-9.5c1.22-1.22 1.22-3.2.01-4.42zm-1.42 3l-9.3 9.3-2.11.53.53-2.11 9.3-9.3c.42-.42 1.16-.42 1.59 0 .43.43.43 1.15-.01 1.58z" /><path fill="none" d="M0 0h24v24H0z" /></svg>
         <span>Edit this page</span>
     </a>
@@ -239,27 +330,6 @@
     <!--<p class="my-2.5 text-gray-500 dark:text-dark-350 text-sm">Last updated on <strong>2021-03-14</strong> by <strong>Geoffrey McGill</strong></p>-->
 </div>
 
-<nav class="flex mt-14">
-    <div class="w-1/2">
-        <a class="px-5 py-4 h-full flex items-center break-all md:break-normal font-medium text-blue-500 dark:text-blue-400 border border-gray-300 hover:border-gray-400 dark:border-dark-650 dark:hover:border-dark-450 rounded-l-lg transition-colors duration-150 relative hover:z-5" href="/slim/continuous-integration/starter-kits/">
-            <svg xmlns="http://www.w3.org/2000/svg" class="mr-3" width="24" height="24" viewBox="0 0 24 24" fill="currentColor" overflow="visible"><path d="M19 11H7.41l5.29-5.29a.996.996 0 10-1.41-1.41l-7 7a1 1 0 000 1.42l7 7a1.024 1.024 0 001.42-.01.996.996 0 000-1.41L7.41 13H19c.55 0 1-.45 1-1s-.45-1-1-1z" /><path fill="none" d="M0 0h24v24H0z" /></svg>
-            <span>
-                <span class="block text-xs font-normal text-gray-400 dark:text-dark-400">Previous</span>
-                <span class="block mt-1">Starter Kits</span>
-            </span>
-        </a>
-    </div>
-
-    <div class="w-1/2">
-        <a class="px-5 py-4 -mx-px h-full flex items-center justify-end break-all md:break-normal font-medium text-blue-500 dark:text-blue-400 border border-gray-300 hover:border-gray-400 dark:border-dark-650 dark:hover:border-dark-450 rounded-r-lg transition-colors duration-150 relative hover:z-5" href="/slim/continuous-testing/use-cases/">
-            <span>
-                <span class="block text-xs font-normal text-right text-gray-400 dark:text-dark-400">Next</span>
-                <span class="block mt-1">Use Cases</span>
-            </span>
-            <svg xmlns="http://www.w3.org/2000/svg" class="ml-3" width="24" height="24" viewBox="0 0 24 24" fill="currentColor" overflow="visible"><path d="M19.92 12.38a1 1 0 00-.22-1.09l-7-7a.996.996 0 10-1.41 1.41l5.3 5.3H5c-.55 0-1 .45-1 1s.45 1 1 1h11.59l-5.29 5.29a.996.996 0 000 1.41c.19.2.44.3.7.3s.51-.1.71-.29l7-7c.09-.09.16-.21.21-.33z" /><path fill="none" d="M0 0h24v24H0z" /></svg>
-        </a>
-    </div>
-</nav>
 
 
         </main>
@@ -302,6 +372,6 @@
 
         <div id="docs-overlay-target"></div>
 
-        <script>window.__DOCS__ = { "title": "Continuous Testing Guide", icon: "file", hasPrism: false, hasMermaid: false, hasMath: false }</script>
+        <script>window.__DOCS__ = { "title": "All Use Cases", icon: "file", hasPrism: false, hasMermaid: false, hasMath: false }</script>
     </body>
 </html>

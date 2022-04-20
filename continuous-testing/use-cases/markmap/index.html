@@ -25,11 +25,11 @@
     
     <script>(function () { var el = document.documentElement, m = localStorage.getItem("/slim/doc_theme"), wm = window.matchMedia; if (m === "dark" || (!m && wm && wm("(prefers-color-scheme: dark)").matches)) { el.classList.add("dark") } else { el.classList.remove("dark") } })();</script>
 
-    <link href="/slim/resources/css/retype.css?v=1.11.2.703811255767" rel="stylesheet" data-turbo-track="reload" />
+    <link href="/slim/resources/css/retype.css?v=1.11.2.703812807363" rel="stylesheet" data-turbo-track="reload" />
 
-    <script type="text/javascript" src="/slim/resources/js/config.js?v=1.11.2.703811255767" defer data-turbo-track="reload"></script>
+    <script type="text/javascript" src="/slim/resources/js/config.js?v=1.11.2.703812807363" defer data-turbo-track="reload"></script>
     <script type="text/javascript" src="/slim/resources/js/retype.js?v=1.11.2" defer data-turbo-track="reload"></script>
-    <script id="lunr-js" type="text/javascript" src="/slim/resources/js/lunr.js?v=1.11.2.703811255767" defer></script>
+    <script id="lunr-js" type="text/javascript" src="/slim/resources/js/lunr.js?v=1.11.2.703812807363" defer></script>
 </head>
     <body>
         <div id="docs-app" class="relative text-base antialiased text-gray-700 bg-white font-body dark:bg-dark-850 dark:text-dark-300">
@@ -194,108 +194,233 @@
 <ul>
 <li>For Development APIs
 <ul>
-<li>Unit Testing
+<li>For module testing (xUnit)
 <ul>
-<li>xUnit (e.g. Junit[Java], PyUnit[Python], NUnit[C#], CppUnit[C++]</li>
-<li>Tools
+<li>Using (Java) <a href="https://junit.org/junit5/">JUnit</a> <a href="../../starter-kits/#unit-teting-with-java">🏁 STARTER KIT(TBD)</a></li>
+<li>Using (Python) <a href="https://docs.python.org/3/library/unittest.html#module-unittest">PyUnit</a> <a href="../../starter-kits/#unit-testing-with-python">🏁 STARTER KIT(TBD)</a></li>
+<li>Using (C#) <a href="https://nunit.org/">NUnit</a></li>
+<li>Using (C/C++) <a href="http://cunit.sourceforge.net/">cUnit</a>/<a href="https://freedesktop.org/wiki/Software/cppunit/">CppUnit</a></li>
+</ul>
+</li>
+<li>For mocking, stubbing and simulating test services
 <ul>
-<li>Java</li>
-<li>Python</li>
-<li>C#</li>
-<li>C/C++</li>
+<li>Using Java
+<ul>
+<li>Using <a href="https://site.mockito.org/">Mockito</a></li>
+<li>Using <a href="https://easymock.org/">EasyMock</a></li>
+<li>Using <a href="http://jmock.org/">JMock</a></li>
+</ul>
+</li>
+<li>Using Python
+<ul>
+<li>Using <a href="https://docs.pytest.org/">PyTest</a></li>
+<li>Using <a href="https://docs.nose2.io/en/latest/">Nose2</a></li>
+<li>Using <a href="https://mock.readthedocs.io/en/latest/">Mock</a></li>
+</ul>
+</li>
+<li>Using C#
+<ul>
+<li>Using <a href="https://github.com/moq/moq">Moq</a></li>
+<li>Using <a href="https://nsubstitute.github.io/">NSubstitute</a></li>
+<li>Using <a href="https://fakeiteasy.github.io/">FakeItEasy</a></li>
+</ul>
+</li>
+<li>Using C/C++
+<ul>
+<li>Using <a href="https://github.com/ThrowTheSwitch/CMock">CMock</a></li>
+<li>Using <a href="https://github.com/coolxv/cpp-stub">cpp-stub</a></li>
+<li>Using <a href="https://github.com/google/googletest">googletest</a></li>
 </ul>
 </li>
 </ul>
 </li>
-<li>Integration, Dependency and Stub Mocking
-<ul>
-<li>Simulate dependencies</li>
-<li>Stub out coupled services for planned results</li>
-<li>Mock specific application behavior</li>
-<li>Tools
-<ul>
-<li>Java
-<ul>
-<li>Mockito</li>
-<li>EasyMock</li>
-<li>JMock</li>
 </ul>
 </li>
-<li>Python
-*</li>
-<li>C#</li>
-<li>C/C++</li>
-</ul>
-</li>
-</ul>
-</li>
-<li>Code Quality Analysis
+<li>For Code Analysis
 <ul>
-<li>Semmle</li>
+<li>For static analysis
+<ul>
+<li>Using Java
+<ul>
+<li>Using <a href="https://checkstyle.sourceforge.io/">Checkstyle</a></li>
+<li>Using <a href="https://github.com/spotbugs/spotbugs">Spotbugs</a></li>
+<li>Using <a href="https://github.com/pmd/pmd">PMD</a></li>
+</ul>
+</li>
+<li>Using Python
+<ul>
+<li>Using <a href="https://pylint.pycqa.org/en/latest/">PyLint</a></li>
+<li>Using <a href="https://github.com/PyCQA/pyflakes">Pyflakes</a></li>
+<li>Using <a href="https://github.com/pmd/pmd">PMD</a></li>
+</ul>
+</li>
+<li>Using C#
+<ul>
+<li>Using <a href="https://github.com/StyleCop/StyleCop">StyleCop</a></li>
+<li>Using <a href="https://www.mono-project.com/docs/tools+libraries/tools/gendarme/">Gendarme</a></li>
+<li>Using <a href="https://github.com/pmd/pmd">PMD</a></li>
+</ul>
+</li>
+<li>Using C/C++
+<ul>
+<li>Using <a href="https://github.com/danmar/cppcheck">CppCheck</a></li>
+<li>Using <a href="https://clang-analyzer.llvm.org/">Clang Static Analyzer</a> / <a href="https://clang.llvm.org/extra/clang-tidy/">tidy</a></li>
+<li>Using <a href="https://github.com/pmd/pmd">PMD</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li>For dynamic analysis
+<ul>
+<li>For test coverage
+<ul>
+<li>Using Java
+<ul>
+<li>Using <a href="https://www.jacoco.org/jacoco/">Jacoco</a></li>
+<li>Using <a href="https://github.com/cobertura/cobertura">Cobertura</a></li>
+</ul>
+</li>
+<li>Using Python
+<ul>
+<li>Using <a href="https://github.com/nedbat/coveragepy">Coverage</a></li>
+<li>Using <a href="https://github.com/pytest-dev/pytest-cov">PyTest-cov</a></li>
+</ul>
+</li>
+<li>Using C#
+<ul>
+<li>Using <a href="https://github.com/SteveGilham/altcover">AltCover</a></li>
+<li>Using <a href="http://ncover.sourceforge.net/">NCover</a></li>
+</ul>
+</li>
+<li>Using C/C++
+<ul>
+<li>Using <a href="https://github.com/linux-test-project/lcov">lcov</a></li>
+<li>Using <a href="https://github.com/OpenCppCoverage/OpenCppCoverage">OpenCppCoverage</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li>For complexity analysis and runtime performance
+<ul>
+<li>Using Java
+<ul>
+<li>Using <a href="https://jmeter.apache.org/">JMeter</a></li>
+<li>Using <a href="https://www.ej-technologies.com/products/jprofiler/overview.html">JProfiler</a></li>
+<li>Using <a href="https://github.com/javapathfinder/jpf-core">JPF</a></li>
+</ul>
+</li>
+<li>Using Python
+<ul>
+<li>Using <a href="https://github.com/plasma-umass/scalene">Scalene</a></li>
+<li>Using <a href="https://docs.python.org/3/library/trace.html">trace</a>/<a href="https://docs.python.org/3/library/inspect.html">inspect</a>/<a href="https://docs.python.org/3/library/pdb.html">pdb</a></li>
+</ul>
+</li>
+<li>Using C#
+<ul>
+<li>Using <a href="https://docs.microsoft.com/en-us/visualstudio/profiling/profiling-feature-tour?view=vs-2022#analyze-performance-legacy-tools">Performance Profiler</a></li>
+<li>Using <a href="https://www.parasoft.com/products/parasoft-dottest/">Parasoft Dottest</a></li>
+<li>Using <a href="https://www.red-gate.com/products/dotnet-development/ants-performance-profiler/">ANTS Profiler</a></li>
+</ul>
+</li>
+<li>Using C/C++
+<ul>
+<li>Using <a href="https://valgrind.org/">Valgrind</a></li>
+<li>Using <a href="https://gcc.gnu.org/onlinedocs/gcc/Gcov.html">Gcov</a></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>For security
+<ul>
+<li>Using <a href="https://nasa.github.io/scrub/usage.html#supported-cots-tools-and-languages">Scrub/Coverity/CodeQL</a></li>
+<li>Using <a href="https://www.sonarqube.org/">SonarQube</a></li>
 </ul>
 </li>
 </ul>
 </li>
 <li>For Web Applications
 <ul>
-<li>Service Endpoints (APIs)
+<li>For Service Endpoints (APIs)
 <ul>
-<li>Messaging-based
+<li>For RESTful endpoints
 <ul>
-<li>RESTful Services</li>
-<li>SOAP</li>
-<li>Tools (JSON/XML)
+<li>Using <a href="https://jmeter.apache.org/">JMeter</a></li>
+<li>Using <a href="https://www.postman.com/">Postman</a></li>
+<li>Using <a href="https://rest-assured.io/">REST Assured (REST, RPC)</a></li>
+<li>Using <a href="https://www.soapui.org/">SOAPUI</a></li>
+</ul>
+</li>
+<li>Using RPC/remote processing
 <ul>
-<li>Using Apache JMeter</li>
-<li>Using Insomnia</li>
-<li>Using Paw</li>
-<li>Using Postman</li>
-<li>Using REST-Assured (REST, RPC)</li>
-<li>Using SOAPUI</li>
+<li>Using <a href="https://devblogs.microsoft.com/scripting/testing-rpc-ports-with-powershell-and-yes-its-as-much-fun-as-it-sounds/">Powershell</a></li>
+<li>Using <a href="https://docs.microsoft.com/en-us/troubleshoot/windows-server/networking/portqry-command-line-port-scanner-v2#step-2-specialized-tests">PortQry Interactive</a></li>
 </ul>
 </li>
 </ul>
 </li>
-<li>Procedure-based
+<li>For User Interfaces (UIs)
 <ul>
-<li>RPC
+<li>Using <a href="https://robotframework.org/">Robot Framework</a></li>
+<li>Using <a href="https://github.com/SeleniumHQ/selenium">Selenium variants [Cucumber, etc.]</a></li>
+<li>Using <a href="https://www.cypress.io/">Cypress</a></li>
+<li>Using <a href="https://github.com/microsoft/playwright">Playwright</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li>For Performance testing
 <ul>
-<li>Using Shell/Powershell</li>
-<li>Using PortQry</li>
+<li>Using <a href="https://jmeter.apache.org/">JMeter</a></li>
+<li>Using <a href="https://robotframework.org/">Robot Framework</a></li>
+<li>Using <a href="https://cucumber.io/tools/cucumber-open/">Cucumber Open</a></li>
+<li>Using <a href="https://netflix.github.io/chaosmonkey/">Chaos Monkey</a></li>
 </ul>
 </li>
-</ul>
-</li>
-</ul>
-</li>
-<li>Web Interfaces (browsers)
+<li>For Mobile
 <ul>
-<li>Using Cypress</li>
-<li>Using Playwright</li>
-<li>Using Robot Framework</li>
-<li>Using Selenium + Add-on
+<li>Using all platforms
 <ul>
-<li>Cucumber* (Java + others) / Behave (Python) / Specflow (C#)</li>
-<li>Watir (Ruby)</li>
-<li>Home Grown</li>
+<li>Using <a href="https://appium.io/">Appium</a></li>
 </ul>
 </li>
-</ul>
-</li>
-</ul>
-</li>
-<li>For Backend (Load testing?)
+<li>Using Android
 <ul>
-<li>Using Chaos Monkey</li>
-<li>Using Robot Framework</li>
-<li>Using Cucumber Open</li>
-<li>For Mobile</li>
+<li>Using <a href="http://selendroid.io/">Selenium/Selendroid</a></li>
+<li>Using <a href="https://developer.android.com/training/testing/espresso">Espresso</a></li>
+</ul>
+</li>
+<li>Using iOS
+<ul>
+<li>Using <a href="http://ios-driver.github.io/ios-driver/">Selenium/ios-driver</a></li>
+<li>Using <a href="https://developer.apple.com/documentation/xctest">XCTest</a></li>
+</ul>
+</li>
 </ul>
 </li>
 <li>For Reporting
 <ul>
-<li>Using TestRail</li>
-<li>Using Serenity</li>
+<li>For unified analyses (dynamic and static)
+<ul>
+<li>Using <a href="https://www.sonarqube.org/">SonarQube</a></li>
+<li>Using <a href="https://nasa.github.io/scrub/usage.html#supported-cots-tools-and-languages">Scrub/Unified</a></li>
+</ul>
+</li>
+<li>For status reporting
+<ul>
+<li>Using <a href="https://www.gurock.com/testrail/">Testrail API reporting</a></li>
+<li>Using <a href="https://www.jenkins.io/">Jenkins</a> with <a href="https://plugins.jenkins.io/code-coverage-api/">Code Coverage API Plugin</a></li>
+<li>Using <a href="https://travis-ci.org/">Travis CI</a> with <a href="https://docs.travis-ci.com/user/code-climate/">Code Climate</a> or <a href="https://about.codecov.io/tool/travis-ci/">Codecov</a></li>
+</ul>
+</li>
+<li>For real-time validation and stability
+<ul>
+<li>Using <a href="https://www.jenkins.io/">Jenkins</a></li>
+<li>Using <a href="https://github.com/features/actions">GitHub Actions</a></li>
+<li>Using <a href="https://docs.docker.com/get-started/">Docker Container</a></li>
+</ul>
+</li>
 </ul>
 </li>
 </ul>
