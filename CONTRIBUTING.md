@@ -318,7 +318,6 @@ stateDiagram-v2
         [*] --> ts_1
         ts_1 --> ts_2
         ts_2 --> ts_3
-        ts_2 --> ts_4
         ts_2 --> ra_1
         ts_3 --> [*]
     }
