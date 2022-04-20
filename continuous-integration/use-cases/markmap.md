@@ -20,8 +20,8 @@
             * Using (any) [Testrail Connector](https://github.jpl.nasa.gov/MIPL/testrail-connector)
     * For Compilation
         * For build integration and reporting
-            * [Jenkins](https://www.jenkins.io/) [&#x1F3C1; STARTER KIT(TBD)](../starter-kits/#jenkins-project-setup-and-configuration)
-            * [TravisCI](https://travis-ci.org/)
+            * Using [Jenkins](https://www.jenkins.io/) [&#x1F3C1; STARTER KIT(TBD)](../starter-kits/#jenkins-project-setup-and-configuration)
+            * Using [TravisCI](https://travis-ci.org/)
         * For dependency management and packaging
             * Using (Java) [Maven](https://maven.apache.org/) [&#x1F3C1; STARTER KIT(TBD)](../starter-kits/#jenkins-project-setup-and-configuration)
             * Using (Python) [SetupTools](https://github.com/pypa/setuptools)/[Pip](https://pip.pypa.io/en/stable/)

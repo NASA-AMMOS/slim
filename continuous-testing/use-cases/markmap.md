@@ -107,8 +107,8 @@
             * Using [Scrub/Unified](https://nasa.github.io/scrub/usage.html#supported-cots-tools-and-languages)
         * For status reporting
             * Using [Testrail API reporting](https://www.gurock.com/testrail/)
-            * Using [Jenkins](https://www.jenkins.io/) using [Code Coverage API Plugin](https://plugins.jenkins.io/code-coverage-api/)
-            * Using [Travis CI](https://travis-ci.org/) using [Code Climate](https://docs.travis-ci.com/user/code-climate/) or [Codecov](https://about.codecov.io/tool/travis-ci/)
+            * Using [Jenkins](https://www.jenkins.io/) with [Code Coverage API Plugin](https://plugins.jenkins.io/code-coverage-api/)
+            * Using [Travis CI](https://travis-ci.org/) with [Code Climate](https://docs.travis-ci.com/user/code-climate/) or [Codecov](https://about.codecov.io/tool/travis-ci/)
         * For real-time validation and stability
             * Using [Jenkins](https://www.jenkins.io/)
             * Using [GitHub Actions](https://github.com/features/actions)
