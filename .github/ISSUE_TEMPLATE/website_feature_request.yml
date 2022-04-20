@@ -1,6 +1,6 @@
-name: New Feature Form
-description: Suggest a new feature for us to implement
-title: "[New Feature]: "
+name: New Website Feature Form
+description: Suggest a new feature for us to implement to support SLIM's website 
+title: "[New Website Feature]: "
 labels: "enhancement"
 body:
   - type: markdown
