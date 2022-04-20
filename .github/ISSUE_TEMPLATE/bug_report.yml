@@ -25,8 +25,8 @@ body:
       description: Does the bug have to do with the SLIM website or a best practice guide?
       multiple: false
       options:
-        - "SLIM Website"
-        - "A Best Practice Guide"
+        - "Website"
+        - "Best Practice Guide"
     validations:
       required: yes
   - type: textarea
