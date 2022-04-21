@@ -3,10 +3,16 @@ output: .retype
 url: https://nasa-ammos.github.io/slim/
 branding:
   title: SLIM
-  label: Docs
+  label: Website
 links:
   - text: Find us on GitHub
     link: https://github.com/nasa-ammos/slim
+  - text: Our Best Practice Guides
+    link: nasa-ammos.github.io/slim#best-practice-guides
+  - text: Get Involved
+    link: nasa-ammos.github.io/slim#get-involved
+  - text: Discussion Forum
+    link: https://github.com/NASA-AMMOS/slim/discussions
 footer:
   copyright: "&copy; Copyright {{ year }}. All rights reserved."
 include:
