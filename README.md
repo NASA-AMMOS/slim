@@ -2,7 +2,7 @@
 
 > _A shared resource for discussing, iterating and referencing best practices in software lifecycle process improvements for multi-mission space and ground software_
 
-[📖 View our Infographic (PDF)]()
+[📖 View our Infographic (PDF)](https://github.com/NASA-AMMOS/slim/files/8532849/SLIM-Infographic.pdf)
 
 Software Lifecycle Improvement & Modernization (SLIM) is a project focused on collecting, developing, and disseminating best practices and process improvement strategies in NASA multi-mission software development lifecycle ecosystems. SLIM represents both a community of contributors as well as a continually evolving repository for best practices documentation.
 
@@ -10,7 +10,7 @@ Software Lifecycle Improvement & Modernization (SLIM) is a project focused on co
 
 There are three key areas within the software development lifecycle improvement space that SLIM focuses on providing best practice guidance for:
 
-![SLIM-scope](https://user-images.githubusercontent.com/3129134/164385277-618c3111-ee0d-4045-ba97-f59cae128556.png)
+![SLIM-scope](https://user-images.githubusercontent.com/3129134/164510892-e95d6091-2038-43d5-9d4d-4880bd0b068f.png)
 
 ## Process
 
