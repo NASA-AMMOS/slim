@@ -7,10 +7,6 @@ branding:
 links:
   - text: Find us on GitHub
     link: https://github.com/nasa-ammos/slim
-  - text: Our Best Practice Guides
-    link: nasa-ammos.github.io/slim#best-practice-guides
-  - text: Get Involved
-    link: nasa-ammos.github.io/slim#get-involved
   - text: Discussion Forum
     link: https://github.com/NASA-AMMOS/slim/discussions
 footer:
