@@ -12,11 +12,19 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 - Documentation
   - Use cases diagram
   - Starter Kits
-    - Starter kit for `CHANGELOG.md` (template)
-    - Starter kit for `CONTRIBUTING.md` (template)
-    - ...
+    - `CHANGELOG.md` (template)
+    - `CONTRIBUTING.md` (template)
+    - `README.md` (template)
+    - Bug and New Feature Issue tickets (templates)
+    - `CODE_OF_CONDUCT.md` (template)
+    - `PULL_REQUEST_TEMPLATE.md` (template)
   - Trade-study for documenation hosts
 - Continuous Testing
   - Use cases diagram
+  - Starter Kits
+    - Patch integrity GitHub Action validating Developer Certificate of Origin (DCO)
+    - Patch integrity GitHub Action ensuring Git secrets are not committed
 - Continuous Integration
   - Use cases diagram
+- Website
+  - Rendering into HTML using RETYPE library
