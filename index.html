@@ -16,21 +16,22 @@
     <meta property="og:url" content="https://nasa-ammos.github.io/slim/">
     <meta property="og:title" content="SLIM">
     <meta property="og:description" content="A shared resource for discussing, iterating and referencing best practices in software lifecycle process improvements for multi-mission space and...">
+    <meta property="og:image" content="https://user-images.githubusercontent.com/3129134/164385277-618c3111-ee0d-4045-ba97-f59cae128556.png">
 
     <!-- Twitter -->
     <meta property="twitter:card" content="summary_large_image">
     <meta property="twitter:url" content="https://nasa-ammos.github.io/slim/">
     <meta property="twitter:title" content="SLIM">
     <meta property="twitter:description" content="A shared resource for discussing, iterating and referencing best practices in software lifecycle process improvements for multi-mission space and...">
+    <meta property="twitter:image" content="https://user-images.githubusercontent.com/3129134/164385277-618c3111-ee0d-4045-ba97-f59cae128556.png">
     
     <script>(function () { var el = document.documentElement, m = localStorage.getItem("/slim/doc_theme"), wm = window.matchMedia; if (m === "dark" || (!m && wm && wm("(prefers-color-scheme: dark)").matches)) { el.classList.add("dark") } else { el.classList.remove("dark") } })();</script>
 
-    <link href="/slim/resources/css/retype.css?v=1.11.2.703814056217" rel="stylesheet" data-turbo-track="reload" />
+    <link href="/slim/resources/css/retype.css?v=1.11.2.703874792163" rel="stylesheet" data-turbo-track="reload" />
 
-    <script type="text/javascript" src="/slim/resources/js/config.js?v=1.11.2.703814056217" defer data-turbo-track="reload"></script>
+    <script type="text/javascript" src="/slim/resources/js/config.js?v=1.11.2.703874792163" defer data-turbo-track="reload"></script>
     <script type="text/javascript" src="/slim/resources/js/retype.js?v=1.11.2" defer data-turbo-track="reload"></script>
-    <script id="lunr-js" type="text/javascript" src="/slim/resources/js/lunr.js?v=1.11.2.703814056217" defer></script>
-    <script id="mermaid-js" type="text/javascript" src="/slim/resources/js/mermaid.js?v=1.11.2" defer></script>
+    <script id="lunr-js" type="text/javascript" src="/slim/resources/js/lunr.js?v=1.11.2.703874792163" defer></script>
 </head>
     <body>
         <div id="docs-app" class="relative text-base antialiased text-gray-700 bg-white font-body dark:bg-dark-850 dark:text-dark-300">
@@ -187,7 +188,8 @@
 <blockquote>
 <p><em>A shared resource for discussing, iterating and referencing best practices in software lifecycle process improvements for multi-mission space and ground software</em></p>
 </blockquote>
-<p>Software Lifecycle Improvement &amp; Modernization (SLIM) is a project focused on collecting, developing, and disseminating best practices and process improvement strategies in the NASA multi-mission software development lifecycle ecosystems. SLIM represents both a community of contributors as well as a continually evolving repository for best practices documentation.</p>
+<p><a href=""><span class="docs-emoji">&#x1F4D6;</span> View our Infographic (PDF)</a></p>
+<p>Software Lifecycle Improvement &amp; Modernization (SLIM) is a project focused on collecting, developing, and disseminating best practices and process improvement strategies in NASA multi-mission software development lifecycle ecosystems. SLIM represents both a community of contributors as well as a continually evolving repository for best practices documentation.</p>
 <doc-anchor-target id="scope">
     <h2>
         <doc-anchor-trigger class="header-anchor-trigger" to="#scope">#</doc-anchor-trigger>
@@ -195,36 +197,30 @@
     </h2>
 </doc-anchor-target>
 <p>There are three key areas within the software development lifecycle improvement space that SLIM focuses on providing best practice guidance for:</p>
-<ul>
-<li>Software Lifecycle Pipelines
-<ul>
-<li>Continuous integration (CI), continuous deployment (CD), continuous testing (CT) etc.</li>
-<li>Ex: best practice architectures and starting kits for automated code coverage tests</li>
-</ul>
-</li>
-<li>Information Sharing
-<ul>
-<li>Documentation design, on-boarding, training, etc.</li>
-<li>Ex: consistent documentation templates for on-boarding new team members</li>
-<li>Ex: best practices in documentation hosting architectures and tools</li>
-</ul>
-</li>
-<li>Governance
-<ul>
-<li>Roles &amp; responsibilities organization, etc.</li>
-<li>Ex: best processes for triaging feature requests among team members</li>
-</ul>
-</li>
-</ul>
-<p>More details TBD.</p>
+<p><figure class="content-center">
+    <img src="https://user-images.githubusercontent.com/3129134/164385277-618c3111-ee0d-4045-ba97-f59cae128556.png" alt="SLIM-scope" />
+    <figcaption class="caption">SLIM-scope</figcaption>
+</figure>
+</p>
 <doc-anchor-target id="process">
     <h2>
         <doc-anchor-trigger class="header-anchor-trigger" to="#process">#</doc-anchor-trigger>
         <span>Process</span>
     </h2>
 </doc-anchor-target>
-<p>Every financial fiscal quarter, SLIM convenes community members to solicit input on outstanding process improvement needs, including the respective needs&#x27; relative ranking in importance / criticality. A few needs are chosen to focus active contributor time upon - seeking to develop best practice documentation and starter kits for.</p>
-<p>More information on currently active needs being solicited from community members is available here: TBD</p>
+<p>We reach out to community member projects, and solicit input on outstanding process improvement needs, including the respective needs&#x27; relative ranking in importance / criticality. A few needs are chosen to focus active contributor time upon - seeking to develop best practice guides, including items such as use case lists, trade-studies, reference architectures and starter kits.</p>
+<p><figure class="content-center">
+    <img src="https://user-images.githubusercontent.com/3129134/164385744-3ba6c442-e4a8-41df-9f64-44b8faa9562a.png" alt="SLIM-community-process" />
+    <figcaption class="caption">SLIM-community-process</figcaption>
+</figure>
+</p>
+<p>Once prioritized needs are identified, contributors go through a series of steps to create best practice guides for the community.</p>
+<p><figure class="content-center">
+    <img src="https://user-images.githubusercontent.com/3129134/164385960-911bff81-9218-4ba3-bcee-b60284a8b05c.png" alt="SLIM-dev-process" />
+    <figcaption class="caption">SLIM-dev-process</figcaption>
+</figure>
+</p>
+<p>More information on our development process for best practice guides can be found in our <a href="contributing/#contributing-a-best-practice-guide">Contributing Guide</a>.</p>
 <doc-anchor-target id="best-practice-guides">
     <h2>
         <doc-anchor-trigger class="header-anchor-trigger" to="#best-practice-guides">#</doc-anchor-trigger>
@@ -233,171 +229,77 @@
 </doc-anchor-target>
 <p>The following sections link to best practices resources developed by SLIM for process improvement needs solicited by the wider SLIM community.</p>
 <p>The list is sorted alphabetically and is continually being added to.</p>
+<doc-anchor-target id="continuous-integration">
+    <h3>
+        <doc-anchor-trigger class="header-anchor-trigger" to="#continuous-integration">#</doc-anchor-trigger>
+        <span>Continuous Integration</span>
+    </h3>
+</doc-anchor-target>
+<p>Our continuous integration best practice guide focuses on techniques to support software build integration, the publishing of build results and the releasing software assets.</p>
+<p><a href="continuous-integration/"><span class="docs-emoji">&#x1F4D6;</span> Read the Guide</a></p>
 <doc-anchor-target id="continuous-testing">
     <h3>
         <doc-anchor-trigger class="header-anchor-trigger" to="#continuous-testing">#</doc-anchor-trigger>
         <span>Continuous Testing</span>
     </h3>
 </doc-anchor-target>
-<p>See <a href="continuous-testing/">here</a> for more details.</p>
+<p>Our continuous testing best practice guide focuses on exploring scenarios for automatically invoking unit, regression and integration tests, as well as the eco-system of tools and best practices to support creating the tests.</p>
+<p><a href="continuous-testing/"><span class="docs-emoji">&#x1F4D6;</span> Read the Guide</a></p>
 <doc-anchor-target id="documentation">
     <h3>
         <doc-anchor-trigger class="header-anchor-trigger" to="#documentation">#</doc-anchor-trigger>
         <span>Documentation</span>
     </h3>
 </doc-anchor-target>
-<p>Best practice documentation solutions for:</p>
-<ul>
-<li>Choice of documentation building, hosting, editing for user / devevelopment / administrative guides &amp; specifications, including API references, forum discussions, etc.
-<ul>
-<li>Ex. GH Pages, ReadTheDocs, GitBook, Wikis etc.</li>
-</ul>
-</li>
-<li>Reference architecture for templating &amp; auto-generation of documentation artifacts</li>
-<li>Instantiation of documentation hosts and examples</li>
-</ul>
-<p>See <a href="documentation/">here</a> for more details.</p>
-<doc-anchor-target id="contributions">
+<p>Our documentation best practice guide focuses on solutions for building, editing, leveraging templates for, hosting, and maintaining documentation for your projects.</p>
+<p><a href="documentation/"><span class="docs-emoji">&#x1F4D6;</span> Read the Guide</a></p>
+<doc-anchor-target id="get-involved">
     <h2>
-        <doc-anchor-trigger class="header-anchor-trigger" to="#contributions">#</doc-anchor-trigger>
-        <span>Contributions</span>
+        <doc-anchor-trigger class="header-anchor-trigger" to="#get-involved">#</doc-anchor-trigger>
+        <span>Get Involved</span>
     </h2>
 </doc-anchor-target>
-<p>Interested in getting involved with SLIM? The best way to get involved is to become a contributor. Below we talk about some of the types of contributions we welcome.</p>
-<doc-anchor-target id="contributing-a-best-practice-guide">
+<p>SLIM best practice guides and recommendations are open source, which means you have the freedom to use our work (in accordance with our <a href="license">LICENSE</a>) as well as contribute and help shape our future work. We&#x27;re excited to welcome new contributors and users.</p>
+<p>Some ways you can get involved with SLIM:</p>
+<doc-anchor-target id="use-our-guides">
+    <h3>
+        <doc-anchor-trigger class="header-anchor-trigger" to="#use-our-guides">#</doc-anchor-trigger>
+        <span>Use Our Guides</span>
+    </h3>
+</doc-anchor-target>
+<p>The fastest way to start using SLIM process improvement solutions is to take a look at our best practice guides, specifically our <em>starter kits</em>. Starter kits provide plug-and-play solutions to process improvement needs. To complement our starter kits, take a look at <em>use cases</em> to understand the context of the starter kit solutions, <em>trade studies</em> to understand tool / solution trade-offs, and <em>reference architectures</em> to understand how tool / solutions interact in an actual working environment.</p>
+<p>We recommend creating pull-requests using our starter kits against your own repositories. Reach out to our <a href="contributing/#communication-channels">contributor communication channels</a> for questions if you&#x27;re unsure how to create pull requests. An excellent tool to automate the infusion of starter kits in your repositories (especially if you have many) is to use a tool like <a href="https://github.com/lindell/multi-gitter">multi-gitter</a> if you&#x27;re using Git to create pull-requests.</p>
+<doc-anchor-target id="contribute-to-our-guides">
+    <h3>
+        <doc-anchor-trigger class="header-anchor-trigger" to="#contribute-to-our-guides">#</doc-anchor-trigger>
+        <span>Contribute to Our Guides</span>
+    </h3>
+</doc-anchor-target>
+<p>We&#x27;re excited to see your contribution! Please see our <a href="contributing/">Contributing Guide</a> on details for how to contribute. We accept many non-code contributions as well, so feel free to think creatively.</p>
+<doc-anchor-target id="spread-the-word">
+    <h3>
+        <doc-anchor-trigger class="header-anchor-trigger" to="#spread-the-word">#</doc-anchor-trigger>
+        <span>Spread the Word</span>
+    </h3>
+</doc-anchor-target>
+<p>The more people &amp; projects using, contributing, and maintaining SLIM, the more robust and long-term this effort will last.</p>
+<p>You can help by:</p>
+<doc-anchor-target id="socializing-on-github">
     <h4>
-        <doc-anchor-trigger class="header-anchor-trigger" to="#contributing-a-best-practice-guide">#</doc-anchor-trigger>
-        <span>Contributing A Best Practice Guide</span>
+        <doc-anchor-trigger class="header-anchor-trigger" to="#socializing-on-github">#</doc-anchor-trigger>
+        <span>Socializing on GitHub</span>
     </h4>
 </doc-anchor-target>
-<p>Researching, sharing, and disseminating best practices is the bread-and-butter of the SLIM effort. We welcome folks who wish to (1) help provide best practice solutions for active / open needs (link TBD) as well as those who&#x27;d like to contribute best practice solutions for new needs that you may alraedy have great solutions for. Additionally, we welcome (2) iterative improvements for existing best practice solutions already shared on the SLIM repository.</p>
-<p>Let&#x27;s explore each of these sub categories for contributing best practices:</p>
-<doc-anchor-target id="for-creating-a-new-best-practice-guide">
-    <h5>
-        <doc-anchor-trigger class="header-anchor-trigger" to="#for-creating-a-new-best-practice-guide">#</doc-anchor-trigger>
-        <span>For Creating a New Best Practice Guide</span>
-    </h5>
+<p><a href="https://github.com/nasa-ammos/slim"><span class="docs-emoji">&#x2B50;</span> Star our Repo</a></p>
+<p><a href="https://github.com/nasa-ammos/slim"><span class="docs-emoji">&#x1F440;</span> Watch our Repo</a></p>
+<p><a href="https://github.com/nasa-ammos/slim"><span class="docs-emoji">&#x1F600;</span> Discuss our Repo</a></p>
+<doc-anchor-target id="website">
+    <h4>
+        <doc-anchor-trigger class="header-anchor-trigger" to="#website">#</doc-anchor-trigger>
+        <span>Website</span>
+    </h4>
 </doc-anchor-target>
-<p>The following is a checklist before you start work on developing new, best practice guide:</p>
-<ol>
-<li>Check if there are Issue Ticket(s) documenting a need for a best practice solution, feel free to create a ticket if none exist for your contribution</li>
-<li>Check the Forum for any conversations regarding the best practice need(s) to ensure you have any needed context. Feel free to reach out and ask the community for feedback if you have ideas you&#x27;d like to discuss</li>
-<li>Fork the SLIM repository into your own GitHub account so that you can work independently and eventually propose a pull request back to the SLIM project</li>
-<li>Run the GitHub Actions Workflow for generating a Best Practices directory tree for you to work within (DIRECTIONS TBD)</li>
-</ol>
-<p>Once you have a tangible issue you&#x27;re going to work against, you can begin the process to contribute your best practice. The process is not strictly about code development or documentation, rather, it is a multi-step process to ensure your best practice solution is going to meet a tangible community need. We want to help make sure your best practice solution is not only incorporated into SLIM, but actively used! Note, we recommend engaging with the SLIM community throughout the process, but if you&#x27;ve already created some best practice solutions you just want to document, then you can skip some of the community soliciting steps below and get feedback directly as you&#x27;re developing your documentation. The following flowchart provides guidance on the best recommended process for developing and sharing a best practice solution.</p>
-<doc-anchor-target id="recommended-process-for-contributing-a-best-practice-solution-to-slim">
-    <h6>
-        <doc-anchor-trigger class="header-anchor-trigger" to="#recommended-process-for-contributing-a-best-practice-solution-to-slim">#</doc-anchor-trigger>
-        <span>Recommended Process for Contributing a Best Practice Solution to SLIM</span>
-    </h6>
-</doc-anchor-target>
-<div class="overflow-hidden mb-6 py-4 dark:px-5 dark:bg-white rounded-md"><pre class="mermaid w-full">journey
-    title Process
-    section USE CASES
-      Research: 3: Contributor
-      Mind Maps: 3: Contributor
-      Feedback: 5: Contributor, Community
-    section REFERENCE ARCHITECTURES
-      Diagramming: 3: Contributor
-      Feedback: 5: Contributor, Community
-    section TRADE STUDIES
-      Diagramming: 3: Contributor
-      Feedback: 5: Contributor, Community
-     section STARTER KITS
-      Ideate: 5: Contributor, Community
-      Create: 3: Contributor
-      Infusion: 5: Contributor, Community</pre></div>
-<doc-anchor-target id="understanding-the-recommended-process">
-    <h6>
-        <doc-anchor-trigger class="header-anchor-trigger" to="#understanding-the-recommended-process">#</doc-anchor-trigger>
-        <span>Understanding the Recommended Process</span>
-    </h6>
-</doc-anchor-target>
-<p>To help you understand the recommended process diagrammed above, this section explains each component of the diagram:</p>
-<ul>
-<li><code v-pre>USE CASES</code> - the first phase of work, focused on researching, documenting, and getting feedback on relevant use cases for a given process improvement need
-<ul>
-<li><code v-pre>Research</code> - search the internet, read books, articles, and talk to folks to understand <em>which</em> scenarios and use cases may apply to the process improvement need. For example, if the need is something like <em>&quot;Living documentation best practices for development lifecycle artifacts&quot;</em> then some use cases could involve things like <code v-pre>Automated PyDoc documentation generation from code</code>, <code v-pre>User guide generation from static GitHub flavored Markdown</code>. Basically, consult the community and literature to get specific on the pressing use case scenarios for this need, and identify tools that may help support or satisfy this need.</li>
-<li><code v-pre>Diagramming</code> - here you&#x27;ll want to <em>diagram</em> the research you&#x27;ve collected on scenario / use cases and tools in a format that SLIM community members can easily understand and comment on. The diagramming approach we&#x27;re recommending with use cases is to create a <em>mind-map</em>. See the <a href="https://en.wikipedia.org/wiki/Mind_map">Wikipedia article</a> on mind mapping for more information about the technique. To generate consistent mind map digrams, we&#x27;re suggesting you use a tool called <a href="https://github.com/gera2ld/markmap">MarkMap</a> both because it creates interactive mind-maps and because it support diagrams being version controlled and easily edited by multiple people. What you&#x27;ll want to do is to edit the <code v-pre>/use-cases/markmap.md</code> document in your local directory with use case and tool information you&#x27;ve researched. Add parent nodes for use cases and leaf nodes for tools within the markdown file. The use cases should come first, and be broken down into categories that logically model the tree of use cases you&#x27;ve collected. You can be as limited or as comprehensive as you like with the use cases, the key is to make sure the use cases are readable. A suggestion is to prefix the parent / child node relationships in this file with English-language perpositions (e.g. In, From, To) for the use case information and the keyword &quot;Using&quot; for the tool information. For example, a parent-child relationship within your markdown file to help share best practices for documentation hosting could be:
-<div class="codeblock-wrapper"><doc-codeblock>
-<pre class="language-none"><code v-pre class="language-none">* Documentation Best Practices
-    * For Hosting
-        * Of Source-Controlled (Static) Content
-            * With Markdown support
-                *   Using Jekyll / GitHub Pages</code></pre>
-</doc-codeblock></div>
-Once you&#x27;ve documented your use cases and tools within the respective <code v-pre>markmap.md</code> file, you&#x27;ll just need to add and commit your file to GitHub, where an automated GitHub Action (markmap) will auto-generate an equivalent <code v-pre>markmap.html</code> rendering of your markdown file and commit it to the same directory where you&#x27;ve stored the <code v-pre>markmap.md</code> file (inside the <code v-pre>use-cases</code> directory).</li>
-<li><code v-pre>Feedback</code> - this is the step to take a pause in your development, and reach out to the SLIM community to get feedback on:
-<ul>
-<li>The coverage of use cases in your mindmap rendering (e.g. are you missing critical use cases?)</li>
-<li>An assessment of <em>which</em> use case(s) are highest priority to the community. You&#x27;ll use this to help provide some focus on the scope of reference architectures you should document for your use cases</li>
-</ul>
-</li>
-</ul>
-</li>
-<li><code v-pre>REFERENCE ARCHITECTURES</code>
-<ul>
-<li><code v-pre>Diagramming</code> - in this step, you&#x27;ll want to review the feedback you&#x27;ve received from the SLIM community on your use case mindmaps, and select the highest priorty use cases to create an architectural reference diagram for. It&#x27;s a little bit of an art at this point, but you&#x27;ll want to keep the level of abstraction high enough that specific tool solutions can be interchanged but your diagram will still remain valid. The key idea here is to provide a reference architecture that&#x27;s largely tool-agnostic, and can be used by SLIM community members easily to understand how a best practice solution data or process flow may look like. The recommended diagramming tool here is to leverage the <a href="https://mermaid-js.github.io/mermaid/#/">Mermaid</a> markdown diagramming tool that has native GitHub integrations. This way, again, diagrams can be easily understood, version controlled, and edited by multiple people. We recommend you <a href="https://github.blog/2022-02-14-include-diagrams-markdown-files-mermaid/">this tutorial</a> to get started with this framework, and document your flow chart architecture diagram in <code v-pre>/reference-architectures/ref-archi-XYZ.md</code>. We also recommend you edit your mind-map markdown files to link to your reference architecture diagrams using hyperlinks. See Markmap <a href="https://markmap.js.org/repl">examples</a> for hyperlinking.</li>
-<li><code v-pre>Feedback</code> - now is again the time to reach out to the SLIM community and get feedback on your new diagram. Specifically, its a good idea to get request feedback on whether the diagram makes sense and has large coverage over the use cases you&#x27;re exploring, and also to gather feedback on the most important criteria for evaluating whether a given architecture (along with its tools of choice). You&#x27;ll use these criteria to help document trade studies between tools of interest in the next step.</li>
-</ul>
-</li>
-<li><code v-pre>TRADE STUDIES</code>
-<ul>
-<li><code v-pre>Diagramming</code> - in this step, you&#x27;ll want to do some research on important metric criteria by which to evaluate possible tools documented in your use case diagram and applicable to the architecture diagram you generated in previous steps. We recommend using markdown tables to create your trade studies, this way the documentation you write can be easily viewed, version controlled, and modified by multiple people. Add your diagrams to the <code v-pre>trade-studies/</code> folder within your best practices parent folder.</li>
-<li><code v-pre>Feedback</code> - again, it&#x27;s a good idea to reach out to the SLIM community and gain feedback on your latest diagram</li>
-</ul>
-</li>
-<li><code v-pre>STARTER KITS</code>
-<ul>
-<li><code v-pre>Feedback</code> - in this step, we ask you to reach out to the SLIM community for ideas and feedback on the most useful starter kits to create, reflecting use cases, architecture diagrams, and metric analyses that you&#x27;ve produced. Once you get feedback on a highly useful starter kit scenario, its time to start coding or configuring a sample starter kit</li>
-<li><code v-pre>Create</code> - here&#x27;s where you&#x27;ll want to spend some dedicated time to create a starter kit. A starter kit can be anything that helps SLIM community members initialize an instance of your architecture that uses tools you&#x27;ve evaluated and fulfills a use case you explored. For example, for our &quot;Documentation Hosting&quot; process improvement need, we may create a starter kit that takes the form of a GitHub Action Workflow automatically generating documentation sites from customized markdown static content on GitHub. It&#x27;s always a good idea to make your starter kit as generic as possible, including using environment variables to allow SLIM community members to customize the starter kit easily. Add your starter kit scripts or configuration to the <code v-pre>starter-kits/</code> folder within your best practices paretn folder.</li>
-<li><code v-pre>Infusion</code> - in this final step, it&#x27;s time to share your entire solution with the SLIM community and optionally aid community members with infusing your starter kit into their development workflow, or helping them understand any one of your diagrams produced. The best way to kickstart infusion is to propose a formal pull-request for your entire best practices folder (so that it can be incorporated in to the SLIM documentation site) and announce the development work you&#x27;ve down to the community.</li>
-</ul>
-</li>
-</ul>
-<doc-anchor-target id="for-adding-improvements-to-an-existing-best-practice-guide">
-    <h5>
-        <doc-anchor-trigger class="header-anchor-trigger" to="#for-adding-improvements-to-an-existing-best-practice-guide">#</doc-anchor-trigger>
-        <span>For Adding Improvements to an Existing Best Practice Guide</span>
-    </h5>
-</doc-anchor-target>
-<p>TBD</p>
-<doc-anchor-target id="version-control">
-    <h3>
-        <doc-anchor-trigger class="header-anchor-trigger" to="#version-control">#</doc-anchor-trigger>
-        <span>Version Control</span>
-    </h3>
-</doc-anchor-target>
-<p>TBD</p>
-<doc-anchor-target id="issue-tracking">
-    <h3>
-        <doc-anchor-trigger class="header-anchor-trigger" to="#issue-tracking">#</doc-anchor-trigger>
-        <span>Issue Tracking</span>
-    </h3>
-</doc-anchor-target>
-<p>TBD</p>
-<doc-anchor-target id="communication-resources">
-    <h3>
-        <doc-anchor-trigger class="header-anchor-trigger" to="#communication-resources">#</doc-anchor-trigger>
-        <span>Communication Resources</span>
-    </h3>
-</doc-anchor-target>
-<p>TBD</p>
-<doc-anchor-target id="contribution-guidelines">
-    <h3>
-        <doc-anchor-trigger class="header-anchor-trigger" to="#contribution-guidelines">#</doc-anchor-trigger>
-        <span>Contribution Guidelines</span>
-    </h3>
-</doc-anchor-target>
-<p>TBD</p>
-<doc-anchor-target id="faq">
-    <h2>
-        <doc-anchor-trigger class="header-anchor-trigger" to="#faq">#</doc-anchor-trigger>
-        <span>FAQ</span>
-    </h2>
-</doc-anchor-target>
-<p>TBD</p>
+<p>Share our website (<a href="https://nasa-ammos.github.io/slim">https://nasa-ammos.github.io/slim</a>) with your friends and colleagues</p>
 
 
 
@@ -471,6 +373,6 @@ Once you&#x27;ve documented your use cases and tools within the respective <code
 
         <div id="docs-overlay-target"></div>
 
-        <script>window.__DOCS__ = { "title": "SLIM", icon: "file", hasPrism: false, hasMermaid: true, hasMath: false }</script>
+        <script>window.__DOCS__ = { "title": "SLIM", icon: "file", hasPrism: false, hasMermaid: false, hasMath: false }</script>
     </body>
 </html>
