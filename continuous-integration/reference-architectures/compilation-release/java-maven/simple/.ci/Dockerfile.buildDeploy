@@ -1,0 +1,31 @@
+# docker image rm slim:mavenbuilddeploy ; docker build --build-arg UID=$(id -u) --build-arg GID=$(id -g) --network=host --tag "slim:mavenbuilddeploy" --force-rm --no-cache --file ".ci/Dockerfile.buildDeploy" .
+# docker run --rm -it -v ${PWD}:${PWD} -v ${HOME}/.m2:$PWD/.m2 -v ${HOME}/.m2:/home/jenkins/.m2 -w ${PWD} --user "${UID_GID}" slim:mavenbuilddeploy
+FROM 3.6.3-openjdk-8
+
+ARG DEBIAN_FRONTEND=noninteractive
+# mapping custom ids should take place here
+ARG GID=1003
+ARG UID=1003
+ARG USR=jenkins
+ARG WORKSPACE="/home/${USR}"
+
+ENV CONTAINERIZED="true"
+ENV HOME="${WORKSPACE}"
+ENV PATH="${PATH}:."
+
+# https://issues.jenkins-ci.org/browse/JENKINS-47026
+RUN { getent group ${GID} || groupadd -f -g ${GID} ${USR} ; } && \
+    { getent passwd ${UID} || useradd -u ${UID} -s /bin/sh -d ${HOME} -g ${GID} ${USR} ; }
+
+# includes jq, python and testrail reporter
+RUN mkdir -p ${HOME} && chmod 777 ${HOME} && \
+    apt-get update && \
+    apt-get install -y --no-install-recommends \
+#            build-essential \
+            jq \
+            python3-wheel \
+            python3-dev \
+            python3-setuptools \
+            python3-pip 
+
+ENTRYPOINT /bin/bash 

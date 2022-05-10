@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+
+    <modelVersion>4.0.0</modelVersion>
+
+    <name>AMMOS - IDS - SLIM - Sample Projects - Multimodule</name>
+    <description>Sample Projects -- Multimodule application</description>
+
+    <parent>
+        <groupId>gov.nasa.ammos.ids</groupId>
+        <artifactId>parent-ammos</artifactId>
+        <version>1.0.0</version>
+    </parent>
+
+    <groupId>gov.nasa.ammos.ids.sample_projects</groupId>
+    <artifactId>multimodule</artifactId>
+    <version>${revision}</version>
+    <packaging>pom</packaging>
+
+    <modules>
+        <module>multimodule-api</module>
+        <module>multimodule-core</module>
+    </modules>
+
+    <properties>
+        <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+        <!-- Tagging for CI -->
+        <semver>1.0.1</semver>
+        <revision>${semver}${buildnum}${sha1}${changelist}</revision>
+        <!-- BUILD PARMS -->
+        <!-- VERSIONING -->
+        <version.junit>4.13.2</version.junit>
+        <version.slf4j>1.7.28</version.slf4j>
+    </properties>
+
+    <scm>
+        <connection>scm:git:ssh://git@github.com/NASA-AMMOS/slim.git</connection>
+        <developerConnection>scm:git:ssh://git@github.com/NASA-AMMOS/slim.git</developerConnection>
+        <url>https://github.com/NASA-AMMOS/slim/tree/master</url>
+    </scm>
+
+    <build />
+
+    <dependencies>
+        <dependency>
+            <groupId>junit</groupId>
+            <artifactId>junit</artifactId>
+            <version>${version.junit}</version>
+        </dependency>
+        <dependency>
+            <groupId>org.slf4j</groupId>
+            <artifactId>slf4j-api</artifactId>
+            <version>${version.slf4j}</version>
+        </dependency>
+        <dependency>
+            <groupId>org.slf4j</groupId>
+            <artifactId>slf4j-simple</artifactId>
+            <version>${version.slf4j}</version>
+        </dependency>
+    </dependencies>
+
+</project>

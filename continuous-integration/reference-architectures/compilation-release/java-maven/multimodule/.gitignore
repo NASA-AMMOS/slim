@@ -1,0 +1,47 @@
+release/
+target/
+**/target/
+out/
+lib
+**/lib/
+pom.xml.tag
+pom.xml.releaseBackup
+pom.xml.versionsBackup
+pom.xml.next
+release.properties
+dependency-reduced-pom.xml
+**/.flattened-pom.xml
+.flattened-pom.xml
+buildNumber.properties
+.mvn/timing.properties
+.m2/
+
+# Avoid ignoring Maven wrapper jar file (.jar files are usually ignored)
+!/.mvn/wrapper/maven-wrapper.jar
+
+# Eclipse Files # 
+*.ucls
+.classpath
+.project
+.settings/
+.springBeans
+
+# General # 
+.*~
+*DS_Store
+nb-configuration.xml
+.idea/
+*.iml
+*.ipr
+*.iws
+.shelf
+
+# Universal build settings # 
+logs
+**/logs/
+*.log
+*.log*
+**/.tmp
+**/version
+**/src/main/resources/version
+
