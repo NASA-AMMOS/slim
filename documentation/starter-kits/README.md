@@ -133,7 +133,7 @@ GitHub issue forms are a method to provide a _form like_ experience when filling
 
 Starter Kits:
 - [Bug Report](https://github.com/nasa-ammos/slim/blob/main/documentation/starter-kits/ISSUE_TEMPLATES/github/bug_report.yml)
-- [New Feature](https://github.com/nasa-ammos/slim/blob/main/documentation/starter-kits/ISSUE_TEMPLATES/github/new_feature.yml)
+- [New Feature](https://github.com/nasa-ammos/slim/blob/main/documentation/starter-kits/ISSUE_TEMPLATES/github/feature_request.yml)
 
 
 To leverage these template, make sure to do the following:
