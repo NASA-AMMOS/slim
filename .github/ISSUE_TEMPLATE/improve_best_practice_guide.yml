@@ -23,7 +23,6 @@ body:
     attributes:
       label: Best Practice Guide
       description: Which best practice guide are you looking to improve?
-      placeholder: Tell us which guide
       multiple: false
       options:
         - "Continuous Integration"
