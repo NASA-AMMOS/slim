@@ -188,7 +188,7 @@ Here's some guidance on submitting a new feature issue:
 
 Security vulnerabilities should **not** be filed to the regular issue tracking system.
 
-Report your security vulnerabilities to (see contact links): https://github.com/riverma
+Report your security vulnerabilities to (see contact links): [INSERT SECURITY CONTACT LINK HERE]
 
 Please be sure to:
 * Indicate the severity of the vulnerability
