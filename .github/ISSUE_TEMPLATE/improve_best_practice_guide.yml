@@ -1,6 +1,6 @@
-name: Improve a Best Practice Guide
+name: Improve an Existing Best Practice Guide
 description: Suggest improvements to an existing best practice guide
-title: "[Improve Best Practice Guide]: "
+title: "[Improve Existing Best Practice Guide]: "
 labels: "enhancement"
 body:
   - type: markdown
