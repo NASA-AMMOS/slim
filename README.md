@@ -26,7 +26,12 @@ More information on our development process for best practice guides can be foun
 
 ## Community Members
 
-The following list of projects are currently involved in SLIM as either contributor projects, user projects, or both:
+What does it mean to be a community member of SLIM? The following ideas apply to member projects:
+- Has a representative (a point-of-contact) who interfaces with the SLIM effort
+- Active and timely feedback on SLIM issue ticket prioritization
+- Openness and willingness to infuse SLIM best practices 
+
+The following list of projects are currently SLIM member projects:
 
 <a href="https://github.com/nasa-ammos/" rel="NASA AMMOS">![NASA Ammos](https://avatars.githubusercontent.com/u/37851411?s=200&v=4)</a>
 
