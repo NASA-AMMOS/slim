@@ -1,0 +1,58 @@
+- Docs
+  - Intro
+  - User Docs
+    - Getting Started
+      - User Persona 1
+      - User Persona 2
+    - Components
+      - User Facing Component 1
+      - User Facing Component 2
+    - FAQ
+    - Getting Help
+  - Developer Docs
+    - Architecture
+    - Systems
+      - System 1
+        - Features
+        - Quick Start
+        - Docs
+          - User Guide
+            - ex. Setup
+            - ex. Running
+            - ex. Usage Examples
+          - Developer Guide
+            - ex. Requirements
+            - ex. Setup
+            - ex. Building
+            - ex. Running
+            - ex. Testing
+          - Admin Guide
+            - ex. Requirements
+            - ex. Installing
+            - ex. Configuring
+            - ex. Troubleshooting
+        - FAQ
+      - System 2
+        - Features
+        - Quick Start
+        - Docs
+          - User Guide
+            - ex. Setup
+            - ex. Running
+            - ex. Usage Examples
+          - Developer Guide
+            - ex. Requirements
+            - ex. Setup
+            - ex. Building
+            - ex. Running
+            - ex. Testing
+          - Admin Guide
+            - ex. Requirements
+            - ex. Installing
+            - ex. Configuring
+            - ex. Troubleshooting
+        - FAQ
+    - Getting Involved
+      - Prerequisites
+      - Development Process
+      - Ways to Contribute
