@@ -1,6 +1,6 @@
-name: Improve a Best Practice Guide
+name: Improve an Existing Best Practice Guide
 description: Suggest improvements to an existing best practice guide
-title: "[Improve Best Practice Guide]: "
+title: "[Improve Existing Best Practice Guide]: "
 labels: "enhancement"
 body:
   - type: markdown
@@ -18,24 +18,29 @@ body:
         - "No - I haven't checked"
     validations:
       required: yes
-  - type: input
+  - type: dropdown
     id: guide
     attributes:
       label: Best Practice Guide
       description: Which best practice guide are you looking to improve?
-      placeholder: Tell us which guide
+      multiple: false
+      options:
+        - "Continuous Integration"
+        - "Continuous Testing"
+        - "Documentation"
     validations:
       required: true
-  - type: checkboxes
+  - type: dropdown
     id: sections
     attributes:
       label: Best Practice Guide Sections
       description: Which sections within the best practice guide would you like to improve? Check all that apply.
+      multiple: true
       options:
-        - label: Use Cases
-        - label: Trade Studies
-        - label: Reference Architectures
-        - label: Starter Kits
+        - "Use Cases"
+        - "Trade Studies"
+        - "Reference Architectures"
+        - "Starter Kits"
   - type: textarea
     id: need
     attributes:
