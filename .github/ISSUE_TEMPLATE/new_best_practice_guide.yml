@@ -1,0 +1,29 @@
+name: New Best Practice Guide
+description: Suggest a new best practice guide for us to implement
+title: "[New Best Practice Guide]: "
+labels: "enhancement"
+body:
+  - type: markdown
+    attributes:
+      value: |
+        > _Thanks for filing a new best practice guide request. We appreciate your time and effort. Please answer a few questions._
+  - type: dropdown
+    id: checked-for-duplicates
+    attributes:
+      label: Checked for duplicates
+      description: Have you checked for duplicate issue tickets?
+      multiple: false
+      options:
+        - "Yes - I've already checked"
+        - "No - I haven't checked"
+    validations:
+      required: yes
+  - type: textarea
+    id: need
+    attributes:
+      label: Describe the needs
+      description: Best practice guides should be written to satisify one or more process improvement needs, please help us understand the need more fully and feel free to link to process improvement need tickets. 
+      placeholder: Tell us the needs
+      value: "We need a guide to satisfy the following process improvement needs: [issue-XYZ, ...]"
+    validations:
+      required: true

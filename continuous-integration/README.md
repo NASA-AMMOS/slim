@@ -1,10 +1,10 @@
-# Continuous Testing Guide
+# Continuous Integration Guide
 
-This this guide, we explore best practices for continuous testing - including exploring scenarios such as automated invocation of unit, regression and integration tests.
+This this guide, we explore best practices for continuous integration - including exploring scenarios for build integration, publishing test results and releasing compiled software.
 
 ## Use Cases
 
-In this section, we provide information about potentially useful *use cases* for continuous testing. The key idea is to provide some more nuanced context for the use cases such that technology (tool) solutions can be shared in context. 
+In this section, we provide information about potentially useful *use cases* for continuous integration. The key idea is to provide some more nuanced context for the use cases such that technology (tool) solutions can be shared in context. 
 
 [See list of use cases](use-cases/README.md)
 
@@ -16,7 +16,7 @@ Here we provide a table of trade offs, feature comparisons, and metrics for a gi
 
 ## Reference Architectures
 
-In this section, we provide reference architectures that map to select use case scenarios from the above section. The key idea is to provide an architecture / flowchart that simplifies the understanding of how a particular class of tools to satisfy a use case could be put together to help with continuous testing needs. 
+In this section, we provide reference architectures that map to select use case scenarios from the above section. The key idea is to provide an architecture / flowchart that simplifies the understanding of how a particular class of tools to satisfy a use case could be put together to help with continuous integration needs. 
 
 [See list of reference architectures](reference-architectures/README.md)
 

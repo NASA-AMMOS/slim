@@ -3,16 +3,18 @@ output: .retype
 url: https://nasa-ammos.github.io/slim/
 branding:
   title: SLIM
-  label: Docs
+  label: Website
 links:
   - text: Find us on GitHub
     link: https://github.com/nasa-ammos/slim
+  - text: Discussion Forum
+    link: https://github.com/NASA-AMMOS/slim/discussions
 footer:
   copyright: "&copy; Copyright {{ year }}. All rights reserved."
 include:
   - "**/*markmap.html"
 edit:
   repo: "https://github.com/nasa-ammos/slim"   # The URL where the source files for this project are located.
-  base: ""   # Otional base path to a directory within the above repo.
+  base: ""   # Optional base path to a directory within the above repo.
   branch: "main" # Point to a custom branch within the repo.
   label: "Edit this page" # A custom label for the generated link.

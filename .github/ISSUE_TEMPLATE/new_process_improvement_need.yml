@@ -1,0 +1,41 @@
+name: New Process Improvement Need
+description: Suggest a new process improvement need for us to investigate
+title: "[New Process Improvement Need]: "
+labels: "enhancement"
+body:
+  - type: markdown
+    attributes:
+      value: |
+        > _Thanks for filing a new process improvement need request. We appreciate your time and effort. Please answer a few questions._
+  - type: dropdown
+    id: checked-for-duplicates
+    attributes:
+      label: Checked for duplicates
+      description: Have you checked for duplicate issue tickets?
+      multiple: false
+      options:
+        - "Yes - I've already checked"
+        - "No - I haven't checked"
+    validations:
+      required: yes
+  - type: dropdown
+    id: category
+    attributes:
+      label: Category
+      description: Which category does the process improvement need fall under?
+      options:
+        - "Governance - people, personnel, organization, etc."
+        - "Software Lifecycle - the creation, change, and release of software"
+        - "Information Sharing - documentation design, templates, communication, etc."
+        - "Security - application, network, hardware, etc. security topics"
+    validations:
+      required: no
+  - type: textarea
+    id: need
+    attributes:
+      label: Describe the need
+      description: Please help us understand the process improvement need more fully. 
+      placeholder: Tell us the need
+      value: "We have a need for [...], for example the following use cases [...]"
+    validations:
+      required: true
