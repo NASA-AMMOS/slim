@@ -4,9 +4,6 @@ This page contains starter kit information, which represent templates, code and 
 you get started quickly with continuous integration best practices described in this overall guide. 
 Please see categories and links below for details. 
 
-## Automated Dependency Updates
-
-
 ## Continuous Integration with Compile, Release and Publish
 **Technologies:** Build integration using [Maven](https://maven.apache.org/), 
 [Github](https://github.com/), [Docker](https://www.docker.com/), [Jenkins](https://www.jenkins.io/) 
@@ -70,7 +67,6 @@ when connecting to one of several public (or privately hosted) CI build servers.
 of [general architecture](https://nasa-ammos.github.io/slim/continuous-integration/reference-architectures/).
 
 ### Maven `simple` project
-
 Starter Kit:
 - [Maven Simple Project Root](https://github.com/nasa-ammos/slim/blob/main/continuous-integration/starter-kits/compile-release-publish/java-maven/simple/)
 
@@ -119,7 +115,6 @@ using the values defined in (i). **See below list of example values.**
 configured to point at the Jenkinsfile at `.ci/Jenkinsfile-buildDeploy`
 8. Test and debug using [Jenkins build logging](https://opensource.com/article/19/9/intro-building-cicd-pipelines-jenkins) 
 that reports build progress. **Note: Click the build numbeer to view build logs.**
-
  
 ### Maven `multimodule` project
 Note that this differs from the `simple` project by introducing ordered, modular builds, so 
@@ -178,7 +173,6 @@ configured to point at the Jenkinsfile at `.ci/Jenkinsfile-buildDeploy`
 8. Test and debug using [Jenkins build logging](https://opensource.com/article/19/9/intro-building-cicd-pipelines-jenkins) 
 that reports build progress. **Note: Click the build numbeer to view build logs.**
 
-
 ## Patch Integrity
 
 This section contains links to sample actions, templates, and configuration for ensuring the basic integrity of patches.
@@ -221,7 +215,4 @@ To leverage this template, make sure to do the following:
 3. Register a [secrets/credentials provider](https://github.com/awslabs/git-secrets#id20) that helps the tool find specific types of credential patterns, e.g. AWS via `git secrets --register-aws` 
 4. Automation should be set up to scan for new commits, but it's a good idea to scan the history of commits starting out: `git secrets --scan-history`
    1. If you receive no output, that means the tool found now problematic commits.
-
-
-## Publishing a Python Project to PyPi
 
