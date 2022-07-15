@@ -76,6 +76,9 @@ The fastest way to start using SLIM process improvement solutions is to take a l
 
 We recommend creating pull-requests using our starter kits against your own repositories. Reach out to our [contributor communication channels](CONTRIBUTING.md#communication-channels) for questions if you're unsure how to create pull requests. An excellent tool to automate the infusion of starter kits in your repositories (especially if you have many) is to use a tool like [multi-gitter](https://github.com/lindell/multi-gitter) if you're using Git to create pull-requests. 
 
+Finally, if you use any of our guides - please consider adding the following badge to your `README.md`: 
+[![SLIM](https://img.shields.io/badge/Best%20Practices%20from-SLIM-blue)]([code_of_conduct.md](https://nasa-ammos.github.io/slim/))
+
 ### Contribute to Our Guides
 
 We're excited to see your contribution! Please see our [Contributing Guide](CONTRIBUTING.md) on details for how to contribute. We accept many non-code contributions as well, so feel free to think creatively. 
