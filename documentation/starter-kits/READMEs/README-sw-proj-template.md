@@ -17,7 +17,7 @@
 
 <!-- Header block for project -->
 
-[INSERT YOUR BADGES HERE (SEE: https://shields.io)]
+[INSERT YOUR BADGES HERE (SEE: https://shields.io)] [![SLIM](https://img.shields.io/badge/Best%20Practices%20from-SLIM-blue)](https://nasa-ammos.github.io/slim/)
 <!-- ☝️ Add badges via: https://shields.io e.g. ![](https://img.shields.io/github/your_chosen_action/your_org/your_repo) ☝️ -->
 
 [INSERT SCREENSHOT OF YOUR SOFTWARE, IF APPLICABLE]
