@@ -114,7 +114,7 @@ using the values defined in (i). **See below list of example values.**
 7. Create a [Jenkins Multibranch Pipeline Job](https://www.cloudbees.com/blog/jenkins-multibranch-pipeline-with-git-tutorial) 
 configured to point at the Jenkinsfile at `.ci/Jenkinsfile-buildDeploy`
 8. Test and debug using [Jenkins build logging](https://opensource.com/article/19/9/intro-building-cicd-pipelines-jenkins) 
-that reports build progress. **Note: Click the build numbeer to view build logs.**
+that reports build progress. **Note: Click the build number to view build logs.**
  
 ### Maven `multimodule` project
 Note that this differs from the `simple` project by introducing ordered, modular builds, so 
