@@ -110,7 +110,7 @@ using the values defined in (i). **See below list of example values.**
 /*-- [INSERT URL_TO_GITHUB_SERVER HERE] --*/
 /*-- [INSERT URL_TO_ORG HERE] --*/
 ```
-6. Commit changes to the Git repository for testing. 
+6. Commit and push changes to the Git repository for testing. 
 7. Create a [Jenkins Multibranch Pipeline Job](https://www.cloudbees.com/blog/jenkins-multibranch-pipeline-with-git-tutorial) 
 configured to point at the Jenkinsfile at `.ci/Jenkinsfile-buildDeploy`
 8. Test and debug using [Jenkins build logging](https://opensource.com/article/19/9/intro-building-cicd-pipelines-jenkins) 
