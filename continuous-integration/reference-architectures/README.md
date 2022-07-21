@@ -158,14 +158,14 @@ A more robust view of CI architecture describes the participants, both users and
 The CI process always starts with developers who commit code, and it finishes with reliable, 
 unchanging, versioned and packaged software delivered by an automated system.  
 ```mermaid
-graph TB
+flowchart TB
     D1([fa:fa-desktop Dev 1]) -->|commit| R[fa:fa-server Version Control Server]
     D2([fa:fa-desktop Dev 2]) -->|commit| R
     Dn([fa:fa-desktop Dev n]) -->|commit| R
     R -->|trigger| C[fa:fa-server CI Server]
     C-->|validate| R
     C-->|report| RS([fa:fa-server Reporting Service])
-    Q{Compile<br/>Test}
+    Q{"Compile<br/>& Test"}
     S((Success))
     F([Notify])
     style Q fill:#FFAC1C,stroke:#333,stroke-width:4px
@@ -179,9 +179,9 @@ graph TB
         U2[fa:fa-user User 2]
         Un[fa:fa-users Users n]
     end
-    AR---U1 & U2
-    AS-.-U2
-    RS-.-Un
+    AR<-->U1 & U2
+    AS<-.->U2
+    RS<-.->Un
     style Community fill:#ECFFDC,stroke:#333,stroke-width:2px
     style U1 fill:#F6F5F3,stroke:#333,stroke-width:1px
     style U2 fill:#F6F5F3,stroke:#333,stroke-width:1px
