@@ -1,0 +1,162 @@
+def emailByStatus(buildStatus) {
+
+    def status = 'interrupted. ...'
+
+    switch (buildStatus) {
+        case 'SUCCESS':
+            status = 'is now building SUCCESSFULLY!'
+            break
+
+        case 'UNSTABLE':
+            status = 'became UNSTABLE with the last build. ...'
+            break
+
+        case 'FAILURE':
+            status = 'is FAILING to build!'
+            break
+
+        case 'FAILURESECURITYSCAN':
+            status = 'FAILED to complete security scan!'
+            break
+    }
+
+    emailext (
+        subject: "Job '${env.JOB_NAME}' ${status}",
+        body: "See ${env.BUILD_URL} for more details",
+        recipientProviders: [
+            [$class: 'CulpritsRecipientProvider'],
+            [$class: 'DevelopersRecipientProvider'], 
+            [$class: 'RequesterRecipientProvider']
+        ]
+    )
+
+}
+
+def VAR_SHA1         = 'UNDEFINED'
+def VAR_BUILDNUM     = 'UNDEFINED'
+def VAR_CHANGELIST   = 'UNDEFINED'
+def VAR_VERSIONLONG  = 'UNDEFINED'
+
+pipeline {
+
+    agent {
+        dockerfile {
+            label 'cae-linux-build'
+            filename '.ci/Dockerfile.buildDeploy'
+            // https://issues.jenkins-ci.org/browse/JENKINS-47026
+            args '--user="jenkins" --entrypoint=""'
+            additionalBuildArgs '--build-arg UID=$(id -u) --build-arg GID=$(id -g)'
+            reuseNode true
+        }
+    }
+
+    environment {
+        MAVEN_CONFIG="${WORKSPACE}/.m2"
+        MAVEN_HOME = sh(returnStdout: true, script: 'echo ${M2_HOME}')
+        DOCKER_CONFIG = "${WORKSPACE}/.docker"  // isolate from local registry issues
+        SETTINGS = credentials('/*-- [INSERT ID_OF_STORED_MAVEN_SETTINGS HERE] --*/')
+    }
+
+    options {
+        disableConcurrentBuilds()
+        buildDiscarder(logRotator(numToKeepStr: '30'))
+        ansiColor('xterm')
+    }
+
+    triggers {
+        pollSCM('')
+    }
+
+    stages {
+
+        stage ('Prepare/Clean') {
+            steps {
+                script {
+                    currentBuild.displayName = "${BUILD_NUMBER}"
+                }
+                echo "== ENVIRONMENT INFORMATION =="
+                sh 'echo "JAVA_HOME = ${JAVA_HOME}"'
+                sh 'java -version'
+                sh 'echo "M2_HOME = ${M2_HOME}"'
+                sh 'mvn --version'
+                sh 'echo "PATH = ${PATH}"'
+                sh 'git --version'
+                sh "git status"
+                // sh "printenv | sort"
+
+                // ci versioning variables
+                script {
+                    VAR_SHA1 = sh(returnStdout: true, script: 'echo -n "-$( git rev-parse --short HEAD )"').stripIndent().trim()
+                    VAR_VERSIONLONG = "${VAR_SHA1}"  // temporary placeholder for SHA1
+                    if ( "${GIT_BRANCH}" == "master" ) { 
+                        // ensure semantic tag
+                        VAR_SHA1=""
+                        VAR_BUILDNUM=""
+                        VAR_CHANGELIST=""
+                    } else { 
+                        VAR_BUILDNUM="b${BUILD_NUMBER}"
+                        VAR_CHANGELIST="-SNAPSHOT"
+                    }
+                    // used for writing to version file
+                    echo "== SETTING LONG VERSION STRING =="
+                    VAR_VERSIONLONG = sh(returnStdout: true, script: "mvn -s${SETTINGS} -Dmaven.repo.local=${WORKSPACE}/.m2/repository -q -Dchangelist=${VAR_CHANGELIST} -Dbuildnum=b${BUILD_NUMBER} -Dsha1=${VAR_VERSIONLONG} -Dexpression=versionlong -DforceStdout help:evaluate").stripIndent().trim()
+                    echo "******** LONG VERSION SET TO '${VAR_VERSIONLONG}' ********"
+                }
+                echo "== MAVEN CLEAN =="
+                sh "mvn -s${SETTINGS} -Dmaven.repo.local=${WORKSPACE}/.m2/repository -U -Dchangelist=${VAR_CHANGELIST} -Dbuildnum=${VAR_BUILDNUM} -Dsha1=${VAR_SHA1} -Dversionlong=${VAR_VERSIONLONG} clean"
+            }
+        }
+
+        stage ('Compile/Test') {
+            steps {
+                // fails with error code from mvn
+                echo "== MAVEN INSTALL =="
+                sh "mvn -s${SETTINGS} -Dmaven.repo.local=${WORKSPACE}/.m2/repository -Dmaven.test.skip=false -Dmaven.source.skip=false -Dchangelist=${VAR_CHANGELIST} -Dbuildnum=${VAR_BUILDNUM} -Dsha1=${VAR_SHA1} -Dversionlong=${VAR_VERSIONLONG} javadoc:jar install"
+            }
+        }
+
+        stage ('Tag') { 
+            when {
+                anyOf {
+                    changelog 'ci_RELEASE'
+                    expression { "${VAR_CHANGELIST}" == "" }
+                }
+            }
+            steps {
+                sshagent(['/*-- [INSERT ID_OF_STORED_SSH_KEY HERE] --*/']) {
+                    // https://support.cloudbees.com/hc/en-us/articles/115000073552-Host-Key-Verification-for-SSH-Agents
+                    sh "mkdir -p ~/.ssh && echo 'Host *' > ~/.ssh/config && echo '    StrictHostKeyChecking no' >> ~/.ssh/config && echo '    AddKeysToAgent yes' >> ~/.ssh/config"
+                    // sh "ssh-keyscan -t rsa,dsa /*-- [INSERT URL_TO_GITHUB_SERVER HERE] --*/ >> ~/.ssh/known_hosts"
+                    sh "git config user.email 'do-not-reply@/*-- [INSERT URL_TO_ORG HERE] --*/' && git config user.name 'Jenkins Automation'"
+                    echo "== MAVEN TAG =="
+                    sh "mvn -s${SETTINGS} -Dmaven.repo.local=${WORKSPACE}/.m2/repository -DskipTests -Dmaven.test.skip=true -Dchangelist=${VAR_CHANGELIST} -Dbuildnum=${VAR_BUILDNUM} -Dsha1=${VAR_SHA1} -Dversionlong=${VAR_VERSIONLONG} scm:tag"
+                }
+            }
+        }
+
+        stage ('Deploy') {
+            steps {
+                echo "== MAVEN DEPLOY =="
+                sh "mvn -s${SETTINGS} -Dmaven.repo.local=${WORKSPACE}/.m2/repository -DskipTests -Dmaven.test.skip=true -Dmaven.source.skip=false -Dchangelist=${VAR_CHANGELIST} -Dbuildnum=${VAR_BUILDNUM} -Dsha1=${VAR_SHA1} -Dversionlong=${VAR_VERSIONLONG} javadoc:jar deploy"
+                script {
+                    if ( "${VAR_CHANGELIST}" != "" ) { 
+                        echo "== MAVEN DEPLOY -- generic SNAPSHOT =="
+                        sh "mvn -s${SETTINGS} -DskipTests -Dmaven.test.skip=true -Dmaven.source.skip=false -Dchangelist=${VAR_CHANGELIST} -Dbuildnum= -Dsha1= -Dversionlong=${VAR_VERSIONLONG} javadoc:jar deploy"
+                    }
+                }
+            }
+        }
+    }
+
+    post {
+        changed {
+            echo "Post Status: ${currentBuild.currentResult}"
+            // Will trigger only when job status changes
+            emailByStatus(currentBuild.currentResult)
+        }
+        success {
+            archiveArtifacts artifacts: '**/target/*.jar, **/target/*.war, **/target/*.tar.gz', fingerprint: true
+        }
+    }
+
+}

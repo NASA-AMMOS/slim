@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+
+    <modelVersion>4.0.0</modelVersion>
+
+    <name><!-- [INSERT NAME HERE] --></name>
+    <description><!-- [INSERT DESCRIPTION HERE] --></description>
+
+    <parent>
+        <groupId><!-- [INSERT PARENT_GROUP HERE] --></groupId>
+        <artifactId><!-- [INSERT PARENT_ID HERE] --></artifactId>
+        <version><!-- [INSERT PARENT_VERSION HERE] --></version>
+    </parent>
+
+    <groupId><!-- [INSERT GROUP_MM HERE] --></groupId>
+    <artifactId><!-- [INSERT ID_MM HERE] --></artifactId>
+    <version>${revision}</version>
+    <packaging>pom</packaging>
+
+    <modules>
+        <module><!-- [INSERT MODULE_1 HERE] --></module>
+        <module><!-- [INSERT MODULE_n HERE] --></module>
+    </modules>
+
+    <properties>
+        <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+        <!-- Tagging for CI -->
+        <semver>1.0.0</semver>
+        <revision>${semver}${buildnum}${sha1}${changelist}</revision>
+        <!-- BUILD PARMS -->
+        <!-- VERSIONING -->
+        <version.junit>4.13.2</version.junit>
+        <version.slf4j>1.7.28</version.slf4j>
+    </properties>
+
+    <scm>
+        <connection><!-- [INSERT SCM_SSH HERE] --></connection>
+        <developerConnection><!-- [INSERT SCM_SSH HERE] --></developerConnection>
+        <url><!-- [INSERT SCM_URL HERE] --></url>
+    </scm>
+
+    <build />
+
+    <dependencies>
+        <dependency>
+            <groupId>junit</groupId>
+            <artifactId>junit</artifactId>
+            <version>${version.junit}</version>
+        </dependency>
+        <dependency>
+            <groupId>org.slf4j</groupId>
+            <artifactId>slf4j-api</artifactId>
+            <version>${version.slf4j}</version>
+        </dependency>
+        <dependency>
+            <groupId>org.slf4j</groupId>
+            <artifactId>slf4j-simple</artifactId>
+            <version>${version.slf4j}</version>
+        </dependency>
+    </dependencies>
+
+</project>
