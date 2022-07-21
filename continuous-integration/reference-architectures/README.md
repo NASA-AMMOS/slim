@@ -159,17 +159,21 @@ The CI process always starts with developers who commit code, and it finishes wi
 unchanging, versioned and packaged software delivered by an automated system.  
 ```mermaid
 graph TB
-    D1[fa:fa-desktop Dev 1] -->|commit| R[fa:fa-server Version Control Server]
-    D2[fa:fa-desktop Dev 2] -->|commit| R
-    Dn[fa:fa-desktop Dev n] -->|commit| R
+    D1([fa:fa-desktop Dev 1]) -->|commit| R[fa:fa-server Version Control Server]
+    D2([fa:fa-desktop Dev 2]) -->|commit| R
+    Dn([fa:fa-desktop Dev n]) -->|commit| R
     R -->|trigger| C[fa:fa-server CI Server]
     C-->|validate| R
-    C-->|report| RS[fa:fa-server Reporting Service]
-    Q{Success?}
+    C-->|report| RS([fa:fa-server Reporting Service])
+    Q{Compile<br/>Test}
+    S((Success))
+    F([Notify])
     style Q fill:#FFAC1C,stroke:#333,stroke-width:4px
-    C-->|compile/test|Q
-    Q-->|publish| AR[fa:fa-server Artifact Repository]
-    Q-.->|deploy| AS[fa:fa-server Application Server]
+    C-->Q
+    Q-->S
+    Q-->|exception<br/>or change|F
+    S-->|publish| AR([fa:fa-server Artifact Repository])
+    S-.->|"deploy (opt.)"| AS([fa:fa-server Application Server])
     subgraph Community
         U1[fa:fa-user User 1]
         U2[fa:fa-user User 2]
@@ -178,4 +182,8 @@ graph TB
     AR---U1 & U2
     AS-.-U2
     RS-.-Un
+    style Community fill:#ECFFDC,stroke:#333,stroke-width:2px
+    style U1 fill:#F6F5F3,stroke:#333,stroke-width:1px
+    style U2 fill:#F6F5F3,stroke:#333,stroke-width:1px
+    style Un fill:#F6F5F3,stroke:#333,stroke-width:1px
 ```
