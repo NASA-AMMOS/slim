@@ -252,5 +252,5 @@ intricate build systems producing modern software.
 
 **Ultimately, the CI process benefits all users** with a predictable, controlled and automated 
 mechanism to produce reliable software that is transparent and self-validating. This lends 
-itself to tested, reproducible software delivered with the crisp reliability and speed of 
+itself to tested, reproducible software deliveries with the crisp reliability and speed of 
 automated systems. 
