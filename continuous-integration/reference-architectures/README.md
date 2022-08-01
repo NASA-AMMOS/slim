@@ -8,7 +8,7 @@ specific implementation. Please see categories and links below for details.
 ## Continuous Integration
 Continuous integration (CI) is an automated process triggered by development changes to perform an end-to-end 
 validation and presentation of software. There are a number of different steps whose goal is to ensure code works 
-together, tests successfully and releases readily. CI is implemented as a_development pipeline_ that automates steps 
+together, tests successfully and releases readily. CI is implemented as a _development pipeline_ that automates steps 
 normally undertaken in a release process.
 
 ### Background
