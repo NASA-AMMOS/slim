@@ -158,12 +158,12 @@ The CI process always starts with developers who commit code, and it finishes wi
 unchanging, versioned and packaged software delivered by an automated system.  
 ```mermaid
 flowchart TB
-    D1([fa:fa-desktop Dev 1]) -->|push| R[fa:fa-server Version Control Server]
+    D1([fa:fa-desktop Dev 1]) -->|push| R["fa:fa-server Version Control Server<sup>1</sup>"]
     D2([fa:fa-desktop Dev 2]) -->|push| R
     Dn([fa:fa-desktop Dev n]) -->|push| R
-    R -->|trigger| C[fa:fa-server CI Server]
+    R -->|trigger| C["fa:fa-server CI Server<sup>2</sup>"]
     C-->|validate| R
-    C-->|report| RS[fa:fa-server Reporting Service]
+    C-->|report| RS["fa:fa-server Reporting Service<sup>5</sup>"]
     Q{"Compile<br/>& Test"}
     S((Success))
     F[Notify]
@@ -171,8 +171,8 @@ flowchart TB
     C-->Q
     Q-->S
     Q-->|exception<br/>or change|F
-    S-->|publish| AR[fa:fa-server Artifact Repository]
-    S-.->|"deploy (opt.)"| AS[fa:fa-server Application Server]
+    S-->|publish| AR["fa:fa-server Artifact Repository<sup>3</sup>"]
+    S-.->|"deploy (opt.)"| AS["fa:fa-server Application Server<sup>4</sup>"]
     subgraph Community
         U1([fa:fa-user User 1])
         U2([fa:fa-user User 2])
@@ -187,24 +187,26 @@ flowchart TB
     style U2 fill:#F6F5F3,stroke:#333,stroke-width:1px
     style Un fill:#F6F5F3,stroke:#333,stroke-width:1px
 ```
+###### **_NOTE: Physical servers are numbered in the above diagram._**
 #### Participant Touchpoints
 The actors in the CI process are code maintainers and end users. The automation takes place in 
 servers or services between these actors. A more detailed understanding of the process itemizes 
-the roles and responsibilities of each participant.  
+the roles and responsibilities of each participant. This graph interleaves services with users 
+and processes to explain process flow. 
 
-:information_source: [**Action:** Push] **Developers**, or code maintainers, ("Dev 1...n") start 
+👩‍💻 [**Action:** Push] **Developers**, or code maintainers, ("Dev 1...n") start 
 the build process by committing and pushing code to a remote version control server (VCS), such 
 as Git. This may be anything from a minor property change to new code, but in all cases the 
 expectation is that code from one maintainers' workstation should execute identically and reliably 
-on others.  
+on others. 
 
-:computer: [**Start** -- **Action:** Trigger, Content Validation] The **VCS server** reports when 
+<sup>1</sup>🖥 [**Start** -- **Action:** Trigger, Content Validation] The **VCS server** reports when 
 new code is delivered (commit) and performs content validation on that code. Content validation 
 can range from verifying format of data in the commit to checking for specific content in files. 
 On code acceptance and validation, a network request triggers to notify successive machines to 
-continue processing.
+continue processing. 
 
-:computer: [**Service** -- **Action:** Validate, Publish, Deploy (opt.), Report] The 
+<sup>2</sup>🖥 [**Service** -- **Action:** Validate, Publish, Deploy (opt.), Report] The 
 **Continuous Integration Server** (CI Server) provides a platform to execute various steps in 
 the CI process. It's the core that handles both decision making and mechanics of compilation, 
 testing and packaging. A unified interface provides a centralized location to view progress and 
@@ -216,12 +218,12 @@ as email. Additionally, the CI Server provides the platform that executes post-b
 including publishing packaged artifacts or deploying those artifacts to servers for user 
 consumption. This is all accomplished using built-in tooling or compatible scripting. 
 
-:computer: [**Endpoint**] The **Artifact Repository** is a dedicated software library for 
+<sup>3</sup>🖥 [**Endpoint**] The **Artifact Repository** is a dedicated software library for 
 storing various build products ("artifacts") that is available on demand to developers, users 
 and implementers. On successful builds the CI server publishes packaged artifacts to the 
-repository to make them available broadly.
+repository to make them available broadly. 
 
-:computer: [**Endpoint**] The **Application Server** provides an execution environment with 
+<sup>4</sup>🖥 [**Endpoint**] The **Application Server** provides an execution environment with 
 the final software package deployed in a runtime environment for extended use testing. 
 Depending on the type of software project -- whether it's an API library, server application 
 or executable -- deployment optionally provides a platform to demonstrate the product. 
@@ -230,7 +232,7 @@ designed. Some CI processes extend the concept of automated deployment through a
 server destinations along a release runway. "Continuous Deployment (CD)" extends the CI 
 process to automatically deploy packaged software in a production environment. 
 
-:computer: [**Service** -- **Notification and Reporting Services**] **Notify** and 
+<sup>5</sup>🖥 [**Service** -- **Notification and Reporting Services**] **Notify** and 
 **Reporting Services** assume different forms to provide real-time information on build 
 status. These are typically handled within the CI Server in the case of build failure 
 emails. Build logs are published to the CI Server user interface for on-demand 
@@ -240,7 +242,7 @@ or test case reporting in test management software, such as _Gurock TestRail_. N
 is highly customizable in the CI server and in most cases leverages built-in server 
 features. 
 
-:woman: [**End** -- **Action**: Usage] The target audience is, of course, the **User 
+👥  [**End** -- **Action**: Usage] The target audience is, of course, the **User 
 Community** ("User 1...n"), which is comprised of a number of participants from 
 developers to application users. Primarily, the CI process delivers packaged binaries 
 available for download, usage or integration from the Artifact Repository. These may 
