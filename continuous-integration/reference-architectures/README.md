@@ -171,8 +171,8 @@ flowchart TB
     C-->Q
     Q-->S
     Q-->|exception<br/>or change|F
-    S-->|publish| AR["fa:fa-server Artifact Repository<sup>3</sup>"]
-    S-.->|"deploy (opt.)"| AS["fa:fa-server Application Server<sup>4</sup>"]
+    S-->|publish| AR["fa:fa-server Artifact Repository³"]
+    S-.->|"deploy (opt.)"| AS["fa:fa-server Application Server^4"]
     subgraph Community
         U1([fa:fa-user User 1])
         U2([fa:fa-user User 2])
