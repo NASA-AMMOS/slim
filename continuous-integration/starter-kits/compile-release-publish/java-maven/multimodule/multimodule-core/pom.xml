@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+
+    <modelVersion>4.0.0</modelVersion>
+
+    <name><!-- [INSERT NAME_MODULE_1 HERE] --></name>
+    <description><!-- [INSERT DESCRIPTION_MODULE_1 HERE] --></description>
+
+    <parent>
+        <groupId><!-- [INSERT GROUP_MM HERE] --></groupId>
+        <artifactId><!-- [INSERT ID_MM HERE] --></artifactId>
+        <version>${revision}</version>
+    </parent>
+
+    <groupId><!-- [INSERT GROUP_MM HERE] --></groupId>
+    <artifactId><!-- [INSERT MODULE_2 HERE] --></artifactId>
+    <packaging>jar</packaging>
+
+    <properties>
+        <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+        <!-- VERSIONING -->
+        <version.multimodule-api>${project.version}</version.multimodule-api>
+    </properties>
+
+    <build>
+        <plugins>
+            <plugin>
+                <groupId>org.codehaus.gmaven</groupId>
+                <artifactId>groovy-maven-plugin</artifactId>
+            </plugin>
+        </plugins>
+    </build>
+
+<dependencies>
+    <dependency>
+        <groupId>gov.nasa.ammos.ids.sample_projects.multimodule</groupId>
+        <artifactId>multimodule-api</artifactId>
+        <version>${version.multimodule-api}</version>
+    </dependency>
+</dependencies>
+
+</project>
