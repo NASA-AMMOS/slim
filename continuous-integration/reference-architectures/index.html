@@ -9,27 +9,28 @@
     <!-- Primary Meta Tags -->
     <title>Reference Architectures</title>
     <meta name="title" content="Reference Architectures">
-    <meta name="description" content="Nothing here yet, come back soon..." />
+    <meta name="description" content="Architectures presented here provides a high-level reference guide for the implementation of continuous integration" />
 
     <!-- Open Graph / Facebook -->
     <meta property="og:type" content="website">
     <meta property="og:url" content="https://nasa-ammos.github.io/slim/continuous-integration/reference-architectures/">
     <meta property="og:title" content="Reference Architectures">
-    <meta property="og:description" content="Nothing here yet, come back soon...">
+    <meta property="og:description" content="Architectures presented here provides a high-level reference guide for the implementation of continuous integration">
 
     <!-- Twitter -->
     <meta property="twitter:card" content="summary_large_image">
     <meta property="twitter:url" content="https://nasa-ammos.github.io/slim/continuous-integration/reference-architectures/">
     <meta property="twitter:title" content="Reference Architectures">
-    <meta property="twitter:description" content="Nothing here yet, come back soon...">
+    <meta property="twitter:description" content="Architectures presented here provides a high-level reference guide for the implementation of continuous integration">
     
     <script>(function () { var el = document.documentElement, m = localStorage.getItem("/slim/doc_theme"), wm = window.matchMedia; if (m === "dark" || (!m && wm && wm("(prefers-color-scheme: dark)").matches)) { el.classList.add("dark") } else { el.classList.remove("dark") } })();</script>
 
-    <link href="/slim/resources/css/retype.css?v=1.11.2.711163225637" rel="stylesheet" data-turbo-track="reload" />
+    <link href="/slim/resources/css/retype.css?v=1.11.2.714154648976" rel="stylesheet" data-turbo-track="reload" />
 
-    <script type="text/javascript" src="/slim/resources/js/config.js?v=1.11.2.711163225637" defer data-turbo-track="reload"></script>
+    <script type="text/javascript" src="/slim/resources/js/config.js?v=1.11.2.714154648976" defer data-turbo-track="reload"></script>
     <script type="text/javascript" src="/slim/resources/js/retype.js?v=1.11.2" defer data-turbo-track="reload"></script>
-    <script id="lunr-js" type="text/javascript" src="/slim/resources/js/lunr.js?v=1.11.2.711163225637" defer></script>
+    <script id="lunr-js" type="text/javascript" src="/slim/resources/js/lunr.js?v=1.11.2.714154648976" defer></script>
+    <script id="mermaid-js" type="text/javascript" src="/slim/resources/js/mermaid.js?v=1.11.2" defer></script>
 </head>
     <body>
         <div id="docs-app" class="relative text-base antialiased text-gray-700 bg-white font-body dark:bg-dark-850 dark:text-dark-300">
@@ -189,7 +190,307 @@
         <span>Reference Architectures</span>
     </h1>
 </doc-anchor-target>
-<p>Nothing here yet, come back soon...</p>
+<doc-anchor-target id="overview">
+    <h2>
+        <doc-anchor-trigger class="header-anchor-trigger" to="#overview">#</doc-anchor-trigger>
+        <span>Overview</span>
+    </h2>
+</doc-anchor-target>
+<p>Architectures presented here provides a high-level reference guide for the implementation of continuous integration
+best practices. They describe the structure, component interrelationship and processes invoked without detailing any
+specific implementation. Please see categories and links below for details.</p>
+<doc-anchor-target id="continuous-integration">
+    <h2>
+        <doc-anchor-trigger class="header-anchor-trigger" to="#continuous-integration">#</doc-anchor-trigger>
+        <span>Continuous Integration</span>
+    </h2>
+</doc-anchor-target>
+<p>Continuous integration (CI) is an automated process triggered by development changes to perform an end-to-end
+validation and presentation of software. There are a number of different steps whose goal is to ensure code works
+together, tests successfully and releases readily. CI is implemented as a <em>development pipeline</em> that automates steps
+normally undertaken in a release process.</p>
+<doc-anchor-target id="background">
+    <h3>
+        <doc-anchor-trigger class="header-anchor-trigger" to="#background">#</doc-anchor-trigger>
+        <span>Background</span>
+    </h3>
+</doc-anchor-target>
+<p>Routine merging of components into a functional software product and publishing compiled binaries is the core of CI. It
+demands code be committed collaboratively and requires products from different development systems to work together. It
+tests software builds through a predictable process of known touchpoints that identify specific areas of
+interoperability and breakage. Compilation results are shared in a centralized system of logging and reporting. These
+approaches promote many software development best practices, but in particular
+<a href="https://martinfowler.com/articles/continuousIntegration.html#BenefitsOfContinuousIntegration">reduce risk</a>:</p>
+<ul>
+<li><a href="https://martinfowler.com/articles/continuousIntegration.html#MaintainASingleSourceRepository.">Single Source of Truth</a>:
+All components and configurations must be bundled to prove compiles function, easing deployment of compiled binaries.</li>
+<li><a href="https://martinfowler.com/articles/continuousIntegration.html#FixBrokenBuildsImmediately">Fail Fast/Fix Fast</a>:
+Know the limitations of compiled integrations and receive immediate notifications about failures.</li>
+<li><a href="https://martinfowler.com/articles/continuousIntegration.html#EveryoneCanSeeWhatsHappening">Visibility/Open Success</a>:
+The state of the product is reported constantly on CI services.</li>
+<li><a href="https://martinfowler.com/articles/continuousIntegration.html#AutomateDeployment">Testing Availability</a>:
+Automation allows repeatable deployment to test servers, elevating functional testing on par with release.</li>
+</ul>
+<doc-anchor-target id="pipeline-a-series-of-systems-executing-builds">
+    <h3>
+        <doc-anchor-trigger class="header-anchor-trigger" to="#pipeline-a-series-of-systems-executing-builds">#</doc-anchor-trigger>
+        <span>Pipeline: A series of systems executing builds</span>
+    </h3>
+</doc-anchor-target>
+<p>A <a href="https://www.redhat.com/en/topics/devops/what-cicd-pipeline">CI pipeline</a> is a series of automated processes, systems
+and triggers that execute in order to push software from raw code to a compiled product that may be deployed.</p>
+<div class="overflow-hidden mb-6 py-4 dark:px-5 dark:bg-white rounded-md"><pre class="mermaid w-full">flowchart LR
+    subgraph P[&quot;&lt;b&gt;Pipeline&lt;/b&gt;&quot;]
+        subgraph DS[&quot;Development System (1)&quot;]
+            P1
+            P2
+            P1[Commit]--&gt;P2[Validate]
+        end
+        subgraph CIS[&quot;Continuous Integration System (2)&quot;]
+            P3
+            P4
+            P5
+            P6
+            P7
+            P3[Compile]--&gt;P4[Test]
+            P4-.-&gt;P5[Package]
+            P4--&gt;P6[Report]
+            P5--&gt;P7[Publish]
+        end
+        subgraph CDS[&quot;Continuous Deployment System (3)&quot;]
+            P8
+            P9
+            P8[Orchestrate]--&gt;P9[Release]
+            P9-.-&gt;P8
+        end
+        
+        DS --&gt; |trigger| CIS
+        CIS --&gt; |&quot;trigger (opt.)&quot;| CDS
+    end
+    style P fill:#A7C7E7,stroke:#666,stroke-width:4px
+    style DS fill:#E5E4E2,stroke:#333,stroke-width:2px
+    style CIS fill:#E5E4E2,stroke:#333,stroke-width:2px
+    style CDS fill:#E5E4E2,stroke:#333,stroke-width:2px,stroke-dasharray: 5 5</pre></div>
+<p>The CI pipeline is composed of several systems linked together through a series of automation triggers:</p>
+<ol>
+<li><em>Development System</em><br />
+The sum of <a href="https://en.wikipedia.org/wiki/Commit_(version_control)">code commits</a> and
+<a href="https://en.wikipedia.org/wiki/Version_control">code versioning systems</a>, such as Git, comprised of systems that manage
+raw code. Hosted implementations, such as <a href="https://github.com/">GitHub</a>, provide limited facilities to validate commits.</li>
+<li><em>Continuous Integration System</em><br />
+A collection of services that interact dynamically to perform such tasks as compilation, testing,
+reporting and/or archiving build artifacts. CI services, such as <a href="https://www.jenkins.io/">Jenkins</a>
+or <a href="https://www.travis-ci.com/">Travis CI</a>, serve as management node for CI operations.</li>
+<li><em>Continuous Deployment System</em><br />
+Tooling and services, such as <a href="https://www.ansible.com/">Ansible</a> or
+<a href="https://puppet.com/">Puppet</a>, that deploy published software into one or more venues for extended
+testing or delivery. Often, software outputs from the CI pipeline are deployed to development
+systems for extended user testing.</li>
+</ol>
+<doc-anchor-target id="a-ci-pipeline-is-composed-of-discrete-process-steps">
+    <h3>
+        <doc-anchor-trigger class="header-anchor-trigger" to="#a-ci-pipeline-is-composed-of-discrete-process-steps">#</doc-anchor-trigger>
+        <span>A CI Pipeline is composed of discrete process steps</span>
+    </h3>
+</doc-anchor-target>
+<p>The compile-release-publish workflow is broken down to a series of discrete process steps that describe
+specific operations, ranging from commit processing to publishing compiled binaries. These discrete
+process steps are reported in logs and reports, helping identify specific points during processing
+and build failures. Process steps are associated with specific systems in the pipeline based on its
+role, so the Development System may focus on tracking code merging and commit history, for instance.</p>
+<doc-anchor-target id="development-system">
+    <h4>
+        <doc-anchor-trigger class="header-anchor-trigger" to="#development-system">#</doc-anchor-trigger>
+        <span>Development System</span>
+    </h4>
+</doc-anchor-target>
+<ul>
+<li><strong>Commit</strong><br />
+Code management, including developer commits, merging and history, are tracked in this step. A commit
+triggers notifications to subsequent steps and systems to kick off the CI pipeline.</li>
+<li><strong>Validate</strong> (optional)<br />
+Self-contained processing may take place to validate commit content in advance of triggering
+notifications to subsequent steps and systems. These may include facilities, similar to
+<a href="https://docs.github.com/en/actions">Github Actions</a>, that can be leveraged to validate files, amongst
+other tasks.</li>
+</ul>
+<doc-anchor-target id="continuous-integration-system">
+    <h4>
+        <doc-anchor-trigger class="header-anchor-trigger" to="#continuous-integration-system">#</doc-anchor-trigger>
+        <span>Continuous Integration System</span>
+    </h4>
+</doc-anchor-target>
+<ul>
+<li><strong>Compile</strong> (core)<br />
+Core software packages are compiled and the capacity to compile is validated, resulting in unpackaged
+binaries. Failures at this step indicate a problem in code, code merges or tooling.</li>
+<li><strong>Test</strong><br />
+At the core of CI is testing. The process is inherently checking for successful compilation and
+execution, and optionally validating software with unit, integration and other tests.<br />
+<em>Successful Execution:</em> Builds are inherently validated to ensure compilations complete successfully,
+and other processes germane to the build complete. <strong>Errors or failures result in build failure where
+the compile-release-publish process is halted.</strong><br />
+<em>Software Testing:</em> (optional, desirable) Test software packages are compiled and the capacity to compile
+tests is validated, also. The test step will execute the compiled tests against core software packages to
+run <a href="https://nasa-ammos.github.io/slim/continuous-testing/reference-architectures/">unit and other types of functional tests</a>
+on every build. Builds will proceed if no tests are implemented, however, test validation is material
+to the CI philosophy.</li>
+<li><strong>Report</strong><br />
+At the core of CI is reporting, both notifications and functional reporting.<br />
+<strong><em>Notifications:</em></strong> Developers are notified on successful completion of builds or failures. These
+notifications support a number of electronic media, such as email, RSS feed and chat messaging in
+commonly used applications, such as <a href="https://slack.com/">Slack</a>.<br />
+<strong><em>Other notifications</em></strong> may trigger subsequent automation steps and systems through technologies such
+as RESTful Web service messaging or simple HTTP requests. Think of notifying a <a href="https://kubernetes.io/">Kubernetes</a>
+service to start deployment to a cloud computing platform.
+<strong><em>Functional Reporting:</em></strong> (compile status, test results) Reports are a built-in feature in many CI
+systems, but extended reports can be generated also to track such items as test results locally or
+in connected systems. The Jenkins build server, for instance, maintains build logs that tie commit
+history and compile results to every single execution. Similarly, results from tests can be reported
+using extended tooling to servers such as <a href="https://www.gurock.com/testrail/">Gurock TestRail</a>
+to retain test runs from every build. Build logs typically span all aspects of the
+compile-release-publish workflow, from code checkout to publishing compiled binaries.</li>
+<li><strong>Package</strong><br />
+The result of code compilation must be deliverable as manageable objects, and that is the purpose
+of the packaging phase. One or more compiled binaries may exist, as well as a set of properties or
+other application-required configurations. These are bundled into one or more collections typically
+compressed using one of a number of common formats, such as ZIP, JAR or TAR. In practice many build
+frameworks, such as <a href="https://maven.apache.org/">Apache Maven</a>, package automatically. This step
+allows the CI system to bundle, protect and lock down files for distribution and reproducibility.</li>
+<li><strong>Publish</strong><br />
+The results of the compile-release-publish process are packaged binaries. These are shared with
+development and devops communities by publishing the files to one or more artifact repositories,
+such as <a href="https://jfrog.com/artifactory/">JFrog Artifactory</a>. Packaged binaries are versioned,
+checksummed and do not change after release -- core features of reliable and reproducible CI
+software delivery.</li>
+</ul>
+<doc-anchor-target id="continuous-deployment-system">
+    <h4>
+        <doc-anchor-trigger class="header-anchor-trigger" to="#continuous-deployment-system">#</doc-anchor-trigger>
+        <span>Continuous Deployment System</span>
+    </h4>
+</doc-anchor-target>
+<ul>
+<li><strong>Orchestrate</strong> (optional)<br />
+The orchestration process downloads files and prepares target servers to launch. It moves compiled
+binaries and properties into place and configures required services on destination systems. Depending
+on complexity of the final product this step is optional.</li>
+<li><strong>Release</strong> (optional)<br />
+In CI implementations releasing product typically starts and announces applications on a development
+server used for extended functionality testing. An extension of this, Continuous Delivery (CD),
+automates functionality testing and deploys to multiple <a href="https://www.techtarget.com/searchsoftwarequality/definition/staging-environment">release runway</a>
+destinations, including potentially directly to production. Releasing compiled product is optional
+depending on intended use cases (executable vs. API library) or whether further testing is desired.</li>
+</ul>
+<doc-anchor-target id="actors-and-automation">
+    <h3>
+        <doc-anchor-trigger class="header-anchor-trigger" to="#actors-and-automation">#</doc-anchor-trigger>
+        <span>Actors and Automation</span>
+    </h3>
+</doc-anchor-target>
+<p>A more robust view of CI architecture describes the participants, both users and automated systems.
+The CI process always starts with developers who commit code, and it finishes with reliable,
+unchanging, versioned and packaged software delivered by an automated system.</p>
+<div class="overflow-hidden mb-6 py-4 dark:px-5 dark:bg-white rounded-md"><pre class="mermaid w-full">flowchart TB
+    D1([fa:fa-desktop Dev 1]) --&gt;|push| R[&quot;fa:fa-server Version Control Server¹&quot;]
+    D2([fa:fa-desktop Dev 2]) --&gt;|push| R
+    Dn([fa:fa-desktop Dev n]) --&gt;|push| R
+    R --&gt;|trigger| C[&quot;fa:fa-server CI Server²&quot;]
+    C--&gt;|validate| R
+    C--&gt;|report| RS[&quot;fa:fa-server Reporting Service⁵&quot;]
+    Q{&quot;Compile&lt;br/&gt;&amp; Test&quot;}
+    S((Success))
+    F[Notify]
+    style Q fill:#FFAC1C,stroke:#333,stroke-width:4px
+    C--&gt;Q
+    Q--&gt;S
+    Q--&gt;|exception&lt;br/&gt;or change|F
+    S--&gt;|publish| AR[&quot;fa:fa-server Artifact Repository³&quot;]
+    S-.-&gt;|&quot;deploy (opt.)&quot;| AS[&quot;fa:fa-server Application Server⁴&quot;]
+    subgraph Community
+        U1([fa:fa-user User 1])
+        U2([fa:fa-user User 2])
+        Un([fa:fa-users Users n])
+    end
+    style Community fill:#ECFFDC,stroke:#333,stroke-width:2px
+    AR&lt;--&gt;U1 &amp; U2
+    AS&lt;-.-&gt;U2
+    RS&lt;-.-&gt;Un
+    F-.-&gt;U2
+    style U1 fill:#F6F5F3,stroke:#333,stroke-width:1px
+    style U2 fill:#F6F5F3,stroke:#333,stroke-width:1px
+    style Un fill:#F6F5F3,stroke:#333,stroke-width:1px</pre></div>
+<doc-anchor-target id="note-physical-servers-are-numbered-in-the-above-diagram">
+    <h6>
+        <doc-anchor-trigger class="header-anchor-trigger" to="#note-physical-servers-are-numbered-in-the-above-diagram">#</doc-anchor-trigger>
+        <span><strong><em>NOTE: Physical servers are numbered in the above diagram.</em></strong></span>
+    </h6>
+</doc-anchor-target>
+<doc-anchor-target id="participant-touchpoints">
+    <h4>
+        <doc-anchor-trigger class="header-anchor-trigger" to="#participant-touchpoints">#</doc-anchor-trigger>
+        <span>Participant Touchpoints</span>
+    </h4>
+</doc-anchor-target>
+<p>The actors in the CI process are code maintainers and end users. The automation takes place in
+servers or services between these actors. A more detailed understanding of the process itemizes
+the roles and responsibilities of each participant. This graph interleaves services with users
+and processes to explain process flow.</p>
+<p><span class="docs-emoji">&#x1F469;</span>‍<span class="docs-emoji">&#x1F4BB;</span> [<strong>Action:</strong> Push] <strong>Developers</strong>, or code maintainers, (&quot;Dev 1...n&quot;) start
+the build process by committing and pushing code to a remote version control server (VCS), such
+as Git. This may be anything from a minor property change to new code, but in all cases the
+expectation is that code from one maintainers&#x27; workstation should execute identically and reliably
+on others.</p>
+<p><sup>1</sup>🖥 [<strong>Start</strong> -- <strong>Action:</strong> Trigger, Content Validation] The <strong>VCS server</strong> reports when
+new code is delivered (commit) and performs content validation on that code. Content validation
+can range from verifying format of data in the commit to checking for specific content in files.
+On code acceptance and validation, a network request triggers to notify successive machines to
+continue processing.</p>
+<p><sup>2</sup>🖥 [<strong>Service</strong> -- <strong>Action:</strong> Validate, Publish, Deploy (opt.), Report] The
+<strong>Continuous Integration Server</strong> (CI Server) provides a platform to execute various steps in
+the CI process. It&#x27;s the core that handles both decision making and mechanics of compilation,
+testing and packaging. A unified interface provides a centralized location to view progress and
+success of application builds. The CI Server makes decisions on whether to proceed when code
+compiles and examines test results to verify test passes. It typically retains detailed logs
+of processes and test results that are made available through a user interface for on-demand
+viewing. Notifications are provided through both the user interface and other media, such
+as email. Additionally, the CI Server provides the platform that executes post-build steps,
+including publishing packaged artifacts or deploying those artifacts to servers for user
+consumption. This is all accomplished using built-in tooling or compatible scripting.</p>
+<p><sup>3</sup>🖥 [<strong>Endpoint</strong>] The <strong>Artifact Repository</strong> is a dedicated software library for
+storing various build products (&quot;artifacts&quot;) that is available on demand to developers, users
+and implementers. On successful builds the CI server publishes packaged artifacts to the
+repository to make them available broadly.</p>
+<p><sup>4</sup>🖥 [<strong>Endpoint</strong>] The <strong>Application Server</strong> provides an execution environment with
+the final software package deployed in a runtime environment for extended use testing.
+Depending on the type of software project -- whether it&#x27;s an API library, server application
+or executable -- deployment optionally provides a platform to demonstrate the product.
+Automated testing can be further leveraged to verify that an application performs as
+designed. Some CI processes extend the concept of automated deployment through a series of
+server destinations along a release runway. &quot;Continuous Deployment (CD)&quot; extends the CI
+process to automatically deploy packaged software in a production environment.</p>
+<p><sup>5</sup>🖥 [<strong>Service</strong> -- <strong>Notification and Reporting Services</strong>] <strong>Notify</strong> and
+<strong>Reporting Services</strong> assume different forms to provide real-time information on build
+status. These are typically handled within the CI Server in the case of build failure
+emails. Build logs are published to the CI Server user interface for on-demand
+inspection. However, reporting in a CI process may also take the form of automated ticket
+creation in issue tracking software, such as <a href="https://www.atlassian.com/software/jira/guides/getting-started/overview">Atlassian Jira</a>
+or test case reporting in test management software, such as <em>Gurock TestRail</em>. Notification
+is highly customizable in the CI server and in most cases leverages built-in server
+features.</p>
+<p><span class="docs-emoji">&#x1F465;</span>  [<strong>End</strong> -- <strong>Action</strong>: Usage] The target audience is, of course, the <strong>User
+Community</strong> (&quot;User 1...n&quot;), which is comprised of a number of participants from
+developers to application users. Primarily, the CI process delivers packaged binaries
+available for download, usage or integration from the Artifact Repository. These may
+be executed directly or used as dependencies in other code. A running version of the
+application may also be provided with an automated deployment to an Application Server.
+However, generally, users benefit prodigiously from logs, notifications and other
+information that provide invaluable insight and transparency to otherwise detailed and
+intricate build systems producing modern software.</p>
+<p><strong>Ultimately, the CI process benefits all users</strong> with a predictable, controlled and automated
+mechanism to produce reliable software that is transparent and self-validating. This lends
+itself to tested, reproducible software deliveries with the crisp reliability and speed of
+automated systems.</p>
 
 
 
@@ -270,6 +571,6 @@
 
         <div id="docs-overlay-target"></div>
 
-        <script>window.__DOCS__ = { "title": "Reference Architectures", icon: "file", hasPrism: false, hasMermaid: false, hasMath: false }</script>
+        <script>window.__DOCS__ = { "title": "Reference Architectures", icon: "file", hasPrism: false, hasMermaid: true, hasMath: false }</script>
     </body>
 </html>
