@@ -21,7 +21,7 @@ Automation allows repeatable deployment to test servers, elevating functional te
 A [CI pipeline](https://www.redhat.com/en/topics/devops/what-cicd-pipeline) is a series of automated processes, systems and triggers that execute in order to push software from raw code to a compiled product that may be deployed.  
 ```mermaid
 flowchart LR
-    subgraph P["<b>Pipeline</b>"]
+    subgraph P[<b>Pipeline</b>]
         subgraph DS["Development System (1)"]
             P1
             P2
@@ -44,7 +44,6 @@ flowchart LR
             P8[Orchestrate]-->P9[Release]
             P9-.->P8
         end
-        
         DS --> |trigger| CIS
         CIS --> |"trigger (opt.)"| CDS
     end
@@ -105,7 +104,7 @@ flowchart TB
     R -->|trigger| C["fa:fa-server CI Server²"]
     C-->|validate| R
     C-->|report| RS["fa:fa-server Reporting Service⁵"]
-    Q{"Compile<br/>& Test"}
+    Q{Compile<br/>& Test}
     S((Success))
     F[Notify]
     style Q fill:#FFAC1C,stroke:#333,stroke-width:4px
