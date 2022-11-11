@@ -2,6 +2,29 @@
 
 Thanks for taking the time to consider contributing! We very much appreciate your time and effort. This document outlines the many ways you can contribute to our project, and provides detailed guidance on best practices. We look forward to your help!
 
+## Introduction
+
+SLIM is a joint, community-based effort at collective software process improvements. Therefore, we need your help! Here's the basics on contributing:
+- Anyone can contribute!
+- You can contribute at any time
+- You can contribute in any way (code, documentation, discussion topics, issue ticket discussions, etc.)
+
+We plan out our work into fiscal quarters (i.e. Oct - Dec as Q1, Jan - Mar as Q2, etc.). This helps our stakeholders (the folks using our process improvements) plan to incorporate process improvements better into their schedules. See our [Planning Board](https://github.com/orgs/NASA-AMMOS/projects/3/views/4) for our most up-to-date plan. Generally speaking, we try to get together with our stakeholders and our community contributors at the start of every fiscal quarter to plan out what we should work on. That being said, since we're an open source project, we also accept and encourage ad-hoc contributions at any time - just note it may take some time to review / decide whether to incorporate. 
+
+### Quickstart to Contributing
+
+#### Contributing via our Planning Cycles
+
+1. See our open list of [issue tickets](https://github.com/NASA-AMMOS/slim/issues) and pick a ticket(s) you're interested in, that can also potentially apply to a project you'd like to infuse improvements into. Note: it is useful to scan through labels like how requested (popular) a particular issue ticket is (via labels: 'requested', 'more requested', 'most requested') as well as by scanning labels that describe how complex the ticket is (i.e. 'low complexity', 'medium complexity', 'high complexity').
+2. Pick a fiscal quarter you’d like to resolve your tickets in. See our [Planning Board](https://github.com/orgs/NASA-AMMOS/projects/3/views/4) "iteration" column for possible fiscal quarters. At the start of every fiscal quarter, contributors will be asked to pick what they'd like to work on.
+3. Be a leader to help infuse those process improvement solutions (tickets resolved) back to your existing projects. What does that entail? It means you take ownership of your issue tickets and the associated process improvement and help your project infuse what you worked on! You can also help other projects that are interested in your process improvement. Tip: tag your project team members on the ticket by via their GitHub handles, to make it clear who will be interested in using your process improvement. 
+
+NOTE: taking ownership (being assigned a ticket) requires that they be a member of the SLIM project. Reach out to @riverma for how to join the team! Also, see our [Ways to Contribute](#ways-to-contribute) section for more details and guidance on contribution style.
+
+#### Contributing Any Other Time
+
+See our [Ways to Contribute](#ways-to-contribute) section.
+
 ## Prerequisites
 
 Before you begin contributing to our project, it'll be a good idea to ensure you've satisfied the below pre-requisites. 
