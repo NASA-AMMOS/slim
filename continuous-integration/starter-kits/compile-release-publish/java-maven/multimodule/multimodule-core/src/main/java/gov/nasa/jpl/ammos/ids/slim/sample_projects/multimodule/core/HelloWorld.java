@@ -1,10 +1,13 @@
-package gov.nasa.ammos.ids.sample_projects.multimodule.core;
+/**
+ * Sample code -- Replace with your packages, classes and files
+ */
+package gov.nasa.ammos.ids.slim.sample_projects.multimodule.core;
 
 import java.lang.invoke.MethodHandles;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
-import gov.nasa.ammos.ids.sample_projects.multimodule.api.NumericViews;
+import gov.nasa.ammos.ids.slim.sample_projects.multimodule.api.NumericViews;
 
 public class HelloWorld {
 

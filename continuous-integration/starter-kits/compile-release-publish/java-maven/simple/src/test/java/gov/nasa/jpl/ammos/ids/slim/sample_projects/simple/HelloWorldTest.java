@@ -1,4 +1,7 @@
-package gov.nasa.ammos.ids.sample_projects.multimodule.core;
+/**
+ * Sample code -- Replace with your packages, classes and files
+ */
+package gov.nasa.ammos.ids.slim.sample_projects.simple;
 
 import static org.junit.Assert.*;
 
@@ -30,10 +33,30 @@ public class HelloWorldTest {
 
 	@Test
 	public void testcount_printzero() {
-		String exp_result = "1 2 3 4 5 6 7 8 9 10. ...\n" + 
-		                    "Hello World!\n";
-		HelloWorld.main(new String[0]);
-	    assertEquals(exp_result, outContent.toString());
+		int testval = 0;
+		HelloWorld.count_print(testval);
+	    assertEquals("1 2 3 4 5 6 7 8 9 10. ...\n", outContent.toString());
+	}
+
+	@Test
+	public void testcount_printfive() {
+		int testval = 5;
+		HelloWorld.count_print(testval);
+	    assertEquals("6 7 8 9 10 11 12 13 14 15. ...\n", outContent.toString());
+	}
+
+	@Test
+	public void testcount_printten() {
+		int testval = 10;
+		HelloWorld.count_print(testval);
+	    assertEquals("11 12 13 14 15 16 17 18 19 20. ...\n", outContent.toString());
+	}
+
+	@Test
+	public void testcount_printminusone() {
+		int testval = -1;
+		HelloWorld.count_print(testval);
+	    assertEquals("Nothing!\n", outContent.toString());
 	}
 
 }

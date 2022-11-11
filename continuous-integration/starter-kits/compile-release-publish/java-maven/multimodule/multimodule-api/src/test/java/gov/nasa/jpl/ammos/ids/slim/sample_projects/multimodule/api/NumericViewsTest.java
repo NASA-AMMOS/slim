@@ -1,4 +1,7 @@
-package gov.nasa.ammos.ids.sample_projects.multimodule.api;
+/**
+ * Sample code -- Replace with your packages, classes and files
+ */
+package gov.nasa.ammos.ids.slim.sample_projects.multimodule.api;
 
 import static org.junit.Assert.*;
 

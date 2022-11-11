@@ -1,14 +1,28 @@
-package gov.nasa.ammos.ids.sample_projects.multimodule.api;
+/**
+ * Sample code -- Replace with your packages, classes and files
+ */
+package gov.nasa.ammos.ids.slim.sample_projects.simple;
 
 import java.lang.invoke.MethodHandles;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
-public class NumericViews {
+public class HelloWorld {
 
 	private static Logger log = LoggerFactory.getLogger(MethodHandles.lookup().lookupClass().getCanonicalName());
 
-	public static void count_print(int in_startpoint) {
+	public static void main(String[] args) {
+
+		int count_start = 0;
+
+		log.info("Starting count. ...");
+		count_print(count_start);
+		log.info("Finished count. ...");
+		System.out.println("Hello World!");
+
+	}
+
+	static void count_print(int in_startpoint) {
 		// in_startpoint defaults to 0
 		String out = "";
 

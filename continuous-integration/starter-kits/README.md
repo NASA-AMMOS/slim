@@ -9,70 +9,76 @@ Please see categories and links below for details.
 [Github](https://github.com/), [Docker](https://www.docker.com/), [Jenkins](https://www.jenkins.io/) 
 and [Artifactory](https://jfrog.com/artifactory) for a [Java](https://openjdk.org/) application. 
 
-This section links to sample continuous integration projects for a Java application that 
-demonstrate how a build server, such as Jenkins, is used to verify that code compiles together 
-from different commits. It compiles projects in a pre-configured Docker container, and on success 
+This section links to sample Java projects for continuous integration projects that 
+demonstrate how a properly configured build server, such as Jenkins, is used to verify unified code compilation 
+from different commits. It isolates compiles in a pre-configured Docker container, and on success 
 publishes binaries to an artifact repository, such as Artifactory. Although this example focuses on 
-a Java-based project, it employs a generic [architectural paradigm](https://nasa-ammos.github.io/slim/continuous-integration/reference-architectures/) 
-that translates to builds in other languages. 
+a Java-based project, it employs the generic [architectural paradigm](https://nasa-ammos.github.io/slim/continuous-integration/reference-architectures/) 
+that may be translated to builds on other platforms and in many other development languages. 
 
-**Prerequisites:** To leverage starter kits provided here, the following products may be 
-installed, tested and accessible locally: (Note that installation will benefit greatly from testing 
-and customization on local workstations.)
+**Prerequisites:** To leverage starter kits provided here, the following products must be 
+installed, tested and accessible locally: (**Note** that installation is strongly recommended to test 
+customizations locally before CI server deployments.)
 * Administrative access to a **Github** repository that is the build source.
 * **Java** and **Maven** installed locally to test build conversions.
 * **Docker Desktop** to test container executions
 * Access to a **Jenkins** server, such as the enterprise CAE Jenkins at JPL.
 * Access to an artifact repository, such as the enterprise CAE Artifactory at JPL.
 
-For both examples described below, see the raw source which you can copy/paste into your own 
-project to configure a working build system.
+For both examples described below, see the raw source which can be used 
+to copy/paste into an existing project or as basis for a new project to configure a working build system.
 
-There are two configured examples: _(Maven setups supporting application designs)_
+There are two configured examples: _(Maven setups supporting application design)_
 1. `simple`: A monolithic compile of a single application that produces a single build artifact.
 2. `multimodule`: An multi-step build that compiles several modules and uses them as dependencies 
 in subsequent steps -- each step may produce its own artifacts, e.g. `JAR`s, `WAR`s or 
 other packaged build output. 
 
-### Requirements
-CI creates an ecosystem between products such that servers in compile, release and publishing 
-phases handoff processing between steps. All implementations are predicated on the following 
-configurations:
+### Access Requirements
+CI creates an ecosystem between products such that compile, release and publishing servers
+hand off control in phases. Generally, implementations are predicated on the following access
+requirements:
 1. Setup an account on a Jenkins server to host the build, such as the enterprise CAE Jenkins server 
 at JPL or another shared Jenkins host. 
 2. [Setup Webhook notifications](https://github.blog/2014-02-11-webhooks-level-up/) pointing to the 
-Jenkins instance with the URL of the server from the previous step that will host the build.
-3. Setup an account on an Artifactory server to host built binaries, such as the enterprise CAE 
-Artifactory server at JPL or another similar repository.
-4. Setup authorization credentials to interconnect services.
+Jenkins instance URL from the previous step.
+3. Set up an account to host built binaries on an Artifactory server (or other artifact repository), such as the 
+enterprise CAE Artifactory server at JPL or another similar repository.
+4. Setup authorization credentials that interconnect services.
    1. Setup [Github SSH Key Access](https://docs.github.com/en/authentication/connecting-to-github-with-ssh/about-ssh) 
    and record the key for later use.
    2. Create an [API Key in Artifactory](https://www.jfrog.com/confluence/display/JFROG/User+Profile#UserProfile-APIKey) 
    and record it for later use.
    3. Create a [Maven Settings File](https://www.jfrog.com/confluence/display/JFROG/Maven+Repository) 
-   using the previously generated Artifactory API Key
+   using the previously generated Artifactory API Key.
 5. [Configure Jenkins Global Credentials](https://www.jenkins.io/doc/book/using/using-credentials/#configuring-credentials) 
-by creating an entry for each of the Github SSH key and Maven Settings File previously generated.
+by creating an entry for each of the Github SSH Key and Maven Settings File generated in earlier steps.
 
-#### Base configs and alternatives
+#### Base setups and alternatives
 These examples rely on certain assumptions about underlying tools. For instance, a 
 [Dockerfile](https://github.com/nasa-ammos/slim/blob/main/continuous-integration/starter-kits/compile-release-publish/java-maven/simple/.ci/Dockerfile.buildDeploy) 
-referenced in one example presumes that Jenkins uses a certain UID and GID set up for a particular 
-Jenkins server. These values may be changed based on any chosen target server. 
+referenced in one example presumes that Jenkins uses a certain **UID** and **GID** set up for a particular 
+Jenkins server. These values may differ between different Jenkins installations. 
 
-Also, this starter kit should be considered generally as a guided template that is flexible enough to 
-be reprovisioned to work with any number of enterprise or publicly-available, hosted, open-source 
-servers. For instance Github and Github Enterprise may be provisioned similarly for Webhooks, even 
-when connecting to one of several public (or privately hosted) CI build servers. It's a specific example 
-of [general architecture](https://nasa-ammos.github.io/slim/continuous-integration/reference-architectures/).
+Also, it's important to consider this starter kit as essentially a guided template with enough flexibility 
+to work with any number of enterprise or publicly-available, hosted, open-source 
+servers. For instance _Github_ and _Github Enterprise_ are provisioned similarly for Webhooks, even 
+when connecting to one of several publicly or privately hosted CI build servers. 
+
+Configurations should be adapted and customized to specific use cases. For instance, the below examples include `.gitignore` 
+files based on _GitHub_ defaults but with additions supporting CI-based Java builds. Not every use case requires all 
+entries in the provided ignore file, thus files should be taken as guidance to be customized situationally.
+
+Altogether, the examples here apply to specific cases of the [SLIM reference architecture](https://nasa-ammos.github.io/slim/continuous-integration/reference-architectures/).
 
 ### Maven `simple` project
 Starter Kit:
-- [Maven Simple Project Root](https://github.com/nasa-ammos/slim/blob/main/continuous-integration/starter-kits/compile-release-publish/java-maven/simple/)
+- [Maven Simple Project Root](https://github.com/nasa-ammos/slim/blob/main/continuous-integration/starter-kits/compile-release-publish/java-maven/simple/)  
+A `simple` application that builds a single source directory. 
 
-To leverage this example, make sure to do the following: (Of course, using earlier requirements.)
-1. Check out the Git repository to convert into a new folder.
-2. Copy the `simple` project layout onto the folder from item (1).  
+To leverage this example, setup requirements and make sure to do the following: 
+1. Check out the [SLIM repository](https://github.com/nasa-ammos/slim) to convert into a new folder.
+2. Copy the `simple` project layout (`continuous-integration/starter-kits/compile-release-publish/java-maven/simple/`) into a separate directory location. This will become the Mavenized project.  
 3. Move source and configuration files into place per the [Maven Standard Directory Layout](https://maven.apache.org/guides/introduction/introduction-to-the-standard-directory-layout.html)
    1. Source and package structure should land in the `src/main/java` directory.
    2. Configurations should land in the `src/main/resources` directory.
@@ -122,9 +128,10 @@ one repo can build multiple modules. Configuration differences center around the
 `modules`, or subprojects.
 
 Starter Kit:
-- [Maven Multimodule Project Root](https://github.com/nasa-ammos/slim/blob/main/continuous-integration/starter-kits/compile-release-publish/java-maven/multimodule/)
+- [Maven Multimodule Project Root](https://github.com/nasa-ammos/slim/blob/main/continuous-integration/starter-kits/compile-release-publish/java-maven/multimodule/)  
+A `multimodule` application that consist of several submodules, each with their own source tree. 
 
-To leverage this project, make sure to do the following: (Of course, using earlier requirements.)
+To leverage this example, setup requirements and make sure to do the following: 
 1. [Create a new Git repo](https://docs.github.com/en/get-started/quickstart/create-a-repo) for 
 the multimodule job. This is an example that compiles source from one or more repositories to build 
 a single project.
