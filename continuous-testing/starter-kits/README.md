@@ -7,10 +7,11 @@ This page contains starter kit information, which represent templates, code and 
 This section contains links to sample actions, templates and configurations that analyze and validate composition of Open Source Software (OSS) components in software systems. Identifying software and licensing vulnerabilites and ensuring routine software updates is an [OSS cybersecurity](https://www.cisa.gov/uscert/ncas/alerts/aa22-137a) [best practice](https://appel.nasa.gov/2022/06/30/spotlight-on-lessons-learned-open-source-and-commercial-web-software-vulnerabilities/).  
 
 ### Dependabot
+A GitHub ecosystem tool for dependency version and security vulnerability analysis.
 
 #### Automated Dependency Updates
 
-This Dependabot task provides an automated check to test OSS component versions and automatically create [pull requests](https://docs.github.com/en/code-security/dependabot/working-with-dependabot/managing-pull-requests-for-dependency-updates) to update components. 
+This Dependabot task provides an automated check for OSS component updates and automatically creates [pull requests](https://docs.github.com/en/code-security/dependabot/working-with-dependabot/managing-pull-requests-for-dependency-updates) to commit new versions. 
 
 Starter Kit:
 - [SLIM Starterkit Python -- Dependabot Script](https://github.com/NASA-AMMOS/slim-starterkit-python/blob/develop/.github/dependabot.yml) to install in your GitHub repo
@@ -20,11 +21,11 @@ To leverage this template, make sure to do the following:
 2. Add Dependabot automation to your repository, either **manually** or via the **admin console** (choose **one**):
 > **Shortcut**  
   Copy the pre-set configuration to an identical path in your repository, e.g. `.github/dependabot.yml`.
-   * **Manually:** (_recommended approach_ available to all committers)
-      1. Create an issue and an issue branch to implement a code change. Checkout the issue branch.
-      2. Copy the Dependabot configuration file from one of the SLIM Starterkit repos -- for example, [`dependabot.yml` in the Python Starterkit](https://github.com/NASA-AMMOS/slim-starterkit-python/blob/main/.github/dependabot.yml) -- into the root of your repository at `.github/dependabot.yml`.
    * **Admin console:** (requires admin rights)
       1. Proceed to [enable Dependabot alerts through GitHub Settings UI](https://docs.github.com/en/code-security/dependabot/dependabot-alerts/configuring-dependabot-alerts#enabling-or-disabling-dependabot-alerts-for-a-repository).
+   * **Manually:** (_approach available to all committers_)
+      1. Create an issue and an issue branch to implement a code change. Checkout the issue branch.
+      2. Copy the Dependabot configuration file from one of the SLIM Starterkit repos -- for example, [`dependabot.yml` in the Python Starterkit](https://github.com/NASA-AMMOS/slim-starterkit-python/blob/main/.github/dependabot.yml) -- into the root of your repository at `.github/dependabot.yml`.
 3. Modify [Dependabot configurations](https://docs.github.com/en/code-security/dependabot/dependabot-version-updates/configuration-options-for-the-dependabot.yml-file#configuration-options-for-the-dependabotyml-file) for your project: 
 > **Requirement**  
   Set properties to match your repository setup, including core packaging system.
