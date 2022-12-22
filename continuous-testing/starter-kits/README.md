@@ -14,7 +14,7 @@ A GitHub ecosystem tool for dependency version and security vulnerability analys
 This Dependabot task provides an automated check for OSS component updates and automatically creates [pull requests](https://docs.github.com/en/code-security/dependabot/working-with-dependabot/managing-pull-requests-for-dependency-updates) to commit new versions. 
 
 Starter Kit:
-- [SLIM Starterkit Python -- Dependabot Script](https://github.com/NASA-AMMOS/slim-starterkit-python/blob/develop/.github/dependabot.yml) to install in your GitHub repo
+- [SLIM Starterkit Python -- Dependabot Script](https://github.com/NASA-AMMOS/slim-starterkit-python/blob/main/.github/dependabot.yml) to install in your GitHub repo
 
 To leverage this template, make sure to do the following:
 1. Discuss with your development team the cybersecurity best practice to regularly update OSS to latest versions and seek consensus on a workflow to accept proposed updates.
