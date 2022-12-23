@@ -18,7 +18,7 @@ Starter Kit:
 
 To leverage this template, make sure to do the following:
 1. Discuss with your development team the cybersecurity best practice to regularly update OSS to latest versions and seek consensus on a workflow to accept proposed updates.
-2. Add Dependabot automation to your repository, either **manually** or via the **admin console** (choose **one**):
+2. Add Dependabot automation to your repository, either via the **admin console** or **manually** (choose **one**):
 > **Shortcut**  
   Copy the pre-set configuration to an identical path in your repository, e.g. `.github/dependabot.yml`.
    * **Admin console:** (requires admin rights)
