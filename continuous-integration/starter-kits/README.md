@@ -1,43 +1,42 @@
 # Starter Kits
 
-This page contains starter kit information, which represent templates, code and configuration to help 
-you get started quickly with continuous integration best practices described in this overall guide. 
-Please see categories and links below for details. 
+This page contains starter kit information, which represent templates, code and configuration to help you get started quickly with continuous integration (CI) best practices described in this overall guide. Please see categories and links below for details. 
 
-## [Python] Build, Release and Publish Automation
-**Technologies:** Build automation using [GitHub](https://github.com/), [Docker](https://www.docker.com/), [GitHub Actions](https://github.com/features/actions) and [PyPi](https://pypi.org/) for a [Python](https://www.python.org/) application. 
+## Build, Release and Publish Automation
+This section contains links to sample actions, templates and configurations that demonstrate [CI systems](../reference-architectures/) in practice on various platforms using different development languages.
 
-This section describes a sample Python application that demonstrates publishing on release in a GitHub repository. It uses GitHub Actions to automatically kick off a build process that prepares release tooling, verifies code compiles, customizes compiled binaries and publishes compiled packages to the Python Package Index (PyPI) for public distribution. The process is configurable to execute against any Docker container or Python base-language release version.  
+### Python Starter Kit
+A complete, deployment-ready Python application that's bundled into a reusable template repository for quick implementation.
 
-Although this example focuses on a Python-based project, it employs a generic [architectural paradigm](https://nasa-ammos.github.io/slim/continuous-integration/reference-architectures/) that translates to builds in other languages. 
+#### Integrated Build, Release and Publish on GitHub
+This product demonstrates a GitHub-based strategy of [end-to-end CI automation](../reference-architectures/) using modern Python tooling to demonstrate publishing on release.
+* Build automation using [GitHub](https://github.com/), [Docker](https://www.docker.com/), [GitHub Actions](https://github.com/features/actions) and [PyPi](https://pypi.org/)
+* Compile, tag and release, and publish to the [Python Package Index (PyPi)](https://pypi.org/)
+* Modern [PEP 517](https://peps.python.org/pep-0517/)/[518](https://peps.python.org/pep-0518/) compliant tooling using [declarative](https://en.wikipedia.org/wiki/Declarative_programming) [TOML](https://toml.io/en/)-based configurations inside a `pyproject.toml` file.
 
-### Modern build tooling
-This example implements modern [Python Enhancement Proposals (PEP)](https://peps.python.org/pep-0001/#what-is-a-pep) for build standards that specify [declarative](https://en.wikipedia.org/wiki/Declarative_programming) instructions. Python build standards rapidly evolved over the past several years to simplify and decouple release strategies from code. This resulted in a system that supports tiered installations for both build and application dependencies. [PEP-517](https://peps.python.org/pep-0517/) and [PEP-518](https://peps.python.org/pep-0518/) describe a strategy of configurations with build-system agnostic command tooling (Python's `build` module) utilizing one or more TOML-based files starting with `pyproject.toml` in the project root. 
+Starter Kit:
+- [SLIM Starterkit Python](https://github.com/NASA-AMMOS/slim-starterkit-python) to [create a new repository](https://github.com/NASA-AMMOS/slim-starterkit-python/generate), clone in [codespace](https://github.com/features/codespaces) or [download files](https://stackoverflow.com/q/4604663/325452) to your own repository
 
-**Prerequisites:** To leverage this starter kit, the following products should be installed, tested and accessible locally: (Note that installation will benefit greatly from testing and customization on local workstations.)
-* Administrative access to a **GitHub** repository that is the build source.
-* **Python** and modules **setuptools**, **wheel** and **twine** installed locally to test build cycles.
-* **Docker Desktop** to test container executions
-* Access to the **[Python Package Index (PyPi)](https://pypi.org/)** and its development analog **[Test PyPi](https://test.pypi.org/)** to validate deployments.
+To leverage this template, make sure to do the following:
+1. Discuss with your development team continuous integration best practices and seek consensus on a workflow to build, publish and release software. 
+2. Create a new repository by cloning the [SLIM Starterkit Python](https://github.com/NASA-AMMOS/slim-starterkit-python) template. 
+> **Shortcut**  
+  Already skilled with Python build systems? You may selectively apply files from the starter kit to your own project using details below. 
+3. Setup account credentials:
+   1. PyPi and Test PyPi
+   2. GitHub Secrets
+4. Move code into place
+5. Apply your project settings and customizations
+6. Test locally
+7. Test on GitHub
 
-The example presented here provides an implementation guide to set up a fully-functional application repository that automates a build, release and publish strategy. A sample repository structure with required code and tooling is available at [`slim-ci-starterkit-python`](https://github.com/NASA-AMMOS/slim-ci-starterkit-python). 
-
-The configured example produces the following concrete results: 
+#### Deliverables
+This starter kit produces several deliverables available for distribution:
 * Two artifacts -- Python wheel and ZIP source distribution.
-* Tagged build versions that correspond with release versions.
-* Automatic changelog summaries based on commit history published on release.
-
-### Requirements
-CI creates an ecosystem between products such that systems in build, release and publishing 
-phases handoff processing between steps. This implementation is predicated on the following 
-configurations:
-1. Setup an account on PyPi and a companion account on PyPi Test to host the release. 
-   1. 
-
-#### Base configs and alternatives
-
-
-
+  * GitHub
+  * PyPi
+* Tagged build versions that correspond to release versions.
+* Automatic changelog summaries based on commit history at the time of release.
 
 ## Patch Integrity
 
