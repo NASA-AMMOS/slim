@@ -55,29 +55,40 @@ To leverage this template, make sure to do the following:
          3. Update URLs for your project.
             1. Replace `NASA-AMMOS/slim-starterkit-python` with the **project/repo_name** for your cloned project.
          4. Update `author`, `author_email`, `description` and `keywords` to reflect your project details
-   3. Update documentation to reflect your new project  
-Instructions on what to update are included in documentation files.
-      1. Update `CODE_OF_CONDUCT.md` by replacing the `INSERT` block with your contact method.
-      2. Update `CONTRIBUTING.md` as possible by replacing the `INSERT` blocks with specific details about your project, including links to issue tracking, pull requests and any discussion forums. 
-      3. Update `README.md` as possible with setup instructions, a runtime guide, repository data, FAQ links, module naming detail and any additional specific details about your project.
+   3. Update documentation to reflect details about your new project  
+      1. Suggested updates for `CODE_OF_CONDUCT.md`, `CONTRIBUTING.md` and `README.md` are marked by the keyword `INSERT` and explained in detail within markdown.
 7. Build locally to test the configuration  
 The application will build, install and deploy from a local command line when all configurations are properly set.
    1. [Install local tooling and requirements](https://github.com/NASA-AMMOS/slim-starterkit-python/tree/main#required-local-tooling)
-   2. [Clean and build](https://github.com/NASA-AMMOS/slim-starterkit-python/tree/main#local-build-testing)
-   3. Clean again when build completes successfully
+   2. [Clean and build](https://github.com/NASA-AMMOS/slim-starterkit-python/tree/main#local-build-testing) and clean again after module builds successfully
 > **Information**  
-  To validate the module, we first test a release on the Test PyPi sandbox to ensure it builds and releases properly. The project publishes to Test PyPi _by default_ and a _minor configuration change is required_ to release at the official PyPi.
-8. Test on GitHub
-   1. Test PyPi
-   2. Enable for PyPi
+  To validate the module, we test on the Test PyPi sandbox _by default_. To release on the official PyPi, a _minor configuration change is required_. __All previous steps must be complete.__
+8. Build on GitHub  
+A release kicks off a build and release process in GitHub Actions. 
+   1. Publish to Test PyPi
+      1. Update the [version number in the `version.py` file](https://github.com/NASA-AMMOS/slim-starterkit-python/blob/main/slim_sample_project/version.py).
+      2. [Kick off a build by releasing your product using the same version.](https://github.com/NASA-AMMOS/slim-starterkit-python/tree/main#automated-build-kickoff)
+   2. Enable for official PyPi release
+      1. Remove Test PyPi coordinates from the `python-publish.yml` configuration file:
+         1. `twine upload --verbose dist/*.whl dist/*.zip` (remove `--repository testpypi`)
+      2. Update the [version number in the `version.py` file](https://github.com/NASA-AMMOS/slim-starterkit-python/blob/main/slim_sample_project/version.py).
+      3. [Kick off a build by releasing your product using the same version.](https://github.com/NASA-AMMOS/slim-starterkit-python/tree/main#automated-build-kickoff)
 
 #### Deliverables
-This starter kit produces several deliverables available for distribution:
-* Two artifacts -- Python wheel and ZIP source distribution.
-  * GitHub
-  * PyPi
-* Tagged build versions that correspond to release versions.
-* Automatic changelog summaries based on commit history at the time of release.
+This starter kit produces several deliverables deployed for distribution:
+* **GitHub**
+  * [Release report with automatic changelog summaries based on commit history.](https://github.com/NASA-AMMOS/slim-starterkit-python/releases/latest)
+  * [Tagged build versions corresponding to release versions.](https://github.com/NASA-AMMOS/slim-starterkit-python/tags)
+  * Source distribution:
+    * [Tarball](https://github.com/NASA-AMMOS/slim-starterkit-python/tags/)
+    * [ZIP](https://github.com/NASA-AMMOS/slim-starterkit-python/tags/)
+* **PyPi**
+  * [Fully documented site with project links](https://test.pypi.org/project/slim-sample-project/) 
+  * Source distribution (with release hashes):
+    * [ZIP](https://test.pypi.org/project/slim-sample-project/#files)
+  * Built Python 3 distribution:
+    * [Python wheel](https://test.pypi.org/project/slim-sample-project/#files)
+
 
 ## Patch Integrity
 
