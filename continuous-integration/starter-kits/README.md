@@ -19,7 +19,9 @@ Starter Kit:
 
 To leverage this template, make sure to do the following:
 1. Discuss with your development team continuous integration best practices and seek consensus on a workflow to build, publish and release software. 
-2. Create a new repository by cloning the [SLIM Starterkit Python](https://github.com/NASA-AMMOS/slim-starterkit-python) template. 
+2. Create a new repository by:
+   a. [Creating a new repository using our template repository](https://github.com/NASA-AMMOS/slim-starterkit-python/generate) (GitHub only)
+   b. [Cloning and manually using our template repository](https://github.com/NASA-AMMOS/slim-starterkit-python). 
 > **Requirement**  
   Admin rights are necessary to set up `GitHub Secrets`.
 3. Setup account credentials:
