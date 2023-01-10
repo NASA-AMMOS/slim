@@ -15,7 +15,7 @@ This product demonstrates a GitHub-based strategy of [end-to-end CI automation](
 * Modern [PEP 517](https://peps.python.org/pep-0517/)/[518](https://peps.python.org/pep-0518/) compliant tooling using [declarative](https://en.wikipedia.org/wiki/Declarative_programming) [TOML](https://toml.io/en/)-based configurations inside a `pyproject.toml` file.
 
 Starter Kit:
-- [SLIM Starterkit Python](https://github.com/NASA-AMMOS/slim-starterkit-python) to [create a new repository](https://github.com/NASA-AMMOS/slim-starterkit-python/generate), clone in [codespace](https://github.com/features/codespaces) or [download files](https://stackoverflow.com/q/4604663/325452) to your own repository
+- [SLIM Starterkit Python](https://github.com/NASA-AMMOS/slim-starterkit-python)
 
 To leverage this template, make sure to do the following:
 1. Discuss with your development team continuous integration best practices and seek consensus on a workflow to build, publish and release software. 
