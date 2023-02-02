@@ -23,19 +23,17 @@ To leverage this template, make sure to do the following:
    1. [Creating a new repository using our repository template](https://github.com/NASA-AMMOS/slim-starterkit-python/generate) (GitHub only); or 
    2. [Cloning and manually editing our starter kit repository](https://github.com/NASA-AMMOS/slim-starterkit-python). 
 > **Requirement**  
-    • [Sandbox strategy](http://agiledata.org/essays/sandboxes.html): Two separate accounts must be created on **(1) Test PyPi** and **(2) PyPi**. We'll name values similarly and switch them later when everything is working.  
+    • [Sandbox strategy](http://agiledata.org/essays/sandboxes.html): Two separate accounts must be created on **(1) Test PyPi** and **(2) PyPi**. We'll _name values identically_ and switch them later when everything works.  
     • Admin rights are necessary to set up `GitHub Secrets`.  
 3. Setup account credentials:
-   1. [Test PyPi](https://test.pypi.org/account/register/)
-      1. Create a new account or login to an existing account.
-      2. Navigate to `Account Settings` **->** `API tokens` and press the button `Add API Token`. Name your token `PYPI_API_TOKEN` and generate it.
-      3. **Copy the value** and retain the [Test PyPi token](https://test.pypi.org/manage/account/token/) to use in `GitHub Secrets`.
-   2. [PyPi](https://pypi.org/account/register/) 
-      1. Create a new account or login to an existing account.
-      2. Navigate to `Account Settings` **->** `API tokens` and press the button `Add API Token`. Name your token `PYPI_API_TOKEN` and generate it.
-      3. **Copy the value** and retain the [PyPi token](https://pypi.org/manage/account/token/) to use later in `GitHub Secrets`.
-   3. [GitHub Secrets](https://docs.github.com/en/actions/security-guides/encrypted-secrets?tool=webui#creating-encrypted-secrets-for-a-repository) (use the _Test PyPi token_ here initially)
-      1. In the repository, select the `Settings` tab and navigate to `Secrets` **-->** `Actions` and press the button `New repository Secret`.
+   1. [Test PyPi](https://test.pypi.org/account/register/) website
+      1. Navigate to `Account Settings` **->** `API tokens` and press the button `Add API Token`. Name your token `PYPI_API_TOKEN` and generate it.
+      2. **Copy the value** and retain this [Test PyPi token](https://test.pypi.org/manage/account/token/) to use in `GitHub Secrets`.
+   2. [PyPi](https://pypi.org/account/register/) website
+      1. Navigate to `Account Settings` **->** `API tokens` and press the button `Add API Token`. Name your token `PYPI_API_TOKEN` and generate it.
+      2. **Copy the value** and retain this [PyPi token](https://pypi.org/manage/account/token/) to use **later**.
+   3. [GitHub Secrets](https://docs.github.com/en/actions/security-guides/encrypted-secrets?tool=webui#creating-encrypted-secrets-for-a-repository) (use the _Test PyPi token_ here initially) in your newly created repository
+      1. In the repository, select the `Settings` tab and navigate to `Security`: `Secrets and variables` **-->** `Actions` and press the button `New repository secret`.
       2. Name your secret `PYPI_API_TOKEN` and paste the value from **Test PyPi**. (Later, this value will be replaced with the actual **PyPi** token to enable public release.)
 > **Shortcut**  
   Already skilled with Python [Setuptools](https://setuptools.pypa.io/en/latest/userguide/index.html) build system? You may selectively apply files from the starter kit to your own project using details below. 
@@ -65,22 +63,28 @@ To leverage this template, make sure to do the following:
          4. Update `author`, `author_email`, `description` and `keywords` to reflect your project details
    3. Update documentation to reflect details about your new project  
       1. Suggested updates for `CODE_OF_CONDUCT.md`, `CONTRIBUTING.md` and `README.md` are marked by the keyword `INSERT` and explained in detail within markdown.
+> **Alert**  
+  Unique development configurations may adversely impact testing on local workstations. Testing should be conducted with a [supported python.org release](https://www.python.org/downloads/) or [virtual container as used on GitHub](https://hub.docker.com/_/python/) .
 7. Build locally to test the configuration  
 The application will build, install and deploy from a local command line when all configurations are properly set.
    1. [Install local tooling and requirements](https://github.com/NASA-AMMOS/slim-starterkit-python/tree/main#required-local-tooling)
    2. [Clean and build](https://github.com/NASA-AMMOS/slim-starterkit-python/tree/main#local-build-testing) and clean again after module builds successfully
 > **Information**  
-  To validate the module, we test on the Test PyPi sandbox _by default_. To release on the official PyPi, a _minor configuration change is required_. __All previous steps must be complete.__
+  To validate the module, we test on the Test PyPi sandbox _by default_. Then, to release on the official PyPi, a _minor configuration change is required_. __All previous steps must be complete.__
 8. Build on GitHub  
 A release kicks off a build and release process in GitHub Actions. 
-   1. Publish to Test PyPi
+   1. Test publication on Test PyPi
       1. Update the [version number in the `version.py` file](https://github.com/NASA-AMMOS/slim-starterkit-python/blob/main/slim_sample_project/version.py).
       2. [Kick off a build by releasing your product using the same version.](https://github.com/NASA-AMMOS/slim-starterkit-python/tree/main#automated-build-kickoff)
-   2. Enable for official PyPi release
-      1. Remove Test PyPi coordinates from the `python-publish.yml` configuration file:
-         1. Final value: `twine upload --verbose dist/*.whl dist/*.zip` (This removes '`--repository testpypi`' from the command.)
-      2. Update the [version number in the `version.py` file](https://github.com/NASA-AMMOS/slim-starterkit-python/blob/main/slim_sample_project/version.py).
-      3. [Kick off a build by releasing your product using the same version.](https://github.com/NASA-AMMOS/slim-starterkit-python/tree/main#automated-build-kickoff)
+      3. When the product builds successfully, proceed to step **ii**. _Otherwise, revisit earlier steps and check for errors or other invalid settings._
+   2. Release to PyPi (simple configuration changes point at the release server)
+      1. Update `PYPI_API_TOKEN` to point at PyPi in [GitHub Secrets](https://docs.github.com/en/actions/security-guides/encrypted-secrets?tool=webui#creating-encrypted-secrets-for-a-repository) in your newly created repository 
+         1. In the repository, select the `Settings` tab and navigate to `Security`: `Secrets and variables` **-->** `Actions`. 
+         2. Recalling the PyPi token previously saved in step 3(ii): In `Repository secrets`, edit the `PYPI_API_TOKEN` and paste the saved PyPi token value to update it.
+      2. Change the `python-publish.yml` configuration to remove Test PyPi coordinates
+         1. Remove '`--repository testpypi`' from the one-line publish command to read: `twine upload --verbose dist/*.whl dist/*.zip` 
+      3. Update the [version number in the `version.py` file](https://github.com/NASA-AMMOS/slim-starterkit-python/blob/main/slim_sample_project/version.py).
+      4. [Kick off a build by releasing your product using the same version.](https://github.com/NASA-AMMOS/slim-starterkit-python/tree/main#automated-build-kickoff)
 
 #### Deliverables
 This starter kit produces several deliverables deployed for distribution:
