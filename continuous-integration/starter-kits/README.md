@@ -19,19 +19,24 @@ Starter Kit:
 
 To leverage this template, make sure to do the following:
 1. Discuss with your development team continuous integration best practices and seek consensus on a workflow to build, publish and release software. 
-2. Create a new repository by:
-   a. [Creating a new repository using our template repository](https://github.com/NASA-AMMOS/slim-starterkit-python/generate) (GitHub only)
-   b. [Cloning and manually using our template repository](https://github.com/NASA-AMMOS/slim-starterkit-python). 
+2. Create a new repository by one of the following methods:
+   1. [Creating a new repository using our repository template](https://github.com/NASA-AMMOS/slim-starterkit-python/generate) (GitHub only); or 
+   2. [Cloning and manually editing our starter kit repository](https://github.com/NASA-AMMOS/slim-starterkit-python). 
 > **Requirement**  
+    • [Sandbox strategy](http://agiledata.org/essays/sandboxes.html): Two separate accounts must be created on **(1) Test PyPi** and **(2) PyPi**. We'll name values similarly and switch them later when everything is working.  
     • Admin rights are necessary to set up `GitHub Secrets`.  
-    • Name tokens identically in both Test PyPi and PyPi. We'll substitute values later using a [sandbox strategy](http://agiledata.org/essays/sandboxes.html) to test.
 3. Setup account credentials:
-   1. [Test PyPi](https://test.pypi.org/account/register/) and [PyPi](https://pypi.org/account/register/) 
-      1. Navigate to `Account Settings` **->** `API tokens` and press the button `Add API Token`. Name your token `PYPI_API_TOKEN`, generate it and copy the value to use later for `GitHub Secrets`.
-      2. Repeat this for both a [Test PyPi token](https://test.pypi.org/manage/account/token/) and [PyPi token](https://pypi.org/manage/account/token/). Remember to separately note both tokens for later use.
-   2. [GitHub Secrets](https://docs.github.com/en/actions/security-guides/encrypted-secrets?tool=webui#creating-encrypted-secrets-for-a-repository)
+   1. [Test PyPi](https://test.pypi.org/account/register/)
+      1. Create a new account or login to an existing account.
+      2. Navigate to `Account Settings` **->** `API tokens` and press the button `Add API Token`. Name your token `PYPI_API_TOKEN` and generate it.
+      3. **Copy the value** and retain the [Test PyPi token](https://test.pypi.org/manage/account/token/) to use in `GitHub Secrets`.
+   2. [PyPi](https://pypi.org/account/register/) 
+      1. Create a new account or login to an existing account.
+      2. Navigate to `Account Settings` **->** `API tokens` and press the button `Add API Token`. Name your token `PYPI_API_TOKEN` and generate it.
+      3. **Copy the value** and retain the [PyPi token](https://pypi.org/manage/account/token/) to use later in `GitHub Secrets`.
+   3. [GitHub Secrets](https://docs.github.com/en/actions/security-guides/encrypted-secrets?tool=webui#creating-encrypted-secrets-for-a-repository) (use the _Test PyPi token_ here initially)
       1. In the repository, select the `Settings` tab and navigate to `Secrets` **-->** `Actions` and press the button `New repository Secret`.
-      2. Name your secret `PYPI_API_TOKEN` and paste the value from **Test PyPi**. (Later, this value will be replaced with the saved **PyPi** token to enable public release.)
+      2. Name your secret `PYPI_API_TOKEN` and paste the value from **Test PyPi**. (Later, this value will be replaced with the actual **PyPi** token to enable public release.)
 > **Shortcut**  
   Already skilled with Python [Setuptools](https://setuptools.pypa.io/en/latest/userguide/index.html) build system? You may selectively apply files from the starter kit to your own project using details below. 
 4. Choose a [unique name for your Python 3 module](https://peps.python.org/pep-0008/#package-and-module-names). The name shouldn't duplicate any of the [currently published modules in PyPi](https://pypi.org/search/?q=).
