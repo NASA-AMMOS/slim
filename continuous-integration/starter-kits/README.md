@@ -145,3 +145,7 @@ To leverage this template, make sure to do the following:
 4. Automation should be set up to scan for new commits, but it's a good idea to scan the history of commits starting out: `git secrets --scan-history`
    1. If you receive no output, that means the tool found now problematic commits.
 
+### Automated Checking for General Sensitive Information within Git
+This tool help you get started with the detection of sensitive information across three layers of Git and GitHub repositories. This solution also provides customized plugins to support more types of secrets. Please see links below for details.
+
+[Starter Kit](detect-secrets/README.md)
