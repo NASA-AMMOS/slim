@@ -2,6 +2,19 @@
 
 This page contains starter kit information, which represent templates, code and configuration to help you get started quickly with continuous testing best practices described in this overall guide. Please see categories and links below for details. 
 
+## Static Application Security Testing
+
+This section contains links to sample actions, templates and configurations that analyze and validate code for security flaws and sensitive information. Identifying security vulnerabilities and sensitive data is an [OSS cybersecurity](https://www.cisa.gov/uscert/ncas/alerts/aa22-137a) [best practice](https://appel.nasa.gov/2022/06/30/spotlight-on-lessons-learned-open-source-and-commercial-web-software-vulnerabilities/).  
+
+### Detect Secrets 
+A OSS tool for detecting sensitive information in project files.
+
+#### Automated Secret Scanning on Commit
+
+
+
+
+
 ## Software Composition Analysis
 
 This section contains links to sample actions, templates and configurations that analyze and validate composition of Open Source Software (OSS) components in software systems. Identifying software and licensing vulnerabilites and ensuring routine software updates is an [OSS cybersecurity](https://www.cisa.gov/uscert/ncas/alerts/aa22-137a) [best practice](https://appel.nasa.gov/2022/06/30/spotlight-on-lessons-learned-open-source-and-commercial-web-software-vulnerabilities/).  
@@ -51,5 +64,3 @@ To leverage this template, make sure to do the following:
   Admin rights are necessary to modify `Code security and analysis` settings.
 3. Modify [Dependabot configurations](https://docs.github.com/en/code-security/dependabot/dependabot-version-updates/configuration-options-for-the-dependabot.yml-file#configuration-options-for-the-dependabotyml-file) for your project: (optional)
    1. If only security-related pull requests are desired, [set the `open-pull-requests-limit` property to `0` for `updates` block(s)](https://docs.github.com/en/code-security/dependabot/dependabot-version-updates/configuration-options-for-the-dependabot.yml-file#open-pull-requests-limit).
-
-
