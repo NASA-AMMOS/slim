@@ -137,6 +137,11 @@ For guidance on how to interact with our team, please see our code of conduct lo
 
 <!-- ☝️ Replace with a text describing how people may contribute to your project, or link to your contribution guide directly ☝️ -->
 
+[INSERT LINK TO YOUR GOVERNANCE.md OR SHARE TEXT HERE]
+<!-- example link to GOVERNANCE.md>
+For guidance on our governance approach, including decision-making process and our various roles, please see our governance model at: [GOVERNANCE.md](GOVERNANCE.md)
+-->
+
 ## License
 
 See our: [LICENSE](LICENSE)
