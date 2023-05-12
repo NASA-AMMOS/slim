@@ -315,13 +315,14 @@ sequenceDiagram
     L3->>DS: Scan for Secrets
     alt Secrets Detected in L3
         DS-->>Dev: Secrets Detected
+        Note over Dev: Manually check the file for same type of secrets
         Dev->>L1: Use Auditing Feature to Identify Files for Cleaning
         Dev->>Dev: Clean Commit History
-        Note over Dev: If a secret has already been committed, visit: <br/> https://help.github.com/articles/removing-sensitive-data-from-a-repository
+        Note over Dev: If a secret has already been committed, refer: <br/> https://help.github.com/articles/removing-sensitive-data-from-a-repository
         Dev->>L2: Set Up Git Commit Scan
-        Note over Dev, L2: Minimize the chance of pushing secrets <br/> Easier to clean local files than GitHub commit history
-        Dev->>L1: Involve Full Scan & Audit in Each Stage
-        Note over Dev, L1: Helps generate, update or analyze baseline file for L2 and L3
+        Note over Dev, L2: Minimizes chances of pushing secrets <br/> Easier to clean local files than GitHub commit history
+        Dev->>L1: Use Full Scan & Audit at Each Stage
+        Note over Dev, L1: Assists in generating, updating or analyzing baseline file for L2 and L3
         Dev->>L3: Retry Push/Merge to Main Branch
     else No Secrets Detected
         DS-->>GH: No Secrets Detected
