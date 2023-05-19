@@ -27,7 +27,7 @@ mindmap
 
 ```
 
-Our application of `detect-secrets` embraces a tri-layered approach, bolstered by customized plugins, to provide robust protection against potential secret leaks at the earliest stage.
+Our application of `detect-secrets` embraces a tri-layered approach, bolstered by customized plugins ([full list of plugins available here](https://github.com/NASA-AMMOS/slim-detect-secrets/tree/exp#viewing-all-enabled-plugins)), to provide robust protection against potential secret leaks at the earliest stage.
 This page proposes three layers of secret scanning to help preventing secrets from being leaked on GitHub
 
 Three layers of protection are:
@@ -41,15 +41,15 @@ flowchart TB
   User([fa:fa-user User])
 
   subgraph UserWorkflow["User Workflow to Secure Secrets"]
-    Layer1["1. Layer 1: GitHub.com (server-side)"]
-    Layer2["2. Layer 2: Git commit scan (client-side)"]
-    Layer3["3. Layer 3: Full scan (client-side)"]
+    Layer1["Layer 1: Full scan (client-side)"]
+    Layer2["Layer 2: Git commit scan (client-side)"]
+    Layer3["Layer 3: GitHub.com (server-side)"]
 
-    Layer1 -->|If Secrets Detected| Clean1[Purge or Fix the commit manually]
+    Layer1 -->|If Secrets Detected| Clean3[Clean local file directly.]
     Layer2 -->|If Secrets Detected| Clean2[Clean local file directly. <br> Don't need to worry about cleaning commit history]
-    Layer3 -->|If Secrets Detected| Clean3[Clean local file directly.]
+    Layer3 -->|If Secrets Detected| Clean1[Purge or Fix the commit manually]
 
-    Secure["Only Main branch is in safe. <br> Secrets are leaked on other branch before cleaning"]
+    Secure["Only GitHub-Protected branch is in safe. <br> Secrets are leaked on other branch before cleaning"]
     Clean1 --> Secure
     
     SaveTime["It saves your time. And secrets are safe from GitHub"]
@@ -72,8 +72,22 @@ flowchart TB
   style SaveTime fill:#5ABF9B,stroke:#333,stroke-width:2px
   style Secure fill:#AF3034,stroke:#333,stroke-width:2px
 ```
+> **Note**: Below three layers, are running on experimental version [slim-detect-secrets](https://github.com/NASA-AMMOS/slim-detect-secrets/tree/exp) which supports additional secret detection [plugins](https://github.com/NASA-AMMOS/slim-detect-secrets/tree/exp#viewing-all-enabled-plugins).
+> 
+> They are:
+> > * [AWS sensitive information]() (click for more information)
+> > * Public IP Address
+> > * Absolute Path
+> > * Email Address
+> >
+> > Link to their [implementation](https://github.com/NASA-AMMOS/slim-detect-secrets/tree/exp/detect_secrets/plugins) and [test suites](https://github.com/NASA-AMMOS/slim-detect-secrets/tree/exp/tests/plugins)
+> 
+> It is being tested by both [NASA-AMMOS/slim](https://github.com/NASA-AMMOS/slim) team and [Yelp/detect-secrets](https://github.com/Yelp/detect-secrets) team.
+> Eventually, it will be merged into Yelp/detect-secrets.
+> 
+> At that time, this document will be updated to use the official version of detect-secrets.
 #### Layer 1: Full Scan and Audit (Client-side)
-The first layer initiates a direct scan on the developer's local environment. This is achieved through the `detect-secrets` tool, which scans the entire codebase and outputs a new baseline file containing any detected secrets. The developer can then audit this file to view detailed information about any detected secrets. Detailed documentation for Layer 1
+The first layer initiates a direct scan on the developer's local environment. This is achieved through the `detect-secrets` tool, which scans the entire codebase and outputs a new baseline file containing detected secrets. The developer can then audit this file to view detailed information about detected secrets.
 ```mermaid
 sequenceDiagram
     participant Dev as Developer
@@ -98,61 +112,23 @@ sequenceDiagram
 
 ```
 Starter Kit:
-1. Install [detect-secrets](https://github.com/Yelp/detect-secrets)
+1. Install experimental version of [slim-detect-secrets](https://github.com/NASA-AMMOS/slim-detect-secrets/tree/exp)
 ```bash
-pip install detect-secrets
-```
-##### 2. Install our additional configurations
-cd to your project root directory
-```bash
-cd <your-project-root-directory>
+pip install git+https://github.com/NASA-AMMOS/slim-detect-secrets.git@exp
 ```
 
-Download our customized setup
+2. Scan all local files from current directory and output the result as a baseline file
 ```bash
-git clone --depth 1 https://github.com/NASA-AMMOS/slim-config-detect-secrets.git temp_repo && \
-# Copy needed files and folders from the temporary folder to the current project directory
-cp -r temp_repo/.detect-secrets . && \
-cp -r temp_repo/.pre-commit-config.yaml . && \
-# Remove the temporary folder
-rm -rf temp_repo
+detect-secrets scan ./ --all-files --exclude-files '.secrets.*' --exclude-files '.git*' > .secrets.baseline
 ```
+Here it scans all the local files from current directory, but excludes `.git` directory and `.secrets` baseline files from scanning to reduce false positive. Make modifications when necessary.
 
-After running this command, you will see a new folder `.detect-secrets` and a new file `.pre-commit-config.yaml` in your project root directory.
-
-In `.detect-secrets` folder, there are `.secrets.baseline` file and `plugins` folder. 
-
-For example,
-```text
-├── .detect-secrets
-│   ├── .secrets.baseline
-│   └── plugins
-│       ├── ...
-│       ├── ...
-│       ├── ...
-├── .pre-commit-config.yaml
-```
-> Note: We are in the progress of contributing these general plugins back to the `detect-secrets` community.
-> Once they are accepted, configuration will be simplified.
-3. Scan all local files from current directory and output the result as a baseline file
+3. Check result in the baseline file
 ```bash
-mkdir -p .detect-secrets \
-&& detect-secrets scan ./ \
-  --all-files \
-  --baseline .detect-secrets/.secrets.baseline \
-  --exclude-files '^\.git(/.*)?$' \
-  --exclude-files '^\.detect-secrets(/.*)?$' \
-  -p .detect-secrets/plugins/absolute_filepath.py \
-  -p .detect-secrets/plugins/aws_sensitive_info.py \
-  -p .detect-secrets/plugins/email_address.py \
-  -p .detect-secrets/plugins/ip_address.py
+cat .secrets.baseline
 ```
-This command will scan all files from current directory and output the result as a baseline file `.detect-secrets/.secrets.baseline`.
-4. Check result in the baseline file
-```bash
-cat .detect-secrets/.secrets.baseline
-```
-If any secrets are detected, the result will be located at the "results": of the file.
+> This command is supported in Unix-like system. For Windows, you can use other command, such as `type .secrets.baseline`
+If any secrets are detected, the result will be located at the "results:" of the file.
 
 For example,
 ```json
@@ -166,19 +142,22 @@ For example,
     "line_number": 39
 },
 ```
-5. Analyze results by `audit` tool
+Only line number is visible through this approach. You can check them manually in the file, or use the following audit tool to conveniently view the actual secret.
+
+4. Analyze results by `audit` tool
 ```bash
-detect-secrets audit .detect-secrets/.secrets.baseline
+detect-secrets audit .secrets.baseline
 ```
 > detect-secrets audit tool can provide you an interactive interface to view the actual secret based on the line number
 > and label it as false positive or true positive.
 
 For example,
 
-<img width="568" alt="Screen Shot 2023-04-20 at 7 08 08 AM" src="https://user-images.githubusercontent.com/92573736/233392022-9865f7c3-9f3c-4498-8c13-109b75ff1ef3.png">
+<img width="564" src="https://github.com/NASA-AMMOS/slim/assets/92573736/0fb25452-1ada-4979-9873-a1ca615701b5">
 
+It also provides other ways to present the result. For more information, please refer to [Auditing Secrets in Baseline](https://github.com/Yelp/detect-secrets#auditing-secrets-in-baseline)
 #### Layer 2: Git Commit Scan (Client-side)
-The second layer is a pre-commit hook implemented in the local environment. This hook utilizes a pre-configured `.pre-commit-config.yaml` file, which contains a baseline file for secret comparison. If any new secrets are detected during the commit process, the hook prevents the commit from being created. This acts as a safety net, ensuring no new secrets are accidentally committed. Detailed documentation for Layer 2
+The second layer is a pre-commit hook implemented in the local environment. This hook utilizes a `.pre-commit-config.yaml` file to config the pre-commit hook. The hook is triggered when the developer attempts to commit changes. The hook will scan the changes and **compare** them to the baseline file generated in the first layer. If any **new secrets** are detected, the hook will prevent the commit and report the detected secrets to the developer.
 ```mermaid
 sequenceDiagram
     participant User as Developer
@@ -212,69 +191,153 @@ Starter Kit:
 ```bash
 pip install pre-commit
 ```
-2. [Install our additional configurations (same as layer 1)](#2-install-our-additional-configurations)
+This tool is used to install pre-commit hook in your local git repository.
+
+2. Create `.pre-commit-config.yaml` file in root directory of your project
+```yaml
+repos:
+  - repo: https://github.com/NASA-AMMOS/slim-detect-secrets
+    # using commit id for now, will change to tag when official version is released
+    rev: 91e097ad4559ae6ab785c883dc5ed989202c7fbe
+    hooks:
+      - id: detect-secrets
+        args:
+          - '--baseline'
+          - '.secrets.baseline'
+          - '--exclude-files'
+          - '.git*'
+          - '--exclude-files'
+          - '.secrets.*' 
+
+```
+This file is used to config the pre-commit hook. In this example, we use the experimental version of `slim-detect-secrets` tool. The `--baseline` argument is used to specify the baseline file generated in the first layer. The `--exclude-files` argument is used to exclude the `.git` directory and `.secrets` baseline files from scanning to reduce false positives. Make modifications when necessary.
+
 3. Install pre-commit hook
 ```bash
 pre-commit install
 ```
-> This command will install a pre-commit hook in your local git repository based on the configurations in `.pre-commit-config.yaml` file.
-4. Commit your changes
+This command reads the `.pre-commit-config.yaml` file and installs the pre-commit hook in your local git repository.
+After this, you can see a `.git/hooks/pre-commit` file is created in your local git repository.
 
-    Now, you can commit your changes as usual. If any new secrets are detected, the commit will be prevented and the secrets will be reported.
+4. Make sure you have the baseline file `.secrets.baseline` in your local git repository
 
-    For example,
+5. Commit your changes
 
-    <img width="559" alt="Screen Shot 2023-04-20 at 7 32 10 AM" src="https://user-images.githubusercontent.com/92573736/233398613-6e189322-4d97-47c3-b3ba-bd700a716cf6.png">
+Now, you can commit your changes as usual. If any **new secrets** are detected, the commit will be prevented and the secrets will be reported.
+
+For example,
+
+<img width="559" alt="Screen Shot 2023-04-20 at 7 32 10 AM" src="https://user-images.githubusercontent.com/92573736/233398613-6e189322-4d97-47c3-b3ba-bd700a716cf6.png">
 
 
 > **Note**: pre-commit hook block commit by comparing new secrets with the results in `.secrets.baseline` file. If you want to add new secret results, you need to update `.secrets.baseline` file by re-running the scan command and generate a new baseline file.
 >
-> You can create an empty baseline file by running this command at a directory without secrets.
+> You can create an empty result baseline file by running this command at a directory without secrets.
 
 #### Layer 3: Server-side Push to GitHub.com
-The final layer of our solution is a server-side pre-commit scan powered by `pre-commit.ci`. This scan is triggered whenever a developer pushes to a branch or creates a pull request. It uses the same `.pre-commit-config.yaml` file as Layer 2, ensuring consistency between local and server-side checks. If the scan detects any new secrets, it returns a status check. If the target branch is protected, GitHub uses this status check to decide whether the merge or push can proceed. Detailed documentation for Layer 3
-
-This multi-layered approach to secret scanning provides a robust and comprehensive secret detection system, reducing the risk of exposing sensitive information in your codebase. For a more in-depth explanation of each layer, please refer to the respective detailed documentation links.
+The final layer of our solution is a server-side pre-commit scan powered by [GitHub Action](https://github.com/features/actions). This scan is triggered whenever a developer pushes to a branch or creates a pull request. If the scan detects any new secrets, it can generate a not detailed report compared to layer 2 (for security concern), email to the developer, and report a status check to GitHub. The status check will prevent the developer from merging the pull request or pushing to the **protected** branch. This layer protects the protected branch from being polluted by secrets, but secrets can still be pushed to other branches.
 
 ```mermaid
 sequenceDiagram
     participant User as Developer
     participant GH as GitHub
-    participant Config as .pre-commit-config.yaml
-    participant CI as pre-commit CI
+    participant Workflow as detect-secrets.yaml
+    participant GA as GitHub Action
     participant DS as Detect-Secrets
 
     Note over User,GH: Developer creates pull request or pushes to branch
     User->>+GH: Creates pull request / pushes to branch
-    GH->>+Config: Fetches pre-commit config
-    Config->>CI: Returns config with Detect-Secrets setup
-    CI->>DS: Requests secret scan
-    DS->>DS: Scans pull request / branch for secrets with custom plugins
+    GH->>+Workflow: Triggers GitHub Action workflow
+    Workflow->>GA: Sets up and runs Detect-Secrets scan
+    GA->>DS: Requests secret scan
+    DS->>DS: Scans repository for secrets
     alt Secrets Detected
-        DS-->>CI: Returns detected secrets
-        CI-->>GH: Reports status check as failed
-        GH-->>User: Prevents merge / push & reports status check
+        DS-->>GA: Returns detected secrets
+        GA-->>GH: Fails status check
+        GH-->>User: Prevents merge / push & sends email notification
     else No Secrets Detected
-        DS-->>CI: Returns clean result
-        CI-->>GH: Reports status check as passed
+        DS-->>GA: Returns clean result
+        GA-->>GH: Passes status check
         GH-->>User: Allows merge / push
     end
 
 ```
 Starter Kit:
-1. [Install our additional configurations (same as layer 1 and layer 2)](#2-install-our-additional-configurations)
+1. Create a workflow file `detect-secrets.yaml` in `.github/workflows` directory from your repository root.
+```yaml
+name: Secret Detection Workflow
+on:
+  push:
+    branches:
+      - main
+  pull_request:
+    branches:
+      - main
 
-2. Register your repository on [pre-commit.ci](https://results.pre-commit.ci/)
-   <img width="842" alt="Screen Shot 2023-04-20 at 8 53 23 AM" src="https://user-images.githubusercontent.com/92573736/233420651-68922f94-524b-41a6-8bc0-8d99e7403860.png">
-   After this, every time you push to a branch or create a pull request, pre-commit.ci will run a scan and report the results as a status check.
+jobs:
+  secret-detection:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v2
+        
+      - name: Install necessary packages
+        run: |
+          # experimental version of slim-detect-secrets
+          pip install git+https://github.com/NASA-AMMOS/slim-detect-secrets.git@exp
+          pip install jq
+          
+      - name: Scan repository for secrets
+        run: |
+          # scripts to scan repository for new secrets
+          
+          # backup the list of known secrets
+          cp .secrets.baseline .secrets.new
 
-   <img width="527" alt="Screen Shot 2023-04-20 at 8 55 21 AM" src="https://user-images.githubusercontent.com/92573736/233421145-a86e1667-ec8f-464e-bd25-d6f4acc07fad.png">
-   
-   <img width="788" alt="Screen Shot 2023-04-20 at 8 56 05 AM" src="https://user-images.githubusercontent.com/92573736/233421335-3b90039b-d9e1-4224-ab6d-9b7fada5cf44.png">
+          # find the secrets in the repository
+          detect-secrets scan --baseline .secrets.new --exclude-files '.secrets.*' --exclude-files '.git*'
+               
+          # if there is any difference between the known and newly detected secrets, break the build
+          # Function to compare secrets without listing them
+          compare_secrets() { diff <(jq -r '.results | keys[] as $key | "\($key),\(.[$key] | .[] | .hashed_secret)"' "$1" | sort) <(jq -r '.results | keys[] as $key | "\($key),\(.[$key] | .[] | .hashed_secret)"' "$2" | sort) >/dev/null; }
+        
+          # Check if there's any difference between the known and newly detected secrets
+          if ! compare_secrets .secrets.baseline .secrets.new; then
+          echo "⚠️ Attention Required! ⚠️" >&2
+          echo "New secrets have been detected in your recent commit. Due to security concerns, we cannot display detailed information here and we cannot proceed until this issue is resolved." >&2
+          echo "" >&2
+          echo "Please follow the steps below on your local machine to reveal and handle the secrets:" >&2
+          echo "" >&2
+          echo "1️⃣ Run the 'detect-secrets' tool on your local machine. This tool will identify and clean up the secrets. You can find detailed instructions at this link: https://nasa-ammos.github.io/slim/continuous-testing/starter-kits/#detect-secrets" >&2
+          echo "" >&2
+          echo "2️⃣ After cleaning up the secrets, commit your changes and re-push your update to the repository." >&2
+          echo "" >&2
+          echo "Your efforts to maintain the security of our codebase are greatly appreciated!" >&2
+          exit 1
+          fi
 
-3. [Protect your branch](https://docs.github.com/en/repositories/configuring-branches-and-merges-in-your-repository/managing-protected-branches/managing-a-branch-protection-rule)
+```
+This file is used to config the GitHub Action workflow. After this, GitHub will automatically run the workflow when you push to the branch or create a pull request.
+This template currently only supports `main` branch. If you want to use it for other branches, you need to change the `on` section.
 
-    After this, if status check fails, GitHub will prevent the merge or push to the protected branch.
+This workflow will run the `detect-secrets` tool on the GitHub server. If any new secrets are detected, it will:
+- Fail the status check
+
+  <img width="507" src="https://github.com/NASA-AMMOS/slim/assets/92573736/bc7670f8-5bbb-414c-b9af-803be05efd67">
+- Print a message in the "Details" with instructions on how to resolve the issue
+
+  <img width="1627" src="https://github.com/NASA-AMMOS/slim/assets/92573736/7e884d60-c972-46f2-9785-31b09cebb93f">
+- Send an email notification to the user
+
+  <img width="1192" src="https://github.com/NASA-AMMOS/slim/assets/92573736/142e0693-f3f8-42c8-92d7-deb653bdb09c">
+
+2. [Protect your branch](https://docs.github.com/en/repositories/configuring-branches-and-merges-in-your-repository/managing-protected-branches/managing-a-branch-protection-rule)
+
+<img width="1107" src="https://github.com/NASA-AMMOS/slim/assets/92573736/5a430b2f-7f9b-4ba0-a06a-7c53b300f08b">
+
+After this, if status check fails, GitHub will prevent the merge or push to the protected branch.
+
+<img width="918" src="https://github.com/NASA-AMMOS/slim/assets/92573736/9f8b6239-840a-4ba4-9458-d795f46d7acd">
 
 #### Attention for using Detect Secrets
 > 1.It does not [show all the same type of secrets in a same file to minimize noise](https://github.com/Yelp/detect-secrets/blob/master/docs/design.md#:~:text=Furthermore%2C%20this%20will%20not%20flag%20on%20every%20single%20usage%20of%20a%20given%20secret%20in%20a%20given%20file%2C%20to%20minimize%20noise.)
@@ -287,7 +350,7 @@ Starter Kit:
 > 2.Even though detect-secrets has strong secret-detect ability compared to other tools, it is still possible that detect-secrets will not show you a file that contains secrets due to a new type of secret not capable by current plugins.
 >
 > **->** Thus, the best practice is always to be careful as a developer and **manually** check the files that you think might contain secrets.
->> `detect-secrets` is a backup approach to minimize the chance of pushing secrets to the cloud.
+>> **Note**: `detect-secrets` is a backup approach to minimize the chance of pushing secrets to the cloud.
 
 #### Recommended Workflow
 1. At least use layer 3 (Server-side push to GitHub.com) to protect the main branch from being pushed or merged if any secrets are detected.
@@ -315,8 +378,8 @@ sequenceDiagram
     L3->>DS: Scan for Secrets
     alt Secrets Detected in L3
         DS-->>Dev: Secrets Detected
-        Note over Dev: Manually check the file for same type of secrets
         Dev->>L1: Use Auditing Feature to Identify Files for Cleaning
+        Note over L1: Assists in identifying files that need to be cleaned. <br/> Recommend to manully double check detected files <br/> due to "minimize noise" feature from detect-secrets
         Dev->>Dev: Clean Commit History
         Note over Dev: If a secret has already been committed, refer: <br/> https://help.github.com/articles/removing-sensitive-data-from-a-repository
         Dev->>L2: Set Up Git Commit Scan
@@ -335,7 +398,6 @@ sequenceDiagram
 Check out
 1. [detect-secrets](https://github.com/Yelp/detect-secrets)
 2. [pre-commit](https://pre-commit.com/)
-3. [pre-commit.ci](https://pre-commit.ci/)
 
 ## Software Composition Analysis
 
