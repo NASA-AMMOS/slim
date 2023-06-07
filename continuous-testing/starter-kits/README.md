@@ -45,23 +45,23 @@ flowchart TB
     Layer2["Layer 2: Git commit scan (client-side)"]
     Layer3["Layer 3: GitHub.com (server-side)"]
 
-    Layer1 -->|If Secrets Detected| Clean3[Clean local file directly.]
+    Layer1 -->|If Secrets Detected| Clean1[Clean local file directly.]
     Layer2 -->|If Secrets Detected| Clean2[Clean local file directly. <br> Don't need to worry about cleaning commit history]
-    Layer3 -->|If Secrets Detected| Clean1[Purge or Fix the commit manually]
-
-    Secure["Only GitHub-Protected branch is in safe. <br> Secrets are leaked on other branch before cleaning"]
-    Clean1 --> Secure
+    Layer3 -->|If Secrets Detected| Clean3[Purge or Fix the commit manually]
     
     SaveTime["It saves your time. And secrets are safe from GitHub"]
+    Clean1 --> SaveTime
     Clean2 --> SaveTime
-    Clean3 --> SaveTime
+
+    Secure["Only GitHub-Protected branch is in safe. <br> Secrets are leaked on other branch before cleaning"]
+    Clean3--> Secure
   end
 
   User -->|At least use| Layer1
   User -->|Helpful to use| Layer2
   User -->|Optional to use| Layer3
 
-  style User fill:#F6F5F3,stroke:#333,stroke-width:1px
+    style User fill:#F6F5F3,stroke:#333,stroke-width:1px
   style UserWorkflow fill:#AF7AC5,stroke:#333,stroke-width:2px
   style Layer1 fill:#F3B044,stroke:#333,stroke-width:2px,stroke-dasharray: 5 5
   style Layer2 fill:#F3B044,stroke:#333,stroke-width:2px,stroke-dasharray: 5 5
@@ -71,6 +71,7 @@ flowchart TB
   style Clean3 fill:#5A88ED,stroke:#333,stroke-width:2px
   style SaveTime fill:#5ABF9B,stroke:#333,stroke-width:2px
   style Secure fill:#AF3034,stroke:#333,stroke-width:2px
+
 ```
 > **Note**: Below three layers, are running on experimental version [slim-detect-secrets](https://github.com/NASA-AMMOS/slim-detect-secrets/tree/exp) which supports additional secret detection [plugins](https://github.com/NASA-AMMOS/slim-detect-secrets/tree/exp#viewing-all-enabled-plugins).
 > 
