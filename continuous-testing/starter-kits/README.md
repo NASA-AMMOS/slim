@@ -28,7 +28,7 @@ mindmap
 ```
 
 Our application of `detect-secrets` embraces a tri-layered approach, bolstered by customized plugins ([full list of plugins available here](https://github.com/NASA-AMMOS/slim-detect-secrets/tree/exp#viewing-all-enabled-plugins)), to provide robust protection against potential secret leaks at the earliest stage.
-This page proposes three layers of secret scanning to help preventing secrets from being leaked on GitHub
+This page proposes three layers of secret scanning to help prevent secrets from being leaked on GitHub
 
 Three layers of protection are:
 1. Client-side full scan of existing code base
