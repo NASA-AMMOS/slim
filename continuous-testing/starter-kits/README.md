@@ -194,7 +194,7 @@ pip install pre-commit
 ```
 This tool is used to install pre-commit hook in your local git repository.
 
-2. Create `.pre-commit-config.yaml` file in root directory of your project
+2. Create `.pre-commit-config.yaml` file in root directory of your project with the following contents
 ```yaml
 repos:
   - repo: https://github.com/NASA-AMMOS/slim-detect-secrets
