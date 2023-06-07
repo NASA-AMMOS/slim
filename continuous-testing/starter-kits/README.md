@@ -134,11 +134,11 @@ If any secrets are detected, the result will be located at the "results:" of the
 For example,
 ```json
 "results": {
-    "Jenkins/e2e-opera-pcm-develop.sh": [
+    "Sample/sample-develop.sh": [
     {
     "type": "AWS Sensitive Information",
-    "filename": "Jenkins/e2e-opera-pcm-develop.sh",
-    "hashed_secret": "a2c61f79dd90429e5284ab45de3318c16756a2f0",
+    "filename": "Sample/sample-develop.sh",
+    "hashed_secret": "d3f72b97cd8756fe12345678bdf96aef1ac23b7d",
     "is_verified": false,
     "line_number": 39
 },
