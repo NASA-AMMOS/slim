@@ -263,62 +263,9 @@ sequenceDiagram
 
 ```
 Starter Kit:
-1. Create a workflow file `detect-secrets.yaml` in `.github/workflows` directory from your repository root.
-```yaml
-name: Secret Detection Workflow
-on:
-  push:
-    branches:
-      - main
-  pull_request:
-    branches:
-      - main
+1. Create a GitHub Action workflow file in `.github/workflows/` directory from your repository root. Visit the [detect-secrets Action](https://github.com/marketplace/actions/detect-secrets-action) in the GitHub Actions Marketplace for details on how to add it to your repository.
 
-jobs:
-  secret-detection:
-    runs-on: ubuntu-latest
-    steps:
-      - name: Checkout code
-        uses: actions/checkout@v2
-        
-      - name: Install necessary packages
-        run: |
-          # experimental version of slim-detect-secrets
-          pip install git+https://github.com/NASA-AMMOS/slim-detect-secrets.git@exp
-          pip install jq
-          
-      - name: Scan repository for secrets
-        run: |
-          # scripts to scan repository for new secrets
-          
-          # backup the list of known secrets
-          cp .secrets.baseline .secrets.new
-
-          # find the secrets in the repository
-          detect-secrets scan --baseline .secrets.new --exclude-files '.secrets.*' --exclude-files '.git*'
-               
-          # if there is any difference between the known and newly detected secrets, break the build
-          # Function to compare secrets without listing them
-          compare_secrets() { diff <(jq -r '.results | keys[] as $key | "\($key),\(.[$key] | .[] | .hashed_secret)"' "$1" | sort) <(jq -r '.results | keys[] as $key | "\($key),\(.[$key] | .[] | .hashed_secret)"' "$2" | sort) >/dev/null; }
-        
-          # Check if there's any difference between the known and newly detected secrets
-          if ! compare_secrets .secrets.baseline .secrets.new; then
-          echo "⚠️ Attention Required! ⚠️" >&2
-          echo "New secrets have been detected in your recent commit. Due to security concerns, we cannot display detailed information here and we cannot proceed until this issue is resolved." >&2
-          echo "" >&2
-          echo "Please follow the steps below on your local machine to reveal and handle the secrets:" >&2
-          echo "" >&2
-          echo "1️⃣ Run the 'detect-secrets' tool on your local machine. This tool will identify and clean up the secrets. You can find detailed instructions at this link: https://nasa-ammos.github.io/slim/continuous-testing/starter-kits/#detect-secrets" >&2
-          echo "" >&2
-          echo "2️⃣ After cleaning up the secrets, commit your changes and re-push your update to the repository." >&2
-          echo "" >&2
-          echo "Your efforts to maintain the security of our codebase are greatly appreciated!" >&2
-          exit 1
-          fi
-
-```
-This file is used to config the GitHub Action workflow. After this, GitHub will automatically run the workflow when you push to the branch or create a pull request.
-This template currently only supports `main` branch. If you want to use it for other branches, you need to change the `on` section.
+After this, GitHub will automatically run the workflow when you push to the branch or create a pull request.
 
 This workflow will run the `detect-secrets` tool on the GitHub server. If any new secrets are detected, it will:
 - Fail the status check
