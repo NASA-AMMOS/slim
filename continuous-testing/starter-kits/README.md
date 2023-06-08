@@ -230,9 +230,8 @@ For example,
 
 <img width="559" alt="Screen Shot 2023-04-20 at 7 32 10 AM" src="https://user-images.githubusercontent.com/92573736/233398613-6e189322-4d97-47c3-b3ba-bd700a716cf6.png">
 
-
-> **Note**: pre-commit hook block commit by comparing new secrets with the results in `.secrets.baseline` file. If you want to add new secret results, you need to update `.secrets.baseline` file by re-running the scan command and generate a new baseline file.
->
+> **Note**: The pre-commit hook blocks a commit by comparing new secrets with the results in the `.secrets.baseline` file. If new secrets are introduced, the hook will report them, but it does not automatically update the `.secrets.baseline` file. To update the baseline file with newly introduced secrets, you need to re-run the scan command in Layer 1 (step 2) and generate a new baseline file.
+> 
 > You can create an empty result baseline file by running this command at a directory without secrets.
 
 #### Layer 3: Server-side Push to GitHub.com
