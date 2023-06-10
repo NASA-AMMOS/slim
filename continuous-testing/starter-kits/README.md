@@ -220,7 +220,12 @@ pre-commit install
 This command reads the `.pre-commit-config.yaml` file and installs the pre-commit hook in your local git repository.
 After this, you can see a `.git/hooks/pre-commit` file is created in your local git repository.
 
-4. Make sure you have the baseline file `.secrets.baseline` in your local git repository
+4. Add the baseline file `.secrets.baseline` in your local Git repository under the following conditions only:
+   1. You wish to share white-listed secrets with other team members
+   2. You've removed any references in your code to sensitive secrets detected that are not white-listed, i.e. find and modify code referenced in you `.secrets.baseline` with flag `is_secret: true`
+   3. You've re-run a fresh `detect-secrets scan` followed by a `detect-secrets audit` and your `.secrets.baseline` ONLY now contains white-listed entries, i.e. `is_secret: false`
+   
+**Warning**: Adding your `.secrets.baseline` file to your local Git and pushing changes to a remote without following the above directions could create a security risk by sharing the sensitive parts of your security scan with the outside world!
 
 5. Commit your changes
 
