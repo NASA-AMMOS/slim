@@ -296,7 +296,7 @@ After this, if status check fails, GitHub will prevent the merge or push to the 
 <img width="918" src="https://github.com/NASA-AMMOS/slim/assets/92573736/9f8b6239-840a-4ba4-9458-d795f46d7acd">
 
 #### Attention for using Detect Secrets
-> 1.It does not [show all the same type of secrets in a same file to minimize noise](https://github.com/Yelp/detect-secrets/blob/master/docs/design.md#:~:text=Furthermore%2C%20this%20will%20not%20flag%20on%20every%20single%20usage%20of%20a%20given%20secret%20in%20a%20given%20file%2C%20to%20minimize%20noise.)
+> 1.It does not [show all the same type of secrets in a same file to minimize noise](https://github.com/Yelp/detect-secrets/blob/master/docs/design.md#potentialsecret)
 > 
 > This means sometimes it will only show one secret in a file even if there are multiple **same type of secrets** in the same file.
 > Audit tool will not show all the secrets due to this reason.
