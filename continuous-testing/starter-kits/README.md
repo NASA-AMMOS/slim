@@ -238,6 +238,8 @@ For example,
 <img width="559" alt="Screen Shot 2023-04-20 at 7 32 10 AM" src="https://user-images.githubusercontent.com/92573736/233398613-6e189322-4d97-47c3-b3ba-bd700a716cf6.png">
 
 > **Note**: The pre-commit hook blocks a commit by comparing new secrets with the results in the `.secrets.baseline` file. If new secrets are introduced, the hook will report them, but it does not automatically update the `.secrets.baseline` file. To update the baseline file with newly introduced secrets, you need to re-run the scan command in Layer 1 (step 2) and generate a new baseline file.
+
+> **Note**: during commit checks, detect secrets may not display all secrets present within a single file during a single scan. This can be to [minimize noise](https://github.com/Yelp/detect-secrets/blob/master/docs/design.md#potentialsecret), among other reasons. Thus if you have multiple violations of different types of secrets per file, multiple independent commits may be necessary to help identify all violations.
 > 
 > You can create an empty result baseline file by running this command at a directory without secrets.
 
