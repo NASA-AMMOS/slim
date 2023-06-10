@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width,initial-scale=1">
     <meta name="turbo-root" content="/slim">
-    <meta name="turbo-cache-control" content="no-cache" data-turbo-track="reload" data-track-token="3.0.3.739678403348">
+    <meta name="turbo-cache-control" content="no-cache" data-turbo-track="reload" data-track-token="3.0.3.739679118702">
 
     <!-- See retype.com -->
     <meta name="generator" content="Retype 3.0.3">
@@ -22,21 +22,23 @@
     <meta property="og:url" content="https://nasa-ammos.github.io/slim/continuous-testing/starter-kits/">
     <meta property="og:title" content="Starter Kits">
     <meta property="og:description" content="This page contains starter kit information, which represent templates, code and configuration to help you get started quickly with continuous testing...">
+    <meta property="og:image" content="https://github.com/NASA-AMMOS/slim/assets/3129134/58ecb3de-0ab4-4302-b546-e9cd1de8e52f">
 
     <!-- Twitter -->
     <meta property="twitter:card" content="summary_large_image">
     <meta property="twitter:url" content="https://nasa-ammos.github.io/slim/continuous-testing/starter-kits/">
     <meta property="twitter:title" content="Starter Kits">
     <meta property="twitter:description" content="This page contains starter kit information, which represent templates, code and configuration to help you get started quickly with continuous testing...">
+    <meta property="twitter:image" content="https://github.com/NASA-AMMOS/slim/assets/3129134/58ecb3de-0ab4-4302-b546-e9cd1de8e52f">
 
     <script>(function () { var el = document.documentElement, m = localStorage.getItem("/slim/doc_theme"), wm = window.matchMedia; if (m === "dark" || (!m && wm && wm("(prefers-color-scheme: dark)").matches)) { el.classList.add("dark") } else { el.classList.remove("dark") } })();</script>
 
-    <link href="../../resources/css/retype.css?v=3.0.3.739678403348" rel="stylesheet" />
+    <link href="../../resources/css/retype.css?v=3.0.3.739679118702" rel="stylesheet" />
 
-    <script type="text/javascript" src="../../resources/js/config.js?v=3.0.3.739678403348" data-turbo-eval="false" defer></script>
+    <script type="text/javascript" src="../../resources/js/config.js?v=3.0.3.739679118702" data-turbo-eval="false" defer></script>
     <script type="text/javascript" src="../../resources/js/retype.js?v=3.0.3" data-turbo-eval="false" defer></script>
-    <script id="lunr-js" type="text/javascript" src="../../resources/js/lunr.js?v=3.0.3.739678403348" data-turbo-eval="false" defer></script>
-    <script id="prism-js" type="text/javascript" src="../../resources/js/prism.js?v=3.0.3.739678403348" defer></script>
+    <script id="lunr-js" type="text/javascript" src="../../resources/js/lunr.js?v=3.0.3.739679118702" data-turbo-eval="false" defer></script>
+    <script id="prism-js" type="text/javascript" src="../../resources/js/prism.js?v=3.0.3.739679118702" defer></script>
     <script id="mermaid-js" type="text/javascript" src="../../resources/js/mermaid.js?v=3.0.3" defer></script>
 </head>
 <body>
@@ -197,7 +199,9 @@
 </doc-anchor-target>
 <p><a href="https://github.com/Yelp/detect-secrets">detect-secrets</a> is an industry leading tool to identify secure information included in source controlled files. Its prowess lies in its extensible Python plugin API, which allows custom rules and heuristics to tackle a broad spectrum of secrets. Designed to scan the project&#x27;s current state rather than the entire git history,
 it operates swiftly, making it ideal for continuous integration pipelines. Leveraging the concept of a &quot;baseline file&quot; (<code v-pre>.secrets.baseline</code>), it enables easy handling of known secrets and false positives, facilitating its gradual integration into existing projects.</p>
-<div class="overflow-hidden mb-6 py-4 dark:px-5 dark:bg-white rounded-md"><pre class="mermaid w-full">mindmap
+<!--- Currently not supported with RETYPE v3.0.0 rendering of Mermaid graphs, using inline image instead.
+```mermaid
+mindmap
     )Detect Secrets(
         {{ ERROR }}
         Quick_Scan((Quick Scan))
@@ -210,7 +214,14 @@ it operates swiftly, making it ideal for continuous integration pipelines. Lever
             Microsoft
             IBM
             Yelp
-</pre></div>
+
+```
+--->
+<p><figure class="content-center">
+    <img src="https://github.com/NASA-AMMOS/slim/assets/3129134/58ecb3de-0ab4-4302-b546-e9cd1de8e52f" alt="detect-secrets-wordcloud" />
+    <figcaption class="caption">detect-secrets-wordcloud</figcaption>
+</figure>
+</p>
 <p>Our application of <code v-pre>detect-secrets</code> embraces a tri-layered approach, bolstered by customized plugins (<a href="https://github.com/NASA-AMMOS/slim-detect-secrets/tree/exp#viewing-all-enabled-plugins">full list of plugins available here</a>), to provide robust protection against potential secret leaks at the earliest stage.
 This page proposes three layers of secret scanning to help prevent secrets from being leaked on GitHub</p>
 <p>Three layers of protection are:</p>
