@@ -272,7 +272,87 @@ sequenceDiagram
 
 ```
 Starter Kit:
-1. Create a GitHub Action workflow file in `.github/workflows/` directory from your repository root. Visit the [detect-secrets Action](https://github.com/marketplace/actions/detect-secrets-action) in the GitHub Actions Marketplace for details on how to add it to your repository.
+1. Create a workflow file `detect-secrets.yaml` in `.github/workflows` directory from your repository root.
+```yaml
+name: Secret Detection Workflow
+on:
+  push:
+    branches:
+      - main
+  pull_request:
+    branches:
+      - main
+
+jobs:
+  secret-detection:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v2
+
+      - name: Install necessary packages
+        run: |
+          # This is the experimental version of slim-detect-secrets.
+          # It will be updated to the official Yelp/detect-secrets version once the customized plugins are merged.
+          # For more information about slim/detect-secrets, check the following:
+          # 1. https://github.com/NASA-AMMOS/slim-detect-secrets/tree/exp
+          # 2. https://github.com/NASA-AMMOS/slim/blob/d20ee6134a0dc0e0dab11d2d2570e358ef7e4550/continuous-testing/starter-kits/README.md#detect-secrets
+          pip install git+https://github.com/NASA-AMMOS/slim-detect-secrets.git@exp
+          # This library is used for JSON operations.
+          pip install jq
+          
+      - name: Create an initial .secrets.baseline if .secrets.baseline does not exist
+        run: |
+          if [ ! -f .secrets.baseline ]; then
+            # This generated baseline file will only be temporarily available on the GitHub side and will not appear in the user's local files.
+            # Scanning an empty folder to generate an initial .secrets.baseline without secrets in the results.
+            echo "⚠️ No existing .secrets.baseline file detected. Creating a new blank baseline file."
+            mkdir empty-dir
+            detect-secrets scan empty-dir > .secrets.baseline
+            echo "✅ Blank .secrets.baseline file created successfully."
+            rm -r empty-dir
+          else
+            echo "✅ Existing .secrets.baseline file detected. No new baseline file will be created."
+          fi
+
+      - name: Scan repository for secrets
+        run: |
+          # scripts to scan repository for new secrets
+          
+          # backup the list of known secrets
+          cp .secrets.baseline .secrets.new
+
+          # find the secrets in the repository
+          detect-secrets scan --baseline .secrets.new --exclude-files '.secrets.*' --exclude-files '.git*'
+               
+          # if there is any difference between the known and newly detected secrets, break the build
+          # Function to compare secrets without listing them
+          compare_secrets() { diff <(jq -r '.results | keys[] as $key | "\($key),\(.[$key] | .[] | .hashed_secret)"' "$1" | sort) <(jq -r '.results | keys[] as $key | "\($key),\(.[$key] | .[] | .hashed_secret)"' "$2" | sort) >/dev/null; }
+        
+          # Check if there's any difference between the known and newly detected secrets
+          if ! compare_secrets .secrets.baseline .secrets.new; then
+            echo "⚠️ Attention Required! ⚠️" >&2
+            echo "New secrets have been detected in your recent commit. Due to security concerns, we cannot display detailed information here and we cannot proceed until this issue is resolved." >&2
+            echo "" >&2
+            echo "Please follow the steps below on your local machine to reveal and handle the secrets:" >&2
+            echo "" >&2
+            echo "1️⃣ Run the 'detect-secrets' tool on your local machine. This tool will identify and clean up the secrets. You can find detailed instructions at this link: https://nasa-ammos.github.io/slim/continuous-testing/starter-kits/#detect-secrets" >&2
+            echo "" >&2
+            echo "2️⃣ After cleaning up the secrets, commit your changes and re-push your update to the repository." >&2
+            echo "" >&2
+            echo "Your efforts to maintain the security of our codebase are greatly appreciated!" >&2
+            exit 1
+          fi
+
+```
+**Explanation**
+
+The Detect Secrets Action follows these steps to ensure the security of your code:
+
+- **Checkout Code**: Utilizes GitHub's checkout action to access the repository. This is the code that will be scanned for secrets.
+- **Install Necessary Packages**: Deploys the required Python packages, including the experimental version of `slim-detect-secrets` and `jq`. These packages enable the primary functionality of the Action.
+- **Check Existence of .secrets.baseline**: Ensures the Action remains operational even if no baseline file exists yet. If the `.secrets.baseline` file is not found, the action creates an initial baseline file by scanning an empty directory.
+- **Scan Repository for Secrets**: In this step, the Action backs up the list of known secrets and scans the repository for any new secrets. The scan excludes files starting with '.secrets.' and '.git'. The 'compare_secrets' function is used to identify any differences between the known secrets and newly detected ones. If new secrets are detected, the build fails, and the user is guided to clean up the secrets using the `detect-secrets` tool.
 
 After this, GitHub will automatically run the workflow when you push to the branch or create a pull request.
 
