@@ -10,6 +10,7 @@ This section contains links to sample actions, templates and configurations that
 [detect-secrets](https://github.com/Yelp/detect-secrets) is an industry leading tool to identify secure information included in source controlled files. Its prowess lies in its extensible Python plugin API, which allows custom rules and heuristics to tackle a broad spectrum of secrets. Designed to scan the project's current state rather than the entire git history, 
 it operates swiftly, making it ideal for continuous integration pipelines. Leveraging the concept of a "baseline file" (`.secrets.baseline`), it enables easy handling of known secrets and false positives, facilitating its gradual integration into existing projects. 
 
+<!--- Currently not supported with RETYPE v3.0.0 rendering of Mermaid graphs, using inline image instead.
 ```mermaid
 mindmap
     )Detect Secrets(
@@ -26,6 +27,9 @@ mindmap
             Yelp{{Yelp}}
 
 ```
+--->
+![detect-secrets-wordcloud](https://github.com/NASA-AMMOS/slim/assets/3129134/58ecb3de-0ab4-4302-b546-e9cd1de8e52f)
+
 
 Our application of `detect-secrets` embraces a tri-layered approach, bolstered by customized plugins ([full list of plugins available here](https://github.com/NASA-AMMOS/slim-detect-secrets/tree/exp#viewing-all-enabled-plugins)), to provide robust protection against potential secret leaks at the earliest stage.
 This page proposes three layers of secret scanning to help prevent secrets from being leaked on GitHub
