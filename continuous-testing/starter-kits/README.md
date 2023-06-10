@@ -157,6 +157,8 @@ For example,
 <img width="564" src="https://github.com/NASA-AMMOS/slim/assets/92573736/0fb25452-1ada-4979-9873-a1ca615701b5">
 
 It also provides other ways to present the result. For more information, please refer to [Auditing Secrets in Baseline](https://github.com/Yelp/detect-secrets#auditing-secrets-in-baseline)
+
+***Note*** if you have marked any detected secrets as true positives, its best to first remove all references to those secrets in your code and then rerun a full scan to generate a fresh audit report that you can compare against to ensure you only have false-positives (white-listed secrets) in your `.secrets.baseline` - this is especially important for Layer 2.
 #### Layer 2: Git Commit Scan (Client-side)
 The second layer is a pre-commit hook implemented in the local environment. This hook utilizes a `.pre-commit-config.yaml` file to config the pre-commit hook. The hook is triggered when the developer attempts to commit changes. The hook will scan the changes and **compare** them to the baseline file generated in the first layer. If any **new secrets** are detected, the hook will prevent the commit and report the detected secrets to the developer.
 ```mermaid
