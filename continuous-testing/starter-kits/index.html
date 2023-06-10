@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width,initial-scale=1">
     <meta name="turbo-root" content="/slim">
-    <meta name="turbo-cache-control" content="no-cache" data-turbo-track="reload" data-track-token="3.0.3.739579689324">
+    <meta name="turbo-cache-control" content="no-cache" data-turbo-track="reload" data-track-token="3.0.3.739678403348">
 
     <!-- See retype.com -->
     <meta name="generator" content="Retype 3.0.3">
@@ -31,11 +31,13 @@
 
     <script>(function () { var el = document.documentElement, m = localStorage.getItem("/slim/doc_theme"), wm = window.matchMedia; if (m === "dark" || (!m && wm && wm("(prefers-color-scheme: dark)").matches)) { el.classList.add("dark") } else { el.classList.remove("dark") } })();</script>
 
-    <link href="../../resources/css/retype.css?v=3.0.3.739579689324" rel="stylesheet" />
+    <link href="../../resources/css/retype.css?v=3.0.3.739678403348" rel="stylesheet" />
 
-    <script type="text/javascript" src="../../resources/js/config.js?v=3.0.3.739579689324" data-turbo-eval="false" defer></script>
+    <script type="text/javascript" src="../../resources/js/config.js?v=3.0.3.739678403348" data-turbo-eval="false" defer></script>
     <script type="text/javascript" src="../../resources/js/retype.js?v=3.0.3" data-turbo-eval="false" defer></script>
-    <script id="lunr-js" type="text/javascript" src="../../resources/js/lunr.js?v=3.0.3.739579689324" data-turbo-eval="false" defer></script>
+    <script id="lunr-js" type="text/javascript" src="../../resources/js/lunr.js?v=3.0.3.739678403348" data-turbo-eval="false" defer></script>
+    <script id="prism-js" type="text/javascript" src="../../resources/js/prism.js?v=3.0.3.739678403348" defer></script>
+    <script id="mermaid-js" type="text/javascript" src="../../resources/js/mermaid.js?v=3.0.3" defer></script>
 </head>
 <body>
     <div id="docs-app" class="relative text-base antialiased text-gray-700 bg-white font-body dark:bg-dark-850 dark:text-dark-300">
@@ -180,6 +182,486 @@
     </h1>
 </doc-anchor-target>
 <p>This page contains starter kit information, which represent templates, code and configuration to help you get started quickly with continuous testing best practices described in this overall guide. Please see categories and links below for details.</p>
+<doc-anchor-target id="static-application-security-testing">
+    <h2>
+        <doc-anchor-trigger class="header-anchor-trigger" to="#static-application-security-testing">#</doc-anchor-trigger>
+        <span>Static Application Security Testing</span>
+    </h2>
+</doc-anchor-target>
+<p>This section contains links to sample actions, templates and configurations that analyze and validate code for security flaws and sensitive information. Identifying security vulnerabilities and sensitive data is an <a href="https://www.cisa.gov/uscert/ncas/alerts/aa22-137a">OSS cybersecurity</a> <a href="https://appel.nasa.gov/2022/06/30/spotlight-on-lessons-learned-open-source-and-commercial-web-software-vulnerabilities/">best practice</a>.</p>
+<doc-anchor-target id="detect-secrets">
+    <h3>
+        <doc-anchor-trigger class="header-anchor-trigger" to="#detect-secrets">#</doc-anchor-trigger>
+        <span>Detect Secrets</span>
+    </h3>
+</doc-anchor-target>
+<p><a href="https://github.com/Yelp/detect-secrets">detect-secrets</a> is an industry leading tool to identify secure information included in source controlled files. Its prowess lies in its extensible Python plugin API, which allows custom rules and heuristics to tackle a broad spectrum of secrets. Designed to scan the project&#x27;s current state rather than the entire git history,
+it operates swiftly, making it ideal for continuous integration pipelines. Leveraging the concept of a &quot;baseline file&quot; (<code v-pre>.secrets.baseline</code>), it enables easy handling of known secrets and false positives, facilitating its gradual integration into existing projects.</p>
+<div class="overflow-hidden mb-6 py-4 dark:px-5 dark:bg-white rounded-md"><pre class="mermaid w-full">mindmap
+    )Detect Secrets(
+        {{ ERROR }}
+        Quick_Scan((Quick Scan))
+            Current_State{{ ERROR }}
+            CI_Pipelines{{ ERROR }}
+        Baseline_File((Baseline File))
+            Known_Secrets{{ ERROR }}
+            False_Positives{{ ERROR }}
+        Recommended_By((Recommended by))
+            Microsoft
+            IBM
+            Yelp
+</pre></div>
+<p>Our application of <code v-pre>detect-secrets</code> embraces a tri-layered approach, bolstered by customized plugins (<a href="https://github.com/NASA-AMMOS/slim-detect-secrets/tree/exp#viewing-all-enabled-plugins">full list of plugins available here</a>), to provide robust protection against potential secret leaks at the earliest stage.
+This page proposes three layers of secret scanning to help prevent secrets from being leaked on GitHub</p>
+<p>Three layers of protection are:</p>
+<ol>
+<li>Client-side full scan of existing code base</li>
+<li>Client-side scan of updated code upon Git commit</li>
+<li>Server-side push to GitHub.com from client</li>
+</ol>
+<p>Each layer has its own advantages and disadvantages. The full use of these three layers of protection is recommended to minimize human negligence.</p>
+<div class="overflow-hidden mb-6 py-4 dark:px-5 dark:bg-white rounded-md"><pre class="mermaid w-full">flowchart TB
+  User([fa:fa-user User])
+
+  subgraph UserWorkflow[&quot;User Workflow to Secure Secrets&quot;]
+    Layer1[&quot;Layer 1: Full scan (client-side)&quot;]
+    Layer2[&quot;Layer 2: Git commit scan (client-side)&quot;]
+    Layer3[&quot;Layer 3: GitHub.com (server-side)&quot;]
+
+    Layer1 --&gt;|If Secrets Detected| Clean1[Clean local file directly.]
+    Layer2 --&gt;|If Secrets Detected| Clean2[Clean local file directly. &lt;br&gt; Don't need to worry about cleaning commit history]
+    Layer3 --&gt;|If Secrets Detected| Clean3[Purge or Fix the commit manually]
+    
+    SaveTime[&quot;It saves your time. And secrets are safe from GitHub&quot;]
+    Clean1 --&gt; SaveTime
+    Clean2 --&gt; SaveTime
+
+    Secure[&quot;Only GitHub-Protected branch is in safe. &lt;br&gt; Secrets are leaked on other branch before cleaning&quot;]
+    Clean3--&gt; Secure
+  end
+
+  User --&gt;|At least use| Layer1
+  User --&gt;|Helpful to use| Layer2
+  User --&gt;|Optional to use| Layer3
+
+    style User fill:#F6F5F3,stroke:#333,stroke-width:1px
+  style UserWorkflow fill:#AF7AC5,stroke:#333,stroke-width:2px
+  style Layer1 fill:#F3B044,stroke:#333,stroke-width:2px,stroke-dasharray: 5 5
+  style Layer2 fill:#F3B044,stroke:#333,stroke-width:2px,stroke-dasharray: 5 5
+  style Layer3 fill:#F3B044,stroke:#333,stroke-width:2px,stroke-dasharray: 5 5
+  style Clean1 fill:#5A88ED,stroke:#333,stroke-width:2px
+  style Clean2 fill:#5A88ED,stroke:#333,stroke-width:2px
+  style Clean3 fill:#5A88ED,stroke:#333,stroke-width:2px
+  style SaveTime fill:#5ABF9B,stroke:#333,stroke-width:2px
+  style Secure fill:#AF3034,stroke:#333,stroke-width:2px
+</pre></div>
+<blockquote>
+<p><strong>Note</strong>: Below three layers, are running on experimental version <a href="https://github.com/NASA-AMMOS/slim-detect-secrets/tree/exp">slim-detect-secrets</a> which supports additional secret detection <a href="https://github.com/NASA-AMMOS/slim-detect-secrets/tree/exp#viewing-all-enabled-plugins">plugins</a>.</p>
+<p>They are:</p>
+<blockquote>
+<ul>
+<li><a href="">AWS sensitive information</a> (click for more information)</li>
+<li>Public IP Address</li>
+<li>Absolute Path</li>
+<li>Email Address</li>
+</ul>
+<p>Link to their <a href="https://github.com/NASA-AMMOS/slim-detect-secrets/tree/exp/detect_secrets/plugins">implementation</a> and <a href="https://github.com/NASA-AMMOS/slim-detect-secrets/tree/exp/tests/plugins">test suites</a></p>
+</blockquote>
+<p>It is being tested by both <a href="https://github.com/NASA-AMMOS/slim">NASA-AMMOS/slim</a> team and <a href="https://github.com/Yelp/detect-secrets">Yelp/detect-secrets</a> team.
+Eventually, it will be merged into Yelp/detect-secrets.</p>
+<p>At that time, this document will be updated to use the official version of detect-secrets.</p>
+</blockquote>
+<doc-anchor-target id="layer-1-full-scan-and-audit-client-side">
+    <h4>
+        <doc-anchor-trigger class="header-anchor-trigger" to="#layer-1-full-scan-and-audit-client-side">#</doc-anchor-trigger>
+        <span>Layer 1: Full Scan and Audit (Client-side)</span>
+    </h4>
+</doc-anchor-target>
+<p>The first layer initiates a direct scan on the developer&#x27;s local environment. This is achieved through the <code v-pre>detect-secrets</code> tool, which scans the entire codebase and outputs a new baseline file containing detected secrets. The developer can then audit this file to view detailed information about detected secrets.</p>
+<div class="overflow-hidden mb-6 py-4 dark:px-5 dark:bg-white rounded-md"><pre class="mermaid w-full">sequenceDiagram
+    participant Dev as Developer
+    participant Env as Local Environment
+    participant DS as Detect-Secrets
+    participant File as Baseline File
+    participant Audit as Audit Tool
+
+    Note over Dev,Env: Developer initiates a direct scan for secrets
+    Dev-&gt;&gt;+Env: Triggers direct scan
+    Env-&gt;&gt;+DS: Requests scan on the codebase
+    DS-&gt;&gt;DS: Performs secret scanning
+    DS-&gt;&gt;File: Generates new baseline file
+    File-&gt;&gt;DS: Acknowledges file creation
+    DS--&gt;&gt;-Env: Returns scan results and new baseline file
+    Env--&gt;&gt;Dev: Presents scan results and new baseline file
+    Note over Dev,File: Developer may audit the new baseline file
+    Dev-&gt;&gt;Audit: Initiates audit on the new baseline file
+    Audit-&gt;&gt;File: Fetches details from the baseline file
+    File-&gt;&gt;Audit: Returns secret details
+    Audit--&gt;&gt;Dev: Presents detailed information of detected secrets
+</pre></div>
+<p>Starter Kit:</p>
+<ol>
+<li>Install experimental version of <a href="https://github.com/NASA-AMMOS/slim-detect-secrets/tree/exp">slim-detect-secrets</a></li>
+</ol>
+<div class="codeblock-wrapper"><doc-codeblock>
+<pre class="language-bash"><code v-pre class="language-bash">pip install git+https://github.com/NASA-AMMOS/slim-detect-secrets.git@exp</code></pre>
+</doc-codeblock></div>
+<ol start="2">
+<li>Scan all local files from current directory and output the result as a baseline file</li>
+</ol>
+<div class="codeblock-wrapper"><doc-codeblock>
+<pre class="language-bash"><code v-pre class="language-bash">detect-secrets scan ./ --all-files --exclude-files '.secrets.*' --exclude-files '.git*' &gt; .secrets.baseline</code></pre>
+</doc-codeblock></div>
+<p>Here it scans all the local files from current directory, but excludes <code v-pre>.git</code> directory and <code v-pre>.secrets</code> baseline files from scanning to reduce false positive. Make modifications when necessary.</p>
+<ol start="3">
+<li>Check result in the baseline file</li>
+</ol>
+<div class="codeblock-wrapper"><doc-codeblock>
+<pre class="language-bash"><code v-pre class="language-bash">cat .secrets.baseline</code></pre>
+</doc-codeblock></div>
+<blockquote>
+<p>This command is supported in Unix-like system. For Windows, you can use other command, such as <code v-pre>type .secrets.baseline</code>
+If any secrets are detected, the result will be located at the &quot;results:&quot; of the file.</p>
+</blockquote>
+<p>For example,</p>
+<div class="codeblock-wrapper"><doc-codeblock>
+<pre class="language-json"><code v-pre class="language-json">&quot;results&quot;: {
+    &quot;Sample/sample-develop.sh&quot;: [
+    {
+    &quot;type&quot;: &quot;AWS Sensitive Information&quot;,
+    &quot;filename&quot;: &quot;Sample/sample-develop.sh&quot;,
+    &quot;hashed_secret&quot;: &quot;d3f72b97cd8756fe12345678bdf96aef1ac23b7d&quot;,
+    &quot;is_verified&quot;: false,
+    &quot;line_number&quot;: 39
+},</code></pre>
+</doc-codeblock></div>
+<p>Only line number is visible through this approach. You can check them manually in the file, or use the following audit tool to conveniently view the actual secret.</p>
+<ol start="4">
+<li>Analyze results by <code v-pre>audit</code> tool</li>
+</ol>
+<div class="codeblock-wrapper"><doc-codeblock>
+<pre class="language-bash"><code v-pre class="language-bash">detect-secrets audit .secrets.baseline</code></pre>
+</doc-codeblock></div>
+<blockquote>
+<p>detect-secrets audit tool can provide you an interactive interface to view the actual secret based on the line number
+and label it as false positive or true positive.</p>
+</blockquote>
+<p>For example,</p>
+<img width="564" src="https://github.com/NASA-AMMOS/slim/assets/92573736/0fb25452-1ada-4979-9873-a1ca615701b5">
+<p>It also provides other ways to present the result. For more information, please refer to <a href="https://github.com/Yelp/detect-secrets#auditing-secrets-in-baseline">Auditing Secrets in Baseline</a></p>
+<p><em><strong>Note</strong></em> if you have marked any detected secrets as true positives, its best to first remove all references to those secrets in your code and then rerun a full scan to generate a fresh audit report that you can compare against to ensure you only have false-positives (white-listed secrets) in your <code v-pre>.secrets.baseline</code> - this is especially important for Layer 2.</p>
+<doc-anchor-target id="layer-2-git-commit-scan-client-side">
+    <h4>
+        <doc-anchor-trigger class="header-anchor-trigger" to="#layer-2-git-commit-scan-client-side">#</doc-anchor-trigger>
+        <span>Layer 2: Git Commit Scan (Client-side)</span>
+    </h4>
+</doc-anchor-target>
+<p>The second layer is a pre-commit hook implemented in the local environment. This hook utilizes a <code v-pre>.pre-commit-config.yaml</code> file to config the pre-commit hook. The hook is triggered when the developer attempts to commit changes. The hook will scan the changes and <strong>compare</strong> them to the baseline file generated in the first layer. If any <strong>new secrets</strong> are detected, the hook will prevent the commit and report the detected secrets to the developer.</p>
+<div class="overflow-hidden mb-6 py-4 dark:px-5 dark:bg-white rounded-md"><pre class="mermaid w-full">sequenceDiagram
+    participant User as Developer
+    participant Local as Local Environment
+    participant Config as .pre-commit-config.yaml
+    participant PCH as Pre-commit Hook
+    participant DS as Detect-Secrets
+    participant File as Baseline File
+
+    Note over User,Local: Developer attempts to commit
+    User-&gt;&gt;+Local: Request commit
+    Local-&gt;&gt;+Config: Fetches pre-commit config
+    Config-&gt;&gt;PCH: Returns config with Detect-Secrets setup
+    PCH-&gt;&gt;DS: Request secret scan with existing baseline
+    DS-&gt;&gt;File: Fetches baseline file
+    File-&gt;&gt;DS: Returns baseline file
+    DS-&gt;&gt;DS: Scans changes for secrets with custom plugins
+    alt New Secrets Detected
+        DS--&gt;&gt;PCH: Returns detected secrets
+        PCH--&gt;&gt;Local: Prevents commit &amp; reports detected secrets
+        Local--&gt;&gt;User: Prevents commit &amp; reports detected secrets
+    else No New Secrets Detected
+        DS--&gt;&gt;PCH: Returns clean result
+        PCH--&gt;&gt;Local: Allows commit
+        Local--&gt;&gt;User: Commits changes
+    end
+</pre></div>
+<p>Starter Kit:</p>
+<ol>
+<li>Install <a href="https://pre-commit.com/#install">pre-commit</a></li>
+</ol>
+<div class="codeblock-wrapper"><doc-codeblock>
+<pre class="language-bash"><code v-pre class="language-bash">pip install pre-commit</code></pre>
+</doc-codeblock></div>
+<p>This tool is used to install pre-commit hook in your local git repository.</p>
+<ol start="2">
+<li>Create <code v-pre>.pre-commit-config.yaml</code> file in root directory of your project with the following contents</li>
+</ol>
+<div class="codeblock-wrapper"><doc-codeblock>
+<pre class="language-yaml"><code v-pre class="language-yaml">repos:
+  - repo: https://github.com/NASA-AMMOS/slim-detect-secrets
+    # using commit id for now, will change to tag when official version is released
+    rev: 91e097ad4559ae6ab785c883dc5ed989202c7fbe
+    hooks:
+      - id: detect-secrets
+        args:
+          - '--baseline'
+          - '.secrets.baseline'
+          - '--exclude-files'
+          - '.git*'
+          - '--exclude-files'
+          - '.secrets.*' 
+</code></pre>
+</doc-codeblock></div>
+<p>This file is used to config the pre-commit hook. In this example, we use the experimental version of <code v-pre>slim-detect-secrets</code> tool. The <code v-pre>--baseline</code> argument is used to specify the baseline file generated in the first layer. The <code v-pre>--exclude-files</code> argument is used to exclude the <code v-pre>.git</code> directory and <code v-pre>.secrets</code> baseline files from scanning to reduce false positives. Make modifications when necessary.</p>
+<ol start="3">
+<li>Install pre-commit hook</li>
+</ol>
+<div class="codeblock-wrapper"><doc-codeblock>
+<pre class="language-bash"><code v-pre class="language-bash">pre-commit install</code></pre>
+</doc-codeblock></div>
+<p>This command reads the <code v-pre>.pre-commit-config.yaml</code> file and installs the pre-commit hook in your local git repository.
+After this, you can see a <code v-pre>.git/hooks/pre-commit</code> file is created in your local git repository.</p>
+<ol start="4">
+<li>Add the baseline file <code v-pre>.secrets.baseline</code> in your local Git repository under the following conditions only:
+<ol>
+<li>You wish to share white-listed secrets with other team members</li>
+<li>You&#x27;ve removed any references in your code to sensitive secrets detected that are not white-listed, i.e. find and modify code referenced in you <code v-pre>.secrets.baseline</code> with flag <code v-pre>is_secret: true</code></li>
+<li>You&#x27;ve re-run a fresh <code v-pre>detect-secrets scan</code> followed by a <code v-pre>detect-secrets audit</code> and your <code v-pre>.secrets.baseline</code> ONLY now contains white-listed entries, i.e. <code v-pre>is_secret: false</code></li>
+</ol>
+</li>
+</ol>
+<p><strong>Warning</strong>: Adding your <code v-pre>.secrets.baseline</code> file to your local Git and pushing changes to a remote without following the above directions could create a security risk by sharing the sensitive parts of your security scan with the outside world!</p>
+<ol start="5">
+<li>Commit your changes</li>
+</ol>
+<p>Now, you can commit your changes as usual. If any <strong>new secrets</strong> are detected, the commit will be prevented and the secrets will be reported.</p>
+<p>For example,</p>
+<img width="559" alt="Screen Shot 2023-04-20 at 7 32 10 AM" src="https://user-images.githubusercontent.com/92573736/233398613-6e189322-4d97-47c3-b3ba-bd700a716cf6.png">
+<blockquote>
+<p><strong>Note</strong>: The pre-commit hook blocks a commit by comparing new secrets with the results in the <code v-pre>.secrets.baseline</code> file. If new secrets are introduced, the hook will report them, but it does not automatically update the <code v-pre>.secrets.baseline</code> file. To update the baseline file with newly introduced secrets, you need to re-run the scan command in Layer 1 (step 2) and generate a new baseline file.</p>
+</blockquote>
+<blockquote>
+<p><strong>Note</strong>: during commit checks, detect secrets may not display all secrets present within a single file during a single scan. This can be to <a href="https://github.com/Yelp/detect-secrets/blob/master/docs/design.md#potentialsecret">minimize noise</a>, among other reasons. Thus if you have multiple violations of different types of secrets per file, multiple independent commits may be necessary to help identify all violations.</p>
+<p>You can create an empty result baseline file by running this command at a directory without secrets.</p>
+</blockquote>
+<doc-anchor-target id="layer-3-server-side-push-to-githubcom">
+    <h4>
+        <doc-anchor-trigger class="header-anchor-trigger" to="#layer-3-server-side-push-to-githubcom">#</doc-anchor-trigger>
+        <span>Layer 3: Server-side Push to GitHub.com</span>
+    </h4>
+</doc-anchor-target>
+<p>The final layer of our solution is a server-side pre-commit scan powered by <a href="https://github.com/features/actions">GitHub Action</a>. This scan is triggered whenever a developer pushes to a branch or creates a pull request. If the scan detects any new secrets, it can generate a not detailed report compared to layer 2 (for security concern), email to the developer, and report a status check to GitHub. The status check will prevent the developer from merging the pull request or pushing to the <strong>protected</strong> branch. This layer protects the protected branch from being polluted by secrets, but secrets can still be pushed to other branches.</p>
+<div class="overflow-hidden mb-6 py-4 dark:px-5 dark:bg-white rounded-md"><pre class="mermaid w-full">sequenceDiagram
+    participant User as Developer
+    participant GH as GitHub
+    participant Workflow as detect-secrets.yaml
+    participant GA as GitHub Action
+    participant DS as Detect-Secrets
+
+    Note over User,GH: Developer creates pull request or pushes to branch
+    User-&gt;&gt;+GH: Creates pull request / pushes to branch
+    GH-&gt;&gt;+Workflow: Triggers GitHub Action workflow
+    Workflow-&gt;&gt;GA: Sets up and runs Detect-Secrets scan
+    GA-&gt;&gt;DS: Requests secret scan
+    DS-&gt;&gt;DS: Scans repository for secrets
+    alt Secrets Detected
+        DS--&gt;&gt;GA: Returns detected secrets
+        GA--&gt;&gt;GH: Fails status check
+        GH--&gt;&gt;User: Prevents merge / push &amp; sends email notification
+    else No Secrets Detected
+        DS--&gt;&gt;GA: Returns clean result
+        GA--&gt;&gt;GH: Passes status check
+        GH--&gt;&gt;User: Allows merge / push
+    end
+</pre></div>
+<p>Starter Kit:</p>
+<ol>
+<li>Create a workflow file <code v-pre>detect-secrets.yaml</code> in <code v-pre>.github/workflows</code> directory from your repository root.</li>
+</ol>
+<div class="codeblock-wrapper"><doc-codeblock>
+<pre class="language-yaml"><code v-pre class="language-yaml">name: Secret Detection Workflow
+on:
+  push:
+    branches:
+      - main
+  pull_request:
+    branches:
+      - main
+
+jobs:
+  secret-detection:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v2
+
+      - name: Install necessary packages
+        run: |
+          # This is the experimental version of slim-detect-secrets.
+          # It will be updated to the official Yelp/detect-secrets version once the customized plugins are merged.
+          # For more information about slim/detect-secrets, check the following:
+          # 1. https://github.com/NASA-AMMOS/slim-detect-secrets/tree/exp
+          # 2. https://github.com/NASA-AMMOS/slim/blob/d20ee6134a0dc0e0dab11d2d2570e358ef7e4550/continuous-testing/starter-kits/README.md#detect-secrets
+          pip install git+https://github.com/NASA-AMMOS/slim-detect-secrets.git@exp
+          # This library is used for JSON operations.
+          pip install jq
+          
+      - name: Create an initial .secrets.baseline if .secrets.baseline does not exist
+        run: |
+          if [ ! -f .secrets.baseline ]; then
+            # This generated baseline file will only be temporarily available on the GitHub side and will not appear in the user's local files.
+            # Scanning an empty folder to generate an initial .secrets.baseline without secrets in the results.
+            echo &quot;⚠️ No existing .secrets.baseline file detected. Creating a new blank baseline file.&quot;
+            mkdir empty-dir
+            detect-secrets scan empty-dir &gt; .secrets.baseline
+            echo &quot;✅ Blank .secrets.baseline file created successfully.&quot;
+            rm -r empty-dir
+          else
+            echo &quot;✅ Existing .secrets.baseline file detected. No new baseline file will be created.&quot;
+          fi
+
+      - name: Scan repository for secrets
+        run: |
+          # scripts to scan repository for new secrets
+          
+          # backup the list of known secrets
+          cp .secrets.baseline .secrets.new
+
+          # find the secrets in the repository
+          detect-secrets scan --baseline .secrets.new --exclude-files '.secrets.*' --exclude-files '.git*'
+               
+          # if there is any difference between the known and newly detected secrets, break the build
+          # Function to compare secrets without listing them
+          compare_secrets() { diff &lt;(jq -r '.results | keys[] as $key | &quot;\($key),\(.[$key] | .[] | .hashed_secret)&quot;' &quot;$1&quot; | sort) &lt;(jq -r '.results | keys[] as $key | &quot;\($key),\(.[$key] | .[] | .hashed_secret)&quot;' &quot;$2&quot; | sort) &gt;/dev/null; }
+        
+          # Check if there's any difference between the known and newly detected secrets
+          if ! compare_secrets .secrets.baseline .secrets.new; then
+            echo &quot;⚠️ Attention Required! ⚠️&quot; &gt;&amp;2
+            echo &quot;New secrets have been detected in your recent commit. Due to security concerns, we cannot display detailed information here and we cannot proceed until this issue is resolved.&quot; &gt;&amp;2
+            echo &quot;&quot; &gt;&amp;2
+            echo &quot;Please follow the steps below on your local machine to reveal and handle the secrets:&quot; &gt;&amp;2
+            echo &quot;&quot; &gt;&amp;2
+            echo &quot;1️⃣ Run the 'detect-secrets' tool on your local machine. This tool will identify and clean up the secrets. You can find detailed instructions at this link: https://nasa-ammos.github.io/slim/continuous-testing/starter-kits/#detect-secrets&quot; &gt;&amp;2
+            echo &quot;&quot; &gt;&amp;2
+            echo &quot;2️⃣ After cleaning up the secrets, commit your changes and re-push your update to the repository.&quot; &gt;&amp;2
+            echo &quot;&quot; &gt;&amp;2
+            echo &quot;Your efforts to maintain the security of our codebase are greatly appreciated!&quot; &gt;&amp;2
+            exit 1
+          fi
+</code></pre>
+</doc-codeblock></div>
+<p><strong>Explanation</strong></p>
+<p>The Detect Secrets Action follows these steps to ensure the security of your code:</p>
+<ul>
+<li><strong>Checkout Code</strong>: Utilizes GitHub&#x27;s checkout action to access the repository. This is the code that will be scanned for secrets.</li>
+<li><strong>Install Necessary Packages</strong>: Deploys the required Python packages, including the experimental version of <code v-pre>slim-detect-secrets</code> and <code v-pre>jq</code>. These packages enable the primary functionality of the Action.</li>
+<li><strong>Check Existence of .secrets.baseline</strong>: Ensures the Action remains operational even if no baseline file exists yet. If the <code v-pre>.secrets.baseline</code> file is not found, the action creates an initial baseline file by scanning an empty directory.</li>
+<li><strong>Scan Repository for Secrets</strong>: In this step, the Action backs up the list of known secrets and scans the repository for any new secrets. The scan excludes files starting with &#x27;.secrets.&#x27; and &#x27;.git&#x27;. The &#x27;compare_secrets&#x27; function is used to identify any differences between the known secrets and newly detected ones. If new secrets are detected, the build fails, and the user is guided to clean up the secrets using the <code v-pre>detect-secrets</code> tool.</li>
+</ul>
+<p>After this, GitHub will automatically run the workflow when you push to the branch or create a pull request.</p>
+<p>This workflow will run the <code v-pre>detect-secrets</code> tool on the GitHub server. If any new secrets are detected, it will:</p>
+<ul>
+<li><p>Fail the status check</p>
+<img width="507" src="https://github.com/NASA-AMMOS/slim/assets/92573736/bc7670f8-5bbb-414c-b9af-803be05efd67">
+</li>
+<li><p>Print a message in the &quot;Details&quot; with instructions on how to resolve the issue</p>
+<img width="1627" src="https://github.com/NASA-AMMOS/slim/assets/92573736/7e884d60-c972-46f2-9785-31b09cebb93f">
+</li>
+<li><p>Send an email notification to the user</p>
+<img width="1192" src="https://github.com/NASA-AMMOS/slim/assets/92573736/142e0693-f3f8-42c8-92d7-deb653bdb09c">
+</li>
+</ul>
+<ol start="2">
+<li><a href="https://docs.github.com/en/repositories/configuring-branches-and-merges-in-your-repository/managing-protected-branches/managing-a-branch-protection-rule">Protect your branch</a></li>
+</ol>
+<img width="1107" src="https://github.com/NASA-AMMOS/slim/assets/92573736/5a430b2f-7f9b-4ba0-a06a-7c53b300f08b">
+<p>After this, if status check fails, GitHub will prevent the merge or push to the protected branch.</p>
+<img width="918" src="https://github.com/NASA-AMMOS/slim/assets/92573736/9f8b6239-840a-4ba4-9458-d795f46d7acd">
+<doc-anchor-target id="attention-for-using-detect-secrets">
+    <h4>
+        <doc-anchor-trigger class="header-anchor-trigger" to="#attention-for-using-detect-secrets">#</doc-anchor-trigger>
+        <span>Attention for using Detect Secrets</span>
+    </h4>
+</doc-anchor-target>
+<blockquote>
+<p>1.It does not <a href="https://github.com/Yelp/detect-secrets/blob/master/docs/design.md#potentialsecret">show all the same type of secrets in a same file to minimize noise</a></p>
+<p>This means sometimes it will only show one secret in a file even if there are multiple <strong>same type of secrets</strong> in the same file.
+Audit tool will not show all the secrets due to this reason.</p>
+<p><strong>-&gt;</strong> Thus, when you see a secret is detected, best practice is to <strong>manually</strong> check that file.</p>
+</blockquote>
+<blockquote>
+<p>2.Even though detect-secrets has strong secret-detect ability compared to other tools, it is still possible that detect-secrets will not show you a file that contains secrets due to a new type of secret not capable by current plugins.</p>
+<p><strong>-&gt;</strong> Thus, the best practice is always to be careful as a developer and <strong>manually</strong> check the files that you think might contain secrets.</p>
+<blockquote>
+<p><strong>Note</strong>: <code v-pre>detect-secrets</code> is a backup approach to minimize the chance of pushing secrets to the cloud.</p>
+</blockquote>
+</blockquote>
+<doc-anchor-target id="recommended-workflow">
+    <h4>
+        <doc-anchor-trigger class="header-anchor-trigger" to="#recommended-workflow">#</doc-anchor-trigger>
+        <span>Recommended Workflow</span>
+    </h4>
+</doc-anchor-target>
+<ol>
+<li>At least use layer 3 (Server-side push to GitHub.com) to protect the main branch from being pushed or merged if any secrets are detected.</li>
+<li>If any secrets are detected during layer 3, you can:
+<ul>
+<li>Clean the commit history of the branch
+<ul>
+<li>To find out the files that needs clean, you can use layer 1&#x27;s auditing feature as assistance</li>
+<li>If a secret has already been committed, visit
+<a href="https://help.github.com/articles/removing-sensitive-data-from-a-repository">https://help.github.com/articles/removing-sensitive-data-from-a-repository</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li>Recommend to set up layer 2 (Git commit scan, client-side) for every developer
+<ul>
+<li>It can minimize the chance of pushing secrets to the cloud</li>
+<li>Local files are easier to clean than GitHub commit history</li>
+</ul>
+</li>
+<li>Layer 1 (Full scan and audit, client-side) can be involved during each stage
+<ul>
+<li>It helps you generate, update or analyze baseline file for layer 2 and 3</li>
+</ul>
+</li>
+</ol>
+<div class="overflow-hidden mb-6 py-4 dark:px-5 dark:bg-white rounded-md"><pre class="mermaid w-full">sequenceDiagram
+    participant Dev as Developer
+    participant GH as GitHub
+    participant DS as Detect-Secrets
+    participant L1 as Layer 1 (Full Scan &amp; Audit)
+    participant L2 as Layer 2 (Git Commit Scan)
+    participant L3 as Layer 3 (Server-side Push to GitHub)
+
+    Dev-&gt;&gt;L3: Push/Merge to Main Branch
+    L3-&gt;&gt;DS: Scan for Secrets
+    alt Secrets Detected in L3
+        DS--&gt;&gt;Dev: Secrets Detected
+        Dev-&gt;&gt;L1: Use Auditing Feature to Identify Files for Cleaning
+        Note over L1: Assists in identifying files that need to be cleaned. &lt;br/&gt; Recommend to manully double check detected files &lt;br/&gt; due to &quot;minimize noise&quot; feature from detect-secrets
+        Dev-&gt;&gt;Dev: Clean Commit History
+        Note over Dev: If a secret has already been committed, refer: &lt;br/&gt; https://help.github.com/articles/removing-sensitive-data-from-a-repository
+        Dev-&gt;&gt;L2: Set Up Git Commit Scan
+        Note over Dev, L2: Minimizes chances of pushing secrets &lt;br/&gt; Easier to clean local files than GitHub commit history
+        Dev-&gt;&gt;L1: Use Full Scan &amp; Audit at Each Stage
+        Note over Dev, L1: Assists in generating, updating or analyzing baseline file for L2 and L3
+        Dev-&gt;&gt;L3: Retry Push/Merge to Main Branch
+    else No Secrets Detected
+        DS--&gt;&gt;GH: No Secrets Detected
+        GH-&gt;&gt;Dev: Allows Push/Merge to Main Branch
+    end
+</pre></div>
+<doc-anchor-target id="more-configurations">
+    <h4>
+        <doc-anchor-trigger class="header-anchor-trigger" to="#more-configurations">#</doc-anchor-trigger>
+        <span>More Configurations</span>
+    </h4>
+</doc-anchor-target>
+<p>Check out</p>
+<ol>
+<li><a href="https://github.com/Yelp/detect-secrets">detect-secrets</a></li>
+<li><a href="https://pre-commit.com/">pre-commit</a></li>
+</ol>
 <doc-anchor-target id="software-composition-analysis">
     <h2>
         <doc-anchor-trigger class="header-anchor-trigger" to="#software-composition-analysis">#</doc-anchor-trigger>
@@ -343,6 +825,6 @@ Admin rights are necessary to modify <code v-pre>Code security and analysis</cod
 
     <div id="docs-overlay-target"></div>
 
-    <script>window.__DOCS__ = { "title": "Starter Kits", level: 2, icon: "file", hasPrism: false, hasMermaid: false, hasMath: false }</script>
+    <script>window.__DOCS__ = { "title": "Starter Kits", level: 2, icon: "file", hasPrism: true, hasMermaid: true, hasMath: false }</script>
 </body>
 </html>
