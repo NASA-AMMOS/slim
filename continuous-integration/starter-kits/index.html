@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width,initial-scale=1">
     <meta name="turbo-root" content="/slim">
-    <meta name="turbo-cache-control" content="no-cache" data-turbo-track="reload" data-track-token="3.0.3.739679118702">
+    <meta name="turbo-cache-control" content="no-cache" data-turbo-track="reload" data-track-token="3.0.3.739921336948">
 
     <!-- See retype.com -->
     <meta name="generator" content="Retype 3.0.3">
@@ -31,11 +31,11 @@
 
     <script>(function () { var el = document.documentElement, m = localStorage.getItem("/slim/doc_theme"), wm = window.matchMedia; if (m === "dark" || (!m && wm && wm("(prefers-color-scheme: dark)").matches)) { el.classList.add("dark") } else { el.classList.remove("dark") } })();</script>
 
-    <link href="../../resources/css/retype.css?v=3.0.3.739679118702" rel="stylesheet" />
+    <link href="../../resources/css/retype.css?v=3.0.3.739921336948" rel="stylesheet" />
 
-    <script type="text/javascript" src="../../resources/js/config.js?v=3.0.3.739679118702" data-turbo-eval="false" defer></script>
+    <script type="text/javascript" src="../../resources/js/config.js?v=3.0.3.739921336948" data-turbo-eval="false" defer></script>
     <script type="text/javascript" src="../../resources/js/retype.js?v=3.0.3" data-turbo-eval="false" defer></script>
-    <script id="lunr-js" type="text/javascript" src="../../resources/js/lunr.js?v=3.0.3.739679118702" data-turbo-eval="false" defer></script>
+    <script id="lunr-js" type="text/javascript" src="../../resources/js/lunr.js?v=3.0.3.739921336948" data-turbo-eval="false" defer></script>
 </head>
 <body>
     <div id="docs-app" class="relative text-base antialiased text-gray-700 bg-white font-body dark:bg-dark-850 dark:text-dark-300">
@@ -391,17 +391,11 @@ A release kicks off a build and release process in GitHub Actions.</p>
     </h2>
 </doc-anchor-target>
 <p>This section contains links to sample actions, templates, and configuration for ensuring the basic integrity of patches.</p>
-<doc-anchor-target id="github-actions">
-    <h3>
-        <doc-anchor-trigger class="header-anchor-trigger" to="#github-actions">#</doc-anchor-trigger>
-        <span>GitHub Actions</span>
-    </h3>
-</doc-anchor-target>
 <doc-anchor-target id="developer-certificate-of-origin-dco">
-    <h4>
+    <h3>
         <doc-anchor-trigger class="header-anchor-trigger" to="#developer-certificate-of-origin-dco">#</doc-anchor-trigger>
         <span>Developer Certificate of Origin (DCO)</span>
-    </h4>
+    </h3>
 </doc-anchor-target>
 <p>This GitHub Action provides an automated check for ensuring developers have a &quot;signed-off&quot; commit when contributing to a given GitHub repository.</p>
 <p>Starter Kit:</p>
@@ -416,43 +410,6 @@ A release kicks off a build and release process in GitHub Actions.</p>
 <li>Click &quot;Install&quot; in the top-right hand corner of the page</li>
 <li>Follow the prompts to select the organizations and repositories you&#x27;d like to install this app</li>
 <li>Verify the installation by navigating to your given repository&#x27;s &quot;Settings&quot; page, and confirming the app appears in the &quot;Integrations -&gt; Applications&quot; left-hand menu</li>
-</ol>
-<doc-anchor-target id="git-hooks">
-    <h3>
-        <doc-anchor-trigger class="header-anchor-trigger" to="#git-hooks">#</doc-anchor-trigger>
-        <span>Git Hooks</span>
-    </h3>
-</doc-anchor-target>
-<doc-anchor-target id="git-secrets">
-    <h4>
-        <doc-anchor-trigger class="header-anchor-trigger" to="#git-secrets">#</doc-anchor-trigger>
-        <span>git-secrets</span>
-    </h4>
-</doc-anchor-target>
-<p>This tool helps prevent unauthorized sensitive secrets and credentials from being committed to a Git repository. It scans commits and looks for regular patterns of credential information, and through the mechanism of a client-side <a href="https://git-scm.com/book/en/v2/Customizing-Git-Git-Hooks">Git hook</a>, it alerts the developer to any unintended commits. Further, it also supports the ability to scan a repository&#x27;s history of commits for any unauthorized commit activity. It is by default optimized for scanning for Amazon Web Services (AWS) credentials, but can be customized to look for custom credential string patterns.</p>
-<p>Starter Kit:</p>
-<ul>
-<li><a href="https://github.com/awslabs/git-secrets">Git Hook</a> to install locally on your machine</li>
-</ul>
-<p>To leverage this template, make sure to do the following:</p>
-<ol>
-<li>Navigate to the <a href="https://github.com/awslabs/git-secrets#id6">git-secrets installation section</a>, and follow the instructions per your platform</li>
-<li>Run <code v-pre>git secrets --install</code> within your chosen repository
-<ol>
-<li>You should received a confirmation such as the below:</li>
-</ol>
-<div class="codeblock-wrapper"><doc-codeblock>
-<pre class="language-none"><code v-pre class="language-none"> ✓ Installed commit-msg hook to .git/hooks/commit-msg
- ✓ Installed pre-commit hook to .git/hooks/pre-commit
- ✓ Installed prepare-commit-msg hook to .git/hooks/prepare-commit-msg</code></pre>
-</doc-codeblock></div>
-</li>
-<li>Register a <a href="https://github.com/awslabs/git-secrets#id20">secrets/credentials provider</a> that helps the tool find specific types of credential patterns, e.g. AWS via <code v-pre>git secrets --register-aws</code></li>
-<li>Automation should be set up to scan for new commits, but it&#x27;s a good idea to scan the history of commits starting out: <code v-pre>git secrets --scan-history</code>
-<ol>
-<li>If you receive no output, that means the tool found now problematic commits.</li>
-</ol>
-</li>
 </ol>
 
                                 
