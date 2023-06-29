@@ -1,0 +1,47 @@
+[
+    { 
+      "title": "GOVERNANCE.md", 
+      "category": "governance",
+      "description": "A governance model template seeking to generalize how most government-sponsored open source projects can expect to operate in the open source arena.",
+      "tags": [
+        "governance",
+        "templates",
+        "repository-setup",
+        "project-template"
+      ],
+      "last-updated": "2022-05-12"
+    },
+    { 
+      "title": "Secrets Detection", 
+      "category": "software lifecycle",
+      "description": "blah",
+      "tags": [
+        "software-lifecycle",
+        "security"
+      ],
+      "last-updated": "2021-11-14" 
+    },
+    { 
+      "title": "README.md",
+      "category": "documentation",
+      "description": "blah blah",
+      "tags": [
+        "documentation",
+        "repository-setup",
+        "project-template"
+      ],
+      "last-updated": "2022-01-05"
+    },
+    { 
+      "title": "Issue Ticket Templates",
+      "category": "documentation",
+      "description": "bla hasdg",
+      "tags": [
+        "documentation",
+        "templates",
+        "repository-setup"
+      ],
+      "last-updated": "2020-09-10"
+    }
+]
+  
