@@ -1,0 +1,24 @@
+{
+  "unversionedId": "guides/governance/contributions/issue-templates/README",
+  "id": "guides/governance/contributions/issue-templates/README",
+  "title": "Issue Templates",
+  "description": "Issue tickets help development teams keep the language of bug, feature, and other types of issues readable and consistent. Templates appear whenever a person submits a new issue, and helps guide that person in providing the key information that gives developers context for a given issue.",
+  "source": "@site/docs/guides/governance/contributions/issue-templates/README.md",
+  "sourceDirName": "guides/governance/contributions/issue-templates",
+  "slug": "/guides/governance/contributions/issue-templates/",
+  "permalink": "/docs/guides/governance/contributions/issue-templates/",
+  "draft": false,
+  "editUrl": "https://github.com/facebook/docusaurus/tree/main/packages/create-docusaurus/templates/shared/docs/guides/governance/contributions/issue-templates/README.md",
+  "tags": [],
+  "version": "current",
+  "frontMatter": {},
+  "sidebar": "guidesSidebar",
+  "previous": {
+    "title": "Developer Certificate of Origin (DCO)",
+    "permalink": "/docs/guides/governance/contributions/developer-certificate-origin/"
+  },
+  "next": {
+    "title": "[Bug]: ",
+    "permalink": "/docs/guides/governance/contributions/issue-templates/github/bug_report"
+  }
+}

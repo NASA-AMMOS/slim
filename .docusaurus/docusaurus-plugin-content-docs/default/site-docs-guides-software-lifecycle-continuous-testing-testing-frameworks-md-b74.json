@@ -1,0 +1,27 @@
+{
+  "unversionedId": "guides/software-lifecycle/continuous-testing/testing-frameworks",
+  "id": "guides/software-lifecycle/continuous-testing/testing-frameworks",
+  "title": "Testing Frameworks",
+  "description": "* Continuous Testing",
+  "source": "@site/docs/guides/software-lifecycle/continuous-testing/testing-frameworks.md",
+  "sourceDirName": "guides/software-lifecycle/continuous-testing",
+  "slug": "/guides/software-lifecycle/continuous-testing/testing-frameworks",
+  "permalink": "/docs/guides/software-lifecycle/continuous-testing/testing-frameworks",
+  "draft": false,
+  "editUrl": "https://github.com/facebook/docusaurus/tree/main/packages/create-docusaurus/templates/shared/docs/guides/software-lifecycle/continuous-testing/testing-frameworks.md",
+  "tags": [],
+  "version": "current",
+  "frontMatter": {
+    "title": "Testing Frameworks",
+    "sidebar_label": "Testing Frameworks"
+  },
+  "sidebar": "guidesSidebar",
+  "previous": {
+    "title": "Continuous Testing",
+    "permalink": "/docs/guides/software-lifecycle/continuous-testing/"
+  },
+  "next": {
+    "title": "Security",
+    "permalink": "/docs/guides/software-lifecycle/security/"
+  }
+}

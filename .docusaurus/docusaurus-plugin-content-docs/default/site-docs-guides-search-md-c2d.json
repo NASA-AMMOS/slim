@@ -1,0 +1,23 @@
+{
+  "unversionedId": "guides/search",
+  "id": "guides/search",
+  "title": "All Guides",
+  "description": "Welcome to our best practice guide resources!",
+  "source": "@site/docs/guides/search.md",
+  "sourceDirName": "guides",
+  "slug": "/guides/search",
+  "permalink": "/docs/guides/search",
+  "draft": false,
+  "editUrl": "https://github.com/facebook/docusaurus/tree/main/packages/create-docusaurus/templates/shared/docs/guides/search.md",
+  "tags": [],
+  "version": "current",
+  "sidebarPosition": 1,
+  "frontMatter": {
+    "sidebar_position": 1
+  },
+  "sidebar": "guidesSidebar",
+  "next": {
+    "title": "Software Lifecycle",
+    "permalink": "/docs/category/software-lifecycle"
+  }
+}

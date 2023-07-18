@@ -1,0 +1,225 @@
+{
+  "docusaurus-plugin-content-docs": {
+    "default": {
+      "path": "/docs",
+      "versions": [
+        {
+          "name": "current",
+          "label": "Next",
+          "isLast": true,
+          "path": "/docs",
+          "mainDocId": "guides/search",
+          "docs": [
+            {
+              "id": "about/CODE_OF_CONDUCT",
+              "path": "/docs/about/CODE_OF_CONDUCT",
+              "sidebar": "aboutSidebar"
+            },
+            {
+              "id": "about/GOVERNANCE",
+              "path": "/docs/about/GOVERNANCE",
+              "sidebar": "aboutSidebar"
+            },
+            {
+              "id": "about/README",
+              "path": "/docs/about/",
+              "sidebar": "aboutSidebar"
+            },
+            {
+              "id": "contribute/CONTRIBUTING",
+              "path": "/docs/contribute/CONTRIBUTING",
+              "sidebar": "contributeSidebar"
+            },
+            {
+              "id": "contribute/submit-best-practice",
+              "path": "/docs/contribute/submit-best-practice",
+              "sidebar": "contributeSidebar"
+            },
+            {
+              "id": "guides/documentation/change-log/README",
+              "path": "/docs/guides/documentation/change-log/",
+              "sidebar": "guidesSidebar"
+            },
+            {
+              "id": "guides/documentation/documention-hosts/README",
+              "path": "/docs/guides/documentation/documention-hosts/",
+              "sidebar": "guidesSidebar"
+            },
+            {
+              "id": "guides/documentation/documention-hosts/trade-study-hostingdocs-user",
+              "path": "/docs/guides/documentation/documention-hosts/trade-study-hostingdocs-user",
+              "sidebar": "guidesSidebar"
+            },
+            {
+              "id": "guides/documentation/documention-hosts/use-cases",
+              "path": "/docs/guides/documentation/documention-hosts/use-cases",
+              "sidebar": "guidesSidebar"
+            },
+            {
+              "id": "guides/documentation/readme/index",
+              "path": "/docs/guides/documentation/readme/",
+              "sidebar": "guidesSidebar"
+            },
+            {
+              "id": "guides/governance/contributions/change-request-templates/github/PULL_REQUEST_TEMPLATE",
+              "path": "/docs/guides/governance/contributions/change-request-templates/github/PULL_REQUEST_TEMPLATE",
+              "sidebar": "guidesSidebar"
+            },
+            {
+              "id": "guides/governance/contributions/change-request-templates/README",
+              "path": "/docs/guides/governance/contributions/change-request-templates/",
+              "sidebar": "guidesSidebar"
+            },
+            {
+              "id": "guides/governance/contributions/code-of-conduct/README",
+              "path": "/docs/guides/governance/contributions/code-of-conduct/",
+              "sidebar": "guidesSidebar"
+            },
+            {
+              "id": "guides/governance/contributions/contributing-guide/CONTRIBUTING",
+              "path": "/docs/guides/governance/contributions/contributing-guide/CONTRIBUTING",
+              "sidebar": "guidesSidebar"
+            },
+            {
+              "id": "guides/governance/contributions/contributing-guide/README",
+              "path": "/docs/guides/governance/contributions/contributing-guide/",
+              "sidebar": "guidesSidebar"
+            },
+            {
+              "id": "guides/governance/contributions/developer-certificate-origin/README",
+              "path": "/docs/guides/governance/contributions/developer-certificate-origin/",
+              "sidebar": "guidesSidebar"
+            },
+            {
+              "id": "guides/governance/contributions/issue-templates/github/bug_report",
+              "path": "/docs/guides/governance/contributions/issue-templates/github/bug_report",
+              "sidebar": "guidesSidebar"
+            },
+            {
+              "id": "guides/governance/contributions/issue-templates/github/new_feature",
+              "path": "/docs/guides/governance/contributions/issue-templates/github/new_feature",
+              "sidebar": "guidesSidebar"
+            },
+            {
+              "id": "guides/governance/contributions/issue-templates/README",
+              "path": "/docs/guides/governance/contributions/issue-templates/",
+              "sidebar": "guidesSidebar"
+            },
+            {
+              "id": "guides/governance/contributions/README",
+              "path": "/docs/guides/governance/contributions/",
+              "sidebar": "guidesSidebar"
+            },
+            {
+              "id": "guides/governance/governance-model/GOVERNANCE",
+              "path": "/docs/guides/governance/governance-model/GOVERNANCE",
+              "sidebar": "guidesSidebar"
+            },
+            {
+              "id": "guides/governance/governance-model/README",
+              "path": "/docs/guides/governance/governance-model/",
+              "sidebar": "guidesSidebar"
+            },
+            {
+              "id": "guides/search",
+              "path": "/docs/guides/search",
+              "sidebar": "guidesSidebar"
+            },
+            {
+              "id": "guides/software-lifecycle/application-starter-kits/python-starter-kit/README",
+              "path": "/docs/guides/software-lifecycle/application-starter-kits/python-starter-kit/",
+              "sidebar": "guidesSidebar"
+            },
+            {
+              "id": "guides/software-lifecycle/application-starter-kits/README",
+              "path": "/docs/guides/software-lifecycle/application-starter-kits/",
+              "sidebar": "guidesSidebar"
+            },
+            {
+              "id": "guides/software-lifecycle/continuous-integration/continuous-integration-frameworks/continuous-integration-frameworks",
+              "path": "/docs/guides/software-lifecycle/continuous-integration/continuous-integration-frameworks/",
+              "sidebar": "guidesSidebar"
+            },
+            {
+              "id": "guides/software-lifecycle/continuous-integration/continuous-integration-frameworks/README",
+              "path": "/docs/guides/software-lifecycle/continuous-integration/continuous-integration-frameworks/",
+              "sidebar": "guidesSidebar"
+            },
+            {
+              "id": "guides/software-lifecycle/continuous-integration/README",
+              "path": "/docs/guides/software-lifecycle/continuous-integration/",
+              "sidebar": "guidesSidebar"
+            },
+            {
+              "id": "guides/software-lifecycle/continuous-integration/reference-architecture/README",
+              "path": "/docs/guides/software-lifecycle/continuous-integration/reference-architecture/",
+              "sidebar": "guidesSidebar"
+            },
+            {
+              "id": "guides/software-lifecycle/continuous-testing/README",
+              "path": "/docs/guides/software-lifecycle/continuous-testing/",
+              "sidebar": "guidesSidebar"
+            },
+            {
+              "id": "guides/software-lifecycle/continuous-testing/testing-frameworks",
+              "path": "/docs/guides/software-lifecycle/continuous-testing/testing-frameworks",
+              "sidebar": "guidesSidebar"
+            },
+            {
+              "id": "guides/software-lifecycle/security/dependabot/README",
+              "path": "/docs/guides/software-lifecycle/security/dependabot/",
+              "sidebar": "guidesSidebar"
+            },
+            {
+              "id": "guides/software-lifecycle/security/README",
+              "path": "/docs/guides/software-lifecycle/security/",
+              "sidebar": "guidesSidebar"
+            },
+            {
+              "id": "guides/software-lifecycle/security/secrets-detection/README",
+              "path": "/docs/guides/software-lifecycle/security/secrets-detection/",
+              "sidebar": "guidesSidebar"
+            },
+            {
+              "id": "/category/software-lifecycle",
+              "path": "/docs/category/software-lifecycle",
+              "sidebar": "guidesSidebar"
+            },
+            {
+              "id": "/category/governance",
+              "path": "/docs/category/governance",
+              "sidebar": "guidesSidebar"
+            },
+            {
+              "id": "/category/documentation",
+              "path": "/docs/category/documentation",
+              "sidebar": "guidesSidebar"
+            }
+          ],
+          "draftIds": [],
+          "sidebars": {
+            "guidesSidebar": {
+              "link": {
+                "path": "/docs/guides/search",
+                "label": "guides/search"
+              }
+            },
+            "aboutSidebar": {
+              "link": {
+                "path": "/docs/about/",
+                "label": "about/README"
+              }
+            },
+            "contributeSidebar": {
+              "link": {
+                "path": "/docs/contribute/CONTRIBUTING",
+                "label": "contribute/CONTRIBUTING"
+              }
+            }
+          }
+        }
+      ],
+      "breadcrumbs": true
+    }
+  }
+}

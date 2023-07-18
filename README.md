@@ -1,41 +1,98 @@
-# Website
+<!-- Header block for project -->
+<hr>
 
-This website is built using [Docusaurus 2](https://docusaurus.io/), a modern static website generator.
+<div align="center">
 
-### Installation
+<img src="https://github.com/riverma/test-repo/assets/3129134/24ecf032-8754-472b-8991-4accf0618871" alt="SLIM Logo" width="200" height="150">
 
-```
-$ yarn
-```
+<!-- ☝️ If you see logo rendering errors, make sure you're not using indentation, or try an HTML IMG tag -->
 
-### Local Development
+<h1 align="center">Software Lifecycle Improvement & Modernization (SLIM)</h1>
 
-```
-$ yarn start
-```
+</div>
 
-This command starts a local development server and opens up a browser window. Most changes are reflected live without having to restart the server.
+<pre align="center">A shared community resource for discussing, iterating and referencing a common set of best practices in software development standards for NASA multi-mission space and ground software.</pre>
 
-### Build
+<!-- Header block for project -->
 
-```
-$ yarn build
-```
+[![SLIM](https://img.shields.io/badge/Best%20Practices%20from-SLIM-blue)](https://nasa-ammos.github.io/slim/)
 
-This command generates static content into the `build` directory and can be served using any static contents hosting service.
+![screen-slim](https://github.com/riverma/test-repo/assets/3129134/3afb3179-4433-4848-a4d5-366d50a57988)
 
-### Deployment
+This repository hosts the SLIM website, a project aimed at developing a common set of best practices in software development standards for NASA multi-mission space and ground software. The website leverages Docusaurus 2, a static website generator.  
 
-Using SSH:
+[Website](https://nasa-ammos.github.io/slim/) | [Discussion Board](https://github.com/NASA-AMMOS/slim/discussions) | [Issue Tracker](https://github.com/NASA-AMMOS/slim/issues)
 
-```
-$ USE_SSH=true yarn deploy
-```
+## Features
 
-Not using SSH:
+* Community-developed best practices and recommendations for software development encoded as Markdown guides
+* Static content for the SLIM website, including live preview during local development, and deployment support for GitHub pages hosting
 
-```
-$ GIT_USER=<Your GitHub username> yarn deploy
-```
+## Contents
 
-If you are using GitHub pages for hosting, this command is a convenient way to build the website and push to the `gh-pages` branch.
+* [Quick Start](#quick-start)
+* [Changelog](#changelog)
+* [FAQ](#frequently-asked-questions-faq)
+* [Contributing Guide](#contributing)
+* [License](#license)
+* [Support](#support)
+
+## Quick Start
+
+To get started with the SLIM project website (including developing and building / deploying it), please follow the steps below.
+
+### Requirements
+
+* Node.js 12 or higher
+* Yarn package manager
+  
+### Setup Instructions
+
+1. Clone the repository
+2. Navigate into the directory
+3. Run `yarn` to install dependencies
+
+### Run Instructions
+
+1. Run `yarn start` to start a local development server
+2. The command should open a browser window with the website running
+
+### Usage Examples
+
+* After making changes to the website, you can see them reflected live in your browser without having to restart the server.
+
+### Build Instructions
+
+1. Run `yarn build` to generate static content into the `build` directory
+
+### Test Instructions
+
+1. After building, the website can be served using any static contents hosting service.
+
+## Changelog
+
+See our [CHANGELOG.md](CHANGELOG.md) for a history of our changes.
+
+See our [releases page](https://github.com/NASA-AMMOS/slim/releases) for our key versioned releases.
+
+## Frequently Asked Questions (FAQ)
+
+Ask us a question in our [discussion board](https://github.com/NASA-AMMOS/slim/discussions). We'll migrate common questions here. 
+
+## Contributing
+
+Please refer to the following resources for more information on contributing:
+
+- To learn how to contribute to our project, please consult our [Contributing Guide](CONTRIBUTING.md).
+- To understand the community ideals and policies we adhere to, please review our [Code of Conduct](CODE_OF_CONDUCT.md).
+- For insights into the governance model that governs our project, please refer to our [Governance Model](GOVERNANCE.md).
+
+## License
+
+Please refer to our [LICENSE](LICENSE) for details regarding the licensing terms and conditions of our project.
+
+## Support
+
+For inquiries regarding support, please reach out to the members of our [Technical Steering Committee](https://github.com/orgs/NASA-AMMOS/teams/slim-tsc). They will be able to provide you with the necessary information and assistance.
+
+---

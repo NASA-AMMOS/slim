@@ -1,0 +1,1519 @@
+{
+  "docusaurus-plugin-content-docs": {
+    "default": {
+      "loadedVersions": [
+        {
+          "versionName": "current",
+          "label": "Next",
+          "banner": null,
+          "badge": false,
+          "noIndex": false,
+          "className": "docs-version-current",
+          "path": "/docs",
+          "tagsPath": "/docs/tags",
+          "editUrl": "https://github.com/facebook/docusaurus/tree/main/packages/create-docusaurus/templates/shared/docs",
+          "editUrlLocalized": "https://github.com/facebook/docusaurus/tree/main/packages/create-docusaurus/templates/shared/i18n/en/docusaurus-plugin-content-docs/current",
+          "isLast": true,
+          "routePriority": -1,
+          "sidebarFilePath": "/Users/rverma/src/slim/sidebars.js",
+          "contentPath": "/Users/rverma/src/slim/docs",
+          "contentPathLocalized": "/Users/rverma/src/slim/i18n/en/docusaurus-plugin-content-docs/current",
+          "docs": [
+            {
+              "unversionedId": "about/CODE_OF_CONDUCT",
+              "id": "about/CODE_OF_CONDUCT",
+              "title": "Code of Conduct",
+              "description": "Our Pledge",
+              "source": "@site/docs/about/CODE_OF_CONDUCT.md",
+              "sourceDirName": "about",
+              "slug": "/about/CODE_OF_CONDUCT",
+              "permalink": "/docs/about/CODE_OF_CONDUCT",
+              "draft": false,
+              "editUrl": "https://github.com/facebook/docusaurus/tree/main/packages/create-docusaurus/templates/shared/docs/about/CODE_OF_CONDUCT.md",
+              "tags": [],
+              "version": "current",
+              "frontMatter": {},
+              "sidebar": "aboutSidebar",
+              "previous": {
+                "title": "About",
+                "permalink": "/docs/about/"
+              },
+              "next": {
+                "title": "SLIM Project Governance",
+                "permalink": "/docs/about/GOVERNANCE"
+              }
+            },
+            {
+              "unversionedId": "about/GOVERNANCE",
+              "id": "about/GOVERNANCE",
+              "title": "SLIM Project Governance",
+              "description": "This governance model aims to create an open source community that encourages transparency, contributions, and collaboration, but maintains sound technical and quality standards. Our goal is to build a community comprised of members across the SLIM community and beyond, including from private organizations, universities, government organizations, and international organizations.",
+              "source": "@site/docs/about/GOVERNANCE.md",
+              "sourceDirName": "about",
+              "slug": "/about/GOVERNANCE",
+              "permalink": "/docs/about/GOVERNANCE",
+              "draft": false,
+              "editUrl": "https://github.com/facebook/docusaurus/tree/main/packages/create-docusaurus/templates/shared/docs/about/GOVERNANCE.md",
+              "tags": [],
+              "version": "current",
+              "frontMatter": {},
+              "sidebar": "aboutSidebar",
+              "previous": {
+                "title": "Code of Conduct",
+                "permalink": "/docs/about/CODE_OF_CONDUCT"
+              }
+            },
+            {
+              "unversionedId": "about/README",
+              "id": "about/README",
+              "title": "About",
+              "description": "A shared resource for discussing, iterating and referencing best practices in software lifecycle process improvements for multi-mission space and ground software",
+              "source": "@site/docs/about/README.md",
+              "sourceDirName": "about",
+              "slug": "/about/",
+              "permalink": "/docs/about/",
+              "draft": false,
+              "editUrl": "https://github.com/facebook/docusaurus/tree/main/packages/create-docusaurus/templates/shared/docs/about/README.md",
+              "tags": [],
+              "version": "current",
+              "sidebarPosition": 1,
+              "frontMatter": {
+                "sidebar_position": 1
+              },
+              "sidebar": "aboutSidebar",
+              "next": {
+                "title": "Code of Conduct",
+                "permalink": "/docs/about/CODE_OF_CONDUCT"
+              }
+            },
+            {
+              "unversionedId": "contribute/CONTRIBUTING",
+              "id": "contribute/CONTRIBUTING",
+              "title": "Contributing to SLIM",
+              "description": "Thanks for taking the time to consider contributing! We very much appreciate your time and effort. This document outlines the many ways you can contribute to our project, and provides detailed guidance on best practices. We look forward to your help!",
+              "source": "@site/docs/contribute/CONTRIBUTING.md",
+              "sourceDirName": "contribute",
+              "slug": "/contribute/CONTRIBUTING",
+              "permalink": "/docs/contribute/CONTRIBUTING",
+              "draft": false,
+              "editUrl": "https://github.com/facebook/docusaurus/tree/main/packages/create-docusaurus/templates/shared/docs/contribute/CONTRIBUTING.md",
+              "tags": [],
+              "version": "current",
+              "frontMatter": {},
+              "sidebar": "contributeSidebar",
+              "next": {
+                "title": "Submit a Best Practice Guide",
+                "permalink": "/docs/contribute/submit-best-practice"
+              }
+            },
+            {
+              "unversionedId": "contribute/submit-best-practice",
+              "id": "contribute/submit-best-practice",
+              "title": "Submit a Best Practice Guide",
+              "description": "1⃣️ Find or Make a Ticket",
+              "source": "@site/docs/contribute/submit-best-practice.md",
+              "sourceDirName": "contribute",
+              "slug": "/contribute/submit-best-practice",
+              "permalink": "/docs/contribute/submit-best-practice",
+              "draft": false,
+              "editUrl": "https://github.com/facebook/docusaurus/tree/main/packages/create-docusaurus/templates/shared/docs/contribute/submit-best-practice.md",
+              "tags": [],
+              "version": "current",
+              "frontMatter": {},
+              "sidebar": "contributeSidebar",
+              "previous": {
+                "title": "Contributing to SLIM",
+                "permalink": "/docs/contribute/CONTRIBUTING"
+              }
+            },
+            {
+              "unversionedId": "guides/documentation/change-log/README",
+              "id": "guides/documentation/change-log/README",
+              "title": "Change Log",
+              "description": "A change log provides a human readable list of significant changes, additions, deprecations, removals for software over time. It is meant to be able to be read by people. Change logs should be documented within a file called CHANGELOG.md and be updated per key release. See semantic release for guidance on releasing cycles and versioning of your software.",
+              "source": "@site/docs/guides/documentation/change-log/README.md",
+              "sourceDirName": "guides/documentation/change-log",
+              "slug": "/guides/documentation/change-log/",
+              "permalink": "/docs/guides/documentation/change-log/",
+              "draft": false,
+              "editUrl": "https://github.com/facebook/docusaurus/tree/main/packages/create-docusaurus/templates/shared/docs/guides/documentation/change-log/README.md",
+              "tags": [],
+              "version": "current",
+              "frontMatter": {},
+              "sidebar": "guidesSidebar",
+              "previous": {
+                "title": "Documentation",
+                "permalink": "/docs/category/documentation"
+              },
+              "next": {
+                "title": "Documentation Hosts",
+                "permalink": "/docs/guides/documentation/documention-hosts/"
+              }
+            },
+            {
+              "unversionedId": "guides/documentation/documention-hosts/README",
+              "id": "guides/documentation/documention-hosts/README",
+              "title": "Documentation Hosts",
+              "description": "Use Cases",
+              "source": "@site/docs/guides/documentation/documention-hosts/README.md",
+              "sourceDirName": "guides/documentation/documention-hosts",
+              "slug": "/guides/documentation/documention-hosts/",
+              "permalink": "/docs/guides/documentation/documention-hosts/",
+              "draft": false,
+              "editUrl": "https://github.com/facebook/docusaurus/tree/main/packages/create-docusaurus/templates/shared/docs/guides/documentation/documention-hosts/README.md",
+              "tags": [],
+              "version": "current",
+              "frontMatter": {},
+              "sidebar": "guidesSidebar",
+              "previous": {
+                "title": "Change Log",
+                "permalink": "/docs/guides/documentation/change-log/"
+              },
+              "next": {
+                "title": "Docs Hosting Trade Study",
+                "permalink": "/docs/guides/documentation/documention-hosts/trade-study-hostingdocs-user"
+              }
+            },
+            {
+              "unversionedId": "guides/documentation/documention-hosts/trade-study-hostingdocs-user",
+              "id": "guides/documentation/documention-hosts/trade-study-hostingdocs-user",
+              "title": "Docs Hosting Trade Study",
+              "description": "| Tool Name                                       | Licensing                                                                                             | Render Time | VCS Stored Content                                    | Self-Hosting | Managed Hosting                                                                                                     | API Actions                                                                          | Generate API Docs                                                                      | WYSIWYG Editing | Markdown Support                                                                                             | Embedded Content                                                                          | Hierarchial Structure                                             | Templating Support                                                                                | Roles                                                         | Comment Support                                                                 | Search                                                         | Import From Other Formats                                                              | Export Other Formats                                                                            | Anchor Links                                             | Draft Content                                                                        | Version Control                                                                   | Internationalization                                                                                                                         | File Uploads                                                                                                 | Diagram Editing                                                                                                           | Usage Analytics                                                 | Extension Support                                                                                                  |",
+              "source": "@site/docs/guides/documentation/documention-hosts/trade-study-hostingdocs-user.md",
+              "sourceDirName": "guides/documentation/documention-hosts",
+              "slug": "/guides/documentation/documention-hosts/trade-study-hostingdocs-user",
+              "permalink": "/docs/guides/documentation/documention-hosts/trade-study-hostingdocs-user",
+              "draft": false,
+              "editUrl": "https://github.com/facebook/docusaurus/tree/main/packages/create-docusaurus/templates/shared/docs/guides/documentation/documention-hosts/trade-study-hostingdocs-user.md",
+              "tags": [],
+              "version": "current",
+              "frontMatter": {
+                "title": "Docs Hosting Trade Study",
+                "sidebar_label": "Docs Hosting Trade Study"
+              },
+              "sidebar": "guidesSidebar",
+              "previous": {
+                "title": "Documentation Hosts",
+                "permalink": "/docs/guides/documentation/documention-hosts/"
+              },
+              "next": {
+                "title": "Docs Use Cases",
+                "permalink": "/docs/guides/documentation/documention-hosts/use-cases"
+              }
+            },
+            {
+              "unversionedId": "guides/documentation/documention-hosts/use-cases",
+              "id": "guides/documentation/documention-hosts/use-cases",
+              "title": "Docs Use Cases",
+              "description": "* Documentation Best Practices",
+              "source": "@site/docs/guides/documentation/documention-hosts/use-cases.md",
+              "sourceDirName": "guides/documentation/documention-hosts",
+              "slug": "/guides/documentation/documention-hosts/use-cases",
+              "permalink": "/docs/guides/documentation/documention-hosts/use-cases",
+              "draft": false,
+              "editUrl": "https://github.com/facebook/docusaurus/tree/main/packages/create-docusaurus/templates/shared/docs/guides/documentation/documention-hosts/use-cases.md",
+              "tags": [],
+              "version": "current",
+              "frontMatter": {
+                "title": "Docs Use Cases",
+                "sidebar_label": "Docs Use Cases"
+              },
+              "sidebar": "guidesSidebar",
+              "previous": {
+                "title": "Docs Hosting Trade Study",
+                "permalink": "/docs/guides/documentation/documention-hosts/trade-study-hostingdocs-user"
+              },
+              "next": {
+                "title": "README Template",
+                "permalink": "/docs/guides/documentation/readme/"
+              }
+            },
+            {
+              "unversionedId": "guides/documentation/readme/index",
+              "id": "guides/documentation/readme/index",
+              "title": "README Template",
+              "description": "A README.md template that can be used to help developers and users understand your repository concisely and clearly.",
+              "source": "@site/docs/guides/documentation/readme/index.md",
+              "sourceDirName": "guides/documentation/readme",
+              "slug": "/guides/documentation/readme/",
+              "permalink": "/docs/guides/documentation/readme/",
+              "draft": false,
+              "editUrl": "https://github.com/facebook/docusaurus/tree/main/packages/create-docusaurus/templates/shared/docs/guides/documentation/readme/index.md",
+              "tags": [],
+              "version": "current",
+              "frontMatter": {},
+              "sidebar": "guidesSidebar",
+              "previous": {
+                "title": "Docs Use Cases",
+                "permalink": "/docs/guides/documentation/documention-hosts/use-cases"
+              }
+            },
+            {
+              "unversionedId": "guides/governance/contributions/change-request-templates/github/PULL_REQUEST_TEMPLATE",
+              "id": "guides/governance/contributions/change-request-templates/github/PULL_REQUEST_TEMPLATE",
+              "title": "PULL_REQUEST_TEMPLATE",
+              "description": "Purpose",
+              "source": "@site/docs/guides/governance/contributions/change-request-templates/github/PULL_REQUEST_TEMPLATE.md",
+              "sourceDirName": "guides/governance/contributions/change-request-templates/github",
+              "slug": "/guides/governance/contributions/change-request-templates/github/PULL_REQUEST_TEMPLATE",
+              "permalink": "/docs/guides/governance/contributions/change-request-templates/github/PULL_REQUEST_TEMPLATE",
+              "draft": false,
+              "editUrl": "https://github.com/facebook/docusaurus/tree/main/packages/create-docusaurus/templates/shared/docs/guides/governance/contributions/change-request-templates/github/PULL_REQUEST_TEMPLATE.md",
+              "tags": [],
+              "version": "current",
+              "frontMatter": {},
+              "sidebar": "guidesSidebar",
+              "previous": {
+                "title": "Change Request Templates",
+                "permalink": "/docs/guides/governance/contributions/change-request-templates/"
+              },
+              "next": {
+                "title": "Code of Conduct",
+                "permalink": "/docs/guides/governance/contributions/code-of-conduct/"
+              }
+            },
+            {
+              "unversionedId": "guides/governance/contributions/change-request-templates/README",
+              "id": "guides/governance/contributions/change-request-templates/README",
+              "title": "Change Request Templates",
+              "description": "Pull requests are the currency for how contributions are made to projects. Having a pre-filled out pull request template offers guidance to your potential developers on how to contribute to your project.",
+              "source": "@site/docs/guides/governance/contributions/change-request-templates/README.md",
+              "sourceDirName": "guides/governance/contributions/change-request-templates",
+              "slug": "/guides/governance/contributions/change-request-templates/",
+              "permalink": "/docs/guides/governance/contributions/change-request-templates/",
+              "draft": false,
+              "editUrl": "https://github.com/facebook/docusaurus/tree/main/packages/create-docusaurus/templates/shared/docs/guides/governance/contributions/change-request-templates/README.md",
+              "tags": [],
+              "version": "current",
+              "frontMatter": {},
+              "sidebar": "guidesSidebar",
+              "previous": {
+                "title": "Contributions",
+                "permalink": "/docs/guides/governance/contributions/"
+              },
+              "next": {
+                "title": "PULL_REQUEST_TEMPLATE",
+                "permalink": "/docs/guides/governance/contributions/change-request-templates/github/PULL_REQUEST_TEMPLATE"
+              }
+            },
+            {
+              "unversionedId": "guides/governance/contributions/code-of-conduct/README",
+              "id": "guides/governance/contributions/code-of-conduct/README",
+              "title": "Code of Conduct",
+              "description": "The code of conduct is typically a document that provides guidance to a project team on how the team members should interact with each other. It identifies behaviors that are helpful for building a better development community, provides contact information for addressing grievances (should they arise), and finally lists key responses that team leadership should / will take for dealing with unexpected behavior. Below are some examples to expedite the incorporation of a code of conduct.",
+              "source": "@site/docs/guides/governance/contributions/code-of-conduct/README.md",
+              "sourceDirName": "guides/governance/contributions/code-of-conduct",
+              "slug": "/guides/governance/contributions/code-of-conduct/",
+              "permalink": "/docs/guides/governance/contributions/code-of-conduct/",
+              "draft": false,
+              "editUrl": "https://github.com/facebook/docusaurus/tree/main/packages/create-docusaurus/templates/shared/docs/guides/governance/contributions/code-of-conduct/README.md",
+              "tags": [],
+              "version": "current",
+              "frontMatter": {},
+              "sidebar": "guidesSidebar",
+              "previous": {
+                "title": "PULL_REQUEST_TEMPLATE",
+                "permalink": "/docs/guides/governance/contributions/change-request-templates/github/PULL_REQUEST_TEMPLATE"
+              },
+              "next": {
+                "title": "Contributing Guide",
+                "permalink": "/docs/guides/governance/contributions/contributing-guide/"
+              }
+            },
+            {
+              "unversionedId": "guides/governance/contributions/contributing-guide/CONTRIBUTING",
+              "id": "guides/governance/contributions/contributing-guide/CONTRIBUTING",
+              "title": "Contributing Guide",
+              "description": "Thanks for taking the time to consider contributing! We very much appreciate your time and effort. This document outlines the many ways you can contribute to our project, and provides detailed guidance on best practices. We look forward to your help!",
+              "source": "@site/docs/guides/governance/contributions/contributing-guide/CONTRIBUTING.md",
+              "sourceDirName": "guides/governance/contributions/contributing-guide",
+              "slug": "/guides/governance/contributions/contributing-guide/CONTRIBUTING",
+              "permalink": "/docs/guides/governance/contributions/contributing-guide/CONTRIBUTING",
+              "draft": false,
+              "editUrl": "https://github.com/facebook/docusaurus/tree/main/packages/create-docusaurus/templates/shared/docs/guides/governance/contributions/contributing-guide/CONTRIBUTING.md",
+              "tags": [],
+              "version": "current",
+              "frontMatter": {},
+              "sidebar": "guidesSidebar",
+              "previous": {
+                "title": "Contributing Guide",
+                "permalink": "/docs/guides/governance/contributions/contributing-guide/"
+              },
+              "next": {
+                "title": "Developer Certificate of Origin (DCO)",
+                "permalink": "/docs/guides/governance/contributions/developer-certificate-origin/"
+              }
+            },
+            {
+              "unversionedId": "guides/governance/contributions/contributing-guide/README",
+              "id": "guides/governance/contributions/contributing-guide/README",
+              "title": "Contributing Guide",
+              "description": "A contribution guide is an important document directed at new contributors to your project - to help them in understanding what and how they may contribute. It can be used to outline expected requirements prior to contributions (i.e. acceptance of licensing terms, signing off on any developer agreements required) as well as to ensure the quality of contributions are in-line with expected project norms. If a developer asks how to contribute, please point them to this guide. This guide also itemizes essential ingredients necessary for a successful patch submission.",
+              "source": "@site/docs/guides/governance/contributions/contributing-guide/README.md",
+              "sourceDirName": "guides/governance/contributions/contributing-guide",
+              "slug": "/guides/governance/contributions/contributing-guide/",
+              "permalink": "/docs/guides/governance/contributions/contributing-guide/",
+              "draft": false,
+              "editUrl": "https://github.com/facebook/docusaurus/tree/main/packages/create-docusaurus/templates/shared/docs/guides/governance/contributions/contributing-guide/README.md",
+              "tags": [],
+              "version": "current",
+              "frontMatter": {},
+              "sidebar": "guidesSidebar",
+              "previous": {
+                "title": "Code of Conduct",
+                "permalink": "/docs/guides/governance/contributions/code-of-conduct/"
+              },
+              "next": {
+                "title": "Contributing Guide",
+                "permalink": "/docs/guides/governance/contributions/contributing-guide/CONTRIBUTING"
+              }
+            },
+            {
+              "unversionedId": "guides/governance/contributions/developer-certificate-origin/README",
+              "id": "guides/governance/contributions/developer-certificate-origin/README",
+              "title": "Developer Certificate of Origin (DCO)",
+              "description": "This GitHub Action provides an automated check for ensuring developers have a \"signed-off\" commit when contributing to a given GitHub repository.",
+              "source": "@site/docs/guides/governance/contributions/developer-certificate-origin/README.md",
+              "sourceDirName": "guides/governance/contributions/developer-certificate-origin",
+              "slug": "/guides/governance/contributions/developer-certificate-origin/",
+              "permalink": "/docs/guides/governance/contributions/developer-certificate-origin/",
+              "draft": false,
+              "editUrl": "https://github.com/facebook/docusaurus/tree/main/packages/create-docusaurus/templates/shared/docs/guides/governance/contributions/developer-certificate-origin/README.md",
+              "tags": [],
+              "version": "current",
+              "frontMatter": {},
+              "sidebar": "guidesSidebar",
+              "previous": {
+                "title": "Contributing Guide",
+                "permalink": "/docs/guides/governance/contributions/contributing-guide/CONTRIBUTING"
+              },
+              "next": {
+                "title": "Issue Templates",
+                "permalink": "/docs/guides/governance/contributions/issue-templates/"
+              }
+            },
+            {
+              "unversionedId": "guides/governance/contributions/issue-templates/github/bug_report",
+              "id": "guides/governance/contributions/issue-templates/github/bug_report",
+              "title": "[Bug]: ",
+              "description": "Checked for duplicates",
+              "source": "@site/docs/guides/governance/contributions/issue-templates/github/bug_report.md",
+              "sourceDirName": "guides/governance/contributions/issue-templates/github",
+              "slug": "/guides/governance/contributions/issue-templates/github/bug_report",
+              "permalink": "/docs/guides/governance/contributions/issue-templates/github/bug_report",
+              "draft": false,
+              "editUrl": "https://github.com/facebook/docusaurus/tree/main/packages/create-docusaurus/templates/shared/docs/guides/governance/contributions/issue-templates/github/bug_report.md",
+              "tags": [],
+              "version": "current",
+              "frontMatter": {
+                "name": "Bug Report",
+                "about": "Report a bug to help us improve",
+                "title": "[Bug]: ",
+                "labels": "bug",
+                "assignees": ""
+              },
+              "sidebar": "guidesSidebar",
+              "previous": {
+                "title": "Issue Templates",
+                "permalink": "/docs/guides/governance/contributions/issue-templates/"
+              },
+              "next": {
+                "title": "[New Feature]: ",
+                "permalink": "/docs/guides/governance/contributions/issue-templates/github/new_feature"
+              }
+            },
+            {
+              "unversionedId": "guides/governance/contributions/issue-templates/github/new_feature",
+              "id": "guides/governance/contributions/issue-templates/github/new_feature",
+              "title": "[New Feature]: ",
+              "description": "Checked for duplicates",
+              "source": "@site/docs/guides/governance/contributions/issue-templates/github/new_feature.md",
+              "sourceDirName": "guides/governance/contributions/issue-templates/github",
+              "slug": "/guides/governance/contributions/issue-templates/github/new_feature",
+              "permalink": "/docs/guides/governance/contributions/issue-templates/github/new_feature",
+              "draft": false,
+              "editUrl": "https://github.com/facebook/docusaurus/tree/main/packages/create-docusaurus/templates/shared/docs/guides/governance/contributions/issue-templates/github/new_feature.md",
+              "tags": [],
+              "version": "current",
+              "frontMatter": {
+                "name": "New Feature",
+                "about": "Suggest a new feature for us to implement",
+                "title": "[New Feature]: ",
+                "labels": "enhancement",
+                "assignees": ""
+              },
+              "sidebar": "guidesSidebar",
+              "previous": {
+                "title": "[Bug]: ",
+                "permalink": "/docs/guides/governance/contributions/issue-templates/github/bug_report"
+              },
+              "next": {
+                "title": "Governance Model",
+                "permalink": "/docs/guides/governance/governance-model/"
+              }
+            },
+            {
+              "unversionedId": "guides/governance/contributions/issue-templates/README",
+              "id": "guides/governance/contributions/issue-templates/README",
+              "title": "Issue Templates",
+              "description": "Issue tickets help development teams keep the language of bug, feature, and other types of issues readable and consistent. Templates appear whenever a person submits a new issue, and helps guide that person in providing the key information that gives developers context for a given issue.",
+              "source": "@site/docs/guides/governance/contributions/issue-templates/README.md",
+              "sourceDirName": "guides/governance/contributions/issue-templates",
+              "slug": "/guides/governance/contributions/issue-templates/",
+              "permalink": "/docs/guides/governance/contributions/issue-templates/",
+              "draft": false,
+              "editUrl": "https://github.com/facebook/docusaurus/tree/main/packages/create-docusaurus/templates/shared/docs/guides/governance/contributions/issue-templates/README.md",
+              "tags": [],
+              "version": "current",
+              "frontMatter": {},
+              "sidebar": "guidesSidebar",
+              "previous": {
+                "title": "Developer Certificate of Origin (DCO)",
+                "permalink": "/docs/guides/governance/contributions/developer-certificate-origin/"
+              },
+              "next": {
+                "title": "[Bug]: ",
+                "permalink": "/docs/guides/governance/contributions/issue-templates/github/bug_report"
+              }
+            },
+            {
+              "unversionedId": "guides/governance/contributions/README",
+              "id": "guides/governance/contributions/README",
+              "title": "Contributions",
+              "description": "",
+              "source": "@site/docs/guides/governance/contributions/README.md",
+              "sourceDirName": "guides/governance/contributions",
+              "slug": "/guides/governance/contributions/",
+              "permalink": "/docs/guides/governance/contributions/",
+              "draft": false,
+              "editUrl": "https://github.com/facebook/docusaurus/tree/main/packages/create-docusaurus/templates/shared/docs/guides/governance/contributions/README.md",
+              "tags": [],
+              "version": "current",
+              "frontMatter": {},
+              "sidebar": "guidesSidebar",
+              "previous": {
+                "title": "Governance",
+                "permalink": "/docs/category/governance"
+              },
+              "next": {
+                "title": "Change Request Templates",
+                "permalink": "/docs/guides/governance/contributions/change-request-templates/"
+              }
+            },
+            {
+              "unversionedId": "guides/governance/governance-model/GOVERNANCE",
+              "id": "guides/governance/governance-model/GOVERNANCE",
+              "title": "[INSERT PROJECT NAME] Project Governance",
+              "description": "This governance model aims to create an open source community that encourages transparency, contributions, and collaboration, but maintains sound technical and quality standards. Our goal is to build a community comprised of members across the [INSERT PROJECT DOMAIN] community and beyond, including from private organizations, universities, government organizations, and international organizations.",
+              "source": "@site/docs/guides/governance/governance-model/GOVERNANCE.md",
+              "sourceDirName": "guides/governance/governance-model",
+              "slug": "/guides/governance/governance-model/GOVERNANCE",
+              "permalink": "/docs/guides/governance/governance-model/GOVERNANCE",
+              "draft": false,
+              "editUrl": "https://github.com/facebook/docusaurus/tree/main/packages/create-docusaurus/templates/shared/docs/guides/governance/governance-model/GOVERNANCE.md",
+              "tags": [],
+              "version": "current",
+              "frontMatter": {},
+              "sidebar": "guidesSidebar",
+              "previous": {
+                "title": "Governance Model",
+                "permalink": "/docs/guides/governance/governance-model/"
+              },
+              "next": {
+                "title": "Documentation",
+                "permalink": "/docs/category/documentation"
+              }
+            },
+            {
+              "unversionedId": "guides/governance/governance-model/README",
+              "id": "guides/governance/governance-model/README",
+              "title": "Governance Model",
+              "description": "This governance model template seeks to generalize how most government-sponsored open source projects can expect to operate in the open source arena. It is targeted towards medium and large-sized teams. This template governance model can be included in your repository under the file name GOVERNANCE.md. There are two key philosophies behind this governance model to keep note of:",
+              "source": "@site/docs/guides/governance/governance-model/README.md",
+              "sourceDirName": "guides/governance/governance-model",
+              "slug": "/guides/governance/governance-model/",
+              "permalink": "/docs/guides/governance/governance-model/",
+              "draft": false,
+              "editUrl": "https://github.com/facebook/docusaurus/tree/main/packages/create-docusaurus/templates/shared/docs/guides/governance/governance-model/README.md",
+              "tags": [],
+              "version": "current",
+              "frontMatter": {},
+              "sidebar": "guidesSidebar",
+              "previous": {
+                "title": "[New Feature]: ",
+                "permalink": "/docs/guides/governance/contributions/issue-templates/github/new_feature"
+              },
+              "next": {
+                "title": "[INSERT PROJECT NAME] Project Governance",
+                "permalink": "/docs/guides/governance/governance-model/GOVERNANCE"
+              }
+            },
+            {
+              "unversionedId": "guides/search",
+              "id": "guides/search",
+              "title": "All Guides",
+              "description": "Welcome to our best practice guide resources!",
+              "source": "@site/docs/guides/search.md",
+              "sourceDirName": "guides",
+              "slug": "/guides/search",
+              "permalink": "/docs/guides/search",
+              "draft": false,
+              "editUrl": "https://github.com/facebook/docusaurus/tree/main/packages/create-docusaurus/templates/shared/docs/guides/search.md",
+              "tags": [],
+              "version": "current",
+              "sidebarPosition": 1,
+              "frontMatter": {
+                "sidebar_position": 1
+              },
+              "sidebar": "guidesSidebar",
+              "next": {
+                "title": "Software Lifecycle",
+                "permalink": "/docs/category/software-lifecycle"
+              }
+            },
+            {
+              "unversionedId": "guides/software-lifecycle/application-starter-kits/python-starter-kit/README",
+              "id": "guides/software-lifecycle/application-starter-kits/python-starter-kit/README",
+              "title": "Python Starter Kit",
+              "description": "A complete, deployment-ready Python 3 application that's bundled into a reusable template repository for quick implementation.",
+              "source": "@site/docs/guides/software-lifecycle/application-starter-kits/python-starter-kit/README.md",
+              "sourceDirName": "guides/software-lifecycle/application-starter-kits/python-starter-kit",
+              "slug": "/guides/software-lifecycle/application-starter-kits/python-starter-kit/",
+              "permalink": "/docs/guides/software-lifecycle/application-starter-kits/python-starter-kit/",
+              "draft": false,
+              "editUrl": "https://github.com/facebook/docusaurus/tree/main/packages/create-docusaurus/templates/shared/docs/guides/software-lifecycle/application-starter-kits/python-starter-kit/README.md",
+              "tags": [],
+              "version": "current",
+              "frontMatter": {},
+              "sidebar": "guidesSidebar",
+              "previous": {
+                "title": "Application Starter Kits",
+                "permalink": "/docs/guides/software-lifecycle/application-starter-kits/"
+              },
+              "next": {
+                "title": "Continuous Integration",
+                "permalink": "/docs/guides/software-lifecycle/continuous-integration/"
+              }
+            },
+            {
+              "unversionedId": "guides/software-lifecycle/application-starter-kits/README",
+              "id": "guides/software-lifecycle/application-starter-kits/README",
+              "title": "Application Starter Kits",
+              "description": "",
+              "source": "@site/docs/guides/software-lifecycle/application-starter-kits/README.md",
+              "sourceDirName": "guides/software-lifecycle/application-starter-kits",
+              "slug": "/guides/software-lifecycle/application-starter-kits/",
+              "permalink": "/docs/guides/software-lifecycle/application-starter-kits/",
+              "draft": false,
+              "editUrl": "https://github.com/facebook/docusaurus/tree/main/packages/create-docusaurus/templates/shared/docs/guides/software-lifecycle/application-starter-kits/README.md",
+              "tags": [],
+              "version": "current",
+              "frontMatter": {},
+              "sidebar": "guidesSidebar",
+              "previous": {
+                "title": "Software Lifecycle",
+                "permalink": "/docs/category/software-lifecycle"
+              },
+              "next": {
+                "title": "Python Starter Kit",
+                "permalink": "/docs/guides/software-lifecycle/application-starter-kits/python-starter-kit/"
+              }
+            },
+            {
+              "unversionedId": "guides/software-lifecycle/continuous-integration/continuous-integration-frameworks/continuous-integration-frameworks",
+              "id": "guides/software-lifecycle/continuous-integration/continuous-integration-frameworks/continuous-integration-frameworks",
+              "title": "Continuous Integration Frameworks",
+              "description": "* Continuous Integration",
+              "source": "@site/docs/guides/software-lifecycle/continuous-integration/continuous-integration-frameworks/continuous-integration-frameworks.md",
+              "sourceDirName": "guides/software-lifecycle/continuous-integration/continuous-integration-frameworks",
+              "slug": "/guides/software-lifecycle/continuous-integration/continuous-integration-frameworks/",
+              "permalink": "/docs/guides/software-lifecycle/continuous-integration/continuous-integration-frameworks/",
+              "draft": false,
+              "editUrl": "https://github.com/facebook/docusaurus/tree/main/packages/create-docusaurus/templates/shared/docs/guides/software-lifecycle/continuous-integration/continuous-integration-frameworks/continuous-integration-frameworks.md",
+              "tags": [],
+              "version": "current",
+              "frontMatter": {
+                "title": "Continuous Integration Frameworks",
+                "sidebar_label": "Continuous Integration Frameworks"
+              },
+              "sidebar": "guidesSidebar",
+              "previous": {
+                "title": "Continuous Integration Frameworks",
+                "permalink": "/docs/guides/software-lifecycle/continuous-integration/continuous-integration-frameworks/"
+              },
+              "next": {
+                "title": "Reference Architectures",
+                "permalink": "/docs/guides/software-lifecycle/continuous-integration/reference-architecture/"
+              }
+            },
+            {
+              "unversionedId": "guides/software-lifecycle/continuous-integration/continuous-integration-frameworks/README",
+              "id": "guides/software-lifecycle/continuous-integration/continuous-integration-frameworks/README",
+              "title": "Continuous Integration Frameworks",
+              "description": "[Frameworks & Use Cases) [continuous-integration-frameworks]",
+              "source": "@site/docs/guides/software-lifecycle/continuous-integration/continuous-integration-frameworks/README.md",
+              "sourceDirName": "guides/software-lifecycle/continuous-integration/continuous-integration-frameworks",
+              "slug": "/guides/software-lifecycle/continuous-integration/continuous-integration-frameworks/",
+              "permalink": "/docs/guides/software-lifecycle/continuous-integration/continuous-integration-frameworks/",
+              "draft": false,
+              "editUrl": "https://github.com/facebook/docusaurus/tree/main/packages/create-docusaurus/templates/shared/docs/guides/software-lifecycle/continuous-integration/continuous-integration-frameworks/README.md",
+              "tags": [],
+              "version": "current",
+              "frontMatter": {},
+              "sidebar": "guidesSidebar",
+              "previous": {
+                "title": "Continuous Integration",
+                "permalink": "/docs/guides/software-lifecycle/continuous-integration/"
+              },
+              "next": {
+                "title": "Continuous Integration Frameworks",
+                "permalink": "/docs/guides/software-lifecycle/continuous-integration/continuous-integration-frameworks/"
+              }
+            },
+            {
+              "unversionedId": "guides/software-lifecycle/continuous-integration/README",
+              "id": "guides/software-lifecycle/continuous-integration/README",
+              "title": "Continuous Integration",
+              "description": "This this guide, we explore best practices for continuous integration - including exploring scenarios for build integration, publishing test results and releasing compiled software.",
+              "source": "@site/docs/guides/software-lifecycle/continuous-integration/README.md",
+              "sourceDirName": "guides/software-lifecycle/continuous-integration",
+              "slug": "/guides/software-lifecycle/continuous-integration/",
+              "permalink": "/docs/guides/software-lifecycle/continuous-integration/",
+              "draft": false,
+              "editUrl": "https://github.com/facebook/docusaurus/tree/main/packages/create-docusaurus/templates/shared/docs/guides/software-lifecycle/continuous-integration/README.md",
+              "tags": [],
+              "version": "current",
+              "frontMatter": {},
+              "sidebar": "guidesSidebar",
+              "previous": {
+                "title": "Python Starter Kit",
+                "permalink": "/docs/guides/software-lifecycle/application-starter-kits/python-starter-kit/"
+              },
+              "next": {
+                "title": "Continuous Integration Frameworks",
+                "permalink": "/docs/guides/software-lifecycle/continuous-integration/continuous-integration-frameworks/"
+              }
+            },
+            {
+              "unversionedId": "guides/software-lifecycle/continuous-integration/reference-architecture/README",
+              "id": "guides/software-lifecycle/continuous-integration/reference-architecture/README",
+              "title": "Reference Architectures",
+              "description": "Overview",
+              "source": "@site/docs/guides/software-lifecycle/continuous-integration/reference-architecture/README.md",
+              "sourceDirName": "guides/software-lifecycle/continuous-integration/reference-architecture",
+              "slug": "/guides/software-lifecycle/continuous-integration/reference-architecture/",
+              "permalink": "/docs/guides/software-lifecycle/continuous-integration/reference-architecture/",
+              "draft": false,
+              "editUrl": "https://github.com/facebook/docusaurus/tree/main/packages/create-docusaurus/templates/shared/docs/guides/software-lifecycle/continuous-integration/reference-architecture/README.md",
+              "tags": [],
+              "version": "current",
+              "frontMatter": {},
+              "sidebar": "guidesSidebar",
+              "previous": {
+                "title": "Continuous Integration Frameworks",
+                "permalink": "/docs/guides/software-lifecycle/continuous-integration/continuous-integration-frameworks/"
+              },
+              "next": {
+                "title": "Continuous Testing",
+                "permalink": "/docs/guides/software-lifecycle/continuous-testing/"
+              }
+            },
+            {
+              "unversionedId": "guides/software-lifecycle/continuous-testing/README",
+              "id": "guides/software-lifecycle/continuous-testing/README",
+              "title": "Continuous Testing",
+              "description": "Use Cases and Frameworks",
+              "source": "@site/docs/guides/software-lifecycle/continuous-testing/README.md",
+              "sourceDirName": "guides/software-lifecycle/continuous-testing",
+              "slug": "/guides/software-lifecycle/continuous-testing/",
+              "permalink": "/docs/guides/software-lifecycle/continuous-testing/",
+              "draft": false,
+              "editUrl": "https://github.com/facebook/docusaurus/tree/main/packages/create-docusaurus/templates/shared/docs/guides/software-lifecycle/continuous-testing/README.md",
+              "tags": [],
+              "version": "current",
+              "frontMatter": {},
+              "sidebar": "guidesSidebar",
+              "previous": {
+                "title": "Reference Architectures",
+                "permalink": "/docs/guides/software-lifecycle/continuous-integration/reference-architecture/"
+              },
+              "next": {
+                "title": "Testing Frameworks",
+                "permalink": "/docs/guides/software-lifecycle/continuous-testing/testing-frameworks"
+              }
+            },
+            {
+              "unversionedId": "guides/software-lifecycle/continuous-testing/testing-frameworks",
+              "id": "guides/software-lifecycle/continuous-testing/testing-frameworks",
+              "title": "Testing Frameworks",
+              "description": "* Continuous Testing",
+              "source": "@site/docs/guides/software-lifecycle/continuous-testing/testing-frameworks.md",
+              "sourceDirName": "guides/software-lifecycle/continuous-testing",
+              "slug": "/guides/software-lifecycle/continuous-testing/testing-frameworks",
+              "permalink": "/docs/guides/software-lifecycle/continuous-testing/testing-frameworks",
+              "draft": false,
+              "editUrl": "https://github.com/facebook/docusaurus/tree/main/packages/create-docusaurus/templates/shared/docs/guides/software-lifecycle/continuous-testing/testing-frameworks.md",
+              "tags": [],
+              "version": "current",
+              "frontMatter": {
+                "title": "Testing Frameworks",
+                "sidebar_label": "Testing Frameworks"
+              },
+              "sidebar": "guidesSidebar",
+              "previous": {
+                "title": "Continuous Testing",
+                "permalink": "/docs/guides/software-lifecycle/continuous-testing/"
+              },
+              "next": {
+                "title": "Security",
+                "permalink": "/docs/guides/software-lifecycle/security/"
+              }
+            },
+            {
+              "unversionedId": "guides/software-lifecycle/security/dependabot/README",
+              "id": "guides/software-lifecycle/security/dependabot/README",
+              "title": "Dependabot",
+              "description": "A GitHub ecosystem tool for dependency version and security vulnerability analysis.",
+              "source": "@site/docs/guides/software-lifecycle/security/dependabot/README.md",
+              "sourceDirName": "guides/software-lifecycle/security/dependabot",
+              "slug": "/guides/software-lifecycle/security/dependabot/",
+              "permalink": "/docs/guides/software-lifecycle/security/dependabot/",
+              "draft": false,
+              "editUrl": "https://github.com/facebook/docusaurus/tree/main/packages/create-docusaurus/templates/shared/docs/guides/software-lifecycle/security/dependabot/README.md",
+              "tags": [],
+              "version": "current",
+              "frontMatter": {},
+              "sidebar": "guidesSidebar",
+              "previous": {
+                "title": "Security",
+                "permalink": "/docs/guides/software-lifecycle/security/"
+              },
+              "next": {
+                "title": "Secrets Detection",
+                "permalink": "/docs/guides/software-lifecycle/security/secrets-detection/"
+              }
+            },
+            {
+              "unversionedId": "guides/software-lifecycle/security/README",
+              "id": "guides/software-lifecycle/security/README",
+              "title": "Security",
+              "description": "",
+              "source": "@site/docs/guides/software-lifecycle/security/README.md",
+              "sourceDirName": "guides/software-lifecycle/security",
+              "slug": "/guides/software-lifecycle/security/",
+              "permalink": "/docs/guides/software-lifecycle/security/",
+              "draft": false,
+              "editUrl": "https://github.com/facebook/docusaurus/tree/main/packages/create-docusaurus/templates/shared/docs/guides/software-lifecycle/security/README.md",
+              "tags": [],
+              "version": "current",
+              "frontMatter": {},
+              "sidebar": "guidesSidebar",
+              "previous": {
+                "title": "Testing Frameworks",
+                "permalink": "/docs/guides/software-lifecycle/continuous-testing/testing-frameworks"
+              },
+              "next": {
+                "title": "Dependabot",
+                "permalink": "/docs/guides/software-lifecycle/security/dependabot/"
+              }
+            },
+            {
+              "unversionedId": "guides/software-lifecycle/security/secrets-detection/README",
+              "id": "guides/software-lifecycle/security/secrets-detection/README",
+              "title": "Secrets Detection",
+              "description": "We recommend detect-secrets to identify secure information included in source controlled files. Its prowess lies in its extensible Python plugin API, which allows custom rules and heuristics to tackle a broad spectrum of secrets. Designed to scan the project's current state rather than the entire git history,",
+              "source": "@site/docs/guides/software-lifecycle/security/secrets-detection/README.md",
+              "sourceDirName": "guides/software-lifecycle/security/secrets-detection",
+              "slug": "/guides/software-lifecycle/security/secrets-detection/",
+              "permalink": "/docs/guides/software-lifecycle/security/secrets-detection/",
+              "draft": false,
+              "editUrl": "https://github.com/facebook/docusaurus/tree/main/packages/create-docusaurus/templates/shared/docs/guides/software-lifecycle/security/secrets-detection/README.md",
+              "tags": [],
+              "version": "current",
+              "frontMatter": {},
+              "sidebar": "guidesSidebar",
+              "previous": {
+                "title": "Dependabot",
+                "permalink": "/docs/guides/software-lifecycle/security/dependabot/"
+              },
+              "next": {
+                "title": "Governance",
+                "permalink": "/docs/category/governance"
+              }
+            }
+          ],
+          "drafts": [],
+          "sidebars": {
+            "guidesSidebar": [
+              {
+                "type": "doc",
+                "id": "guides/search"
+              },
+              {
+                "type": "category",
+                "label": "Software Lifecycle",
+                "collapsible": true,
+                "collapsed": true,
+                "items": [
+                  {
+                    "type": "category",
+                    "label": "Application Starter Kits",
+                    "collapsible": true,
+                    "collapsed": true,
+                    "items": [
+                      {
+                        "type": "doc",
+                        "label": "Python Starter Kit",
+                        "id": "guides/software-lifecycle/application-starter-kits/python-starter-kit/README"
+                      }
+                    ],
+                    "link": {
+                      "type": "doc",
+                      "id": "guides/software-lifecycle/application-starter-kits/README"
+                    }
+                  },
+                  {
+                    "type": "category",
+                    "label": "Continuous Integration",
+                    "collapsible": true,
+                    "collapsed": true,
+                    "items": [
+                      {
+                        "type": "category",
+                        "label": "Continuous Integration Frameworks",
+                        "collapsible": true,
+                        "collapsed": true,
+                        "items": [
+                          {
+                            "type": "doc",
+                            "id": "guides/software-lifecycle/continuous-integration/continuous-integration-frameworks/continuous-integration-frameworks",
+                            "label": "Continuous Integration Frameworks"
+                          }
+                        ],
+                        "link": {
+                          "type": "doc",
+                          "id": "guides/software-lifecycle/continuous-integration/continuous-integration-frameworks/README"
+                        }
+                      },
+                      {
+                        "type": "doc",
+                        "label": "Reference Architectures",
+                        "id": "guides/software-lifecycle/continuous-integration/reference-architecture/README"
+                      }
+                    ],
+                    "link": {
+                      "type": "doc",
+                      "id": "guides/software-lifecycle/continuous-integration/README"
+                    }
+                  },
+                  {
+                    "type": "category",
+                    "label": "Continuous Testing",
+                    "collapsible": true,
+                    "collapsed": true,
+                    "items": [
+                      {
+                        "type": "doc",
+                        "id": "guides/software-lifecycle/continuous-testing/testing-frameworks",
+                        "label": "Testing Frameworks"
+                      }
+                    ],
+                    "link": {
+                      "type": "doc",
+                      "id": "guides/software-lifecycle/continuous-testing/README"
+                    }
+                  },
+                  {
+                    "type": "category",
+                    "label": "Security",
+                    "collapsible": true,
+                    "collapsed": true,
+                    "items": [
+                      {
+                        "type": "doc",
+                        "label": "Dependabot",
+                        "id": "guides/software-lifecycle/security/dependabot/README"
+                      },
+                      {
+                        "type": "doc",
+                        "label": "Secrets Detection",
+                        "id": "guides/software-lifecycle/security/secrets-detection/README"
+                      }
+                    ],
+                    "link": {
+                      "type": "doc",
+                      "id": "guides/software-lifecycle/security/README"
+                    }
+                  }
+                ],
+                "link": {
+                  "type": "generated-index",
+                  "description": "Software Lifecycle Best Practices.",
+                  "slug": "/category/software-lifecycle",
+                  "permalink": "/docs/category/software-lifecycle"
+                }
+              },
+              {
+                "type": "category",
+                "label": "Governance",
+                "collapsible": true,
+                "collapsed": true,
+                "items": [
+                  {
+                    "type": "category",
+                    "label": "Contributions",
+                    "collapsible": true,
+                    "collapsed": true,
+                    "items": [
+                      {
+                        "type": "category",
+                        "label": "Change Request Templates",
+                        "collapsible": true,
+                        "collapsed": true,
+                        "items": [
+                          {
+                            "type": "category",
+                            "label": "github",
+                            "collapsible": true,
+                            "collapsed": true,
+                            "items": [
+                              {
+                                "type": "doc",
+                                "id": "guides/governance/contributions/change-request-templates/github/PULL_REQUEST_TEMPLATE"
+                              }
+                            ]
+                          }
+                        ],
+                        "link": {
+                          "type": "doc",
+                          "id": "guides/governance/contributions/change-request-templates/README"
+                        }
+                      },
+                      {
+                        "type": "doc",
+                        "label": "Code of Conduct",
+                        "id": "guides/governance/contributions/code-of-conduct/README"
+                      },
+                      {
+                        "type": "category",
+                        "label": "Contributing Guide",
+                        "collapsible": true,
+                        "collapsed": true,
+                        "items": [
+                          {
+                            "type": "doc",
+                            "id": "guides/governance/contributions/contributing-guide/CONTRIBUTING"
+                          }
+                        ],
+                        "link": {
+                          "type": "doc",
+                          "id": "guides/governance/contributions/contributing-guide/README"
+                        }
+                      },
+                      {
+                        "type": "doc",
+                        "label": "Developer Certificate of Origin (DCO)",
+                        "id": "guides/governance/contributions/developer-certificate-origin/README"
+                      },
+                      {
+                        "type": "category",
+                        "label": "Issue Templates",
+                        "collapsible": true,
+                        "collapsed": true,
+                        "items": [
+                          {
+                            "type": "category",
+                            "label": "github",
+                            "collapsible": true,
+                            "collapsed": true,
+                            "items": [
+                              {
+                                "type": "doc",
+                                "id": "guides/governance/contributions/issue-templates/github/bug_report"
+                              },
+                              {
+                                "type": "doc",
+                                "id": "guides/governance/contributions/issue-templates/github/new_feature"
+                              }
+                            ]
+                          }
+                        ],
+                        "link": {
+                          "type": "doc",
+                          "id": "guides/governance/contributions/issue-templates/README"
+                        }
+                      }
+                    ],
+                    "link": {
+                      "type": "doc",
+                      "id": "guides/governance/contributions/README"
+                    }
+                  },
+                  {
+                    "type": "category",
+                    "label": "Governance Model",
+                    "collapsible": true,
+                    "collapsed": true,
+                    "items": [
+                      {
+                        "type": "doc",
+                        "id": "guides/governance/governance-model/GOVERNANCE"
+                      }
+                    ],
+                    "link": {
+                      "type": "doc",
+                      "id": "guides/governance/governance-model/README"
+                    }
+                  }
+                ],
+                "link": {
+                  "type": "generated-index",
+                  "description": "Governance Best Practices.",
+                  "slug": "/category/governance",
+                  "permalink": "/docs/category/governance"
+                }
+              },
+              {
+                "type": "category",
+                "label": "Documentation",
+                "collapsible": true,
+                "collapsed": true,
+                "items": [
+                  {
+                    "type": "doc",
+                    "label": "Change Log",
+                    "id": "guides/documentation/change-log/README"
+                  },
+                  {
+                    "type": "category",
+                    "label": "Documentation Hosts",
+                    "collapsible": true,
+                    "collapsed": true,
+                    "items": [
+                      {
+                        "type": "doc",
+                        "id": "guides/documentation/documention-hosts/trade-study-hostingdocs-user",
+                        "label": "Docs Hosting Trade Study"
+                      },
+                      {
+                        "type": "doc",
+                        "id": "guides/documentation/documention-hosts/use-cases",
+                        "label": "Docs Use Cases"
+                      }
+                    ],
+                    "link": {
+                      "type": "doc",
+                      "id": "guides/documentation/documention-hosts/README"
+                    }
+                  },
+                  {
+                    "type": "doc",
+                    "label": "README Template",
+                    "id": "guides/documentation/readme/index"
+                  }
+                ],
+                "link": {
+                  "type": "generated-index",
+                  "description": "Documentation Best Practices.",
+                  "slug": "/category/documentation",
+                  "permalink": "/docs/category/documentation"
+                }
+              }
+            ],
+            "aboutSidebar": [
+              {
+                "type": "doc",
+                "id": "about/README"
+              },
+              {
+                "type": "doc",
+                "id": "about/CODE_OF_CONDUCT"
+              },
+              {
+                "type": "doc",
+                "id": "about/GOVERNANCE"
+              }
+            ],
+            "contributeSidebar": [
+              {
+                "type": "doc",
+                "id": "contribute/CONTRIBUTING"
+              },
+              {
+                "type": "doc",
+                "id": "contribute/submit-best-practice"
+              }
+            ]
+          }
+        }
+      ]
+    }
+  },
+  "docusaurus-plugin-content-blog": {
+    "default": {
+      "blogSidebarTitle": "Recent posts",
+      "blogPosts": [
+        {
+          "id": "welcome",
+          "metadata": {
+            "permalink": "/blog/welcome",
+            "editUrl": "https://github.com/facebook/docusaurus/tree/main/packages/create-docusaurus/templates/shared/blog/2021-08-26-welcome/index.md",
+            "source": "@site/blog/2021-08-26-welcome/index.md",
+            "title": "Welcome",
+            "description": "Docusaurus blogging features are powered by the blog plugin.",
+            "date": "2021-08-26T00:00:00.000Z",
+            "formattedDate": "August 26, 2021",
+            "tags": [
+              {
+                "label": "facebook",
+                "permalink": "/blog/tags/facebook"
+              },
+              {
+                "label": "hello",
+                "permalink": "/blog/tags/hello"
+              },
+              {
+                "label": "docusaurus",
+                "permalink": "/blog/tags/docusaurus"
+              }
+            ],
+            "readingTime": 0.405,
+            "hasTruncateMarker": false,
+            "authors": [
+              {
+                "name": "Sébastien Lorber",
+                "title": "Docusaurus maintainer",
+                "url": "https://sebastienlorber.com",
+                "imageURL": "https://github.com/slorber.png",
+                "key": "slorber"
+              },
+              {
+                "name": "Yangshun Tay",
+                "title": "Front End Engineer @ Facebook",
+                "url": "https://github.com/yangshun",
+                "imageURL": "https://github.com/yangshun.png",
+                "key": "yangshun"
+              }
+            ],
+            "frontMatter": {
+              "slug": "welcome",
+              "title": "Welcome",
+              "authors": [
+                "slorber",
+                "yangshun"
+              ],
+              "tags": [
+                "facebook",
+                "hello",
+                "docusaurus"
+              ]
+            },
+            "nextItem": {
+              "title": "MDX Blog Post",
+              "permalink": "/blog/mdx-blog-post"
+            }
+          },
+          "content": "[Docusaurus blogging features](https://docusaurus.io/docs/blog) are powered by the [blog plugin](https://docusaurus.io/docs/api/plugins/@docusaurus/plugin-content-blog).\n\nSimply add Markdown files (or folders) to the `blog` directory.\n\nRegular blog authors can be added to `authors.yml`.\n\nThe blog post date can be extracted from filenames, such as:\n\n- `2019-05-30-welcome.md`\n- `2019-05-30-welcome/index.md`\n\nA blog post folder can be convenient to co-locate blog post images:\n\n![Docusaurus Plushie](./docusaurus-plushie-banner.jpeg)\n\nThe blog supports tags as well!\n\n**And if you don't want a blog**: just delete this directory, and use `blog: false` in your Docusaurus config."
+        },
+        {
+          "id": "mdx-blog-post",
+          "metadata": {
+            "permalink": "/blog/mdx-blog-post",
+            "editUrl": "https://github.com/facebook/docusaurus/tree/main/packages/create-docusaurus/templates/shared/blog/2021-08-01-mdx-blog-post.mdx",
+            "source": "@site/blog/2021-08-01-mdx-blog-post.mdx",
+            "title": "MDX Blog Post",
+            "description": "Blog posts support Docusaurus Markdown features, such as MDX.",
+            "date": "2021-08-01T00:00:00.000Z",
+            "formattedDate": "August 1, 2021",
+            "tags": [
+              {
+                "label": "docusaurus",
+                "permalink": "/blog/tags/docusaurus"
+              }
+            ],
+            "readingTime": 0.175,
+            "hasTruncateMarker": false,
+            "authors": [
+              {
+                "name": "Sébastien Lorber",
+                "title": "Docusaurus maintainer",
+                "url": "https://sebastienlorber.com",
+                "imageURL": "https://github.com/slorber.png",
+                "key": "slorber"
+              }
+            ],
+            "frontMatter": {
+              "slug": "mdx-blog-post",
+              "title": "MDX Blog Post",
+              "authors": [
+                "slorber"
+              ],
+              "tags": [
+                "docusaurus"
+              ]
+            },
+            "prevItem": {
+              "title": "Welcome",
+              "permalink": "/blog/welcome"
+            },
+            "nextItem": {
+              "title": "Long Blog Post",
+              "permalink": "/blog/long-blog-post"
+            }
+          },
+          "content": "Blog posts support [Docusaurus Markdown features](https://docusaurus.io/docs/markdown-features), such as [MDX](https://mdxjs.com/).\n\n:::tip\n\nUse the power of React to create interactive blog posts.\n\n```js\n<button onClick={() => alert('button clicked!')}>Click me!</button>\n```\n\n<button onClick={() => alert('button clicked!')}>Click me!</button>\n\n:::"
+        },
+        {
+          "id": "long-blog-post",
+          "metadata": {
+            "permalink": "/blog/long-blog-post",
+            "editUrl": "https://github.com/facebook/docusaurus/tree/main/packages/create-docusaurus/templates/shared/blog/2019-05-29-long-blog-post.md",
+            "source": "@site/blog/2019-05-29-long-blog-post.md",
+            "title": "Long Blog Post",
+            "description": "This is the summary of a very long blog post,",
+            "date": "2019-05-29T00:00:00.000Z",
+            "formattedDate": "May 29, 2019",
+            "tags": [
+              {
+                "label": "hello",
+                "permalink": "/blog/tags/hello"
+              },
+              {
+                "label": "docusaurus",
+                "permalink": "/blog/tags/docusaurus"
+              }
+            ],
+            "readingTime": 2.05,
+            "hasTruncateMarker": true,
+            "authors": [
+              {
+                "name": "Endilie Yacop Sucipto",
+                "title": "Maintainer of Docusaurus",
+                "url": "https://github.com/endiliey",
+                "imageURL": "https://github.com/endiliey.png",
+                "key": "endi"
+              }
+            ],
+            "frontMatter": {
+              "slug": "long-blog-post",
+              "title": "Long Blog Post",
+              "authors": "endi",
+              "tags": [
+                "hello",
+                "docusaurus"
+              ]
+            },
+            "prevItem": {
+              "title": "MDX Blog Post",
+              "permalink": "/blog/mdx-blog-post"
+            },
+            "nextItem": {
+              "title": "First Blog Post",
+              "permalink": "/blog/first-blog-post"
+            }
+          },
+          "content": "This is the summary of a very long blog post,\n\nUse a `<!--` `truncate` `-->` comment to limit blog post size in the list view.\n\n<!--truncate-->\n\nLorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque elementum dignissim ultricies. Fusce rhoncus ipsum tempor eros aliquam consequat. Lorem ipsum dolor sit amet\n\nLorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque elementum dignissim ultricies. Fusce rhoncus ipsum tempor eros aliquam consequat. Lorem ipsum dolor sit amet\n\nLorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque elementum dignissim ultricies. Fusce rhoncus ipsum tempor eros aliquam consequat. Lorem ipsum dolor sit amet\n\nLorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque elementum dignissim ultricies. Fusce rhoncus ipsum tempor eros aliquam consequat. Lorem ipsum dolor sit amet\n\nLorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque elementum dignissim ultricies. Fusce rhoncus ipsum tempor eros aliquam consequat. Lorem ipsum dolor sit amet\n\nLorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque elementum dignissim ultricies. Fusce rhoncus ipsum tempor eros aliquam consequat. Lorem ipsum dolor sit amet\n\nLorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque elementum dignissim ultricies. Fusce rhoncus ipsum tempor eros aliquam consequat. Lorem ipsum dolor sit amet\n\nLorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque elementum dignissim ultricies. Fusce rhoncus ipsum tempor eros aliquam consequat. Lorem ipsum dolor sit amet\n\nLorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque elementum dignissim ultricies. Fusce rhoncus ipsum tempor eros aliquam consequat. Lorem ipsum dolor sit amet\n\nLorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque elementum dignissim ultricies. Fusce rhoncus ipsum tempor eros aliquam consequat. Lorem ipsum dolor sit amet\n\nLorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque elementum dignissim ultricies. Fusce rhoncus ipsum tempor eros aliquam consequat. Lorem ipsum dolor sit amet\n\nLorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque elementum dignissim ultricies. Fusce rhoncus ipsum tempor eros aliquam consequat. Lorem ipsum dolor sit amet\n\nLorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque elementum dignissim ultricies. Fusce rhoncus ipsum tempor eros aliquam consequat. Lorem ipsum dolor sit amet\n\nLorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque elementum dignissim ultricies. Fusce rhoncus ipsum tempor eros aliquam consequat. Lorem ipsum dolor sit amet\n\nLorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque elementum dignissim ultricies. Fusce rhoncus ipsum tempor eros aliquam consequat. Lorem ipsum dolor sit amet\n\nLorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque elementum dignissim ultricies. Fusce rhoncus ipsum tempor eros aliquam consequat. Lorem ipsum dolor sit amet"
+        },
+        {
+          "id": "first-blog-post",
+          "metadata": {
+            "permalink": "/blog/first-blog-post",
+            "editUrl": "https://github.com/facebook/docusaurus/tree/main/packages/create-docusaurus/templates/shared/blog/2019-05-28-first-blog-post.md",
+            "source": "@site/blog/2019-05-28-first-blog-post.md",
+            "title": "First Blog Post",
+            "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque elementum dignissim ultricies. Fusce rhoncus ipsum tempor eros aliquam consequat. Lorem ipsum dolor sit amet",
+            "date": "2019-05-28T00:00:00.000Z",
+            "formattedDate": "May 28, 2019",
+            "tags": [
+              {
+                "label": "hola",
+                "permalink": "/blog/tags/hola"
+              },
+              {
+                "label": "docusaurus",
+                "permalink": "/blog/tags/docusaurus"
+              }
+            ],
+            "readingTime": 0.12,
+            "hasTruncateMarker": false,
+            "authors": [
+              {
+                "name": "Gao Wei",
+                "title": "Docusaurus Core Team",
+                "url": "https://github.com/wgao19",
+                "image_url": "https://github.com/wgao19.png",
+                "imageURL": "https://github.com/wgao19.png"
+              }
+            ],
+            "frontMatter": {
+              "slug": "first-blog-post",
+              "title": "First Blog Post",
+              "authors": {
+                "name": "Gao Wei",
+                "title": "Docusaurus Core Team",
+                "url": "https://github.com/wgao19",
+                "image_url": "https://github.com/wgao19.png",
+                "imageURL": "https://github.com/wgao19.png"
+              },
+              "tags": [
+                "hola",
+                "docusaurus"
+              ]
+            },
+            "prevItem": {
+              "title": "Long Blog Post",
+              "permalink": "/blog/long-blog-post"
+            }
+          },
+          "content": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque elementum dignissim ultricies. Fusce rhoncus ipsum tempor eros aliquam consequat. Lorem ipsum dolor sit amet"
+        }
+      ],
+      "blogListPaginated": [
+        {
+          "items": [
+            "welcome",
+            "mdx-blog-post",
+            "long-blog-post",
+            "first-blog-post"
+          ],
+          "metadata": {
+            "permalink": "/blog",
+            "page": 1,
+            "postsPerPage": 10,
+            "totalPages": 1,
+            "totalCount": 4,
+            "blogDescription": "Blog",
+            "blogTitle": "Blog"
+          }
+        }
+      ],
+      "blogTags": {
+        "/blog/tags/facebook": {
+          "label": "facebook",
+          "items": [
+            "welcome"
+          ],
+          "permalink": "/blog/tags/facebook",
+          "pages": [
+            {
+              "items": [
+                "welcome"
+              ],
+              "metadata": {
+                "permalink": "/blog/tags/facebook",
+                "page": 1,
+                "postsPerPage": 10,
+                "totalPages": 1,
+                "totalCount": 1,
+                "blogDescription": "Blog",
+                "blogTitle": "Blog"
+              }
+            }
+          ]
+        },
+        "/blog/tags/hello": {
+          "label": "hello",
+          "items": [
+            "welcome",
+            "long-blog-post"
+          ],
+          "permalink": "/blog/tags/hello",
+          "pages": [
+            {
+              "items": [
+                "welcome",
+                "long-blog-post"
+              ],
+              "metadata": {
+                "permalink": "/blog/tags/hello",
+                "page": 1,
+                "postsPerPage": 10,
+                "totalPages": 1,
+                "totalCount": 2,
+                "blogDescription": "Blog",
+                "blogTitle": "Blog"
+              }
+            }
+          ]
+        },
+        "/blog/tags/docusaurus": {
+          "label": "docusaurus",
+          "items": [
+            "welcome",
+            "mdx-blog-post",
+            "long-blog-post",
+            "first-blog-post"
+          ],
+          "permalink": "/blog/tags/docusaurus",
+          "pages": [
+            {
+              "items": [
+                "welcome",
+                "mdx-blog-post",
+                "long-blog-post",
+                "first-blog-post"
+              ],
+              "metadata": {
+                "permalink": "/blog/tags/docusaurus",
+                "page": 1,
+                "postsPerPage": 10,
+                "totalPages": 1,
+                "totalCount": 4,
+                "blogDescription": "Blog",
+                "blogTitle": "Blog"
+              }
+            }
+          ]
+        },
+        "/blog/tags/hola": {
+          "label": "hola",
+          "items": [
+            "first-blog-post"
+          ],
+          "permalink": "/blog/tags/hola",
+          "pages": [
+            {
+              "items": [
+                "first-blog-post"
+              ],
+              "metadata": {
+                "permalink": "/blog/tags/hola",
+                "page": 1,
+                "postsPerPage": 10,
+                "totalPages": 1,
+                "totalCount": 1,
+                "blogDescription": "Blog",
+                "blogTitle": "Blog"
+              }
+            }
+          ]
+        }
+      },
+      "blogTagsListPath": "/blog/tags"
+    }
+  },
+  "docusaurus-plugin-content-pages": {
+    "default": [
+      {
+        "type": "jsx",
+        "permalink": "/",
+        "source": "@site/src/pages/index.js"
+      },
+      {
+        "type": "mdx",
+        "permalink": "/markdown-page",
+        "source": "@site/src/pages/markdown-page.md",
+        "title": "Markdown page example",
+        "description": "You don't need React to write simple standalone pages.",
+        "frontMatter": {
+          "title": "Markdown page example"
+        }
+      }
+    ]
+  },
+  "docusaurus-plugin-debug": {},
+  "docusaurus-theme-classic": {},
+  "docusaurus-theme-mermaid": {},
+  "docusaurus-bootstrap-plugin": {},
+  "docusaurus-mdx-fallback-plugin": {}
+}

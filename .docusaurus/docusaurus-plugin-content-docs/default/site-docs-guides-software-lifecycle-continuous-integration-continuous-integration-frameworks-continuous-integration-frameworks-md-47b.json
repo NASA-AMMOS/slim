@@ -1,0 +1,27 @@
+{
+  "unversionedId": "guides/software-lifecycle/continuous-integration/continuous-integration-frameworks/continuous-integration-frameworks",
+  "id": "guides/software-lifecycle/continuous-integration/continuous-integration-frameworks/continuous-integration-frameworks",
+  "title": "Continuous Integration Frameworks",
+  "description": "* Continuous Integration",
+  "source": "@site/docs/guides/software-lifecycle/continuous-integration/continuous-integration-frameworks/continuous-integration-frameworks.md",
+  "sourceDirName": "guides/software-lifecycle/continuous-integration/continuous-integration-frameworks",
+  "slug": "/guides/software-lifecycle/continuous-integration/continuous-integration-frameworks/",
+  "permalink": "/docs/guides/software-lifecycle/continuous-integration/continuous-integration-frameworks/",
+  "draft": false,
+  "editUrl": "https://github.com/facebook/docusaurus/tree/main/packages/create-docusaurus/templates/shared/docs/guides/software-lifecycle/continuous-integration/continuous-integration-frameworks/continuous-integration-frameworks.md",
+  "tags": [],
+  "version": "current",
+  "frontMatter": {
+    "title": "Continuous Integration Frameworks",
+    "sidebar_label": "Continuous Integration Frameworks"
+  },
+  "sidebar": "guidesSidebar",
+  "previous": {
+    "title": "Continuous Integration Frameworks",
+    "permalink": "/docs/guides/software-lifecycle/continuous-integration/continuous-integration-frameworks/"
+  },
+  "next": {
+    "title": "Reference Architectures",
+    "permalink": "/docs/guides/software-lifecycle/continuous-integration/reference-architecture/"
+  }
+}

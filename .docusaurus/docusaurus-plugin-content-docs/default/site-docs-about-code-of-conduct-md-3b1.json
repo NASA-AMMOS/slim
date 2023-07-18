@@ -1,0 +1,24 @@
+{
+  "unversionedId": "about/CODE_OF_CONDUCT",
+  "id": "about/CODE_OF_CONDUCT",
+  "title": "Code of Conduct",
+  "description": "Our Pledge",
+  "source": "@site/docs/about/CODE_OF_CONDUCT.md",
+  "sourceDirName": "about",
+  "slug": "/about/CODE_OF_CONDUCT",
+  "permalink": "/docs/about/CODE_OF_CONDUCT",
+  "draft": false,
+  "editUrl": "https://github.com/facebook/docusaurus/tree/main/packages/create-docusaurus/templates/shared/docs/about/CODE_OF_CONDUCT.md",
+  "tags": [],
+  "version": "current",
+  "frontMatter": {},
+  "sidebar": "aboutSidebar",
+  "previous": {
+    "title": "About",
+    "permalink": "/docs/about/"
+  },
+  "next": {
+    "title": "SLIM Project Governance",
+    "permalink": "/docs/about/GOVERNANCE"
+  }
+}

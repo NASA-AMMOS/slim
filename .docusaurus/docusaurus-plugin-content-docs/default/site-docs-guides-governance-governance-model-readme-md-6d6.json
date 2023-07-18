@@ -1,0 +1,24 @@
+{
+  "unversionedId": "guides/governance/governance-model/README",
+  "id": "guides/governance/governance-model/README",
+  "title": "Governance Model",
+  "description": "This governance model template seeks to generalize how most government-sponsored open source projects can expect to operate in the open source arena. It is targeted towards medium and large-sized teams. This template governance model can be included in your repository under the file name GOVERNANCE.md. There are two key philosophies behind this governance model to keep note of:",
+  "source": "@site/docs/guides/governance/governance-model/README.md",
+  "sourceDirName": "guides/governance/governance-model",
+  "slug": "/guides/governance/governance-model/",
+  "permalink": "/docs/guides/governance/governance-model/",
+  "draft": false,
+  "editUrl": "https://github.com/facebook/docusaurus/tree/main/packages/create-docusaurus/templates/shared/docs/guides/governance/governance-model/README.md",
+  "tags": [],
+  "version": "current",
+  "frontMatter": {},
+  "sidebar": "guidesSidebar",
+  "previous": {
+    "title": "[New Feature]: ",
+    "permalink": "/docs/guides/governance/contributions/issue-templates/github/new_feature"
+  },
+  "next": {
+    "title": "[INSERT PROJECT NAME] Project Governance",
+    "permalink": "/docs/guides/governance/governance-model/GOVERNANCE"
+  }
+}

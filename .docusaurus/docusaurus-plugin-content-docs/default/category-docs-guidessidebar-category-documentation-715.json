@@ -1,0 +1,16 @@
+{
+  "title": "Documentation",
+  "description": "Documentation Best Practices.",
+  "slug": "/category/documentation",
+  "permalink": "/docs/category/documentation",
+  "navigation": {
+    "previous": {
+      "title": "[INSERT PROJECT NAME] Project Governance",
+      "permalink": "/docs/guides/governance/governance-model/GOVERNANCE"
+    },
+    "next": {
+      "title": "Change Log",
+      "permalink": "/docs/guides/documentation/change-log/"
+    }
+  }
+}

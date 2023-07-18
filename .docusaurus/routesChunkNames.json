@@ -1,0 +1,351 @@
+{
+  "/__docusaurus/debug-004": {
+    "__comp": "__comp---theme-debug-config-23-a-2ff",
+    "__context": {
+      "plugin": "plugin---docusaurus-debug-24-a-71d"
+    }
+  },
+  "/__docusaurus/debug/config-8e3": {
+    "__comp": "__comp---theme-debug-config-23-a-2ff",
+    "__context": {
+      "plugin": "plugin---docusaurus-debug-24-a-71d"
+    }
+  },
+  "/__docusaurus/debug/content-a93": {
+    "__comp": "__comp---theme-debug-contentba-8-ce7",
+    "__context": {
+      "plugin": "plugin---docusaurus-debug-24-a-71d"
+    },
+    "allContent": "allContent---docusaurus-debug-content-246-9aa"
+  },
+  "/__docusaurus/debug/globalData-c59": {
+    "__comp": "__comp---theme-debug-global-dataede-0fa",
+    "__context": {
+      "plugin": "plugin---docusaurus-debug-24-a-71d"
+    }
+  },
+  "/__docusaurus/debug/metadata-1e3": {
+    "__comp": "__comp---theme-debug-site-metadata-68-e-3d4",
+    "__context": {
+      "plugin": "plugin---docusaurus-debug-24-a-71d"
+    }
+  },
+  "/__docusaurus/debug/registry-fe2": {
+    "__comp": "__comp---theme-debug-registry-679-501",
+    "__context": {
+      "plugin": "plugin---docusaurus-debug-24-a-71d"
+    }
+  },
+  "/__docusaurus/debug/routes-274": {
+    "__comp": "__comp---theme-debug-routes-946-699",
+    "__context": {
+      "plugin": "plugin---docusaurus-debug-24-a-71d"
+    }
+  },
+  "/blog-e0e": {
+    "__comp": "__comp---theme-blog-list-pagea-6-a-7ba",
+    "__context": {
+      "plugin": "plugin---blog-8-ad-721"
+    },
+    "sidebar": "sidebar---blog-814-8ac",
+    "items": [
+      {
+        "content": "content---blog-766-e3c"
+      },
+      {
+        "content": "content---blogf-4-f-cd7"
+      },
+      {
+        "content": "content---blog-871-381"
+      },
+      {
+        "content": "content---blog-925-e00"
+      }
+    ],
+    "metadata": "metadata---blogb-2-b-df1"
+  },
+  "/blog/archive-70c": {
+    "__comp": "__comp---theme-blog-archive-page-9-e-4-1d8",
+    "__context": {
+      "plugin": "plugin---blog-8-ad-721"
+    },
+    "archive": "archive---blog-archiveb-2-f-393"
+  },
+  "/blog/first-blog-post-aee": {
+    "__comp": "__comp---theme-blog-post-pageccc-cab",
+    "__context": {
+      "plugin": "plugin---blog-8-ad-721"
+    },
+    "sidebar": "sidebar---blog-814-8ac",
+    "content": "content---blog-first-blog-poste-27-4a1"
+  },
+  "/blog/long-blog-post-4c8": {
+    "__comp": "__comp---theme-blog-post-pageccc-cab",
+    "__context": {
+      "plugin": "plugin---blog-8-ad-721"
+    },
+    "sidebar": "sidebar---blog-814-8ac",
+    "content": "content---blog-long-blog-post-736-bc7"
+  },
+  "/blog/mdx-blog-post-fba": {
+    "__comp": "__comp---theme-blog-post-pageccc-cab",
+    "__context": {
+      "plugin": "plugin---blog-8-ad-721"
+    },
+    "sidebar": "sidebar---blog-814-8ac",
+    "content": "content---blog-mdx-blog-post-593-37b"
+  },
+  "/blog/tags-7a3": {
+    "__comp": "__comp---theme-blog-tags-list-page-01-a-d0b",
+    "__context": {
+      "plugin": "plugin---blog-8-ad-721"
+    },
+    "sidebar": "sidebar---blog-814-8ac",
+    "tags": "tags---blog-tagsa-70-da2"
+  },
+  "/blog/tags/docusaurus-f89": {
+    "__comp": "__comp---theme-blog-tags-posts-page-687-b6c",
+    "__context": {
+      "plugin": "plugin---blog-8-ad-721"
+    },
+    "sidebar": "sidebar---blog-814-8ac",
+    "items": [
+      {
+        "content": "content---blog-766-e3c"
+      },
+      {
+        "content": "content---blogf-4-f-cd7"
+      },
+      {
+        "content": "content---blog-871-381"
+      },
+      {
+        "content": "content---blog-925-e00"
+      }
+    ],
+    "tag": "tag---blog-tags-docusaurusa-80-728",
+    "listMetadata": "listMetadata---blog-tags-docusaurus-608-c09"
+  },
+  "/blog/tags/facebook-e45": {
+    "__comp": "__comp---theme-blog-tags-posts-page-687-b6c",
+    "__context": {
+      "plugin": "plugin---blog-8-ad-721"
+    },
+    "sidebar": "sidebar---blog-814-8ac",
+    "items": [
+      {
+        "content": "content---blog-766-e3c"
+      }
+    ],
+    "tag": "tag---blog-tags-facebook-031-c52",
+    "listMetadata": "listMetadata---blog-tags-facebook-096-d31"
+  },
+  "/blog/tags/hello-71d": {
+    "__comp": "__comp---theme-blog-tags-posts-page-687-b6c",
+    "__context": {
+      "plugin": "plugin---blog-8-ad-721"
+    },
+    "sidebar": "sidebar---blog-814-8ac",
+    "items": [
+      {
+        "content": "content---blog-766-e3c"
+      },
+      {
+        "content": "content---blog-871-381"
+      }
+    ],
+    "tag": "tag---blog-tags-hello-30-a-bed",
+    "listMetadata": "listMetadata---blog-tags-hello-664-70a"
+  },
+  "/blog/tags/hola-235": {
+    "__comp": "__comp---theme-blog-tags-posts-page-687-b6c",
+    "__context": {
+      "plugin": "plugin---blog-8-ad-721"
+    },
+    "sidebar": "sidebar---blog-814-8ac",
+    "items": [
+      {
+        "content": "content---blog-925-e00"
+      }
+    ],
+    "tag": "tag---blog-tags-holae-16-18a",
+    "listMetadata": "listMetadata---blog-tags-hola-4-c-9-a24"
+  },
+  "/blog/welcome-088": {
+    "__comp": "__comp---theme-blog-post-pageccc-cab",
+    "__context": {
+      "plugin": "plugin---blog-8-ad-721"
+    },
+    "sidebar": "sidebar---blog-814-8ac",
+    "content": "content---blog-welcomed-9-f-ffb"
+  },
+  "/markdown-page-1b4": {
+    "__comp": "__comp---theme-mdx-page-1-f-3-b90",
+    "__context": {
+      "plugin": "plugin---markdown-pagea-26-424"
+    },
+    "content": "content---markdown-page-393-028"
+  },
+  "/docs-c79": {
+    "__comp": "__comp---theme-doc-page-1-be-9be",
+    "__context": {
+      "plugin": "plugin---docs-2-e-6-7cf"
+    },
+    "versionMetadata": "versionMetadata---docs-935-398"
+  },
+  "/docs/about/-fbe": {
+    "__comp": "__comp---theme-doc-item-178-a40",
+    "content": "content---docs-about-3-cc-35b"
+  },
+  "/docs/about/CODE_OF_CONDUCT-35e": {
+    "__comp": "__comp---theme-doc-item-178-a40",
+    "content": "content---docs-about-code-of-conduct-3-b-1-62a"
+  },
+  "/docs/about/GOVERNANCE-209": {
+    "__comp": "__comp---theme-doc-item-178-a40",
+    "content": "content---docs-about-governance-6-fb-72f"
+  },
+  "/docs/category/documentation-3ae": {
+    "__comp": "__comp---theme-doc-category-generated-index-page-14-e-640",
+    "categoryGeneratedIndex": "categoryGeneratedIndex---docs-category-documentation-7-f-0-798"
+  },
+  "/docs/category/governance-e27": {
+    "__comp": "__comp---theme-doc-category-generated-index-page-14-e-640",
+    "categoryGeneratedIndex": "categoryGeneratedIndex---docs-category-governance-285-29a"
+  },
+  "/docs/category/software-lifecycle-2fd": {
+    "__comp": "__comp---theme-doc-category-generated-index-page-14-e-640",
+    "categoryGeneratedIndex": "categoryGeneratedIndex---docs-category-software-lifecycleb-12-3a4"
+  },
+  "/docs/contribute/CONTRIBUTING-120": {
+    "__comp": "__comp---theme-doc-item-178-a40",
+    "content": "content---docs-contribute-contributin-gd-94-c67"
+  },
+  "/docs/contribute/submit-best-practice-2b3": {
+    "__comp": "__comp---theme-doc-item-178-a40",
+    "content": "content---docs-contribute-submit-best-practice-8-fa-579"
+  },
+  "/docs/guides/documentation/change-log/-655": {
+    "__comp": "__comp---theme-doc-item-178-a40",
+    "content": "content---docs-guides-documentation-change-log-32-d-fb5"
+  },
+  "/docs/guides/documentation/documention-hosts/-3ef": {
+    "__comp": "__comp---theme-doc-item-178-a40",
+    "content": "content---docs-guides-documentation-documention-hosts-369-292"
+  },
+  "/docs/guides/documentation/documention-hosts/trade-study-hostingdocs-user-a59": {
+    "__comp": "__comp---theme-doc-item-178-a40",
+    "content": "content---docs-guides-documentation-documention-hosts-trade-study-hostingdocs-userd-27-ed5"
+  },
+  "/docs/guides/documentation/documention-hosts/use-cases-fb4": {
+    "__comp": "__comp---theme-doc-item-178-a40",
+    "content": "content---docs-guides-documentation-documention-hosts-use-casese-51-22d"
+  },
+  "/docs/guides/documentation/readme/-aed": {
+    "__comp": "__comp---theme-doc-item-178-a40",
+    "content": "content---docs-guides-documentation-readme-218-b46"
+  },
+  "/docs/guides/governance/contributions/-cd7": {
+    "__comp": "__comp---theme-doc-item-178-a40",
+    "content": "content---docs-guides-governance-contributions-e-64-97d"
+  },
+  "/docs/guides/governance/contributions/change-request-templates/-bb7": {
+    "__comp": "__comp---theme-doc-item-178-a40",
+    "content": "content---docs-guides-governance-contributions-change-request-templates-79-d-b13"
+  },
+  "/docs/guides/governance/contributions/change-request-templates/github/PULL_REQUEST_TEMPLATE-298": {
+    "__comp": "__comp---theme-doc-item-178-a40",
+    "content": "content---docs-guides-governance-contributions-change-request-templates-github-pull-request-template-7-cc-a60"
+  },
+  "/docs/guides/governance/contributions/code-of-conduct/-ff0": {
+    "__comp": "__comp---theme-doc-item-178-a40",
+    "content": "content---docs-guides-governance-contributions-code-of-conduct-e-0-d-fa9"
+  },
+  "/docs/guides/governance/contributions/contributing-guide/-89e": {
+    "__comp": "__comp---theme-doc-item-178-a40",
+    "content": "content---docs-guides-governance-contributions-contributing-guide-431-422"
+  },
+  "/docs/guides/governance/contributions/contributing-guide/CONTRIBUTING-471": {
+    "__comp": "__comp---theme-doc-item-178-a40",
+    "content": "content---docs-guides-governance-contributions-contributing-guide-contributin-gf-26-607"
+  },
+  "/docs/guides/governance/contributions/developer-certificate-origin/-88e": {
+    "__comp": "__comp---theme-doc-item-178-a40",
+    "content": "content---docs-guides-governance-contributions-developer-certificate-origin-7-a-2-d0c"
+  },
+  "/docs/guides/governance/contributions/issue-templates/-bb0": {
+    "__comp": "__comp---theme-doc-item-178-a40",
+    "content": "content---docs-guides-governance-contributions-issue-templates-b-4-d-2b7"
+  },
+  "/docs/guides/governance/contributions/issue-templates/github/bug_report-fac": {
+    "__comp": "__comp---theme-doc-item-178-a40",
+    "content": "content---docs-guides-governance-contributions-issue-templates-github-bug-report-4-e-2-aec"
+  },
+  "/docs/guides/governance/contributions/issue-templates/github/new_feature-cf5": {
+    "__comp": "__comp---theme-doc-item-178-a40",
+    "content": "content---docs-guides-governance-contributions-issue-templates-github-new-featured-60-143"
+  },
+  "/docs/guides/governance/governance-model/-bbf": {
+    "__comp": "__comp---theme-doc-item-178-a40",
+    "content": "content---docs-guides-governance-governance-model-6-d-6-290"
+  },
+  "/docs/guides/governance/governance-model/GOVERNANCE-c2c": {
+    "__comp": "__comp---theme-doc-item-178-a40",
+    "content": "content---docs-guides-governance-governance-model-governanc-ed-53-cbd"
+  },
+  "/docs/guides/search-0de": {
+    "__comp": "__comp---theme-doc-item-178-a40",
+    "content": "content---docs-guides-searchc-2-d-0f6"
+  },
+  "/docs/guides/software-lifecycle/application-starter-kits/-716": {
+    "__comp": "__comp---theme-doc-item-178-a40",
+    "content": "content---docs-guides-software-lifecycle-application-starter-kits-2-fb-875"
+  },
+  "/docs/guides/software-lifecycle/application-starter-kits/python-starter-kit/-8de": {
+    "__comp": "__comp---theme-doc-item-178-a40",
+    "content": "content---docs-guides-software-lifecycle-application-starter-kits-python-starter-kit-3-b-3-4ee"
+  },
+  "/docs/guides/software-lifecycle/continuous-integration/-7dd": {
+    "__comp": "__comp---theme-doc-item-178-a40",
+    "content": "content---docs-guides-software-lifecycle-continuous-integration-d-5-d-c20"
+  },
+  "/docs/guides/software-lifecycle/continuous-integration/continuous-integration-frameworks/-a57": {
+    "__comp": "__comp---theme-doc-item-178-a40",
+    "content": "content---docs-guides-software-lifecycle-continuous-integration-continuous-integration-frameworks-47-b-86c"
+  },
+  "/docs/guides/software-lifecycle/continuous-integration/continuous-integration-frameworks/-39f": {
+    "__comp": "__comp---theme-doc-item-178-a40",
+    "content": "content---docs-guides-software-lifecycle-continuous-integration-continuous-integration-frameworks-35-e-aa9"
+  },
+  "/docs/guides/software-lifecycle/continuous-integration/reference-architecture/-fd2": {
+    "__comp": "__comp---theme-doc-item-178-a40",
+    "content": "content---docs-guides-software-lifecycle-continuous-integration-reference-architecture-b-75-441"
+  },
+  "/docs/guides/software-lifecycle/continuous-testing/-a02": {
+    "__comp": "__comp---theme-doc-item-178-a40",
+    "content": "content---docs-guides-software-lifecycle-continuous-testing-2-f-6-7ac"
+  },
+  "/docs/guides/software-lifecycle/continuous-testing/testing-frameworks-a3c": {
+    "__comp": "__comp---theme-doc-item-178-a40",
+    "content": "content---docs-guides-software-lifecycle-continuous-testing-testing-frameworksb-74-9c4"
+  },
+  "/docs/guides/software-lifecycle/security/-bbe": {
+    "__comp": "__comp---theme-doc-item-178-a40",
+    "content": "content---docs-guides-software-lifecycle-security-e-55-6a2"
+  },
+  "/docs/guides/software-lifecycle/security/dependabot/-634": {
+    "__comp": "__comp---theme-doc-item-178-a40",
+    "content": "content---docs-guides-software-lifecycle-security-dependabot-cc-9-837"
+  },
+  "/docs/guides/software-lifecycle/security/secrets-detection/-edb": {
+    "__comp": "__comp---theme-doc-item-178-a40",
+    "content": "content---docs-guides-software-lifecycle-security-secrets-detection-684-ea9"
+  },
+  "/-14b": {
+    "__comp": "__comp---site-src-pages-index-jsc-4-f-f99",
+    "__context": {
+      "plugin": "plugin---markdown-pagea-26-424"
+    },
+    "config": "config---5-e-9-4f3"
+  }
+}

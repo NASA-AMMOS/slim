@@ -1,0 +1,20 @@
+{
+  "unversionedId": "about/GOVERNANCE",
+  "id": "about/GOVERNANCE",
+  "title": "SLIM Project Governance",
+  "description": "This governance model aims to create an open source community that encourages transparency, contributions, and collaboration, but maintains sound technical and quality standards. Our goal is to build a community comprised of members across the SLIM community and beyond, including from private organizations, universities, government organizations, and international organizations.",
+  "source": "@site/docs/about/GOVERNANCE.md",
+  "sourceDirName": "about",
+  "slug": "/about/GOVERNANCE",
+  "permalink": "/docs/about/GOVERNANCE",
+  "draft": false,
+  "editUrl": "https://github.com/facebook/docusaurus/tree/main/packages/create-docusaurus/templates/shared/docs/about/GOVERNANCE.md",
+  "tags": [],
+  "version": "current",
+  "frontMatter": {},
+  "sidebar": "aboutSidebar",
+  "previous": {
+    "title": "Code of Conduct",
+    "permalink": "/docs/about/CODE_OF_CONDUCT"
+  }
+}
