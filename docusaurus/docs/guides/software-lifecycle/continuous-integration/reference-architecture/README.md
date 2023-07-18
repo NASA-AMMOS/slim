@@ -194,19 +194,17 @@ servers or services between these actors. A more detailed understanding of the p
 the roles and responsibilities of each participant. This graph interleaves services with users 
 and processes to explain process flow. 
 
-👩‍💻 [**Action:** Push] **Developers**, or code maintainers, ("Dev 1...n") start 
+- 👩‍💻 [**Action:** Push] **Developers**, or code maintainers, ("Dev 1...n") start 
 the build process by committing and pushing code to a remote version control server (VCS), such 
 as Git. This may be anything from a minor property change to new code, but in all cases the 
 expectation is that code from one maintainers' workstation should execute identically and reliably 
 on others. 
-
-<sup>1</sup>🖥 [**Start** -- **Action:** Trigger, Content Validation] The **VCS server** reports when 
+- <sup>1</sup>🖥 [**Start** -- **Action:** Trigger, Content Validation] The **VCS server** reports when 
 new code is delivered (commit) and performs content validation on that code. Content validation 
 can range from verifying format of data in the commit to checking for specific content in files. 
 On code acceptance and validation, a network request triggers to notify successive machines to 
 continue processing. 
-
-<sup>2</sup>🖥 [**Service** -- **Action:** Validate, Publish, Deploy (opt.), Report] The 
+- <sup>2</sup>🖥 [**Service** -- **Action:** Validate, Publish, Deploy (opt.), Report] The 
 **Continuous Integration Server** (CI Server) provides a platform to execute various steps in 
 the CI process. It's the core that handles both decision making and mechanics of compilation, 
 testing and packaging. A unified interface provides a centralized location to view progress and 
@@ -217,13 +215,11 @@ viewing. Notifications are provided through both the user interface and other me
 as email. Additionally, the CI Server provides the platform that executes post-build steps, 
 including publishing packaged artifacts or deploying those artifacts to servers for user 
 consumption. This is all accomplished using built-in tooling or compatible scripting. 
-
-<sup>3</sup>🖥 [**Endpoint**] The **Artifact Repository** is a dedicated software library for 
+- <sup>3</sup>🖥 [**Endpoint**] The **Artifact Repository** is a dedicated software library for 
 storing various build products ("artifacts") that is available on demand to developers, users 
 and implementers. On successful builds the CI server publishes packaged artifacts to the 
 repository to make them available broadly. 
-
-<sup>4</sup>🖥 [**Endpoint**] The **Application Server** provides an execution environment with 
+- <sup>4</sup>🖥 [**Endpoint**] The **Application Server** provides an execution environment with 
 the final software package deployed in a runtime environment for extended use testing. 
 Depending on the type of software project -- whether it's an API library, server application 
 or executable -- deployment optionally provides a platform to demonstrate the product. 
@@ -231,8 +227,7 @@ Automated testing can be further leveraged to verify that an application perform
 designed. Some CI processes extend the concept of automated deployment through a series of 
 server destinations along a release runway. "Continuous Deployment (CD)" extends the CI 
 process to automatically deploy packaged software in a production environment. 
-
-<sup>5</sup>🖥 [**Service** -- **Notification and Reporting Services**] **Notify** and 
+- <sup>5</sup>🖥 [**Service** -- **Notification and Reporting Services**] **Notify** and 
 **Reporting Services** assume different forms to provide real-time information on build 
 status. These are typically handled within the CI Server in the case of build failure 
 emails. Build logs are published to the CI Server user interface for on-demand 
@@ -241,8 +236,7 @@ creation in issue tracking software, such as [Atlassian Jira](https://www.atlass
 or test case reporting in test management software, such as _Gurock TestRail_. Notification 
 is highly customizable in the CI server and in most cases leverages built-in server 
 features. 
-
-👥  [**End** -- **Action**: Usage] The target audience is, of course, the **User 
+- 👥  [**End** -- **Action**: Usage] The target audience is, of course, the **User 
 Community** ("User 1...n"), which is comprised of a number of participants from 
 developers to application users. Primarily, the CI process delivers packaged binaries 
 available for download, usage or integration from the Artifact Repository. These may 

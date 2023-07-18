@@ -5,7 +5,7 @@ import styles from './styles.module.css';
 const FeatureList = [
   {
     title: 'Our Scope',
-    Svg: require('@site/static/img/undraw_docusaurus_mountain.svg').default,
+    Svg: require('@site/static/img/scope.svg').default,
     description: (
       <>
         We focus on best practices related to software project governance, documentation, and development life-cycles.
@@ -14,21 +14,19 @@ const FeatureList = [
   },
   {
     title: 'Community Based',
-    Svg: require('@site/static/img/undraw_docusaurus_tree.svg').default,
+    Svg: require('@site/static/img/community.svg').default,
     description: (
       <>
-        <p>Docusaurus lets you focus on your docs, and we&apos;ll do the chores. Go
-        ahead and move your docs into the <code>docs</code> directory.</p>
+        <p>We solicit improvement ideas and solutions from our community deliver best practices back to our members.</p>
       </>
     ),
   },
   {
-    title: 'Iterative',
-    Svg: require('@site/static/img/undraw_docusaurus_react.svg').default,
+    title: 'Open Source',
+    Svg: require('@site/static/img/iterative.svg').default,
     description: (
       <>
-        Extend or customize your website layout by reusing React. Docusaurus can
-        be extended while reusing the same header and footer.
+        We treat best practices and standards-as-code. We iteratively improve our recommendations through the open source tickets and pull requests.
       </>
     ),
   },

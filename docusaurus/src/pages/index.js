@@ -12,17 +12,17 @@ function HomepageHeader() {
   return (
     <header className={clsx('hero hero--info', styles.heroBanner)}>
       <div className="container">
-        <h1 className="hero__title">{siteConfig.title}</h1>
+        <img src="img/logo.svg" height="200"/>
         <p className="hero__subtitle">{siteConfig.tagline}</p>
         <p>A shared resource for discussing, iterating and referencing best practices in software lifecycle process improvements.</p>
         <div style={{ display: 'flex', justifyContent: 'center' }}>
           <div className={styles.buttonWrapper}>
-            <Link className="button button--primary button--lg" to="/docs/intro">
+            <Link className="button button--primary button--lg" to="/docs/guides/search">
               See our Best Practice Guides
             </Link>
           </div>
           <div className={styles.buttonWrapper}>
-            <Link className="button button--secondary button--lg" to="/docs/intro" style={{ marginLeft: '10px' }}>
+            <Link className="button button--secondary button--lg" to="/docs/contribute/submit-best-practice" style={{ marginLeft: '10px' }}>
               Submit a Best Practice Guide
             </Link>
           </div>

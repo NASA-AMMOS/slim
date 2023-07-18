@@ -7,8 +7,9 @@ const darkCodeTheme = require('prism-react-renderer/themes/dracula');
 /** @type {import('@docusaurus/types').Config} */
 const config = {
   title: 'SLIM',
-  tagline: 'Software Lifecycle Improvement & Modernization',
-  favicon: 'img/favicon.ico',
+  tagline: 'Software Lifecycle Improvement & Modernization (SLIM)',
+  favicon: 'img/slim-favicon.ico',
+
 
   // Set the production url of your site here
   url: 'https://your-docusaurus-test-site.com',
@@ -67,7 +68,7 @@ const config = {
         title: 'SLIM',
         logo: {
           alt: 'Software Lifecycle Improvement & Modernization (SLIM)',
-          src: 'img/logo.svg',
+          src: 'img/nasa-jpl.png',
         },
         items: [
           {
@@ -89,7 +90,7 @@ const config = {
             label: 'About',
           },
           {
-            href: 'https://github.com/facebook/docusaurus',
+            href: 'https://github.com/nasa-ammos/slim',
             label: 'GitHub',
             position: 'right',
           },
@@ -99,52 +100,53 @@ const config = {
         style: 'dark',
         links: [
           {
-            title: 'Docs',
+            title: 'Resources',
             items: [
               {
                 label: 'Guides',
-                to: '/docs',
+                to: '/docs/guides/search',
               },
+              {
+                label: 'Contribute',
+                to: '/docs/contribute/CONTRIBUTING',
+              },
+              {
+                label: 'About',
+                to: '/docs/about',
+              }
             ],
           },
           {
             title: 'Community',
             items: [
               {
-                label: 'Stack Overflow',
-                href: 'https://stackoverflow.com/questions/tagged/docusaurus',
-              },
-              {
-                label: 'Discord',
-                href: 'https://discordapp.com/invite/docusaurus',
-              },
-              {
-                label: 'Twitter',
-                href: 'https://twitter.com/docusaurus',
-              },
+                label: 'GitHub Discussions',
+                href: 'https://github.com/NASA-AMMOS/slim/discussions',
+              }
             ],
           },
           {
             title: 'More',
             items: [
               {
-                label: 'Blog',
-                to: '/blog',
-              },
-              {
                 label: 'GitHub',
-                href: 'https://github.com/facebook/docusaurus',
+                href: 'https://github.com/nasa-ammos/slim',
               },
             ],
           },
         ],
-        copyright: `Copyright © ${new Date().getFullYear()} My Project, Inc. Built with Docusaurus.`,
+        copyright: `Copyright © ${new Date().getFullYear()} California Institute of Technology ("Caltech"). U.S. Government sponsorship acknowledged. Contents licensed under Apache License Version 2.0.`,
       },
       prism: {
         theme: lightCodeTheme,
         darkTheme: darkCodeTheme,
       },
     }),
+
+    markdown: {
+      mermaid: true,
+    },
+    themes: ['@docusaurus/theme-mermaid'],
 };
 
 module.exports = config;

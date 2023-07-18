@@ -1,3 +1,9 @@
+---
+title: Continuous Integration Frameworks
+sidebar_label: Continuous Integration Frameworks
+---
+
+
 * Continuous Integration
     * For Analysis and Testing
         * For verification, notification and assembly

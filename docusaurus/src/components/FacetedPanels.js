@@ -1,8 +1,8 @@
 import React, { useState, useEffect } from 'react';
-import { Container, Row, Col, Form, Card, Dropdown, Badge, ListGroup, ListGroupItem, Navbar, Nav, Glyphicon } from 'react-bootstrap';
+import { Container, Row, Col, Form, Card, Dropdown, Badge, Button, ListGroup, ListGroupItem, Navbar, Nav, Glyphicon } from 'react-bootstrap';
 import 'bootstrap/dist/css/bootstrap.min.css';
 
-const Panel = ({ title, tags, lastUpdated, description }) => (
+const Panel = ({ title, uri, tags, lastUpdated, description }) => (
     <Card>
         <Card.Header as="h5">{title}</Card.Header>
         <Card.Body>
@@ -17,6 +17,11 @@ const Panel = ({ title, tags, lastUpdated, description }) => (
                     ))}
                 </ListGroupItem>
             </ListGroup>
+                <a href={uri} target="_blank" rel="noopener noreferrer">
+                    <Button variant="primary" className="mt-3" size="md">
+                        View
+                    </Button> 
+                </a>
         </Card.Body>
     </Card>
 );
@@ -28,6 +33,7 @@ const FacetedPanels = ({ panelsData }) => {
     const [panels, setPanels] = useState([]);
     const [tags, setTags] = useState([]);
     const [filteredTags, setFilteredTags] = useState([]);
+    const [searchTerm, setSearchTerm] = useState(''); // Step 1: Add a new state for the search term
 
     useEffect(() => {
         setPanels(panelsData);
@@ -59,25 +65,34 @@ const FacetedPanels = ({ panelsData }) => {
         setFilteredTags(filtered);
     };
 
+    const handlePanelSearch = (event) => {
+        setSearchTerm(event.target.value);
+    };
+
     const compareDates = (dateA, dateB) => {
         return selectedSortOrder === 'ascending' ? dateA.localeCompare(dateB) : dateB.localeCompare(dateA);
     };
 
     const filteredPanels = panels.filter((panel) => {
         const isTagMatch = Object.entries(selectedTags).every(([tag, isSelected]) => !isSelected || panel.tags.includes(tag));
-        return isTagMatch;
+        return isTagMatch && (panel.title.toLowerCase().includes(searchTerm.toLowerCase()) || panel.description.toLowerCase().includes(searchTerm.toLowerCase()));
     }).sort((panelA, panelB) => compareDates(panelA['last-updated'], panelB['last-updated']));
 
     return (
         <Container>
-
             <div className="d-flex justify-content-center">
                 <Navbar bg="light" expand="lg" className="mb-4 p-4">
                     <Navbar.Toggle aria-controls="navbar-nav" />
                     <Navbar.Collapse id="navbar-nav">
                         <Nav className="mr-auto ps-2">
+                            <Form.Control
+                                type="text"
+                                placeholder="Search"
+                                value={searchTerm}
+                                onChange={handlePanelSearch}
+                            />
                             <Dropdown>
-                                <Dropdown.Toggle variant="primary" id="tag-dropdown">
+                                <Dropdown.Toggle variant="primary" id="tag-dropdown" className="ms-2">
                                     {Object.values(selectedTags).some((isSelected) => isSelected)
                                         ? `${Object.keys(selectedTags).filter((tag) => selectedTags[tag]).length} tags selected`
                                         : 'Select Tags'}
@@ -123,6 +138,7 @@ const FacetedPanels = ({ panelsData }) => {
                     <Col key={index} sm={12} className="mb-4">
                         <Panel
                             title={panel.title}
+                            uri={panel.uri}
                             tags={panel.tags}
                             lastUpdated={panel['last-updated']}
                             description={panel.description}

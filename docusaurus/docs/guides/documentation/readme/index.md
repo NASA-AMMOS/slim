@@ -7,7 +7,7 @@ A `README.md` template that can be used to help developers and users understand 
 This template is meant for general software projects `README.md` files, including both interpreted as well as compiled language code. 
 
 Starter Kit:
-- [Markdown](https://github.com/nasa-ammos/slim/blob/main/documentation/starter-kits/READMEs/README-sw-proj-template.md) of template
+- [Markdown](./README.txt) of template
 - [Demo](https://github.com/riverma/terraformly/blob/main/README.md) of template
 
 To leverage this template, make sure to do the following:

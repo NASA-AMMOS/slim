@@ -1,3 +1,9 @@
+---
+title: Docs Use Cases
+sidebar_label: Docs Use Cases
+---
+
+
 * Documentation Best Practices
     * For Building / Maintaining / Hosting Docs
       * Of User / Admin / Dev Docs [📖 TRADE STUDY](../trade-studies/trade-study-hostingdocs-user)
