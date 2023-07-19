@@ -2,7 +2,7 @@
 A complete, deployment-ready Python 3 application that's bundled into a reusable template repository for quick implementation.
 
 #### Integrated Build, Release and Publish on GitHub
-This product demonstrates a GitHub-based strategy of [end-to-end CI automation](../reference-architectures/) using modern Python tooling to demonstrate publishing on release.
+This product demonstrates a GitHub-based strategy of [end-to-end CI automation](docs/guides/software-lifecycle/continuous-integration/reference-architecture) using modern Python tooling to demonstrate publishing on release.
 * Build automation using [GitHub](https://github.com/), [Docker](https://www.docker.com/), [GitHub Actions](https://github.com/features/actions) and [PyPi](https://pypi.org/)
 * Compile, tag and release, and publish to the [Python Package Index (PyPi)](https://pypi.org/)
 * Modern [PEP 517](https://peps.python.org/pep-0517/)/[518](https://peps.python.org/pep-0518/) compliant tooling using [declarative](https://en.wikipedia.org/wiki/Declarative_programming) [TOML](https://toml.io/en/)-based configurations inside a `pyproject.toml` file.

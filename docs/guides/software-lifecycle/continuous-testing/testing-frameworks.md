@@ -7,8 +7,8 @@ sidebar_label: Testing Frameworks
 * Continuous Testing
     * For Development APIs
         * For module testing (xUnit)
-            * Using (Java) [JUnit](https://junit.org/junit5/) [&#x1F3C1; STARTER KIT(TBD)](../starter-kits/#unit-teting-with-java)
-            * Using (Python) [PyUnit](https://docs.python.org/3/library/unittest.html#module-unittest) [&#x1F3C1; STARTER KIT(TBD)](../starter-kits/#unit-testing-with-python)
+            * Using (Java) [JUnit](https://junit.org/junit5/)
+            * Using (Python) [PyUnit](https://docs.python.org/3/library/unittest.html#module-unittest)
             * Using (C#) [NUnit](https://nunit.org/)
             * Using (C/C++) [cUnit](http://cunit.sourceforge.net/)/[CppUnit](https://freedesktop.org/wiki/Software/cppunit/)
         * For mocking, stubbing and simulating test services

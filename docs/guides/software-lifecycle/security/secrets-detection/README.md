@@ -73,7 +73,7 @@ flowchart TB
 > **Note**: Below three layers, are running on experimental version [slim-detect-secrets](https://github.com/NASA-AMMOS/slim-detect-secrets/tree/exp) which supports additional secret detection [plugins](https://github.com/NASA-AMMOS/slim-detect-secrets/tree/exp#viewing-all-enabled-plugins).
 > 
 > They are:
-> > * [AWS sensitive information](TBD) (click for more information)
+> > * AWS sensitive information
 > > * Public IP Address
 > > * Absolute Path
 > > * Email Address

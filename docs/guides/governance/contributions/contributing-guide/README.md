@@ -14,7 +14,7 @@ This template covers the following contributions areas:
 - Ways to contribute: issues, code, documentation, media and questions, among other types of contributions
 
 Starter Kit:
-- [Markdown](CONTRIBUTING) of template
+- [Markdown](./CONTRIBUTING.txt) of template
 - [Demo](https://github.com/riverma/terraformly/blob/main/CONTRIBUTING.md) of template
 
 To leverage this template, make sure to do the following:

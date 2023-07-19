@@ -3,41 +3,6 @@ import ComponentCreator from '@docusaurus/ComponentCreator';
 
 export default [
   {
-    path: '/__docusaurus/debug',
-    component: ComponentCreator('/__docusaurus/debug', '004'),
-    exact: true
-  },
-  {
-    path: '/__docusaurus/debug/config',
-    component: ComponentCreator('/__docusaurus/debug/config', '8e3'),
-    exact: true
-  },
-  {
-    path: '/__docusaurus/debug/content',
-    component: ComponentCreator('/__docusaurus/debug/content', 'a93'),
-    exact: true
-  },
-  {
-    path: '/__docusaurus/debug/globalData',
-    component: ComponentCreator('/__docusaurus/debug/globalData', 'c59'),
-    exact: true
-  },
-  {
-    path: '/__docusaurus/debug/metadata',
-    component: ComponentCreator('/__docusaurus/debug/metadata', '1e3'),
-    exact: true
-  },
-  {
-    path: '/__docusaurus/debug/registry',
-    component: ComponentCreator('/__docusaurus/debug/registry', 'fe2'),
-    exact: true
-  },
-  {
-    path: '/__docusaurus/debug/routes',
-    component: ComponentCreator('/__docusaurus/debug/routes', '274'),
-    exact: true
-  },
-  {
     path: '/blog',
     component: ComponentCreator('/blog', 'e0e'),
     exact: true
@@ -99,7 +64,7 @@ export default [
   },
   {
     path: '/docs',
-    component: ComponentCreator('/docs', 'c79'),
+    component: ComponentCreator('/docs', '132'),
     routes: [
       {
         path: '/docs/about/',
@@ -206,12 +171,6 @@ export default [
       {
         path: '/docs/guides/governance/contributions/contributing-guide/',
         component: ComponentCreator('/docs/guides/governance/contributions/contributing-guide/', '89e'),
-        exact: true,
-        sidebar: "guidesSidebar"
-      },
-      {
-        path: '/docs/guides/governance/contributions/contributing-guide/CONTRIBUTING',
-        component: ComponentCreator('/docs/guides/governance/contributions/contributing-guide/CONTRIBUTING', '471'),
         exact: true,
         sidebar: "guidesSidebar"
       },

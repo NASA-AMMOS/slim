@@ -26,7 +26,7 @@ Once prioritized needs are identified, contributors go through a series of steps
 
 ![SLIM-dev-process](https://user-images.githubusercontent.com/3129134/164385960-911bff81-9218-4ba3-bcee-b60284a8b05c.png)
 
-More information on our development process for best practice guides can be found in our [Contributing Guide](CONTRIBUTING.md#contributing-a-best-practice-guide).
+More information on our development process for best practice guides can be found in our [Contributing Guide](docs/contribute/CONTRIBUTING#contributing-a-best-practice-guide).
 
 ## Community Members
 
@@ -43,34 +43,9 @@ The following list of projects are currently SLIM member projects:
 
 <a href="https://github.com/hysds/" rel="HySDS">![HySDS](https://user-images.githubusercontent.com/3129134/161156679-c3dcec08-b6af-44e4-910c-5ec82ef18649.png)</a>
 
-
-## Best Practice Guides
-
-The following sections link to best practices resources developed by SLIM for process improvement needs solicited by the wider SLIM community.
-
-The list is sorted alphabetically and is continually being added to.
-
-### Continuous Integration
-
-Our continuous integration best practice guide focuses on techniques to support software build integration, the publishing of build results and the releasing software assets.
-
-[📖 Read the Guide](continuous-integration/README.md)
-
-### Continuous Testing
-
-Our continuous testing best practice guide focuses on exploring scenarios for automatically invoking unit, regression and integration tests, as well as the eco-system of tools and best practices to support creating the tests.
-
-[📖 Read the Guide](continuous-testing/README.md)
-
-### Documentation
-
-Our documentation best practice guide focuses on solutions for building, editing, leveraging templates for, hosting, and maintaining documentation for your projects. 
-
-[📖 Read the Guide](documentation/README.md)
-
 ## Get Involved
 
-SLIM best practice guides and recommendations are open source, which means you have the freedom to use our work (in accordance with our [LICENSE](LICENSE)) as well as contribute and help shape our future work. We're excited to welcome new contributors and users.
+SLIM best practice guides and recommendations are open source, which means you have the freedom to use our work (in accordance with our [LICENSE](https://nasa-ammos.github.io/slim/LICENSE)) as well as contribute and help shape our future work. We're excited to welcome new contributors and users.
 
 Some ways you can get involved with SLIM:
 
@@ -78,14 +53,14 @@ Some ways you can get involved with SLIM:
 
 The fastest way to start using SLIM process improvement solutions is to take a look at our best practice guides, specifically our *starter kits*. Starter kits provide plug-and-play solutions to process improvement needs. To complement our starter kits, take a look at *use cases* to understand the context of the starter kit solutions, *trade studies* to understand tool / solution trade-offs, and *reference architectures* to understand how tool / solutions interact in an actual working environment. 
 
-We recommend creating pull-requests using our starter kits against your own repositories. Reach out to our [contributor communication channels](CONTRIBUTING.md#communication-channels) for questions if you're unsure how to create pull requests. An excellent tool to automate the infusion of starter kits in your repositories (especially if you have many) is to use a tool like [multi-gitter](https://github.com/lindell/multi-gitter) if you're using Git to create pull-requests. 
+We recommend creating pull-requests using our starter kits against your own repositories. Reach out to our [contributor communication channels](docs/contribute/CONTRIBUTING.md#communication-channels) for questions if you're unsure how to create pull requests. An excellent tool to automate the infusion of starter kits in your repositories (especially if you have many) is to use a tool like [multi-gitter](https://github.com/lindell/multi-gitter) if you're using Git to create pull-requests. 
 
 Finally, if you use any of our guides - please consider adding the following badge to your `README.md`: 
 [![SLIM](https://img.shields.io/badge/Best%20Practices%20from-SLIM-blue)](https://nasa-ammos.github.io/slim/)
 
 ### Contribute to Our Guides
 
-We're excited to see your contribution! Please see our [Contributing Guide](CONTRIBUTING.md) on details for how to contribute. We accept many non-code contributions as well, so feel free to think creatively. 
+We're excited to see your contribution! Please see our [Contributing Guide](docs/contribute/CONTRIBUTING.md) on details for how to contribute. We accept many non-code contributions as well, so feel free to think creatively. 
 
 ### Spread the Word
 

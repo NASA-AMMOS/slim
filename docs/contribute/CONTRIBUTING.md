@@ -45,11 +45,11 @@ Reviewers reviewing your patch will look for the sign-off before deciding to acc
 
 ### License
 
-Our project has our licensing terms, including rules governing redistribution, documented in our [LICENSE](LICENSE) file. Please take a look at that file and ensure you understand the terms. This will impact how we, or others, use your contributions.
+Our project has our licensing terms, including rules governing redistribution, documented in our [LICENSE](https://nasa-ammos.github.io/slim/LICENSE) file. Please take a look at that file and ensure you understand the terms. This will impact how we, or others, use your contributions.
 
 ### Code of Conduct
 
-Our Code of Conduct helps facilitate a positive interaction environment for everyone involved with the team, and provides guidance on what to do if you experience problematic behavior. Read more in our [CODE_OF_CONDUCT.md](CODE_OF_CONDUCT.md), and make sure you agree to its terms. 
+Our Code of Conduct helps facilitate a positive interaction environment for everyone involved with the team, and provides guidance on what to do if you experience problematic behavior. Read more in our [CODE_OF_CONDUCT.md](docs/about/CODE_OF_CONDUCT.md), and make sure you agree to its terms. 
 
 ### Developer Environment
 
@@ -100,7 +100,7 @@ Our project typically has the following branches available, make sure to fork ei
 
 ### Make your Modifications
 
-Within your local development environment, this is the stage at which you'll propose your changes, and commit those changes back to version control. See the [README.md](README.md) or development guide for more specifics on what you'll need as prerequisites to setup your local development environment.
+Within your local development environment, this is the stage at which you'll propose your changes, and commit those changes back to version control. See the [README.md](https://github.com/nasa-ammos/slim/README.md) or development guide for more specifics on what you'll need as prerequisites to setup your local development environment.
 
 #### Commit Messages
 
@@ -120,7 +120,7 @@ Additionally, remember to "Sign-Off" on your commits to align with our [Develope
 
 Pull requests are the core way our project will receive your patch contributions. Navigate to your branch on your own fork within the version control system, and submit a pull request or submit the patch text to our project. 
 
-Please make sure to provide a meaningful text description to your pull requests, whenever submitted. Our pull-request template will be auto-generated for you when you create your pull-request. See the template [here](.github/PULL_REQUEST_TEMPLATE.md). 
+Please make sure to provide a meaningful text description to your pull requests, whenever submitted. Our pull-request template will be auto-generated for you when you create your pull-request. See the template [here](https://nasa-ammos.github.io/slim/.github/PULL_REQUEST_TEMPLATE.md). 
 
 **Working on your first Pull Request?** See guide: [How to Contribute to an Open Source Project on GitHub](https://kcd.im/pull-request)
 
@@ -267,9 +267,9 @@ Some guidelines for documentation best practices (summarized from Google's [exce
 
 The overall structure of our project documentation is as follows:
 - Source-controlled documentation
-  - [README.md](README.md) - top-level information about how to run, build, and contribute to the project
-  - [CODE_OF_CONDUCT.md](CODE_OF_CONDUCT.md) - best practices and guidance on how to work well with other people in the project, and suggestions on dealing with interpersonal issues
-  - [CONTRIBUTING.md](CONTRIBUTING.md) - guidance on contributing to the project
+  - [README.md](/docs/about/README.md) - top-level information about how to run, build, and contribute to the project
+  - [CODE_OF_CONDUCT.md](/docs/about/CODE_OF_CONDUCT) - best practices and guidance on how to work well with other people in the project, and suggestions on dealing with interpersonal issues
+  - [CONTRIBUTING.md](/docs/contribute/CONTRIBUTING) - guidance on contributing to the project
   - *BEST PRACTICE GUIDE NAME* - folder containing a given best practice guide
     - *use-cases* - folder containing important uses and scenarios relevant for a particular best practice need
       - `README.md` - a descriptor file describing and linking to use case resources
@@ -482,7 +482,7 @@ Here are just a few ways you can help answer questions for our project:
 - Answer open questions mentioned in our [issue tracking system](https://github.com/NASA-AMMOS/slim/issues)
 
 When answering questions, keep the following in mind:
-- Be polite and friendly. See our [Code of Conduct](CODE_OF_CONDUCT.md) recommendations as you interact with others in the team.
+- Be polite and friendly. See our [Code of Conduct](docs/about/CODE_OF_CONDUCT.md) recommendations as you interact with others in the team.
 - Repeat the specific question you are answering, followed by your suggestion.
 - If suggesting code, repeat the line of code that needs to be altered, followed by your alteration
 - Include any post-steps or checks to verify your answer can be reproduced 

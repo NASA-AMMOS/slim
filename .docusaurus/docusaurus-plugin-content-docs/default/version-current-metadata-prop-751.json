@@ -147,19 +147,10 @@
                 "docId": "guides/governance/contributions/code-of-conduct/README"
               },
               {
-                "type": "category",
+                "type": "link",
                 "label": "Contributing Guide",
-                "collapsible": true,
-                "collapsed": true,
-                "items": [
-                  {
-                    "type": "link",
-                    "label": "Contributing Guide",
-                    "href": "/docs/guides/governance/contributions/contributing-guide/CONTRIBUTING",
-                    "docId": "guides/governance/contributions/contributing-guide/CONTRIBUTING"
-                  }
-                ],
-                "href": "/docs/guides/governance/contributions/contributing-guide/"
+                "href": "/docs/guides/governance/contributions/contributing-guide/",
+                "docId": "guides/governance/contributions/contributing-guide/README"
               },
               {
                 "type": "link",
@@ -372,12 +363,6 @@
       "id": "guides/governance/contributions/code-of-conduct/README",
       "title": "Code of Conduct",
       "description": "The code of conduct is typically a document that provides guidance to a project team on how the team members should interact with each other. It identifies behaviors that are helpful for building a better development community, provides contact information for addressing grievances (should they arise), and finally lists key responses that team leadership should / will take for dealing with unexpected behavior. Below are some examples to expedite the incorporation of a code of conduct.",
-      "sidebar": "guidesSidebar"
-    },
-    "guides/governance/contributions/contributing-guide/CONTRIBUTING": {
-      "id": "guides/governance/contributions/contributing-guide/CONTRIBUTING",
-      "title": "Contributing Guide",
-      "description": "Thanks for taking the time to consider contributing! We very much appreciate your time and effort. This document outlines the many ways you can contribute to our project, and provides detailed guidance on best practices. We look forward to your help!",
       "sidebar": "guidesSidebar"
     },
     "guides/governance/contributions/contributing-guide/README": {

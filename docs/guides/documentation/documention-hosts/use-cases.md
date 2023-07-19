@@ -6,7 +6,7 @@ sidebar_label: Docs Use Cases
 
 * Documentation Best Practices
     * For Building / Maintaining / Hosting Docs
-      * Of User / Admin / Dev Docs [📖 TRADE STUDY](../trade-studies/trade-study-hostingdocs-user)
+      * Of User / Admin / Dev Docs [📖 TRADE STUDY](trade-study-hostingdocs-user)
         * From Git Repositories
           * Using [GitBook](https://www.gitbook.com)
           * Using [RETYPE](https://retype.com/)
@@ -25,7 +25,7 @@ sidebar_label: Docs Use Cases
         * Using [Redoc](https://github.com/Redocly/redoc)
         * Using [Swagger](https://swagger.io/)
         * Using [readme](https://readme.com/)
-        * Using [Slate](https://github.com/slatedocs/slate)
+        * Using [Slate](https://github.com/slate/docs/slate)
       * Of Diagrams
         * Using [LucidChart](https://www.lucidchart.com/pages/)
         * Using [Mermaid](https://mermaid-js.github.io/)
@@ -44,11 +44,11 @@ sidebar_label: Docs Use Cases
     * For Writing Docs
       * For Open Source Project Files
         * For READMEs
-          * Using a Software Project Template [🏁 STARTER KIT](../starter-kits/#software-project-template)
+          * Using a Software Project Template [🏁 STARTER KIT](/docs/guides/documentation/readme/)
         * For CODE_OF_CONDUCT
-          * Using Contributor Covenant [🏁 STARTER KIT](../starter-kits/#contributor-covenant-template)
+          * Using Contributor Covenant [🏁 STARTER KIT](/docs/guides/governance/contributions/code-of-conduct/README.md)
         * For Contributor Guides
-          * Using Contributing Guide Template [🏁 STARTER KIT](../starter-kits/#contributing-guide-template)
+          * Using Contributing Guide Template [🏁 STARTER KIT](/docs/guides/governance/contributions/contributing-guide/README.md)
       * For Requirements
         * Using [NASA Systems Engineering Handbook](https://www.nasa.gov/seh/appendix-c-how-to-write-a-good-requirement)
       * For Architecture / Design

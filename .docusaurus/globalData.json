@@ -76,11 +76,6 @@
               "sidebar": "guidesSidebar"
             },
             {
-              "id": "guides/governance/contributions/contributing-guide/CONTRIBUTING",
-              "path": "/docs/guides/governance/contributions/contributing-guide/CONTRIBUTING",
-              "sidebar": "guidesSidebar"
-            },
-            {
               "id": "guides/governance/contributions/contributing-guide/README",
               "path": "/docs/guides/governance/contributions/contributing-guide/",
               "sidebar": "guidesSidebar"

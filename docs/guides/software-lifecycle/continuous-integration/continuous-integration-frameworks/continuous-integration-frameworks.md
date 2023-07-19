@@ -12,13 +12,13 @@ sidebar_label: Continuous Integration Frameworks
             * Implementing build tooling (e.g. [Maven plugins](https://maven.apache.org/plugins/index.html), [SetupTools](https://github.com/pypa/setuptools), [Make](https://www.gnu.org/software/make/))
             * Using [Checksum hashing](https://en.wikipedia.org/wiki/Hash_function)
         * For credentialing
-            * Implementing keystore ([Jenkins Credentials Binding Plugin](https://plugins.jenkins.io/credentials-binding/), et. al.) [&#x1F3C1; STARTER KIT(TBD)](../starter-kits/#jenkins-project-setup-and-configuration)
+            * Implementing keystore [Jenkins Credentials Binding Plugin](https://plugins.jenkins.io/credentials-binding/)
             * Using [ssh](https://www.openssh.com/)
             * Using [oauth](https://oauth.net/)
         * For executing and reporting tests
-            * Using [Jenkins plugins](https://plugins.jenkins.io/) [&#x1F3C1; STARTER KIT(TBD)](../starter-kits/#jenkins-project-setup-and-configuration)
+            * Using [Jenkins plugins](https://plugins.jenkins.io/)
             * Using [TravisCI Build Addons](https://docs.travis-ci.com/user/addons/)
-            * Using (Java) [Maven plugins](https://maven.apache.org/plugins/index.html) [&#x1F3C1; STARTER KIT(TBD)](../starter-kits/#jenkins-project-setup-and-configuration)
+            * Using (Java) [Maven plugins](https://maven.apache.org/plugins/index.html)
             * Using (Python) [SetupTools](https://github.com/pypa/setuptools)
             * Using (C#) [NUnit](https://nunit.org/)
             * Using (C/C++) [Make](https://www.gnu.org/software/make/)/[Cmake](https://cmake.org/)
@@ -26,10 +26,10 @@ sidebar_label: Continuous Integration Frameworks
             * Using (any) [Testrail Connector](https://github.jpl.nasa.gov/MIPL/testrail-connector)
     * For Compilation
         * For build integration and reporting
-            * Using [Jenkins](https://www.jenkins.io/) [&#x1F3C1; STARTER KIT(TBD)](../starter-kits/#jenkins-project-setup-and-configuration)
+            * Using [Jenkins](https://www.jenkins.io/)
             * Using [TravisCI](https://travis-ci.org/)
         * For dependency management and packaging
-            * Using (Java) [Maven](https://maven.apache.org/) [&#x1F3C1; STARTER KIT(TBD)](../starter-kits/#jenkins-project-setup-and-configuration)
+            * Using (Java) [Maven](https://maven.apache.org/)
             * Using (Python) [SetupTools](https://github.com/pypa/setuptools)/[Pip](https://pip.pypa.io/en/stable/)
             * Using (C#) [NuGet](https://www.nuget.org/)
             * Using (C/C++) [Make](https://www.gnu.org/software/make/)/[Cmake](https://cmake.org/)
@@ -56,12 +56,12 @@ sidebar_label: Continuous Integration Frameworks
             * Using [RPM](https://rpm.org/)
             * Using [JAR](https://docs.oracle.com/javase/tutorial/deployment/jar/index.html), [WAR](https://en.wikipedia.org/wiki/WAR_(file_format))
         * For releasing software
-            * Using [Jenkins](https://www.jenkins.io/) [&#x1F3C1; STARTER KIT(TBD)](../starter-kits/#jenkins-project-setup-and-configuration)
+            * Using [Jenkins](https://www.jenkins.io/) ()
             * Using [TravisCI](https://travis-ci.org/)
             * Using [Github Actions](https://github.com/features/actions)
         * For storing build artifacts
             * Using software repositories
-                * Using [Artifactory](https://jfrog.com/artifactory/) [&#x1F3C1; STARTER KIT(TBD)](../starter-kits/#jenkins-project-setup-and-configuration)
+                * Using [Artifactory](https://jfrog.com/artifactory/)
                 * Using [Nexus](https://www.sonatype.com/products/repository-oss)
             * Using OSS repositories
                 * Using (Java) [Maven Central](https://search.maven.org/)
