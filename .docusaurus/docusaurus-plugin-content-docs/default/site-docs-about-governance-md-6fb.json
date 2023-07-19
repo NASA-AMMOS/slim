@@ -6,7 +6,7 @@
   "source": "@site/docs/about/GOVERNANCE.md",
   "sourceDirName": "about",
   "slug": "/about/GOVERNANCE",
-  "permalink": "/docs/about/GOVERNANCE",
+  "permalink": "/slim/docs/about/GOVERNANCE",
   "draft": false,
   "editUrl": "https://github.com/facebook/docusaurus/tree/main/packages/create-docusaurus/templates/shared/docs/about/GOVERNANCE.md",
   "tags": [],
@@ -15,6 +15,6 @@
   "sidebar": "aboutSidebar",
   "previous": {
     "title": "Code of Conduct",
-    "permalink": "/docs/about/CODE_OF_CONDUCT"
+    "permalink": "/slim/docs/about/CODE_OF_CONDUCT"
   }
 }

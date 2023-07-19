@@ -6,7 +6,7 @@
   "source": "@site/docs/guides/software-lifecycle/security/README.md",
   "sourceDirName": "guides/software-lifecycle/security",
   "slug": "/guides/software-lifecycle/security/",
-  "permalink": "/docs/guides/software-lifecycle/security/",
+  "permalink": "/slim/docs/guides/software-lifecycle/security/",
   "draft": false,
   "editUrl": "https://github.com/facebook/docusaurus/tree/main/packages/create-docusaurus/templates/shared/docs/guides/software-lifecycle/security/README.md",
   "tags": [],
@@ -15,10 +15,10 @@
   "sidebar": "guidesSidebar",
   "previous": {
     "title": "Testing Frameworks",
-    "permalink": "/docs/guides/software-lifecycle/continuous-testing/testing-frameworks"
+    "permalink": "/slim/docs/guides/software-lifecycle/continuous-testing/testing-frameworks"
   },
   "next": {
     "title": "Dependabot",
-    "permalink": "/docs/guides/software-lifecycle/security/dependabot/"
+    "permalink": "/slim/docs/guides/software-lifecycle/security/dependabot/"
   }
 }

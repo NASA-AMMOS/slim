@@ -1,304 +1,347 @@
 {
-  "/blog-e0e": {
-    "__comp": "a6aa9e1f",
+  "/slim/__docusaurus/debug-0ff": {
+    "__comp": "__comp---theme-debug-config-23-a-2ff",
     "__context": {
-      "plugin": "8ad5d578"
+      "plugin": "plugin---slim-docusaurus-debug-24-a-5c6"
+    }
+  },
+  "/slim/__docusaurus/debug/config-7dd": {
+    "__comp": "__comp---theme-debug-config-23-a-2ff",
+    "__context": {
+      "plugin": "plugin---slim-docusaurus-debug-24-a-5c6"
+    }
+  },
+  "/slim/__docusaurus/debug/content-120": {
+    "__comp": "__comp---theme-debug-contentba-8-ce7",
+    "__context": {
+      "plugin": "plugin---slim-docusaurus-debug-24-a-5c6"
     },
-    "sidebar": "814f3328",
+    "allContent": "allContent---slim-docusaurus-debug-content-246-cda"
+  },
+  "/slim/__docusaurus/debug/globalData-a0f": {
+    "__comp": "__comp---theme-debug-global-dataede-0fa",
+    "__context": {
+      "plugin": "plugin---slim-docusaurus-debug-24-a-5c6"
+    }
+  },
+  "/slim/__docusaurus/debug/metadata-a8e": {
+    "__comp": "__comp---theme-debug-site-metadata-68-e-3d4",
+    "__context": {
+      "plugin": "plugin---slim-docusaurus-debug-24-a-5c6"
+    }
+  },
+  "/slim/__docusaurus/debug/registry-263": {
+    "__comp": "__comp---theme-debug-registry-679-501",
+    "__context": {
+      "plugin": "plugin---slim-docusaurus-debug-24-a-5c6"
+    }
+  },
+  "/slim/__docusaurus/debug/routes-bb4": {
+    "__comp": "__comp---theme-debug-routes-946-699",
+    "__context": {
+      "plugin": "plugin---slim-docusaurus-debug-24-a-5c6"
+    }
+  },
+  "/slim/blog-69e": {
+    "__comp": "__comp---theme-blog-list-pagea-6-a-7ba",
+    "__context": {
+      "plugin": "plugin---slim-blog-8-ad-038"
+    },
+    "sidebar": "sidebar---slim-blog-814-ea9",
     "items": [
       {
-        "content": "7661071f"
+        "content": "content---slim-blog-766-c37"
       },
       {
-        "content": "f4f34a3a"
+        "content": "content---slim-blogf-4-f-9f3"
       },
       {
-        "content": "8717b14a"
+        "content": "content---slim-blog-871-8b4"
       },
       {
-        "content": "925b3f96"
+        "content": "content---slim-blog-925-8f9"
       }
     ],
-    "metadata": "b2b675dd"
+    "metadata": "metadata---slim-blogd-07-c5c"
   },
-  "/blog/archive-70c": {
-    "__comp": "9e4087bc",
+  "/slim/blog/archive-b1c": {
+    "__comp": "__comp---theme-blog-archive-page-9-e-4-1d8",
     "__context": {
-      "plugin": "8ad5d578"
+      "plugin": "plugin---slim-blog-8-ad-038"
     },
-    "archive": "b2f554cd"
+    "archive": "archive---slim-blog-archive-193-e36"
   },
-  "/blog/first-blog-post-aee": {
-    "__comp": "ccc49370",
+  "/slim/blog/first-blog-post-64f": {
+    "__comp": "__comp---theme-blog-post-pageccc-cab",
     "__context": {
-      "plugin": "8ad5d578"
+      "plugin": "plugin---slim-blog-8-ad-038"
     },
-    "sidebar": "814f3328",
-    "content": "e273c56f"
+    "sidebar": "sidebar---slim-blog-814-ea9",
+    "content": "content---slim-blog-first-blog-poste-27-a04"
   },
-  "/blog/long-blog-post-4c8": {
-    "__comp": "ccc49370",
+  "/slim/blog/long-blog-post-32b": {
+    "__comp": "__comp---theme-blog-post-pageccc-cab",
     "__context": {
-      "plugin": "8ad5d578"
+      "plugin": "plugin---slim-blog-8-ad-038"
     },
-    "sidebar": "814f3328",
-    "content": "73664a40"
+    "sidebar": "sidebar---slim-blog-814-ea9",
+    "content": "content---slim-blog-long-blog-post-736-da9"
   },
-  "/blog/mdx-blog-post-fba": {
-    "__comp": "ccc49370",
+  "/slim/blog/mdx-blog-post-42f": {
+    "__comp": "__comp---theme-blog-post-pageccc-cab",
     "__context": {
-      "plugin": "8ad5d578"
+      "plugin": "plugin---slim-blog-8-ad-038"
     },
-    "sidebar": "814f3328",
-    "content": "59362658"
+    "sidebar": "sidebar---slim-blog-814-ea9",
+    "content": "content---slim-blog-mdx-blog-post-593-ec9"
   },
-  "/blog/tags-7a3": {
-    "__comp": "01a85c17",
+  "/slim/blog/tags-94b": {
+    "__comp": "__comp---theme-blog-tags-list-page-01-a-d0b",
     "__context": {
-      "plugin": "8ad5d578"
+      "plugin": "plugin---slim-blog-8-ad-038"
     },
-    "sidebar": "814f3328",
-    "tags": "a7023ddc"
+    "sidebar": "sidebar---slim-blog-814-ea9",
+    "tags": "tags---slim-blog-tags-325-51a"
   },
-  "/blog/tags/docusaurus-f89": {
-    "__comp": "6875c492",
+  "/slim/blog/tags/docusaurus-c76": {
+    "__comp": "__comp---theme-blog-tags-posts-page-687-b6c",
     "__context": {
-      "plugin": "8ad5d578"
+      "plugin": "plugin---slim-blog-8-ad-038"
     },
-    "sidebar": "814f3328",
+    "sidebar": "sidebar---slim-blog-814-ea9",
     "items": [
       {
-        "content": "7661071f"
+        "content": "content---slim-blog-766-c37"
       },
       {
-        "content": "f4f34a3a"
+        "content": "content---slim-blogf-4-f-9f3"
       },
       {
-        "content": "8717b14a"
+        "content": "content---slim-blog-871-8b4"
       },
       {
-        "content": "925b3f96"
+        "content": "content---slim-blog-925-8f9"
       }
     ],
-    "tag": "a80da1cf",
-    "listMetadata": "608ae6a4"
+    "tag": "tag---slim-blog-tags-docusaurus-719-20a",
+    "listMetadata": "listMetadata---slim-blog-tags-docusaurus-8-c-4-ca2"
   },
-  "/blog/tags/facebook-e45": {
-    "__comp": "6875c492",
+  "/slim/blog/tags/facebook-dd6": {
+    "__comp": "__comp---theme-blog-tags-posts-page-687-b6c",
     "__context": {
-      "plugin": "8ad5d578"
+      "plugin": "plugin---slim-blog-8-ad-038"
     },
-    "sidebar": "814f3328",
+    "sidebar": "sidebar---slim-blog-814-ea9",
     "items": [
       {
-        "content": "7661071f"
+        "content": "content---slim-blog-766-c37"
       }
     ],
-    "tag": "031793e1",
-    "listMetadata": "096bfee4"
+    "tag": "tag---slim-blog-tags-facebookc-2-f-610",
+    "listMetadata": "listMetadata---slim-blog-tags-facebookc-44-e22"
   },
-  "/blog/tags/hello-71d": {
-    "__comp": "6875c492",
+  "/slim/blog/tags/hello-4d4": {
+    "__comp": "__comp---theme-blog-tags-posts-page-687-b6c",
     "__context": {
-      "plugin": "8ad5d578"
+      "plugin": "plugin---slim-blog-8-ad-038"
     },
-    "sidebar": "814f3328",
+    "sidebar": "sidebar---slim-blog-814-ea9",
     "items": [
       {
-        "content": "7661071f"
+        "content": "content---slim-blog-766-c37"
       },
       {
-        "content": "8717b14a"
+        "content": "content---slim-blog-871-8b4"
       }
     ],
-    "tag": "30a24c52",
-    "listMetadata": "66406991"
+    "tag": "tag---slim-blog-tags-hello-222-531",
+    "listMetadata": "listMetadata---slim-blog-tags-hello-396-1b9"
   },
-  "/blog/tags/hola-235": {
-    "__comp": "6875c492",
+  "/slim/blog/tags/hola-783": {
+    "__comp": "__comp---theme-blog-tags-posts-page-687-b6c",
     "__context": {
-      "plugin": "8ad5d578"
+      "plugin": "plugin---slim-blog-8-ad-038"
     },
-    "sidebar": "814f3328",
+    "sidebar": "sidebar---slim-blog-814-ea9",
     "items": [
       {
-        "content": "925b3f96"
+        "content": "content---slim-blog-925-8f9"
       }
     ],
-    "tag": "e16015ca",
-    "listMetadata": "4c9e35b1"
+    "tag": "tag---slim-blog-tags-holacb-2-73a",
+    "listMetadata": "listMetadata---slim-blog-tags-hola-698-c6c"
   },
-  "/blog/welcome-088": {
-    "__comp": "ccc49370",
+  "/slim/blog/welcome-98f": {
+    "__comp": "__comp---theme-blog-post-pageccc-cab",
     "__context": {
-      "plugin": "8ad5d578"
+      "plugin": "plugin---slim-blog-8-ad-038"
     },
-    "sidebar": "814f3328",
-    "content": "d9f32620"
+    "sidebar": "sidebar---slim-blog-814-ea9",
+    "content": "content---slim-blog-welcomed-9-f-bc2"
   },
-  "/markdown-page-1b4": {
-    "__comp": "1f391b9e",
+  "/slim/markdown-page-118": {
+    "__comp": "__comp---theme-mdx-page-1-f-3-b90",
     "__context": {
-      "plugin": "a267e42d"
+      "plugin": "plugin---slim-markdown-pagea-26-ae7"
     },
-    "content": "393be207"
+    "content": "content---slim-markdown-page-393-660"
   },
-  "/docs-132": {
-    "__comp": "1be78505",
+  "/slim/docs-782": {
+    "__comp": "__comp---theme-doc-page-1-be-9be",
     "__context": {
-      "plugin": "2e67d4b8"
+      "plugin": "plugin---slim-docs-2-e-6-474"
     },
-    "versionMetadata": "935f2afb"
+    "versionMetadata": "versionMetadata---slim-docs-935-ff9"
   },
-  "/docs/about/-fbe": {
-    "__comp": "17896441",
-    "content": "3cc55dcd"
+  "/slim/docs/about/-8ab": {
+    "__comp": "__comp---theme-doc-item-178-a40",
+    "content": "content---slim-docs-about-3-cc-be3"
   },
-  "/docs/about/CODE_OF_CONDUCT-35e": {
-    "__comp": "17896441",
-    "content": "3b13db8a"
+  "/slim/docs/about/CODE_OF_CONDUCT-194": {
+    "__comp": "__comp---theme-doc-item-178-a40",
+    "content": "content---slim-docs-about-code-of-conduct-3-b-1-b95"
   },
-  "/docs/about/GOVERNANCE-209": {
-    "__comp": "17896441",
-    "content": "6fb1fe71"
+  "/slim/docs/about/GOVERNANCE-e72": {
+    "__comp": "__comp---theme-doc-item-178-a40",
+    "content": "content---slim-docs-about-governance-6-fb-cc3"
   },
-  "/docs/category/documentation-3ae": {
-    "__comp": "14eb3368",
-    "categoryGeneratedIndex": "7f088c87"
+  "/slim/docs/category/documentation-a19": {
+    "__comp": "__comp---theme-doc-category-generated-index-page-14-e-640",
+    "categoryGeneratedIndex": "categoryGeneratedIndex---slim-docs-category-documentationac-7-384"
   },
-  "/docs/category/governance-e27": {
-    "__comp": "14eb3368",
-    "categoryGeneratedIndex": "285d6160"
+  "/slim/docs/category/governance-2f5": {
+    "__comp": "__comp---theme-doc-category-generated-index-page-14-e-640",
+    "categoryGeneratedIndex": "categoryGeneratedIndex---slim-docs-category-governance-412-96a"
   },
-  "/docs/category/software-lifecycle-2fd": {
-    "__comp": "14eb3368",
-    "categoryGeneratedIndex": "b1221847"
+  "/slim/docs/category/software-lifecycle-72b": {
+    "__comp": "__comp---theme-doc-category-generated-index-page-14-e-640",
+    "categoryGeneratedIndex": "categoryGeneratedIndex---slim-docs-category-software-lifecycle-827-99b"
   },
-  "/docs/contribute/CONTRIBUTING-120": {
-    "__comp": "17896441",
-    "content": "d943c124"
+  "/slim/docs/contribute/CONTRIBUTING-f53": {
+    "__comp": "__comp---theme-doc-item-178-a40",
+    "content": "content---slim-docs-contribute-contributin-gd-94-497"
   },
-  "/docs/contribute/submit-best-practice-2b3": {
-    "__comp": "17896441",
-    "content": "8facacb8"
+  "/slim/docs/contribute/submit-best-practice-129": {
+    "__comp": "__comp---theme-doc-item-178-a40",
+    "content": "content---slim-docs-contribute-submit-best-practice-8-fa-a75"
   },
-  "/docs/guides/documentation/change-log/-655": {
-    "__comp": "17896441",
-    "content": "32de2db0"
+  "/slim/docs/guides/documentation/change-log/-961": {
+    "__comp": "__comp---theme-doc-item-178-a40",
+    "content": "content---slim-docs-guides-documentation-change-log-32-d-428"
   },
-  "/docs/guides/documentation/documention-hosts/-3ef": {
-    "__comp": "17896441",
-    "content": "36908959"
+  "/slim/docs/guides/documentation/documentation-hosts/-934": {
+    "__comp": "__comp---theme-doc-item-178-a40",
+    "content": "content---slim-docs-guides-documentation-documentation-hosts-e-90-bd1"
   },
-  "/docs/guides/documentation/documention-hosts/trade-study-hostingdocs-user-a59": {
-    "__comp": "17896441",
-    "content": "d2759266"
+  "/slim/docs/guides/documentation/documentation-hosts/trade-study-hostingdocs-user-2de": {
+    "__comp": "__comp---theme-doc-item-178-a40",
+    "content": "content---slim-docs-guides-documentation-documentation-hosts-trade-study-hostingdocs-userc-61-40a"
   },
-  "/docs/guides/documentation/documention-hosts/use-cases-fb4": {
-    "__comp": "17896441",
-    "content": "e514217a"
+  "/slim/docs/guides/documentation/documentation-hosts/use-cases-fce": {
+    "__comp": "__comp---theme-doc-item-178-a40",
+    "content": "content---slim-docs-guides-documentation-documentation-hosts-use-casesf-25-c20"
   },
-  "/docs/guides/documentation/readme/-aed": {
-    "__comp": "17896441",
-    "content": "21821687"
+  "/slim/docs/guides/documentation/readme/-919": {
+    "__comp": "__comp---theme-doc-item-178-a40",
+    "content": "content---slim-docs-guides-documentation-readme-218-0c8"
   },
-  "/docs/guides/governance/contributions/-cd7": {
-    "__comp": "17896441",
-    "content": "e6422a4c"
+  "/slim/docs/guides/governance/contributions/-3c4": {
+    "__comp": "__comp---theme-doc-item-178-a40",
+    "content": "content---slim-docs-guides-governance-contributions-e-64-0eb"
   },
-  "/docs/guides/governance/contributions/change-request-templates/-bb7": {
-    "__comp": "17896441",
-    "content": "79def820"
+  "/slim/docs/guides/governance/contributions/change-request-templates/-bba": {
+    "__comp": "__comp---theme-doc-item-178-a40",
+    "content": "content---slim-docs-guides-governance-contributions-change-request-templates-79-d-516"
   },
-  "/docs/guides/governance/contributions/change-request-templates/github/PULL_REQUEST_TEMPLATE-298": {
-    "__comp": "17896441",
-    "content": "7cc12c13"
+  "/slim/docs/guides/governance/contributions/change-request-templates/github/PULL_REQUEST_TEMPLATE-257": {
+    "__comp": "__comp---theme-doc-item-178-a40",
+    "content": "content---slim-docs-guides-governance-contributions-change-request-templates-github-pull-request-template-7-cc-433"
   },
-  "/docs/guides/governance/contributions/code-of-conduct/-ff0": {
-    "__comp": "17896441",
-    "content": "e0d5b996"
+  "/slim/docs/guides/governance/contributions/code-of-conduct/-0f4": {
+    "__comp": "__comp---theme-doc-item-178-a40",
+    "content": "content---slim-docs-guides-governance-contributions-code-of-conduct-e-0-d-7be"
   },
-  "/docs/guides/governance/contributions/contributing-guide/-89e": {
-    "__comp": "17896441",
-    "content": "4317fbf7"
+  "/slim/docs/guides/governance/contributions/contributing-guide/-6ed": {
+    "__comp": "__comp---theme-doc-item-178-a40",
+    "content": "content---slim-docs-guides-governance-contributions-contributing-guide-431-d5b"
   },
-  "/docs/guides/governance/contributions/developer-certificate-origin/-88e": {
-    "__comp": "17896441",
-    "content": "7a245e29"
+  "/slim/docs/guides/governance/contributions/developer-certificate-origin/-d6a": {
+    "__comp": "__comp---theme-doc-item-178-a40",
+    "content": "content---slim-docs-guides-governance-contributions-developer-certificate-origin-7-a-2-222"
   },
-  "/docs/guides/governance/contributions/issue-templates/-bb0": {
-    "__comp": "17896441",
-    "content": "b4deb335"
+  "/slim/docs/guides/governance/contributions/issue-templates/-081": {
+    "__comp": "__comp---theme-doc-item-178-a40",
+    "content": "content---slim-docs-guides-governance-contributions-issue-templates-b-4-d-dde"
   },
-  "/docs/guides/governance/contributions/issue-templates/github/bug_report-fac": {
-    "__comp": "17896441",
-    "content": "4e24edc0"
+  "/slim/docs/guides/governance/contributions/issue-templates/github/bug_report-4e3": {
+    "__comp": "__comp---theme-doc-item-178-a40",
+    "content": "content---slim-docs-guides-governance-contributions-issue-templates-github-bug-report-4-e-2-b58"
   },
-  "/docs/guides/governance/contributions/issue-templates/github/new_feature-cf5": {
-    "__comp": "17896441",
-    "content": "d60fea20"
+  "/slim/docs/guides/governance/contributions/issue-templates/github/new_feature-bc8": {
+    "__comp": "__comp---theme-doc-item-178-a40",
+    "content": "content---slim-docs-guides-governance-contributions-issue-templates-github-new-featured-60-bd5"
   },
-  "/docs/guides/governance/governance-model/-bbf": {
-    "__comp": "17896441",
-    "content": "6d6ba527"
+  "/slim/docs/guides/governance/governance-model/-277": {
+    "__comp": "__comp---theme-doc-item-178-a40",
+    "content": "content---slim-docs-guides-governance-governance-model-6-d-6-e9a"
   },
-  "/docs/guides/governance/governance-model/GOVERNANCE-c2c": {
-    "__comp": "17896441",
-    "content": "d5368355"
+  "/slim/docs/guides/governance/governance-model/GOVERNANCE-e30": {
+    "__comp": "__comp---theme-doc-item-178-a40",
+    "content": "content---slim-docs-guides-governance-governance-model-governanc-ed-53-78c"
   },
-  "/docs/guides/search-0de": {
-    "__comp": "17896441",
-    "content": "c2d7cd96"
+  "/slim/docs/guides/search-aa9": {
+    "__comp": "__comp---theme-doc-item-178-a40",
+    "content": "content---slim-docs-guides-searchc-2-d-fde"
   },
-  "/docs/guides/software-lifecycle/application-starter-kits/-716": {
-    "__comp": "17896441",
-    "content": "2fb114a8"
+  "/slim/docs/guides/software-lifecycle/application-starter-kits/-801": {
+    "__comp": "__comp---theme-doc-item-178-a40",
+    "content": "content---slim-docs-guides-software-lifecycle-application-starter-kits-2-fb-fa8"
   },
-  "/docs/guides/software-lifecycle/application-starter-kits/python-starter-kit/-8de": {
-    "__comp": "17896441",
-    "content": "3b327884"
+  "/slim/docs/guides/software-lifecycle/application-starter-kits/python-starter-kit/-d83": {
+    "__comp": "__comp---theme-doc-item-178-a40",
+    "content": "content---slim-docs-guides-software-lifecycle-application-starter-kits-python-starter-kit-3-b-3-e0b"
   },
-  "/docs/guides/software-lifecycle/continuous-integration/-7dd": {
-    "__comp": "17896441",
-    "content": "d5decc06"
+  "/slim/docs/guides/software-lifecycle/continuous-integration/-f7d": {
+    "__comp": "__comp---theme-doc-item-178-a40",
+    "content": "content---slim-docs-guides-software-lifecycle-continuous-integration-d-5-d-cb0"
   },
-  "/docs/guides/software-lifecycle/continuous-integration/continuous-integration-frameworks/-a57": {
-    "__comp": "17896441",
-    "content": "47b29f95"
+  "/slim/docs/guides/software-lifecycle/continuous-integration/continuous-integration-frameworks/-a92": {
+    "__comp": "__comp---theme-doc-item-178-a40",
+    "content": "content---slim-docs-guides-software-lifecycle-continuous-integration-continuous-integration-frameworks-47-b-2a8"
   },
-  "/docs/guides/software-lifecycle/continuous-integration/continuous-integration-frameworks/-39f": {
-    "__comp": "17896441",
-    "content": "35e78889"
+  "/slim/docs/guides/software-lifecycle/continuous-integration/continuous-integration-frameworks/-4da": {
+    "__comp": "__comp---theme-doc-item-178-a40",
+    "content": "content---slim-docs-guides-software-lifecycle-continuous-integration-continuous-integration-frameworks-35-e-2fe"
   },
-  "/docs/guides/software-lifecycle/continuous-integration/reference-architecture/-fd2": {
-    "__comp": "17896441",
-    "content": "b75dc861"
+  "/slim/docs/guides/software-lifecycle/continuous-integration/reference-architecture/-035": {
+    "__comp": "__comp---theme-doc-item-178-a40",
+    "content": "content---slim-docs-guides-software-lifecycle-continuous-integration-reference-architecture-b-75-ca2"
   },
-  "/docs/guides/software-lifecycle/continuous-testing/-a02": {
-    "__comp": "17896441",
-    "content": "2f60f69a"
+  "/slim/docs/guides/software-lifecycle/continuous-testing/-27d": {
+    "__comp": "__comp---theme-doc-item-178-a40",
+    "content": "content---slim-docs-guides-software-lifecycle-continuous-testing-2-f-6-43e"
   },
-  "/docs/guides/software-lifecycle/continuous-testing/testing-frameworks-a3c": {
-    "__comp": "17896441",
-    "content": "b741a796"
+  "/slim/docs/guides/software-lifecycle/continuous-testing/testing-frameworks-fde": {
+    "__comp": "__comp---theme-doc-item-178-a40",
+    "content": "content---slim-docs-guides-software-lifecycle-continuous-testing-testing-frameworksb-74-657"
   },
-  "/docs/guides/software-lifecycle/security/-bbe": {
-    "__comp": "17896441",
-    "content": "e553889d"
+  "/slim/docs/guides/software-lifecycle/security/-526": {
+    "__comp": "__comp---theme-doc-item-178-a40",
+    "content": "content---slim-docs-guides-software-lifecycle-security-e-55-cc7"
   },
-  "/docs/guides/software-lifecycle/security/dependabot/-634": {
-    "__comp": "17896441",
-    "content": "cc9f695b"
+  "/slim/docs/guides/software-lifecycle/security/dependabot/-be7": {
+    "__comp": "__comp---theme-doc-item-178-a40",
+    "content": "content---slim-docs-guides-software-lifecycle-security-dependabot-cc-9-653"
   },
-  "/docs/guides/software-lifecycle/security/secrets-detection/-edb": {
-    "__comp": "17896441",
-    "content": "684aec4d"
+  "/slim/docs/guides/software-lifecycle/security/secrets-detection/-853": {
+    "__comp": "__comp---theme-doc-item-178-a40",
+    "content": "content---slim-docs-guides-software-lifecycle-security-secrets-detection-684-d77"
   },
-  "/-14b": {
-    "__comp": "c4f5d8e4",
+  "/slim/-17b": {
+    "__comp": "__comp---site-src-pages-index-jsc-4-f-f99",
     "__context": {
-      "plugin": "a267e42d"
+      "plugin": "plugin---slim-markdown-pagea-26-ae7"
     },
-    "config": "5e9f5e1a"
+    "config": "config---slim-5-e-9-93e"
   }
 }

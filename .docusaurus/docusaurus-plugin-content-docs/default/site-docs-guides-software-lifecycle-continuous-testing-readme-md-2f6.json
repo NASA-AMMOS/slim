@@ -6,7 +6,7 @@
   "source": "@site/docs/guides/software-lifecycle/continuous-testing/README.md",
   "sourceDirName": "guides/software-lifecycle/continuous-testing",
   "slug": "/guides/software-lifecycle/continuous-testing/",
-  "permalink": "/docs/guides/software-lifecycle/continuous-testing/",
+  "permalink": "/slim/docs/guides/software-lifecycle/continuous-testing/",
   "draft": false,
   "editUrl": "https://github.com/facebook/docusaurus/tree/main/packages/create-docusaurus/templates/shared/docs/guides/software-lifecycle/continuous-testing/README.md",
   "tags": [],
@@ -15,10 +15,10 @@
   "sidebar": "guidesSidebar",
   "previous": {
     "title": "Reference Architectures",
-    "permalink": "/docs/guides/software-lifecycle/continuous-integration/reference-architecture/"
+    "permalink": "/slim/docs/guides/software-lifecycle/continuous-integration/reference-architecture/"
   },
   "next": {
     "title": "Testing Frameworks",
-    "permalink": "/docs/guides/software-lifecycle/continuous-testing/testing-frameworks"
+    "permalink": "/slim/docs/guides/software-lifecycle/continuous-testing/testing-frameworks"
   }
 }

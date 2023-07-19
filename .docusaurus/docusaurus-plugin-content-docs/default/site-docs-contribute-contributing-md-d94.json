@@ -6,7 +6,7 @@
   "source": "@site/docs/contribute/CONTRIBUTING.md",
   "sourceDirName": "contribute",
   "slug": "/contribute/CONTRIBUTING",
-  "permalink": "/docs/contribute/CONTRIBUTING",
+  "permalink": "/slim/docs/contribute/CONTRIBUTING",
   "draft": false,
   "editUrl": "https://github.com/facebook/docusaurus/tree/main/packages/create-docusaurus/templates/shared/docs/contribute/CONTRIBUTING.md",
   "tags": [],
@@ -15,6 +15,6 @@
   "sidebar": "contributeSidebar",
   "next": {
     "title": "Submit a Best Practice Guide",
-    "permalink": "/docs/contribute/submit-best-practice"
+    "permalink": "/slim/docs/contribute/submit-best-practice"
   }
 }

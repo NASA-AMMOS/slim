@@ -6,7 +6,7 @@
   "source": "@site/docs/guides/documentation/documention-hosts/README.md",
   "sourceDirName": "guides/documentation/documention-hosts",
   "slug": "/guides/documentation/documention-hosts/",
-  "permalink": "/docs/guides/documentation/documention-hosts/",
+  "permalink": "/slim/docs/guides/documentation/documention-hosts/",
   "draft": false,
   "editUrl": "https://github.com/facebook/docusaurus/tree/main/packages/create-docusaurus/templates/shared/docs/guides/documentation/documention-hosts/README.md",
   "tags": [],
@@ -15,10 +15,10 @@
   "sidebar": "guidesSidebar",
   "previous": {
     "title": "Change Log",
-    "permalink": "/docs/guides/documentation/change-log/"
+    "permalink": "/slim/docs/guides/documentation/change-log/"
   },
   "next": {
     "title": "Docs Hosting Trade Study",
-    "permalink": "/docs/guides/documentation/documention-hosts/trade-study-hostingdocs-user"
+    "permalink": "/slim/docs/guides/documentation/documention-hosts/trade-study-hostingdocs-user"
   }
 }

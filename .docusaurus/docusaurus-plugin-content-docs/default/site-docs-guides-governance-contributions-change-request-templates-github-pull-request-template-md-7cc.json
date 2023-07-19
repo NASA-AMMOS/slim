@@ -6,7 +6,7 @@
   "source": "@site/docs/guides/governance/contributions/change-request-templates/github/PULL_REQUEST_TEMPLATE.md",
   "sourceDirName": "guides/governance/contributions/change-request-templates/github",
   "slug": "/guides/governance/contributions/change-request-templates/github/PULL_REQUEST_TEMPLATE",
-  "permalink": "/docs/guides/governance/contributions/change-request-templates/github/PULL_REQUEST_TEMPLATE",
+  "permalink": "/slim/docs/guides/governance/contributions/change-request-templates/github/PULL_REQUEST_TEMPLATE",
   "draft": false,
   "editUrl": "https://github.com/facebook/docusaurus/tree/main/packages/create-docusaurus/templates/shared/docs/guides/governance/contributions/change-request-templates/github/PULL_REQUEST_TEMPLATE.md",
   "tags": [],
@@ -15,10 +15,10 @@
   "sidebar": "guidesSidebar",
   "previous": {
     "title": "Change Request Templates",
-    "permalink": "/docs/guides/governance/contributions/change-request-templates/"
+    "permalink": "/slim/docs/guides/governance/contributions/change-request-templates/"
   },
   "next": {
     "title": "Code of Conduct",
-    "permalink": "/docs/guides/governance/contributions/code-of-conduct/"
+    "permalink": "/slim/docs/guides/governance/contributions/code-of-conduct/"
   }
 }

@@ -6,7 +6,7 @@
   "source": "@site/docs/guides/governance/contributions/code-of-conduct/README.md",
   "sourceDirName": "guides/governance/contributions/code-of-conduct",
   "slug": "/guides/governance/contributions/code-of-conduct/",
-  "permalink": "/docs/guides/governance/contributions/code-of-conduct/",
+  "permalink": "/slim/docs/guides/governance/contributions/code-of-conduct/",
   "draft": false,
   "editUrl": "https://github.com/facebook/docusaurus/tree/main/packages/create-docusaurus/templates/shared/docs/guides/governance/contributions/code-of-conduct/README.md",
   "tags": [],
@@ -15,10 +15,10 @@
   "sidebar": "guidesSidebar",
   "previous": {
     "title": "PULL_REQUEST_TEMPLATE",
-    "permalink": "/docs/guides/governance/contributions/change-request-templates/github/PULL_REQUEST_TEMPLATE"
+    "permalink": "/slim/docs/guides/governance/contributions/change-request-templates/github/PULL_REQUEST_TEMPLATE"
   },
   "next": {
     "title": "Contributing Guide",
-    "permalink": "/docs/guides/governance/contributions/contributing-guide/"
+    "permalink": "/slim/docs/guides/governance/contributions/contributing-guide/"
   }
 }

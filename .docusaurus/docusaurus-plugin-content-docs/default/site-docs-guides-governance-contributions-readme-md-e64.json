@@ -6,7 +6,7 @@
   "source": "@site/docs/guides/governance/contributions/README.md",
   "sourceDirName": "guides/governance/contributions",
   "slug": "/guides/governance/contributions/",
-  "permalink": "/docs/guides/governance/contributions/",
+  "permalink": "/slim/docs/guides/governance/contributions/",
   "draft": false,
   "editUrl": "https://github.com/facebook/docusaurus/tree/main/packages/create-docusaurus/templates/shared/docs/guides/governance/contributions/README.md",
   "tags": [],
@@ -15,10 +15,10 @@
   "sidebar": "guidesSidebar",
   "previous": {
     "title": "Governance",
-    "permalink": "/docs/category/governance"
+    "permalink": "/slim/docs/category/governance"
   },
   "next": {
     "title": "Change Request Templates",
-    "permalink": "/docs/guides/governance/contributions/change-request-templates/"
+    "permalink": "/slim/docs/guides/governance/contributions/change-request-templates/"
   }
 }

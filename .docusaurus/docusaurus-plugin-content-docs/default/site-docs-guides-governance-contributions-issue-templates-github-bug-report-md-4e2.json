@@ -6,7 +6,7 @@
   "source": "@site/docs/guides/governance/contributions/issue-templates/github/bug_report.md",
   "sourceDirName": "guides/governance/contributions/issue-templates/github",
   "slug": "/guides/governance/contributions/issue-templates/github/bug_report",
-  "permalink": "/docs/guides/governance/contributions/issue-templates/github/bug_report",
+  "permalink": "/slim/docs/guides/governance/contributions/issue-templates/github/bug_report",
   "draft": false,
   "editUrl": "https://github.com/facebook/docusaurus/tree/main/packages/create-docusaurus/templates/shared/docs/guides/governance/contributions/issue-templates/github/bug_report.md",
   "tags": [],
@@ -21,10 +21,10 @@
   "sidebar": "guidesSidebar",
   "previous": {
     "title": "Issue Templates",
-    "permalink": "/docs/guides/governance/contributions/issue-templates/"
+    "permalink": "/slim/docs/guides/governance/contributions/issue-templates/"
   },
   "next": {
     "title": "[New Feature]: ",
-    "permalink": "/docs/guides/governance/contributions/issue-templates/github/new_feature"
+    "permalink": "/slim/docs/guides/governance/contributions/issue-templates/github/new_feature"
   }
 }

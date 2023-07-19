@@ -6,7 +6,7 @@
   "source": "@site/docs/guides/governance/governance-model/README.md",
   "sourceDirName": "guides/governance/governance-model",
   "slug": "/guides/governance/governance-model/",
-  "permalink": "/docs/guides/governance/governance-model/",
+  "permalink": "/slim/docs/guides/governance/governance-model/",
   "draft": false,
   "editUrl": "https://github.com/facebook/docusaurus/tree/main/packages/create-docusaurus/templates/shared/docs/guides/governance/governance-model/README.md",
   "tags": [],
@@ -15,10 +15,10 @@
   "sidebar": "guidesSidebar",
   "previous": {
     "title": "[New Feature]: ",
-    "permalink": "/docs/guides/governance/contributions/issue-templates/github/new_feature"
+    "permalink": "/slim/docs/guides/governance/contributions/issue-templates/github/new_feature"
   },
   "next": {
     "title": "[INSERT PROJECT NAME] Project Governance",
-    "permalink": "/docs/guides/governance/governance-model/GOVERNANCE"
+    "permalink": "/slim/docs/guides/governance/governance-model/GOVERNANCE"
   }
 }

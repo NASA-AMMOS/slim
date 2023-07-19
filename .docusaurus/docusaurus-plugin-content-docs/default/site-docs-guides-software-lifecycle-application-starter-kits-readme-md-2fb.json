@@ -6,7 +6,7 @@
   "source": "@site/docs/guides/software-lifecycle/application-starter-kits/README.md",
   "sourceDirName": "guides/software-lifecycle/application-starter-kits",
   "slug": "/guides/software-lifecycle/application-starter-kits/",
-  "permalink": "/docs/guides/software-lifecycle/application-starter-kits/",
+  "permalink": "/slim/docs/guides/software-lifecycle/application-starter-kits/",
   "draft": false,
   "editUrl": "https://github.com/facebook/docusaurus/tree/main/packages/create-docusaurus/templates/shared/docs/guides/software-lifecycle/application-starter-kits/README.md",
   "tags": [],
@@ -15,10 +15,10 @@
   "sidebar": "guidesSidebar",
   "previous": {
     "title": "Software Lifecycle",
-    "permalink": "/docs/category/software-lifecycle"
+    "permalink": "/slim/docs/category/software-lifecycle"
   },
   "next": {
     "title": "Python Starter Kit",
-    "permalink": "/docs/guides/software-lifecycle/application-starter-kits/python-starter-kit/"
+    "permalink": "/slim/docs/guides/software-lifecycle/application-starter-kits/python-starter-kit/"
   }
 }

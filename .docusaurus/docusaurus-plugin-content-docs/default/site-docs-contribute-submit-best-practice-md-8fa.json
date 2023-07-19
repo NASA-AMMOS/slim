@@ -6,7 +6,7 @@
   "source": "@site/docs/contribute/submit-best-practice.md",
   "sourceDirName": "contribute",
   "slug": "/contribute/submit-best-practice",
-  "permalink": "/docs/contribute/submit-best-practice",
+  "permalink": "/slim/docs/contribute/submit-best-practice",
   "draft": false,
   "editUrl": "https://github.com/facebook/docusaurus/tree/main/packages/create-docusaurus/templates/shared/docs/contribute/submit-best-practice.md",
   "tags": [],
@@ -15,6 +15,6 @@
   "sidebar": "contributeSidebar",
   "previous": {
     "title": "Contributing to SLIM",
-    "permalink": "/docs/contribute/CONTRIBUTING"
+    "permalink": "/slim/docs/contribute/CONTRIBUTING"
   }
 }

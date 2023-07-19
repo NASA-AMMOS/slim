@@ -6,7 +6,7 @@
   "source": "@site/docs/guides/governance/contributions/developer-certificate-origin/README.md",
   "sourceDirName": "guides/governance/contributions/developer-certificate-origin",
   "slug": "/guides/governance/contributions/developer-certificate-origin/",
-  "permalink": "/docs/guides/governance/contributions/developer-certificate-origin/",
+  "permalink": "/slim/docs/guides/governance/contributions/developer-certificate-origin/",
   "draft": false,
   "editUrl": "https://github.com/facebook/docusaurus/tree/main/packages/create-docusaurus/templates/shared/docs/guides/governance/contributions/developer-certificate-origin/README.md",
   "tags": [],
@@ -15,10 +15,10 @@
   "sidebar": "guidesSidebar",
   "previous": {
     "title": "Contributing Guide",
-    "permalink": "/docs/guides/governance/contributions/contributing-guide/"
+    "permalink": "/slim/docs/guides/governance/contributions/contributing-guide/"
   },
   "next": {
     "title": "Issue Templates",
-    "permalink": "/docs/guides/governance/contributions/issue-templates/"
+    "permalink": "/slim/docs/guides/governance/contributions/issue-templates/"
   }
 }

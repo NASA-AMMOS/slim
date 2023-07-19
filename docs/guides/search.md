@@ -3,7 +3,7 @@ sidebar_position: 1
 ---
 
 import FacetedPanels from '@site/src/components/FacetedPanels';
-import registryJSON from '@site/data/slim-registry.json';
+import registryJSON from '@site/static/data/slim-registry.json';
 
 
 # All Guides

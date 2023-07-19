@@ -12,7 +12,7 @@
       {
         "type": "link",
         "label": "All Guides",
-        "href": "/docs/guides/search",
+        "href": "/slim/docs/guides/search",
         "docId": "guides/search"
       },
       {
@@ -30,11 +30,11 @@
               {
                 "type": "link",
                 "label": "Python Starter Kit",
-                "href": "/docs/guides/software-lifecycle/application-starter-kits/python-starter-kit/",
+                "href": "/slim/docs/guides/software-lifecycle/application-starter-kits/python-starter-kit/",
                 "docId": "guides/software-lifecycle/application-starter-kits/python-starter-kit/README"
               }
             ],
-            "href": "/docs/guides/software-lifecycle/application-starter-kits/"
+            "href": "/slim/docs/guides/software-lifecycle/application-starter-kits/"
           },
           {
             "type": "category",
@@ -51,20 +51,20 @@
                   {
                     "type": "link",
                     "label": "Continuous Integration Frameworks",
-                    "href": "/docs/guides/software-lifecycle/continuous-integration/continuous-integration-frameworks/",
+                    "href": "/slim/docs/guides/software-lifecycle/continuous-integration/continuous-integration-frameworks/",
                     "docId": "guides/software-lifecycle/continuous-integration/continuous-integration-frameworks/continuous-integration-frameworks"
                   }
                 ],
-                "href": "/docs/guides/software-lifecycle/continuous-integration/continuous-integration-frameworks/"
+                "href": "/slim/docs/guides/software-lifecycle/continuous-integration/continuous-integration-frameworks/"
               },
               {
                 "type": "link",
                 "label": "Reference Architectures",
-                "href": "/docs/guides/software-lifecycle/continuous-integration/reference-architecture/",
+                "href": "/slim/docs/guides/software-lifecycle/continuous-integration/reference-architecture/",
                 "docId": "guides/software-lifecycle/continuous-integration/reference-architecture/README"
               }
             ],
-            "href": "/docs/guides/software-lifecycle/continuous-integration/"
+            "href": "/slim/docs/guides/software-lifecycle/continuous-integration/"
           },
           {
             "type": "category",
@@ -75,11 +75,11 @@
               {
                 "type": "link",
                 "label": "Testing Frameworks",
-                "href": "/docs/guides/software-lifecycle/continuous-testing/testing-frameworks",
+                "href": "/slim/docs/guides/software-lifecycle/continuous-testing/testing-frameworks",
                 "docId": "guides/software-lifecycle/continuous-testing/testing-frameworks"
               }
             ],
-            "href": "/docs/guides/software-lifecycle/continuous-testing/"
+            "href": "/slim/docs/guides/software-lifecycle/continuous-testing/"
           },
           {
             "type": "category",
@@ -90,20 +90,20 @@
               {
                 "type": "link",
                 "label": "Dependabot",
-                "href": "/docs/guides/software-lifecycle/security/dependabot/",
+                "href": "/slim/docs/guides/software-lifecycle/security/dependabot/",
                 "docId": "guides/software-lifecycle/security/dependabot/README"
               },
               {
                 "type": "link",
                 "label": "Secrets Detection",
-                "href": "/docs/guides/software-lifecycle/security/secrets-detection/",
+                "href": "/slim/docs/guides/software-lifecycle/security/secrets-detection/",
                 "docId": "guides/software-lifecycle/security/secrets-detection/README"
               }
             ],
-            "href": "/docs/guides/software-lifecycle/security/"
+            "href": "/slim/docs/guides/software-lifecycle/security/"
           }
         ],
-        "href": "/docs/category/software-lifecycle"
+        "href": "/slim/docs/category/software-lifecycle"
       },
       {
         "type": "category",
@@ -132,30 +132,30 @@
                       {
                         "type": "link",
                         "label": "PULL_REQUEST_TEMPLATE",
-                        "href": "/docs/guides/governance/contributions/change-request-templates/github/PULL_REQUEST_TEMPLATE",
+                        "href": "/slim/docs/guides/governance/contributions/change-request-templates/github/PULL_REQUEST_TEMPLATE",
                         "docId": "guides/governance/contributions/change-request-templates/github/PULL_REQUEST_TEMPLATE"
                       }
                     ]
                   }
                 ],
-                "href": "/docs/guides/governance/contributions/change-request-templates/"
+                "href": "/slim/docs/guides/governance/contributions/change-request-templates/"
               },
               {
                 "type": "link",
                 "label": "Code of Conduct",
-                "href": "/docs/guides/governance/contributions/code-of-conduct/",
+                "href": "/slim/docs/guides/governance/contributions/code-of-conduct/",
                 "docId": "guides/governance/contributions/code-of-conduct/README"
               },
               {
                 "type": "link",
                 "label": "Contributing Guide",
-                "href": "/docs/guides/governance/contributions/contributing-guide/",
+                "href": "/slim/docs/guides/governance/contributions/contributing-guide/",
                 "docId": "guides/governance/contributions/contributing-guide/README"
               },
               {
                 "type": "link",
                 "label": "Developer Certificate of Origin (DCO)",
-                "href": "/docs/guides/governance/contributions/developer-certificate-origin/",
+                "href": "/slim/docs/guides/governance/contributions/developer-certificate-origin/",
                 "docId": "guides/governance/contributions/developer-certificate-origin/README"
               },
               {
@@ -173,22 +173,22 @@
                       {
                         "type": "link",
                         "label": "[Bug]: ",
-                        "href": "/docs/guides/governance/contributions/issue-templates/github/bug_report",
+                        "href": "/slim/docs/guides/governance/contributions/issue-templates/github/bug_report",
                         "docId": "guides/governance/contributions/issue-templates/github/bug_report"
                       },
                       {
                         "type": "link",
                         "label": "[New Feature]: ",
-                        "href": "/docs/guides/governance/contributions/issue-templates/github/new_feature",
+                        "href": "/slim/docs/guides/governance/contributions/issue-templates/github/new_feature",
                         "docId": "guides/governance/contributions/issue-templates/github/new_feature"
                       }
                     ]
                   }
                 ],
-                "href": "/docs/guides/governance/contributions/issue-templates/"
+                "href": "/slim/docs/guides/governance/contributions/issue-templates/"
               }
             ],
-            "href": "/docs/guides/governance/contributions/"
+            "href": "/slim/docs/guides/governance/contributions/"
           },
           {
             "type": "category",
@@ -199,14 +199,14 @@
               {
                 "type": "link",
                 "label": "[INSERT PROJECT NAME] Project Governance",
-                "href": "/docs/guides/governance/governance-model/GOVERNANCE",
+                "href": "/slim/docs/guides/governance/governance-model/GOVERNANCE",
                 "docId": "guides/governance/governance-model/GOVERNANCE"
               }
             ],
-            "href": "/docs/guides/governance/governance-model/"
+            "href": "/slim/docs/guides/governance/governance-model/"
           }
         ],
-        "href": "/docs/category/governance"
+        "href": "/slim/docs/category/governance"
       },
       {
         "type": "category",
@@ -217,7 +217,7 @@
           {
             "type": "link",
             "label": "Change Log",
-            "href": "/docs/guides/documentation/change-log/",
+            "href": "/slim/docs/guides/documentation/change-log/",
             "docId": "guides/documentation/change-log/README"
           },
           {
@@ -229,45 +229,45 @@
               {
                 "type": "link",
                 "label": "Docs Hosting Trade Study",
-                "href": "/docs/guides/documentation/documention-hosts/trade-study-hostingdocs-user",
-                "docId": "guides/documentation/documention-hosts/trade-study-hostingdocs-user"
+                "href": "/slim/docs/guides/documentation/documentation-hosts/trade-study-hostingdocs-user",
+                "docId": "guides/documentation/documentation-hosts/trade-study-hostingdocs-user"
               },
               {
                 "type": "link",
                 "label": "Docs Use Cases",
-                "href": "/docs/guides/documentation/documention-hosts/use-cases",
-                "docId": "guides/documentation/documention-hosts/use-cases"
+                "href": "/slim/docs/guides/documentation/documentation-hosts/use-cases",
+                "docId": "guides/documentation/documentation-hosts/use-cases"
               }
             ],
-            "href": "/docs/guides/documentation/documention-hosts/"
+            "href": "/slim/docs/guides/documentation/documentation-hosts/"
           },
           {
             "type": "link",
             "label": "README Template",
-            "href": "/docs/guides/documentation/readme/",
+            "href": "/slim/docs/guides/documentation/readme/",
             "docId": "guides/documentation/readme/index"
           }
         ],
-        "href": "/docs/category/documentation"
+        "href": "/slim/docs/category/documentation"
       }
     ],
     "aboutSidebar": [
       {
         "type": "link",
         "label": "About",
-        "href": "/docs/about/",
+        "href": "/slim/docs/about/",
         "docId": "about/README"
       },
       {
         "type": "link",
         "label": "Code of Conduct",
-        "href": "/docs/about/CODE_OF_CONDUCT",
+        "href": "/slim/docs/about/CODE_OF_CONDUCT",
         "docId": "about/CODE_OF_CONDUCT"
       },
       {
         "type": "link",
         "label": "SLIM Project Governance",
-        "href": "/docs/about/GOVERNANCE",
+        "href": "/slim/docs/about/GOVERNANCE",
         "docId": "about/GOVERNANCE"
       }
     ],
@@ -275,13 +275,13 @@
       {
         "type": "link",
         "label": "Contributing to SLIM",
-        "href": "/docs/contribute/CONTRIBUTING",
+        "href": "/slim/docs/contribute/CONTRIBUTING",
         "docId": "contribute/CONTRIBUTING"
       },
       {
         "type": "link",
         "label": "Submit a Best Practice Guide",
-        "href": "/docs/contribute/submit-best-practice",
+        "href": "/slim/docs/contribute/submit-best-practice",
         "docId": "contribute/submit-best-practice"
       }
     ]
@@ -323,20 +323,20 @@
       "description": "A change log provides a human readable list of significant changes, additions, deprecations, removals for software over time. It is meant to be able to be read by people. Change logs should be documented within a file called CHANGELOG.md and be updated per key release. See semantic release for guidance on releasing cycles and versioning of your software.",
       "sidebar": "guidesSidebar"
     },
-    "guides/documentation/documention-hosts/README": {
-      "id": "guides/documentation/documention-hosts/README",
+    "guides/documentation/documentation-hosts/README": {
+      "id": "guides/documentation/documentation-hosts/README",
       "title": "Documentation Hosts",
       "description": "Use Cases",
       "sidebar": "guidesSidebar"
     },
-    "guides/documentation/documention-hosts/trade-study-hostingdocs-user": {
-      "id": "guides/documentation/documention-hosts/trade-study-hostingdocs-user",
+    "guides/documentation/documentation-hosts/trade-study-hostingdocs-user": {
+      "id": "guides/documentation/documentation-hosts/trade-study-hostingdocs-user",
       "title": "Docs Hosting Trade Study",
       "description": "| Tool Name                                       | Licensing                                                                                             | Render Time | VCS Stored Content                                    | Self-Hosting | Managed Hosting                                                                                                     | API Actions                                                                          | Generate API Docs                                                                      | WYSIWYG Editing | Markdown Support                                                                                             | Embedded Content                                                                          | Hierarchial Structure                                             | Templating Support                                                                                | Roles                                                         | Comment Support                                                                 | Search                                                         | Import From Other Formats                                                              | Export Other Formats                                                                            | Anchor Links                                             | Draft Content                                                                        | Version Control                                                                   | Internationalization                                                                                                                         | File Uploads                                                                                                 | Diagram Editing                                                                                                           | Usage Analytics                                                 | Extension Support                                                                                                  |",
       "sidebar": "guidesSidebar"
     },
-    "guides/documentation/documention-hosts/use-cases": {
-      "id": "guides/documentation/documention-hosts/use-cases",
+    "guides/documentation/documentation-hosts/use-cases": {
+      "id": "guides/documentation/documentation-hosts/use-cases",
       "title": "Docs Use Cases",
       "description": "* Documentation Best Practices",
       "sidebar": "guidesSidebar"

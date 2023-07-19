@@ -3,290 +3,325 @@ import ComponentCreator from '@docusaurus/ComponentCreator';
 
 export default [
   {
-    path: '/blog',
-    component: ComponentCreator('/blog', 'e0e'),
+    path: '/slim/__docusaurus/debug',
+    component: ComponentCreator('/slim/__docusaurus/debug', '0ff'),
     exact: true
   },
   {
-    path: '/blog/archive',
-    component: ComponentCreator('/blog/archive', '70c'),
+    path: '/slim/__docusaurus/debug/config',
+    component: ComponentCreator('/slim/__docusaurus/debug/config', '7dd'),
     exact: true
   },
   {
-    path: '/blog/first-blog-post',
-    component: ComponentCreator('/blog/first-blog-post', 'aee'),
+    path: '/slim/__docusaurus/debug/content',
+    component: ComponentCreator('/slim/__docusaurus/debug/content', '120'),
     exact: true
   },
   {
-    path: '/blog/long-blog-post',
-    component: ComponentCreator('/blog/long-blog-post', '4c8'),
+    path: '/slim/__docusaurus/debug/globalData',
+    component: ComponentCreator('/slim/__docusaurus/debug/globalData', 'a0f'),
     exact: true
   },
   {
-    path: '/blog/mdx-blog-post',
-    component: ComponentCreator('/blog/mdx-blog-post', 'fba'),
+    path: '/slim/__docusaurus/debug/metadata',
+    component: ComponentCreator('/slim/__docusaurus/debug/metadata', 'a8e'),
     exact: true
   },
   {
-    path: '/blog/tags',
-    component: ComponentCreator('/blog/tags', '7a3'),
+    path: '/slim/__docusaurus/debug/registry',
+    component: ComponentCreator('/slim/__docusaurus/debug/registry', '263'),
     exact: true
   },
   {
-    path: '/blog/tags/docusaurus',
-    component: ComponentCreator('/blog/tags/docusaurus', 'f89'),
+    path: '/slim/__docusaurus/debug/routes',
+    component: ComponentCreator('/slim/__docusaurus/debug/routes', 'bb4'),
     exact: true
   },
   {
-    path: '/blog/tags/facebook',
-    component: ComponentCreator('/blog/tags/facebook', 'e45'),
+    path: '/slim/blog',
+    component: ComponentCreator('/slim/blog', '69e'),
     exact: true
   },
   {
-    path: '/blog/tags/hello',
-    component: ComponentCreator('/blog/tags/hello', '71d'),
+    path: '/slim/blog/archive',
+    component: ComponentCreator('/slim/blog/archive', 'b1c'),
     exact: true
   },
   {
-    path: '/blog/tags/hola',
-    component: ComponentCreator('/blog/tags/hola', '235'),
+    path: '/slim/blog/first-blog-post',
+    component: ComponentCreator('/slim/blog/first-blog-post', '64f'),
     exact: true
   },
   {
-    path: '/blog/welcome',
-    component: ComponentCreator('/blog/welcome', '088'),
+    path: '/slim/blog/long-blog-post',
+    component: ComponentCreator('/slim/blog/long-blog-post', '32b'),
     exact: true
   },
   {
-    path: '/markdown-page',
-    component: ComponentCreator('/markdown-page', '1b4'),
+    path: '/slim/blog/mdx-blog-post',
+    component: ComponentCreator('/slim/blog/mdx-blog-post', '42f'),
     exact: true
   },
   {
-    path: '/docs',
-    component: ComponentCreator('/docs', '132'),
+    path: '/slim/blog/tags',
+    component: ComponentCreator('/slim/blog/tags', '94b'),
+    exact: true
+  },
+  {
+    path: '/slim/blog/tags/docusaurus',
+    component: ComponentCreator('/slim/blog/tags/docusaurus', 'c76'),
+    exact: true
+  },
+  {
+    path: '/slim/blog/tags/facebook',
+    component: ComponentCreator('/slim/blog/tags/facebook', 'dd6'),
+    exact: true
+  },
+  {
+    path: '/slim/blog/tags/hello',
+    component: ComponentCreator('/slim/blog/tags/hello', '4d4'),
+    exact: true
+  },
+  {
+    path: '/slim/blog/tags/hola',
+    component: ComponentCreator('/slim/blog/tags/hola', '783'),
+    exact: true
+  },
+  {
+    path: '/slim/blog/welcome',
+    component: ComponentCreator('/slim/blog/welcome', '98f'),
+    exact: true
+  },
+  {
+    path: '/slim/markdown-page',
+    component: ComponentCreator('/slim/markdown-page', '118'),
+    exact: true
+  },
+  {
+    path: '/slim/docs',
+    component: ComponentCreator('/slim/docs', '782'),
     routes: [
       {
-        path: '/docs/about/',
-        component: ComponentCreator('/docs/about/', 'fbe'),
+        path: '/slim/docs/about/',
+        component: ComponentCreator('/slim/docs/about/', '8ab'),
         exact: true,
         sidebar: "aboutSidebar"
       },
       {
-        path: '/docs/about/CODE_OF_CONDUCT',
-        component: ComponentCreator('/docs/about/CODE_OF_CONDUCT', '35e'),
+        path: '/slim/docs/about/CODE_OF_CONDUCT',
+        component: ComponentCreator('/slim/docs/about/CODE_OF_CONDUCT', '194'),
         exact: true,
         sidebar: "aboutSidebar"
       },
       {
-        path: '/docs/about/GOVERNANCE',
-        component: ComponentCreator('/docs/about/GOVERNANCE', '209'),
+        path: '/slim/docs/about/GOVERNANCE',
+        component: ComponentCreator('/slim/docs/about/GOVERNANCE', 'e72'),
         exact: true,
         sidebar: "aboutSidebar"
       },
       {
-        path: '/docs/category/documentation',
-        component: ComponentCreator('/docs/category/documentation', '3ae'),
+        path: '/slim/docs/category/documentation',
+        component: ComponentCreator('/slim/docs/category/documentation', 'a19'),
         exact: true,
         sidebar: "guidesSidebar"
       },
       {
-        path: '/docs/category/governance',
-        component: ComponentCreator('/docs/category/governance', 'e27'),
+        path: '/slim/docs/category/governance',
+        component: ComponentCreator('/slim/docs/category/governance', '2f5'),
         exact: true,
         sidebar: "guidesSidebar"
       },
       {
-        path: '/docs/category/software-lifecycle',
-        component: ComponentCreator('/docs/category/software-lifecycle', '2fd'),
+        path: '/slim/docs/category/software-lifecycle',
+        component: ComponentCreator('/slim/docs/category/software-lifecycle', '72b'),
         exact: true,
         sidebar: "guidesSidebar"
       },
       {
-        path: '/docs/contribute/CONTRIBUTING',
-        component: ComponentCreator('/docs/contribute/CONTRIBUTING', '120'),
+        path: '/slim/docs/contribute/CONTRIBUTING',
+        component: ComponentCreator('/slim/docs/contribute/CONTRIBUTING', 'f53'),
         exact: true,
         sidebar: "contributeSidebar"
       },
       {
-        path: '/docs/contribute/submit-best-practice',
-        component: ComponentCreator('/docs/contribute/submit-best-practice', '2b3'),
+        path: '/slim/docs/contribute/submit-best-practice',
+        component: ComponentCreator('/slim/docs/contribute/submit-best-practice', '129'),
         exact: true,
         sidebar: "contributeSidebar"
       },
       {
-        path: '/docs/guides/documentation/change-log/',
-        component: ComponentCreator('/docs/guides/documentation/change-log/', '655'),
+        path: '/slim/docs/guides/documentation/change-log/',
+        component: ComponentCreator('/slim/docs/guides/documentation/change-log/', '961'),
         exact: true,
         sidebar: "guidesSidebar"
       },
       {
-        path: '/docs/guides/documentation/documention-hosts/',
-        component: ComponentCreator('/docs/guides/documentation/documention-hosts/', '3ef'),
+        path: '/slim/docs/guides/documentation/documentation-hosts/',
+        component: ComponentCreator('/slim/docs/guides/documentation/documentation-hosts/', '934'),
         exact: true,
         sidebar: "guidesSidebar"
       },
       {
-        path: '/docs/guides/documentation/documention-hosts/trade-study-hostingdocs-user',
-        component: ComponentCreator('/docs/guides/documentation/documention-hosts/trade-study-hostingdocs-user', 'a59'),
+        path: '/slim/docs/guides/documentation/documentation-hosts/trade-study-hostingdocs-user',
+        component: ComponentCreator('/slim/docs/guides/documentation/documentation-hosts/trade-study-hostingdocs-user', '2de'),
         exact: true,
         sidebar: "guidesSidebar"
       },
       {
-        path: '/docs/guides/documentation/documention-hosts/use-cases',
-        component: ComponentCreator('/docs/guides/documentation/documention-hosts/use-cases', 'fb4'),
+        path: '/slim/docs/guides/documentation/documentation-hosts/use-cases',
+        component: ComponentCreator('/slim/docs/guides/documentation/documentation-hosts/use-cases', 'fce'),
         exact: true,
         sidebar: "guidesSidebar"
       },
       {
-        path: '/docs/guides/documentation/readme/',
-        component: ComponentCreator('/docs/guides/documentation/readme/', 'aed'),
+        path: '/slim/docs/guides/documentation/readme/',
+        component: ComponentCreator('/slim/docs/guides/documentation/readme/', '919'),
         exact: true,
         sidebar: "guidesSidebar"
       },
       {
-        path: '/docs/guides/governance/contributions/',
-        component: ComponentCreator('/docs/guides/governance/contributions/', 'cd7'),
+        path: '/slim/docs/guides/governance/contributions/',
+        component: ComponentCreator('/slim/docs/guides/governance/contributions/', '3c4'),
         exact: true,
         sidebar: "guidesSidebar"
       },
       {
-        path: '/docs/guides/governance/contributions/change-request-templates/',
-        component: ComponentCreator('/docs/guides/governance/contributions/change-request-templates/', 'bb7'),
+        path: '/slim/docs/guides/governance/contributions/change-request-templates/',
+        component: ComponentCreator('/slim/docs/guides/governance/contributions/change-request-templates/', 'bba'),
         exact: true,
         sidebar: "guidesSidebar"
       },
       {
-        path: '/docs/guides/governance/contributions/change-request-templates/github/PULL_REQUEST_TEMPLATE',
-        component: ComponentCreator('/docs/guides/governance/contributions/change-request-templates/github/PULL_REQUEST_TEMPLATE', '298'),
+        path: '/slim/docs/guides/governance/contributions/change-request-templates/github/PULL_REQUEST_TEMPLATE',
+        component: ComponentCreator('/slim/docs/guides/governance/contributions/change-request-templates/github/PULL_REQUEST_TEMPLATE', '257'),
         exact: true,
         sidebar: "guidesSidebar"
       },
       {
-        path: '/docs/guides/governance/contributions/code-of-conduct/',
-        component: ComponentCreator('/docs/guides/governance/contributions/code-of-conduct/', 'ff0'),
+        path: '/slim/docs/guides/governance/contributions/code-of-conduct/',
+        component: ComponentCreator('/slim/docs/guides/governance/contributions/code-of-conduct/', '0f4'),
         exact: true,
         sidebar: "guidesSidebar"
       },
       {
-        path: '/docs/guides/governance/contributions/contributing-guide/',
-        component: ComponentCreator('/docs/guides/governance/contributions/contributing-guide/', '89e'),
+        path: '/slim/docs/guides/governance/contributions/contributing-guide/',
+        component: ComponentCreator('/slim/docs/guides/governance/contributions/contributing-guide/', '6ed'),
         exact: true,
         sidebar: "guidesSidebar"
       },
       {
-        path: '/docs/guides/governance/contributions/developer-certificate-origin/',
-        component: ComponentCreator('/docs/guides/governance/contributions/developer-certificate-origin/', '88e'),
+        path: '/slim/docs/guides/governance/contributions/developer-certificate-origin/',
+        component: ComponentCreator('/slim/docs/guides/governance/contributions/developer-certificate-origin/', 'd6a'),
         exact: true,
         sidebar: "guidesSidebar"
       },
       {
-        path: '/docs/guides/governance/contributions/issue-templates/',
-        component: ComponentCreator('/docs/guides/governance/contributions/issue-templates/', 'bb0'),
+        path: '/slim/docs/guides/governance/contributions/issue-templates/',
+        component: ComponentCreator('/slim/docs/guides/governance/contributions/issue-templates/', '081'),
         exact: true,
         sidebar: "guidesSidebar"
       },
       {
-        path: '/docs/guides/governance/contributions/issue-templates/github/bug_report',
-        component: ComponentCreator('/docs/guides/governance/contributions/issue-templates/github/bug_report', 'fac'),
+        path: '/slim/docs/guides/governance/contributions/issue-templates/github/bug_report',
+        component: ComponentCreator('/slim/docs/guides/governance/contributions/issue-templates/github/bug_report', '4e3'),
         exact: true,
         sidebar: "guidesSidebar"
       },
       {
-        path: '/docs/guides/governance/contributions/issue-templates/github/new_feature',
-        component: ComponentCreator('/docs/guides/governance/contributions/issue-templates/github/new_feature', 'cf5'),
+        path: '/slim/docs/guides/governance/contributions/issue-templates/github/new_feature',
+        component: ComponentCreator('/slim/docs/guides/governance/contributions/issue-templates/github/new_feature', 'bc8'),
         exact: true,
         sidebar: "guidesSidebar"
       },
       {
-        path: '/docs/guides/governance/governance-model/',
-        component: ComponentCreator('/docs/guides/governance/governance-model/', 'bbf'),
+        path: '/slim/docs/guides/governance/governance-model/',
+        component: ComponentCreator('/slim/docs/guides/governance/governance-model/', '277'),
         exact: true,
         sidebar: "guidesSidebar"
       },
       {
-        path: '/docs/guides/governance/governance-model/GOVERNANCE',
-        component: ComponentCreator('/docs/guides/governance/governance-model/GOVERNANCE', 'c2c'),
+        path: '/slim/docs/guides/governance/governance-model/GOVERNANCE',
+        component: ComponentCreator('/slim/docs/guides/governance/governance-model/GOVERNANCE', 'e30'),
         exact: true,
         sidebar: "guidesSidebar"
       },
       {
-        path: '/docs/guides/search',
-        component: ComponentCreator('/docs/guides/search', '0de'),
+        path: '/slim/docs/guides/search',
+        component: ComponentCreator('/slim/docs/guides/search', 'aa9'),
         exact: true,
         sidebar: "guidesSidebar"
       },
       {
-        path: '/docs/guides/software-lifecycle/application-starter-kits/',
-        component: ComponentCreator('/docs/guides/software-lifecycle/application-starter-kits/', '716'),
+        path: '/slim/docs/guides/software-lifecycle/application-starter-kits/',
+        component: ComponentCreator('/slim/docs/guides/software-lifecycle/application-starter-kits/', '801'),
         exact: true,
         sidebar: "guidesSidebar"
       },
       {
-        path: '/docs/guides/software-lifecycle/application-starter-kits/python-starter-kit/',
-        component: ComponentCreator('/docs/guides/software-lifecycle/application-starter-kits/python-starter-kit/', '8de'),
+        path: '/slim/docs/guides/software-lifecycle/application-starter-kits/python-starter-kit/',
+        component: ComponentCreator('/slim/docs/guides/software-lifecycle/application-starter-kits/python-starter-kit/', 'd83'),
         exact: true,
         sidebar: "guidesSidebar"
       },
       {
-        path: '/docs/guides/software-lifecycle/continuous-integration/',
-        component: ComponentCreator('/docs/guides/software-lifecycle/continuous-integration/', '7dd'),
+        path: '/slim/docs/guides/software-lifecycle/continuous-integration/',
+        component: ComponentCreator('/slim/docs/guides/software-lifecycle/continuous-integration/', 'f7d'),
         exact: true,
         sidebar: "guidesSidebar"
       },
       {
-        path: '/docs/guides/software-lifecycle/continuous-integration/continuous-integration-frameworks/',
-        component: ComponentCreator('/docs/guides/software-lifecycle/continuous-integration/continuous-integration-frameworks/', 'a57'),
+        path: '/slim/docs/guides/software-lifecycle/continuous-integration/continuous-integration-frameworks/',
+        component: ComponentCreator('/slim/docs/guides/software-lifecycle/continuous-integration/continuous-integration-frameworks/', 'a92'),
         exact: true,
         sidebar: "guidesSidebar"
       },
       {
-        path: '/docs/guides/software-lifecycle/continuous-integration/continuous-integration-frameworks/',
-        component: ComponentCreator('/docs/guides/software-lifecycle/continuous-integration/continuous-integration-frameworks/', '39f'),
+        path: '/slim/docs/guides/software-lifecycle/continuous-integration/continuous-integration-frameworks/',
+        component: ComponentCreator('/slim/docs/guides/software-lifecycle/continuous-integration/continuous-integration-frameworks/', '4da'),
         exact: true,
         sidebar: "guidesSidebar"
       },
       {
-        path: '/docs/guides/software-lifecycle/continuous-integration/reference-architecture/',
-        component: ComponentCreator('/docs/guides/software-lifecycle/continuous-integration/reference-architecture/', 'fd2'),
+        path: '/slim/docs/guides/software-lifecycle/continuous-integration/reference-architecture/',
+        component: ComponentCreator('/slim/docs/guides/software-lifecycle/continuous-integration/reference-architecture/', '035'),
         exact: true,
         sidebar: "guidesSidebar"
       },
       {
-        path: '/docs/guides/software-lifecycle/continuous-testing/',
-        component: ComponentCreator('/docs/guides/software-lifecycle/continuous-testing/', 'a02'),
+        path: '/slim/docs/guides/software-lifecycle/continuous-testing/',
+        component: ComponentCreator('/slim/docs/guides/software-lifecycle/continuous-testing/', '27d'),
         exact: true,
         sidebar: "guidesSidebar"
       },
       {
-        path: '/docs/guides/software-lifecycle/continuous-testing/testing-frameworks',
-        component: ComponentCreator('/docs/guides/software-lifecycle/continuous-testing/testing-frameworks', 'a3c'),
+        path: '/slim/docs/guides/software-lifecycle/continuous-testing/testing-frameworks',
+        component: ComponentCreator('/slim/docs/guides/software-lifecycle/continuous-testing/testing-frameworks', 'fde'),
         exact: true,
         sidebar: "guidesSidebar"
       },
       {
-        path: '/docs/guides/software-lifecycle/security/',
-        component: ComponentCreator('/docs/guides/software-lifecycle/security/', 'bbe'),
+        path: '/slim/docs/guides/software-lifecycle/security/',
+        component: ComponentCreator('/slim/docs/guides/software-lifecycle/security/', '526'),
         exact: true,
         sidebar: "guidesSidebar"
       },
       {
-        path: '/docs/guides/software-lifecycle/security/dependabot/',
-        component: ComponentCreator('/docs/guides/software-lifecycle/security/dependabot/', '634'),
+        path: '/slim/docs/guides/software-lifecycle/security/dependabot/',
+        component: ComponentCreator('/slim/docs/guides/software-lifecycle/security/dependabot/', 'be7'),
         exact: true,
         sidebar: "guidesSidebar"
       },
       {
-        path: '/docs/guides/software-lifecycle/security/secrets-detection/',
-        component: ComponentCreator('/docs/guides/software-lifecycle/security/secrets-detection/', 'edb'),
+        path: '/slim/docs/guides/software-lifecycle/security/secrets-detection/',
+        component: ComponentCreator('/slim/docs/guides/software-lifecycle/security/secrets-detection/', '853'),
         exact: true,
         sidebar: "guidesSidebar"
       }
     ]
   },
   {
-    path: '/',
-    component: ComponentCreator('/', '14b'),
+    path: '/slim/',
+    component: ComponentCreator('/slim/', '17b'),
     exact: true
   },
   {
