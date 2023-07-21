@@ -3,41 +3,6 @@ import ComponentCreator from '@docusaurus/ComponentCreator';
 
 export default [
   {
-    path: '/slim/__docusaurus/debug',
-    component: ComponentCreator('/slim/__docusaurus/debug', '0ff'),
-    exact: true
-  },
-  {
-    path: '/slim/__docusaurus/debug/config',
-    component: ComponentCreator('/slim/__docusaurus/debug/config', '7dd'),
-    exact: true
-  },
-  {
-    path: '/slim/__docusaurus/debug/content',
-    component: ComponentCreator('/slim/__docusaurus/debug/content', '120'),
-    exact: true
-  },
-  {
-    path: '/slim/__docusaurus/debug/globalData',
-    component: ComponentCreator('/slim/__docusaurus/debug/globalData', 'a0f'),
-    exact: true
-  },
-  {
-    path: '/slim/__docusaurus/debug/metadata',
-    component: ComponentCreator('/slim/__docusaurus/debug/metadata', 'a8e'),
-    exact: true
-  },
-  {
-    path: '/slim/__docusaurus/debug/registry',
-    component: ComponentCreator('/slim/__docusaurus/debug/registry', '263'),
-    exact: true
-  },
-  {
-    path: '/slim/__docusaurus/debug/routes',
-    component: ComponentCreator('/slim/__docusaurus/debug/routes', 'bb4'),
-    exact: true
-  },
-  {
     path: '/slim/blog',
     component: ComponentCreator('/slim/blog', '69e'),
     exact: true
@@ -99,7 +64,7 @@ export default [
   },
   {
     path: '/slim/docs',
-    component: ComponentCreator('/slim/docs', 'a19'),
+    component: ComponentCreator('/slim/docs', '11e'),
     routes: [
       {
         path: '/slim/docs/about/',
@@ -156,8 +121,8 @@ export default [
         sidebar: "contributeSidebar"
       },
       {
-        path: '/slim/docs/contribute/contributing/prereqs',
-        component: ComponentCreator('/slim/docs/contribute/contributing/prereqs', '437'),
+        path: '/slim/docs/contribute/contributing/know-before-contribute',
+        component: ComponentCreator('/slim/docs/contribute/contributing/know-before-contribute', 'dab'),
         exact: true,
         sidebar: "contributeSidebar"
       },

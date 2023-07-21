@@ -137,7 +137,7 @@ The overall structure of our project documentation is as follows:
 - Source-controlled documentation
   - [README.md](/docs/about/README.md) - top-level information about how to run, build, and contribute to the project
   - [CODE_OF_CONDUCT.md](/docs/about/CODE_OF_CONDUCT) - best practices and guidance on how to work well with other people in the project, and suggestions on dealing with interpersonal issues
-  - [CONTRIBUTING.md](/docs/contribute/CONTRIBUTING) - guidance on contributing to the project
+  - [CONTRIBUTING.md](/docs/contribute/contributing) - guidance on contributing to the project
   - *BEST PRACTICE GUIDE NAME* - folder containing a given best practice guide
     - *use-cases* - folder containing important uses and scenarios relevant for a particular best practice need
       - `README.md` - a descriptor file describing and linking to use case resources

@@ -286,9 +286,9 @@
           },
           {
             "type": "link",
-            "label": "Prerequisites",
-            "href": "/slim/docs/contribute/contributing/prereqs",
-            "docId": "contribute/contributing/prereqs"
+            "label": "Know Before you Contribute",
+            "href": "/slim/docs/contribute/contributing/know-before-contribute",
+            "docId": "contribute/contributing/know-before-contribute"
           },
           {
             "type": "link",
@@ -350,9 +350,9 @@
       "description": "SLIM is a joint, community-based effort at collective software process improvements. Therefore, we need your help! Here's the basics on contributing:",
       "sidebar": "contributeSidebar"
     },
-    "contribute/contributing/prereqs": {
-      "id": "contribute/contributing/prereqs",
-      "title": "Prerequisites",
+    "contribute/contributing/know-before-contribute": {
+      "id": "contribute/contributing/know-before-contribute",
+      "title": "Know Before you Contribute",
       "description": "Before you begin contributing to our project, it'll be a good idea to ensure you've satisfied the below pre-requisites.",
       "sidebar": "contributeSidebar"
     },

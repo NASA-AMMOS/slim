@@ -2,7 +2,7 @@
 sidebar_position: 1
 ---
 
-# Prerequisites
+# Know Before you Contribute
 
 Before you begin contributing to our project, it'll be a good idea to ensure you've satisfied the below pre-requisites. 
 

@@ -65,14 +65,14 @@ Some ways you can get involved with SLIM:
 
 The fastest way to start using SLIM process improvement solutions is to take a look at our best practice guides, specifically our *starter kits*. Starter kits provide plug-and-play solutions to process improvement needs. To complement our starter kits, take a look at *use cases* to understand the context of the starter kit solutions, *trade studies* to understand tool / solution trade-offs, and *reference architectures* to understand how tool / solutions interact in an actual working environment. 
 
-We recommend creating pull-requests using our starter kits against your own repositories. Reach out to our [contributor communication channels](docs/contribute/CONTRIBUTING.md#communication-channels) for questions if you're unsure how to create pull requests. An excellent tool to automate the infusion of starter kits in your repositories (especially if you have many) is to use a tool like [multi-gitter](https://github.com/lindell/multi-gitter) if you're using Git to create pull-requests. 
+We recommend creating pull-requests using our starter kits against your own repositories. Reach out to our [contributor communication channels](docs/contribute/contributing/know-before-contribute.md#communication-channels) for questions if you're unsure how to create pull requests. An excellent tool to automate the infusion of starter kits in your repositories (especially if you have many) is to use a tool like [multi-gitter](https://github.com/lindell/multi-gitter) if you're using Git to create pull-requests. 
 
 Finally, if you use any of our guides - please consider adding the following badge to your `README.md`: 
 [![SLIM](https://img.shields.io/badge/Best%20Practices%20from-SLIM-blue)](https://nasa-ammos.github.io/slim/)
 
 ### Contribute to Our Guides
 
-We're excited to see your contribution! Please see our [Contributing Guide](docs/contribute/CONTRIBUTING.md) on details for how to contribute. We accept many non-code contributions as well, so feel free to think creatively. 
+We're excited to see your contribution! Please see our [Contributing Guide](docs/contribute/contributing) on details for how to contribute. We accept many non-code contributions as well, so feel free to think creatively. 
 
 ### Spread the Word
 

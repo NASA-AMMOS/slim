@@ -105,8 +105,8 @@
               },
               "sidebar": "contributeSidebar",
               "previous": {
-                "title": "Prerequisites",
-                "permalink": "/slim/docs/contribute/contributing/prereqs"
+                "title": "Know Before you Contribute",
+                "permalink": "/slim/docs/contribute/contributing/know-before-contribute"
               },
               "next": {
                 "title": "Ways to Contribute",
@@ -156,21 +156,21 @@
                 "permalink": "/slim/docs/contribute/contributing/"
               },
               "next": {
-                "title": "Prerequisites",
-                "permalink": "/slim/docs/contribute/contributing/prereqs"
+                "title": "Know Before you Contribute",
+                "permalink": "/slim/docs/contribute/contributing/know-before-contribute"
               }
             },
             {
-              "unversionedId": "contribute/contributing/prereqs",
-              "id": "contribute/contributing/prereqs",
-              "title": "Prerequisites",
+              "unversionedId": "contribute/contributing/know-before-contribute",
+              "id": "contribute/contributing/know-before-contribute",
+              "title": "Know Before you Contribute",
               "description": "Before you begin contributing to our project, it'll be a good idea to ensure you've satisfied the below pre-requisites.",
-              "source": "@site/docs/contribute/contributing/prereqs.md",
+              "source": "@site/docs/contribute/contributing/know-before-contribute.md",
               "sourceDirName": "contribute/contributing",
-              "slug": "/contribute/contributing/prereqs",
-              "permalink": "/slim/docs/contribute/contributing/prereqs",
+              "slug": "/contribute/contributing/know-before-contribute",
+              "permalink": "/slim/docs/contribute/contributing/know-before-contribute",
               "draft": false,
-              "editUrl": "https://github.com/facebook/docusaurus/tree/main/packages/create-docusaurus/templates/shared/docs/contribute/contributing/prereqs.md",
+              "editUrl": "https://github.com/facebook/docusaurus/tree/main/packages/create-docusaurus/templates/shared/docs/contribute/contributing/know-before-contribute.md",
               "tags": [],
               "version": "current",
               "sidebarPosition": 1,
@@ -1220,7 +1220,7 @@
                   },
                   {
                     "type": "doc",
-                    "id": "contribute/contributing/prereqs"
+                    "id": "contribute/contributing/know-before-contribute"
                   },
                   {
                     "type": "doc",
