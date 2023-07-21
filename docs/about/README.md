@@ -37,11 +37,23 @@ What does it mean to be a community member of SLIM? The following ideas apply to
 
 The following list of projects are currently SLIM member projects:
 
-<a href="https://github.com/nasa-ammos/" rel="NASA AMMOS">![NASA Ammos](https://avatars.githubusercontent.com/u/37851411?s=200&v=4)</a>
-
-<a href="https://github.com/unity-sds/" rel="Unity SDS">![Unity SDS](https://user-images.githubusercontent.com/3129134/163255685-857aa780-880f-4c09-b08c-4b53bf4af54d.png)</a>
-
-<a href="https://github.com/hysds/" rel="HySDS">![HySDS](https://user-images.githubusercontent.com/3129134/161156679-c3dcec08-b6af-44e4-910c-5ec82ef18649.png)</a>
+<ul>
+        <li>
+            <a href="https://github.com/nasa-ammos/" rel="NASA AMMOS">
+                <img src="https://avatars.githubusercontent.com/u/37851411?s=200&v=4" alt="NASA AMMOS" />
+            </a>
+        </li>
+        <li>
+            <a href="https://github.com/unity-sds/" rel="Unity SDS">
+                <img src="https://user-images.githubusercontent.com/3129134/163255685-857aa780-880f-4c09-b08c-4b53bf4af54d.png" alt="Unity SDS" />
+            </a>
+        </li>
+        <li>
+            <a href="https://github.com/hysds/" rel="HySDS">
+                <img src="https://user-images.githubusercontent.com/3129134/161156679-c3dcec08-b6af-44e4-910c-5ec82ef18649.png" alt="HySDS" />
+            </a>
+        </li>
+</ul>
 
 ## Get Involved
 

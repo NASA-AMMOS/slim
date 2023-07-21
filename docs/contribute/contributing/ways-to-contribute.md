@@ -1,144 +1,10 @@
-# Contributing to SLIM
+---
+sidebar_position: 3
+---
 
-Thanks for taking the time to consider contributing! We very much appreciate your time and effort. This document outlines the many ways you can contribute to our project, and provides detailed guidance on best practices. We look forward to your help!
+# Ways to Contribute
 
-## Introduction
-
-SLIM is a joint, community-based effort at collective software process improvements. Therefore, we need your help! Here's the basics on contributing:
-- Anyone can contribute!
-- You can contribute at any time
-- You can contribute in any way (code, documentation, discussion topics, issue ticket discussions, etc.)
-
-We plan out our work into fiscal quarters (i.e. Oct - Dec as Q1, Jan - Mar as Q2, etc.). This helps our stakeholders (the folks using our process improvements) plan to incorporate process improvements better into their schedules. See our [Planning Board](https://github.com/orgs/NASA-AMMOS/projects/3/views/4) for our most up-to-date plan. Generally speaking, we try to get together with our stakeholders and our community contributors at the start of every fiscal quarter to plan out what we should work on. That being said, since we're an open source project, we also accept and encourage ad-hoc contributions at any time - just note it may take some time to review / decide whether to incorporate. 
-
-### Quickstart to Contributing
-
-#### Contributing via our Planning Cycles
-
-1. See our open list of [issue tickets](https://github.com/NASA-AMMOS/slim/issues) and pick a ticket(s) you're interested in, that can also potentially apply to a project you'd like to infuse improvements into. Note: it is useful to scan through labels like how requested (popular) a particular issue ticket is (via labels: 'requested', 'more requested', 'most requested') as well as by scanning labels that describe how complex the ticket is (i.e. 'low complexity', 'medium complexity', 'high complexity').
-2. Pick a fiscal quarter you’d like to resolve your tickets in. See our [Planning Board](https://github.com/orgs/NASA-AMMOS/projects/3/views/4) "iteration" column for possible fiscal quarters. At the start of every fiscal quarter, contributors will be asked to pick what they'd like to work on.
-3. Be a leader to help infuse those process improvement solutions (tickets resolved) back to your existing projects. What does that entail? It means you take ownership of your issue tickets and the associated process improvement and help your project infuse what you worked on! You can also help other projects that are interested in your process improvement. Tip: tag your project team members on the ticket by via their GitHub handles, to make it clear who will be interested in using your process improvement. 
-
-NOTE: taking ownership (being assigned a ticket) requires that they be a member of the SLIM project. Reach out to @riverma for how to join the team! Also, see our [Ways to Contribute](#ways-to-contribute) section for more details and guidance on contribution style.
-
-#### Contributing Any Other Time
-
-See our [Ways to Contribute](#ways-to-contribute) section.
-
-## Prerequisites
-
-Before you begin contributing to our project, it'll be a good idea to ensure you've satisfied the below pre-requisites. 
-
-### Developer Certificate of Origin (DCO)
-
-To accept your contributions for any kind of patch, you'll want to:
-1. Understand what a Developer Certificate of Origin is. See [this](https://wiki.linuxfoundation.org/dco) guide.
-2. Read and agree to the [terms](https://developercertificate.org) of the Developer Certificate of Origin.
-3. Remember to add your Sign-Off for each patch contribution you submit to our project via either:
-   1. By using the `-s` flag if using Git. See [these](https://git-scm.com/docs/git-commit#Documentation/git-commit.txt--s) instructions.
-   2. By including the following text in your patch contributions (i.e. pull requests)
-   ```
-   Signed-off-by: Full Name <email>
-   ``` 
-
-Reviewers reviewing your patch will look for the sign-off before deciding to accept your contribution.
-
-### License
-
-Our project has our licensing terms, including rules governing redistribution, documented in our [LICENSE](https://nasa-ammos.github.io/slim/LICENSE) file. Please take a look at that file and ensure you understand the terms. This will impact how we, or others, use your contributions.
-
-### Code of Conduct
-
-Our Code of Conduct helps facilitate a positive interaction environment for everyone involved with the team, and provides guidance on what to do if you experience problematic behavior. Read more in our [CODE_OF_CONDUCT.md](docs/about/CODE_OF_CONDUCT.md), and make sure you agree to its terms. 
-
-### Developer Environment
-
-For patch contributions, see our Developer Documentation (TBD) for more details on how to set up your local environment, to best contribute to our project. 
-
-At a minimum however to submit patches (if using Git), you'll want to ensure you have:
-1. An account on the Version Control System our project uses (i.e. GitHub).
-2. The Version Control System client (i.e. Git) installed on your local machine.
-3. The ability to edit, build, and test our project on your local machine. Again, see our `README.md` or detailed developer guide for more details 
-
-### Communication Channels
-
-Before contributing changes to our project, it's a great idea to be familiar with our communication channels and to socialize your potential contributions to get feedback early. This will help give you context for your contributions, no matter their form.
-
-Our communication channels are:
-- [Issue tracking system](https://github.com/NASA-AMMOS/slim/issues) - a regularly monitored area to report issues with our software or propose changes
-- [Discussion board](https://github.com/NASA-AMMOS/slim/discussions) - an permanently archived place to hold conversations related to our project, and to propose as well as show+tell topics to the contributor team. This resource can be searched for old discussions.
-
-## Our Development Process
-
-Our project integrates contributions from many people, and so we'd like to outline a process you can use to visualize how your contributions may be integrated if you provide something. 
-
-```mermaid
-flowchart TD
-    repo_proj[(Our Repository)]-->|Fork|repo_fork[(Your Forked Repository)]
-    repo_fork-->|Make|patch(Your Changes)
-    patch-->|Submit|pr(Pull Request)
-    pr==>|Approved|repo_proj
-    pr-->|Changes Requested|repo_fork
-```
-
-### Fork our Repository
-
-Forking our repository, as opposed to directly committing to a branch is the preferred way to propose changes. 
-
-See [this GitHub guide](https://docs.github.com/en/get-started/quickstart/fork-a-repo) on forking for information specific to GitHub.com
-
-#### Find or File an Issue
-
-Make sure people are aware you're working on a patch! Check out our [issue tracking system](https://github.com/NASA-AMMOS/slim/issues) and find an open issue you'd like to work against, or alternatively file a new issue and mention you're working on a patch.
-
-#### Choose the Right Branch to Fork
-
-Our project typically has the following branches available, make sure to fork either the default branch or a branch someone else already tagged with a particular issue ticket you're working with.
-- `main` - default branch, and contains mature SLIM deliverables and should be the typical branch you fork
-- `develop` - active development area for SLIM deliverables, and typically ahead of `main` 
-- `retype` - live rendering of SLIM website, auto-generated by changes committed to `main` branch via [a GitHub Action](https://github.com/NASA-AMMOS/slim/actions/workflows/retype.yml)
-
-### Make your Modifications
-
-Within your local development environment, this is the stage at which you'll propose your changes, and commit those changes back to version control. See the [README.md](https://github.com/nasa-ammos/slim/README.md) or development guide for more specifics on what you'll need as prerequisites to setup your local development environment.
-
-#### Commit Messages
-
-Commit messages to version control should reference a ticket in their title / summary line:
-
-```
-Issue #248 - Show an example commit message title
-```
-
-This makes sure that tickets are updated on GitHub with references to commits that are related to them.
-
-Commit should always be atomic. Keep solutions isolated whenever possible. Filler commits such as "clean up white space" or "fix typo" should be merged together before making a pull request, and significant sub-feature branches should be [rebased](https://www.youtube.com/results?search_query=git+rebase) to preserve commit history. Please ensure your commit history is clean and meaningful!
-
-Additionally, remember to "Sign-Off" on your commits to align with our [Developer Certificate of Origin (DCO) policy](#developer-certificate-of-origin-dco). 
-
-### Submit a Pull Request
-
-Pull requests are the core way our project will receive your patch contributions. Navigate to your branch on your own fork within the version control system, and submit a pull request or submit the patch text to our project. 
-
-Please make sure to provide a meaningful text description to your pull requests, whenever submitted. Our pull-request template will be auto-generated for you when you create your pull-request. See the template [here](https://nasa-ammos.github.io/slim/.github/PULL_REQUEST_TEMPLATE.md). 
-
-**Working on your first Pull Request?** See guide: [How to Contribute to an Open Source Project on GitHub](https://kcd.im/pull-request)
-
-### Reviewing your Pull Request
-
-Reviewing pull-requests, or any kinds of proposed patch changes, is an art. That being said, we follow the following best practices:
-- **Intent** - is the purpose of your pull-request clearly stated?
-- **Solution** - is your pull-request doing what you want it to?
-- **Correctness** - is your pull-request doing what you want it to *correctly*?
-- **Small Patches** - is your patch of a level of complexity and brevity that it can actually be reviewed by a human being? Or is does it involve too much content for one pull request?
-- **Coding best practices** - are you following best practices in the coding / contribution language being used?
-- **Readability** - is your patch readable, and ultimately maintainable, by others?
-- **Reproducibility** - is your patch reproducible by others?
-- **Tests** - do you have or have conducted meaningful tests?
-
-## Ways to Contribute
-
-### ⚠️ Issue Tickets
+## ⚠️ Issue Tickets
 
 > *Do you like to talk about new features, changes, requests?*
 
@@ -146,7 +12,7 @@ Issue tickets are a very simple way to get involved in our project. It also help
 
 See our list of issues at: https://github.com/NASA-AMMOS/slim/issues
 
-#### Cleaning up Duplicate Issues
+### Cleaning up Duplicate Issues
 
 Often we receive duplicate issues that can confuse project members on *which* issue ticket to hold conversations upon.
 
@@ -158,13 +24,13 @@ Here's how you can help:
 This is a duplicate issue. Please migrate conversations over to [issue-XYZ](hyperlink to issue)
 ```
 
-#### Good First Issues
+### Good First Issues
 
 Issue tickets can vary in complexity, and issues labeled with `good first issue` labels are often a great way to get started with the project as a newcomer. 
 
 Take a look at our [issue tracking system](https://github.com/NASA-AMMOS/slim/issues), and filter by `good first issue` for issues that are low-complexity, and that will help you get familiar with our issue tracking and patch submission process.
 
-#### Suggesting New Issue Labels
+### Suggesting New Issue Labels
 
 Labels within our [issue tracking system](https://github.com/NASA-AMMOS/slim/issues) are a great way to quickly sort through tickets. The project may not yet have labels to cover the full variety of issue tickets. Take a look through our list of issues, and if you notice a set of issue tickets that seem similar but are not categorized with an existing label, go ahead submit a request within one of the issues you've looked at with the following text:
 
@@ -172,7 +38,7 @@ Labels within our [issue tracking system](https://github.com/NASA-AMMOS/slim/iss
 I've noticed several other issues that are of the same category as this issue. Shall we make a new label for these types of issues?
 ```
 
-#### Submitting Bug Issues
+### Submitting Bug Issues
 
 Resolving bugs is a priority for our project. We welcome bug reports. However, please make sure to do the following prior to submitting a bug report:
 - **Check for duplicates** - there may be a bug report already describing your issue, so check the [issue tracking system](https://github.com/NASA-AMMOS/slim/issues) first.
@@ -187,7 +53,7 @@ Here's some guidance on submitting a bug issue:
    3. If the bug triggers an exception or error message, include the *full message* or *stacktrace*
    4. Provide information about your operating system and the version of our project you're using
 
-#### Submitting New Best Practice Guide Requests
+### Submitting New Best Practice Guide Requests
 
 We welcome new best practice guides / process improvement guides to help grow best practice guides. However, please make sure to do the following prior to submitting a request:
 - **Check for duplicates** - there may be an issue ticket already describing your request, so check the [issue tracking system](https://github.com/NASA-AMMOS/slim/issues) first
@@ -199,7 +65,9 @@ Here's some guidance on submitting a new best practice guide request:
 2. Select the new best practice guide request template button
    1. Fill out the template fields to the best of your ability
 
-#### Submitting Best Practice Guide Change / Improvement Requests
+NOTE: See out [Submitting a Best Practice](../submit-best-practice.md) for more details.
+
+### Submitting Best Practice Guide Change / Improvement Requests
 
 We welcome changes and improvements to our existing best practice guides. However, please make sure to do the following prior to submitting a request:
 - **Check for duplicates** - there may be an issue ticket already describing your change / improvement request, so check the [issue tracking system](https://github.com/NASA-AMMOS/slim/issues) first
@@ -210,7 +78,7 @@ Here's some guidance on submitting a best practice guide change request:
 2. Select the new best practice guide change / improvement request template button
    1. Fill out the template fields to the best of your ability
 
-#### Submitting Process Improvement Need Requests
+### Submitting Process Improvement Need Requests
 
 Process improvement need requests are the atomic needs that represent SLIM community challenges. Needs are often aggregated together to develop comprehensive guides. You can help us identify and fill out needs that can help SLIM assess which process improvement needs are most important. However, please make sure to do the following prior to submitting a request:
 - **Check for duplicates** - there may be an issue ticket already describing your change / improvement request, so check the [issue tracking system](https://github.com/NASA-AMMOS/slim/issues) first
@@ -220,7 +88,7 @@ Here's some guidance on submitting a process improvement need request:
 2. Select the new process improvement need request template button
    1. Fill out the template fields to the best of your ability
 
-#### Submitting Website Feature Requests
+### Submitting Website Feature Requests
 
 Our SLIM website is constantly evolving, and you can help us by submitting reqeuests for new features. However, please make sure to do the following prior to submitting a request:
 - **Check for duplicates** - there may be an issue ticket already describing your change / improvement request, so check the [issue tracking system](https://github.com/NASA-AMMOS/slim/issues) first
@@ -230,7 +98,7 @@ Here's some guidance on submitting a website feature request:
 2. Select the website feature request template button
    1. Fill out the template fields to the best of your ability
 
-#### Submitting Security Vulnerability Issues
+### Submitting Security Vulnerability Issues
 
 Security vulnerabilities should **not** be filed to the regular issue tracking system.
 
@@ -241,7 +109,7 @@ Please be sure to:
 * Provide any workarounds, if you know them
 * Provide return-contact information to follow-up with you if needed
 
-#### Reviewing Pull Requests
+### Reviewing Pull Requests
 
 Reviewing others' contributions is a great way to learn about best practices in both contributions as well as software. 
 
@@ -250,7 +118,7 @@ Take a look at our [pull requests tracking system](https://github.com/NASA-AMMOS
 2. Try to recreate the pull-request patch on your local machine, and report if it has issues with your system in particular
 3. Scan over suggested feedback from other contributors, and provide feedback if necessary
 
-### 📖 Documentation
+## 📖 Documentation
 
 Documentation is the core way our users and contributors learn about the project. We place a high value on the quality, thoroughness, and readability of our documentation. Writing or editing documentation is an excellent way to contribute to our project without performing active coding. 
 
@@ -263,7 +131,7 @@ Some guidelines for documentation best practices (summarized from Google's [exce
 - **Changed best practice use cases = changed docs** - if your best practice use cases have changed, remember to update your documentation
 - **Delete old docs** - continually clean your documentation tree, and remove outdated docs regularly
 
-#### Documentation Organization
+### Documentation Organization
 
 The overall structure of our project documentation is as follows:
 - Source-controlled documentation
@@ -293,25 +161,25 @@ For directions on contributing to our source-controlled documentation:
 2. Have your [development environment](#developer-environment) set up properly.
 3. Go through our [development process](#our-development-process), including proposing changes to our project.
 
-#### Writing Style
+### Writing Style
 
 To ensure documentation is readable and consistent by newcomers and experts alike, here are some suggestions on writing style for English:
 - Use gender neutral pronouns (they/their/them) instead of he/she/his/her 
 - Avoid qualifiers that minimize the difficulty of a task at hand, e.g. avoid words like “easily”, “simply”, “just”, “merely”, “straightforward”, etc. Readers' expertise may not match your own, and qualifying complexity may deter some readers if the task does not match their level of experience. That being said, if a particular task is difficult or complex, do mention that. 
 
-#### Common Wording 
+### Common Wording 
 
 Below are some commonly used words you'll want to leverage in your documentation contributions:
 - **GitHub** - one word, and capitalization of the 'G' and the 'H'
 - **SLIM** - one word, all capitalized
 
-#### Contributing A Best Practice Guide
+### Contributing A Best Practice Guide
 
 Researching, sharing, and disseminating best practices is the bread-and-butter of the SLIM effort. We welcome folks who wish to (1) help provide best practice solutions for active / open needs (link TBD) as well as those who'd like to contribute best practice solutions for new needs that you may already have great solutions for. Additionally, we welcome (2) iterative improvements for existing best practice solutions already shared on the SLIM repository.
 
 Let's explore each of these sub categories for contributing best practices:
 
-##### Adding a New Best Practice Guide
+#### Adding a New Best Practice Guide
 
 The following is a checklist before you start work on developing new, best practice guide:
 - [X] Ensure there's a ticket in our [issue tracking system](https://github.com/NASA-AMMOS/slim/issues) for your new best practice guide idea, feel free to create a ticket if none exist
@@ -325,7 +193,7 @@ Once you have a tangible issue you're going to work against, you can begin the p
 
 The following flowchart provides guidance on the best recommended process for developing and sharing a best practice solution.
 
-###### Recommended Process for Contributing a Best Practice Solution to SLIM
+##### Recommended Process for Contributing a Best Practice Solution to SLIM
 
 ```mermaid
 stateDiagram-v2
@@ -392,7 +260,7 @@ stateDiagram-v2
   
 ```
 
-###### Understanding the Recommended Process
+##### Understanding the Recommended Process
 
 To help you understand the recommended process diagrammed above, this section explains each component of the diagram:
 
@@ -448,7 +316,7 @@ To help you understand the recommended process diagrammed above, this section ex
    - Taking the initiative and creating pull requests or text-file patches using your starter kits for SLIM community member projects. Many SLIM community member projects are busy and may not have the time to propose your starter kits on their own, so leverage the best practice of open development and propose a starter kit to some aspect of their codebase.
    - Reach out to SLIM community member projects and socialize your new starter kit to gain interest. Leverage our [communication channels](#communication-channels) for this purpose.
 
-##### For Adding Improvements to an Existing Best Practice Guide
+#### For Adding Improvements to an Existing Best Practice Guide
 
 The Adding a New Best Practice Guide section explains in detail *how* to add a new best practice guide. Adding improvements to an existing guide follows the same principles of creating a new guide. Please see the Adding a New Best Practice Guide section for detailed guidance on how to add content to an existing guide - including proposing pull requests. 
 
@@ -457,13 +325,13 @@ The following is a checklist before you start contributing to an existing best p
 - [X] Check the Forum for any conversations regarding the best practice need(s) to ensure you have any needed context. Feel free to reach out and ask the community for feedback if you have ideas you'd like to discuss
 - [X] Fork the SLIM repository into your own GitHub account so that you can work independently and eventually propose a pull request back to the SLIM project
 
-#### Inline Code Documentation
+### Inline Code Documentation
 
 For language-specific guidance on code documentation, including style guides, see [Google's list of language style guides](https://google.github.io/styleguide/) for a variety of languages. 
 
 Additionally, take a look at Google's recommendations on [inline code documentation](https://google.github.io/styleguide/docguide/best_practices.html#documentation-is-the-story-of-your-code) for best practices. 
 
-#### Media
+### Media
 
 Media, such as such as images, videos, sound files, etc., are an excellent way to explain documentation to a wider audience more easily. Include media in your contributions as often as possible.
 
@@ -473,7 +341,7 @@ When including media into our version-control system, it is recommended to use f
 - Videos: H264 MPEG format
 - Sounds: MP3 format
 
-### ❓ Questions
+## ❓ Questions
 
 Answering questions is an excellent way to learn more about our project, as well as get better known in our project community. 
 
@@ -487,7 +355,7 @@ When answering questions, keep the following in mind:
 - If suggesting code, repeat the line of code that needs to be altered, followed by your alteration
 - Include any post-steps or checks to verify your answer can be reproduced 
 
-### 🎨 Design
+## 🎨 Design
 
 Design files can help to guide new features and new areas of expansion for our project. We welcome these kinds of contributions.
 
@@ -498,7 +366,7 @@ Here are just a few ways you can help provide design recommendations for our pro
 
 Each of the above can be contributed directly to repository code, and you should use our [development process](#our-development-process) to contribute your additions.
 
-### 🎟️ Meetups
+## 🎟️ Meetups
 
 A great way to contribute towards our project goals is to socialize and encourage people to meet and learn more about each other. Consider ideas like:
 - Propose workshops or meetups regarding some topic within our project

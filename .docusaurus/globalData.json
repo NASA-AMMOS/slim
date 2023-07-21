@@ -26,8 +26,28 @@
               "sidebar": "aboutSidebar"
             },
             {
-              "id": "contribute/CONTRIBUTING",
-              "path": "/slim/docs/contribute/CONTRIBUTING",
+              "id": "contribute/contributing/development-process",
+              "path": "/slim/docs/contribute/contributing/development-process",
+              "sidebar": "contributeSidebar"
+            },
+            {
+              "id": "contribute/contributing/index",
+              "path": "/slim/docs/contribute/contributing/",
+              "sidebar": "contributeSidebar"
+            },
+            {
+              "id": "contribute/contributing/introduction",
+              "path": "/slim/docs/contribute/contributing/introduction",
+              "sidebar": "contributeSidebar"
+            },
+            {
+              "id": "contribute/contributing/prereqs",
+              "path": "/slim/docs/contribute/contributing/prereqs",
+              "sidebar": "contributeSidebar"
+            },
+            {
+              "id": "contribute/contributing/ways-to-contribute",
+              "path": "/slim/docs/contribute/contributing/ways-to-contribute",
               "sidebar": "contributeSidebar"
             },
             {
@@ -207,8 +227,8 @@
             },
             "contributeSidebar": {
               "link": {
-                "path": "/slim/docs/contribute/CONTRIBUTING",
-                "label": "contribute/CONTRIBUTING"
+                "path": "/slim/docs/contribute/contributing/",
+                "label": "Contributing"
               }
             }
           }

@@ -27,7 +27,8 @@ export default {
       {
         "docs": {
           "sidebarPath": "/Users/rverma/src/slim/sidebars.js",
-          "editUrl": "https://github.com/facebook/docusaurus/tree/main/packages/create-docusaurus/templates/shared/"
+          "editUrl": "https://github.com/facebook/docusaurus/tree/main/packages/create-docusaurus/templates/shared/",
+          "sidebarCollapsed": true
         },
         "blog": {
           "showReadingTime": true,
@@ -320,9 +321,16 @@ export default {
       ]
     },
     "colorMode": {
+      "disableSwitch": true,
       "defaultMode": "light",
-      "disableSwitch": false,
       "respectPrefersColorScheme": false
+    },
+    "mermaid": {
+      "theme": {
+        "dark": "dark",
+        "light": "default"
+      },
+      "options": {}
     },
     "docs": {
       "versionPersistence": "localStorage",
@@ -335,13 +343,6 @@ export default {
     "tableOfContents": {
       "minHeadingLevel": 2,
       "maxHeadingLevel": 3
-    },
-    "mermaid": {
-      "theme": {
-        "dark": "dark",
-        "light": "default"
-      },
-      "options": {}
     }
   },
   "markdown": {

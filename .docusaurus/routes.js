@@ -99,7 +99,7 @@ export default [
   },
   {
     path: '/slim/docs',
-    component: ComponentCreator('/slim/docs', '782'),
+    component: ComponentCreator('/slim/docs', 'a19'),
     routes: [
       {
         path: '/slim/docs/about/',
@@ -138,8 +138,32 @@ export default [
         sidebar: "guidesSidebar"
       },
       {
-        path: '/slim/docs/contribute/CONTRIBUTING',
-        component: ComponentCreator('/slim/docs/contribute/CONTRIBUTING', 'f53'),
+        path: '/slim/docs/contribute/contributing/',
+        component: ComponentCreator('/slim/docs/contribute/contributing/', '029'),
+        exact: true,
+        sidebar: "contributeSidebar"
+      },
+      {
+        path: '/slim/docs/contribute/contributing/development-process',
+        component: ComponentCreator('/slim/docs/contribute/contributing/development-process', 'd2a'),
+        exact: true,
+        sidebar: "contributeSidebar"
+      },
+      {
+        path: '/slim/docs/contribute/contributing/introduction',
+        component: ComponentCreator('/slim/docs/contribute/contributing/introduction', '56b'),
+        exact: true,
+        sidebar: "contributeSidebar"
+      },
+      {
+        path: '/slim/docs/contribute/contributing/prereqs',
+        component: ComponentCreator('/slim/docs/contribute/contributing/prereqs', '437'),
+        exact: true,
+        sidebar: "contributeSidebar"
+      },
+      {
+        path: '/slim/docs/contribute/contributing/ways-to-contribute',
+        component: ComponentCreator('/slim/docs/contribute/contributing/ways-to-contribute', 'bd1'),
         exact: true,
         sidebar: "contributeSidebar"
       },

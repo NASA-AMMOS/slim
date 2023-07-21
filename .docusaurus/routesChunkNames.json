@@ -186,7 +186,7 @@
     },
     "content": "content---slim-markdown-page-393-660"
   },
-  "/slim/docs-782": {
+  "/slim/docs-a19": {
     "__comp": "__comp---theme-doc-page-1-be-9be",
     "__context": {
       "plugin": "plugin---slim-docs-2-e-6-474"
@@ -217,9 +217,25 @@
     "__comp": "__comp---theme-doc-category-generated-index-page-14-e-640",
     "categoryGeneratedIndex": "categoryGeneratedIndex---slim-docs-category-software-lifecycle-827-99b"
   },
-  "/slim/docs/contribute/CONTRIBUTING-f53": {
+  "/slim/docs/contribute/contributing/-029": {
     "__comp": "__comp---theme-doc-item-178-a40",
-    "content": "content---slim-docs-contribute-contributin-gd-94-497"
+    "content": "content---slim-docs-contribute-contributing-f-1-e-4e2"
+  },
+  "/slim/docs/contribute/contributing/development-process-d2a": {
+    "__comp": "__comp---theme-doc-item-178-a40",
+    "content": "content---slim-docs-contribute-contributing-development-process-0-ee-4a5"
+  },
+  "/slim/docs/contribute/contributing/introduction-56b": {
+    "__comp": "__comp---theme-doc-item-178-a40",
+    "content": "content---slim-docs-contribute-contributing-introductioned-7-f47"
+  },
+  "/slim/docs/contribute/contributing/prereqs-437": {
+    "__comp": "__comp---theme-doc-item-178-a40",
+    "content": "content---slim-docs-contribute-contributing-prereqs-5-b-9-638"
+  },
+  "/slim/docs/contribute/contributing/ways-to-contribute-bd1": {
+    "__comp": "__comp---theme-doc-item-178-a40",
+    "content": "content---slim-docs-contribute-contributing-ways-to-contribute-4-c-9-82c"
   },
   "/slim/docs/contribute/submit-best-practice-129": {
     "__comp": "__comp---theme-doc-item-178-a40",

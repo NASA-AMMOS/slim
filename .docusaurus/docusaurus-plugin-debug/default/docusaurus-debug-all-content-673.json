@@ -87,20 +87,128 @@
               }
             },
             {
-              "unversionedId": "contribute/CONTRIBUTING",
-              "id": "contribute/CONTRIBUTING",
-              "title": "Contributing to SLIM",
-              "description": "Thanks for taking the time to consider contributing! We very much appreciate your time and effort. This document outlines the many ways you can contribute to our project, and provides detailed guidance on best practices. We look forward to your help!",
-              "source": "@site/docs/contribute/CONTRIBUTING.md",
-              "sourceDirName": "contribute",
-              "slug": "/contribute/CONTRIBUTING",
-              "permalink": "/slim/docs/contribute/CONTRIBUTING",
+              "unversionedId": "contribute/contributing/development-process",
+              "id": "contribute/contributing/development-process",
+              "title": "Our Development Process",
+              "description": "Our project integrates contributions from many people, and so we'd like to outline a process you can use to visualize how your contributions may be integrated if you provide something.",
+              "source": "@site/docs/contribute/contributing/development-process.md",
+              "sourceDirName": "contribute/contributing",
+              "slug": "/contribute/contributing/development-process",
+              "permalink": "/slim/docs/contribute/contributing/development-process",
               "draft": false,
-              "editUrl": "https://github.com/facebook/docusaurus/tree/main/packages/create-docusaurus/templates/shared/docs/contribute/CONTRIBUTING.md",
+              "editUrl": "https://github.com/facebook/docusaurus/tree/main/packages/create-docusaurus/templates/shared/docs/contribute/contributing/development-process.md",
+              "tags": [],
+              "version": "current",
+              "sidebarPosition": 2,
+              "frontMatter": {
+                "sidebar_position": 2
+              },
+              "sidebar": "contributeSidebar",
+              "previous": {
+                "title": "Prerequisites",
+                "permalink": "/slim/docs/contribute/contributing/prereqs"
+              },
+              "next": {
+                "title": "Ways to Contribute",
+                "permalink": "/slim/docs/contribute/contributing/ways-to-contribute"
+              }
+            },
+            {
+              "unversionedId": "contribute/contributing/index",
+              "id": "contribute/contributing/index",
+              "title": "Contributing",
+              "description": "Thanks for taking the time to consider contributing! We very much appreciate your time and effort. This document outlines the many ways you can contribute to our project, and provides detailed guidance on best practices. We look forward to your help!",
+              "source": "@site/docs/contribute/contributing/index.md",
+              "sourceDirName": "contribute/contributing",
+              "slug": "/contribute/contributing/",
+              "permalink": "/slim/docs/contribute/contributing/",
+              "draft": false,
+              "editUrl": "https://github.com/facebook/docusaurus/tree/main/packages/create-docusaurus/templates/shared/docs/contribute/contributing/index.md",
               "tags": [],
               "version": "current",
               "frontMatter": {},
               "sidebar": "contributeSidebar",
+              "next": {
+                "title": "Introduction",
+                "permalink": "/slim/docs/contribute/contributing/introduction"
+              }
+            },
+            {
+              "unversionedId": "contribute/contributing/introduction",
+              "id": "contribute/contributing/introduction",
+              "title": "Introduction",
+              "description": "SLIM is a joint, community-based effort at collective software process improvements. Therefore, we need your help! Here's the basics on contributing:",
+              "source": "@site/docs/contribute/contributing/introduction.md",
+              "sourceDirName": "contribute/contributing",
+              "slug": "/contribute/contributing/introduction",
+              "permalink": "/slim/docs/contribute/contributing/introduction",
+              "draft": false,
+              "editUrl": "https://github.com/facebook/docusaurus/tree/main/packages/create-docusaurus/templates/shared/docs/contribute/contributing/introduction.md",
+              "tags": [],
+              "version": "current",
+              "sidebarPosition": 0,
+              "frontMatter": {
+                "sidebar_position": 0
+              },
+              "sidebar": "contributeSidebar",
+              "previous": {
+                "title": "Contributing",
+                "permalink": "/slim/docs/contribute/contributing/"
+              },
+              "next": {
+                "title": "Prerequisites",
+                "permalink": "/slim/docs/contribute/contributing/prereqs"
+              }
+            },
+            {
+              "unversionedId": "contribute/contributing/prereqs",
+              "id": "contribute/contributing/prereqs",
+              "title": "Prerequisites",
+              "description": "Before you begin contributing to our project, it'll be a good idea to ensure you've satisfied the below pre-requisites.",
+              "source": "@site/docs/contribute/contributing/prereqs.md",
+              "sourceDirName": "contribute/contributing",
+              "slug": "/contribute/contributing/prereqs",
+              "permalink": "/slim/docs/contribute/contributing/prereqs",
+              "draft": false,
+              "editUrl": "https://github.com/facebook/docusaurus/tree/main/packages/create-docusaurus/templates/shared/docs/contribute/contributing/prereqs.md",
+              "tags": [],
+              "version": "current",
+              "sidebarPosition": 1,
+              "frontMatter": {
+                "sidebar_position": 1
+              },
+              "sidebar": "contributeSidebar",
+              "previous": {
+                "title": "Introduction",
+                "permalink": "/slim/docs/contribute/contributing/introduction"
+              },
+              "next": {
+                "title": "Our Development Process",
+                "permalink": "/slim/docs/contribute/contributing/development-process"
+              }
+            },
+            {
+              "unversionedId": "contribute/contributing/ways-to-contribute",
+              "id": "contribute/contributing/ways-to-contribute",
+              "title": "Ways to Contribute",
+              "description": "⚠️ Issue Tickets",
+              "source": "@site/docs/contribute/contributing/ways-to-contribute.md",
+              "sourceDirName": "contribute/contributing",
+              "slug": "/contribute/contributing/ways-to-contribute",
+              "permalink": "/slim/docs/contribute/contributing/ways-to-contribute",
+              "draft": false,
+              "editUrl": "https://github.com/facebook/docusaurus/tree/main/packages/create-docusaurus/templates/shared/docs/contribute/contributing/ways-to-contribute.md",
+              "tags": [],
+              "version": "current",
+              "sidebarPosition": 3,
+              "frontMatter": {
+                "sidebar_position": 3
+              },
+              "sidebar": "contributeSidebar",
+              "previous": {
+                "title": "Our Development Process",
+                "permalink": "/slim/docs/contribute/contributing/development-process"
+              },
               "next": {
                 "title": "Submit a Best Practice Guide",
                 "permalink": "/slim/docs/contribute/submit-best-practice"
@@ -122,8 +230,8 @@
               "frontMatter": {},
               "sidebar": "contributeSidebar",
               "previous": {
-                "title": "Contributing to SLIM",
-                "permalink": "/slim/docs/contribute/CONTRIBUTING"
+                "title": "Ways to Contribute",
+                "permalink": "/slim/docs/contribute/contributing/ways-to-contribute"
               }
             },
             {
@@ -1101,8 +1209,32 @@
             ],
             "contributeSidebar": [
               {
-                "type": "doc",
-                "id": "contribute/CONTRIBUTING"
+                "type": "category",
+                "label": "Contributing",
+                "collapsible": true,
+                "collapsed": true,
+                "items": [
+                  {
+                    "type": "doc",
+                    "id": "contribute/contributing/introduction"
+                  },
+                  {
+                    "type": "doc",
+                    "id": "contribute/contributing/prereqs"
+                  },
+                  {
+                    "type": "doc",
+                    "id": "contribute/contributing/development-process"
+                  },
+                  {
+                    "type": "doc",
+                    "id": "contribute/contributing/ways-to-contribute"
+                  }
+                ],
+                "link": {
+                  "type": "doc",
+                  "id": "contribute/contributing/index"
+                }
               },
               {
                 "type": "doc",

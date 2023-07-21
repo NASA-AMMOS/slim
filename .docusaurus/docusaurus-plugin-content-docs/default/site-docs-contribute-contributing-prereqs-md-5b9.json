@@ -1,0 +1,27 @@
+{
+  "unversionedId": "contribute/contributing/prereqs",
+  "id": "contribute/contributing/prereqs",
+  "title": "Prerequisites",
+  "description": "Before you begin contributing to our project, it'll be a good idea to ensure you've satisfied the below pre-requisites.",
+  "source": "@site/docs/contribute/contributing/prereqs.md",
+  "sourceDirName": "contribute/contributing",
+  "slug": "/contribute/contributing/prereqs",
+  "permalink": "/slim/docs/contribute/contributing/prereqs",
+  "draft": false,
+  "editUrl": "https://github.com/facebook/docusaurus/tree/main/packages/create-docusaurus/templates/shared/docs/contribute/contributing/prereqs.md",
+  "tags": [],
+  "version": "current",
+  "sidebarPosition": 1,
+  "frontMatter": {
+    "sidebar_position": 1
+  },
+  "sidebar": "contributeSidebar",
+  "previous": {
+    "title": "Introduction",
+    "permalink": "/slim/docs/contribute/contributing/introduction"
+  },
+  "next": {
+    "title": "Our Development Process",
+    "permalink": "/slim/docs/contribute/contributing/development-process"
+  }
+}

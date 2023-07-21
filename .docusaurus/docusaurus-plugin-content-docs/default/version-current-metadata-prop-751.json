@@ -273,10 +273,37 @@
     ],
     "contributeSidebar": [
       {
-        "type": "link",
-        "label": "Contributing to SLIM",
-        "href": "/slim/docs/contribute/CONTRIBUTING",
-        "docId": "contribute/CONTRIBUTING"
+        "type": "category",
+        "label": "Contributing",
+        "collapsible": true,
+        "collapsed": true,
+        "items": [
+          {
+            "type": "link",
+            "label": "Introduction",
+            "href": "/slim/docs/contribute/contributing/introduction",
+            "docId": "contribute/contributing/introduction"
+          },
+          {
+            "type": "link",
+            "label": "Prerequisites",
+            "href": "/slim/docs/contribute/contributing/prereqs",
+            "docId": "contribute/contributing/prereqs"
+          },
+          {
+            "type": "link",
+            "label": "Our Development Process",
+            "href": "/slim/docs/contribute/contributing/development-process",
+            "docId": "contribute/contributing/development-process"
+          },
+          {
+            "type": "link",
+            "label": "Ways to Contribute",
+            "href": "/slim/docs/contribute/contributing/ways-to-contribute",
+            "docId": "contribute/contributing/ways-to-contribute"
+          }
+        ],
+        "href": "/slim/docs/contribute/contributing/"
       },
       {
         "type": "link",
@@ -305,10 +332,34 @@
       "description": "A shared resource for discussing, iterating and referencing best practices in software lifecycle process improvements for multi-mission space and ground software",
       "sidebar": "aboutSidebar"
     },
-    "contribute/CONTRIBUTING": {
-      "id": "contribute/CONTRIBUTING",
-      "title": "Contributing to SLIM",
+    "contribute/contributing/development-process": {
+      "id": "contribute/contributing/development-process",
+      "title": "Our Development Process",
+      "description": "Our project integrates contributions from many people, and so we'd like to outline a process you can use to visualize how your contributions may be integrated if you provide something.",
+      "sidebar": "contributeSidebar"
+    },
+    "contribute/contributing/index": {
+      "id": "contribute/contributing/index",
+      "title": "Contributing",
       "description": "Thanks for taking the time to consider contributing! We very much appreciate your time and effort. This document outlines the many ways you can contribute to our project, and provides detailed guidance on best practices. We look forward to your help!",
+      "sidebar": "contributeSidebar"
+    },
+    "contribute/contributing/introduction": {
+      "id": "contribute/contributing/introduction",
+      "title": "Introduction",
+      "description": "SLIM is a joint, community-based effort at collective software process improvements. Therefore, we need your help! Here's the basics on contributing:",
+      "sidebar": "contributeSidebar"
+    },
+    "contribute/contributing/prereqs": {
+      "id": "contribute/contributing/prereqs",
+      "title": "Prerequisites",
+      "description": "Before you begin contributing to our project, it'll be a good idea to ensure you've satisfied the below pre-requisites.",
+      "sidebar": "contributeSidebar"
+    },
+    "contribute/contributing/ways-to-contribute": {
+      "id": "contribute/contributing/ways-to-contribute",
+      "title": "Ways to Contribute",
+      "description": "⚠️ Issue Tickets",
       "sidebar": "contributeSidebar"
     },
     "contribute/submit-best-practice": {
