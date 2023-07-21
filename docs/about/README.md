@@ -26,7 +26,7 @@ Once prioritized needs are identified, contributors go through a series of steps
 
 ![SLIM-dev-process](https://user-images.githubusercontent.com/3129134/164385960-911bff81-9218-4ba3-bcee-b60284a8b05c.png)
 
-More information on our development process for best practice guides can be found in our [Contributing Guide](docs/contribute/CONTRIBUTING#contributing-a-best-practice-guide).
+More information on our development process for best practice guides can be found in our [Contributing Guide](docs/contribute/contributing/development-process).
 
 ## Community Members
 
