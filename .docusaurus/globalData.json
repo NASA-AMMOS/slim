@@ -1,0 +1,240 @@
+{
+  "docusaurus-plugin-content-docs": {
+    "default": {
+      "path": "/slim/docs",
+      "versions": [
+        {
+          "name": "current",
+          "label": "Next",
+          "isLast": true,
+          "path": "/slim/docs",
+          "mainDocId": "guides/search",
+          "docs": [
+            {
+              "id": "about/CODE_OF_CONDUCT",
+              "path": "/slim/docs/about/CODE_OF_CONDUCT",
+              "sidebar": "aboutSidebar"
+            },
+            {
+              "id": "about/GOVERNANCE",
+              "path": "/slim/docs/about/GOVERNANCE",
+              "sidebar": "aboutSidebar"
+            },
+            {
+              "id": "about/README",
+              "path": "/slim/docs/about/",
+              "sidebar": "aboutSidebar"
+            },
+            {
+              "id": "contribute/contributing/development-process",
+              "path": "/slim/docs/contribute/contributing/development-process",
+              "sidebar": "contributeSidebar"
+            },
+            {
+              "id": "contribute/contributing/index",
+              "path": "/slim/docs/contribute/contributing/",
+              "sidebar": "contributeSidebar"
+            },
+            {
+              "id": "contribute/contributing/introduction",
+              "path": "/slim/docs/contribute/contributing/introduction",
+              "sidebar": "contributeSidebar"
+            },
+            {
+              "id": "contribute/contributing/prereqs",
+              "path": "/slim/docs/contribute/contributing/prereqs",
+              "sidebar": "contributeSidebar"
+            },
+            {
+              "id": "contribute/contributing/ways-to-contribute",
+              "path": "/slim/docs/contribute/contributing/ways-to-contribute",
+              "sidebar": "contributeSidebar"
+            },
+            {
+              "id": "contribute/submit-best-practice",
+              "path": "/slim/docs/contribute/submit-best-practice",
+              "sidebar": "contributeSidebar"
+            },
+            {
+              "id": "guides/documentation/change-log/README",
+              "path": "/slim/docs/guides/documentation/change-log/",
+              "sidebar": "guidesSidebar"
+            },
+            {
+              "id": "guides/documentation/documentation-hosts/README",
+              "path": "/slim/docs/guides/documentation/documentation-hosts/",
+              "sidebar": "guidesSidebar"
+            },
+            {
+              "id": "guides/documentation/documentation-hosts/trade-study-hostingdocs-user",
+              "path": "/slim/docs/guides/documentation/documentation-hosts/trade-study-hostingdocs-user",
+              "sidebar": "guidesSidebar"
+            },
+            {
+              "id": "guides/documentation/documentation-hosts/use-cases",
+              "path": "/slim/docs/guides/documentation/documentation-hosts/use-cases",
+              "sidebar": "guidesSidebar"
+            },
+            {
+              "id": "guides/documentation/readme/index",
+              "path": "/slim/docs/guides/documentation/readme/",
+              "sidebar": "guidesSidebar"
+            },
+            {
+              "id": "guides/governance/contributions/change-request-templates/github/PULL_REQUEST_TEMPLATE",
+              "path": "/slim/docs/guides/governance/contributions/change-request-templates/github/PULL_REQUEST_TEMPLATE",
+              "sidebar": "guidesSidebar"
+            },
+            {
+              "id": "guides/governance/contributions/change-request-templates/README",
+              "path": "/slim/docs/guides/governance/contributions/change-request-templates/",
+              "sidebar": "guidesSidebar"
+            },
+            {
+              "id": "guides/governance/contributions/code-of-conduct/README",
+              "path": "/slim/docs/guides/governance/contributions/code-of-conduct/",
+              "sidebar": "guidesSidebar"
+            },
+            {
+              "id": "guides/governance/contributions/contributing-guide/README",
+              "path": "/slim/docs/guides/governance/contributions/contributing-guide/",
+              "sidebar": "guidesSidebar"
+            },
+            {
+              "id": "guides/governance/contributions/developer-certificate-origin/README",
+              "path": "/slim/docs/guides/governance/contributions/developer-certificate-origin/",
+              "sidebar": "guidesSidebar"
+            },
+            {
+              "id": "guides/governance/contributions/issue-templates/github/bug_report",
+              "path": "/slim/docs/guides/governance/contributions/issue-templates/github/bug_report",
+              "sidebar": "guidesSidebar"
+            },
+            {
+              "id": "guides/governance/contributions/issue-templates/github/new_feature",
+              "path": "/slim/docs/guides/governance/contributions/issue-templates/github/new_feature",
+              "sidebar": "guidesSidebar"
+            },
+            {
+              "id": "guides/governance/contributions/issue-templates/README",
+              "path": "/slim/docs/guides/governance/contributions/issue-templates/",
+              "sidebar": "guidesSidebar"
+            },
+            {
+              "id": "guides/governance/contributions/README",
+              "path": "/slim/docs/guides/governance/contributions/",
+              "sidebar": "guidesSidebar"
+            },
+            {
+              "id": "guides/governance/governance-model/GOVERNANCE",
+              "path": "/slim/docs/guides/governance/governance-model/GOVERNANCE",
+              "sidebar": "guidesSidebar"
+            },
+            {
+              "id": "guides/governance/governance-model/README",
+              "path": "/slim/docs/guides/governance/governance-model/",
+              "sidebar": "guidesSidebar"
+            },
+            {
+              "id": "guides/search",
+              "path": "/slim/docs/guides/search",
+              "sidebar": "guidesSidebar"
+            },
+            {
+              "id": "guides/software-lifecycle/application-starter-kits/python-starter-kit/README",
+              "path": "/slim/docs/guides/software-lifecycle/application-starter-kits/python-starter-kit/",
+              "sidebar": "guidesSidebar"
+            },
+            {
+              "id": "guides/software-lifecycle/application-starter-kits/README",
+              "path": "/slim/docs/guides/software-lifecycle/application-starter-kits/",
+              "sidebar": "guidesSidebar"
+            },
+            {
+              "id": "guides/software-lifecycle/continuous-integration/continuous-integration-frameworks/continuous-integration-frameworks",
+              "path": "/slim/docs/guides/software-lifecycle/continuous-integration/continuous-integration-frameworks/",
+              "sidebar": "guidesSidebar"
+            },
+            {
+              "id": "guides/software-lifecycle/continuous-integration/continuous-integration-frameworks/README",
+              "path": "/slim/docs/guides/software-lifecycle/continuous-integration/continuous-integration-frameworks/",
+              "sidebar": "guidesSidebar"
+            },
+            {
+              "id": "guides/software-lifecycle/continuous-integration/README",
+              "path": "/slim/docs/guides/software-lifecycle/continuous-integration/",
+              "sidebar": "guidesSidebar"
+            },
+            {
+              "id": "guides/software-lifecycle/continuous-integration/reference-architecture/README",
+              "path": "/slim/docs/guides/software-lifecycle/continuous-integration/reference-architecture/",
+              "sidebar": "guidesSidebar"
+            },
+            {
+              "id": "guides/software-lifecycle/continuous-testing/README",
+              "path": "/slim/docs/guides/software-lifecycle/continuous-testing/",
+              "sidebar": "guidesSidebar"
+            },
+            {
+              "id": "guides/software-lifecycle/continuous-testing/testing-frameworks",
+              "path": "/slim/docs/guides/software-lifecycle/continuous-testing/testing-frameworks",
+              "sidebar": "guidesSidebar"
+            },
+            {
+              "id": "guides/software-lifecycle/security/dependabot/README",
+              "path": "/slim/docs/guides/software-lifecycle/security/dependabot/",
+              "sidebar": "guidesSidebar"
+            },
+            {
+              "id": "guides/software-lifecycle/security/README",
+              "path": "/slim/docs/guides/software-lifecycle/security/",
+              "sidebar": "guidesSidebar"
+            },
+            {
+              "id": "guides/software-lifecycle/security/secrets-detection/README",
+              "path": "/slim/docs/guides/software-lifecycle/security/secrets-detection/",
+              "sidebar": "guidesSidebar"
+            },
+            {
+              "id": "/category/software-lifecycle",
+              "path": "/slim/docs/category/software-lifecycle",
+              "sidebar": "guidesSidebar"
+            },
+            {
+              "id": "/category/governance",
+              "path": "/slim/docs/category/governance",
+              "sidebar": "guidesSidebar"
+            },
+            {
+              "id": "/category/documentation",
+              "path": "/slim/docs/category/documentation",
+              "sidebar": "guidesSidebar"
+            }
+          ],
+          "draftIds": [],
+          "sidebars": {
+            "guidesSidebar": {
+              "link": {
+                "path": "/slim/docs/guides/search",
+                "label": "guides/search"
+              }
+            },
+            "aboutSidebar": {
+              "link": {
+                "path": "/slim/docs/about/",
+                "label": "about/README"
+              }
+            },
+            "contributeSidebar": {
+              "link": {
+                "path": "/slim/docs/contribute/contributing/",
+                "label": "Contributing"
+              }
+            }
+          }
+        }
+      ],
+      "breadcrumbs": true
+    }
+  }
+}

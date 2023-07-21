@@ -1,0 +1,16 @@
+{
+  "title": "Software Lifecycle",
+  "description": "Software Lifecycle Best Practices.",
+  "slug": "/category/software-lifecycle",
+  "permalink": "/docs/category/software-lifecycle",
+  "navigation": {
+    "previous": {
+      "title": "All Guides",
+      "permalink": "/docs/guides/search"
+    },
+    "next": {
+      "title": "Application Starter Kits",
+      "permalink": "/docs/guides/software-lifecycle/application-starter-kits/"
+    }
+  }
+}

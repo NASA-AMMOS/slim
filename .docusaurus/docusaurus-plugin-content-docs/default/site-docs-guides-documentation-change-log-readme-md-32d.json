@@ -1,0 +1,24 @@
+{
+  "unversionedId": "guides/documentation/change-log/README",
+  "id": "guides/documentation/change-log/README",
+  "title": "Change Log",
+  "description": "A change log provides a human readable list of significant changes, additions, deprecations, removals for software over time. It is meant to be able to be read by people. Change logs should be documented within a file called CHANGELOG.md and be updated per key release. See semantic release for guidance on releasing cycles and versioning of your software.",
+  "source": "@site/docs/guides/documentation/change-log/README.md",
+  "sourceDirName": "guides/documentation/change-log",
+  "slug": "/guides/documentation/change-log/",
+  "permalink": "/slim/docs/guides/documentation/change-log/",
+  "draft": false,
+  "editUrl": "https://github.com/facebook/docusaurus/tree/main/packages/create-docusaurus/templates/shared/docs/guides/documentation/change-log/README.md",
+  "tags": [],
+  "version": "current",
+  "frontMatter": {},
+  "sidebar": "guidesSidebar",
+  "previous": {
+    "title": "Documentation",
+    "permalink": "/slim/docs/category/documentation"
+  },
+  "next": {
+    "title": "Documentation Hosts",
+    "permalink": "/slim/docs/guides/documentation/documentation-hosts/"
+  }
+}

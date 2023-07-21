@@ -1,0 +1,27 @@
+{
+  "unversionedId": "guides/documentation/documentation-hosts/use-cases",
+  "id": "guides/documentation/documentation-hosts/use-cases",
+  "title": "Docs Use Cases",
+  "description": "* Documentation Best Practices",
+  "source": "@site/docs/guides/documentation/documentation-hosts/use-cases.md",
+  "sourceDirName": "guides/documentation/documentation-hosts",
+  "slug": "/guides/documentation/documentation-hosts/use-cases",
+  "permalink": "/slim/docs/guides/documentation/documentation-hosts/use-cases",
+  "draft": false,
+  "editUrl": "https://github.com/facebook/docusaurus/tree/main/packages/create-docusaurus/templates/shared/docs/guides/documentation/documentation-hosts/use-cases.md",
+  "tags": [],
+  "version": "current",
+  "frontMatter": {
+    "title": "Docs Use Cases",
+    "sidebar_label": "Docs Use Cases"
+  },
+  "sidebar": "guidesSidebar",
+  "previous": {
+    "title": "Docs Hosting Trade Study",
+    "permalink": "/slim/docs/guides/documentation/documentation-hosts/trade-study-hostingdocs-user"
+  },
+  "next": {
+    "title": "README Template",
+    "permalink": "/slim/docs/guides/documentation/readme/"
+  }
+}

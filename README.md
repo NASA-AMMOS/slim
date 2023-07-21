@@ -1,102 +1,98 @@
-# SLIM
+<!-- Header block for project -->
+<hr>
 
-> _A shared resource for discussing, iterating and referencing best practices in software lifecycle process improvements for multi-mission space and ground software_
+<div align="center">
 
-[📖 View our Infographic (PDF)](https://github.com/NASA-AMMOS/slim/files/8534342/SLIM-Infographic.pdf)
+<img src="https://github.com/riverma/test-repo/assets/3129134/24ecf032-8754-472b-8991-4accf0618871" alt="SLIM Logo" width="200" height="150">
 
-Software Lifecycle Improvement & Modernization (SLIM) is a project focused on collecting, developing, and disseminating best practices and process improvement strategies in NASA multi-mission software development lifecycle ecosystems. SLIM represents both a community of contributors as well as a continually evolving repository for best practices documentation.
+<!-- ☝️ If you see logo rendering errors, make sure you're not using indentation, or try an HTML IMG tag -->
 
-## Scope
+<h1 align="center">Software Lifecycle Improvement & Modernization (SLIM)</h1>
 
-There are three key areas within the software development lifecycle improvement space that SLIM focuses on providing best practice guidance for:
+</div>
 
-![SLIM-scope](https://user-images.githubusercontent.com/3129134/164510892-e95d6091-2038-43d5-9d4d-4880bd0b068f.png)
+<pre align="center">A shared community resource for discussing, iterating and referencing a common set of best practices in software development standards for NASA multi-mission space and ground software.</pre>
 
-## Process
+<!-- Header block for project -->
 
-We reach out to community member projects, and solicit input on outstanding process improvement needs, including the respective needs' relative ranking in importance / criticality. A few needs are chosen to focus active contributor time upon - seeking to develop best practice guides, including items such as use case lists, trade-studies, reference architectures and starter kits. 
-
-![SLIM-community-process](https://user-images.githubusercontent.com/3129134/164385744-3ba6c442-e4a8-41df-9f64-44b8faa9562a.png)
-
-Once prioritized needs are identified, contributors go through a series of steps to create best practice guides for the community. 
-
-![SLIM-dev-process](https://user-images.githubusercontent.com/3129134/164385960-911bff81-9218-4ba3-bcee-b60284a8b05c.png)
-
-More information on our development process for best practice guides can be found in our [Contributing Guide](CONTRIBUTING.md#contributing-a-best-practice-guide).
-
-## Community Members
-
-What does it mean to be a community member of SLIM? The following ideas apply to member projects:
-- Has a representative (a point-of-contact) who interfaces with the SLIM effort
-- Active and timely feedback on SLIM issue ticket prioritization
-- Openness and willingness to infuse SLIM best practices 
-
-The following list of projects are currently SLIM member projects:
-
-<a href="https://github.com/nasa-ammos/" rel="NASA AMMOS">![NASA Ammos](https://avatars.githubusercontent.com/u/37851411?s=200&v=4)</a>
-
-<a href="https://github.com/unity-sds/" rel="Unity SDS">![Unity SDS](https://user-images.githubusercontent.com/3129134/163255685-857aa780-880f-4c09-b08c-4b53bf4af54d.png)</a>
-
-<a href="https://github.com/hysds/" rel="HySDS">![HySDS](https://user-images.githubusercontent.com/3129134/161156679-c3dcec08-b6af-44e4-910c-5ec82ef18649.png)</a>
-
-
-## Best Practice Guides
-
-The following sections link to best practices resources developed by SLIM for process improvement needs solicited by the wider SLIM community.
-
-The list is sorted alphabetically and is continually being added to.
-
-### Continuous Integration
-
-Our continuous integration best practice guide focuses on techniques to support software build integration, the publishing of build results and the releasing software assets.
-
-[📖 Read the Guide](continuous-integration/README.md)
-
-### Continuous Testing
-
-Our continuous testing best practice guide focuses on exploring scenarios for automatically invoking unit, regression and integration tests, as well as the eco-system of tools and best practices to support creating the tests.
-
-[📖 Read the Guide](continuous-testing/README.md)
-
-### Documentation
-
-Our documentation best practice guide focuses on solutions for building, editing, leveraging templates for, hosting, and maintaining documentation for your projects. 
-
-[📖 Read the Guide](documentation/README.md)
-
-## Get Involved
-
-SLIM best practice guides and recommendations are open source, which means you have the freedom to use our work (in accordance with our [LICENSE](LICENSE)) as well as contribute and help shape our future work. We're excited to welcome new contributors and users.
-
-Some ways you can get involved with SLIM:
-
-### Use Our Guides
-
-The fastest way to start using SLIM process improvement solutions is to take a look at our best practice guides, specifically our *starter kits*. Starter kits provide plug-and-play solutions to process improvement needs. To complement our starter kits, take a look at *use cases* to understand the context of the starter kit solutions, *trade studies* to understand tool / solution trade-offs, and *reference architectures* to understand how tool / solutions interact in an actual working environment. 
-
-We recommend creating pull-requests using our starter kits against your own repositories. Reach out to our [contributor communication channels](CONTRIBUTING.md#communication-channels) for questions if you're unsure how to create pull requests. An excellent tool to automate the infusion of starter kits in your repositories (especially if you have many) is to use a tool like [multi-gitter](https://github.com/lindell/multi-gitter) if you're using Git to create pull-requests. 
-
-Finally, if you use any of our guides - please consider adding the following badge to your `README.md`: 
 [![SLIM](https://img.shields.io/badge/Best%20Practices%20from-SLIM-blue)](https://nasa-ammos.github.io/slim/)
 
-### Contribute to Our Guides
+![screen-slim](https://github.com/riverma/test-repo/assets/3129134/3afb3179-4433-4848-a4d5-366d50a57988)
 
-We're excited to see your contribution! Please see our [Contributing Guide](CONTRIBUTING.md) on details for how to contribute. We accept many non-code contributions as well, so feel free to think creatively. 
+This repository hosts the SLIM website, a project aimed at developing a common set of best practices in software development standards for NASA multi-mission space and ground software. The website leverages Docusaurus 2, a static website generator.  
 
-### Spread the Word
+[Website](https://nasa-ammos.github.io/slim/) | [Discussion Board](https://github.com/NASA-AMMOS/slim/discussions) | [Issue Tracker](https://github.com/NASA-AMMOS/slim/issues)
 
-The more people & projects using, contributing, and maintaining SLIM, the more robust and long-term this effort will last. 
+## Features
 
-You can help by:
+* Community-developed best practices and recommendations for software development encoded as Markdown guides
+* Static content for the SLIM website, including live preview during local development, and deployment support for GitHub pages hosting
 
-#### Socializing on GitHub
+## Contents
 
-[⭐ Star our Repo](https://github.com/nasa-ammos/slim)
+* [Quick Start](#quick-start)
+* [Changelog](#changelog)
+* [FAQ](#frequently-asked-questions-faq)
+* [Contributing Guide](#contributing)
+* [License](#license)
+* [Support](#support)
 
-[👀 Watch our Repo](https://github.com/nasa-ammos/slim)
+## Quick Start
 
-[😀 Discuss our Repo](https://github.com/nasa-ammos/slim)
+To get started with the SLIM project website (including developing and building / deploying it), please follow the steps below.
 
-#### Website
+### Requirements
 
-Share our website (https://nasa-ammos.github.io/slim) with your friends and colleagues
+* Node.js 12 or higher
+* Yarn package manager
+  
+### Setup Instructions
+
+1. Clone the repository
+2. Navigate into the directory
+3. Run `yarn` to install dependencies
+
+### Run Instructions
+
+1. Run `yarn start` to start a local development server
+2. The command should open a browser window with the website running
+
+### Usage Examples
+
+* After making changes to the website, you can see them reflected live in your browser without having to restart the server.
+
+### Build Instructions
+
+1. Run `yarn build` to generate static content into the `build` directory
+
+### Test Instructions
+
+1. After building, the website can be served using any static contents hosting service.
+
+## Changelog
+
+See our [CHANGELOG.md](CHANGELOG.md) for a history of our changes.
+
+See our [releases page](https://github.com/NASA-AMMOS/slim/releases) for our key versioned releases.
+
+## Frequently Asked Questions (FAQ)
+
+Ask us a question in our [discussion board](https://github.com/NASA-AMMOS/slim/discussions). We'll migrate common questions here. 
+
+## Contributing
+
+Please refer to the following resources for more information on contributing:
+
+- To learn how to contribute to our project, please consult our [Contributing Guide](CONTRIBUTING.md).
+- To understand the community ideals and policies we adhere to, please review our [Code of Conduct](CODE_OF_CONDUCT.md).
+- For insights into the governance model that governs our project, please refer to our [Governance Model](GOVERNANCE.md).
+
+## License
+
+Please refer to our [LICENSE](LICENSE) for details regarding the licensing terms and conditions of our project.
+
+## Support
+
+For inquiries regarding support, please reach out to the members of our [Technical Steering Committee](https://github.com/orgs/NASA-AMMOS/teams/slim-tsc). They will be able to provide you with the necessary information and assistance.
+
+---
