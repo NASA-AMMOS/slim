@@ -41,8 +41,8 @@
               "sidebar": "contributeSidebar"
             },
             {
-              "id": "contribute/contributing/prereqs",
-              "path": "/slim/docs/contribute/contributing/prereqs",
+              "id": "contribute/contributing/know-before-contribute",
+              "path": "/slim/docs/contribute/contributing/know-before-contribute",
               "sidebar": "contributeSidebar"
             },
             {
