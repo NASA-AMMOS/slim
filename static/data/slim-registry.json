@@ -149,12 +149,7 @@
         "docker",
         "gitHub-actions",
         "pypi",
-        "pep 517",
-        "pep 518",
-        "toml",
-        "build-automation",
-        "release-automation",
-        "publish-automation"
+        "automation"
       ],
       "last-updated": "2023-02-02"
     },
@@ -195,11 +190,8 @@
       "description": "An extensive list of resources and tools for continuous testing including module testing, service endpoint testing, performance testing, and mobile testing among others.",
       "tags": [
         "continuous-testing",
-        "module-testing",
         "performance-testing",
-        "mobile-testing",
-        "code-analysis",
-        "web-applications"
+        "code-analysis"
       ],
       "last-updated": "2022-04-20"
     }
