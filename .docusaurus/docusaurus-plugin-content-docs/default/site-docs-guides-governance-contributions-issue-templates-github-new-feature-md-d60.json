@@ -1,0 +1,30 @@
+{
+  "unversionedId": "guides/governance/contributions/issue-templates/github/new_feature",
+  "id": "guides/governance/contributions/issue-templates/github/new_feature",
+  "title": "[New Feature]: ",
+  "description": "Checked for duplicates",
+  "source": "@site/docs/guides/governance/contributions/issue-templates/github/new_feature.md",
+  "sourceDirName": "guides/governance/contributions/issue-templates/github",
+  "slug": "/guides/governance/contributions/issue-templates/github/new_feature",
+  "permalink": "/slim/docs/guides/governance/contributions/issue-templates/github/new_feature",
+  "draft": false,
+  "editUrl": "https://github.com/facebook/docusaurus/tree/main/packages/create-docusaurus/templates/shared/docs/guides/governance/contributions/issue-templates/github/new_feature.md",
+  "tags": [],
+  "version": "current",
+  "frontMatter": {
+    "name": "New Feature",
+    "about": "Suggest a new feature for us to implement",
+    "title": "[New Feature]: ",
+    "labels": "enhancement",
+    "assignees": ""
+  },
+  "sidebar": "guidesSidebar",
+  "previous": {
+    "title": "[Bug]: ",
+    "permalink": "/slim/docs/guides/governance/contributions/issue-templates/github/bug_report"
+  },
+  "next": {
+    "title": "Governance Model",
+    "permalink": "/slim/docs/guides/governance/governance-model/"
+  }
+}

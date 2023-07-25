@@ -1,0 +1,24 @@
+{
+  "unversionedId": "guides/governance/contributions/change-request-templates/README",
+  "id": "guides/governance/contributions/change-request-templates/README",
+  "title": "Change Request Templates",
+  "description": "Pull requests are the currency for how contributions are made to projects. Having a pre-filled out pull request template offers guidance to your potential developers on how to contribute to your project.",
+  "source": "@site/docs/guides/governance/contributions/change-request-templates/README.md",
+  "sourceDirName": "guides/governance/contributions/change-request-templates",
+  "slug": "/guides/governance/contributions/change-request-templates/",
+  "permalink": "/slim/docs/guides/governance/contributions/change-request-templates/",
+  "draft": false,
+  "editUrl": "https://github.com/facebook/docusaurus/tree/main/packages/create-docusaurus/templates/shared/docs/guides/governance/contributions/change-request-templates/README.md",
+  "tags": [],
+  "version": "current",
+  "frontMatter": {},
+  "sidebar": "guidesSidebar",
+  "previous": {
+    "title": "Contributions",
+    "permalink": "/slim/docs/guides/governance/contributions/"
+  },
+  "next": {
+    "title": "PULL_REQUEST_TEMPLATE",
+    "permalink": "/slim/docs/guides/governance/contributions/change-request-templates/github/PULL_REQUEST_TEMPLATE"
+  }
+}

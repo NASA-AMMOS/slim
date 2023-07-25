@@ -1,0 +1,320 @@
+{
+  "/slim/blog-69e": {
+    "__comp": "a6aa9e1f",
+    "__context": {
+      "plugin": "8ad5d578"
+    },
+    "sidebar": "814f3328",
+    "items": [
+      {
+        "content": "7661071f"
+      },
+      {
+        "content": "f4f34a3a"
+      },
+      {
+        "content": "8717b14a"
+      },
+      {
+        "content": "925b3f96"
+      }
+    ],
+    "metadata": "d07f8614"
+  },
+  "/slim/blog/archive-b1c": {
+    "__comp": "9e4087bc",
+    "__context": {
+      "plugin": "8ad5d578"
+    },
+    "archive": "1937bb63"
+  },
+  "/slim/blog/first-blog-post-64f": {
+    "__comp": "ccc49370",
+    "__context": {
+      "plugin": "8ad5d578"
+    },
+    "sidebar": "814f3328",
+    "content": "e273c56f"
+  },
+  "/slim/blog/long-blog-post-32b": {
+    "__comp": "ccc49370",
+    "__context": {
+      "plugin": "8ad5d578"
+    },
+    "sidebar": "814f3328",
+    "content": "73664a40"
+  },
+  "/slim/blog/mdx-blog-post-42f": {
+    "__comp": "ccc49370",
+    "__context": {
+      "plugin": "8ad5d578"
+    },
+    "sidebar": "814f3328",
+    "content": "59362658"
+  },
+  "/slim/blog/tags-94b": {
+    "__comp": "01a85c17",
+    "__context": {
+      "plugin": "8ad5d578"
+    },
+    "sidebar": "814f3328",
+    "tags": "325c7275"
+  },
+  "/slim/blog/tags/docusaurus-c76": {
+    "__comp": "6875c492",
+    "__context": {
+      "plugin": "8ad5d578"
+    },
+    "sidebar": "814f3328",
+    "items": [
+      {
+        "content": "7661071f"
+      },
+      {
+        "content": "f4f34a3a"
+      },
+      {
+        "content": "8717b14a"
+      },
+      {
+        "content": "925b3f96"
+      }
+    ],
+    "tag": "719b1851",
+    "listMetadata": "8c4308b7"
+  },
+  "/slim/blog/tags/facebook-dd6": {
+    "__comp": "6875c492",
+    "__context": {
+      "plugin": "8ad5d578"
+    },
+    "sidebar": "814f3328",
+    "items": [
+      {
+        "content": "7661071f"
+      }
+    ],
+    "tag": "c2f4afbb",
+    "listMetadata": "c441f7d5"
+  },
+  "/slim/blog/tags/hello-4d4": {
+    "__comp": "6875c492",
+    "__context": {
+      "plugin": "8ad5d578"
+    },
+    "sidebar": "814f3328",
+    "items": [
+      {
+        "content": "7661071f"
+      },
+      {
+        "content": "8717b14a"
+      }
+    ],
+    "tag": "22251b09",
+    "listMetadata": "39680a00"
+  },
+  "/slim/blog/tags/hola-783": {
+    "__comp": "6875c492",
+    "__context": {
+      "plugin": "8ad5d578"
+    },
+    "sidebar": "814f3328",
+    "items": [
+      {
+        "content": "925b3f96"
+      }
+    ],
+    "tag": "cb227d72",
+    "listMetadata": "69878e35"
+  },
+  "/slim/blog/welcome-98f": {
+    "__comp": "ccc49370",
+    "__context": {
+      "plugin": "8ad5d578"
+    },
+    "sidebar": "814f3328",
+    "content": "d9f32620"
+  },
+  "/slim/markdown-page-118": {
+    "__comp": "1f391b9e",
+    "__context": {
+      "plugin": "a267e42d"
+    },
+    "content": "393be207"
+  },
+  "/slim/docs-11e": {
+    "__comp": "1be78505",
+    "__context": {
+      "plugin": "2e67d4b8"
+    },
+    "versionMetadata": "935f2afb"
+  },
+  "/slim/docs/about/-8ab": {
+    "__comp": "17896441",
+    "content": "3cc55dcd"
+  },
+  "/slim/docs/about/CODE_OF_CONDUCT-194": {
+    "__comp": "17896441",
+    "content": "3b13db8a"
+  },
+  "/slim/docs/about/GOVERNANCE-e72": {
+    "__comp": "17896441",
+    "content": "6fb1fe71"
+  },
+  "/slim/docs/category/documentation-a19": {
+    "__comp": "14eb3368",
+    "categoryGeneratedIndex": "ac7d2b3d"
+  },
+  "/slim/docs/category/governance-2f5": {
+    "__comp": "14eb3368",
+    "categoryGeneratedIndex": "41244d51"
+  },
+  "/slim/docs/category/software-lifecycle-72b": {
+    "__comp": "14eb3368",
+    "categoryGeneratedIndex": "8276c122"
+  },
+  "/slim/docs/contribute/contributing/-029": {
+    "__comp": "17896441",
+    "content": "f1e6a692"
+  },
+  "/slim/docs/contribute/contributing/development-process-d2a": {
+    "__comp": "17896441",
+    "content": "0ee94099"
+  },
+  "/slim/docs/contribute/contributing/introduction-56b": {
+    "__comp": "17896441",
+    "content": "ed7f1a16"
+  },
+  "/slim/docs/contribute/contributing/know-before-contribute-dab": {
+    "__comp": "17896441",
+    "content": "403f595d"
+  },
+  "/slim/docs/contribute/contributing/ways-to-contribute-bd1": {
+    "__comp": "17896441",
+    "content": "4c9dd493"
+  },
+  "/slim/docs/contribute/submit-best-practice-129": {
+    "__comp": "17896441",
+    "content": "8facacb8"
+  },
+  "/slim/docs/guides/documentation/change-log/-961": {
+    "__comp": "17896441",
+    "content": "32de2db0"
+  },
+  "/slim/docs/guides/documentation/documentation-hosts/-934": {
+    "__comp": "17896441",
+    "content": "e9025b0e"
+  },
+  "/slim/docs/guides/documentation/documentation-hosts/trade-study-hostingdocs-user-2de": {
+    "__comp": "17896441",
+    "content": "c612d4a7"
+  },
+  "/slim/docs/guides/documentation/documentation-hosts/use-cases-fce": {
+    "__comp": "17896441",
+    "content": "f25b6166"
+  },
+  "/slim/docs/guides/documentation/readme/-919": {
+    "__comp": "17896441",
+    "content": "21821687"
+  },
+  "/slim/docs/guides/governance/contributions/-3c4": {
+    "__comp": "17896441",
+    "content": "e6422a4c"
+  },
+  "/slim/docs/guides/governance/contributions/change-request-templates/-bba": {
+    "__comp": "17896441",
+    "content": "79def820"
+  },
+  "/slim/docs/guides/governance/contributions/change-request-templates/github/PULL_REQUEST_TEMPLATE-257": {
+    "__comp": "17896441",
+    "content": "7cc12c13"
+  },
+  "/slim/docs/guides/governance/contributions/code-of-conduct/-0f4": {
+    "__comp": "17896441",
+    "content": "e0d5b996"
+  },
+  "/slim/docs/guides/governance/contributions/contributing-guide/-6ed": {
+    "__comp": "17896441",
+    "content": "4317fbf7"
+  },
+  "/slim/docs/guides/governance/contributions/developer-certificate-origin/-d6a": {
+    "__comp": "17896441",
+    "content": "7a245e29"
+  },
+  "/slim/docs/guides/governance/contributions/issue-templates/-081": {
+    "__comp": "17896441",
+    "content": "b4deb335"
+  },
+  "/slim/docs/guides/governance/contributions/issue-templates/github/bug_report-4e3": {
+    "__comp": "17896441",
+    "content": "4e24edc0"
+  },
+  "/slim/docs/guides/governance/contributions/issue-templates/github/new_feature-bc8": {
+    "__comp": "17896441",
+    "content": "d60fea20"
+  },
+  "/slim/docs/guides/governance/governance-model/-277": {
+    "__comp": "17896441",
+    "content": "6d6ba527"
+  },
+  "/slim/docs/guides/governance/governance-model/GOVERNANCE-e30": {
+    "__comp": "17896441",
+    "content": "d5368355"
+  },
+  "/slim/docs/guides/search-aa9": {
+    "__comp": "17896441",
+    "content": "c2d7cd96"
+  },
+  "/slim/docs/guides/software-lifecycle/application-starter-kits/-801": {
+    "__comp": "17896441",
+    "content": "2fb114a8"
+  },
+  "/slim/docs/guides/software-lifecycle/application-starter-kits/python-starter-kit/-d83": {
+    "__comp": "17896441",
+    "content": "3b327884"
+  },
+  "/slim/docs/guides/software-lifecycle/continuous-integration/-f7d": {
+    "__comp": "17896441",
+    "content": "d5decc06"
+  },
+  "/slim/docs/guides/software-lifecycle/continuous-integration/continuous-integration-frameworks/-a92": {
+    "__comp": "17896441",
+    "content": "47b29f95"
+  },
+  "/slim/docs/guides/software-lifecycle/continuous-integration/continuous-integration-frameworks/-4da": {
+    "__comp": "17896441",
+    "content": "35e78889"
+  },
+  "/slim/docs/guides/software-lifecycle/continuous-integration/reference-architecture/-035": {
+    "__comp": "17896441",
+    "content": "b75dc861"
+  },
+  "/slim/docs/guides/software-lifecycle/continuous-testing/-27d": {
+    "__comp": "17896441",
+    "content": "2f60f69a"
+  },
+  "/slim/docs/guides/software-lifecycle/continuous-testing/testing-frameworks-fde": {
+    "__comp": "17896441",
+    "content": "b741a796"
+  },
+  "/slim/docs/guides/software-lifecycle/security/-526": {
+    "__comp": "17896441",
+    "content": "e553889d"
+  },
+  "/slim/docs/guides/software-lifecycle/security/dependabot/-be7": {
+    "__comp": "17896441",
+    "content": "cc9f695b"
+  },
+  "/slim/docs/guides/software-lifecycle/security/secrets-detection/-853": {
+    "__comp": "17896441",
+    "content": "684aec4d"
+  },
+  "/slim/-17b": {
+    "__comp": "c4f5d8e4",
+    "__context": {
+      "plugin": "a267e42d"
+    },
+    "config": "5e9f5e1a"
+  }
+}

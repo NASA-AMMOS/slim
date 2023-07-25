@@ -1,0 +1,20 @@
+{
+  "unversionedId": "contribute/CONTRIBUTING",
+  "id": "contribute/CONTRIBUTING",
+  "title": "Contributing to SLIM",
+  "description": "Thanks for taking the time to consider contributing! We very much appreciate your time and effort. This document outlines the many ways you can contribute to our project, and provides detailed guidance on best practices. We look forward to your help!",
+  "source": "@site/docs/contribute/CONTRIBUTING.md",
+  "sourceDirName": "contribute",
+  "slug": "/contribute/CONTRIBUTING",
+  "permalink": "/slim/docs/contribute/CONTRIBUTING",
+  "draft": false,
+  "editUrl": "https://github.com/facebook/docusaurus/tree/main/packages/create-docusaurus/templates/shared/docs/contribute/CONTRIBUTING.md",
+  "tags": [],
+  "version": "current",
+  "frontMatter": {},
+  "sidebar": "contributeSidebar",
+  "next": {
+    "title": "Submit a Best Practice Guide",
+    "permalink": "/slim/docs/contribute/submit-best-practice"
+  }
+}

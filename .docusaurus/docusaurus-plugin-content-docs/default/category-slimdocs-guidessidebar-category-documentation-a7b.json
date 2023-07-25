@@ -1,0 +1,16 @@
+{
+  "title": "Documentation",
+  "description": "Documentation Best Practices.",
+  "slug": "/category/documentation",
+  "permalink": "/slim/docs/category/documentation",
+  "navigation": {
+    "previous": {
+      "title": "[INSERT PROJECT NAME] Project Governance",
+      "permalink": "/slim/docs/guides/governance/governance-model/GOVERNANCE"
+    },
+    "next": {
+      "title": "Change Log",
+      "permalink": "/slim/docs/guides/documentation/change-log/"
+    }
+  }
+}

@@ -1,0 +1,24 @@
+{
+  "unversionedId": "guides/software-lifecycle/continuous-integration/README",
+  "id": "guides/software-lifecycle/continuous-integration/README",
+  "title": "Continuous Integration",
+  "description": "This this guide, we explore best practices for continuous integration - including exploring scenarios for build integration, publishing test results and releasing compiled software.",
+  "source": "@site/docs/guides/software-lifecycle/continuous-integration/README.md",
+  "sourceDirName": "guides/software-lifecycle/continuous-integration",
+  "slug": "/guides/software-lifecycle/continuous-integration/",
+  "permalink": "/slim/docs/guides/software-lifecycle/continuous-integration/",
+  "draft": false,
+  "editUrl": "https://github.com/facebook/docusaurus/tree/main/packages/create-docusaurus/templates/shared/docs/guides/software-lifecycle/continuous-integration/README.md",
+  "tags": [],
+  "version": "current",
+  "frontMatter": {},
+  "sidebar": "guidesSidebar",
+  "previous": {
+    "title": "Python Starter Kit",
+    "permalink": "/slim/docs/guides/software-lifecycle/application-starter-kits/python-starter-kit/"
+  },
+  "next": {
+    "title": "Continuous Integration Frameworks",
+    "permalink": "/slim/docs/guides/software-lifecycle/continuous-integration/continuous-integration-frameworks/"
+  }
+}

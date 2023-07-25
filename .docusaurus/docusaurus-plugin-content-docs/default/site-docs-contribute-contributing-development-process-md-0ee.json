@@ -1,0 +1,27 @@
+{
+  "unversionedId": "contribute/contributing/development-process",
+  "id": "contribute/contributing/development-process",
+  "title": "Our Development Process",
+  "description": "Our project integrates contributions from many people, and so we'd like to outline a process you can use to visualize how your contributions may be integrated if you provide something.",
+  "source": "@site/docs/contribute/contributing/development-process.md",
+  "sourceDirName": "contribute/contributing",
+  "slug": "/contribute/contributing/development-process",
+  "permalink": "/slim/docs/contribute/contributing/development-process",
+  "draft": false,
+  "editUrl": "https://github.com/facebook/docusaurus/tree/main/packages/create-docusaurus/templates/shared/docs/contribute/contributing/development-process.md",
+  "tags": [],
+  "version": "current",
+  "sidebarPosition": 2,
+  "frontMatter": {
+    "sidebar_position": 2
+  },
+  "sidebar": "contributeSidebar",
+  "previous": {
+    "title": "Know Before you Contribute",
+    "permalink": "/slim/docs/contribute/contributing/know-before-contribute"
+  },
+  "next": {
+    "title": "Ways to Contribute",
+    "permalink": "/slim/docs/contribute/contributing/ways-to-contribute"
+  }
+}

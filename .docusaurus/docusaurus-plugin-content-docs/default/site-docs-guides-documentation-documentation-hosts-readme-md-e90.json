@@ -1,0 +1,24 @@
+{
+  "unversionedId": "guides/documentation/documentation-hosts/README",
+  "id": "guides/documentation/documentation-hosts/README",
+  "title": "Documentation Hosts",
+  "description": "Use Cases",
+  "source": "@site/docs/guides/documentation/documentation-hosts/README.md",
+  "sourceDirName": "guides/documentation/documentation-hosts",
+  "slug": "/guides/documentation/documentation-hosts/",
+  "permalink": "/slim/docs/guides/documentation/documentation-hosts/",
+  "draft": false,
+  "editUrl": "https://github.com/facebook/docusaurus/tree/main/packages/create-docusaurus/templates/shared/docs/guides/documentation/documentation-hosts/README.md",
+  "tags": [],
+  "version": "current",
+  "frontMatter": {},
+  "sidebar": "guidesSidebar",
+  "previous": {
+    "title": "Change Log",
+    "permalink": "/slim/docs/guides/documentation/change-log/"
+  },
+  "next": {
+    "title": "Docs Hosting Trade Study",
+    "permalink": "/slim/docs/guides/documentation/documentation-hosts/trade-study-hostingdocs-user"
+  }
+}

@@ -1,0 +1,24 @@
+{
+  "unversionedId": "guides/software-lifecycle/security/dependabot/README",
+  "id": "guides/software-lifecycle/security/dependabot/README",
+  "title": "Dependabot",
+  "description": "A GitHub ecosystem tool for dependency version and security vulnerability analysis.",
+  "source": "@site/docs/guides/software-lifecycle/security/dependabot/README.md",
+  "sourceDirName": "guides/software-lifecycle/security/dependabot",
+  "slug": "/guides/software-lifecycle/security/dependabot/",
+  "permalink": "/slim/docs/guides/software-lifecycle/security/dependabot/",
+  "draft": false,
+  "editUrl": "https://github.com/facebook/docusaurus/tree/main/packages/create-docusaurus/templates/shared/docs/guides/software-lifecycle/security/dependabot/README.md",
+  "tags": [],
+  "version": "current",
+  "frontMatter": {},
+  "sidebar": "guidesSidebar",
+  "previous": {
+    "title": "Security",
+    "permalink": "/slim/docs/guides/software-lifecycle/security/"
+  },
+  "next": {
+    "title": "Secrets Detection",
+    "permalink": "/slim/docs/guides/software-lifecycle/security/secrets-detection/"
+  }
+}

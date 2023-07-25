@@ -1,0 +1,16 @@
+{
+  "title": "Governance",
+  "description": "Governance Best Practices.",
+  "slug": "/category/governance",
+  "permalink": "/docs/category/governance",
+  "navigation": {
+    "previous": {
+      "title": "Secrets Detection",
+      "permalink": "/docs/guides/software-lifecycle/security/secrets-detection/"
+    },
+    "next": {
+      "title": "Contributions",
+      "permalink": "/docs/guides/governance/contributions/"
+    }
+  }
+}

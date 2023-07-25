@@ -1,3 +1,0 @@
-# Trade Studies
-
-Nothing here yet, come back soon... 

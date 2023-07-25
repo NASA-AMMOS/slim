@@ -1,3 +1,0 @@
-# Reference Architectures
-
-Nothing here yet, come back soon... 

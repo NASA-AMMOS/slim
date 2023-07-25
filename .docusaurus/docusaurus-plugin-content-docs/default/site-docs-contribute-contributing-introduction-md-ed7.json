@@ -1,0 +1,27 @@
+{
+  "unversionedId": "contribute/contributing/introduction",
+  "id": "contribute/contributing/introduction",
+  "title": "Introduction",
+  "description": "SLIM is a joint, community-based effort at collective software process improvements. Therefore, we need your help! Here's the basics on contributing:",
+  "source": "@site/docs/contribute/contributing/introduction.md",
+  "sourceDirName": "contribute/contributing",
+  "slug": "/contribute/contributing/introduction",
+  "permalink": "/slim/docs/contribute/contributing/introduction",
+  "draft": false,
+  "editUrl": "https://github.com/facebook/docusaurus/tree/main/packages/create-docusaurus/templates/shared/docs/contribute/contributing/introduction.md",
+  "tags": [],
+  "version": "current",
+  "sidebarPosition": 0,
+  "frontMatter": {
+    "sidebar_position": 0
+  },
+  "sidebar": "contributeSidebar",
+  "previous": {
+    "title": "Contributing",
+    "permalink": "/slim/docs/contribute/contributing/"
+  },
+  "next": {
+    "title": "Know Before you Contribute",
+    "permalink": "/slim/docs/contribute/contributing/know-before-contribute"
+  }
+}

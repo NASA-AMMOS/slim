@@ -1,0 +1,20 @@
+{
+  "unversionedId": "contribute/submit-best-practice",
+  "id": "contribute/submit-best-practice",
+  "title": "Submit a Best Practice Guide",
+  "description": "1⃣️ Find or Make a Ticket",
+  "source": "@site/docs/contribute/submit-best-practice.md",
+  "sourceDirName": "contribute",
+  "slug": "/contribute/submit-best-practice",
+  "permalink": "/slim/docs/contribute/submit-best-practice",
+  "draft": false,
+  "editUrl": "https://github.com/facebook/docusaurus/tree/main/packages/create-docusaurus/templates/shared/docs/contribute/submit-best-practice.md",
+  "tags": [],
+  "version": "current",
+  "frontMatter": {},
+  "sidebar": "contributeSidebar",
+  "previous": {
+    "title": "Ways to Contribute",
+    "permalink": "/slim/docs/contribute/contributing/ways-to-contribute"
+  }
+}
