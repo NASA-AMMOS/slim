@@ -120,7 +120,7 @@ pip install git+https://github.com/NASA-AMMOS/slim-detect-secrets.git@exp
 
 2. Scan all local files from current directory and output the result as a baseline file
 ```bash
-detect-secrets scan ./ --all-files --exclude-files '.secrets.*' --exclude-files '.git*' > .secrets.baseline
+detect-secrets scan ./ --all-files --disable-plugin AbsolutePathDetectorExperimental --exclude-files '.secrets.*' --exclude-files '.git*' > .secrets.baseline
 ```
 Here it scans all the local files from current directory, but excludes `.git` directory and `.secrets` baseline files from scanning to reduce false positive. Make modifications when necessary.
 
@@ -323,7 +323,7 @@ jobs:
           cp .secrets.baseline .secrets.new
 
           # find the secrets in the repository
-          detect-secrets scan --baseline .secrets.new --exclude-files '.secrets.*' --exclude-files '.git*'
+          detect-secrets scan --disable-plugin AbsolutePathDetectorExperimental --baseline .secrets.new --exclude-files '.secrets.*' --exclude-files '.git*'
                
           # if there is any difference between the known and newly detected secrets, break the build
           # Function to compare secrets without listing them
