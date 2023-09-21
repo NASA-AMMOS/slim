@@ -5,8 +5,8 @@
   "permalink": "/slim/docs/category/documentation",
   "navigation": {
     "previous": {
-      "title": "[INSERT PROJECT NAME] Project Governance",
-      "permalink": "/slim/docs/guides/governance/governance-model/GOVERNANCE"
+      "title": "GOVERNANCE-TEMPLATE",
+      "permalink": "/slim/docs/guides/governance/governance-model/GOVERNANCE-TEMPLATE"
     },
     "next": {
       "title": "Change Log",

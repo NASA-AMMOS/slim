@@ -7,8 +7,8 @@ Issue tickets help development teams keep the language of bug, feature, and othe
 GitHub issue markdown templates provide pre-filled structure, in markdown format, for people to enter issue information. Please see the [documentation](https://docs.github.com/en/communities/using-templates-to-encourage-useful-issues-and-pull-requests/about-issue-and-pull-request-templates) on GitHub templates for more details.
 
 Starter Kits:
-- [Bug Report](./github/bug_report)
-- [New Feature](./github/new_feature)
+- [Bug Report](./github/bug_report.md)
+- [New Feature](./github/new_feature.md)
 
 To leverage these template, make sure to do the following:
 1. Talk with your team about leveraging this template, and seek wide agreement before you adopt
@@ -26,8 +26,8 @@ GitHub issue forms are a method to provide a _form like_ experience when filling
 ⚠️ NOTE: GitHub issue forms are currently in beta. When using a third-party issue tracking system like ZenHub, the templates will not be usable in that system. 
 
 Starter Kits:
-- [Bug Report](./github/bug_report.yml)
-- [New Feature](./github/new_feature.yml)
+- [Bug Report](./github/bug_report.yml.md)
+- [New Feature](./github/new_feature.yml.md)
 
 
 To leverage these template, make sure to do the following:

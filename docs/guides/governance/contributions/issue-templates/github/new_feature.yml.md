@@ -1,3 +1,4 @@
+```yml
 name: New Feature Form
 description: Suggest a new feature for us to implement
 title: "[New Feature]: "
@@ -46,3 +47,4 @@ body:
       value: "I need or want [...]"
     validations:
       required: true
+```

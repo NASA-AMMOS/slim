@@ -1,3 +1,4 @@
+```markdown
 <!-- Header block for project -->
 <hr>
 
@@ -156,4 +157,4 @@ Key points of contact are: [@github-user-1](link to github profile) [@github-use
 -->
 
 <!-- ☝️ Replace with the key individuals who should be contacted for questions ☝️ -->
-
+```

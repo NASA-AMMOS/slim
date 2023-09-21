@@ -8,7 +8,7 @@
   "slug": "/guides/documentation/readme/",
   "permalink": "/slim/docs/guides/documentation/readme/",
   "draft": false,
-  "editUrl": "https://github.com/facebook/docusaurus/tree/main/packages/create-docusaurus/templates/shared/docs/guides/documentation/readme/index.md",
+  "editUrl": "https://github.com/nasa-ammos/slim/tree/main/docs/guides/documentation/readme/index.md",
   "tags": [],
   "version": "current",
   "frontMatter": {},
@@ -16,5 +16,9 @@
   "previous": {
     "title": "Docs Use Cases",
     "permalink": "/slim/docs/guides/documentation/documentation-hosts/use-cases"
+  },
+  "next": {
+    "title": "README-TEMPLATE",
+    "permalink": "/slim/docs/guides/documentation/readme/README-TEMPLATE"
   }
 }

@@ -1,24 +1,24 @@
 {
   "unversionedId": "guides/governance/contributions/contributing-guide/CONTRIBUTING",
   "id": "guides/governance/contributions/contributing-guide/CONTRIBUTING",
-  "title": "Contributing Guide",
-  "description": "Thanks for taking the time to consider contributing! We very much appreciate your time and effort. This document outlines the many ways you can contribute to our project, and provides detailed guidance on best practices. We look forward to your help!",
+  "title": "CONTRIBUTING",
+  "description": "",
   "source": "@site/docs/guides/governance/contributions/contributing-guide/CONTRIBUTING.md",
   "sourceDirName": "guides/governance/contributions/contributing-guide",
   "slug": "/guides/governance/contributions/contributing-guide/CONTRIBUTING",
-  "permalink": "/docs/guides/governance/contributions/contributing-guide/CONTRIBUTING",
+  "permalink": "/slim/docs/guides/governance/contributions/contributing-guide/CONTRIBUTING",
   "draft": false,
-  "editUrl": "https://github.com/facebook/docusaurus/tree/main/packages/create-docusaurus/templates/shared/docs/guides/governance/contributions/contributing-guide/CONTRIBUTING.md",
+  "editUrl": "https://github.com/nasa-ammos/slim/tree/main/docs/guides/governance/contributions/contributing-guide/CONTRIBUTING.md",
   "tags": [],
   "version": "current",
   "frontMatter": {},
   "sidebar": "guidesSidebar",
   "previous": {
     "title": "Contributing Guide",
-    "permalink": "/docs/guides/governance/contributions/contributing-guide/"
+    "permalink": "/slim/docs/guides/governance/contributions/contributing-guide/"
   },
   "next": {
     "title": "Developer Certificate of Origin (DCO)",
-    "permalink": "/docs/guides/governance/contributions/developer-certificate-origin/"
+    "permalink": "/slim/docs/guides/governance/contributions/developer-certificate-origin/"
   }
 }

@@ -1,3 +1,4 @@
+```markdown
 ---
 name: New Feature
 about: Suggest a new feature for us to implement
@@ -32,3 +33,4 @@ Ex. I'm frustrated when [...] happens as documented in issue-XYZ
 > A clear and concise description of your request. 
 
 Ex. I need or want [...]
+```

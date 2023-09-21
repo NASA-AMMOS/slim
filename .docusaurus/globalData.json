@@ -81,6 +81,11 @@
               "sidebar": "guidesSidebar"
             },
             {
+              "id": "guides/documentation/readme/README-TEMPLATE",
+              "path": "/slim/docs/guides/documentation/readme/README-TEMPLATE",
+              "sidebar": "guidesSidebar"
+            },
+            {
               "id": "guides/governance/contributions/change-request-templates/github/PULL_REQUEST_TEMPLATE",
               "path": "/slim/docs/guides/governance/contributions/change-request-templates/github/PULL_REQUEST_TEMPLATE",
               "sidebar": "guidesSidebar"
@@ -93,6 +98,11 @@
             {
               "id": "guides/governance/contributions/code-of-conduct/README",
               "path": "/slim/docs/guides/governance/contributions/code-of-conduct/",
+              "sidebar": "guidesSidebar"
+            },
+            {
+              "id": "guides/governance/contributions/contributing-guide/CONTRIBUTING",
+              "path": "/slim/docs/guides/governance/contributions/contributing-guide/CONTRIBUTING",
               "sidebar": "guidesSidebar"
             },
             {
@@ -111,8 +121,18 @@
               "sidebar": "guidesSidebar"
             },
             {
+              "id": "guides/governance/contributions/issue-templates/github/bug_report.yml",
+              "path": "/slim/docs/guides/governance/contributions/issue-templates/github/bug_report.yml",
+              "sidebar": "guidesSidebar"
+            },
+            {
               "id": "guides/governance/contributions/issue-templates/github/new_feature",
               "path": "/slim/docs/guides/governance/contributions/issue-templates/github/new_feature",
+              "sidebar": "guidesSidebar"
+            },
+            {
+              "id": "guides/governance/contributions/issue-templates/github/new_feature.yml",
+              "path": "/slim/docs/guides/governance/contributions/issue-templates/github/new_feature.yml",
               "sidebar": "guidesSidebar"
             },
             {
@@ -126,8 +146,8 @@
               "sidebar": "guidesSidebar"
             },
             {
-              "id": "guides/governance/governance-model/GOVERNANCE",
-              "path": "/slim/docs/guides/governance/governance-model/GOVERNANCE",
+              "id": "guides/governance/governance-model/GOVERNANCE-TEMPLATE",
+              "path": "/slim/docs/guides/governance/governance-model/GOVERNANCE-TEMPLATE",
               "sidebar": "guidesSidebar"
             },
             {

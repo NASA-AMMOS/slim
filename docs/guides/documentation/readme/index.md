@@ -7,7 +7,7 @@ A `README.md` template that can be used to help developers and users understand 
 This template is meant for general software projects `README.md` files, including both interpreted as well as compiled language code. 
 
 Starter Kit:
-- [Markdown](./README.txt) of template
+- [Markdown](./README-TEMPLATE.md) of template
 - [Demo](https://github.com/riverma/terraformly/blob/main/README.md) of template
 
 To leverage this template, make sure to do the following:

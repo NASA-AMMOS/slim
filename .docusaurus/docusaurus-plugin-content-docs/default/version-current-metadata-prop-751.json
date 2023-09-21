@@ -147,10 +147,19 @@
                 "docId": "guides/governance/contributions/code-of-conduct/README"
               },
               {
-                "type": "link",
+                "type": "category",
                 "label": "Contributing Guide",
-                "href": "/slim/docs/guides/governance/contributions/contributing-guide/",
-                "docId": "guides/governance/contributions/contributing-guide/README"
+                "collapsible": true,
+                "collapsed": true,
+                "items": [
+                  {
+                    "type": "link",
+                    "label": "CONTRIBUTING",
+                    "href": "/slim/docs/guides/governance/contributions/contributing-guide/CONTRIBUTING",
+                    "docId": "guides/governance/contributions/contributing-guide/CONTRIBUTING"
+                  }
+                ],
+                "href": "/slim/docs/guides/governance/contributions/contributing-guide/"
               },
               {
                 "type": "link",
@@ -172,15 +181,27 @@
                     "items": [
                       {
                         "type": "link",
-                        "label": "[Bug]: ",
+                        "label": "bug_report",
                         "href": "/slim/docs/guides/governance/contributions/issue-templates/github/bug_report",
                         "docId": "guides/governance/contributions/issue-templates/github/bug_report"
                       },
                       {
                         "type": "link",
-                        "label": "[New Feature]: ",
+                        "label": "bug_report.yml",
+                        "href": "/slim/docs/guides/governance/contributions/issue-templates/github/bug_report.yml",
+                        "docId": "guides/governance/contributions/issue-templates/github/bug_report.yml"
+                      },
+                      {
+                        "type": "link",
+                        "label": "new_feature",
                         "href": "/slim/docs/guides/governance/contributions/issue-templates/github/new_feature",
                         "docId": "guides/governance/contributions/issue-templates/github/new_feature"
+                      },
+                      {
+                        "type": "link",
+                        "label": "new_feature.yml",
+                        "href": "/slim/docs/guides/governance/contributions/issue-templates/github/new_feature.yml",
+                        "docId": "guides/governance/contributions/issue-templates/github/new_feature.yml"
                       }
                     ]
                   }
@@ -198,9 +219,9 @@
             "items": [
               {
                 "type": "link",
-                "label": "[INSERT PROJECT NAME] Project Governance",
-                "href": "/slim/docs/guides/governance/governance-model/GOVERNANCE",
-                "docId": "guides/governance/governance-model/GOVERNANCE"
+                "label": "GOVERNANCE-TEMPLATE",
+                "href": "/slim/docs/guides/governance/governance-model/GOVERNANCE-TEMPLATE",
+                "docId": "guides/governance/governance-model/GOVERNANCE-TEMPLATE"
               }
             ],
             "href": "/slim/docs/guides/governance/governance-model/"
@@ -242,10 +263,19 @@
             "href": "/slim/docs/guides/documentation/documentation-hosts/"
           },
           {
-            "type": "link",
+            "type": "category",
             "label": "README Template",
-            "href": "/slim/docs/guides/documentation/readme/",
-            "docId": "guides/documentation/readme/index"
+            "collapsible": true,
+            "collapsed": true,
+            "items": [
+              {
+                "type": "link",
+                "label": "README-TEMPLATE",
+                "href": "/slim/docs/guides/documentation/readme/README-TEMPLATE",
+                "docId": "guides/documentation/readme/README-TEMPLATE"
+              }
+            ],
+            "href": "/slim/docs/guides/documentation/readme/"
           }
         ],
         "href": "/slim/docs/category/documentation"
@@ -398,10 +428,16 @@
       "description": "A README.md template that can be used to help developers and users understand your repository concisely and clearly.",
       "sidebar": "guidesSidebar"
     },
+    "guides/documentation/readme/README-TEMPLATE": {
+      "id": "guides/documentation/readme/README-TEMPLATE",
+      "title": "README-TEMPLATE",
+      "description": "",
+      "sidebar": "guidesSidebar"
+    },
     "guides/governance/contributions/change-request-templates/github/PULL_REQUEST_TEMPLATE": {
       "id": "guides/governance/contributions/change-request-templates/github/PULL_REQUEST_TEMPLATE",
       "title": "PULL_REQUEST_TEMPLATE",
-      "description": "Purpose",
+      "description": "",
       "sidebar": "guidesSidebar"
     },
     "guides/governance/contributions/change-request-templates/README": {
@@ -414,6 +450,12 @@
       "id": "guides/governance/contributions/code-of-conduct/README",
       "title": "Code of Conduct",
       "description": "The code of conduct is typically a document that provides guidance to a project team on how the team members should interact with each other. It identifies behaviors that are helpful for building a better development community, provides contact information for addressing grievances (should they arise), and finally lists key responses that team leadership should / will take for dealing with unexpected behavior. Below are some examples to expedite the incorporation of a code of conduct.",
+      "sidebar": "guidesSidebar"
+    },
+    "guides/governance/contributions/contributing-guide/CONTRIBUTING": {
+      "id": "guides/governance/contributions/contributing-guide/CONTRIBUTING",
+      "title": "CONTRIBUTING",
+      "description": "",
       "sidebar": "guidesSidebar"
     },
     "guides/governance/contributions/contributing-guide/README": {
@@ -430,14 +472,26 @@
     },
     "guides/governance/contributions/issue-templates/github/bug_report": {
       "id": "guides/governance/contributions/issue-templates/github/bug_report",
-      "title": "[Bug]: ",
-      "description": "Checked for duplicates",
+      "title": "bug_report",
+      "description": "",
+      "sidebar": "guidesSidebar"
+    },
+    "guides/governance/contributions/issue-templates/github/bug_report.yml": {
+      "id": "guides/governance/contributions/issue-templates/github/bug_report.yml",
+      "title": "bug_report.yml",
+      "description": "",
       "sidebar": "guidesSidebar"
     },
     "guides/governance/contributions/issue-templates/github/new_feature": {
       "id": "guides/governance/contributions/issue-templates/github/new_feature",
-      "title": "[New Feature]: ",
-      "description": "Checked for duplicates",
+      "title": "new_feature",
+      "description": "",
+      "sidebar": "guidesSidebar"
+    },
+    "guides/governance/contributions/issue-templates/github/new_feature.yml": {
+      "id": "guides/governance/contributions/issue-templates/github/new_feature.yml",
+      "title": "new_feature.yml",
+      "description": "",
       "sidebar": "guidesSidebar"
     },
     "guides/governance/contributions/issue-templates/README": {
@@ -452,10 +506,10 @@
       "description": "",
       "sidebar": "guidesSidebar"
     },
-    "guides/governance/governance-model/GOVERNANCE": {
-      "id": "guides/governance/governance-model/GOVERNANCE",
-      "title": "[INSERT PROJECT NAME] Project Governance",
-      "description": "This governance model aims to create an open source community that encourages transparency, contributions, and collaboration, but maintains sound technical and quality standards. Our goal is to build a community comprised of members across the [INSERT PROJECT DOMAIN] community and beyond, including from private organizations, universities, government organizations, and international organizations.",
+    "guides/governance/governance-model/GOVERNANCE-TEMPLATE": {
+      "id": "guides/governance/governance-model/GOVERNANCE-TEMPLATE",
+      "title": "GOVERNANCE-TEMPLATE",
+      "description": "",
       "sidebar": "guidesSidebar"
     },
     "guides/governance/governance-model/README": {

@@ -11,8 +11,8 @@
           "className": "docs-version-current",
           "path": "/slim/docs",
           "tagsPath": "/slim/docs/tags",
-          "editUrl": "https://github.com/facebook/docusaurus/tree/main/packages/create-docusaurus/templates/shared/docs",
-          "editUrlLocalized": "https://github.com/facebook/docusaurus/tree/main/packages/create-docusaurus/templates/shared/i18n/en/docusaurus-plugin-content-docs/current",
+          "editUrl": "https://github.com/nasa-ammos/slim/tree/main/docs",
+          "editUrlLocalized": "https://github.com/nasa-ammos/slim/tree/main/i18n/en/docusaurus-plugin-content-docs/current",
           "isLast": true,
           "routePriority": -1,
           "sidebarFilePath": "/Users/rverma/src/slim/sidebars.js",
@@ -29,7 +29,7 @@
               "slug": "/about/CODE_OF_CONDUCT",
               "permalink": "/slim/docs/about/CODE_OF_CONDUCT",
               "draft": false,
-              "editUrl": "https://github.com/facebook/docusaurus/tree/main/packages/create-docusaurus/templates/shared/docs/about/CODE_OF_CONDUCT.md",
+              "editUrl": "https://github.com/nasa-ammos/slim/tree/main/docs/about/CODE_OF_CONDUCT.md",
               "tags": [],
               "version": "current",
               "frontMatter": {},
@@ -53,7 +53,7 @@
               "slug": "/about/GOVERNANCE",
               "permalink": "/slim/docs/about/GOVERNANCE",
               "draft": false,
-              "editUrl": "https://github.com/facebook/docusaurus/tree/main/packages/create-docusaurus/templates/shared/docs/about/GOVERNANCE.md",
+              "editUrl": "https://github.com/nasa-ammos/slim/tree/main/docs/about/GOVERNANCE.md",
               "tags": [],
               "version": "current",
               "frontMatter": {},
@@ -73,7 +73,7 @@
               "slug": "/about/",
               "permalink": "/slim/docs/about/",
               "draft": false,
-              "editUrl": "https://github.com/facebook/docusaurus/tree/main/packages/create-docusaurus/templates/shared/docs/about/README.md",
+              "editUrl": "https://github.com/nasa-ammos/slim/tree/main/docs/about/README.md",
               "tags": [],
               "version": "current",
               "sidebarPosition": 1,
@@ -96,7 +96,7 @@
               "slug": "/contribute/contributing/development-process",
               "permalink": "/slim/docs/contribute/contributing/development-process",
               "draft": false,
-              "editUrl": "https://github.com/facebook/docusaurus/tree/main/packages/create-docusaurus/templates/shared/docs/contribute/contributing/development-process.md",
+              "editUrl": "https://github.com/nasa-ammos/slim/tree/main/docs/contribute/contributing/development-process.md",
               "tags": [],
               "version": "current",
               "sidebarPosition": 2,
@@ -123,7 +123,7 @@
               "slug": "/contribute/contributing/",
               "permalink": "/slim/docs/contribute/contributing/",
               "draft": false,
-              "editUrl": "https://github.com/facebook/docusaurus/tree/main/packages/create-docusaurus/templates/shared/docs/contribute/contributing/index.md",
+              "editUrl": "https://github.com/nasa-ammos/slim/tree/main/docs/contribute/contributing/index.md",
               "tags": [],
               "version": "current",
               "frontMatter": {},
@@ -143,7 +143,7 @@
               "slug": "/contribute/contributing/introduction",
               "permalink": "/slim/docs/contribute/contributing/introduction",
               "draft": false,
-              "editUrl": "https://github.com/facebook/docusaurus/tree/main/packages/create-docusaurus/templates/shared/docs/contribute/contributing/introduction.md",
+              "editUrl": "https://github.com/nasa-ammos/slim/tree/main/docs/contribute/contributing/introduction.md",
               "tags": [],
               "version": "current",
               "sidebarPosition": 0,
@@ -170,7 +170,7 @@
               "slug": "/contribute/contributing/know-before-contribute",
               "permalink": "/slim/docs/contribute/contributing/know-before-contribute",
               "draft": false,
-              "editUrl": "https://github.com/facebook/docusaurus/tree/main/packages/create-docusaurus/templates/shared/docs/contribute/contributing/know-before-contribute.md",
+              "editUrl": "https://github.com/nasa-ammos/slim/tree/main/docs/contribute/contributing/know-before-contribute.md",
               "tags": [],
               "version": "current",
               "sidebarPosition": 1,
@@ -197,7 +197,7 @@
               "slug": "/contribute/contributing/ways-to-contribute",
               "permalink": "/slim/docs/contribute/contributing/ways-to-contribute",
               "draft": false,
-              "editUrl": "https://github.com/facebook/docusaurus/tree/main/packages/create-docusaurus/templates/shared/docs/contribute/contributing/ways-to-contribute.md",
+              "editUrl": "https://github.com/nasa-ammos/slim/tree/main/docs/contribute/contributing/ways-to-contribute.md",
               "tags": [],
               "version": "current",
               "sidebarPosition": 3,
@@ -224,7 +224,7 @@
               "slug": "/contribute/submit-best-practice",
               "permalink": "/slim/docs/contribute/submit-best-practice",
               "draft": false,
-              "editUrl": "https://github.com/facebook/docusaurus/tree/main/packages/create-docusaurus/templates/shared/docs/contribute/submit-best-practice.md",
+              "editUrl": "https://github.com/nasa-ammos/slim/tree/main/docs/contribute/submit-best-practice.md",
               "tags": [],
               "version": "current",
               "frontMatter": {},
@@ -244,7 +244,7 @@
               "slug": "/guides/documentation/change-log/",
               "permalink": "/slim/docs/guides/documentation/change-log/",
               "draft": false,
-              "editUrl": "https://github.com/facebook/docusaurus/tree/main/packages/create-docusaurus/templates/shared/docs/guides/documentation/change-log/README.md",
+              "editUrl": "https://github.com/nasa-ammos/slim/tree/main/docs/guides/documentation/change-log/README.md",
               "tags": [],
               "version": "current",
               "frontMatter": {},
@@ -268,7 +268,7 @@
               "slug": "/guides/documentation/documentation-hosts/",
               "permalink": "/slim/docs/guides/documentation/documentation-hosts/",
               "draft": false,
-              "editUrl": "https://github.com/facebook/docusaurus/tree/main/packages/create-docusaurus/templates/shared/docs/guides/documentation/documentation-hosts/README.md",
+              "editUrl": "https://github.com/nasa-ammos/slim/tree/main/docs/guides/documentation/documentation-hosts/README.md",
               "tags": [],
               "version": "current",
               "frontMatter": {},
@@ -292,7 +292,7 @@
               "slug": "/guides/documentation/documentation-hosts/trade-study-hostingdocs-user",
               "permalink": "/slim/docs/guides/documentation/documentation-hosts/trade-study-hostingdocs-user",
               "draft": false,
-              "editUrl": "https://github.com/facebook/docusaurus/tree/main/packages/create-docusaurus/templates/shared/docs/guides/documentation/documentation-hosts/trade-study-hostingdocs-user.md",
+              "editUrl": "https://github.com/nasa-ammos/slim/tree/main/docs/guides/documentation/documentation-hosts/trade-study-hostingdocs-user.md",
               "tags": [],
               "version": "current",
               "frontMatter": {
@@ -319,7 +319,7 @@
               "slug": "/guides/documentation/documentation-hosts/use-cases",
               "permalink": "/slim/docs/guides/documentation/documentation-hosts/use-cases",
               "draft": false,
-              "editUrl": "https://github.com/facebook/docusaurus/tree/main/packages/create-docusaurus/templates/shared/docs/guides/documentation/documentation-hosts/use-cases.md",
+              "editUrl": "https://github.com/nasa-ammos/slim/tree/main/docs/guides/documentation/documentation-hosts/use-cases.md",
               "tags": [],
               "version": "current",
               "frontMatter": {
@@ -346,7 +346,7 @@
               "slug": "/guides/documentation/readme/",
               "permalink": "/slim/docs/guides/documentation/readme/",
               "draft": false,
-              "editUrl": "https://github.com/facebook/docusaurus/tree/main/packages/create-docusaurus/templates/shared/docs/guides/documentation/readme/index.md",
+              "editUrl": "https://github.com/nasa-ammos/slim/tree/main/docs/guides/documentation/readme/index.md",
               "tags": [],
               "version": "current",
               "frontMatter": {},
@@ -354,19 +354,43 @@
               "previous": {
                 "title": "Docs Use Cases",
                 "permalink": "/slim/docs/guides/documentation/documentation-hosts/use-cases"
+              },
+              "next": {
+                "title": "README-TEMPLATE",
+                "permalink": "/slim/docs/guides/documentation/readme/README-TEMPLATE"
+              }
+            },
+            {
+              "unversionedId": "guides/documentation/readme/README-TEMPLATE",
+              "id": "guides/documentation/readme/README-TEMPLATE",
+              "title": "README-TEMPLATE",
+              "description": "",
+              "source": "@site/docs/guides/documentation/readme/README-TEMPLATE.md",
+              "sourceDirName": "guides/documentation/readme",
+              "slug": "/guides/documentation/readme/README-TEMPLATE",
+              "permalink": "/slim/docs/guides/documentation/readme/README-TEMPLATE",
+              "draft": false,
+              "editUrl": "https://github.com/nasa-ammos/slim/tree/main/docs/guides/documentation/readme/README-TEMPLATE.md",
+              "tags": [],
+              "version": "current",
+              "frontMatter": {},
+              "sidebar": "guidesSidebar",
+              "previous": {
+                "title": "README Template",
+                "permalink": "/slim/docs/guides/documentation/readme/"
               }
             },
             {
               "unversionedId": "guides/governance/contributions/change-request-templates/github/PULL_REQUEST_TEMPLATE",
               "id": "guides/governance/contributions/change-request-templates/github/PULL_REQUEST_TEMPLATE",
               "title": "PULL_REQUEST_TEMPLATE",
-              "description": "Purpose",
+              "description": "",
               "source": "@site/docs/guides/governance/contributions/change-request-templates/github/PULL_REQUEST_TEMPLATE.md",
               "sourceDirName": "guides/governance/contributions/change-request-templates/github",
               "slug": "/guides/governance/contributions/change-request-templates/github/PULL_REQUEST_TEMPLATE",
               "permalink": "/slim/docs/guides/governance/contributions/change-request-templates/github/PULL_REQUEST_TEMPLATE",
               "draft": false,
-              "editUrl": "https://github.com/facebook/docusaurus/tree/main/packages/create-docusaurus/templates/shared/docs/guides/governance/contributions/change-request-templates/github/PULL_REQUEST_TEMPLATE.md",
+              "editUrl": "https://github.com/nasa-ammos/slim/tree/main/docs/guides/governance/contributions/change-request-templates/github/PULL_REQUEST_TEMPLATE.md",
               "tags": [],
               "version": "current",
               "frontMatter": {},
@@ -390,7 +414,7 @@
               "slug": "/guides/governance/contributions/change-request-templates/",
               "permalink": "/slim/docs/guides/governance/contributions/change-request-templates/",
               "draft": false,
-              "editUrl": "https://github.com/facebook/docusaurus/tree/main/packages/create-docusaurus/templates/shared/docs/guides/governance/contributions/change-request-templates/README.md",
+              "editUrl": "https://github.com/nasa-ammos/slim/tree/main/docs/guides/governance/contributions/change-request-templates/README.md",
               "tags": [],
               "version": "current",
               "frontMatter": {},
@@ -414,7 +438,7 @@
               "slug": "/guides/governance/contributions/code-of-conduct/",
               "permalink": "/slim/docs/guides/governance/contributions/code-of-conduct/",
               "draft": false,
-              "editUrl": "https://github.com/facebook/docusaurus/tree/main/packages/create-docusaurus/templates/shared/docs/guides/governance/contributions/code-of-conduct/README.md",
+              "editUrl": "https://github.com/nasa-ammos/slim/tree/main/docs/guides/governance/contributions/code-of-conduct/README.md",
               "tags": [],
               "version": "current",
               "frontMatter": {},
@@ -429,6 +453,30 @@
               }
             },
             {
+              "unversionedId": "guides/governance/contributions/contributing-guide/CONTRIBUTING",
+              "id": "guides/governance/contributions/contributing-guide/CONTRIBUTING",
+              "title": "CONTRIBUTING",
+              "description": "",
+              "source": "@site/docs/guides/governance/contributions/contributing-guide/CONTRIBUTING.md",
+              "sourceDirName": "guides/governance/contributions/contributing-guide",
+              "slug": "/guides/governance/contributions/contributing-guide/CONTRIBUTING",
+              "permalink": "/slim/docs/guides/governance/contributions/contributing-guide/CONTRIBUTING",
+              "draft": false,
+              "editUrl": "https://github.com/nasa-ammos/slim/tree/main/docs/guides/governance/contributions/contributing-guide/CONTRIBUTING.md",
+              "tags": [],
+              "version": "current",
+              "frontMatter": {},
+              "sidebar": "guidesSidebar",
+              "previous": {
+                "title": "Contributing Guide",
+                "permalink": "/slim/docs/guides/governance/contributions/contributing-guide/"
+              },
+              "next": {
+                "title": "Developer Certificate of Origin (DCO)",
+                "permalink": "/slim/docs/guides/governance/contributions/developer-certificate-origin/"
+              }
+            },
+            {
               "unversionedId": "guides/governance/contributions/contributing-guide/README",
               "id": "guides/governance/contributions/contributing-guide/README",
               "title": "Contributing Guide",
@@ -438,7 +486,7 @@
               "slug": "/guides/governance/contributions/contributing-guide/",
               "permalink": "/slim/docs/guides/governance/contributions/contributing-guide/",
               "draft": false,
-              "editUrl": "https://github.com/facebook/docusaurus/tree/main/packages/create-docusaurus/templates/shared/docs/guides/governance/contributions/contributing-guide/README.md",
+              "editUrl": "https://github.com/nasa-ammos/slim/tree/main/docs/guides/governance/contributions/contributing-guide/README.md",
               "tags": [],
               "version": "current",
               "frontMatter": {},
@@ -448,8 +496,8 @@
                 "permalink": "/slim/docs/guides/governance/contributions/code-of-conduct/"
               },
               "next": {
-                "title": "Developer Certificate of Origin (DCO)",
-                "permalink": "/slim/docs/guides/governance/contributions/developer-certificate-origin/"
+                "title": "CONTRIBUTING",
+                "permalink": "/slim/docs/guides/governance/contributions/contributing-guide/CONTRIBUTING"
               }
             },
             {
@@ -462,14 +510,14 @@
               "slug": "/guides/governance/contributions/developer-certificate-origin/",
               "permalink": "/slim/docs/guides/governance/contributions/developer-certificate-origin/",
               "draft": false,
-              "editUrl": "https://github.com/facebook/docusaurus/tree/main/packages/create-docusaurus/templates/shared/docs/guides/governance/contributions/developer-certificate-origin/README.md",
+              "editUrl": "https://github.com/nasa-ammos/slim/tree/main/docs/guides/governance/contributions/developer-certificate-origin/README.md",
               "tags": [],
               "version": "current",
               "frontMatter": {},
               "sidebar": "guidesSidebar",
               "previous": {
-                "title": "Contributing Guide",
-                "permalink": "/slim/docs/guides/governance/contributions/contributing-guide/"
+                "title": "CONTRIBUTING",
+                "permalink": "/slim/docs/guides/governance/contributions/contributing-guide/CONTRIBUTING"
               },
               "next": {
                 "title": "Issue Templates",
@@ -479,57 +527,93 @@
             {
               "unversionedId": "guides/governance/contributions/issue-templates/github/bug_report",
               "id": "guides/governance/contributions/issue-templates/github/bug_report",
-              "title": "[Bug]: ",
-              "description": "Checked for duplicates",
+              "title": "bug_report",
+              "description": "",
               "source": "@site/docs/guides/governance/contributions/issue-templates/github/bug_report.md",
               "sourceDirName": "guides/governance/contributions/issue-templates/github",
               "slug": "/guides/governance/contributions/issue-templates/github/bug_report",
               "permalink": "/slim/docs/guides/governance/contributions/issue-templates/github/bug_report",
               "draft": false,
-              "editUrl": "https://github.com/facebook/docusaurus/tree/main/packages/create-docusaurus/templates/shared/docs/guides/governance/contributions/issue-templates/github/bug_report.md",
+              "editUrl": "https://github.com/nasa-ammos/slim/tree/main/docs/guides/governance/contributions/issue-templates/github/bug_report.md",
               "tags": [],
               "version": "current",
-              "frontMatter": {
-                "name": "Bug Report",
-                "about": "Report a bug to help us improve",
-                "title": "[Bug]: ",
-                "labels": "bug",
-                "assignees": ""
-              },
+              "frontMatter": {},
               "sidebar": "guidesSidebar",
               "previous": {
                 "title": "Issue Templates",
                 "permalink": "/slim/docs/guides/governance/contributions/issue-templates/"
               },
               "next": {
-                "title": "[New Feature]: ",
+                "title": "bug_report.yml",
+                "permalink": "/slim/docs/guides/governance/contributions/issue-templates/github/bug_report.yml"
+              }
+            },
+            {
+              "unversionedId": "guides/governance/contributions/issue-templates/github/bug_report.yml",
+              "id": "guides/governance/contributions/issue-templates/github/bug_report.yml",
+              "title": "bug_report.yml",
+              "description": "",
+              "source": "@site/docs/guides/governance/contributions/issue-templates/github/bug_report.yml.md",
+              "sourceDirName": "guides/governance/contributions/issue-templates/github",
+              "slug": "/guides/governance/contributions/issue-templates/github/bug_report.yml",
+              "permalink": "/slim/docs/guides/governance/contributions/issue-templates/github/bug_report.yml",
+              "draft": false,
+              "editUrl": "https://github.com/nasa-ammos/slim/tree/main/docs/guides/governance/contributions/issue-templates/github/bug_report.yml.md",
+              "tags": [],
+              "version": "current",
+              "frontMatter": {},
+              "sidebar": "guidesSidebar",
+              "previous": {
+                "title": "bug_report",
+                "permalink": "/slim/docs/guides/governance/contributions/issue-templates/github/bug_report"
+              },
+              "next": {
+                "title": "new_feature",
                 "permalink": "/slim/docs/guides/governance/contributions/issue-templates/github/new_feature"
               }
             },
             {
               "unversionedId": "guides/governance/contributions/issue-templates/github/new_feature",
               "id": "guides/governance/contributions/issue-templates/github/new_feature",
-              "title": "[New Feature]: ",
-              "description": "Checked for duplicates",
+              "title": "new_feature",
+              "description": "",
               "source": "@site/docs/guides/governance/contributions/issue-templates/github/new_feature.md",
               "sourceDirName": "guides/governance/contributions/issue-templates/github",
               "slug": "/guides/governance/contributions/issue-templates/github/new_feature",
               "permalink": "/slim/docs/guides/governance/contributions/issue-templates/github/new_feature",
               "draft": false,
-              "editUrl": "https://github.com/facebook/docusaurus/tree/main/packages/create-docusaurus/templates/shared/docs/guides/governance/contributions/issue-templates/github/new_feature.md",
+              "editUrl": "https://github.com/nasa-ammos/slim/tree/main/docs/guides/governance/contributions/issue-templates/github/new_feature.md",
               "tags": [],
               "version": "current",
-              "frontMatter": {
-                "name": "New Feature",
-                "about": "Suggest a new feature for us to implement",
-                "title": "[New Feature]: ",
-                "labels": "enhancement",
-                "assignees": ""
-              },
+              "frontMatter": {},
               "sidebar": "guidesSidebar",
               "previous": {
-                "title": "[Bug]: ",
-                "permalink": "/slim/docs/guides/governance/contributions/issue-templates/github/bug_report"
+                "title": "bug_report.yml",
+                "permalink": "/slim/docs/guides/governance/contributions/issue-templates/github/bug_report.yml"
+              },
+              "next": {
+                "title": "new_feature.yml",
+                "permalink": "/slim/docs/guides/governance/contributions/issue-templates/github/new_feature.yml"
+              }
+            },
+            {
+              "unversionedId": "guides/governance/contributions/issue-templates/github/new_feature.yml",
+              "id": "guides/governance/contributions/issue-templates/github/new_feature.yml",
+              "title": "new_feature.yml",
+              "description": "",
+              "source": "@site/docs/guides/governance/contributions/issue-templates/github/new_feature.yml.md",
+              "sourceDirName": "guides/governance/contributions/issue-templates/github",
+              "slug": "/guides/governance/contributions/issue-templates/github/new_feature.yml",
+              "permalink": "/slim/docs/guides/governance/contributions/issue-templates/github/new_feature.yml",
+              "draft": false,
+              "editUrl": "https://github.com/nasa-ammos/slim/tree/main/docs/guides/governance/contributions/issue-templates/github/new_feature.yml.md",
+              "tags": [],
+              "version": "current",
+              "frontMatter": {},
+              "sidebar": "guidesSidebar",
+              "previous": {
+                "title": "new_feature",
+                "permalink": "/slim/docs/guides/governance/contributions/issue-templates/github/new_feature"
               },
               "next": {
                 "title": "Governance Model",
@@ -546,7 +630,7 @@
               "slug": "/guides/governance/contributions/issue-templates/",
               "permalink": "/slim/docs/guides/governance/contributions/issue-templates/",
               "draft": false,
-              "editUrl": "https://github.com/facebook/docusaurus/tree/main/packages/create-docusaurus/templates/shared/docs/guides/governance/contributions/issue-templates/README.md",
+              "editUrl": "https://github.com/nasa-ammos/slim/tree/main/docs/guides/governance/contributions/issue-templates/README.md",
               "tags": [],
               "version": "current",
               "frontMatter": {},
@@ -556,7 +640,7 @@
                 "permalink": "/slim/docs/guides/governance/contributions/developer-certificate-origin/"
               },
               "next": {
-                "title": "[Bug]: ",
+                "title": "bug_report",
                 "permalink": "/slim/docs/guides/governance/contributions/issue-templates/github/bug_report"
               }
             },
@@ -570,7 +654,7 @@
               "slug": "/guides/governance/contributions/",
               "permalink": "/slim/docs/guides/governance/contributions/",
               "draft": false,
-              "editUrl": "https://github.com/facebook/docusaurus/tree/main/packages/create-docusaurus/templates/shared/docs/guides/governance/contributions/README.md",
+              "editUrl": "https://github.com/nasa-ammos/slim/tree/main/docs/guides/governance/contributions/README.md",
               "tags": [],
               "version": "current",
               "frontMatter": {},
@@ -585,16 +669,16 @@
               }
             },
             {
-              "unversionedId": "guides/governance/governance-model/GOVERNANCE",
-              "id": "guides/governance/governance-model/GOVERNANCE",
-              "title": "[INSERT PROJECT NAME] Project Governance",
-              "description": "This governance model aims to create an open source community that encourages transparency, contributions, and collaboration, but maintains sound technical and quality standards. Our goal is to build a community comprised of members across the [INSERT PROJECT DOMAIN] community and beyond, including from private organizations, universities, government organizations, and international organizations.",
-              "source": "@site/docs/guides/governance/governance-model/GOVERNANCE.md",
+              "unversionedId": "guides/governance/governance-model/GOVERNANCE-TEMPLATE",
+              "id": "guides/governance/governance-model/GOVERNANCE-TEMPLATE",
+              "title": "GOVERNANCE-TEMPLATE",
+              "description": "",
+              "source": "@site/docs/guides/governance/governance-model/GOVERNANCE-TEMPLATE.md",
               "sourceDirName": "guides/governance/governance-model",
-              "slug": "/guides/governance/governance-model/GOVERNANCE",
-              "permalink": "/slim/docs/guides/governance/governance-model/GOVERNANCE",
+              "slug": "/guides/governance/governance-model/GOVERNANCE-TEMPLATE",
+              "permalink": "/slim/docs/guides/governance/governance-model/GOVERNANCE-TEMPLATE",
               "draft": false,
-              "editUrl": "https://github.com/facebook/docusaurus/tree/main/packages/create-docusaurus/templates/shared/docs/guides/governance/governance-model/GOVERNANCE.md",
+              "editUrl": "https://github.com/nasa-ammos/slim/tree/main/docs/guides/governance/governance-model/GOVERNANCE-TEMPLATE.md",
               "tags": [],
               "version": "current",
               "frontMatter": {},
@@ -618,18 +702,18 @@
               "slug": "/guides/governance/governance-model/",
               "permalink": "/slim/docs/guides/governance/governance-model/",
               "draft": false,
-              "editUrl": "https://github.com/facebook/docusaurus/tree/main/packages/create-docusaurus/templates/shared/docs/guides/governance/governance-model/README.md",
+              "editUrl": "https://github.com/nasa-ammos/slim/tree/main/docs/guides/governance/governance-model/README.md",
               "tags": [],
               "version": "current",
               "frontMatter": {},
               "sidebar": "guidesSidebar",
               "previous": {
-                "title": "[New Feature]: ",
-                "permalink": "/slim/docs/guides/governance/contributions/issue-templates/github/new_feature"
+                "title": "new_feature.yml",
+                "permalink": "/slim/docs/guides/governance/contributions/issue-templates/github/new_feature.yml"
               },
               "next": {
-                "title": "[INSERT PROJECT NAME] Project Governance",
-                "permalink": "/slim/docs/guides/governance/governance-model/GOVERNANCE"
+                "title": "GOVERNANCE-TEMPLATE",
+                "permalink": "/slim/docs/guides/governance/governance-model/GOVERNANCE-TEMPLATE"
               }
             },
             {
@@ -642,7 +726,7 @@
               "slug": "/guides/search",
               "permalink": "/slim/docs/guides/search",
               "draft": false,
-              "editUrl": "https://github.com/facebook/docusaurus/tree/main/packages/create-docusaurus/templates/shared/docs/guides/search.md",
+              "editUrl": "https://github.com/nasa-ammos/slim/tree/main/docs/guides/search.md",
               "tags": [],
               "version": "current",
               "sidebarPosition": 1,
@@ -665,7 +749,7 @@
               "slug": "/guides/software-lifecycle/application-starter-kits/python-starter-kit/",
               "permalink": "/slim/docs/guides/software-lifecycle/application-starter-kits/python-starter-kit/",
               "draft": false,
-              "editUrl": "https://github.com/facebook/docusaurus/tree/main/packages/create-docusaurus/templates/shared/docs/guides/software-lifecycle/application-starter-kits/python-starter-kit/README.md",
+              "editUrl": "https://github.com/nasa-ammos/slim/tree/main/docs/guides/software-lifecycle/application-starter-kits/python-starter-kit/README.md",
               "tags": [],
               "version": "current",
               "frontMatter": {},
@@ -689,7 +773,7 @@
               "slug": "/guides/software-lifecycle/application-starter-kits/",
               "permalink": "/slim/docs/guides/software-lifecycle/application-starter-kits/",
               "draft": false,
-              "editUrl": "https://github.com/facebook/docusaurus/tree/main/packages/create-docusaurus/templates/shared/docs/guides/software-lifecycle/application-starter-kits/README.md",
+              "editUrl": "https://github.com/nasa-ammos/slim/tree/main/docs/guides/software-lifecycle/application-starter-kits/README.md",
               "tags": [],
               "version": "current",
               "frontMatter": {},
@@ -713,7 +797,7 @@
               "slug": "/guides/software-lifecycle/continuous-integration/continuous-integration-frameworks/",
               "permalink": "/slim/docs/guides/software-lifecycle/continuous-integration/continuous-integration-frameworks/",
               "draft": false,
-              "editUrl": "https://github.com/facebook/docusaurus/tree/main/packages/create-docusaurus/templates/shared/docs/guides/software-lifecycle/continuous-integration/continuous-integration-frameworks/continuous-integration-frameworks.md",
+              "editUrl": "https://github.com/nasa-ammos/slim/tree/main/docs/guides/software-lifecycle/continuous-integration/continuous-integration-frameworks/continuous-integration-frameworks.md",
               "tags": [],
               "version": "current",
               "frontMatter": {
@@ -740,7 +824,7 @@
               "slug": "/guides/software-lifecycle/continuous-integration/continuous-integration-frameworks/",
               "permalink": "/slim/docs/guides/software-lifecycle/continuous-integration/continuous-integration-frameworks/",
               "draft": false,
-              "editUrl": "https://github.com/facebook/docusaurus/tree/main/packages/create-docusaurus/templates/shared/docs/guides/software-lifecycle/continuous-integration/continuous-integration-frameworks/README.md",
+              "editUrl": "https://github.com/nasa-ammos/slim/tree/main/docs/guides/software-lifecycle/continuous-integration/continuous-integration-frameworks/README.md",
               "tags": [],
               "version": "current",
               "frontMatter": {},
@@ -764,7 +848,7 @@
               "slug": "/guides/software-lifecycle/continuous-integration/",
               "permalink": "/slim/docs/guides/software-lifecycle/continuous-integration/",
               "draft": false,
-              "editUrl": "https://github.com/facebook/docusaurus/tree/main/packages/create-docusaurus/templates/shared/docs/guides/software-lifecycle/continuous-integration/README.md",
+              "editUrl": "https://github.com/nasa-ammos/slim/tree/main/docs/guides/software-lifecycle/continuous-integration/README.md",
               "tags": [],
               "version": "current",
               "frontMatter": {},
@@ -788,7 +872,7 @@
               "slug": "/guides/software-lifecycle/continuous-integration/reference-architecture/",
               "permalink": "/slim/docs/guides/software-lifecycle/continuous-integration/reference-architecture/",
               "draft": false,
-              "editUrl": "https://github.com/facebook/docusaurus/tree/main/packages/create-docusaurus/templates/shared/docs/guides/software-lifecycle/continuous-integration/reference-architecture/README.md",
+              "editUrl": "https://github.com/nasa-ammos/slim/tree/main/docs/guides/software-lifecycle/continuous-integration/reference-architecture/README.md",
               "tags": [],
               "version": "current",
               "frontMatter": {},
@@ -812,7 +896,7 @@
               "slug": "/guides/software-lifecycle/continuous-testing/",
               "permalink": "/slim/docs/guides/software-lifecycle/continuous-testing/",
               "draft": false,
-              "editUrl": "https://github.com/facebook/docusaurus/tree/main/packages/create-docusaurus/templates/shared/docs/guides/software-lifecycle/continuous-testing/README.md",
+              "editUrl": "https://github.com/nasa-ammos/slim/tree/main/docs/guides/software-lifecycle/continuous-testing/README.md",
               "tags": [],
               "version": "current",
               "frontMatter": {},
@@ -836,7 +920,7 @@
               "slug": "/guides/software-lifecycle/continuous-testing/testing-frameworks",
               "permalink": "/slim/docs/guides/software-lifecycle/continuous-testing/testing-frameworks",
               "draft": false,
-              "editUrl": "https://github.com/facebook/docusaurus/tree/main/packages/create-docusaurus/templates/shared/docs/guides/software-lifecycle/continuous-testing/testing-frameworks.md",
+              "editUrl": "https://github.com/nasa-ammos/slim/tree/main/docs/guides/software-lifecycle/continuous-testing/testing-frameworks.md",
               "tags": [],
               "version": "current",
               "frontMatter": {
@@ -863,7 +947,7 @@
               "slug": "/guides/software-lifecycle/security/dependabot/",
               "permalink": "/slim/docs/guides/software-lifecycle/security/dependabot/",
               "draft": false,
-              "editUrl": "https://github.com/facebook/docusaurus/tree/main/packages/create-docusaurus/templates/shared/docs/guides/software-lifecycle/security/dependabot/README.md",
+              "editUrl": "https://github.com/nasa-ammos/slim/tree/main/docs/guides/software-lifecycle/security/dependabot/README.md",
               "tags": [],
               "version": "current",
               "frontMatter": {},
@@ -887,7 +971,7 @@
               "slug": "/guides/software-lifecycle/security/",
               "permalink": "/slim/docs/guides/software-lifecycle/security/",
               "draft": false,
-              "editUrl": "https://github.com/facebook/docusaurus/tree/main/packages/create-docusaurus/templates/shared/docs/guides/software-lifecycle/security/README.md",
+              "editUrl": "https://github.com/nasa-ammos/slim/tree/main/docs/guides/software-lifecycle/security/README.md",
               "tags": [],
               "version": "current",
               "frontMatter": {},
@@ -911,7 +995,7 @@
               "slug": "/guides/software-lifecycle/security/secrets-detection/",
               "permalink": "/slim/docs/guides/software-lifecycle/security/secrets-detection/",
               "draft": false,
-              "editUrl": "https://github.com/facebook/docusaurus/tree/main/packages/create-docusaurus/templates/shared/docs/guides/software-lifecycle/security/secrets-detection/README.md",
+              "editUrl": "https://github.com/nasa-ammos/slim/tree/main/docs/guides/software-lifecycle/security/secrets-detection/README.md",
               "tags": [],
               "version": "current",
               "frontMatter": {},
@@ -1079,9 +1163,20 @@
                         "id": "guides/governance/contributions/code-of-conduct/README"
                       },
                       {
-                        "type": "doc",
+                        "type": "category",
                         "label": "Contributing Guide",
-                        "id": "guides/governance/contributions/contributing-guide/README"
+                        "collapsible": true,
+                        "collapsed": true,
+                        "items": [
+                          {
+                            "type": "doc",
+                            "id": "guides/governance/contributions/contributing-guide/CONTRIBUTING"
+                          }
+                        ],
+                        "link": {
+                          "type": "doc",
+                          "id": "guides/governance/contributions/contributing-guide/README"
+                        }
                       },
                       {
                         "type": "doc",
@@ -1106,7 +1201,15 @@
                               },
                               {
                                 "type": "doc",
+                                "id": "guides/governance/contributions/issue-templates/github/bug_report.yml"
+                              },
+                              {
+                                "type": "doc",
                                 "id": "guides/governance/contributions/issue-templates/github/new_feature"
+                              },
+                              {
+                                "type": "doc",
+                                "id": "guides/governance/contributions/issue-templates/github/new_feature.yml"
                               }
                             ]
                           }
@@ -1130,7 +1233,7 @@
                     "items": [
                       {
                         "type": "doc",
-                        "id": "guides/governance/governance-model/GOVERNANCE"
+                        "id": "guides/governance/governance-model/GOVERNANCE-TEMPLATE"
                       }
                     ],
                     "link": {
@@ -1180,9 +1283,20 @@
                     }
                   },
                   {
-                    "type": "doc",
+                    "type": "category",
                     "label": "README Template",
-                    "id": "guides/documentation/readme/index"
+                    "collapsible": true,
+                    "collapsed": true,
+                    "items": [
+                      {
+                        "type": "doc",
+                        "id": "guides/documentation/readme/README-TEMPLATE"
+                      }
+                    ],
+                    "link": {
+                      "type": "doc",
+                      "id": "guides/documentation/readme/index"
+                    }
                   }
                 ],
                 "link": {
@@ -1254,7 +1368,7 @@
           "id": "welcome",
           "metadata": {
             "permalink": "/slim/blog/welcome",
-            "editUrl": "https://github.com/facebook/docusaurus/tree/main/packages/create-docusaurus/templates/shared/blog/2021-08-26-welcome/index.md",
+            "editUrl": "https://github.com/nasa-ammos/slim/tree/main/blog/2021-08-26-welcome/index.md",
             "source": "@site/blog/2021-08-26-welcome/index.md",
             "title": "Welcome",
             "description": "Docusaurus blogging features are powered by the blog plugin.",
@@ -1316,7 +1430,7 @@
           "id": "mdx-blog-post",
           "metadata": {
             "permalink": "/slim/blog/mdx-blog-post",
-            "editUrl": "https://github.com/facebook/docusaurus/tree/main/packages/create-docusaurus/templates/shared/blog/2021-08-01-mdx-blog-post.mdx",
+            "editUrl": "https://github.com/nasa-ammos/slim/tree/main/blog/2021-08-01-mdx-blog-post.mdx",
             "source": "@site/blog/2021-08-01-mdx-blog-post.mdx",
             "title": "MDX Blog Post",
             "description": "Blog posts support Docusaurus Markdown features, such as MDX.",
@@ -1364,7 +1478,7 @@
           "id": "long-blog-post",
           "metadata": {
             "permalink": "/slim/blog/long-blog-post",
-            "editUrl": "https://github.com/facebook/docusaurus/tree/main/packages/create-docusaurus/templates/shared/blog/2019-05-29-long-blog-post.md",
+            "editUrl": "https://github.com/nasa-ammos/slim/tree/main/blog/2019-05-29-long-blog-post.md",
             "source": "@site/blog/2019-05-29-long-blog-post.md",
             "title": "Long Blog Post",
             "description": "This is the summary of a very long blog post,",
@@ -1415,7 +1529,7 @@
           "id": "first-blog-post",
           "metadata": {
             "permalink": "/slim/blog/first-blog-post",
-            "editUrl": "https://github.com/facebook/docusaurus/tree/main/packages/create-docusaurus/templates/shared/blog/2019-05-28-first-blog-post.md",
+            "editUrl": "https://github.com/nasa-ammos/slim/tree/main/blog/2019-05-28-first-blog-post.md",
             "source": "@site/blog/2019-05-28-first-blog-post.md",
             "title": "First Blog Post",
             "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque elementum dignissim ultricies. Fusce rhoncus ipsum tempor eros aliquam consequat. Lorem ipsum dolor sit amet",

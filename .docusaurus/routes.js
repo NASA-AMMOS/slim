@@ -3,6 +3,41 @@ import ComponentCreator from '@docusaurus/ComponentCreator';
 
 export default [
   {
+    path: '/slim/__docusaurus/debug',
+    component: ComponentCreator('/slim/__docusaurus/debug', '0ff'),
+    exact: true
+  },
+  {
+    path: '/slim/__docusaurus/debug/config',
+    component: ComponentCreator('/slim/__docusaurus/debug/config', '7dd'),
+    exact: true
+  },
+  {
+    path: '/slim/__docusaurus/debug/content',
+    component: ComponentCreator('/slim/__docusaurus/debug/content', '120'),
+    exact: true
+  },
+  {
+    path: '/slim/__docusaurus/debug/globalData',
+    component: ComponentCreator('/slim/__docusaurus/debug/globalData', 'a0f'),
+    exact: true
+  },
+  {
+    path: '/slim/__docusaurus/debug/metadata',
+    component: ComponentCreator('/slim/__docusaurus/debug/metadata', 'a8e'),
+    exact: true
+  },
+  {
+    path: '/slim/__docusaurus/debug/registry',
+    component: ComponentCreator('/slim/__docusaurus/debug/registry', '263'),
+    exact: true
+  },
+  {
+    path: '/slim/__docusaurus/debug/routes',
+    component: ComponentCreator('/slim/__docusaurus/debug/routes', 'bb4'),
+    exact: true
+  },
+  {
     path: '/slim/blog',
     component: ComponentCreator('/slim/blog', '69e'),
     exact: true
@@ -64,7 +99,7 @@ export default [
   },
   {
     path: '/slim/docs',
-    component: ComponentCreator('/slim/docs', '11e'),
+    component: ComponentCreator('/slim/docs', 'f81'),
     routes: [
       {
         path: '/slim/docs/about/',
@@ -169,6 +204,12 @@ export default [
         sidebar: "guidesSidebar"
       },
       {
+        path: '/slim/docs/guides/documentation/readme/README-TEMPLATE',
+        component: ComponentCreator('/slim/docs/guides/documentation/readme/README-TEMPLATE', 'bef'),
+        exact: true,
+        sidebar: "guidesSidebar"
+      },
+      {
         path: '/slim/docs/guides/governance/contributions/',
         component: ComponentCreator('/slim/docs/guides/governance/contributions/', '3c4'),
         exact: true,
@@ -199,6 +240,12 @@ export default [
         sidebar: "guidesSidebar"
       },
       {
+        path: '/slim/docs/guides/governance/contributions/contributing-guide/CONTRIBUTING',
+        component: ComponentCreator('/slim/docs/guides/governance/contributions/contributing-guide/CONTRIBUTING', '6a2'),
+        exact: true,
+        sidebar: "guidesSidebar"
+      },
+      {
         path: '/slim/docs/guides/governance/contributions/developer-certificate-origin/',
         component: ComponentCreator('/slim/docs/guides/governance/contributions/developer-certificate-origin/', 'd6a'),
         exact: true,
@@ -217,8 +264,20 @@ export default [
         sidebar: "guidesSidebar"
       },
       {
+        path: '/slim/docs/guides/governance/contributions/issue-templates/github/bug_report.yml',
+        component: ComponentCreator('/slim/docs/guides/governance/contributions/issue-templates/github/bug_report.yml', '43b'),
+        exact: true,
+        sidebar: "guidesSidebar"
+      },
+      {
         path: '/slim/docs/guides/governance/contributions/issue-templates/github/new_feature',
         component: ComponentCreator('/slim/docs/guides/governance/contributions/issue-templates/github/new_feature', 'bc8'),
+        exact: true,
+        sidebar: "guidesSidebar"
+      },
+      {
+        path: '/slim/docs/guides/governance/contributions/issue-templates/github/new_feature.yml',
+        component: ComponentCreator('/slim/docs/guides/governance/contributions/issue-templates/github/new_feature.yml', '3a8'),
         exact: true,
         sidebar: "guidesSidebar"
       },
@@ -229,8 +288,8 @@ export default [
         sidebar: "guidesSidebar"
       },
       {
-        path: '/slim/docs/guides/governance/governance-model/GOVERNANCE',
-        component: ComponentCreator('/slim/docs/guides/governance/governance-model/GOVERNANCE', 'e30'),
+        path: '/slim/docs/guides/governance/governance-model/GOVERNANCE-TEMPLATE',
+        component: ComponentCreator('/slim/docs/guides/governance/governance-model/GOVERNANCE-TEMPLATE', '1f5'),
         exact: true,
         sidebar: "guidesSidebar"
       },

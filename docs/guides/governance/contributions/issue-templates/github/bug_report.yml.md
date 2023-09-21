@@ -1,3 +1,4 @@
+```yml
 name: Bug Report Form
 description: Report a bug to help us improve
 title: "[Bug]: "
@@ -57,3 +58,4 @@ body:
         - Operating System: [e.g. MacOSX with Docker Desktop vX.Y]
         ...
       render: bash
+```
