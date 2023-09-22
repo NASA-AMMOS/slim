@@ -7,7 +7,7 @@ This governance model template seeks to generalize how most government-sponsored
 # Directions
 
 Template:
-- [Markdown](GOVERNANCE) of template
+- [Markdown](GOVERNANCE-TEMPLATE.md) of template
 
 To leverage this template, make sure to do the following:
 1. Talk with your team (including stakeholders) about leveraging this template, and seek wide agreement before you adopt. In particular, ensure there's buy-in for the philosophy of the governance approach (i.e. liberal acceptance of contributors) and role-based committees for governing (i.e. technical / project steering committees).

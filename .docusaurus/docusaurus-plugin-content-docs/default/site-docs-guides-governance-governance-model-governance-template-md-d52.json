@@ -1,0 +1,24 @@
+{
+  "unversionedId": "guides/governance/governance-model/GOVERNANCE-TEMPLATE",
+  "id": "guides/governance/governance-model/GOVERNANCE-TEMPLATE",
+  "title": "GOVERNANCE-TEMPLATE",
+  "description": "",
+  "source": "@site/docs/guides/governance/governance-model/GOVERNANCE-TEMPLATE.md",
+  "sourceDirName": "guides/governance/governance-model",
+  "slug": "/guides/governance/governance-model/GOVERNANCE-TEMPLATE",
+  "permalink": "/slim/docs/guides/governance/governance-model/GOVERNANCE-TEMPLATE",
+  "draft": false,
+  "editUrl": "https://github.com/nasa-ammos/slim/tree/main/docs/guides/governance/governance-model/GOVERNANCE-TEMPLATE.md",
+  "tags": [],
+  "version": "current",
+  "frontMatter": {},
+  "sidebar": "guidesSidebar",
+  "previous": {
+    "title": "Governance Model",
+    "permalink": "/slim/docs/guides/governance/governance-model/"
+  },
+  "next": {
+    "title": "Documentation",
+    "permalink": "/slim/docs/category/documentation"
+  }
+}

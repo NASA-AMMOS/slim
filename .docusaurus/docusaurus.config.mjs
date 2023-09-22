@@ -7,9 +7,9 @@ export default {
   "title": "SLIM",
   "tagline": "Software Lifecycle Improvement & Modernization (SLIM)",
   "favicon": "img/slim-favicon.ico",
-  "url": "https://riverma.github.io",
+  "url": "https://localhost",
   "baseUrl": "/slim/",
-  "organizationName": "riverma",
+  "organizationName": "nasa-ammos",
   "projectName": "slim",
   "onBrokenLinks": "throw",
   "onBrokenMarkdownLinks": "warn",
@@ -27,12 +27,12 @@ export default {
       {
         "docs": {
           "sidebarPath": "/Users/rverma/src/slim/sidebars.js",
-          "editUrl": "https://github.com/facebook/docusaurus/tree/main/packages/create-docusaurus/templates/shared/",
+          "editUrl": "https://github.com/nasa-ammos/slim/tree/main/",
           "sidebarCollapsed": true
         },
         "blog": {
           "showReadingTime": true,
-          "editUrl": "https://github.com/facebook/docusaurus/tree/main/packages/create-docusaurus/templates/shared/"
+          "editUrl": "https://github.com/nasa-ammos/slim/tree/main/"
         },
         "theme": {
           "customCss": "/Users/rverma/src/slim/src/css/custom.css"

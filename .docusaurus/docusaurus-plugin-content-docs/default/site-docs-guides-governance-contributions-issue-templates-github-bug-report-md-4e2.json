@@ -1,30 +1,24 @@
 {
   "unversionedId": "guides/governance/contributions/issue-templates/github/bug_report",
   "id": "guides/governance/contributions/issue-templates/github/bug_report",
-  "title": "[Bug]: ",
-  "description": "Checked for duplicates",
+  "title": "bug_report",
+  "description": "",
   "source": "@site/docs/guides/governance/contributions/issue-templates/github/bug_report.md",
   "sourceDirName": "guides/governance/contributions/issue-templates/github",
   "slug": "/guides/governance/contributions/issue-templates/github/bug_report",
   "permalink": "/slim/docs/guides/governance/contributions/issue-templates/github/bug_report",
   "draft": false,
-  "editUrl": "https://github.com/facebook/docusaurus/tree/main/packages/create-docusaurus/templates/shared/docs/guides/governance/contributions/issue-templates/github/bug_report.md",
+  "editUrl": "https://github.com/nasa-ammos/slim/tree/main/docs/guides/governance/contributions/issue-templates/github/bug_report.md",
   "tags": [],
   "version": "current",
-  "frontMatter": {
-    "name": "Bug Report",
-    "about": "Report a bug to help us improve",
-    "title": "[Bug]: ",
-    "labels": "bug",
-    "assignees": ""
-  },
+  "frontMatter": {},
   "sidebar": "guidesSidebar",
   "previous": {
     "title": "Issue Templates",
     "permalink": "/slim/docs/guides/governance/contributions/issue-templates/"
   },
   "next": {
-    "title": "[New Feature]: ",
-    "permalink": "/slim/docs/guides/governance/contributions/issue-templates/github/new_feature"
+    "title": "bug_report.yml",
+    "permalink": "/slim/docs/guides/governance/contributions/issue-templates/github/bug_report.yml"
   }
 }

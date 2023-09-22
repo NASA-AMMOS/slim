@@ -4,7 +4,7 @@
       "id": "welcome",
       "metadata": {
         "permalink": "/slim/blog/welcome",
-        "editUrl": "https://github.com/facebook/docusaurus/tree/main/packages/create-docusaurus/templates/shared/blog/2021-08-26-welcome/index.md",
+        "editUrl": "https://github.com/nasa-ammos/slim/tree/main/blog/2021-08-26-welcome/index.md",
         "source": "@site/blog/2021-08-26-welcome/index.md",
         "title": "Welcome",
         "description": "Docusaurus blogging features are powered by the blog plugin.",
@@ -66,7 +66,7 @@
       "id": "mdx-blog-post",
       "metadata": {
         "permalink": "/slim/blog/mdx-blog-post",
-        "editUrl": "https://github.com/facebook/docusaurus/tree/main/packages/create-docusaurus/templates/shared/blog/2021-08-01-mdx-blog-post.mdx",
+        "editUrl": "https://github.com/nasa-ammos/slim/tree/main/blog/2021-08-01-mdx-blog-post.mdx",
         "source": "@site/blog/2021-08-01-mdx-blog-post.mdx",
         "title": "MDX Blog Post",
         "description": "Blog posts support Docusaurus Markdown features, such as MDX.",
@@ -114,7 +114,7 @@
       "id": "long-blog-post",
       "metadata": {
         "permalink": "/slim/blog/long-blog-post",
-        "editUrl": "https://github.com/facebook/docusaurus/tree/main/packages/create-docusaurus/templates/shared/blog/2019-05-29-long-blog-post.md",
+        "editUrl": "https://github.com/nasa-ammos/slim/tree/main/blog/2019-05-29-long-blog-post.md",
         "source": "@site/blog/2019-05-29-long-blog-post.md",
         "title": "Long Blog Post",
         "description": "This is the summary of a very long blog post,",
@@ -165,7 +165,7 @@
       "id": "first-blog-post",
       "metadata": {
         "permalink": "/slim/blog/first-blog-post",
-        "editUrl": "https://github.com/facebook/docusaurus/tree/main/packages/create-docusaurus/templates/shared/blog/2019-05-28-first-blog-post.md",
+        "editUrl": "https://github.com/nasa-ammos/slim/tree/main/blog/2019-05-28-first-blog-post.md",
         "source": "@site/blog/2019-05-28-first-blog-post.md",
         "title": "First Blog Post",
         "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque elementum dignissim ultricies. Fusce rhoncus ipsum tempor eros aliquam consequat. Lorem ipsum dolor sit amet",

@@ -7,7 +7,7 @@ Pull requests are the currency for how contributions are made to projects. Havin
 GitHub provides a mechanism to automatically display a template whenever a potential contributor proposes a pull request to your repository. Please see the [documentation](https://docs.github.com/en/communities/using-templates-to-encourage-useful-issues-and-pull-requests/creating-a-pull-request-template-for-your-repository) on GitHub for details. 
 
 Starter Kits:
-- [Pull Request Template](github/PULL_REQUEST_TEMPLATE)
+- [Pull Request Template](github/PULL_REQUEST_TEMPLATE.md)
 
 To leverage this template, make sure to do the following:
 1. Talk with your team about leveraging this template, and seek wide agreement before you adopt

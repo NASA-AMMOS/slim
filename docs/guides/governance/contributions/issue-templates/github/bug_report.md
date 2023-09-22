@@ -1,3 +1,4 @@
+```markdown
 ---
 name: Bug Report
 about: Report a bug to help us improve
@@ -41,3 +42,4 @@ Ex. I expected [...]
 - Ex. Version of this software [e.g. vX.Y.Z]
 - Ex. Operating System: [e.g. MacOSX with Docker Desktop vX.Y]
 - ...
+```

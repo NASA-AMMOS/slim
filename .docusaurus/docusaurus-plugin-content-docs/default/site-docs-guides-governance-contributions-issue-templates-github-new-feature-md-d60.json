@@ -1,30 +1,24 @@
 {
   "unversionedId": "guides/governance/contributions/issue-templates/github/new_feature",
   "id": "guides/governance/contributions/issue-templates/github/new_feature",
-  "title": "[New Feature]: ",
-  "description": "Checked for duplicates",
+  "title": "new_feature",
+  "description": "",
   "source": "@site/docs/guides/governance/contributions/issue-templates/github/new_feature.md",
   "sourceDirName": "guides/governance/contributions/issue-templates/github",
   "slug": "/guides/governance/contributions/issue-templates/github/new_feature",
   "permalink": "/slim/docs/guides/governance/contributions/issue-templates/github/new_feature",
   "draft": false,
-  "editUrl": "https://github.com/facebook/docusaurus/tree/main/packages/create-docusaurus/templates/shared/docs/guides/governance/contributions/issue-templates/github/new_feature.md",
+  "editUrl": "https://github.com/nasa-ammos/slim/tree/main/docs/guides/governance/contributions/issue-templates/github/new_feature.md",
   "tags": [],
   "version": "current",
-  "frontMatter": {
-    "name": "New Feature",
-    "about": "Suggest a new feature for us to implement",
-    "title": "[New Feature]: ",
-    "labels": "enhancement",
-    "assignees": ""
-  },
+  "frontMatter": {},
   "sidebar": "guidesSidebar",
   "previous": {
-    "title": "[Bug]: ",
-    "permalink": "/slim/docs/guides/governance/contributions/issue-templates/github/bug_report"
+    "title": "bug_report.yml",
+    "permalink": "/slim/docs/guides/governance/contributions/issue-templates/github/bug_report.yml"
   },
   "next": {
-    "title": "Governance Model",
-    "permalink": "/slim/docs/guides/governance/governance-model/"
+    "title": "new_feature.yml",
+    "permalink": "/slim/docs/guides/governance/contributions/issue-templates/github/new_feature.yml"
   }
 }
