@@ -7,7 +7,7 @@ export default {
   "title": "SLIM",
   "tagline": "Software Lifecycle Improvement & Modernization (SLIM)",
   "favicon": "img/slim-favicon.ico",
-  "url": "https://localhost",
+  "url": "https://nasa-ammos.github.io",
   "baseUrl": "/slim/",
   "organizationName": "nasa-ammos",
   "projectName": "slim",
@@ -26,7 +26,7 @@ export default {
       "classic",
       {
         "docs": {
-          "sidebarPath": "/Users/rverma/src/slim/sidebars.js",
+          "sidebarPath": "/workspaces/slim/sidebars.js",
           "editUrl": "https://github.com/nasa-ammos/slim/tree/main/",
           "sidebarCollapsed": true
         },
@@ -35,7 +35,7 @@ export default {
           "editUrl": "https://github.com/nasa-ammos/slim/tree/main/"
         },
         "theme": {
-          "customCss": "/Users/rverma/src/slim/src/css/custom.css"
+          "customCss": "/workspaces/slim/src/css/custom.css"
         }
       }
     ]

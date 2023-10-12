@@ -3,103 +3,68 @@ import ComponentCreator from '@docusaurus/ComponentCreator';
 
 export default [
   {
-    path: '/slim/__docusaurus/debug',
-    component: ComponentCreator('/slim/__docusaurus/debug', '0ff'),
-    exact: true
-  },
-  {
-    path: '/slim/__docusaurus/debug/config',
-    component: ComponentCreator('/slim/__docusaurus/debug/config', '7dd'),
-    exact: true
-  },
-  {
-    path: '/slim/__docusaurus/debug/content',
-    component: ComponentCreator('/slim/__docusaurus/debug/content', '120'),
-    exact: true
-  },
-  {
-    path: '/slim/__docusaurus/debug/globalData',
-    component: ComponentCreator('/slim/__docusaurus/debug/globalData', 'a0f'),
-    exact: true
-  },
-  {
-    path: '/slim/__docusaurus/debug/metadata',
-    component: ComponentCreator('/slim/__docusaurus/debug/metadata', 'a8e'),
-    exact: true
-  },
-  {
-    path: '/slim/__docusaurus/debug/registry',
-    component: ComponentCreator('/slim/__docusaurus/debug/registry', '263'),
-    exact: true
-  },
-  {
-    path: '/slim/__docusaurus/debug/routes',
-    component: ComponentCreator('/slim/__docusaurus/debug/routes', 'bb4'),
-    exact: true
-  },
-  {
     path: '/slim/blog',
-    component: ComponentCreator('/slim/blog', '69e'),
+    component: ComponentCreator('/slim/blog', 'b2f'),
     exact: true
   },
   {
     path: '/slim/blog/archive',
-    component: ComponentCreator('/slim/blog/archive', 'b1c'),
+    component: ComponentCreator('/slim/blog/archive', '981'),
     exact: true
   },
   {
     path: '/slim/blog/first-blog-post',
-    component: ComponentCreator('/slim/blog/first-blog-post', '64f'),
+    component: ComponentCreator('/slim/blog/first-blog-post', 'c9d'),
     exact: true
   },
   {
     path: '/slim/blog/long-blog-post',
-    component: ComponentCreator('/slim/blog/long-blog-post', '32b'),
+    component: ComponentCreator('/slim/blog/long-blog-post', 'ad9'),
     exact: true
   },
   {
     path: '/slim/blog/mdx-blog-post',
-    component: ComponentCreator('/slim/blog/mdx-blog-post', '42f'),
+    component: ComponentCreator('/slim/blog/mdx-blog-post', '760'),
     exact: true
   },
   {
     path: '/slim/blog/tags',
-    component: ComponentCreator('/slim/blog/tags', '94b'),
+    component: ComponentCreator('/slim/blog/tags', 'bd5'),
     exact: true
   },
   {
     path: '/slim/blog/tags/docusaurus',
-    component: ComponentCreator('/slim/blog/tags/docusaurus', 'c76'),
+    component: ComponentCreator('/slim/blog/tags/docusaurus', '5ee'),
     exact: true
   },
   {
     path: '/slim/blog/tags/facebook',
-    component: ComponentCreator('/slim/blog/tags/facebook', 'dd6'),
+    component: ComponentCreator('/slim/blog/tags/facebook', '8ba'),
     exact: true
   },
   {
     path: '/slim/blog/tags/hello',
-    component: ComponentCreator('/slim/blog/tags/hello', '4d4'),
+    component: ComponentCreator('/slim/blog/tags/hello', 'f74'),
     exact: true
   },
   {
     path: '/slim/blog/tags/hola',
-    component: ComponentCreator('/slim/blog/tags/hola', '783'),
+    component: ComponentCreator('/slim/blog/tags/hola', '68d'),
     exact: true
   },
   {
     path: '/slim/blog/welcome',
-    component: ComponentCreator('/slim/blog/welcome', '98f'),
+    component: ComponentCreator('/slim/blog/welcome', '1b1'),
     exact: true
   },
   {
     path: '/slim/markdown-page',
-    component: ComponentCreator('/slim/markdown-page', '118'),
+    component: ComponentCreator('/slim/markdown-page', 'baa'),
     exact: true
   },
   {
     path: '/slim/docs',
-    component: ComponentCreator('/slim/docs', 'f81'),
+    component: ComponentCreator('/slim/docs', '420'),
     routes: [
       {
         path: '/slim/docs/about/',
@@ -369,7 +334,7 @@ export default [
   },
   {
     path: '/slim/',
-    component: ComponentCreator('/slim/', '17b'),
+    component: ComponentCreator('/slim/', '987'),
     exact: true
   },
   {
