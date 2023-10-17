@@ -39,6 +39,82 @@ To make it easier for users to adopt your best practice solution, consider prese
 
 To maintain organization and consistency within the repository, create a new folder for your best practice guide. Place this folder within the appropriate sub-folder in the `docs/guides` directory of the [NASA-AMMOS/slim](https://github.com/NASA-AMMOS/slim) repository. Ensure that the folder structure aligns with the type of best practice you are developing, allowing users to easily locate and reference your guide.
 
+### Use our Standard Guide Template
+
+To maintain uniformity and ease of understanding, contributors are urged to utilize the below template when submitting their best practice guides. This structured format ensures clarity, beginning with a concise title and a one-liner description to capture the essence of the proposal. The Introduction sets the context, Prerequisites identify essential tools or knowledge, and the Step-by-Step Guide offers a methodical walkthrough, enhanced optionally with illustrative images. An FAQ section addresses potential queries, and appropriate credits acknowledge contributors and inspirations. This standard layout not only ensures that each guide retains consistency and comprehensibility, but it also facilitates smoother automation and integration within the SLIM ecosystem. 
+
+Directions:
+- Create a new Markdown file for your guide (sample below) and call it `README.md`. Its advised to create a new folder for your best practice, where you can include multiple files, templates, and miscellaneous files if needed. See the above "Adere to Folder Structure" section.
+- Copy/paste the below template into the file
+- Fill in the guide with your contents
+
+```
+# _Title Goes Here_
+
+<pre align="center">One sentence description of your best practice solution.</pre>
+
+## Introduction
+
+**Background**: _A longer description of the problem you aim to solve and your solution. Talk about the background of why this is needed, what kind of benefits the user might enjoy, and any other background information that may be useful for the reader. Additionally, talk about the expected outcome the user can expect in implementing your solution._
+
+**Use Cases**:
+- _A list of the types of use cases where your process improvement solution will shine_
+- _e.g. Making code repository README's consistent for internal and external contributors_
+  
+---
+
+## Prerequisites
+_List any software, hardware, or skills required to utilize the solution._
+
+* Prerequisite 1
+* Prerequisite 2
+* ...
+
+---
+
+## Quick Start
+**[Link to Process Improvement Solution (template/code sample/tool/etc.)](#)**
+
+_A brief description of what the link provides, e.g., "Click the link above to access the full template for the README.md file."_
+
+---
+
+## Step-by-Step Guide
+
+1. **Step 1**: _Brief description of the step._
+![Optional Image for Step 1](imageURL_for_step1)
+
+2. **Step 2**: _Brief description of the step._
+![Optional Image for Step 2](imageURL_for_step2)
+
+3. ...
+   
+---
+
+## Frequently Asked Questions (FAQ)
+
+- Q: Example question relevant to this guide
+- A: Example answer to the question
+
+---
+
+## Credits 
+
+**Authorship**:
+- _List of contributing authors of this write-up who actually wrote words. Link to GitHub profiles if available, e.g. [Bugs Bunny](https://www.github.com/bbuny573429)_
+
+**Acknowledgements**:
+* Source/Organization 1 that inspired the solution or was adapted from 
+* Source/Organization 2 that inspired the solution or was adapted from 
+* ...
+  
+---
+
+## Feedback and Contributions
+
+We welcome feedback and contributions to help improve and grow this page. Please see our [contribution guidelines](https://nasa-ammos.github.io/slim/docs/contribute/contributing/).
+```
+
 ### Add Entry to the Registry
 
 To document metadata about your best practice, add a JSON entry to the file `data/slim-registry.json` within the [NASA-AMMOS/slim](https://github.com/NASA-AMMOS/slim) repository. Fill out the following fields in the example below:
