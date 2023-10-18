@@ -208,6 +208,17 @@ After setting this up, GitHub will run the workflow during pushes or pull reques
 
 ### Frequently Asked Questions (FAQ)
 
+- Q: **If secrets are detected in my code, what should I do?**
+
+  A: Follow these steps:
+  
+    - _Identify and Confirm:_ Review the identified secrets in the `.secrets.baseline` or any other report generated. Ensure that they are indeed secrets and not false positives.
+    - _Removal:_ Remove or replace all references to the detected secrets from your codebase. Ensure that no trace of the secret remains in the code, comments, or commit history. If you want to ignore the secret as a false positive during a pre-commit scan, you can follow directions [here](https://github.com/Yelp/detect-secrets#inline-allowlisting-1). 
+    - _Rotation:_ If the detected secret was an API key, password, or any other form of authentication, consider it compromised. Rotate the secret immediately, i.e., generate a new secret/key and update it wherever required.
+    - _Rerun Scans:_ After you've made the necessary changes, run the `detect-secrets` tool again to ensure no secrets remain.
+    - _Commit Safely:_ When you're sure all secrets have been removed, you can safely commit your changes. Remember, the Git commit scan (Layer 2) and the server-side push scan (Layer 3) will provide additional layers of checks.
+    - _Educate and Prevent:_ To avoid such instances in the future, educate your team on the importance of not committing secrets and the potential risks associated with it. Consider adopting practices or tools that prevent the accidental inclusion of secrets in your codebase.
+   
 - Q: **Does detect-secrets scan the entire git history?**
   
   A: No, it's designed to scan the current state of a project for efficiency.
@@ -215,6 +226,7 @@ After setting this up, GitHub will run the workflow during pushes or pull reques
 - Q: **Where can I find more configurations and options for detect-secrets?**
   
   A: Refer to the official documentation for [detect-secrets](https://github.com/Yelp/detect-secrets) and [pre-commit](https://pre-commit.com/).
+
 
 ---
 
