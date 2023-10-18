@@ -63,10 +63,8 @@ If you do not have organizational permissions or if you wish to customize securi
 
 
 2. **Enable Code Scanning:**
-   - In the `Code security and analysis` menu from the `Settings` tab:
-     - Click on the `Code scanning alerts` setup button.
-     - We recommend enabling the following workflows:
-       - _CodeQL Analysis workflow:_ a free tool provided by GitHub that scans your code for vulnerabilities across a variety of languages. Simply choose a CodeQL Analysis template (default is acceptable) and follow the instructions.
+   - In the `Code security and analysis` menu from the `Settings` tab, click the "Set Up" or enable the following workflows:
+     - _CodeQL Analysis workflow:_ a free tool provided by GitHub that scans your code for vulnerabilities across a variety of languages. Simply choose a CodeQL Analysis template (default is acceptable) and follow the instructions.
    - To view Code scanning alerts:
      - Return to the repository main page.
      - Click on the `Security` tab and select `Code scanning alerts`.
@@ -74,7 +72,6 @@ If you do not have organizational permissions or if you wish to customize securi
 3. **Enable Secret Scanning:**
    - In the `Code security and analysis` menu from the `Settings` tab:
      - Click on the `Secret scanning` enable button.
-     - We recommend following the step-by-step instructions provided to enable Secret Scanning.
      - We recommend enabling "Push protection" for blocking commits containing secrets
    - To view Secret scanning alerts:
      - Navigate to the repository main page.
