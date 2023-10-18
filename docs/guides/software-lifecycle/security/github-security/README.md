@@ -1,53 +1,65 @@
 # GitHub Security Best Practices
 
-<p align="center">A comprehensive guide on enhancing the security of your GitHub repositories.</p>
+<pre align="center">Recommendations for enabling GitHub security features for your repositories.</pre>
 
 ## Introduction
 
 **Background:** GitHub offers a suite of security features to help maintainers and developers protect their code and ensure the safety of their repositories. From automatically detecting vulnerabilities in dependencies to scanning for secrets and setting security policies, these tools are essential for any project, especially in today’s security-conscious environment.
 
 **Use Cases:**
-- Protecting code repositories from known vulnerabilities in dependencies.
-- Monitoring and identifying potentially harmful secrets in code.
-- Establishing clear security guidelines and policies for contributors.
+- Being alerted over e-mail or GitHub notifications about known vulnerabilities in your dependencies and having pull-requests automatically created to resolve the issues. 
+- Being alerted if your dependencies have updated versions available.
+- Being alerted if your commits have potentially harmful secrets or sensitive information within the code - including being blocked from pushing your commits. 
 
 ## Prerequisites
 
 - A GitHub repository
 - Familiarity with GitHub’s user interface
-- Optional: Admin rights for certain configuration tasks
+- Admin rights for certain security configuration tasks
 
 ## Quick Start
 
-[GitHub’s Security Features](https://docs.github.com/en/code-security)
+The fastest way to enable recommended GitHub Security features is to perform it in bulk for _all_ of your repositories within a given organization. Consult [Enabling security features for multiple repositories](https://docs.github.com/en/enterprise-cloud@latest/code-security/security-overview/enabling-security-features-for-multiple-repositories) for details. Organization administrative-level access is required. 
 
-Click the link above to access an overview of the suite of security features GitHub provides for your repositories.
+We recommend enabling the below features for all your repositories:
 
-## Step-by-Step Guide
+![img](https://github.com/NASA-AMMOS/slim/assets/3129134/be02ee5f-74cb-4869-bdf2-020c184516ec)
+
+Specifically:
+- Dependency graphs (select "Enable All")
+  - Select "Automatically enable for new private repositories"
+- Dependabot Alerts (select "Enable All")
+  - Select "Automatically enable for new repositories"
+- Dependabot Security Updates (select "Enable All")
+  - Select "Automatically enable for new repositories"
+- Code Scanning (select "Enable All")
+  - Select the default "CodeQL high-precision queries" option
+
+If you do not have organizational permissions or if you wish to customize security features per repository, see our Step-by-Step guide below for repository-specific guidance. 
+ 
+## Step-by-Step Guide per Repository
 
 1. **Team Discussion:** Before diving into any configurations, we recommend engaging with your development team about the importance of GitHub’s security features. Establish a consensus on which ones to prioritize and implement.
 
 2. **Set Up Dependabot:**
    - Head over to the Security tab of your repository.
    - We recommend enabling Dependabot alerts to stay informed about insecure dependencies in your project.
-   - For added security, we suggest turning on Dependabot security updates to automatically generate pull requests for known vulnerabilities in your dependencies.
+   - We suggest turning on Dependabot security updates to automatically generate pull requests for known vulnerabilities in your dependencies.
 
 3. **Enable Code Scanning:**
    - In the Security tab of your repository, navigate to Code Scanning Alerts.
    - Click on Set up code scanning.
-   - For optimal results, we recommend setting up the CodeQL Analysis workflow. This is a powerful, free tool provided by GitHub that meticulously scans your code for vulnerabilities across a variety of languages. Simply choose the CodeQL Analysis template and follow the instructions.
+   - We recommend enabling:
+     - CodeQL Analysis workflow: a free tool provided by GitHub that scans your code for vulnerabilities across a variety of languages.
 
 4. **Enable Secret Scanning:**
    - Head to the Security tab and select Secret Scanning Alerts.
    - We recommend clicking on Set up secret scanning and following the step-by-step instructions provided.
 
-5. **Establish a Security Policy:**
-   - Within the Security tab, you’ll find an option to draft a SECURITY.md file. We advise using GitHub’s auto-generated template as it provides a comprehensive structure for your policy.
-   - We also recommend mentioning this policy in your repository’s CONTRIBUTING.md guide. This ensures potential contributors are well-informed and can adhere to the stipulated security guidelines.
-
 ## Frequently Asked Questions (FAQ)
 
 - Q: Can these security features be used outside of GitHub?
+
   A: This guide specifically focuses on GitHub’s ecosystem. While some tools might have external equivalents, the integrations and configurations here are GitHub-specific.
 
 ## Credits
@@ -57,7 +69,7 @@ Click the link above to access an overview of the suite of security features Git
 - Rishi Verma [@riverma](http://github.com/riverma/)
 
 **Acknowledgements:**
-- GitHub for providing the security features and related documentation.
+- GitHub for providing the security features and related documentation. See [GitHub’s Security Features](https://docs.github.com/en/code-security) to access an overview of the suite of security features GitHub provides for repositories.
 
 ## Feedback and Contributions
 
