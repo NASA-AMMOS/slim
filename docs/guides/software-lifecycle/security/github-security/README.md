@@ -95,7 +95,8 @@ If you do not have organizational permissions or if you wish to customize securi
 
 **Acknowledgements:**
 - GitHub for providing the security features and related documentation. See [GitHub’s Security Features](https://docs.github.com/en/code-security) to access an overview of the suite of security features GitHub provides for repositories.
-
+- [OWASP DevSecOps Guideline](https://owasp.org/www-project-devsecops-guideline/latest/) for providing a Shift Left strategy to secure all phases of development.
+  
 ## Feedback and Contributions
 
 We welcome feedback and contributions to help improve and grow this guide. Please see our [contribution guidelines](https://nasa-ammos.github.io/slim/docs/contribute/contributing/).
