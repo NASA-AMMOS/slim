@@ -16,6 +16,7 @@
 - A GitHub repository
 - Familiarity with GitHub’s user interface
 - Admin rights for certain security configuration tasks
+- Team discussion: before diving into any configurations, we recommend engaging with your development team about the importance of GitHub’s security features. Establish a consensus on which ones to prioritize and implement.
 
 ## Quick Start
 
@@ -39,9 +40,7 @@ If you do not have organizational permissions or if you wish to customize securi
  
 ## Step-by-Step Guide per Repository
 
-1. **Team Discussion:** Before diving into any configurations, we recommend engaging with your development team about the importance of GitHub’s security features. Establish a consensus on which ones to prioritize and implement.
-
-2. **Set Up Dependabot:**
+1. **Set Up Dependabot:**
    - Navigate to your repository and click on the `Settings` tab.
    - From the left sidebar, select the `Code security and analysis` menu.
    - Under the "Dependabot" section:
@@ -63,7 +62,7 @@ If you do not have organizational permissions or if you wish to customize securi
      - Click on the `Security` tab. Here, you can select `Dependabot alerts` to view security alerts, and you can see version updates in the `Pull requests` tab labeled with "Dependabot".
 
 
-3. **Enable Code Scanning:**
+2. **Enable Code Scanning:**
    - In the `Code security and analysis` menu from the `Settings` tab:
      - Click on the `Code scanning alerts` setup button.
      - We recommend enabling the following workflows:
@@ -72,7 +71,7 @@ If you do not have organizational permissions or if you wish to customize securi
      - Return to the repository main page.
      - Click on the `Security` tab and select `Code scanning alerts`.
 
-4. **Enable Secret Scanning:**
+3. **Enable Secret Scanning:**
    - In the `Code security and analysis` menu from the `Settings` tab:
      - Click on the `Secret scanning` enable button.
      - We recommend following the step-by-step instructions provided to enable Secret Scanning.
