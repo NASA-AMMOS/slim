@@ -42,26 +42,55 @@ If you do not have organizational permissions or if you wish to customize securi
 1. **Team Discussion:** Before diving into any configurations, we recommend engaging with your development team about the importance of GitHub’s security features. Establish a consensus on which ones to prioritize and implement.
 
 2. **Set Up Dependabot:**
-   - Head over to the Security tab of your repository.
-   - We recommend enabling Dependabot alerts to stay informed about insecure dependencies in your project.
-   - We suggest turning on Dependabot security updates to automatically generate pull requests for known vulnerabilities in your dependencies.
+   - Navigate to your repository and click on the `Settings` tab.
+   - From the left sidebar, select the `Code security and analysis` menu.
+   - Under the "Dependabot" section:
+     - We recommend enabling Dependabot alerts to stay informed about insecure dependencies in your project.
+     - For added security, we suggest turning on Dependabot security updates to automatically generate pull requests for known vulnerabilities in your dependencies.
+     - We also recommend enabling Dependabot version updates _if you are using a package manager for your project_. This will help you keep your dependencies up-to-date. To configure Dependabot version updates:
+       1. Create a `.github/dependabot.yml` file in your repository.
+       2. Specify the package-ecosystem, directory, and schedule for the updates. For example:
+          ```yml
+          version: 2
+          updates:
+            - package-ecosystem: "npm"
+              directory: "/"
+              schedule:
+                interval: "daily"
+          ```
+   - To view Dependabot alerts and version updates:
+     - Head back to the main page of your repository.
+     - Click on the `Security` tab. Here, you can select `Dependabot alerts` to view security alerts, and you can see version updates in the `Pull requests` tab labeled with "Dependabot".
+
 
 3. **Enable Code Scanning:**
-   - In the Security tab of your repository, navigate to Code Scanning Alerts.
-   - Click on Set up code scanning.
-   - We recommend enabling:
-     - CodeQL Analysis workflow: a free tool provided by GitHub that scans your code for vulnerabilities across a variety of languages.
+   - In the `Code security and analysis` menu from the `Settings` tab:
+     - Click on the `Code scanning alerts` setup button.
+     - We recommend enabling the following workflows:
+       - _CodeQL Analysis workflow:_ a free tool provided by GitHub that scans your code for vulnerabilities across a variety of languages. Simply choose a CodeQL Analysis template (default is acceptable) and follow the instructions.
+   - To view Code scanning alerts:
+     - Return to the repository main page.
+     - Click on the `Security` tab and select `Code scanning alerts`.
 
 4. **Enable Secret Scanning:**
-   - Head to the Security tab and select Secret Scanning Alerts.
-   - We recommend clicking on Set up secret scanning and following the step-by-step instructions provided.
+   - In the `Code security and analysis` menu from the `Settings` tab:
+     - Click on the `Secret scanning` enable button.
+     - We recommend following the step-by-step instructions provided to enable Secret Scanning.
+     - We recommend enabling "Push protection" for blocking commits containing secrets
+   - To view Secret scanning alerts:
+     - Navigate to the repository main page.
+     - Click on the `Security` tab and select `Secret scanning alerts`.
 
 ## Frequently Asked Questions (FAQ)
 
-- Q: Can these security features be used outside of GitHub?
+- **Q: Can these security features be used outside of GitHub?**
 
   A: This guide specifically focuses on GitHub’s ecosystem. While some tools might have external equivalents, the integrations and configurations here are GitHub-specific.
 
+- **Q: If I receive security alerts, what should I do and how soon should I act?**
+
+  A: When you receive a security alert, it indicates a potential vulnerability in your repository. First, review the details of the alert to understand the severity and the affected component. Address critical vulnerabilities immediately, as they can pose a significant risk to your project. For less severe alerts, plan to address them in a timely manner. Always keep in mind that the sooner you act on security alerts, the better you can protect your code and users from potential threats.
+  
 ## Credits
 
 **Authorship:**
