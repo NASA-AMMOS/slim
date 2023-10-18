@@ -83,6 +83,10 @@ If you do not have organizational permissions or if you wish to customize securi
 
   A: This guide specifically focuses on GitHub’s ecosystem. While some tools might have external equivalents, the integrations and configurations here are GitHub-specific.
 
+- **Q: Are these security features available on GitHub Enterprise?**
+
+  A: It depends on your institution's particular version of GitHub deployed. You'll have to check your Settings tab to view the features that are provided. GitHub.com is the most up-to-date version we recommend for. 
+
 - **Q: If I receive security alerts, what should I do and how soon should I act?**
 
   A: When you receive a security alert, it indicates a potential vulnerability in your repository. First, review the details of the alert to understand the severity and the affected component. Address critical vulnerabilities immediately, as they can pose a significant risk to your project. For less severe alerts, plan to address them in a timely manner. Always keep in mind that the sooner you act on security alerts, the better you can protect your code and users from potential threats.
