@@ -53,11 +53,11 @@ Click the link above to access an overview of the suite of security features Git
 ## Credits
 
 **Authorship:**
-- John Engelke (@jpl-jengelke)
-- Rishi Verma (@riverma)
+- John Engelke [@jpl-jengelke](http://github.com/jpl-jengelke/)
+- Rishi Verma [@riverma](http://github.com/riverma/)
 
 **Acknowledgements:**
-- GitHub for providing comprehensive security features and related documentation.
+- GitHub for providing the security features and related documentation.
 
 ## Feedback and Contributions
 
