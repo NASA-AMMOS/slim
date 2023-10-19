@@ -26,9 +26,23 @@ To get the most out of `detect-secrets`, you'll need:
 
 ## Quick Start
 
-1. Install slim-detect-secrets: `pip install git+https://github.com/NASA-AMMOS/slim-detect-secrets.git@exp`.
-2. Execute a baseline scan: `detect-secrets scan ./ --all-files --disable-plugin AbsolutePathDetectorExperimental --exclude-files '.secrets.*' --exclude-files '.git*' > .secrets.baseline`.
-3. Review the `.secrets.baseline` file for any detected secrets via an audit: `detect-secrets audit .secrets.baseline`
+1. Install slim-detect-secrets:
+   
+   ```bash
+   pip install git+https://github.com/NASA-AMMOS/slim-detect-secrets.git@exp
+   ```
+   
+3. Execute a baseline scan:
+
+   ```bash
+   detect-secrets scan ./ --all-files --disable-plugin AbsolutePathDetectorExperimental --exclude-files '.secrets.*' --exclude-files '.git*' > .secrets.baseline
+   ```
+
+6. Review the `.secrets.baseline` file for any detected secrets via an audit:
+
+   ```bash
+   detect-secrets audit .secrets.baseline
+   ```
 
 Additional steps like whitelisting, establishing pre-commit hooks or enabling further automation are covered in detail below.
 
