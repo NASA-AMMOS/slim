@@ -8,8 +8,11 @@ sidebar_label: Testing Frameworks
       * For Module Testing (xUnit)
          - **Java**
             - [JUnit](https://junit.org/): A popular Java testing framework for unit and integration testing.
+         - **JavaScript/TypeScript**
+            - [Jest](https://jestjs.io/): A widely used JavaScript testing framework for unit and integration testing.
          - **Python**
             - [PyUnit](https://docs.python.org/3/library/unittest.html#module-unittest): The built-in unit testing library for Python.
+            - [PyTest](https://docs.pytest.org/): A popular Python testing framework for unit and functional testing.
          - **C#**
             - [NUnit](https://nunit.org/): A widely used testing framework for .NET applications.
          - **C/C++**
@@ -34,21 +37,24 @@ sidebar_label: Testing Frameworks
             - [googletest](https://github.com/google/googletest): The Google C++ Testing Framework.
          - **HTTP Services**
             - [WireMock](http://wiremock.org/): A tool for mocking HTTP services, useful for simulating APIs and services during testing.
+      
+      
               
    - For Code Analysis
       - For Static Analysis
          - **Java**
+            - [PMD](https://github.com/pmd/pmd): A source code analyzer for Java, JavaScript, and more.
             - [Checkstyle](https://checkstyle.sourceforge.io/): A tool for checking Java code against coding standards.
             - [Spotbugs](https://github.com/spotbugs/spotbugs): A static analysis tool for Java bytecode.
+         - **JavaScrpt/TypeScript**
+            - [ESLint](https://eslint.org/): A widely used JavaScript and TypeScript linting tool for identifying and fixing code issues.
+            - [SonarQube](https://www.sonarqube.org/): A comprehensive platform for continuous inspection of code quality and security.
             - [PMD](https://github.com/pmd/pmd): A source code analyzer for Java, JavaScript, and more.
-            - [FindBugs](http://findbugs.sourceforge.net/): A Java-based tool that detects common bugs in Java code.
          - **Python**
             - [PyLint](https://pylint.pycqa.org/en/latest/): A Python static code analysis tool.
             - [Pyflakes](https://github.com/PyCQA/pyflakes): A lightweight Python code checker.
-            - [ESLint](https://eslint.org/): A widely used JavaScript and TypeScript linting tool for identifying and fixing code issues.
          - **C#**
-            - [StyleCop](https://github.com/StyleCop/StyleCop): A style checker for C# code.
-            - [Gendarme](https://www.mono-project.com/docs/tools+libraries/tools/gendarme/): An extensible rule-based tool to find problems in .NET code.
+            - [SonarQube](https://www.sonarqube.org/): A comprehensive platform for continuous inspection of code quality and security.
          - **C/C++**
             - [CppCheck](https://github.com/danmar/cppcheck): A static analysis tool for C/C++.
             - [Clang Static Analyzer](https://clang-analyzer.llvm.org/) / [tidy](https://clang.llvm.org/extra/clang-tidy/): Analyzers for C/C++ code.
@@ -89,14 +95,10 @@ sidebar_label: Testing Frameworks
                - [Gcov](https://gcc.gnu.org/onlinedocs/gcc/Gcov.html): A code coverage tool for GCC.
 
       - For Security
-
          - [Scrub/Coverity/CodeQL](https://nasa.github.io/scrub/usage.html#supported-cots-tools-and-languages): Tools for code analysis and security scanning.
          - [SonarQube](https://www.sonarqube.org/): An open-source platform for continuous inspection of code quality.
-         - [OWASP ZAP](https://www.zaproxy.org/): An open-source security testing tool for finding web application vulnerabilities.
-         - [Burp Suite](https://portswigger.net/burp): A popular security testing tool for web application security assessment.
-
+         
    - For Web Applications
-
       - For Service Endpoints (APIs)
 
          - For RESTful Endpoints
@@ -116,15 +118,27 @@ sidebar_label: Testing Frameworks
             - [Serenity BDD](https://serenity-bdd.info/): A test automation framework that combines Selenium, JUnit, and BDD practices.
             - [Allure](http://allure.qatools.ru/): An open-source framework for test report generation with interactive and informative reports.
 
+      - For Cross-Browser Testing
+         - [BrowserStack](https://www.browserstack.com/): A cloud-based cross-browser testing platform.
+         - [Sauce Labs](https://saucelabs.com/): A cloud-based testing platform for web and mobile applications.
+         - [CrossBrowserTesting](https://crossbrowsertesting.com/): A cross-browser testing tool by SmartBear.
+      
+      - For Security
+         - [OWASP ZAP](https://www.zaproxy.org/): An open-source security testing tool for finding web application vulnerabilities.
+         - [Burp Suite](https://portswigger.net/burp): A popular security testing tool for web application security assessment.  
 
    - For Performance Testing
-      - [JMeter](https://jmeter.apache.org/): An Apache tool for performance testing.
-      - [Gatling](https://gatling.io/): A high-performance load testing tool.
-      - [Locust](https://locust.io/): An open-source load testing tool.
-      - [Chaos Monkey](https://netflix.github.io/chaosmonkey/): A tool for testing system resilience.
-      - [Robot Framework](https://robotframework.org/): An open-source test automation framework.
-      - [Cucumber Open](https://cucumber.io/tools/cucumber-open/): A collaboration and automation platform for Behavior-Driven Development (BDD).
-
+      - For Load Testing
+         - [JMeter](https://jmeter.apache.org/): An Apache tool for performance testing.
+         - [Gatling](https://gatling.io/): A high-performance load testing tool.
+         - [Locust](https://locust.io/): An open-source load testing tool.
+      - For Acceptance Testing
+         - [Cucumber](https://cucumber.io/docs/installation/): A collaboration and automation platform for Behavior-Driven Development (BDD).
+         - [Chaos Monkey](https://netflix.github.io/chaosmonkey/): A tool for testing system resilience.
+         - [Robot Framework](https://robotframework.org/): An open-source test automation framework.
+         
+      
+      
    - For Mobile Testing
 
       - For All Platforms
@@ -146,12 +160,9 @@ sidebar_label: Testing Frameworks
 
       - For Status Reporting
          - [Testrail API Reporting](https://www.gurock.com/testrail/): Test management and reporting tool.
-         - [Jenkins](https://www.jenkins.io/): A widely used automation server.
-         - [Code Coverage API Plugin](https://plugins.jenkins.io/code-coverage-api/): Jenkins plugin for code coverage reporting.
-         - [Travis CI](https://travis-ci.org/): A cloud-based CI/CD platform.
-         - [Code Climate](https://docs.travis-ci.com/user/code-climate/): An automated code review platform.
-         - [Codecov](https://about.codecov.io/tool/travis-ci/): A code coverage reporting tool.
-
+         - [Jenkins](https://www.jenkins.io/) with [Code Coverage API Plugin](https://plugins.jenkins.io/code-coverage-api/): Jenkins plugin for code coverage reporting.
+         - [Travis CI](https://travis-ci.org/) with [Code Climate](https://docs.travis-ci.com/user/code-climate/) or [Codecov](https://about.codecov.io/tool/travis-ci/): An automated code review platform. 
+         
       - For Real-time Validation and Stability
          - [Jenkins](https://www.jenkins.io/): An automation server for building, testing, and deploying.
          - [GitHub Actions](https://github.com/features/actions): CI/CD workflows powered by GitHub.
@@ -160,14 +171,4 @@ sidebar_label: Testing Frameworks
    - For AI/ML Testing
       - [TensorFlow Test](https://www.tensorflow.org/tfx): A testing framework for machine learning models developed using TensorFlow.
 
-   - For Cross-Browser Testing
-      - [BrowserStack](https://www.browserstack.com/): A cloud-based cross-browser testing platform.
-      - [Sauce Labs](https://saucelabs.com/): A cloud-based testing platform for web and mobile applications.
-      - [CrossBrowserTesting](https://crossbrowsertesting.com/): A cross-browser testing tool by SmartBear.
-  
-   - For Continuous Integration and Deployment
-      - [GitLab CI/CD](https://docs.gitlab.com/ee/ci/): An integrated CI/CD solution provided by GitLab.
-      - [CircleCI](https://circleci.com/): A cloud-based CI/CD platform that supports automating the testing and deployment of software.
-
-   - For Containerization and Orchestration
-      - [Kubernetes](https://kubernetes.io/): A container orchestration platform for managing containerized applications.
+   
