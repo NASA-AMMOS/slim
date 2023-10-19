@@ -17,9 +17,8 @@
 ## Prerequisites
 To get the most out of `detect-secrets`, you'll need:
 
-* Familiarity with Python for potential custom plugin development.
-* Access rights to the repository to set up scanning mechanisms.
-* An understanding of your project's dependencies and structure to tailor the scanning appropriately.
+* Python `pip` tool.
+* (Optional) Familiarity with Python for potential custom plugin development.
 
 ---
 
@@ -29,8 +28,9 @@ To get the most out of `detect-secrets`, you'll need:
 
 1. Install slim-detect-secrets: `pip install git+https://github.com/NASA-AMMOS/slim-detect-secrets.git@exp`.
 2. Execute a baseline scan: `detect-secrets scan ./ --all-files --disable-plugin AbsolutePathDetectorExperimental --exclude-files '.secrets.*' --exclude-files '.git*' > .secrets.baseline`.
-3. Review the `.secrets.baseline` file for any detected secrets.
+3. Review the `.secrets.baseline` file for any detected secrets via an audit: `detect-secrets audit .secrets.baseline`
 
+Additional steps like whitelisting, establishing pre-commit hooks or enabling further automation are covered in detail below.
 
 ---
 
@@ -114,7 +114,7 @@ This layer is a pre-commit hook in the local environment that scans changes when
 
 > **Note**: The pre-commit hook does not automatically update the `.secrets.baseline` file. Update it by re-running the scan command.
 
-### Layer 3: Server-side Push to GitHub.com
+### Layer 3: Server-side Push to GitHub.com [EXPERIMENTAL / UNDER DEVELOPMENT]
 This layer scans server-side pre-commits using [GitHub Action](https://github.com/features/actions). The scan is triggered during a push or pull request. Any detected new secrets are reported, and a status check on GitHub prevents merges or pushes to protected branches.
 
 #### Steps
