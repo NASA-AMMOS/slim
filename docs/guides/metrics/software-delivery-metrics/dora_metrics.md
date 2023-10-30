@@ -7,7 +7,7 @@
   - [Introduction](#introduction)
   - [What are DORA Metrics?](#what-are-dora-metrics)
   - [Why DORA Metrics are the Best Way to Measure Software Delivery Performance](#why-dora-metrics-are-the-best-way-to-measure-software-delivery-performance)
-  - [Tools for Collecting DORA Metrics](#tools-for-collecting-dora-metrics)
+  - [Tools for Collecting DORA Metrics (Note: A trade study will be done on these tools)](#tools-for-collecting-dora-metrics-note-a-trade-study-will-be-done-on-these-tools)
   - [How to Use DORA Metrics](#how-to-use-dora-metrics)
   - [Conclusion](#conclusion)
 
@@ -47,11 +47,12 @@ DORA metrics have gained widespread recognition as the best way to measure softw
 
 6. **Management and Leadership Buy-In**: DORA metrics are designed to communicate software delivery performance to management and leadership in a clear and understandable way. This fosters support for improvements and investments in the development process.
 
-## Tools for Collecting DORA Metrics
+## Tools for Collecting DORA Metrics (Note: A trade study will be done on these tools)
 
 - <https://oobeya.io/>
 - <https://www.swarmia.com/dora-metrics/>
 - <https://linearb.io/platform/dora-metrics>
+- <https://devlake.apache.org/>
 
 ## How to Use DORA Metrics
 
