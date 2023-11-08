@@ -20,7 +20,7 @@
 
 ## Introduction
 
-This README outlines a trade study conducted to compare various free and open-source tools for tracking DevOps Research and Assessment (DORA) metrics. DORA metrics are crucial for evaluating an organization's DevOps practices and identifying areas for improvement.
+This README outlines a trade study conducted to compare various free and open-source tools for tracking DevOps Research and Assessment (DORA) metrics.
 
 ## Objective
 
@@ -38,7 +38,7 @@ This trade study will focus on comparing a selection of popular free and open-so
 
 3. Assessment: Each open-source tool was tested and evaluated against the defined criteria. This involved installing and configuring the tools, exploring their functionality, and assessing their performance.
 
-4. Documentation and Review: A comprehensive review of the open-source tools was documented, including their strengths, weaknesses, and notable features.
+4. Documentation and Review: A comprehensive review of the open-source tools were documented, including their strengths, weaknesses, and notable features.
 
 5. Analysis: The findings and insights from the assessment were analyzed to make informed recommendations.
 
@@ -56,7 +56,7 @@ The following free and open-source DORA metrics tracking tools were evaluated in
 
 For the evaluation of DORA metrics tracking tools, we will consider the following criteria:
 
-1. **Ease of Installation and Configuration**: How long does it take to setup the tool? 1(longest) - 5(fastest)
+1. **Ease of Installation and Configuration**: How long does it take to set up the tool? 1(longest) - 5(fastest)
 
 2. **Integration with Other Tools**: How well does the open-source tool integrate GitHub, Jenkins, JIRA, etc.? 1(poor integration) - 5(excellent integration)
 
@@ -74,7 +74,7 @@ For the evaluation of DORA metrics tracking tools, we will consider the followin
 
 ## Analysis
 
-In the analysis section, we will delve into the key findings and observations from the evaluation of the DORA metrics tracking tools. This analysis aims to provide a deeper understanding of how each tool performed in different criteria and what implications those performances might have for organizations considering their adoption.
+In the analysis section, we will delve into the key findings and observations from the evaluation of the DORA metrics tracking tools
 
 ### Apache DevLake
 
@@ -92,7 +92,7 @@ In the analysis section, we will delve into the key findings and observations fr
 
 **Integration with Other Tools**: It offers decent integration capabilities with other tools, which can be enhanced to improve its compatibility with a wider range of DevOps tools.
 
-**Community and Support**: ThoughtWorks Metrik's community and vendor support are relatively modest, and this may pose challenges for organizations seeking robust support options.
+**Community and Support**: ThoughtWorks Metrik's community and vendor support are relatively modest, and this may pose challenges for teams seeking robust support options.
 
 **Customization and Extensibility**: This tool provides some room for customization but is not as flexible as Apache DevLake in this regard.
 
@@ -104,18 +104,18 @@ In the analysis section, we will delve into the key findings and observations fr
 
 **Community and Support**: FourKeys has a decent level of community and vendor support but may not be as well-supported as Apache DevLake.
 
-**Customization and Extensibility**: It provides a moderate level of customization and extensibility, making it a suitable choice for organizations with relatively standard requirements.
+**Customization and Extensibility**: It provides a moderate level of customization and extensibility, making it a suitable choice for teams with relatively standard requirements.
 
 ## Conclusion
 
-In conclusion, the choice of a DORA metrics tracking tool depends on an organization's specific needs and priorities. Apache DevLake stands out as a strong candidate, particularly for organizations that prioritize easy installation, robust integration, strong support, and high customization potential. ThoughtWorks Metrik offers a reasonable alternative with a balanced set of features, though it may require additional effort for integration and has more limited support. FourKeys, while a viable option, may need improvement in installation and configuration and integration aspects.
+Apache DevLake stands out as a strong candidate, particularly for easy installation, robust integration, strong support, and high customization potential. ThoughtWorks Metrik offers a reasonable alternative with a balanced set of features, though it may require additional effort for integration and has more limited support. FourKeys, while a viable option, may need improvement in installation configuration and integration aspects.
 
 ## Recommendations
 
 Based on the evaluation results, we offer the following recommendations:
 
-1. Organizations seeking a comprehensive DORA metrics tracking tool with strong integration capabilities, support, and customization potential should consider Apache DevLake as their top choice.
+1. Teams seeking a comprehensive DORA metrics tracking tool with strong integration capabilities, support, and customization potential should consider Apache DevLake as their top choice.
 
-2. ThoughtWorks Metrik can be a suitable option for organizations with moderate requirements and a willingness to invest additional effort in integration and customization.
+2. ThoughtWorks Metrik can be a suitable option for teams with moderate requirements and a willingness to invest additional effort in integration and customization.
 
-3. FourKeys may be a suitable choice for organizations with more basic requirements and a preference for moderate installation and configuration complexity.
+3. FourKeys may be a suitable choice for teams with more basic requirements and a preference for moderate installation and configuration complexity.
