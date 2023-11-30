@@ -1,4 +1,4 @@
-To be updated with real example
+To be updated with a real example
   
 ### Example
 ```
