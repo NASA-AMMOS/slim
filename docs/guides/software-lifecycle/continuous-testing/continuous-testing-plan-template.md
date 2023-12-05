@@ -1,4 +1,4 @@
-### Example
+### Continuous Testing Plan Template
 ```
 ### [INSERT PROJECT NAME HERE] Continuous Testing Plan
 
