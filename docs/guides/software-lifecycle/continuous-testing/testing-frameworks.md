@@ -46,18 +46,23 @@ sidebar_label: Testing Frameworks
             - [PMD](https://github.com/pmd/pmd): A source code analyzer for Java, JavaScript, and more.
             - [Checkstyle](https://checkstyle.sourceforge.io/): A tool for checking Java code against coding standards.
             - [Spotbugs](https://github.com/spotbugs/spotbugs): A static analysis tool for Java bytecode.
-         - **JavaScrpt/TypeScript**
+            - [SonarQube](https://www.sonarqube.org/): A tool combining multiple analyses in a single pass.
+         - **JavaScript/TypeScript**
             - [ESLint](https://eslint.org/): A widely used JavaScript and TypeScript linting tool for identifying and fixing code issues.
-            - [SonarQube](https://www.sonarqube.org/): A comprehensive platform for continuous inspection of code quality and security.
             - [PMD](https://github.com/pmd/pmd): A source code analyzer for Java, JavaScript, and more.
+            - [SonarQube](https://www.sonarqube.org/): A comprehensive platform for continuous inspection of code quality and security.
          - **Python**
             - [PyLint](https://pylint.pycqa.org/en/latest/): A Python static code analysis tool.
             - [Pyflakes](https://github.com/PyCQA/pyflakes): A lightweight Python code checker.
          - **C#**
-            - [SonarQube](https://www.sonarqube.org/): A comprehensive platform for continuous inspection of code quality and security.
+            - [StyleCop](https://www.nuget.org/packages/StyleCop.Analyzers/): Enforces style and consistency rules in C# code.
+            - [Roslynator](https://www.nuget.org/packages/Roslynator.Analyzers/): A set of code analyzers, refactorings, and code fixes for C#.
+            - [XunitAnalyzer](https://www.nuget.org/packages/xunit.analyzers/): Analyzers to improve the quality of xUnit.net tests.
+            - [SonarAnalyzer](https://www.nuget.org/packages/SonarAnalyzer.CSharp/): A comprehensive platform for continuous inspection of code quality and security.
          - **C/C++**
             - [CppCheck](https://github.com/danmar/cppcheck): A static analysis tool for C/C++.
             - [Clang Static Analyzer](https://clang-analyzer.llvm.org/) / [tidy](https://clang.llvm.org/extra/clang-tidy/): Analyzers for C/C++ code.
+            - [CodeSonar](https://codesecure.com/our-products/codesonar/): A tool for static code analysis, addressing bugs and security issues in source and binary code.
 
       - For Dynamic Analysis
          - For Test Coverage
