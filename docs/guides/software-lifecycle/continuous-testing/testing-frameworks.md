@@ -176,6 +176,6 @@ sidebar_label: Testing Frameworks
    - For AI/ML Testing
       - [TensorFlow Test](https://www.tensorflow.org/tfx): A testing framework for machine learning models developed using TensorFlow.
 
-For more comprehensive continuous testing frameworks, please refer to the following links:
-- [OWASP DevSecOps Guideline](https://owasp.org/www-project-devsecops-guideline/latest/)
-- [Static Code Analysis Tools by OWASP](https://owasp.org/www-project-devsecops-guideline/latest/02a-Static-Application-Security-Testing#tools)
+- For more comprehensive continuous testing frameworks, please refer to the following links:
+   - [OWASP DevSecOps Guideline](https://owasp.org/www-project-devsecops-guideline/latest/)
+   - [Static Code Analysis Tools by OWASP](https://owasp.org/www-project-devsecops-guideline/latest/02a-Static-Application-Security-Testing#tools)
