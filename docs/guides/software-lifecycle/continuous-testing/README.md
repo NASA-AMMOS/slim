@@ -6,7 +6,7 @@
 
 **Background**: Continuous testing (CT) is a powerful approach that automatically analyzes your software throughout the development process, not just to find bugs, but to ensure it performs well, is secure, and functions flawlessly. CT provides rapid feedback, letting you identify and fix problems early, before they become major issues. This leads to faster releases, improved software quality, and happier users.
 
-**Philosophy**: At the core of our continuous testing philosophy is the strategic utilization of open-source tools. We prioritize the adoption of a singular, comprehensive tool that seamlessly addresses various aspects across the continuous testing phases, optimizing our testing processes for efficiency and effectiveness.
+**Philosophy**: To provide a simple, consistent, easy-to-use continuous testing plan template and recommend tools to bootstrap your project with the essentials needed for a high-quality continuous testing setup. 
 
 **Use Cases**:
 - Ensuring consistent and thorough validation of new code changes
