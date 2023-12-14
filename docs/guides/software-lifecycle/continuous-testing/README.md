@@ -51,7 +51,7 @@ graph TD;
         L[Performance]
         M[Security]
         N[V&V]
-        O[UI/UX Testing]
+        O[UI/UX]
     end
     
     subgraph C[Improvement and Reporting]
@@ -66,7 +66,7 @@ graph TD;
 ---
 ## Quick Start
 
-To facilitate the implementation of Continuous Testing, we present a comprehensive template below. This template outlines key steps and considerations across various testing phases, along with recommended tools for each category. Whether you're a seasoned developer or new to continuous testing, this template serves as a valuable guide to streamline your testing processes and enhance software delivery. The tools recommended are chosen for their effectiveness, and they span both open-source and widely adopted commercial options, providing flexibility based on your specific needs and preferences.
+Ready for swift CT implementation? Copy/paste our template, fill it with your team info, and deploy recommended tools. Streamline testing, enhance delivery efficiency.
 
 [Continuous Testing Plan Template](continuous-testing-plan-template.md)
 
@@ -121,6 +121,10 @@ To facilitate the implementation of Continuous Testing, we present a comprehensi
 
 ## Frequently Asked Questions (FAQ)
 
+
+---
+
+## Terminology
 - **User Interface Testing:** The role of usability testing and user interface testing is an important consideration. We're actively exploring how to integrate this into our continuous testing model.
 
 - **Tool Selection:** We understand that implementing all the recommended tools might be challenging due to resource constraints. We're creating a common subset of tools for all projects and prioritizing their importance.
