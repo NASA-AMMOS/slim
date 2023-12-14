@@ -121,22 +121,23 @@ Ready for swift CT implementation? Copy/paste our template, fill it with your te
 
 ## Frequently Asked Questions (FAQ)
 
+**Q: How does continuous testing address usability and user interface testing?**
+A: We acknowledge the importance of usability and UI testing and are actively exploring ways to integrate them seamlessly into our continuous testing model.
 
----
+**Q: Is it necessary to implement all recommended tools, considering resource constraints?**
+A: We understand the challenges, and thus, we're developing a common subset of tools for all projects, prioritizing their importance for more feasible implementation.
 
-## Terminology
-- **User Interface Testing:** The role of usability testing and user interface testing is an important consideration. We're actively exploring how to integrate this into our continuous testing model.
+**Q: Are certain projects not mature enough for specific tools?**
+A: Yes, we recognize project maturity levels vary. We recommend waiting until your project reaches an appropriate stage, especially for tools like integration testing.
 
-- **Tool Selection:** We understand that implementing all the recommended tools might be challenging due to resource constraints. We're creating a common subset of tools for all projects and prioritizing their importance.
+**Q: What phases are prioritized in the continuous testing guidelines?**
+A: Security, verification and validation, and integration testing are considered essential phases and will be prioritized in our guidelines.
 
-- **Project Maturity:** We recognize that some projects may not be mature enough for certain tools. We recommend waiting until your project reaches an appropriate stage for tools like integration testing.
+**Q: How does licensing factor into the tool selection process, even for open-source tools?**
+A: Licensing is crucial, and we are actively exploring strategies to address licensing concerns, ensuring compliance even with open-source tools.
 
-- **Priority Phases:** We've noted that security, verification and validation, and integration testing are essential phases. We'll prioritize these in our guidelines.
-
-- **Licensing:** Licensing is a crucial factor even in open source tools. We're exploring how to address this concern better.
-
-- **Iterative Implementation:** Iteration is key to successful continuous testing. We understand that it may take time to get it right, and we encourage iterative test implementation.
-
+**Q: Is continuous testing a one-time implementation, or can it be an iterative process?**
+A: We emphasize iterative implementation for continuous testing success, understanding that refining the process takes time.
 
 ---
 
