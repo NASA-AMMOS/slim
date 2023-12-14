@@ -19,6 +19,10 @@ if [ ! -e docker-compose.yml ] && [ ! -e env.example ]; then
     wget $DOCKER_COMPOSE_URL
     wget $ENV_EXAMPLE_URL
 
+    # Change permissions to allow read and write
+    chmod 660 docker-compose.yml
+    chmod 660 env.example
+
     echo "Step 3. Renaming env.example to .env..."
     mv env.example .env
 else
@@ -40,6 +44,8 @@ if [ -e .env ]; then
 else
     # If .env doesn't exist, create it with the new content
     printf "ENCRYPTION_SECRET=\"%s\"\n" "$encryption_key" >.env
+    # Change permissions to allow read and write
+    chmod 660 .env
 fi
 
 # Step 5: Run Docker Compose to launch DevLake
