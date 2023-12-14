@@ -62,9 +62,9 @@ graph TD;
 
 
 #### 5. Implementation Checklist
-- [ ] Continuous Testing Plan defined, including all relevant parts.
-- [ ] Security Testing tools, people, and tests implemented.
-- [ ] Unit Testing tools, people, and tests implemented.
-- [ ] All planned test cases defined in the test plan are implemented.
+- [ ] Continuous Testing Plan (this document) defined, including all relevant parts
+- [ ] Security Testing tools, people, and tests implemented/deployed
+- [ ] Unit Testing tools, people, and tests implemented/deployed
+- [ ] All planned test cases defined in the test plan are implemented/deployed
 - [ ] Defects are reported and tracked.
 - [ ] Test summary report is generated and shared with stakeholders.
