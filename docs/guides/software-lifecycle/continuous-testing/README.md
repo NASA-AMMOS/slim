@@ -161,7 +161,7 @@ To facilitate the implementation of Continuous Testing, we present a comprehensi
 
 **Acknowledgements**:
 * We express our gratitude to Rishi Verma and John Engelke for their invaluable reviews and insightful comments, which significantly contributed to the enhancement of this work.
-* [Use Cases and Frameworks](testing-frameworks.md)
+* [Testing Frameworks](testing-frameworks.md)
 
   
 ---
