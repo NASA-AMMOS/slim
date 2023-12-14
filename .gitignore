@@ -2,8 +2,7 @@
 
 
 # files generated from DevLake
-docs/guides/metrics/starter-kit/.env
-docs/guides/metrics/starter-kit/docker-compose.yml
+.env
 
 # development environment
 **/node_modules

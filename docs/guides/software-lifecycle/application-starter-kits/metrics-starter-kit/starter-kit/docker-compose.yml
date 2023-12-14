@@ -53,7 +53,7 @@ services:
   devlake:
     image: devlake.docker.scarf.sh/apache/devlake:v0.20.0-beta4
     ports:
-      - 8081:8081
+      - 8080:8080
     restart: always
     volumes:
       - devlake-log:/app/logs

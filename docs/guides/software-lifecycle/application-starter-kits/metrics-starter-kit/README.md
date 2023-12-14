@@ -23,9 +23,10 @@
 
 ## Quick Start
 
-[Apache DevLake Starter Kit Documentation](software-delivery-metrics/general-metrics.md)
+Ready to start learning about software-metrics and the related tools? Follow these guides.
 
-This link leads to a comprehensive guide on how to get started with the Apache DevLake Starter Kit, including detailed setup and configuration instructions.
+[Metrics Documentation](software-delivery-metrics/general-metrics.md)
+[Trade Study Documentation](software-delivery-metrics/metrics-tool-trade-study.md)
 
 ---
 
