@@ -21,7 +21,7 @@ This document aims to provide a general approach to Continuous Testing for [INSE
 
 
 #### **3. Testing Workflow Architecture**
-```
+
 ```mermaid
 graph TD;
     A[Code]
@@ -54,12 +54,12 @@ graph TD;
         P[Generate Reports]
     end
 
-```
 
-```
+
+
 #### **4. Test Specifications**
 Before customizing the table entries below, evaluate your project's specific needs and requirements. Add, remove, or modify rows in the table to best represent the phases, tests, tools, and people associated with your testing approach.
-```
+
 | Phase | High-level Tests | Recommended Tool | Description | Starter Kit | Key People |
 |-------|------------------|-----------------|-------------|-------------|------------|
 | Security Testing | Vulnerability Scan | [GitHub Dependabot](https://dependabot.com/) | Monitors dependencies for known vulnerabilities. | [GitHub Docs](https://docs.github.com/en/code-security/supply-chain-security/keeping-your-dependencies-updated-automatically/about-dependabot-version-updates) | [INSERT NAME HERE] |
@@ -82,4 +82,4 @@ Before customizing the table entries below, evaluate your project's specific nee
 - [ ] All planned test cases defined in the test plan are implemented.
 - [ ] Defects are reported and tracked.
 - [ ] Test summary report is generated and shared with stakeholders.
-
+```
