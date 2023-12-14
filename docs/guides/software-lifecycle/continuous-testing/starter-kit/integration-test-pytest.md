@@ -1,10 +1,12 @@
+# Integration test using Pytest
+
 ## Prerequisites
 ```
 pip install pytest
 ```
 
 
-## Integration test example using pytest
+## Example
 ```python
 # File: test_integration.py
 
