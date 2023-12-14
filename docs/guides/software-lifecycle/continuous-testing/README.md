@@ -21,24 +21,8 @@
 ---
 
 ## Prerequisites
-- CT Tools (These tools encompass both open-source and widely adopted commercial solutions)
-   - **Unit Testing:**
- 	- Jest (Javascript), Pytest (Python)
-   - **Integration Testing:**
- 	- Jest (Javascript), Pytest (Python)
-   - **Regression Testing:**
- 	- Selenium, Playwright
-   - **Performance Testing:**
- 	- Apache JMeter
-   - **Security Testing:**
- 	- Dependabot, SonarQube
-   - **Verification and Validation (V&V):**
- 	- SonarQube, ESLint (Javascript), PyLint (Python)
-   - **UI/UX Testing**
- 	- Selenium, Playwright
-- Understanding of the software development lifecycle
-- Knowledge of the application architecture and dependencies
-- An established set of test cases for initial implementation
+- A list of your software tools, a diagram of their interaction, and a list of all third-party dependencies
+
 
 ---
 
@@ -54,11 +38,9 @@ graph TD;
     B --> C;
 
     subgraph A[Planning and Design]
-        D[Develop a comprehensive testing plan aligned with SLIM recommendations]
-        E[Establish a shared plan for Continuous Testing]
-        F[Define test requirements, specifying what to test and the reasons behind it]
-        G[Identify roles for testers and implementers]
-        H[Tools: TestRail]
+        D[Develop testing plan]
+        F[Define test requirements]
+        G[Identify roles for testers]
 
     end
    
@@ -73,8 +55,8 @@ graph TD;
     end
     
     subgraph C[Improvement and Reporting]
-        P[Conduct retrospectives and feedback sessions for continuous enhancement]
-        Q[Regularly update tests to accommodate changes in functionality, new features, or optimizations]
+        P[Conduct feedback sessions]
+        Q[Regularly update tests]
         R[Reporting and Analysis]
         S[Continuous Improvement]
     end
