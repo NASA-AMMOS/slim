@@ -186,7 +186,7 @@
     },
     "content": "content---slim-markdown-page-393-660"
   },
-  "/slim/docs-f81": {
+  "/slim/docs-d3e": {
     "__comp": "__comp---theme-doc-page-1-be-9be",
     "__context": {
       "plugin": "plugin---slim-docs-2-e-6-474"
@@ -337,17 +337,13 @@
     "__comp": "__comp---theme-doc-item-178-a40",
     "content": "content---slim-docs-guides-software-lifecycle-continuous-integration-d-5-d-cb0"
   },
-  "/slim/docs/guides/software-lifecycle/continuous-integration/continuous-integration-frameworks/-a92": {
+  "/slim/docs/guides/software-lifecycle/continuous-integration/continuous-integration-frameworks-fea": {
     "__comp": "__comp---theme-doc-item-178-a40",
-    "content": "content---slim-docs-guides-software-lifecycle-continuous-integration-continuous-integration-frameworks-47-b-2a8"
+    "content": "content---slim-docs-guides-software-lifecycle-continuous-integration-continuous-integration-frameworksca-7-196"
   },
-  "/slim/docs/guides/software-lifecycle/continuous-integration/continuous-integration-frameworks/-4da": {
+  "/slim/docs/guides/software-lifecycle/continuous-integration/reference-architecture-888": {
     "__comp": "__comp---theme-doc-item-178-a40",
-    "content": "content---slim-docs-guides-software-lifecycle-continuous-integration-continuous-integration-frameworks-35-e-2fe"
-  },
-  "/slim/docs/guides/software-lifecycle/continuous-integration/reference-architecture/-035": {
-    "__comp": "__comp---theme-doc-item-178-a40",
-    "content": "content---slim-docs-guides-software-lifecycle-continuous-integration-reference-architecture-b-75-ca2"
+    "content": "content---slim-docs-guides-software-lifecycle-continuous-integration-reference-architecture-1-fb-359"
   },
   "/slim/docs/guides/software-lifecycle/continuous-testing/-27d": {
     "__comp": "__comp---theme-doc-item-178-a40",
@@ -361,9 +357,9 @@
     "__comp": "__comp---theme-doc-item-178-a40",
     "content": "content---slim-docs-guides-software-lifecycle-security-e-55-cc7"
   },
-  "/slim/docs/guides/software-lifecycle/security/dependabot/-be7": {
+  "/slim/docs/guides/software-lifecycle/security/github-security/-b41": {
     "__comp": "__comp---theme-doc-item-178-a40",
-    "content": "content---slim-docs-guides-software-lifecycle-security-dependabot-cc-9-653"
+    "content": "content---slim-docs-guides-software-lifecycle-security-github-security-c-36-adb"
   },
   "/slim/docs/guides/software-lifecycle/security/secrets-detection/-853": {
     "__comp": "__comp---theme-doc-item-178-a40",

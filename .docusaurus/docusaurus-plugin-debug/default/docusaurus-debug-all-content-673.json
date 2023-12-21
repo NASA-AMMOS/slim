@@ -788,61 +788,37 @@
               }
             },
             {
-              "unversionedId": "guides/software-lifecycle/continuous-integration/continuous-integration-frameworks/continuous-integration-frameworks",
-              "id": "guides/software-lifecycle/continuous-integration/continuous-integration-frameworks/continuous-integration-frameworks",
-              "title": "Continuous Integration Frameworks",
+              "unversionedId": "guides/software-lifecycle/continuous-integration/continuous-integration-frameworks",
+              "id": "guides/software-lifecycle/continuous-integration/continuous-integration-frameworks",
+              "title": "CI Tools and Frameworks",
               "description": "* Continuous Integration",
-              "source": "@site/docs/guides/software-lifecycle/continuous-integration/continuous-integration-frameworks/continuous-integration-frameworks.md",
-              "sourceDirName": "guides/software-lifecycle/continuous-integration/continuous-integration-frameworks",
-              "slug": "/guides/software-lifecycle/continuous-integration/continuous-integration-frameworks/",
-              "permalink": "/slim/docs/guides/software-lifecycle/continuous-integration/continuous-integration-frameworks/",
+              "source": "@site/docs/guides/software-lifecycle/continuous-integration/continuous-integration-frameworks.md",
+              "sourceDirName": "guides/software-lifecycle/continuous-integration",
+              "slug": "/guides/software-lifecycle/continuous-integration/continuous-integration-frameworks",
+              "permalink": "/slim/docs/guides/software-lifecycle/continuous-integration/continuous-integration-frameworks",
               "draft": false,
-              "editUrl": "https://github.com/nasa-ammos/slim/tree/main/docs/guides/software-lifecycle/continuous-integration/continuous-integration-frameworks/continuous-integration-frameworks.md",
+              "editUrl": "https://github.com/nasa-ammos/slim/tree/main/docs/guides/software-lifecycle/continuous-integration/continuous-integration-frameworks.md",
               "tags": [],
               "version": "current",
               "frontMatter": {
-                "title": "Continuous Integration Frameworks",
-                "sidebar_label": "Continuous Integration Frameworks"
+                "title": "CI Tools and Frameworks",
+                "sidebar_label": "CI Tools and Frameworks"
               },
-              "sidebar": "guidesSidebar",
-              "previous": {
-                "title": "Continuous Integration Frameworks",
-                "permalink": "/slim/docs/guides/software-lifecycle/continuous-integration/continuous-integration-frameworks/"
-              },
-              "next": {
-                "title": "Reference Architectures",
-                "permalink": "/slim/docs/guides/software-lifecycle/continuous-integration/reference-architecture/"
-              }
-            },
-            {
-              "unversionedId": "guides/software-lifecycle/continuous-integration/continuous-integration-frameworks/README",
-              "id": "guides/software-lifecycle/continuous-integration/continuous-integration-frameworks/README",
-              "title": "Continuous Integration Frameworks",
-              "description": "[Frameworks & Use Cases) [continuous-integration-frameworks]",
-              "source": "@site/docs/guides/software-lifecycle/continuous-integration/continuous-integration-frameworks/README.md",
-              "sourceDirName": "guides/software-lifecycle/continuous-integration/continuous-integration-frameworks",
-              "slug": "/guides/software-lifecycle/continuous-integration/continuous-integration-frameworks/",
-              "permalink": "/slim/docs/guides/software-lifecycle/continuous-integration/continuous-integration-frameworks/",
-              "draft": false,
-              "editUrl": "https://github.com/nasa-ammos/slim/tree/main/docs/guides/software-lifecycle/continuous-integration/continuous-integration-frameworks/README.md",
-              "tags": [],
-              "version": "current",
-              "frontMatter": {},
               "sidebar": "guidesSidebar",
               "previous": {
                 "title": "Continuous Integration",
                 "permalink": "/slim/docs/guides/software-lifecycle/continuous-integration/"
               },
               "next": {
-                "title": "Continuous Integration Frameworks",
-                "permalink": "/slim/docs/guides/software-lifecycle/continuous-integration/continuous-integration-frameworks/"
+                "title": "CI Reference Architectures",
+                "permalink": "/slim/docs/guides/software-lifecycle/continuous-integration/reference-architecture"
               }
             },
             {
               "unversionedId": "guides/software-lifecycle/continuous-integration/README",
               "id": "guides/software-lifecycle/continuous-integration/README",
               "title": "Continuous Integration",
-              "description": "This this guide, we explore best practices for continuous integration - including exploring scenarios for build integration, publishing test results and releasing compiled software.",
+              "description": "A guide for implementing continuous integration in software projects.",
               "source": "@site/docs/guides/software-lifecycle/continuous-integration/README.md",
               "sourceDirName": "guides/software-lifecycle/continuous-integration",
               "slug": "/guides/software-lifecycle/continuous-integration/",
@@ -858,28 +834,28 @@
                 "permalink": "/slim/docs/guides/software-lifecycle/application-starter-kits/python-starter-kit/"
               },
               "next": {
-                "title": "Continuous Integration Frameworks",
-                "permalink": "/slim/docs/guides/software-lifecycle/continuous-integration/continuous-integration-frameworks/"
+                "title": "CI Tools and Frameworks",
+                "permalink": "/slim/docs/guides/software-lifecycle/continuous-integration/continuous-integration-frameworks"
               }
             },
             {
-              "unversionedId": "guides/software-lifecycle/continuous-integration/reference-architecture/README",
-              "id": "guides/software-lifecycle/continuous-integration/reference-architecture/README",
-              "title": "Reference Architectures",
+              "unversionedId": "guides/software-lifecycle/continuous-integration/reference-architecture",
+              "id": "guides/software-lifecycle/continuous-integration/reference-architecture",
+              "title": "CI Reference Architectures",
               "description": "Overview",
-              "source": "@site/docs/guides/software-lifecycle/continuous-integration/reference-architecture/README.md",
-              "sourceDirName": "guides/software-lifecycle/continuous-integration/reference-architecture",
-              "slug": "/guides/software-lifecycle/continuous-integration/reference-architecture/",
-              "permalink": "/slim/docs/guides/software-lifecycle/continuous-integration/reference-architecture/",
+              "source": "@site/docs/guides/software-lifecycle/continuous-integration/reference-architecture.md",
+              "sourceDirName": "guides/software-lifecycle/continuous-integration",
+              "slug": "/guides/software-lifecycle/continuous-integration/reference-architecture",
+              "permalink": "/slim/docs/guides/software-lifecycle/continuous-integration/reference-architecture",
               "draft": false,
-              "editUrl": "https://github.com/nasa-ammos/slim/tree/main/docs/guides/software-lifecycle/continuous-integration/reference-architecture/README.md",
+              "editUrl": "https://github.com/nasa-ammos/slim/tree/main/docs/guides/software-lifecycle/continuous-integration/reference-architecture.md",
               "tags": [],
               "version": "current",
               "frontMatter": {},
               "sidebar": "guidesSidebar",
               "previous": {
-                "title": "Continuous Integration Frameworks",
-                "permalink": "/slim/docs/guides/software-lifecycle/continuous-integration/continuous-integration-frameworks/"
+                "title": "CI Tools and Frameworks",
+                "permalink": "/slim/docs/guides/software-lifecycle/continuous-integration/continuous-integration-frameworks"
               },
               "next": {
                 "title": "Continuous Testing",
@@ -902,8 +878,8 @@
               "frontMatter": {},
               "sidebar": "guidesSidebar",
               "previous": {
-                "title": "Reference Architectures",
-                "permalink": "/slim/docs/guides/software-lifecycle/continuous-integration/reference-architecture/"
+                "title": "CI Reference Architectures",
+                "permalink": "/slim/docs/guides/software-lifecycle/continuous-integration/reference-architecture"
               },
               "next": {
                 "title": "Testing Frameworks",
@@ -938,16 +914,16 @@
               }
             },
             {
-              "unversionedId": "guides/software-lifecycle/security/dependabot/README",
-              "id": "guides/software-lifecycle/security/dependabot/README",
-              "title": "Dependabot",
-              "description": "A GitHub ecosystem tool for dependency version and security vulnerability analysis.",
-              "source": "@site/docs/guides/software-lifecycle/security/dependabot/README.md",
-              "sourceDirName": "guides/software-lifecycle/security/dependabot",
-              "slug": "/guides/software-lifecycle/security/dependabot/",
-              "permalink": "/slim/docs/guides/software-lifecycle/security/dependabot/",
+              "unversionedId": "guides/software-lifecycle/security/github-security/README",
+              "id": "guides/software-lifecycle/security/github-security/README",
+              "title": "GitHub Security Best Practices",
+              "description": "Recommendations for enabling GitHub security features for your repositories.",
+              "source": "@site/docs/guides/software-lifecycle/security/github-security/README.md",
+              "sourceDirName": "guides/software-lifecycle/security/github-security",
+              "slug": "/guides/software-lifecycle/security/github-security/",
+              "permalink": "/slim/docs/guides/software-lifecycle/security/github-security/",
               "draft": false,
-              "editUrl": "https://github.com/nasa-ammos/slim/tree/main/docs/guides/software-lifecycle/security/dependabot/README.md",
+              "editUrl": "https://github.com/nasa-ammos/slim/tree/main/docs/guides/software-lifecycle/security/github-security/README.md",
               "tags": [],
               "version": "current",
               "frontMatter": {},
@@ -981,8 +957,8 @@
                 "permalink": "/slim/docs/guides/software-lifecycle/continuous-testing/testing-frameworks"
               },
               "next": {
-                "title": "Dependabot",
-                "permalink": "/slim/docs/guides/software-lifecycle/security/dependabot/"
+                "title": "GitHub Security Best Practices",
+                "permalink": "/slim/docs/guides/software-lifecycle/security/github-security/"
               }
             },
             {
@@ -1001,8 +977,8 @@
               "frontMatter": {},
               "sidebar": "guidesSidebar",
               "previous": {
-                "title": "Dependabot",
-                "permalink": "/slim/docs/guides/software-lifecycle/security/dependabot/"
+                "title": "GitHub Security Best Practices",
+                "permalink": "/slim/docs/guides/software-lifecycle/security/github-security/"
               },
               "next": {
                 "title": "Governance",
@@ -1047,26 +1023,13 @@
                     "collapsed": true,
                     "items": [
                       {
-                        "type": "category",
-                        "label": "Continuous Integration Frameworks",
-                        "collapsible": true,
-                        "collapsed": true,
-                        "items": [
-                          {
-                            "type": "doc",
-                            "id": "guides/software-lifecycle/continuous-integration/continuous-integration-frameworks/continuous-integration-frameworks",
-                            "label": "Continuous Integration Frameworks"
-                          }
-                        ],
-                        "link": {
-                          "type": "doc",
-                          "id": "guides/software-lifecycle/continuous-integration/continuous-integration-frameworks/README"
-                        }
+                        "type": "doc",
+                        "id": "guides/software-lifecycle/continuous-integration/continuous-integration-frameworks",
+                        "label": "CI Tools and Frameworks"
                       },
                       {
                         "type": "doc",
-                        "label": "Reference Architectures",
-                        "id": "guides/software-lifecycle/continuous-integration/reference-architecture/README"
+                        "id": "guides/software-lifecycle/continuous-integration/reference-architecture"
                       }
                     ],
                     "link": {
@@ -1099,8 +1062,8 @@
                     "items": [
                       {
                         "type": "doc",
-                        "label": "Dependabot",
-                        "id": "guides/software-lifecycle/security/dependabot/README"
+                        "label": "GitHub Security Best Practices",
+                        "id": "guides/software-lifecycle/security/github-security/README"
                       },
                       {
                         "type": "doc",

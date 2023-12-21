@@ -1,4 +1,4 @@
-# Continuous Integration Best Practices
+# Continuous Integration
 
 <pre align="center">A guide for implementing continuous integration in software projects.</pre>
 
@@ -22,11 +22,11 @@
 
 ## Quick Start
 
-**[Continuous Integration Tools and Frameworks](continuous-integration-frameworks)**
+**[📔 CI Tools and Frameworks](continuous-integration-frameworks.md)**
 
 Click the link above to explore various tools and practices for setting up and optimizing your CI pipeline.
 
-**[Continuous Integration Reference Architecture](reference-architecture)**
+**[📔 CI Reference Architectures](reference-architecture.md)**
 
 Click the link above to understand a sample, overall architectural reference for continuous integration.
 
@@ -35,12 +35,12 @@ Click the link above to understand a sample, overall architectural reference for
 ## Step-by-Step Guide
 
 1. **Explore CI Tools and Frameworks**:
-   - Start with the [Continuous Integration Tools and Frameworks](continuous-integration-frameworks.md) guide to understand a wide array of CI tools.
+   - Start with the [CI Tools and Frameworks](continuous-integration-frameworks.md) guide to understand a wide array of CI tools.
    - Review different categories like Analysis and Testing, Credentialing, and Execution and Reporting Tests.
    - Based on your use case, select appropriate tools, e.g. Git hooks, GitHub Actions, Jenkins, Maven plugins, or SetupTools that fit into various aspects of your CI use case.
 
 2. **Understand the Reference Architecture**:
-   - Dive into the [Continuous Integration Reference Architecture](reference-architecture.md) for an overview of the CI process and its components.
+   - Dive into the [CI Reference Architectures](reference-architecture.md) for an overview of the CI process and its components.
    - Understand the core concept of the CI pipeline, which involves systems like Development System, Continuous Integration System, and Continuous Deployment System.
    - Learn about the discrete process steps in a CI pipeline, such as Compile, Test, Package, and Publish, and how they contribute to building and releasing software.
 

@@ -1,6 +1,6 @@
 ---
-title: Continuous Integration Frameworks
-sidebar_label: Continuous Integration Frameworks
+title: CI Tools and Frameworks
+sidebar_label: CI Tools and Frameworks
 ---
 
 

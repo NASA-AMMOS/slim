@@ -14,8 +14,8 @@
   "frontMatter": {},
   "sidebar": "guidesSidebar",
   "previous": {
-    "title": "Reference Architectures",
-    "permalink": "/slim/docs/guides/software-lifecycle/continuous-integration/reference-architecture/"
+    "title": "CI Reference Architectures",
+    "permalink": "/slim/docs/guides/software-lifecycle/continuous-integration/reference-architecture"
   },
   "next": {
     "title": "Testing Frameworks",

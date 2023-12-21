@@ -1,0 +1,27 @@
+{
+  "unversionedId": "guides/software-lifecycle/continuous-integration/continuous-integration-frameworks",
+  "id": "guides/software-lifecycle/continuous-integration/continuous-integration-frameworks",
+  "title": "CI Tools and Frameworks",
+  "description": "* Continuous Integration",
+  "source": "@site/docs/guides/software-lifecycle/continuous-integration/continuous-integration-frameworks.md",
+  "sourceDirName": "guides/software-lifecycle/continuous-integration",
+  "slug": "/guides/software-lifecycle/continuous-integration/continuous-integration-frameworks",
+  "permalink": "/slim/docs/guides/software-lifecycle/continuous-integration/continuous-integration-frameworks",
+  "draft": false,
+  "editUrl": "https://github.com/nasa-ammos/slim/tree/main/docs/guides/software-lifecycle/continuous-integration/continuous-integration-frameworks.md",
+  "tags": [],
+  "version": "current",
+  "frontMatter": {
+    "title": "CI Tools and Frameworks",
+    "sidebar_label": "CI Tools and Frameworks"
+  },
+  "sidebar": "guidesSidebar",
+  "previous": {
+    "title": "Continuous Integration",
+    "permalink": "/slim/docs/guides/software-lifecycle/continuous-integration/"
+  },
+  "next": {
+    "title": "CI Reference Architectures",
+    "permalink": "/slim/docs/guides/software-lifecycle/continuous-integration/reference-architecture"
+  }
+}

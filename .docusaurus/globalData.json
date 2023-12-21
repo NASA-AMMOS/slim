@@ -171,13 +171,8 @@
               "sidebar": "guidesSidebar"
             },
             {
-              "id": "guides/software-lifecycle/continuous-integration/continuous-integration-frameworks/continuous-integration-frameworks",
-              "path": "/slim/docs/guides/software-lifecycle/continuous-integration/continuous-integration-frameworks/",
-              "sidebar": "guidesSidebar"
-            },
-            {
-              "id": "guides/software-lifecycle/continuous-integration/continuous-integration-frameworks/README",
-              "path": "/slim/docs/guides/software-lifecycle/continuous-integration/continuous-integration-frameworks/",
+              "id": "guides/software-lifecycle/continuous-integration/continuous-integration-frameworks",
+              "path": "/slim/docs/guides/software-lifecycle/continuous-integration/continuous-integration-frameworks",
               "sidebar": "guidesSidebar"
             },
             {
@@ -186,8 +181,8 @@
               "sidebar": "guidesSidebar"
             },
             {
-              "id": "guides/software-lifecycle/continuous-integration/reference-architecture/README",
-              "path": "/slim/docs/guides/software-lifecycle/continuous-integration/reference-architecture/",
+              "id": "guides/software-lifecycle/continuous-integration/reference-architecture",
+              "path": "/slim/docs/guides/software-lifecycle/continuous-integration/reference-architecture",
               "sidebar": "guidesSidebar"
             },
             {
@@ -201,8 +196,8 @@
               "sidebar": "guidesSidebar"
             },
             {
-              "id": "guides/software-lifecycle/security/dependabot/README",
-              "path": "/slim/docs/guides/software-lifecycle/security/dependabot/",
+              "id": "guides/software-lifecycle/security/github-security/README",
+              "path": "/slim/docs/guides/software-lifecycle/security/github-security/",
               "sidebar": "guidesSidebar"
             },
             {
