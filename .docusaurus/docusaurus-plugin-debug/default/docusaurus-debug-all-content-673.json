@@ -779,8 +779,8 @@
               "frontMatter": {},
               "sidebar": "guidesSidebar",
               "previous": {
-                "title": "Software Lifecycle",
-                "permalink": "/slim/docs/category/software-lifecycle"
+                "title": "Secrets Detection",
+                "permalink": "/slim/docs/guides/software-lifecycle/security/secrets-detection/"
               },
               "next": {
                 "title": "Python Starter Kit",
@@ -933,56 +933,32 @@
                 "permalink": "/slim/docs/guides/software-lifecycle/continuous-testing/"
               },
               "next": {
-                "title": "Security",
-                "permalink": "/slim/docs/guides/software-lifecycle/security/"
+                "title": "Governance",
+                "permalink": "/slim/docs/category/governance"
               }
             },
             {
-              "unversionedId": "guides/software-lifecycle/security/dependabot/README",
-              "id": "guides/software-lifecycle/security/dependabot/README",
-              "title": "Dependabot",
-              "description": "A GitHub ecosystem tool for dependency version and security vulnerability analysis.",
-              "source": "@site/docs/guides/software-lifecycle/security/dependabot/README.md",
-              "sourceDirName": "guides/software-lifecycle/security/dependabot",
-              "slug": "/guides/software-lifecycle/security/dependabot/",
-              "permalink": "/slim/docs/guides/software-lifecycle/security/dependabot/",
+              "unversionedId": "guides/software-lifecycle/security/github-security/README",
+              "id": "guides/software-lifecycle/security/github-security/README",
+              "title": "GitHub Security Best Practices",
+              "description": "Recommendations for enabling GitHub security features for your repositories.",
+              "source": "@site/docs/guides/software-lifecycle/security/github-security/README.md",
+              "sourceDirName": "guides/software-lifecycle/security/github-security",
+              "slug": "/guides/software-lifecycle/security/github-security/",
+              "permalink": "/slim/docs/guides/software-lifecycle/security/github-security/",
               "draft": false,
-              "editUrl": "https://github.com/nasa-ammos/slim/tree/main/docs/guides/software-lifecycle/security/dependabot/README.md",
+              "editUrl": "https://github.com/nasa-ammos/slim/tree/main/docs/guides/software-lifecycle/security/github-security/README.md",
               "tags": [],
               "version": "current",
               "frontMatter": {},
               "sidebar": "guidesSidebar",
               "previous": {
                 "title": "Security",
-                "permalink": "/slim/docs/guides/software-lifecycle/security/"
+                "permalink": "/slim/docs/category/security"
               },
               "next": {
                 "title": "Secrets Detection",
                 "permalink": "/slim/docs/guides/software-lifecycle/security/secrets-detection/"
-              }
-            },
-            {
-              "unversionedId": "guides/software-lifecycle/security/README",
-              "id": "guides/software-lifecycle/security/README",
-              "title": "Security",
-              "description": "",
-              "source": "@site/docs/guides/software-lifecycle/security/README.md",
-              "sourceDirName": "guides/software-lifecycle/security",
-              "slug": "/guides/software-lifecycle/security/",
-              "permalink": "/slim/docs/guides/software-lifecycle/security/",
-              "draft": false,
-              "editUrl": "https://github.com/nasa-ammos/slim/tree/main/docs/guides/software-lifecycle/security/README.md",
-              "tags": [],
-              "version": "current",
-              "frontMatter": {},
-              "sidebar": "guidesSidebar",
-              "previous": {
-                "title": "Testing Frameworks",
-                "permalink": "/slim/docs/guides/software-lifecycle/continuous-testing/testing-frameworks"
-              },
-              "next": {
-                "title": "Dependabot",
-                "permalink": "/slim/docs/guides/software-lifecycle/security/dependabot/"
               }
             },
             {
@@ -1001,12 +977,12 @@
               "frontMatter": {},
               "sidebar": "guidesSidebar",
               "previous": {
-                "title": "Dependabot",
-                "permalink": "/slim/docs/guides/software-lifecycle/security/dependabot/"
+                "title": "GitHub Security Best Practices",
+                "permalink": "/slim/docs/guides/software-lifecycle/security/github-security/"
               },
               "next": {
-                "title": "Governance",
-                "permalink": "/slim/docs/category/governance"
+                "title": "Application Starter Kits",
+                "permalink": "/slim/docs/guides/software-lifecycle/application-starter-kits/"
               }
             }
           ],
@@ -1023,6 +999,30 @@
                 "collapsible": true,
                 "collapsed": true,
                 "items": [
+                  {
+                    "type": "category",
+                    "label": "Security",
+                    "collapsible": true,
+                    "collapsed": true,
+                    "items": [
+                      {
+                        "type": "doc",
+                        "label": "GitHub Security Best Practices",
+                        "id": "guides/software-lifecycle/security/github-security/README"
+                      },
+                      {
+                        "type": "doc",
+                        "label": "Secrets Detection",
+                        "id": "guides/software-lifecycle/security/secrets-detection/README"
+                      }
+                    ],
+                    "link": {
+                      "type": "generated-index",
+                      "description": "Security Best Practices.",
+                      "slug": "/category/security",
+                      "permalink": "/slim/docs/category/security"
+                    }
+                  },
                   {
                     "type": "category",
                     "label": "Application Starter Kits",
@@ -1089,28 +1089,6 @@
                     "link": {
                       "type": "doc",
                       "id": "guides/software-lifecycle/continuous-testing/README"
-                    }
-                  },
-                  {
-                    "type": "category",
-                    "label": "Security",
-                    "collapsible": true,
-                    "collapsed": true,
-                    "items": [
-                      {
-                        "type": "doc",
-                        "label": "Dependabot",
-                        "id": "guides/software-lifecycle/security/dependabot/README"
-                      },
-                      {
-                        "type": "doc",
-                        "label": "Secrets Detection",
-                        "id": "guides/software-lifecycle/security/secrets-detection/README"
-                      }
-                    ],
-                    "link": {
-                      "type": "doc",
-                      "id": "guides/software-lifecycle/security/README"
                     }
                   }
                 ],

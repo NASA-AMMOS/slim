@@ -14,8 +14,8 @@
   "frontMatter": {},
   "sidebar": "guidesSidebar",
   "previous": {
-    "title": "Software Lifecycle",
-    "permalink": "/slim/docs/category/software-lifecycle"
+    "title": "Secrets Detection",
+    "permalink": "/slim/docs/guides/software-lifecycle/security/secrets-detection/"
   },
   "next": {
     "title": "Python Starter Kit",

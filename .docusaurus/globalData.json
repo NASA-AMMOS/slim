@@ -201,13 +201,8 @@
               "sidebar": "guidesSidebar"
             },
             {
-              "id": "guides/software-lifecycle/security/dependabot/README",
-              "path": "/slim/docs/guides/software-lifecycle/security/dependabot/",
-              "sidebar": "guidesSidebar"
-            },
-            {
-              "id": "guides/software-lifecycle/security/README",
-              "path": "/slim/docs/guides/software-lifecycle/security/",
+              "id": "guides/software-lifecycle/security/github-security/README",
+              "path": "/slim/docs/guides/software-lifecycle/security/github-security/",
               "sidebar": "guidesSidebar"
             },
             {
@@ -218,6 +213,11 @@
             {
               "id": "/category/software-lifecycle",
               "path": "/slim/docs/category/software-lifecycle",
+              "sidebar": "guidesSidebar"
+            },
+            {
+              "id": "/category/security",
+              "path": "/slim/docs/category/security",
               "sidebar": "guidesSidebar"
             },
             {

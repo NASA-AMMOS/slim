@@ -99,7 +99,7 @@ export default [
   },
   {
     path: '/slim/docs',
-    component: ComponentCreator('/slim/docs', 'f81'),
+    component: ComponentCreator('/slim/docs', 'f62'),
     routes: [
       {
         path: '/slim/docs/about/',
@@ -128,6 +128,12 @@ export default [
       {
         path: '/slim/docs/category/governance',
         component: ComponentCreator('/slim/docs/category/governance', '2f5'),
+        exact: true,
+        sidebar: "guidesSidebar"
+      },
+      {
+        path: '/slim/docs/category/security',
+        component: ComponentCreator('/slim/docs/category/security', 'ecc'),
         exact: true,
         sidebar: "guidesSidebar"
       },
@@ -348,14 +354,8 @@ export default [
         sidebar: "guidesSidebar"
       },
       {
-        path: '/slim/docs/guides/software-lifecycle/security/',
-        component: ComponentCreator('/slim/docs/guides/software-lifecycle/security/', '526'),
-        exact: true,
-        sidebar: "guidesSidebar"
-      },
-      {
-        path: '/slim/docs/guides/software-lifecycle/security/dependabot/',
-        component: ComponentCreator('/slim/docs/guides/software-lifecycle/security/dependabot/', 'be7'),
+        path: '/slim/docs/guides/software-lifecycle/security/github-security/',
+        component: ComponentCreator('/slim/docs/guides/software-lifecycle/security/github-security/', 'b41'),
         exact: true,
         sidebar: "guidesSidebar"
       },

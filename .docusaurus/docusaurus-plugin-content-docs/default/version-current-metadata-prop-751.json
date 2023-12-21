@@ -23,6 +23,27 @@
         "items": [
           {
             "type": "category",
+            "label": "Security",
+            "collapsible": true,
+            "collapsed": true,
+            "items": [
+              {
+                "type": "link",
+                "label": "GitHub Security Best Practices",
+                "href": "/slim/docs/guides/software-lifecycle/security/github-security/",
+                "docId": "guides/software-lifecycle/security/github-security/README"
+              },
+              {
+                "type": "link",
+                "label": "Secrets Detection",
+                "href": "/slim/docs/guides/software-lifecycle/security/secrets-detection/",
+                "docId": "guides/software-lifecycle/security/secrets-detection/README"
+              }
+            ],
+            "href": "/slim/docs/category/security"
+          },
+          {
+            "type": "category",
             "label": "Application Starter Kits",
             "collapsible": true,
             "collapsed": true,
@@ -80,27 +101,6 @@
               }
             ],
             "href": "/slim/docs/guides/software-lifecycle/continuous-testing/"
-          },
-          {
-            "type": "category",
-            "label": "Security",
-            "collapsible": true,
-            "collapsed": true,
-            "items": [
-              {
-                "type": "link",
-                "label": "Dependabot",
-                "href": "/slim/docs/guides/software-lifecycle/security/dependabot/",
-                "docId": "guides/software-lifecycle/security/dependabot/README"
-              },
-              {
-                "type": "link",
-                "label": "Secrets Detection",
-                "href": "/slim/docs/guides/software-lifecycle/security/secrets-detection/",
-                "docId": "guides/software-lifecycle/security/secrets-detection/README"
-              }
-            ],
-            "href": "/slim/docs/guides/software-lifecycle/security/"
           }
         ],
         "href": "/slim/docs/category/software-lifecycle"
@@ -572,16 +572,10 @@
       "description": "* Continuous Testing",
       "sidebar": "guidesSidebar"
     },
-    "guides/software-lifecycle/security/dependabot/README": {
-      "id": "guides/software-lifecycle/security/dependabot/README",
-      "title": "Dependabot",
-      "description": "A GitHub ecosystem tool for dependency version and security vulnerability analysis.",
-      "sidebar": "guidesSidebar"
-    },
-    "guides/software-lifecycle/security/README": {
-      "id": "guides/software-lifecycle/security/README",
-      "title": "Security",
-      "description": "",
+    "guides/software-lifecycle/security/github-security/README": {
+      "id": "guides/software-lifecycle/security/github-security/README",
+      "title": "GitHub Security Best Practices",
+      "description": "Recommendations for enabling GitHub security features for your repositories.",
       "sidebar": "guidesSidebar"
     },
     "guides/software-lifecycle/security/secrets-detection/README": {

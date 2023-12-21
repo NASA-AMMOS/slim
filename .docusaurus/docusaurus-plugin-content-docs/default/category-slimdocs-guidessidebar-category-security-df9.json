@@ -1,0 +1,16 @@
+{
+  "title": "Security",
+  "description": "Security Best Practices.",
+  "slug": "/category/security",
+  "permalink": "/slim/docs/category/security",
+  "navigation": {
+    "previous": {
+      "title": "Software Lifecycle",
+      "permalink": "/slim/docs/category/software-lifecycle"
+    },
+    "next": {
+      "title": "GitHub Security Best Practices",
+      "permalink": "/slim/docs/guides/software-lifecycle/security/github-security/"
+    }
+  }
+}

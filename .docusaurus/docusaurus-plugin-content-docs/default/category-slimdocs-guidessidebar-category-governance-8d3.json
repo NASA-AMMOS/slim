@@ -5,8 +5,8 @@
   "permalink": "/slim/docs/category/governance",
   "navigation": {
     "previous": {
-      "title": "Secrets Detection",
-      "permalink": "/slim/docs/guides/software-lifecycle/security/secrets-detection/"
+      "title": "Testing Frameworks",
+      "permalink": "/slim/docs/guides/software-lifecycle/continuous-testing/testing-frameworks"
     },
     "next": {
       "title": "Contributions",

@@ -186,7 +186,7 @@
     },
     "content": "content---slim-markdown-page-393-660"
   },
-  "/slim/docs-f81": {
+  "/slim/docs-f62": {
     "__comp": "__comp---theme-doc-page-1-be-9be",
     "__context": {
       "plugin": "plugin---slim-docs-2-e-6-474"
@@ -212,6 +212,10 @@
   "/slim/docs/category/governance-2f5": {
     "__comp": "__comp---theme-doc-category-generated-index-page-14-e-640",
     "categoryGeneratedIndex": "categoryGeneratedIndex---slim-docs-category-governance-412-96a"
+  },
+  "/slim/docs/category/security-ecc": {
+    "__comp": "__comp---theme-doc-category-generated-index-page-14-e-640",
+    "categoryGeneratedIndex": "categoryGeneratedIndex---slim-docs-category-securityde-1-1a7"
   },
   "/slim/docs/category/software-lifecycle-72b": {
     "__comp": "__comp---theme-doc-category-generated-index-page-14-e-640",
@@ -357,13 +361,9 @@
     "__comp": "__comp---theme-doc-item-178-a40",
     "content": "content---slim-docs-guides-software-lifecycle-continuous-testing-testing-frameworksb-74-657"
   },
-  "/slim/docs/guides/software-lifecycle/security/-526": {
+  "/slim/docs/guides/software-lifecycle/security/github-security/-b41": {
     "__comp": "__comp---theme-doc-item-178-a40",
-    "content": "content---slim-docs-guides-software-lifecycle-security-e-55-cc7"
-  },
-  "/slim/docs/guides/software-lifecycle/security/dependabot/-be7": {
-    "__comp": "__comp---theme-doc-item-178-a40",
-    "content": "content---slim-docs-guides-software-lifecycle-security-dependabot-cc-9-653"
+    "content": "content---slim-docs-guides-software-lifecycle-security-github-security-c-36-adb"
   },
   "/slim/docs/guides/software-lifecycle/security/secrets-detection/-853": {
     "__comp": "__comp---theme-doc-item-178-a40",
