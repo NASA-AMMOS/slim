@@ -1,8 +1,8 @@
 {
   "unversionedId": "guides/documentation/readme/index",
   "id": "guides/documentation/readme/index",
-  "title": "README Template",
-  "description": "A README.md template that can be used to help developers and users understand your repository concisely and clearly.",
+  "title": "READMEs",
+  "description": "A guide to constructing an effective and impressive README for your project.",
   "source": "@site/docs/guides/documentation/readme/index.md",
   "sourceDirName": "guides/documentation/readme",
   "slug": "/guides/documentation/readme/",
@@ -18,7 +18,7 @@
     "permalink": "/slim/docs/guides/documentation/documentation-hosts/use-cases"
   },
   "next": {
-    "title": "README-TEMPLATE",
+    "title": "README Template",
     "permalink": "/slim/docs/guides/documentation/readme/README-TEMPLATE"
   }
 }

@@ -1,7 +1,7 @@
 {
   "unversionedId": "guides/documentation/readme/README-TEMPLATE",
   "id": "guides/documentation/readme/README-TEMPLATE",
-  "title": "README-TEMPLATE",
+  "title": "README Template",
   "description": "",
   "source": "@site/docs/guides/documentation/readme/README-TEMPLATE.md",
   "sourceDirName": "guides/documentation/readme",
@@ -11,10 +11,13 @@
   "editUrl": "https://github.com/nasa-ammos/slim/tree/main/docs/guides/documentation/readme/README-TEMPLATE.md",
   "tags": [],
   "version": "current",
-  "frontMatter": {},
+  "frontMatter": {
+    "title": "README Template",
+    "sidebar_label": "README Template"
+  },
   "sidebar": "guidesSidebar",
   "previous": {
-    "title": "README Template",
+    "title": "READMEs",
     "permalink": "/slim/docs/guides/documentation/readme/"
   }
 }
