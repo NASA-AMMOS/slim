@@ -1,21 +1,61 @@
 # Change Log
 
-A change log provides a *human readable* list of significant changes, additions, deprecations, removals for software over time. It is meant to be able to be read by *people*. Change logs should be documented within a file called `CHANGELOG.md` and be updated per key release. See [semantic release](https://semver.org) for guidance on releasing cycles and versioning of your software. 
+<pre align="center">A guide for setting up a log to document software changes in a human-centric format.</pre>
 
-⚠️ A `CHANGELOG.md` can replicate wording from a releases page (e.g. GitHub Releases), but should not be left out *in place of* a releases page. Down-stream inheritors of your software may not have access to your releases page, and will expect a `CHANGELOG.md` to be present as part of your software distribution.
+## Introduction
 
-## Keep a Changelog
+**Background**: A change log is a vital tool for documenting significant changes in software over time in a format accessible to humans. It plays a critical role in conveying the evolution of software, including additions, deprecations, and removals. This guide outlines the best practices for maintaining a `CHANGELOG.md` file, complementing release pages and enhancing software distribution transparency.
 
-This change log standard seeks to provide a template for *human readable* change logs, among other key guidance on the change logging process.
+**Use Cases**:
+- Documenting software changes for easy understanding and tracking.
+- Enhancing transparency in software development and release cycles.
+- Storing the history of significant changes independent of code hosts like GitHub.com
+---
 
-Starter Kit:
-- [Guidance](https://keepachangelog.com/en/1.0.0/#how)
-- [Demo 1](https://github.com/riverma/terraformly/blob/main/CHANGELOG.md)
-- [Demo 2](https://github.com/olivierlacan/keep-a-changelog/blob/main/CHANGELOG.md)
-- [Webpage](https://keepachangelog.com/en/1.0.0/)
+## Prerequisites
 
-To leverage this template, make sure to do the following:
-1. Talk with your team about leveraging this template, and seek wide agreement before you adopt
-2. Copy the demo `CHANGELOG.md` above, and place in a file within your repository called `CHANGELOG.md` 
-3. Edit the `CHANGELOG.md` file with your specific release information. If you have many historic releases prior to the creation of this file, mark the latest release as the first entry, and commit to updating this for future releases as the happen.
-4. Add an entry to your `README.md` under the `Changelog` section to point to your `CHANGELOG.md` file.
+* Familiarity with semantic versioning and release cycles.
+* Basic knowledge of Markdown formatting.
+
+---
+
+## Quick Start
+
+**[⬇️ Keep a Changelog](https://keepachangelog.com/en/1.0.0/#how)**
+
+Download a template for creating a human-readable change log for your software project.
+
+---
+
+## Step-by-Step Guide
+
+1. **Team Agreement**: Discuss the importance of a change log with your team, emphasizing its value for transparency and communication.
+2. **Creating the Change Log**:
+   - Start a `CHANGELOG.md` in your repository.
+   - See demo use of the templates like [Demo 1](https://github.com/riverma/terraformly/blob/main/CHANGELOG.md) or [Demo 2](https://github.com/olivierlacan/keep-a-changelog/blob/main/CHANGELOG.md) as a base.
+   - Customize the file with your project's release information.
+3. **Integrating with Project Documentation**:
+   - Link to the `CHANGELOG.md` from your project’s `README.md` to enhance visibility.
+
+---
+
+## Frequently Asked Questions (FAQ)
+
+- Q: Why is a `CHANGELOG.md` crucial even if there's a GitHub auto-generated release changes page?
+- A: It ensures future-proof accessibility of change information, especially for users who may not have access to the project's release page or if the software has changed hands. Moreover, its meant to be feature-centric and designed for people to understand, rather than GitHub's commit-oriented change reports. 
+
+---
+
+## Credits 
+
+**Authorship**:
+- [Rishi Verma](https://github.com/riverma)
+
+**Acknowledgements**:
+* This guide draws from the ["Keep a Changelog"](https://keepachangelog.com) standard and examples from various open source projects.
+
+---
+
+## Feedback and Contributions
+
+Feedback and contributions are encouraged to refine this guide. See our [contribution guidelines](https://nasa-ammos.github.io/slim/docs/contribute/contributing/).

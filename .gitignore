@@ -1,4 +1,5 @@
 # auto-generated files
+.docusaurus/
 
 # development environment
 **/node_modules
