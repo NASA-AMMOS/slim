@@ -1,32 +1,80 @@
 # Contributing Guide
 
-A contribution guide is an important document directed at *new contributors* to your project - to help them in understanding what and how they may contribute. It can be used to outline expected requirements prior to contributions (i.e. acceptance of licensing terms, signing off on any developer agreements required) as well as to ensure the quality of contributions are in-line with expected project norms. If a developer asks how to contribute, please point them to this guide. This guide also itemizes essential ingredients necessary for a successful patch submission.
+<pre align="center">Fast track developing a contribution guide for your new contributors.</pre>
 
-We provide a sample contribution guide template below, but please keep in mind to:
-- Modify and adapt to your project as needed. You may not need all features of the template guide. 
-- Replace all instances of `[INSERT ...]` within the template with your project's specific environment.
+## Introduction
 
-## Contributing Guide Template
+**Background**: A well-defined contribution guide is crucial for open-source projects. It helps new contributors understand the expectations and processes for contributing effectively. We walk you through developing a contribution guide for your project via our template, which sets clear standards for contributions and details a recommended process to follow.
 
-This template covers the following contributions areas:
-- Prerequisites to contributing
-- Development process
-- Ways to contribute: issues, code, documentation, media and questions, among other types of contributions
+**Use Cases**:
+- Guiding new contributors on making meaningful contributions.
+- Ensuring contributions align with project norms and requirements.
+- Facilitating a transparent and efficient contribution process.
 
-Starter Kit:
-- [Markdown](./CONTRIBUTING.md) of template
-- [Demo](https://github.com/riverma/terraformly/blob/main/CONTRIBUTING.md) of template
+---
 
-To leverage this template, make sure to do the following:
-1. Talk with your team about leveraging this template, and seek wide agreement before you adopt
-2. Copy the template text, and place in a file within your repository called `CONTRIBUTING.md` 
-3. Search and replace the `[INSERT ...` text within the file with specifics for your project
-4. Add a link to the `CONTRIBUTING.md` to your `README.md` file within the `Contributing` section
+## Prerequisites
 
-This template was influenced by the following sources:
+* Understanding of basic project management and version control systems.
+* Familiarity with GitHub and Markdown formatting.
+
+---
+
+## Quick Start
+
+**[⬇️ Contributing Guide Template](CONTRIBUTING)**
+
+Download our customizable template to create a contributing guide for your project.
+
+---
+
+## Step-by-Step Guide
+
+1. **Team Discussion**: Collaborate with your team to decide on adopting a contribution guide template. This step is essential to establish project norms and contribution expectations. Our template touches the following topics that you'll want to consider:
+   - License overview
+   - Code of Conduct
+   - Governance Model
+   - Developer environment setup
+   - Communication channels
+   - How-to in interacting with the codebase
+   - Pull requests
+   - Ways to contribute (e.g. code, docs, media, etc.)
+   - etc.
+
+
+2. **Customize the Template**: Modify the [Contributing Guide Template](CONTRIBUTING) to fit your project's specifics.
+   - Copy the template and create a `CONTRIBUTING.md` file at the root level of your repository.
+   - Replace `[INSERT ...]` placeholders with your project's details. These markers are used throughout to designate customization options.
+3. **Integrate with Project**:
+   - Add a link to `CONTRIBUTING.md` in your project's `README.md` file under the `Contributing` section.
+4. **Communicate**:
+   - Share the guide with existing contributors and all new contributors as their starting point.
+
+---
+
+## Frequently Asked Questions (FAQ)
+
+- Q: Why should I even bother with a contributing guide?
+- A: Do you want to constantly re-explain your project's philosophy and contribution norms? If not - a contribution guide helps set clear expectations and processes, ensuring contributions are consistent and aligned with your project's goals.
+
+---
+
+## Credits 
+
+**Authorship**:
+- [Rishi Verma](https://github.com/riverma)
+
+**Acknowledgements**:
+This template is influenced by guidelines from the following:
 - [Open Source Guide](https://opensource.guide/how-to-contribute/)
 - [Facebook React Contribution Guide](https://reactjs.org/docs/how-to-contribute.html)
 - [NASA-AMMOS Repositories](https://github.com/NASA-AMMOS)
 - [Kubernetes Contributors Guide](https://github.com/kubernetes/community/tree/master/contributors/guide)
 - [SciKit Learn Contributors Guide](https://scikit-learn.org/dev/developers/contributing.html)
 - [Django Contributors Guide](https://docs.djangoproject.com/en/dev/internals/contributing)
+
+---
+
+## Feedback and Contributions
+
+Feedback and contributions are encouraged to refine this guide. Visit our [contribution guidelines](https://nasa-ammos.github.io/slim/docs/contribute/contributing/) for more information.
