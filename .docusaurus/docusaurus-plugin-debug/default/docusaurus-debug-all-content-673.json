@@ -424,8 +424,8 @@
                 "permalink": "/slim/docs/guides/governance/contributions/contributing-guide/"
               },
               "next": {
-                "title": "Developer Certificate of Origin (DCO)",
-                "permalink": "/slim/docs/guides/governance/contributions/developer-certificate-origin/"
+                "title": "Issue Templates",
+                "permalink": "/slim/docs/guides/governance/contributions/issue-templates/"
               }
             },
             {
@@ -450,30 +450,6 @@
               "next": {
                 "title": "CONTRIBUTING",
                 "permalink": "/slim/docs/guides/governance/contributions/contributing-guide/CONTRIBUTING"
-              }
-            },
-            {
-              "unversionedId": "guides/governance/contributions/developer-certificate-origin/README",
-              "id": "guides/governance/contributions/developer-certificate-origin/README",
-              "title": "Developer Certificate of Origin (DCO)",
-              "description": "This GitHub Action provides an automated check for ensuring developers have a \"signed-off\" commit when contributing to a given GitHub repository.",
-              "source": "@site/docs/guides/governance/contributions/developer-certificate-origin/README.md",
-              "sourceDirName": "guides/governance/contributions/developer-certificate-origin",
-              "slug": "/guides/governance/contributions/developer-certificate-origin/",
-              "permalink": "/slim/docs/guides/governance/contributions/developer-certificate-origin/",
-              "draft": false,
-              "editUrl": "https://github.com/nasa-ammos/slim/tree/main/docs/guides/governance/contributions/developer-certificate-origin/README.md",
-              "tags": [],
-              "version": "current",
-              "frontMatter": {},
-              "sidebar": "guidesSidebar",
-              "previous": {
-                "title": "CONTRIBUTING",
-                "permalink": "/slim/docs/guides/governance/contributions/contributing-guide/CONTRIBUTING"
-              },
-              "next": {
-                "title": "Issue Templates",
-                "permalink": "/slim/docs/guides/governance/contributions/issue-templates/"
               }
             },
             {
@@ -588,8 +564,8 @@
               "frontMatter": {},
               "sidebar": "guidesSidebar",
               "previous": {
-                "title": "Developer Certificate of Origin (DCO)",
-                "permalink": "/slim/docs/guides/governance/contributions/developer-certificate-origin/"
+                "title": "CONTRIBUTING",
+                "permalink": "/slim/docs/guides/governance/contributions/contributing-guide/CONTRIBUTING"
               },
               "next": {
                 "title": "bug_report",
@@ -1129,11 +1105,6 @@
                           "type": "doc",
                           "id": "guides/governance/contributions/contributing-guide/README"
                         }
-                      },
-                      {
-                        "type": "doc",
-                        "label": "Developer Certificate of Origin (DCO)",
-                        "id": "guides/governance/contributions/developer-certificate-origin/README"
                       },
                       {
                         "type": "category",

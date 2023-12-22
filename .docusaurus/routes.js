@@ -99,7 +99,7 @@ export default [
   },
   {
     path: '/slim/docs',
-    component: ComponentCreator('/slim/docs', '495'),
+    component: ComponentCreator('/slim/docs', 'f8a'),
     routes: [
       {
         path: '/slim/docs/about/',
@@ -230,12 +230,6 @@ export default [
       {
         path: '/slim/docs/guides/governance/contributions/contributing-guide/CONTRIBUTING',
         component: ComponentCreator('/slim/docs/guides/governance/contributions/contributing-guide/CONTRIBUTING', '6a2'),
-        exact: true,
-        sidebar: "guidesSidebar"
-      },
-      {
-        path: '/slim/docs/guides/governance/contributions/developer-certificate-origin/',
-        component: ComponentCreator('/slim/docs/guides/governance/contributions/developer-certificate-origin/', 'd6a'),
         exact: true,
         sidebar: "guidesSidebar"
       },

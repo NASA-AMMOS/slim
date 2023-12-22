@@ -14,8 +14,8 @@
   "frontMatter": {},
   "sidebar": "guidesSidebar",
   "previous": {
-    "title": "Developer Certificate of Origin (DCO)",
-    "permalink": "/slim/docs/guides/governance/contributions/developer-certificate-origin/"
+    "title": "CONTRIBUTING",
+    "permalink": "/slim/docs/guides/governance/contributions/contributing-guide/CONTRIBUTING"
   },
   "next": {
     "title": "bug_report",

@@ -121,21 +121,6 @@
       "last-updated": "2022-03-31"
     },
     {
-      "title": "Developer Certificate of Origin (DCO)",
-      "uri": "/slim/docs/guides/governance/contributions/developer-certificate-origin",
-      "category": "governance",
-      "description": "A guide on using a GitHub Action for automated checks on 'signed-off' commits from contributors.",
-      "tags": [
-        "contribution",
-        "github-action",
-        "signed-off-commits",
-        "dco",
-        "automated-checks",
-        "governance"
-      ],
-      "last-updated": "2022-05-02"
-    },
-    {
       "title": "Python Starter Kit",
       "uri": "/slim/docs/guides/software-lifecycle/application-starter-kits/python-starter-kit",
       "category": "software-lifecycle",

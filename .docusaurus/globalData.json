@@ -101,11 +101,6 @@
               "sidebar": "guidesSidebar"
             },
             {
-              "id": "guides/governance/contributions/developer-certificate-origin/README",
-              "path": "/slim/docs/guides/governance/contributions/developer-certificate-origin/",
-              "sidebar": "guidesSidebar"
-            },
-            {
               "id": "guides/governance/contributions/issue-templates/bug-reports/bug_report",
               "path": "/slim/docs/guides/governance/contributions/issue-templates/bug-reports/bug_report",
               "sidebar": "guidesSidebar"
