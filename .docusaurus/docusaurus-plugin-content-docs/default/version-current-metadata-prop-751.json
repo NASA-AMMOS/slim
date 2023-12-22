@@ -118,21 +118,6 @@
             "collapsed": true,
             "items": [
               {
-                "type": "category",
-                "label": "Pull Request Templates",
-                "collapsible": true,
-                "collapsed": true,
-                "items": [
-                  {
-                    "type": "link",
-                    "label": "PULL_REQUEST_TEMPLATE",
-                    "href": "/slim/docs/guides/governance/contributions/change-request-templates/PULL_REQUEST_TEMPLATE",
-                    "docId": "guides/governance/contributions/change-request-templates/PULL_REQUEST_TEMPLATE"
-                  }
-                ],
-                "href": "/slim/docs/guides/governance/contributions/change-request-templates/"
-              },
-              {
                 "type": "link",
                 "label": "Code of Conduct",
                 "href": "/slim/docs/guides/governance/contributions/code-of-conduct/",
@@ -199,6 +184,21 @@
                   }
                 ],
                 "href": "/slim/docs/guides/governance/contributions/issue-templates/"
+              },
+              {
+                "type": "category",
+                "label": "Pull Requests",
+                "collapsible": true,
+                "collapsed": true,
+                "items": [
+                  {
+                    "type": "link",
+                    "label": "PULL_REQUEST_TEMPLATE",
+                    "href": "/slim/docs/guides/governance/contributions/pull-requests/PULL_REQUEST_TEMPLATE",
+                    "docId": "guides/governance/contributions/pull-requests/PULL_REQUEST_TEMPLATE"
+                  }
+                ],
+                "href": "/slim/docs/guides/governance/contributions/pull-requests/"
               }
             ],
             "href": "/slim/docs/category/contributions"
@@ -426,18 +426,6 @@
       "description": "",
       "sidebar": "guidesSidebar"
     },
-    "guides/governance/contributions/change-request-templates/PULL_REQUEST_TEMPLATE": {
-      "id": "guides/governance/contributions/change-request-templates/PULL_REQUEST_TEMPLATE",
-      "title": "PULL_REQUEST_TEMPLATE",
-      "description": "",
-      "sidebar": "guidesSidebar"
-    },
-    "guides/governance/contributions/change-request-templates/README": {
-      "id": "guides/governance/contributions/change-request-templates/README",
-      "title": "Pull Request Templates",
-      "description": "A walk-through on using our standardized template for pull requests.",
-      "sidebar": "guidesSidebar"
-    },
     "guides/governance/contributions/code-of-conduct/README": {
       "id": "guides/governance/contributions/code-of-conduct/README",
       "title": "Code of Conduct",
@@ -490,6 +478,18 @@
       "id": "guides/governance/contributions/issue-templates/README",
       "title": "Issue Templates",
       "description": "Issue tickets help development teams keep the language of bug, feature, and other types of issues readable and consistent. Templates appear whenever a person submits a new issue, and helps guide that person in providing the key information that gives developers context for a given issue.",
+      "sidebar": "guidesSidebar"
+    },
+    "guides/governance/contributions/pull-requests/PULL_REQUEST_TEMPLATE": {
+      "id": "guides/governance/contributions/pull-requests/PULL_REQUEST_TEMPLATE",
+      "title": "PULL_REQUEST_TEMPLATE",
+      "description": "",
+      "sidebar": "guidesSidebar"
+    },
+    "guides/governance/contributions/pull-requests/README": {
+      "id": "guides/governance/contributions/pull-requests/README",
+      "title": "Pull Requests",
+      "description": "A walk-through on using our standardized template for pull requests.",
       "sidebar": "guidesSidebar"
     },
     "guides/governance/governance-model/GOVERNANCE-TEMPLATE": {

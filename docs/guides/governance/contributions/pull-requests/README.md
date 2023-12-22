@@ -1,4 +1,4 @@
-# Pull Request Templates
+# Pull Requests
 
 <pre align="center">A walk-through on using our standardized template for pull requests.</pre>
 

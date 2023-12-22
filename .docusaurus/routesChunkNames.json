@@ -186,7 +186,7 @@
     },
     "content": "content---slim-markdown-page-393-660"
   },
-  "/slim/docs-b5f": {
+  "/slim/docs-ca9": {
     "__comp": "__comp---theme-doc-page-1-be-9be",
     "__context": {
       "plugin": "plugin---slim-docs-2-e-6-474"
@@ -269,14 +269,6 @@
     "__comp": "__comp---theme-doc-item-178-a40",
     "content": "content---slim-docs-guides-documentation-readme-readme-template-7-a-3-304"
   },
-  "/slim/docs/guides/governance/contributions/change-request-templates/-bba": {
-    "__comp": "__comp---theme-doc-item-178-a40",
-    "content": "content---slim-docs-guides-governance-contributions-change-request-templates-79-d-516"
-  },
-  "/slim/docs/guides/governance/contributions/change-request-templates/PULL_REQUEST_TEMPLATE-ce0": {
-    "__comp": "__comp---theme-doc-item-178-a40",
-    "content": "content---slim-docs-guides-governance-contributions-change-request-templates-pull-request-template-949-413"
-  },
   "/slim/docs/guides/governance/contributions/code-of-conduct/-0f4": {
     "__comp": "__comp---theme-doc-item-178-a40",
     "content": "content---slim-docs-guides-governance-contributions-code-of-conduct-e-0-d-7be"
@@ -312,6 +304,14 @@
   "/slim/docs/guides/governance/contributions/issue-templates/github/new_feature.yml-3a8": {
     "__comp": "__comp---theme-doc-item-178-a40",
     "content": "content---slim-docs-guides-governance-contributions-issue-templates-github-new-feature-yml-9-d-5-de7"
+  },
+  "/slim/docs/guides/governance/contributions/pull-requests/-01d": {
+    "__comp": "__comp---theme-doc-item-178-a40",
+    "content": "content---slim-docs-guides-governance-contributions-pull-requests-91-d-918"
+  },
+  "/slim/docs/guides/governance/contributions/pull-requests/PULL_REQUEST_TEMPLATE-45e": {
+    "__comp": "__comp---theme-doc-item-178-a40",
+    "content": "content---slim-docs-guides-governance-contributions-pull-requests-pull-request-templat-ebe-0-1b6"
   },
   "/slim/docs/guides/governance/governance-model/-277": {
     "__comp": "__comp---theme-doc-item-178-a40",

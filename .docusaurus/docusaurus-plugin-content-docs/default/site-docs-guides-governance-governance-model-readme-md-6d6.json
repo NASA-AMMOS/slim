@@ -14,8 +14,8 @@
   "frontMatter": {},
   "sidebar": "guidesSidebar",
   "previous": {
-    "title": "new_feature.yml",
-    "permalink": "/slim/docs/guides/governance/contributions/issue-templates/github/new_feature.yml"
+    "title": "PULL_REQUEST_TEMPLATE",
+    "permalink": "/slim/docs/guides/governance/contributions/pull-requests/PULL_REQUEST_TEMPLATE"
   },
   "next": {
     "title": "GOVERNANCE-TEMPLATE",

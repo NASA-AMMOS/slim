@@ -86,16 +86,6 @@
               "sidebar": "guidesSidebar"
             },
             {
-              "id": "guides/governance/contributions/change-request-templates/PULL_REQUEST_TEMPLATE",
-              "path": "/slim/docs/guides/governance/contributions/change-request-templates/PULL_REQUEST_TEMPLATE",
-              "sidebar": "guidesSidebar"
-            },
-            {
-              "id": "guides/governance/contributions/change-request-templates/README",
-              "path": "/slim/docs/guides/governance/contributions/change-request-templates/",
-              "sidebar": "guidesSidebar"
-            },
-            {
               "id": "guides/governance/contributions/code-of-conduct/README",
               "path": "/slim/docs/guides/governance/contributions/code-of-conduct/",
               "sidebar": "guidesSidebar"
@@ -138,6 +128,16 @@
             {
               "id": "guides/governance/contributions/issue-templates/README",
               "path": "/slim/docs/guides/governance/contributions/issue-templates/",
+              "sidebar": "guidesSidebar"
+            },
+            {
+              "id": "guides/governance/contributions/pull-requests/PULL_REQUEST_TEMPLATE",
+              "path": "/slim/docs/guides/governance/contributions/pull-requests/PULL_REQUEST_TEMPLATE",
+              "sidebar": "guidesSidebar"
+            },
+            {
+              "id": "guides/governance/contributions/pull-requests/README",
+              "path": "/slim/docs/guides/governance/contributions/pull-requests/",
               "sidebar": "guidesSidebar"
             },
             {

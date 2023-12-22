@@ -381,54 +381,6 @@
               }
             },
             {
-              "unversionedId": "guides/governance/contributions/change-request-templates/PULL_REQUEST_TEMPLATE",
-              "id": "guides/governance/contributions/change-request-templates/PULL_REQUEST_TEMPLATE",
-              "title": "PULL_REQUEST_TEMPLATE",
-              "description": "",
-              "source": "@site/docs/guides/governance/contributions/change-request-templates/PULL_REQUEST_TEMPLATE.md",
-              "sourceDirName": "guides/governance/contributions/change-request-templates",
-              "slug": "/guides/governance/contributions/change-request-templates/PULL_REQUEST_TEMPLATE",
-              "permalink": "/slim/docs/guides/governance/contributions/change-request-templates/PULL_REQUEST_TEMPLATE",
-              "draft": false,
-              "editUrl": "https://github.com/nasa-ammos/slim/tree/main/docs/guides/governance/contributions/change-request-templates/PULL_REQUEST_TEMPLATE.md",
-              "tags": [],
-              "version": "current",
-              "frontMatter": {},
-              "sidebar": "guidesSidebar",
-              "previous": {
-                "title": "Pull Request Templates",
-                "permalink": "/slim/docs/guides/governance/contributions/change-request-templates/"
-              },
-              "next": {
-                "title": "Code of Conduct",
-                "permalink": "/slim/docs/guides/governance/contributions/code-of-conduct/"
-              }
-            },
-            {
-              "unversionedId": "guides/governance/contributions/change-request-templates/README",
-              "id": "guides/governance/contributions/change-request-templates/README",
-              "title": "Pull Request Templates",
-              "description": "A walk-through on using our standardized template for pull requests.",
-              "source": "@site/docs/guides/governance/contributions/change-request-templates/README.md",
-              "sourceDirName": "guides/governance/contributions/change-request-templates",
-              "slug": "/guides/governance/contributions/change-request-templates/",
-              "permalink": "/slim/docs/guides/governance/contributions/change-request-templates/",
-              "draft": false,
-              "editUrl": "https://github.com/nasa-ammos/slim/tree/main/docs/guides/governance/contributions/change-request-templates/README.md",
-              "tags": [],
-              "version": "current",
-              "frontMatter": {},
-              "sidebar": "guidesSidebar",
-              "previous": {
-                "title": "Contributions",
-                "permalink": "/slim/docs/category/contributions"
-              },
-              "next": {
-                "title": "PULL_REQUEST_TEMPLATE",
-                "permalink": "/slim/docs/guides/governance/contributions/change-request-templates/PULL_REQUEST_TEMPLATE"
-              }
-            },
-            {
               "unversionedId": "guides/governance/contributions/code-of-conduct/README",
               "id": "guides/governance/contributions/code-of-conduct/README",
               "title": "Code of Conduct",
@@ -444,8 +396,8 @@
               "frontMatter": {},
               "sidebar": "guidesSidebar",
               "previous": {
-                "title": "PULL_REQUEST_TEMPLATE",
-                "permalink": "/slim/docs/guides/governance/contributions/change-request-templates/PULL_REQUEST_TEMPLATE"
+                "title": "Contributions",
+                "permalink": "/slim/docs/category/contributions"
               },
               "next": {
                 "title": "Contributing Guide",
@@ -616,8 +568,8 @@
                 "permalink": "/slim/docs/guides/governance/contributions/issue-templates/github/new_feature"
               },
               "next": {
-                "title": "Governance Model",
-                "permalink": "/slim/docs/guides/governance/governance-model/"
+                "title": "Pull Requests",
+                "permalink": "/slim/docs/guides/governance/contributions/pull-requests/"
               }
             },
             {
@@ -642,6 +594,54 @@
               "next": {
                 "title": "bug_report",
                 "permalink": "/slim/docs/guides/governance/contributions/issue-templates/github/bug_report"
+              }
+            },
+            {
+              "unversionedId": "guides/governance/contributions/pull-requests/PULL_REQUEST_TEMPLATE",
+              "id": "guides/governance/contributions/pull-requests/PULL_REQUEST_TEMPLATE",
+              "title": "PULL_REQUEST_TEMPLATE",
+              "description": "",
+              "source": "@site/docs/guides/governance/contributions/pull-requests/PULL_REQUEST_TEMPLATE.md",
+              "sourceDirName": "guides/governance/contributions/pull-requests",
+              "slug": "/guides/governance/contributions/pull-requests/PULL_REQUEST_TEMPLATE",
+              "permalink": "/slim/docs/guides/governance/contributions/pull-requests/PULL_REQUEST_TEMPLATE",
+              "draft": false,
+              "editUrl": "https://github.com/nasa-ammos/slim/tree/main/docs/guides/governance/contributions/pull-requests/PULL_REQUEST_TEMPLATE.md",
+              "tags": [],
+              "version": "current",
+              "frontMatter": {},
+              "sidebar": "guidesSidebar",
+              "previous": {
+                "title": "Pull Requests",
+                "permalink": "/slim/docs/guides/governance/contributions/pull-requests/"
+              },
+              "next": {
+                "title": "Governance Model",
+                "permalink": "/slim/docs/guides/governance/governance-model/"
+              }
+            },
+            {
+              "unversionedId": "guides/governance/contributions/pull-requests/README",
+              "id": "guides/governance/contributions/pull-requests/README",
+              "title": "Pull Requests",
+              "description": "A walk-through on using our standardized template for pull requests.",
+              "source": "@site/docs/guides/governance/contributions/pull-requests/README.md",
+              "sourceDirName": "guides/governance/contributions/pull-requests",
+              "slug": "/guides/governance/contributions/pull-requests/",
+              "permalink": "/slim/docs/guides/governance/contributions/pull-requests/",
+              "draft": false,
+              "editUrl": "https://github.com/nasa-ammos/slim/tree/main/docs/guides/governance/contributions/pull-requests/README.md",
+              "tags": [],
+              "version": "current",
+              "frontMatter": {},
+              "sidebar": "guidesSidebar",
+              "previous": {
+                "title": "new_feature.yml",
+                "permalink": "/slim/docs/guides/governance/contributions/issue-templates/github/new_feature.yml"
+              },
+              "next": {
+                "title": "PULL_REQUEST_TEMPLATE",
+                "permalink": "/slim/docs/guides/governance/contributions/pull-requests/PULL_REQUEST_TEMPLATE"
               }
             },
             {
@@ -684,8 +684,8 @@
               "frontMatter": {},
               "sidebar": "guidesSidebar",
               "previous": {
-                "title": "new_feature.yml",
-                "permalink": "/slim/docs/guides/governance/contributions/issue-templates/github/new_feature.yml"
+                "title": "PULL_REQUEST_TEMPLATE",
+                "permalink": "/slim/docs/guides/governance/contributions/pull-requests/PULL_REQUEST_TEMPLATE"
               },
               "next": {
                 "title": "GOVERNANCE-TEMPLATE",
@@ -1110,22 +1110,6 @@
                     "collapsed": true,
                     "items": [
                       {
-                        "type": "category",
-                        "label": "Pull Request Templates",
-                        "collapsible": true,
-                        "collapsed": true,
-                        "items": [
-                          {
-                            "type": "doc",
-                            "id": "guides/governance/contributions/change-request-templates/PULL_REQUEST_TEMPLATE"
-                          }
-                        ],
-                        "link": {
-                          "type": "doc",
-                          "id": "guides/governance/contributions/change-request-templates/README"
-                        }
-                      },
-                      {
                         "type": "doc",
                         "label": "Code of Conduct",
                         "id": "guides/governance/contributions/code-of-conduct/README"
@@ -1185,6 +1169,22 @@
                         "link": {
                           "type": "doc",
                           "id": "guides/governance/contributions/issue-templates/README"
+                        }
+                      },
+                      {
+                        "type": "category",
+                        "label": "Pull Requests",
+                        "collapsible": true,
+                        "collapsed": true,
+                        "items": [
+                          {
+                            "type": "doc",
+                            "id": "guides/governance/contributions/pull-requests/PULL_REQUEST_TEMPLATE"
+                          }
+                        ],
+                        "link": {
+                          "type": "doc",
+                          "id": "guides/governance/contributions/pull-requests/README"
                         }
                       }
                     ],

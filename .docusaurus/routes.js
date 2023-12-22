@@ -99,7 +99,7 @@ export default [
   },
   {
     path: '/slim/docs',
-    component: ComponentCreator('/slim/docs', 'b5f'),
+    component: ComponentCreator('/slim/docs', 'ca9'),
     routes: [
       {
         path: '/slim/docs/about/',
@@ -216,18 +216,6 @@ export default [
         sidebar: "guidesSidebar"
       },
       {
-        path: '/slim/docs/guides/governance/contributions/change-request-templates/',
-        component: ComponentCreator('/slim/docs/guides/governance/contributions/change-request-templates/', 'bba'),
-        exact: true,
-        sidebar: "guidesSidebar"
-      },
-      {
-        path: '/slim/docs/guides/governance/contributions/change-request-templates/PULL_REQUEST_TEMPLATE',
-        component: ComponentCreator('/slim/docs/guides/governance/contributions/change-request-templates/PULL_REQUEST_TEMPLATE', 'ce0'),
-        exact: true,
-        sidebar: "guidesSidebar"
-      },
-      {
         path: '/slim/docs/guides/governance/contributions/code-of-conduct/',
         component: ComponentCreator('/slim/docs/guides/governance/contributions/code-of-conduct/', '0f4'),
         exact: true,
@@ -278,6 +266,18 @@ export default [
       {
         path: '/slim/docs/guides/governance/contributions/issue-templates/github/new_feature.yml',
         component: ComponentCreator('/slim/docs/guides/governance/contributions/issue-templates/github/new_feature.yml', '3a8'),
+        exact: true,
+        sidebar: "guidesSidebar"
+      },
+      {
+        path: '/slim/docs/guides/governance/contributions/pull-requests/',
+        component: ComponentCreator('/slim/docs/guides/governance/contributions/pull-requests/', '01d'),
+        exact: true,
+        sidebar: "guidesSidebar"
+      },
+      {
+        path: '/slim/docs/guides/governance/contributions/pull-requests/PULL_REQUEST_TEMPLATE',
+        component: ComponentCreator('/slim/docs/guides/governance/contributions/pull-requests/PULL_REQUEST_TEMPLATE', '45e'),
         exact: true,
         sidebar: "guidesSidebar"
       },
