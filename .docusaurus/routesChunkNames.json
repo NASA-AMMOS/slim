@@ -186,7 +186,7 @@
     },
     "content": "content---slim-markdown-page-393-660"
   },
-  "/slim/docs-f81": {
+  "/slim/docs-b5f": {
     "__comp": "__comp---theme-doc-page-1-be-9be",
     "__context": {
       "plugin": "plugin---slim-docs-2-e-6-474"
@@ -204,6 +204,10 @@
   "/slim/docs/about/GOVERNANCE-e72": {
     "__comp": "__comp---theme-doc-item-178-a40",
     "content": "content---slim-docs-about-governance-6-fb-cc3"
+  },
+  "/slim/docs/category/contributions-e9b": {
+    "__comp": "__comp---theme-doc-category-generated-index-page-14-e-640",
+    "categoryGeneratedIndex": "categoryGeneratedIndex---slim-docs-category-contributions-51-f-c73"
   },
   "/slim/docs/category/documentation-a19": {
     "__comp": "__comp---theme-doc-category-generated-index-page-14-e-640",
@@ -265,17 +269,13 @@
     "__comp": "__comp---theme-doc-item-178-a40",
     "content": "content---slim-docs-guides-documentation-readme-readme-template-7-a-3-304"
   },
-  "/slim/docs/guides/governance/contributions/-3c4": {
-    "__comp": "__comp---theme-doc-item-178-a40",
-    "content": "content---slim-docs-guides-governance-contributions-e-64-0eb"
-  },
   "/slim/docs/guides/governance/contributions/change-request-templates/-bba": {
     "__comp": "__comp---theme-doc-item-178-a40",
     "content": "content---slim-docs-guides-governance-contributions-change-request-templates-79-d-516"
   },
-  "/slim/docs/guides/governance/contributions/change-request-templates/github/PULL_REQUEST_TEMPLATE-257": {
+  "/slim/docs/guides/governance/contributions/change-request-templates/PULL_REQUEST_TEMPLATE-ce0": {
     "__comp": "__comp---theme-doc-item-178-a40",
-    "content": "content---slim-docs-guides-governance-contributions-change-request-templates-github-pull-request-template-7-cc-433"
+    "content": "content---slim-docs-guides-governance-contributions-change-request-templates-pull-request-template-949-413"
   },
   "/slim/docs/guides/governance/contributions/code-of-conduct/-0f4": {
     "__comp": "__comp---theme-doc-item-178-a40",
@@ -361,9 +361,9 @@
     "__comp": "__comp---theme-doc-item-178-a40",
     "content": "content---slim-docs-guides-software-lifecycle-security-e-55-cc7"
   },
-  "/slim/docs/guides/software-lifecycle/security/dependabot/-be7": {
+  "/slim/docs/guides/software-lifecycle/security/github-security/-b41": {
     "__comp": "__comp---theme-doc-item-178-a40",
-    "content": "content---slim-docs-guides-software-lifecycle-security-dependabot-cc-9-653"
+    "content": "content---slim-docs-guides-software-lifecycle-security-github-security-c-36-adb"
   },
   "/slim/docs/guides/software-lifecycle/security/secrets-detection/-853": {
     "__comp": "__comp---theme-doc-item-178-a40",

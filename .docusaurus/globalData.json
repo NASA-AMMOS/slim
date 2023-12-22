@@ -86,8 +86,8 @@
               "sidebar": "guidesSidebar"
             },
             {
-              "id": "guides/governance/contributions/change-request-templates/github/PULL_REQUEST_TEMPLATE",
-              "path": "/slim/docs/guides/governance/contributions/change-request-templates/github/PULL_REQUEST_TEMPLATE",
+              "id": "guides/governance/contributions/change-request-templates/PULL_REQUEST_TEMPLATE",
+              "path": "/slim/docs/guides/governance/contributions/change-request-templates/PULL_REQUEST_TEMPLATE",
               "sidebar": "guidesSidebar"
             },
             {
@@ -138,11 +138,6 @@
             {
               "id": "guides/governance/contributions/issue-templates/README",
               "path": "/slim/docs/guides/governance/contributions/issue-templates/",
-              "sidebar": "guidesSidebar"
-            },
-            {
-              "id": "guides/governance/contributions/README",
-              "path": "/slim/docs/guides/governance/contributions/",
               "sidebar": "guidesSidebar"
             },
             {
@@ -201,8 +196,8 @@
               "sidebar": "guidesSidebar"
             },
             {
-              "id": "guides/software-lifecycle/security/dependabot/README",
-              "path": "/slim/docs/guides/software-lifecycle/security/dependabot/",
+              "id": "guides/software-lifecycle/security/github-security/README",
+              "path": "/slim/docs/guides/software-lifecycle/security/github-security/",
               "sidebar": "guidesSidebar"
             },
             {
@@ -223,6 +218,11 @@
             {
               "id": "/category/governance",
               "path": "/slim/docs/category/governance",
+              "sidebar": "guidesSidebar"
+            },
+            {
+              "id": "/category/contributions",
+              "path": "/slim/docs/category/contributions",
               "sidebar": "guidesSidebar"
             },
             {

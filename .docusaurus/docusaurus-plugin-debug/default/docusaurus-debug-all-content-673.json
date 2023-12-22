@@ -381,22 +381,22 @@
               }
             },
             {
-              "unversionedId": "guides/governance/contributions/change-request-templates/github/PULL_REQUEST_TEMPLATE",
-              "id": "guides/governance/contributions/change-request-templates/github/PULL_REQUEST_TEMPLATE",
+              "unversionedId": "guides/governance/contributions/change-request-templates/PULL_REQUEST_TEMPLATE",
+              "id": "guides/governance/contributions/change-request-templates/PULL_REQUEST_TEMPLATE",
               "title": "PULL_REQUEST_TEMPLATE",
               "description": "",
-              "source": "@site/docs/guides/governance/contributions/change-request-templates/github/PULL_REQUEST_TEMPLATE.md",
-              "sourceDirName": "guides/governance/contributions/change-request-templates/github",
-              "slug": "/guides/governance/contributions/change-request-templates/github/PULL_REQUEST_TEMPLATE",
-              "permalink": "/slim/docs/guides/governance/contributions/change-request-templates/github/PULL_REQUEST_TEMPLATE",
+              "source": "@site/docs/guides/governance/contributions/change-request-templates/PULL_REQUEST_TEMPLATE.md",
+              "sourceDirName": "guides/governance/contributions/change-request-templates",
+              "slug": "/guides/governance/contributions/change-request-templates/PULL_REQUEST_TEMPLATE",
+              "permalink": "/slim/docs/guides/governance/contributions/change-request-templates/PULL_REQUEST_TEMPLATE",
               "draft": false,
-              "editUrl": "https://github.com/nasa-ammos/slim/tree/main/docs/guides/governance/contributions/change-request-templates/github/PULL_REQUEST_TEMPLATE.md",
+              "editUrl": "https://github.com/nasa-ammos/slim/tree/main/docs/guides/governance/contributions/change-request-templates/PULL_REQUEST_TEMPLATE.md",
               "tags": [],
               "version": "current",
               "frontMatter": {},
               "sidebar": "guidesSidebar",
               "previous": {
-                "title": "Change Request Templates",
+                "title": "Pull Request Templates",
                 "permalink": "/slim/docs/guides/governance/contributions/change-request-templates/"
               },
               "next": {
@@ -407,8 +407,8 @@
             {
               "unversionedId": "guides/governance/contributions/change-request-templates/README",
               "id": "guides/governance/contributions/change-request-templates/README",
-              "title": "Change Request Templates",
-              "description": "Pull requests are the currency for how contributions are made to projects. Having a pre-filled out pull request template offers guidance to your potential developers on how to contribute to your project.",
+              "title": "Pull Request Templates",
+              "description": "A walk-through on using our standardized template for pull requests.",
               "source": "@site/docs/guides/governance/contributions/change-request-templates/README.md",
               "sourceDirName": "guides/governance/contributions/change-request-templates",
               "slug": "/guides/governance/contributions/change-request-templates/",
@@ -421,11 +421,11 @@
               "sidebar": "guidesSidebar",
               "previous": {
                 "title": "Contributions",
-                "permalink": "/slim/docs/guides/governance/contributions/"
+                "permalink": "/slim/docs/category/contributions"
               },
               "next": {
                 "title": "PULL_REQUEST_TEMPLATE",
-                "permalink": "/slim/docs/guides/governance/contributions/change-request-templates/github/PULL_REQUEST_TEMPLATE"
+                "permalink": "/slim/docs/guides/governance/contributions/change-request-templates/PULL_REQUEST_TEMPLATE"
               }
             },
             {
@@ -445,7 +445,7 @@
               "sidebar": "guidesSidebar",
               "previous": {
                 "title": "PULL_REQUEST_TEMPLATE",
-                "permalink": "/slim/docs/guides/governance/contributions/change-request-templates/github/PULL_REQUEST_TEMPLATE"
+                "permalink": "/slim/docs/guides/governance/contributions/change-request-templates/PULL_REQUEST_TEMPLATE"
               },
               "next": {
                 "title": "Contributing Guide",
@@ -642,30 +642,6 @@
               "next": {
                 "title": "bug_report",
                 "permalink": "/slim/docs/guides/governance/contributions/issue-templates/github/bug_report"
-              }
-            },
-            {
-              "unversionedId": "guides/governance/contributions/README",
-              "id": "guides/governance/contributions/README",
-              "title": "Contributions",
-              "description": "",
-              "source": "@site/docs/guides/governance/contributions/README.md",
-              "sourceDirName": "guides/governance/contributions",
-              "slug": "/guides/governance/contributions/",
-              "permalink": "/slim/docs/guides/governance/contributions/",
-              "draft": false,
-              "editUrl": "https://github.com/nasa-ammos/slim/tree/main/docs/guides/governance/contributions/README.md",
-              "tags": [],
-              "version": "current",
-              "frontMatter": {},
-              "sidebar": "guidesSidebar",
-              "previous": {
-                "title": "Governance",
-                "permalink": "/slim/docs/category/governance"
-              },
-              "next": {
-                "title": "Change Request Templates",
-                "permalink": "/slim/docs/guides/governance/contributions/change-request-templates/"
               }
             },
             {
@@ -938,16 +914,16 @@
               }
             },
             {
-              "unversionedId": "guides/software-lifecycle/security/dependabot/README",
-              "id": "guides/software-lifecycle/security/dependabot/README",
-              "title": "Dependabot",
-              "description": "A GitHub ecosystem tool for dependency version and security vulnerability analysis.",
-              "source": "@site/docs/guides/software-lifecycle/security/dependabot/README.md",
-              "sourceDirName": "guides/software-lifecycle/security/dependabot",
-              "slug": "/guides/software-lifecycle/security/dependabot/",
-              "permalink": "/slim/docs/guides/software-lifecycle/security/dependabot/",
+              "unversionedId": "guides/software-lifecycle/security/github-security/README",
+              "id": "guides/software-lifecycle/security/github-security/README",
+              "title": "GitHub Security Best Practices",
+              "description": "Recommendations for enabling GitHub security features for your repositories.",
+              "source": "@site/docs/guides/software-lifecycle/security/github-security/README.md",
+              "sourceDirName": "guides/software-lifecycle/security/github-security",
+              "slug": "/guides/software-lifecycle/security/github-security/",
+              "permalink": "/slim/docs/guides/software-lifecycle/security/github-security/",
               "draft": false,
-              "editUrl": "https://github.com/nasa-ammos/slim/tree/main/docs/guides/software-lifecycle/security/dependabot/README.md",
+              "editUrl": "https://github.com/nasa-ammos/slim/tree/main/docs/guides/software-lifecycle/security/github-security/README.md",
               "tags": [],
               "version": "current",
               "frontMatter": {},
@@ -981,8 +957,8 @@
                 "permalink": "/slim/docs/guides/software-lifecycle/continuous-testing/testing-frameworks"
               },
               "next": {
-                "title": "Dependabot",
-                "permalink": "/slim/docs/guides/software-lifecycle/security/dependabot/"
+                "title": "GitHub Security Best Practices",
+                "permalink": "/slim/docs/guides/software-lifecycle/security/github-security/"
               }
             },
             {
@@ -1001,8 +977,8 @@
               "frontMatter": {},
               "sidebar": "guidesSidebar",
               "previous": {
-                "title": "Dependabot",
-                "permalink": "/slim/docs/guides/software-lifecycle/security/dependabot/"
+                "title": "GitHub Security Best Practices",
+                "permalink": "/slim/docs/guides/software-lifecycle/security/github-security/"
               },
               "next": {
                 "title": "Governance",
@@ -1099,8 +1075,8 @@
                     "items": [
                       {
                         "type": "doc",
-                        "label": "Dependabot",
-                        "id": "guides/software-lifecycle/security/dependabot/README"
+                        "label": "GitHub Security Best Practices",
+                        "id": "guides/software-lifecycle/security/github-security/README"
                       },
                       {
                         "type": "doc",
@@ -1135,21 +1111,13 @@
                     "items": [
                       {
                         "type": "category",
-                        "label": "Change Request Templates",
+                        "label": "Pull Request Templates",
                         "collapsible": true,
                         "collapsed": true,
                         "items": [
                           {
-                            "type": "category",
-                            "label": "github",
-                            "collapsible": true,
-                            "collapsed": true,
-                            "items": [
-                              {
-                                "type": "doc",
-                                "id": "guides/governance/contributions/change-request-templates/github/PULL_REQUEST_TEMPLATE"
-                              }
-                            ]
+                            "type": "doc",
+                            "id": "guides/governance/contributions/change-request-templates/PULL_REQUEST_TEMPLATE"
                           }
                         ],
                         "link": {
@@ -1221,8 +1189,10 @@
                       }
                     ],
                     "link": {
-                      "type": "doc",
-                      "id": "guides/governance/contributions/README"
+                      "type": "generated-index",
+                      "description": "Contributing Best Practices.",
+                      "slug": "/category/contributions",
+                      "permalink": "/slim/docs/category/contributions"
                     }
                   },
                   {

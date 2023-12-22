@@ -1,0 +1,24 @@
+{
+  "unversionedId": "guides/software-lifecycle/security/github-security/README",
+  "id": "guides/software-lifecycle/security/github-security/README",
+  "title": "GitHub Security Best Practices",
+  "description": "Recommendations for enabling GitHub security features for your repositories.",
+  "source": "@site/docs/guides/software-lifecycle/security/github-security/README.md",
+  "sourceDirName": "guides/software-lifecycle/security/github-security",
+  "slug": "/guides/software-lifecycle/security/github-security/",
+  "permalink": "/slim/docs/guides/software-lifecycle/security/github-security/",
+  "draft": false,
+  "editUrl": "https://github.com/nasa-ammos/slim/tree/main/docs/guides/software-lifecycle/security/github-security/README.md",
+  "tags": [],
+  "version": "current",
+  "frontMatter": {},
+  "sidebar": "guidesSidebar",
+  "previous": {
+    "title": "Security",
+    "permalink": "/slim/docs/guides/software-lifecycle/security/"
+  },
+  "next": {
+    "title": "Secrets Detection",
+    "permalink": "/slim/docs/guides/software-lifecycle/security/secrets-detection/"
+  }
+}

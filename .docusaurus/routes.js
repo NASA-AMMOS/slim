@@ -99,7 +99,7 @@ export default [
   },
   {
     path: '/slim/docs',
-    component: ComponentCreator('/slim/docs', 'f81'),
+    component: ComponentCreator('/slim/docs', 'b5f'),
     routes: [
       {
         path: '/slim/docs/about/',
@@ -118,6 +118,12 @@ export default [
         component: ComponentCreator('/slim/docs/about/GOVERNANCE', 'e72'),
         exact: true,
         sidebar: "aboutSidebar"
+      },
+      {
+        path: '/slim/docs/category/contributions',
+        component: ComponentCreator('/slim/docs/category/contributions', 'e9b'),
+        exact: true,
+        sidebar: "guidesSidebar"
       },
       {
         path: '/slim/docs/category/documentation',
@@ -210,20 +216,14 @@ export default [
         sidebar: "guidesSidebar"
       },
       {
-        path: '/slim/docs/guides/governance/contributions/',
-        component: ComponentCreator('/slim/docs/guides/governance/contributions/', '3c4'),
-        exact: true,
-        sidebar: "guidesSidebar"
-      },
-      {
         path: '/slim/docs/guides/governance/contributions/change-request-templates/',
         component: ComponentCreator('/slim/docs/guides/governance/contributions/change-request-templates/', 'bba'),
         exact: true,
         sidebar: "guidesSidebar"
       },
       {
-        path: '/slim/docs/guides/governance/contributions/change-request-templates/github/PULL_REQUEST_TEMPLATE',
-        component: ComponentCreator('/slim/docs/guides/governance/contributions/change-request-templates/github/PULL_REQUEST_TEMPLATE', '257'),
+        path: '/slim/docs/guides/governance/contributions/change-request-templates/PULL_REQUEST_TEMPLATE',
+        component: ComponentCreator('/slim/docs/guides/governance/contributions/change-request-templates/PULL_REQUEST_TEMPLATE', 'ce0'),
         exact: true,
         sidebar: "guidesSidebar"
       },
@@ -354,8 +354,8 @@ export default [
         sidebar: "guidesSidebar"
       },
       {
-        path: '/slim/docs/guides/software-lifecycle/security/dependabot/',
-        component: ComponentCreator('/slim/docs/guides/software-lifecycle/security/dependabot/', 'be7'),
+        path: '/slim/docs/guides/software-lifecycle/security/github-security/',
+        component: ComponentCreator('/slim/docs/guides/software-lifecycle/security/github-security/', 'b41'),
         exact: true,
         sidebar: "guidesSidebar"
       },

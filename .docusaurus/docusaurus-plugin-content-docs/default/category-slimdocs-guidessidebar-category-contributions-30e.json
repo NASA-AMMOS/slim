@@ -1,0 +1,16 @@
+{
+  "title": "Contributions",
+  "description": "Contributing Best Practices.",
+  "slug": "/category/contributions",
+  "permalink": "/slim/docs/category/contributions",
+  "navigation": {
+    "previous": {
+      "title": "Governance",
+      "permalink": "/slim/docs/category/governance"
+    },
+    "next": {
+      "title": "Pull Request Templates",
+      "permalink": "/slim/docs/guides/governance/contributions/change-request-templates/"
+    }
+  }
+}

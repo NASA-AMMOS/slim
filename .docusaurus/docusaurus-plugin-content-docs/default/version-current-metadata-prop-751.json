@@ -89,9 +89,9 @@
             "items": [
               {
                 "type": "link",
-                "label": "Dependabot",
-                "href": "/slim/docs/guides/software-lifecycle/security/dependabot/",
-                "docId": "guides/software-lifecycle/security/dependabot/README"
+                "label": "GitHub Security Best Practices",
+                "href": "/slim/docs/guides/software-lifecycle/security/github-security/",
+                "docId": "guides/software-lifecycle/security/github-security/README"
               },
               {
                 "type": "link",
@@ -119,23 +119,15 @@
             "items": [
               {
                 "type": "category",
-                "label": "Change Request Templates",
+                "label": "Pull Request Templates",
                 "collapsible": true,
                 "collapsed": true,
                 "items": [
                   {
-                    "type": "category",
-                    "label": "github",
-                    "collapsible": true,
-                    "collapsed": true,
-                    "items": [
-                      {
-                        "type": "link",
-                        "label": "PULL_REQUEST_TEMPLATE",
-                        "href": "/slim/docs/guides/governance/contributions/change-request-templates/github/PULL_REQUEST_TEMPLATE",
-                        "docId": "guides/governance/contributions/change-request-templates/github/PULL_REQUEST_TEMPLATE"
-                      }
-                    ]
+                    "type": "link",
+                    "label": "PULL_REQUEST_TEMPLATE",
+                    "href": "/slim/docs/guides/governance/contributions/change-request-templates/PULL_REQUEST_TEMPLATE",
+                    "docId": "guides/governance/contributions/change-request-templates/PULL_REQUEST_TEMPLATE"
                   }
                 ],
                 "href": "/slim/docs/guides/governance/contributions/change-request-templates/"
@@ -209,7 +201,7 @@
                 "href": "/slim/docs/guides/governance/contributions/issue-templates/"
               }
             ],
-            "href": "/slim/docs/guides/governance/contributions/"
+            "href": "/slim/docs/category/contributions"
           },
           {
             "type": "category",
@@ -434,16 +426,16 @@
       "description": "",
       "sidebar": "guidesSidebar"
     },
-    "guides/governance/contributions/change-request-templates/github/PULL_REQUEST_TEMPLATE": {
-      "id": "guides/governance/contributions/change-request-templates/github/PULL_REQUEST_TEMPLATE",
+    "guides/governance/contributions/change-request-templates/PULL_REQUEST_TEMPLATE": {
+      "id": "guides/governance/contributions/change-request-templates/PULL_REQUEST_TEMPLATE",
       "title": "PULL_REQUEST_TEMPLATE",
       "description": "",
       "sidebar": "guidesSidebar"
     },
     "guides/governance/contributions/change-request-templates/README": {
       "id": "guides/governance/contributions/change-request-templates/README",
-      "title": "Change Request Templates",
-      "description": "Pull requests are the currency for how contributions are made to projects. Having a pre-filled out pull request template offers guidance to your potential developers on how to contribute to your project.",
+      "title": "Pull Request Templates",
+      "description": "A walk-through on using our standardized template for pull requests.",
       "sidebar": "guidesSidebar"
     },
     "guides/governance/contributions/code-of-conduct/README": {
@@ -498,12 +490,6 @@
       "id": "guides/governance/contributions/issue-templates/README",
       "title": "Issue Templates",
       "description": "Issue tickets help development teams keep the language of bug, feature, and other types of issues readable and consistent. Templates appear whenever a person submits a new issue, and helps guide that person in providing the key information that gives developers context for a given issue.",
-      "sidebar": "guidesSidebar"
-    },
-    "guides/governance/contributions/README": {
-      "id": "guides/governance/contributions/README",
-      "title": "Contributions",
-      "description": "",
       "sidebar": "guidesSidebar"
     },
     "guides/governance/governance-model/GOVERNANCE-TEMPLATE": {
@@ -572,10 +558,10 @@
       "description": "* Continuous Testing",
       "sidebar": "guidesSidebar"
     },
-    "guides/software-lifecycle/security/dependabot/README": {
-      "id": "guides/software-lifecycle/security/dependabot/README",
-      "title": "Dependabot",
-      "description": "A GitHub ecosystem tool for dependency version and security vulnerability analysis.",
+    "guides/software-lifecycle/security/github-security/README": {
+      "id": "guides/software-lifecycle/security/github-security/README",
+      "title": "GitHub Security Best Practices",
+      "description": "Recommendations for enabling GitHub security features for your repositories.",
       "sidebar": "guidesSidebar"
     },
     "guides/software-lifecycle/security/README": {
