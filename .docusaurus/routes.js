@@ -99,7 +99,7 @@ export default [
   },
   {
     path: '/slim/docs',
-    component: ComponentCreator('/slim/docs', 'f81'),
+    component: ComponentCreator('/slim/docs', 'e6a'),
     routes: [
       {
         path: '/slim/docs/about/',
@@ -354,8 +354,8 @@ export default [
         sidebar: "guidesSidebar"
       },
       {
-        path: '/slim/docs/guides/software-lifecycle/security/dependabot/',
-        component: ComponentCreator('/slim/docs/guides/software-lifecycle/security/dependabot/', 'be7'),
+        path: '/slim/docs/guides/software-lifecycle/security/github-security/',
+        component: ComponentCreator('/slim/docs/guides/software-lifecycle/security/github-security/', 'b41'),
         exact: true,
         sidebar: "guidesSidebar"
       },

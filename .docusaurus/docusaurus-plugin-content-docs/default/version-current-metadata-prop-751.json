@@ -89,9 +89,9 @@
             "items": [
               {
                 "type": "link",
-                "label": "Dependabot",
-                "href": "/slim/docs/guides/software-lifecycle/security/dependabot/",
-                "docId": "guides/software-lifecycle/security/dependabot/README"
+                "label": "GitHub Security Best Practices",
+                "href": "/slim/docs/guides/software-lifecycle/security/github-security/",
+                "docId": "guides/software-lifecycle/security/github-security/README"
               },
               {
                 "type": "link",
@@ -401,7 +401,7 @@
     "guides/documentation/change-log/README": {
       "id": "guides/documentation/change-log/README",
       "title": "Change Log",
-      "description": "A change log provides a human readable list of significant changes, additions, deprecations, removals for software over time. It is meant to be able to be read by people. Change logs should be documented within a file called CHANGELOG.md and be updated per key release. See semantic release for guidance on releasing cycles and versioning of your software.",
+      "description": "A guide for setting up a log to document software changes in a human-centric format.",
       "sidebar": "guidesSidebar"
     },
     "guides/documentation/documentation-hosts/README": {
@@ -572,10 +572,10 @@
       "description": "* Continuous Testing",
       "sidebar": "guidesSidebar"
     },
-    "guides/software-lifecycle/security/dependabot/README": {
-      "id": "guides/software-lifecycle/security/dependabot/README",
-      "title": "Dependabot",
-      "description": "A GitHub ecosystem tool for dependency version and security vulnerability analysis.",
+    "guides/software-lifecycle/security/github-security/README": {
+      "id": "guides/software-lifecycle/security/github-security/README",
+      "title": "GitHub Security Best Practices",
+      "description": "Recommendations for enabling GitHub security features for your repositories.",
       "sidebar": "guidesSidebar"
     },
     "guides/software-lifecycle/security/README": {

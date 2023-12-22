@@ -238,7 +238,7 @@
               "unversionedId": "guides/documentation/change-log/README",
               "id": "guides/documentation/change-log/README",
               "title": "Change Log",
-              "description": "A change log provides a human readable list of significant changes, additions, deprecations, removals for software over time. It is meant to be able to be read by people. Change logs should be documented within a file called CHANGELOG.md and be updated per key release. See semantic release for guidance on releasing cycles and versioning of your software.",
+              "description": "A guide for setting up a log to document software changes in a human-centric format.",
               "source": "@site/docs/guides/documentation/change-log/README.md",
               "sourceDirName": "guides/documentation/change-log",
               "slug": "/guides/documentation/change-log/",
@@ -938,16 +938,16 @@
               }
             },
             {
-              "unversionedId": "guides/software-lifecycle/security/dependabot/README",
-              "id": "guides/software-lifecycle/security/dependabot/README",
-              "title": "Dependabot",
-              "description": "A GitHub ecosystem tool for dependency version and security vulnerability analysis.",
-              "source": "@site/docs/guides/software-lifecycle/security/dependabot/README.md",
-              "sourceDirName": "guides/software-lifecycle/security/dependabot",
-              "slug": "/guides/software-lifecycle/security/dependabot/",
-              "permalink": "/slim/docs/guides/software-lifecycle/security/dependabot/",
+              "unversionedId": "guides/software-lifecycle/security/github-security/README",
+              "id": "guides/software-lifecycle/security/github-security/README",
+              "title": "GitHub Security Best Practices",
+              "description": "Recommendations for enabling GitHub security features for your repositories.",
+              "source": "@site/docs/guides/software-lifecycle/security/github-security/README.md",
+              "sourceDirName": "guides/software-lifecycle/security/github-security",
+              "slug": "/guides/software-lifecycle/security/github-security/",
+              "permalink": "/slim/docs/guides/software-lifecycle/security/github-security/",
               "draft": false,
-              "editUrl": "https://github.com/nasa-ammos/slim/tree/main/docs/guides/software-lifecycle/security/dependabot/README.md",
+              "editUrl": "https://github.com/nasa-ammos/slim/tree/main/docs/guides/software-lifecycle/security/github-security/README.md",
               "tags": [],
               "version": "current",
               "frontMatter": {},
@@ -981,8 +981,8 @@
                 "permalink": "/slim/docs/guides/software-lifecycle/continuous-testing/testing-frameworks"
               },
               "next": {
-                "title": "Dependabot",
-                "permalink": "/slim/docs/guides/software-lifecycle/security/dependabot/"
+                "title": "GitHub Security Best Practices",
+                "permalink": "/slim/docs/guides/software-lifecycle/security/github-security/"
               }
             },
             {
@@ -1001,8 +1001,8 @@
               "frontMatter": {},
               "sidebar": "guidesSidebar",
               "previous": {
-                "title": "Dependabot",
-                "permalink": "/slim/docs/guides/software-lifecycle/security/dependabot/"
+                "title": "GitHub Security Best Practices",
+                "permalink": "/slim/docs/guides/software-lifecycle/security/github-security/"
               },
               "next": {
                 "title": "Governance",
@@ -1099,8 +1099,8 @@
                     "items": [
                       {
                         "type": "doc",
-                        "label": "Dependabot",
-                        "id": "guides/software-lifecycle/security/dependabot/README"
+                        "label": "GitHub Security Best Practices",
+                        "id": "guides/software-lifecycle/security/github-security/README"
                       },
                       {
                         "type": "doc",

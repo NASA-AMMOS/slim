@@ -201,8 +201,8 @@
               "sidebar": "guidesSidebar"
             },
             {
-              "id": "guides/software-lifecycle/security/dependabot/README",
-              "path": "/slim/docs/guides/software-lifecycle/security/dependabot/",
+              "id": "guides/software-lifecycle/security/github-security/README",
+              "path": "/slim/docs/guides/software-lifecycle/security/github-security/",
               "sidebar": "guidesSidebar"
             },
             {
