@@ -497,7 +497,7 @@
     "guides/governance/governance-model/README": {
       "id": "guides/governance/governance-model/README",
       "title": "Governance Model",
-      "description": "This governance model template seeks to generalize how most government-sponsored open source projects can expect to operate in the open source arena. It is targeted towards medium and large-sized teams. This template governance model can be included in your repository under the file name GOVERNANCE.md. There are two key philosophies behind this governance model to keep note of:",
+      "description": "Establish a project guide for effective open source governance.",
       "sidebar": "guidesSidebar"
     },
     "guides/search": {
