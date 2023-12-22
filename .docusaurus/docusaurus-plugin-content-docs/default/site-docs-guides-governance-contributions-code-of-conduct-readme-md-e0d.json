@@ -2,7 +2,7 @@
   "unversionedId": "guides/governance/contributions/code-of-conduct/README",
   "id": "guides/governance/contributions/code-of-conduct/README",
   "title": "Code of Conduct",
-  "description": "The code of conduct is typically a document that provides guidance to a project team on how the team members should interact with each other. It identifies behaviors that are helpful for building a better development community, provides contact information for addressing grievances (should they arise), and finally lists key responses that team leadership should / will take for dealing with unexpected behavior. Below are some examples to expedite the incorporation of a code of conduct.",
+  "description": "A walkthrough on setting up a code-of-conduct policy for your project.",
   "source": "@site/docs/guides/governance/contributions/code-of-conduct/README.md",
   "sourceDirName": "guides/governance/contributions/code-of-conduct",
   "slug": "/guides/governance/contributions/code-of-conduct/",
