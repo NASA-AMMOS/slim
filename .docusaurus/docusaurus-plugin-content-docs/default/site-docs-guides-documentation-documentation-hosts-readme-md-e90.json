@@ -1,8 +1,8 @@
 {
   "unversionedId": "guides/documentation/documentation-hosts/README",
   "id": "guides/documentation/documentation-hosts/README",
-  "title": "Documentation Hosts",
-  "description": "Use Cases",
+  "title": "Documentation Hosting",
+  "description": "Guidance on selecting and implementing documentation hosting tools.",
   "source": "@site/docs/guides/documentation/documentation-hosts/README.md",
   "sourceDirName": "guides/documentation/documentation-hosts",
   "slug": "/guides/documentation/documentation-hosts/",

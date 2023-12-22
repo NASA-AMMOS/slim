@@ -243,7 +243,7 @@
           },
           {
             "type": "category",
-            "label": "Documentation Hosts",
+            "label": "Documentation Hosting",
             "collapsible": true,
             "collapsed": true,
             "items": [
@@ -406,14 +406,14 @@
     },
     "guides/documentation/documentation-hosts/README": {
       "id": "guides/documentation/documentation-hosts/README",
-      "title": "Documentation Hosts",
-      "description": "Use Cases",
+      "title": "Documentation Hosting",
+      "description": "Guidance on selecting and implementing documentation hosting tools.",
       "sidebar": "guidesSidebar"
     },
     "guides/documentation/documentation-hosts/trade-study-hostingdocs-user": {
       "id": "guides/documentation/documentation-hosts/trade-study-hostingdocs-user",
       "title": "Docs Hosting Trade Study",
-      "description": "| Tool Name                                       | Licensing                                                                                             | Render Time | VCS Stored Content                                    | Self-Hosting | Managed Hosting                                                                                                     | API Actions                                                                          | Generate API Docs                                                                      | WYSIWYG Editing | Markdown Support                                                                                             | Embedded Content                                                                          | Hierarchial Structure                                             | Templating Support                                                                                | Roles                                                         | Comment Support                                                                 | Search                                                         | Import From Other Formats                                                              | Export Other Formats                                                                            | Anchor Links                                             | Draft Content                                                                        | Version Control                                                                   | Internationalization                                                                                                                         | File Uploads                                                                                                 | Diagram Editing                                                                                                           | Usage Analytics                                                 | Extension Support                                                                                                  |",
+      "description": "| Tool Name                                       | Licensing                                                                                     | Render Time | VCS Stored Content                                    | Self-Hosting | Managed Hosting                                                                                                     | API Actions                                                                          | Generate API Docs                                                                      | WYSIWYG Editing     | Markdown Support                                                                                             | Embedded Content                                                                          | Hierarchial Structure                                             | Templating Support                                                                                | Roles                                                         | Comment Support                                                                 | Search                                                                     | Import From Other Formats                                                              | Export Other Formats                                                                            | Anchor Links                                             | Draft Content                                                                        | Version Control                                                                   | Internationalization                                                                                                                         | File Uploads                                   | Diagram Editing                                                                                                           | Usage Analytics                                                                | Extension Support                                                                                                  |",
       "sidebar": "guidesSidebar"
     },
     "guides/documentation/documentation-hosts/use-cases": {

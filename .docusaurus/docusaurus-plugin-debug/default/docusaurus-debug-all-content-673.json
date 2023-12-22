@@ -254,15 +254,15 @@
                 "permalink": "/slim/docs/category/documentation"
               },
               "next": {
-                "title": "Documentation Hosts",
+                "title": "Documentation Hosting",
                 "permalink": "/slim/docs/guides/documentation/documentation-hosts/"
               }
             },
             {
               "unversionedId": "guides/documentation/documentation-hosts/README",
               "id": "guides/documentation/documentation-hosts/README",
-              "title": "Documentation Hosts",
-              "description": "Use Cases",
+              "title": "Documentation Hosting",
+              "description": "Guidance on selecting and implementing documentation hosting tools.",
               "source": "@site/docs/guides/documentation/documentation-hosts/README.md",
               "sourceDirName": "guides/documentation/documentation-hosts",
               "slug": "/guides/documentation/documentation-hosts/",
@@ -286,7 +286,7 @@
               "unversionedId": "guides/documentation/documentation-hosts/trade-study-hostingdocs-user",
               "id": "guides/documentation/documentation-hosts/trade-study-hostingdocs-user",
               "title": "Docs Hosting Trade Study",
-              "description": "| Tool Name                                       | Licensing                                                                                             | Render Time | VCS Stored Content                                    | Self-Hosting | Managed Hosting                                                                                                     | API Actions                                                                          | Generate API Docs                                                                      | WYSIWYG Editing | Markdown Support                                                                                             | Embedded Content                                                                          | Hierarchial Structure                                             | Templating Support                                                                                | Roles                                                         | Comment Support                                                                 | Search                                                         | Import From Other Formats                                                              | Export Other Formats                                                                            | Anchor Links                                             | Draft Content                                                                        | Version Control                                                                   | Internationalization                                                                                                                         | File Uploads                                                                                                 | Diagram Editing                                                                                                           | Usage Analytics                                                 | Extension Support                                                                                                  |",
+              "description": "| Tool Name                                       | Licensing                                                                                     | Render Time | VCS Stored Content                                    | Self-Hosting | Managed Hosting                                                                                                     | API Actions                                                                          | Generate API Docs                                                                      | WYSIWYG Editing     | Markdown Support                                                                                             | Embedded Content                                                                          | Hierarchial Structure                                             | Templating Support                                                                                | Roles                                                         | Comment Support                                                                 | Search                                                                     | Import From Other Formats                                                              | Export Other Formats                                                                            | Anchor Links                                             | Draft Content                                                                        | Version Control                                                                   | Internationalization                                                                                                                         | File Uploads                                   | Diagram Editing                                                                                                           | Usage Analytics                                                                | Extension Support                                                                                                  |",
               "source": "@site/docs/guides/documentation/documentation-hosts/trade-study-hostingdocs-user.md",
               "sourceDirName": "guides/documentation/documentation-hosts",
               "slug": "/guides/documentation/documentation-hosts/trade-study-hostingdocs-user",
@@ -301,7 +301,7 @@
               },
               "sidebar": "guidesSidebar",
               "previous": {
-                "title": "Documentation Hosts",
+                "title": "Documentation Hosting",
                 "permalink": "/slim/docs/guides/documentation/documentation-hosts/"
               },
               "next": {
@@ -1262,7 +1262,7 @@
                   },
                   {
                     "type": "category",
-                    "label": "Documentation Hosts",
+                    "label": "Documentation Hosting",
                     "collapsible": true,
                     "collapsed": true,
                     "items": [
