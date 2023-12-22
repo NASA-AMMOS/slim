@@ -2,7 +2,7 @@
   "unversionedId": "guides/governance/contributions/contributing-guide/README",
   "id": "guides/governance/contributions/contributing-guide/README",
   "title": "Contributing Guide",
-  "description": "A contribution guide is an important document directed at new contributors to your project - to help them in understanding what and how they may contribute. It can be used to outline expected requirements prior to contributions (i.e. acceptance of licensing terms, signing off on any developer agreements required) as well as to ensure the quality of contributions are in-line with expected project norms. If a developer asks how to contribute, please point them to this guide. This guide also itemizes essential ingredients necessary for a successful patch submission.",
+  "description": "Fast track developing a contribution guide for your new contributors.",
   "source": "@site/docs/guides/governance/contributions/contributing-guide/README.md",
   "sourceDirName": "guides/governance/contributions/contributing-guide",
   "slug": "/guides/governance/contributions/contributing-guide/",
