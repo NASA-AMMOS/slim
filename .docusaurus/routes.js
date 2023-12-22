@@ -99,7 +99,7 @@ export default [
   },
   {
     path: '/slim/docs',
-    component: ComponentCreator('/slim/docs', 'ca9'),
+    component: ComponentCreator('/slim/docs', '495'),
     routes: [
       {
         path: '/slim/docs/about/',
@@ -246,26 +246,26 @@ export default [
         sidebar: "guidesSidebar"
       },
       {
-        path: '/slim/docs/guides/governance/contributions/issue-templates/github/bug_report',
-        component: ComponentCreator('/slim/docs/guides/governance/contributions/issue-templates/github/bug_report', '4e3'),
+        path: '/slim/docs/guides/governance/contributions/issue-templates/bug-reports/bug_report',
+        component: ComponentCreator('/slim/docs/guides/governance/contributions/issue-templates/bug-reports/bug_report', 'bb6'),
         exact: true,
         sidebar: "guidesSidebar"
       },
       {
-        path: '/slim/docs/guides/governance/contributions/issue-templates/github/bug_report.yml',
-        component: ComponentCreator('/slim/docs/guides/governance/contributions/issue-templates/github/bug_report.yml', '43b'),
+        path: '/slim/docs/guides/governance/contributions/issue-templates/bug-reports/bug_report.yml',
+        component: ComponentCreator('/slim/docs/guides/governance/contributions/issue-templates/bug-reports/bug_report.yml', '51a'),
         exact: true,
         sidebar: "guidesSidebar"
       },
       {
-        path: '/slim/docs/guides/governance/contributions/issue-templates/github/new_feature',
-        component: ComponentCreator('/slim/docs/guides/governance/contributions/issue-templates/github/new_feature', 'bc8'),
+        path: '/slim/docs/guides/governance/contributions/issue-templates/features/new_feature',
+        component: ComponentCreator('/slim/docs/guides/governance/contributions/issue-templates/features/new_feature', '5b1'),
         exact: true,
         sidebar: "guidesSidebar"
       },
       {
-        path: '/slim/docs/guides/governance/contributions/issue-templates/github/new_feature.yml',
-        component: ComponentCreator('/slim/docs/guides/governance/contributions/issue-templates/github/new_feature.yml', '3a8'),
+        path: '/slim/docs/guides/governance/contributions/issue-templates/features/new_feature.yml',
+        component: ComponentCreator('/slim/docs/guides/governance/contributions/issue-templates/features/new_feature.yml', '947'),
         exact: true,
         sidebar: "guidesSidebar"
       },

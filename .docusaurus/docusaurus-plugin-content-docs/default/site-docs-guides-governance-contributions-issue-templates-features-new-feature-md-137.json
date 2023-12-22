@@ -1,0 +1,24 @@
+{
+  "unversionedId": "guides/governance/contributions/issue-templates/features/new_feature",
+  "id": "guides/governance/contributions/issue-templates/features/new_feature",
+  "title": "new_feature",
+  "description": "",
+  "source": "@site/docs/guides/governance/contributions/issue-templates/features/new_feature.md",
+  "sourceDirName": "guides/governance/contributions/issue-templates/features",
+  "slug": "/guides/governance/contributions/issue-templates/features/new_feature",
+  "permalink": "/slim/docs/guides/governance/contributions/issue-templates/features/new_feature",
+  "draft": false,
+  "editUrl": "https://github.com/nasa-ammos/slim/tree/main/docs/guides/governance/contributions/issue-templates/features/new_feature.md",
+  "tags": [],
+  "version": "current",
+  "frontMatter": {},
+  "sidebar": "guidesSidebar",
+  "previous": {
+    "title": "bug_report.yml",
+    "permalink": "/slim/docs/guides/governance/contributions/issue-templates/bug-reports/bug_report.yml"
+  },
+  "next": {
+    "title": "new_feature.yml",
+    "permalink": "/slim/docs/guides/governance/contributions/issue-templates/features/new_feature.yml"
+  }
+}

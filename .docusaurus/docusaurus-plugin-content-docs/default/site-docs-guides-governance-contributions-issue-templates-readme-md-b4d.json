@@ -2,7 +2,7 @@
   "unversionedId": "guides/governance/contributions/issue-templates/README",
   "id": "guides/governance/contributions/issue-templates/README",
   "title": "Issue Templates",
-  "description": "Issue tickets help development teams keep the language of bug, feature, and other types of issues readable and consistent. Templates appear whenever a person submits a new issue, and helps guide that person in providing the key information that gives developers context for a given issue.",
+  "description": "Make issue tracking clear and consistent with structured issue templates for your contributors.",
   "source": "@site/docs/guides/governance/contributions/issue-templates/README.md",
   "sourceDirName": "guides/governance/contributions/issue-templates",
   "slug": "/guides/governance/contributions/issue-templates/",
@@ -19,6 +19,6 @@
   },
   "next": {
     "title": "bug_report",
-    "permalink": "/slim/docs/guides/governance/contributions/issue-templates/github/bug_report"
+    "permalink": "/slim/docs/guides/governance/contributions/issue-templates/bug-reports/bug_report"
   }
 }

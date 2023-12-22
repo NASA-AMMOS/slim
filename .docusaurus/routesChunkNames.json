@@ -186,7 +186,7 @@
     },
     "content": "content---slim-markdown-page-393-660"
   },
-  "/slim/docs-ca9": {
+  "/slim/docs-495": {
     "__comp": "__comp---theme-doc-page-1-be-9be",
     "__context": {
       "plugin": "plugin---slim-docs-2-e-6-474"
@@ -289,21 +289,21 @@
     "__comp": "__comp---theme-doc-item-178-a40",
     "content": "content---slim-docs-guides-governance-contributions-issue-templates-b-4-d-dde"
   },
-  "/slim/docs/guides/governance/contributions/issue-templates/github/bug_report-4e3": {
+  "/slim/docs/guides/governance/contributions/issue-templates/bug-reports/bug_report-bb6": {
     "__comp": "__comp---theme-doc-item-178-a40",
-    "content": "content---slim-docs-guides-governance-contributions-issue-templates-github-bug-report-4-e-2-b58"
+    "content": "content---slim-docs-guides-governance-contributions-issue-templates-bug-reports-bug-reportb-76-6a9"
   },
-  "/slim/docs/guides/governance/contributions/issue-templates/github/bug_report.yml-43b": {
+  "/slim/docs/guides/governance/contributions/issue-templates/bug-reports/bug_report.yml-51a": {
     "__comp": "__comp---theme-doc-item-178-a40",
-    "content": "content---slim-docs-guides-governance-contributions-issue-templates-github-bug-report-ymlc-15-cc3"
+    "content": "content---slim-docs-guides-governance-contributions-issue-templates-bug-reports-bug-report-yml-5-a-5-acd"
   },
-  "/slim/docs/guides/governance/contributions/issue-templates/github/new_feature-bc8": {
+  "/slim/docs/guides/governance/contributions/issue-templates/features/new_feature-5b1": {
     "__comp": "__comp---theme-doc-item-178-a40",
-    "content": "content---slim-docs-guides-governance-contributions-issue-templates-github-new-featured-60-bd5"
+    "content": "content---slim-docs-guides-governance-contributions-issue-templates-features-new-feature-137-311"
   },
-  "/slim/docs/guides/governance/contributions/issue-templates/github/new_feature.yml-3a8": {
+  "/slim/docs/guides/governance/contributions/issue-templates/features/new_feature.yml-947": {
     "__comp": "__comp---theme-doc-item-178-a40",
-    "content": "content---slim-docs-guides-governance-contributions-issue-templates-github-new-feature-yml-9-d-5-de7"
+    "content": "content---slim-docs-guides-governance-contributions-issue-templates-features-new-feature-ymlda-2-8ee"
   },
   "/slim/docs/guides/governance/contributions/pull-requests/-01d": {
     "__comp": "__comp---theme-doc-item-178-a40",

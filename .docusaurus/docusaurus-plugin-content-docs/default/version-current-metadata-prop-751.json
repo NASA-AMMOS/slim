@@ -152,33 +152,41 @@
                 "items": [
                   {
                     "type": "category",
-                    "label": "github",
+                    "label": "Bug Reports",
                     "collapsible": true,
                     "collapsed": true,
                     "items": [
                       {
                         "type": "link",
                         "label": "bug_report",
-                        "href": "/slim/docs/guides/governance/contributions/issue-templates/github/bug_report",
-                        "docId": "guides/governance/contributions/issue-templates/github/bug_report"
+                        "href": "/slim/docs/guides/governance/contributions/issue-templates/bug-reports/bug_report",
+                        "docId": "guides/governance/contributions/issue-templates/bug-reports/bug_report"
                       },
                       {
                         "type": "link",
                         "label": "bug_report.yml",
-                        "href": "/slim/docs/guides/governance/contributions/issue-templates/github/bug_report.yml",
-                        "docId": "guides/governance/contributions/issue-templates/github/bug_report.yml"
-                      },
+                        "href": "/slim/docs/guides/governance/contributions/issue-templates/bug-reports/bug_report.yml",
+                        "docId": "guides/governance/contributions/issue-templates/bug-reports/bug_report.yml"
+                      }
+                    ]
+                  },
+                  {
+                    "type": "category",
+                    "label": "New Features",
+                    "collapsible": true,
+                    "collapsed": true,
+                    "items": [
                       {
                         "type": "link",
                         "label": "new_feature",
-                        "href": "/slim/docs/guides/governance/contributions/issue-templates/github/new_feature",
-                        "docId": "guides/governance/contributions/issue-templates/github/new_feature"
+                        "href": "/slim/docs/guides/governance/contributions/issue-templates/features/new_feature",
+                        "docId": "guides/governance/contributions/issue-templates/features/new_feature"
                       },
                       {
                         "type": "link",
                         "label": "new_feature.yml",
-                        "href": "/slim/docs/guides/governance/contributions/issue-templates/github/new_feature.yml",
-                        "docId": "guides/governance/contributions/issue-templates/github/new_feature.yml"
+                        "href": "/slim/docs/guides/governance/contributions/issue-templates/features/new_feature.yml",
+                        "docId": "guides/governance/contributions/issue-templates/features/new_feature.yml"
                       }
                     ]
                   }
@@ -450,26 +458,26 @@
       "description": "This GitHub Action provides an automated check for ensuring developers have a \"signed-off\" commit when contributing to a given GitHub repository.",
       "sidebar": "guidesSidebar"
     },
-    "guides/governance/contributions/issue-templates/github/bug_report": {
-      "id": "guides/governance/contributions/issue-templates/github/bug_report",
+    "guides/governance/contributions/issue-templates/bug-reports/bug_report": {
+      "id": "guides/governance/contributions/issue-templates/bug-reports/bug_report",
       "title": "bug_report",
       "description": "",
       "sidebar": "guidesSidebar"
     },
-    "guides/governance/contributions/issue-templates/github/bug_report.yml": {
-      "id": "guides/governance/contributions/issue-templates/github/bug_report.yml",
+    "guides/governance/contributions/issue-templates/bug-reports/bug_report.yml": {
+      "id": "guides/governance/contributions/issue-templates/bug-reports/bug_report.yml",
       "title": "bug_report.yml",
       "description": "",
       "sidebar": "guidesSidebar"
     },
-    "guides/governance/contributions/issue-templates/github/new_feature": {
-      "id": "guides/governance/contributions/issue-templates/github/new_feature",
+    "guides/governance/contributions/issue-templates/features/new_feature": {
+      "id": "guides/governance/contributions/issue-templates/features/new_feature",
       "title": "new_feature",
       "description": "",
       "sidebar": "guidesSidebar"
     },
-    "guides/governance/contributions/issue-templates/github/new_feature.yml": {
-      "id": "guides/governance/contributions/issue-templates/github/new_feature.yml",
+    "guides/governance/contributions/issue-templates/features/new_feature.yml": {
+      "id": "guides/governance/contributions/issue-templates/features/new_feature.yml",
       "title": "new_feature.yml",
       "description": "",
       "sidebar": "guidesSidebar"
@@ -477,7 +485,7 @@
     "guides/governance/contributions/issue-templates/README": {
       "id": "guides/governance/contributions/issue-templates/README",
       "title": "Issue Templates",
-      "description": "Issue tickets help development teams keep the language of bug, feature, and other types of issues readable and consistent. Templates appear whenever a person submits a new issue, and helps guide that person in providing the key information that gives developers context for a given issue.",
+      "description": "Make issue tracking clear and consistent with structured issue templates for your contributors.",
       "sidebar": "guidesSidebar"
     },
     "guides/governance/contributions/pull-requests/PULL_REQUEST_TEMPLATE": {

@@ -106,23 +106,23 @@
               "sidebar": "guidesSidebar"
             },
             {
-              "id": "guides/governance/contributions/issue-templates/github/bug_report",
-              "path": "/slim/docs/guides/governance/contributions/issue-templates/github/bug_report",
+              "id": "guides/governance/contributions/issue-templates/bug-reports/bug_report",
+              "path": "/slim/docs/guides/governance/contributions/issue-templates/bug-reports/bug_report",
               "sidebar": "guidesSidebar"
             },
             {
-              "id": "guides/governance/contributions/issue-templates/github/bug_report.yml",
-              "path": "/slim/docs/guides/governance/contributions/issue-templates/github/bug_report.yml",
+              "id": "guides/governance/contributions/issue-templates/bug-reports/bug_report.yml",
+              "path": "/slim/docs/guides/governance/contributions/issue-templates/bug-reports/bug_report.yml",
               "sidebar": "guidesSidebar"
             },
             {
-              "id": "guides/governance/contributions/issue-templates/github/new_feature",
-              "path": "/slim/docs/guides/governance/contributions/issue-templates/github/new_feature",
+              "id": "guides/governance/contributions/issue-templates/features/new_feature",
+              "path": "/slim/docs/guides/governance/contributions/issue-templates/features/new_feature",
               "sidebar": "guidesSidebar"
             },
             {
-              "id": "guides/governance/contributions/issue-templates/github/new_feature.yml",
-              "path": "/slim/docs/guides/governance/contributions/issue-templates/github/new_feature.yml",
+              "id": "guides/governance/contributions/issue-templates/features/new_feature.yml",
+              "path": "/slim/docs/guides/governance/contributions/issue-templates/features/new_feature.yml",
               "sidebar": "guidesSidebar"
             },
             {
