@@ -143,14 +143,16 @@ const config = {
         darkTheme: darkCodeTheme,
       },
       colorMode: {
-        disableSwitch: true
+        disableSwitch: false,
+        defaultMode: 'dark',
+        respectPrefersColorScheme: false
       },
     }),
 
     markdown: {
       mermaid: true,
     },
-    themes: ['@docusaurus/theme-mermaid'],
+    themes: ['@docusaurus/theme-mermaid']
 };
 
 module.exports = config;

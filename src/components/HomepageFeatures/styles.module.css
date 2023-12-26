@@ -1,9 +1,13 @@
 .features {
   display: flex;
   align-items: center;
-  padding: 5rem 0;
+  padding: 1rem 0;
   width: 100%;
 }
+/* [data-theme='dark'] .features {
+  background-color: #aeaeae !important;
+  color: #000 !important;
+} */
 
 .featureSvg {
   height: 200px;
