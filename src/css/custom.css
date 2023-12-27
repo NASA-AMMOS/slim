@@ -47,15 +47,15 @@ body {
 }
 
 [data-theme='dark'] .card {
-  background-color: #6b6b6b !important;
+  background-color: #3b3b3b !important;
   color: #FFF;
 }
 [data-theme='dark'] .list-group-item {
-  background-color: #6b6b6b !important;
+  background-color: #3b3b3b !important;
   color: #FFF;
 }
 [data-theme='dark'] .navbar {
-  background-color: #6b6b6b !important;
+  background-color: #1c1c1c !important;
   color: #FFF;
 }
 [data-theme='dark'] .dropdown-item {
@@ -101,11 +101,13 @@ h6 {
 }
 
 p {
+  font-family: 'IBM Plex Sans', sans-serif;
   font-size: 1rem; /* Standard size for body text */
   margin-bottom: 15px; /* Spacing after paragraphs */
 }
 
 a {
+  font-family: 'IBM Plex Sans', sans-serif;
   text-decoration: none !important; /* No underline for a clean look */
 }
 [data-theme='dark'] a {
