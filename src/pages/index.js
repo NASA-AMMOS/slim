@@ -12,9 +12,8 @@ function HomepageHeader() {
   return (
     <header className={clsx('hero hero--info', styles.heroBanner)}>
       <div className="container">
-        <img src="img/logo.svg" height="200"/>
-        <p className="hero__subtitle">{siteConfig.tagline}</p>
-        <p>A shared resource for discussing, iterating and referencing best practices in software lifecycle process improvements.</p>
+        <img src="img/logo.svg" height="275"/>
+        <p style={{ padding: '15px' }}>A community-resource for exchanging and implementing best practices in software lifecycle improvements.</p>
         <div style={{ display: 'flex', justifyContent: 'center' }}>
           <div className={styles.buttonWrapper}>
             <Link className="button button--primary button--lg" to="/docs/guides/search">
