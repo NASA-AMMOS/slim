@@ -8,7 +8,7 @@ const darkCodeTheme = require('prism-react-renderer/themes/dracula');
 const config = {
   title: 'SLIM',
   tagline: 'Software Lifecycle Improvement & Modernization (SLIM)',
-  favicon: 'img/slim-favicon.ico',
+  favicon: '/img/favicon.ico',
 
 
   // Set the production url of your site here
