@@ -4,18 +4,8 @@
  * work well for content-centric websites.
  */
 
-/* You can override the default Infima variables here. */
-[data-theme='dark'] {
-  --ifm-color-primary: #383cff;
-  --ifm-color-primary-dark: #1215b8;
-  --ifm-color-primary-darker: #090b91;
-  --ifm-color-primary-darkest: #000294;
-  --ifm-color-primary-light: #383cff;
-  --ifm-color-primary-lighter: #1215b8;
-  --ifm-color-primary-lightest: #090b91;
-  --ifm-code-font-size: 95%;
-  --docusaurus-highlighted-code-line-bg: rgba(0, 0, 0, 0.1);
-}
+/* Importing Fluent System Fonts */
+@import url('https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:wght@400;500;600&family=IBM+Plex+Serif:wght@400;500;600&display=swap');
 
 /* For readability concerns, you should choose a lighter palette in dark mode. */
 [data-theme='dark'] {
@@ -27,4 +17,195 @@
   --ifm-color-primary-lighter: #32d8b4;
   --ifm-color-primary-lightest: #4fddbf;
   --docusaurus-highlighted-code-line-bg: rgba(0, 0, 0, 0.3);
+}
+
+[data-theme='dark'] {
+  --ifm-background-color: #1e2125 !important; /* Set a global background color */
+  --ifm-hero-background-color: var(--ifm-background-color);
+}
+
+[data-theme='dark'] body,
+[data-theme='dark'] .main-wrapper,
+[data-theme='dark'] .container {
+  background-color: var(--ifm-background-color) !important;
+}
+
+[data-theme='dark'] footer {
+  background-color: unset;
+}
+
+
+
+body {
+  font-family: 'IBM Plex Sans', sans-serif; /* Fluent's primary font */
+  color: #333 !important; /* Fluent color for text, ensuring readability */
+  line-height: 1.6; /* Adequate line height for readability */
+}
+[data-theme='dark'] body {
+  color: #ffffff !important;
+  /* background-color: #1e2125 !important; */
+}
+
+[data-theme='dark'] .card {
+  background-color: #3b3b3b !important;
+  color: #FFF;
+}
+[data-theme='dark'] .list-group-item {
+  background-color: #3b3b3b !important;
+  color: #FFF;
+}
+[data-theme='dark'] .navbar {
+  background-color: #1c1c1c !important;
+  color: #FFF;
+}
+[data-theme='dark'] .dropdown-item {
+  color: unset;
+}
+
+.footer .col {
+  text-align: center;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: 'IBM Plex Sans', sans-serif;
+  color: #000; /* Slightly darker color for headers */
+  margin-top: 20px; /* Spacing above headers */
+  margin-bottom: 10px; /* Spacing below headers */
+}
+
+h1 {
+  font-size: 2.5rem; /* Size for main headers */
+  font-weight: 700; /* Bold weight for prominence */
+}
+
+h2 {
+  font-size: 2rem;
+  font-weight: 600; /* Slightly less bold than h1 */
+}
+
+h3 {
+  font-size: 1.75rem;
+  font-weight: 600;
+}
+
+h4 {
+  font-size: 1.5rem;
+  font-weight: 600;
+}
+
+/* Adjusting font sizes for smaller headers */
+h5 {
+  font-size: 1.25rem;
+  font-weight: 600;
+}
+
+h6 {
+  font-size: 1rem;
+  font-weight: 600;
+}
+
+p {
+  font-family: 'IBM Plex Sans', sans-serif;
+  font-size: 1rem; /* Standard size for body text */
+  margin-bottom: 15px; /* Spacing after paragraphs */
+}
+
+a {
+  font-family: 'IBM Plex Sans', sans-serif;
+  text-decoration: none !important; /* No underline for a clean look */
+}
+[data-theme='dark'] a {
+  color: #a8fae8;
+}
+
+a:hover {
+  text-decoration: none !important; /* Underline on hover for interactivity */
+}
+
+/* Fluent button styles */
+.button--primary {
+  background-color: #0078d4; /* Primary color */
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 4px; /* Fluent corner rounding */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Depth */
+}
+[data-theme='dark'] .button--primary {
+  background-color: var(--ifm-color-primary-dark);
+  color: white;
+}
+.btn-primary {
+  background-color: #0078d4; /* Primary color */
+  color: white;
+  border: none !important;
+  padding: 10px 20px;
+  border-radius: 4px; /* Fluent corner rounding */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Depth */
+}
+[data-theme='dark'] .btn-primary {
+  background-color: var(--ifm-color-primary-dark);
+  color: white;
+}
+
+.button--primary:hover {
+  background-color: #005a9e; /* Darker shade on hover */
+}
+[data-theme='dark'] .button--primary:hover {
+  background-color: var(--ifm-color-primary-lightest);
+}
+
+.btn-primary:hover {
+  background-color: #005a9e; /* Darker shade on hover */
+}
+[data-theme='dark'] .btn-primary:hover {
+  background-color: var(--ifm-color-primary-lightest);
+}
+
+.btn-primary:active {
+  background-color: #005a9e; /* Darker shade on hover */
+}
+[data-theme='dark'] .btn-primary:active {
+  background-color: var(--ifm-color-primary-lightest) !important;
+}
+[data-theme='dark'] .btn-primary:focus {
+  background-color: var(--ifm-color-primary-lightest) !important;
+}
+[data-theme='dark'] .btn-primary:visited {
+  background-color: var(--ifm-color-primary-lightest) !important;
+}
+
+.button--secondary {
+  background-color: #ffffff;
+  color: #0078d4;
+  border: 2px solid #0078d4;
+  padding: 8px 18px;
+  border-radius: 4px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+[data-theme='dark'] .button--secondary {
+  border: 2px solid #fff;
+}
+
+.btn-secondary {
+  background-color: #ffffff;
+  color: #0078d4;
+  border: 2px solid #0078d4;
+  padding: 8px 18px;
+  border-radius: 4px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+[data-theme='dark'] .btn-secondary {
+  border: 2px solid #fff;
+}
+
+.button--secondary:hover {
+  background-color: #f3f2f1; /* Light gray background on hover */
+}
+
+.navbar__logo {
+  margin: 5px 20px 5px 10px;
+}
+[data-theme='dark'] .navbar__logo {
+  content: url('/static/img/nasa-jpl-dark.png')
 }

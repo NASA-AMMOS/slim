@@ -8,7 +8,7 @@ const darkCodeTheme = require('prism-react-renderer/themes/dracula');
 const config = {
   title: 'SLIM',
   tagline: 'Software Lifecycle Improvement & Modernization (SLIM)',
-  favicon: 'img/slim-favicon.ico',
+  favicon: '/img/favicon.ico',
 
 
   // Set the production url of your site here
@@ -143,14 +143,16 @@ const config = {
         darkTheme: darkCodeTheme,
       },
       colorMode: {
-        disableSwitch: true
+        disableSwitch: false,
+        defaultMode: 'dark',
+        respectPrefersColorScheme: false
       },
     }),
 
     markdown: {
       mermaid: true,
     },
-    themes: ['@docusaurus/theme-mermaid'],
+    themes: ['@docusaurus/theme-mermaid']
 };
 
 module.exports = config;
