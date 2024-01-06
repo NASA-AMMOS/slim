@@ -8,9 +8,8 @@
         "governance",
         "templates",
         "repository-setup",
-        "project-template"
-      ],
-      "last-updated": "2022-05-12"
+        "github"
+      ]
     },
     { 
       "title": "Secrets Detection", 
@@ -20,9 +19,9 @@
       "tags": [
         "software-lifecycle",
         "security",
-        "continuous-testing"
-      ],
-      "last-updated": "2023-06-09" 
+        "testing",
+        "tools"
+      ]
     },
     { 
       "title": "README.md",
@@ -32,9 +31,9 @@
       "tags": [
         "documentation",
         "repository-setup",
-        "project-template"
-      ],
-      "last-updated": "2023-04-27"
+        "templates",
+        "github"
+      ]
     },
     { 
       "title": "Issue Ticket Templates",
@@ -44,9 +43,9 @@
       "tags": [
         "documentation",
         "templates",
-        "repository-setup"
-      ],
-      "last-updated": "2022-04-12"
+        "repository-setup",
+        "github"
+      ]
     },
     {
       "title": "Change Log",
@@ -55,12 +54,11 @@
       "description": "A guide on creating and maintaining a human-readable change log for software development projects, emphasizing the importance of a `CHANGELOG.md` file.",
       "tags": [
         "documentation",
-        "changelog",
-        "software-release",
-        "software-versioning",
-        "repository-setup"
-      ],
-      "last-updated": "2023-04-27"
+        "versioning",
+        "templates",
+        "repository-setup",
+        "github"
+      ]
     },
     {
       "title": "Documentation Hosts",
@@ -69,26 +67,21 @@
       "description": "A guide on possible use cases and recommended tools for hosting various types of documentation with a call for contributions.",
       "tags": [
         "documentation",
-        "use-cases",
         "trade-studies",
-        "doc-hosting",
-        "contributions"
-      ],
-      "last-updated": "2022-03-10"
+        "tools"
+      ]
     },
     {
-      "title": "Change Request Templates",
+      "title": "Pull Requests",
       "uri": "/slim/docs/guides/governance/contributions/change-request-templates",
       "category": "governance",
       "description": "A guide outlining how to implement a pre-filled pull request template to provide guidance to potential contributors on GitHub.",
       "tags": [
-        "contribution",
-        "pull-request",
         "github",
-        "template",
-        "governance"
-      ],
-      "last-updated": "2022-04-11"
+        "templates",
+        "governance",
+        "repository-setup"
+      ]
     },
     {
       "title": "Code of Conduct",
@@ -96,14 +89,11 @@
       "category": "governance",
       "description": "A guide on how to create and implement a code of conduct for project teams, with a specific recommendation to use the Contributor Covenant.",
       "tags": [
-        "community",
-        "code-of-conduct",
-        "contributor-covenant",
-        "project-management",
-        "team-interactions",
-        "governance"
-      ],
-      "last-updated": "2022-03-22"
+        "governance",
+        "repository-setup",
+        "github",
+        "templates"
+      ]
     },
     {
       "title": "Contributing Guide",
@@ -111,14 +101,12 @@
       "category": "governance",
       "description": "A detailed guide about creating a contributing guide for your project, featuring a customizable template and instructions on how to use it.",
       "tags": [
-        "contribution",
-        "guide",
-        "template",
-        "project-management",
-        "documentation",
-        "governance"
-      ],
-      "last-updated": "2022-03-31"
+        "templates",
+        "governance",
+        "repository-setup",
+        "github",
+        "templates"
+      ]
     },
     {
       "title": "Python Starter Kit",
@@ -127,16 +115,11 @@
       "description": "A guide to a complete, deployment-ready Python 3 application that's bundled into a reusable template repository for quick implementation, with integrated build, release, and publish on GitHub.",
       "tags": [
         "python",
-        "template",
+        "templates",
         "repository-setup",
         "continuous-integration",
-        "github",
-        "docker",
-        "gitHub-actions",
-        "pypi",
-        "automation"
-      ],
-      "last-updated": "2023-02-02"
+        "github"
+      ]
     },
     {
       "title": "Continuous Integration Frameworks",
@@ -144,12 +127,10 @@
       "category": "software lifecycle",
       "description": "An overview of different continuous integration frameworks and their use cases.",
       "tags": [
-        "development",
+        "tools",
         "continuous-integration",
-        "frameworks",
-        "use-cases"
-      ],
-      "last-updated": "2022-04-20"
+        "trade-studies"
+      ]
     },
     {
       "title": "Reference Architectures",
@@ -158,15 +139,10 @@
       "description": "A high-level reference guide for the implementation of continuous integration best practices, detailing structure, component interrelationships, and processes.",
       "tags": [
         "continuous-integration",
-        "development-pipeline",
-        "software-testing",
-        "automation",
-        "deployment",
-        "repository",
-        "versioning-systems",
+        "testing",
+        "versioning",
         "devops"
-      ],
-      "last-updated": "2022-08-17"
+      ]
     },
     {
       "title": "Continuous Testing",
@@ -174,14 +150,20 @@
       "category": "software lifecycle",
       "description": "An extensive list of resources and tools for continuous testing including module testing, service endpoint testing, performance testing, and mobile testing among others.",
       "tags": [
-        "continuous-testing",
-        "performance-testing",
-        "code-analysis"
-      ],
-      "last-updated": "2022-04-20"
+        "testing",
+        "tools"
+      ]
+    },
+    { 
+      "title": "GitHub Security Best Practices", 
+      "uri": "/slim/docs/guides/software-lifecycle/security/github-security", 
+      "category": "software lifecycle",
+      "description": "Recommendations for enabling GitHub security features for repositories, including using GitHub native tools like CodeQL, code scanning and more.",
+      "tags": [
+        "software-lifecycle",
+        "security",
+        "testing",
+        "tools"
+      ]
     }
-    
-    
-    
 ]
-  
