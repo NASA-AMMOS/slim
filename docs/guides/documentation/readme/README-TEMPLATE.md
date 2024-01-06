@@ -1,3 +1,8 @@
+---
+title: README Template
+sidebar_label: README Template
+---
+
 ```markdown
 <!-- Header block for project -->
 <hr>
