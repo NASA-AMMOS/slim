@@ -9,13 +9,7 @@ import 'bootstrap/dist/css/bootstrap.min.css';
 
 # Guides
 
-Welcome to our best practice guide resources! 
-
-Here's how to get started using our resources:
-- Use the below section links or left-navigation sidebar to explore our best practice guides
-- Use the faceted search below to find exactly the type of best practice you're looking for
-
-## Sections
+Explore our guides via the categories below or the left-hand navigation. You may also search our guides.
 
 <div style={{ display: 'flex', justifyContent: 'space-between', margin: '20px' }}>
   <Card style={{ width: '18rem' }}>
@@ -48,7 +42,6 @@ Here's how to get started using our resources:
     </Card.Body>
   </Card>
 </div>
-
 
 <hr/><br/>
 
