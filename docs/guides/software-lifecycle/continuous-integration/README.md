@@ -4,12 +4,12 @@
 
 ## Introduction
 
-**Background**: Continuous Integration (CI) is a critical component of modern software development. This guide introduces a comprehensive approach to CI, covering analysis and testing to orchestration and release management. We focus on using a variety of tools like Git hooks, GitHub Actions, Jenkins, and more to create a robust CI pipeline. By following this guide and combining these tools, developers can automate their build and testing processes, ensuring that their software is always ready for deployment.
+**Background**: Continuous Integration (CI) is a critical practice in modern software development. This guide introduces a comprehensive approach to CI from analysis and testing to orchestration and release management. We focus on using a variety of tools like Git hooks, GitHub Actions, Jenkins and more to create a robust CI pipeline. By following this guide and combining these tools, developers can automate their build and testing processes, ensuring software is always ready for deployment.
 
 **Use Cases**:
-- Automating software build and testing processes.
+- Automating software integration, build and testing.
 - Streamlining software release and deployment.
-- Ensuring software quality and reliability through regular integration and testing.
+- Ensuring software quality and reliability through repeatable engineering processes.
 
 ---
 
@@ -24,28 +24,28 @@
 
 **[📔 CI Tools and Frameworks](continuous-integration-frameworks.md)**
 
-Click the link above to explore various tools and practices for setting up and optimizing your CI pipeline.
+Click the link above to explore various tools and systems for setting up and optimizing your CI pipeline.
 
 **[📔 CI Reference Architectures](reference-architecture.md)**
 
-Click the link above to understand a sample, overall architectural reference for continuous integration.
+Click the link above to explore the overall sample architecture for a continuous integration system.
 
 ---
 
 ## Step-by-Step Guide
 
 1. **Explore CI Tools and Frameworks**:
-   - Start with the [CI Tools and Frameworks](continuous-integration-frameworks.md) guide to understand a wide array of CI tools.
-   - Review different categories like Analysis and Testing, Credentialing, and Execution and Reporting Tests.
-   - Based on your use case, select appropriate tools, e.g. Git hooks, GitHub Actions, Jenkins, Maven plugins, or SetupTools that fit into various aspects of your CI use case.
+   - Start with the [CI Tools and Frameworks](continuous-integration-frameworks.md) guide to explore a range of task-focused CI tools.
+   - Review different categories, such as Analysis and Testing, Credentialing, and Execution and Reporting Tests.
+   - Based on your use case, select appropriate tools, e.g. Git hooks, GitHub Actions, Jenkins, Maven plugins or SetupTools, that are are designed for the software and technologies used in your  product.
 
 2. **Understand the Reference Architecture**:
    - Dive into the [CI Reference Architectures](reference-architecture.md) for an overview of the CI process and its components.
-   - Understand the core concept of the CI pipeline, which involves systems like Development System, Continuous Integration System, and Continuous Deployment System.
-   - Learn about the discrete process steps in a CI pipeline, such as Compile, Test, Package, and Publish, and how they contribute to building and releasing software.
+   - Understand the core concepts of the CI pipeline, which involves Developer systems, Continuous Integration services, Continuous Deployment platforms and other touchpoints.
+   - Learn about the discrete process steps in a CI pipeline, such as Compile, Test, Package, Publish and Deploy, and how they contribute to building and releasing software.
 
 3. **Combine Reference Architecture with Selected Tools**:
-   - With the understanding of CI tools from **Step 1** and the architectural insights from **Step 2**, begin mapping tools to specific roles in your CI pipeline.
+   - With the understanding of CI tools from **Step 1**, and the architectural insights from **Step 2**, begin mapping tools to specific roles in your CI pipeline.
    - For example:
      - Use Git hooks for code check-ins and GitHub Actions for automated build and testing processes. 
      - Utilize Jenkins or GitHub Actions for more complex workflows, like orchestrating builds across different environments or managing deployment strategies.
@@ -60,8 +60,14 @@ Click the link above to understand a sample, overall architectural reference for
 ## Frequently Asked Questions (FAQ)
 
 - Q: How do I choose the right CI tools for my project?
-- A: Consider your project’s language, complexity, and the specific needs of your deployment environment. Research and compare tools to find the best fit for your workflow.
+- A: Consider your project’s language, complexity and the specific needs of your deployment environment. Research and compare tools to find the best fit for your workflow.
 
+- Q: What is the difference between Continuous Integration, Continuous Deployment and Continuous Delivery?
+- A: These related concepts apply to different target stages of a comprehensive CI/CD process, but their definitions are often conflated. Each one of these stages determines the endpoint as builds progress in a given automation process.
+   - _Continuous Integration_ (code compiles) tests whether code when merged from different developer systems can be compiled together on a control system, e.g. the CI server.
+   - _Continuous Deployment_ (packages published) is the publishing of successfully compiled and packaged binaries to an artifact repository and/or local test servers.
+   - _Continuous Delivery_ (packages released) extends deployment by pushing packaged binaries immediately to production services upon successful build, test and publishing.
+  
 ---
 
 ## Credits 
