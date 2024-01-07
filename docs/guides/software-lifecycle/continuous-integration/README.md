@@ -42,7 +42,7 @@ Click the link above to explore the overall sample architecture for a continuous
 2. **Understand the Reference Architecture**:
    - Dive into the [CI Reference Architectures](reference-architecture.md) for an overview of the CI process and its components.
    - Understand the core concepts of the CI pipeline, which involves Developer systems, Continuous Integration services, Continuous Deployment platforms and other touchpoints.
-   - Learn about the discrete process steps in a CI pipeline, such as Compile, Test, Package, Publish and Deploy, and how they contribute to building and releasing software.
+   - Learn about the discrete process steps in a CI pipeline, such as Compile, Test, Package, Publish and Deploy (i.e. release or deliver), and how they contribute to building and releasing software.
 
 3. **Combine Reference Architecture with Selected Tools**:
    - With the understanding of CI tools from **Step 1**, and the architectural insights from **Step 2**, begin mapping tools to specific roles in your CI pipeline.
