@@ -1,4 +1,4 @@
-# Reference Architectures
+# CI Reference Architectures
 
 ## Overview
 Architectures presented here provides a high-level reference guide for the implementation of continuous integration 
