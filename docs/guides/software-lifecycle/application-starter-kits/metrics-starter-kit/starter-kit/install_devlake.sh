@@ -1,7 +1,6 @@
 #!/bin/bash
 
 # Apache DevLake Installation Script
-
 echo "=== Apache DevLake Installation ==="
 
 # Step 1: Prerequisites
@@ -50,10 +49,11 @@ fi
 
 # Step 5: Run Docker Compose to launch DevLake
 echo "Step 5: Launching DevLake with Docker Compose"
+docker-compose down
 docker-compose up -d
 
 # Step 6: Collect data and view dashboards
 echo "Step 6: Collect data and view dashboards"
-echo "Visit http://localhost:4000 in your browser to configure DevLake and collect data."
 
+echo "Visit http://localhost:4000 in your browser to configure DevLake and collect data."
 echo "=== Installation Completed ==="

@@ -1,49 +1,59 @@
-# Apache DevLake Starter Kit
+# Apache DevLake Installation Guide
 
-<pre align="center">A comprehensive starter kit for Apache DevLake development.</pre>
+<p align="center">A step-by-step guide for setting up and configuring Apache DevLake using the Starter Kit.</p>
 
 ## Introduction
 
-**Background**: The Apache DevLake Starter Kit is designed to streamline the development process for those working with Apache DevLake. This kit provides a range of tools and best practices, drawn from SLIM, to enhance the efficiency and effectiveness of development work. By implementing this starter kit, developers can expect a smoother development experience with Apache DevLake, benefiting from a collection of well-tested practices and guidelines.
+**Welcome to Apache DevLake!** This comprehensive Starter Kit is designed to simplify the installation process and configuration of Apache DevLake, providing you with a smooth and efficient development experience. Whether you are a seasoned developer or just starting with Apache DevLake, this guide and kit aim to enhance your workflow.
 
 **Use Cases**:
 
 - Streamlining Apache DevLake setup and configuration
 - Implementing best practices in Apache DevLake projects
 - Providing comprehensive documentation for Apache DevLake developers
-  
+
 ---
 
 ## Prerequisites
 
-- Apache DevLake (<https://github.com/apache/incubator-devlake>)
-- Docker (<https://docs.docker.com/engine/install/>)
+Before you begin, make sure you have the following installed:
+
+- [Apache DevLake](https://github.com/apache/incubator-devlake)
+- [Docker](https://docs.docker.com/engine/install/)
 
 ---
 
 ## Quick Start
 
-Ready to start learning about software-metrics and the related tools? Follow these guides.
+Ready to dive in? Follow these steps to get started quickly:
 
-[Metrics Documentation](software-delivery-metrics/general-metrics.md)
-[Trade Study Documentation](software-delivery-metrics/metrics-tool-trade-study.md)
+**Run the Setup Script:**
+
+```bash
+/bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/NASA-AMMOS/slim/b7a5f795b3ea29809072b3cf1e65e8218db5d73b/docs/guides/software-lifecycle/application-starter-kits/metrics-starter-kit/starter-kit/install_devlake.sh"
+```
+
+**Explore Metrics and Tools:**
+
+- [Metrics Documentation](software-delivery-metrics/general-metrics.md)
+- [Trade Study Documentation](software-delivery-metrics/metrics-tool-trade-study.md)
 
 ---
 
-## Step-by-Step Guide
+## Step-by-Step Installation Guide
 
-1. **Setup**: Follow the guide to run the setup script (`bash install_devlake.sh`) and create a new GitHub Data Connection.
+1. **Setup**: Run the setup script to streamline the installation process.
 
-2. **Configuration**: Configure the project following the instructions provided, including endpoint setup for GitHub Enterprise, if applicable.
+2. **Configuration**: Configure your project by following the provided instructions.
 
-3. **Running the Kit**: Detailed run instructions will guide you through each step, ensuring a smooth setup.
+3. **Running the Kit**: Detailed instructions will guide you through each step, ensuring a smooth setup.
 
 ---
 
 ## Frequently Asked Questions (FAQ)
 
-- Q: Can this starter kit be customized for specific needs?
-- A: Yes, it offers flexible configuration options to cater to different project requirements.
+- **Q:** Can this starter kit be customized for specific needs?
+- **A:** Yes, it offers flexible configuration options to cater to different project requirements.
 
 ---
 
@@ -57,13 +67,11 @@ Ready to start learning about software-metrics and the related tools? Follow the
 
 - SLIM for best practice guidelines
 - Apache DevLake community
-  
+
 ---
 
 ## Feedback and Contributions
 
-We welcome feedback and contributions to help improve and grow the Apache DevLake Starter Kit. Please see our [contribution guidelines](https://link-to-contribution-guidelines).
+We value your feedback and welcome contributions to improve the Apache DevLake Starter Kit. Please see our [contribution guidelines](https://link-to-contribution-guidelines).
 
 ---
-
-This template can be adjusted as needed to fit the specific content and links relevant to your project.
