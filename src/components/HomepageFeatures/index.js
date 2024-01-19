@@ -8,7 +8,7 @@ const FeatureList = [
     Svg: require('@site/static/img/scope.svg').default,
     description: (
       <>
-        We <a href="docs/about#focus">focus on best practices</a> related to software project governance, documentation, and development life-cycles.
+        We <a href="docs/about#our-focus">focus on best practices</a> related to software project governance, documentation, and development life-cycles.
       </>
     ),
   },
