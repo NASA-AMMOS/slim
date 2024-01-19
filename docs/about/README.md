@@ -10,25 +10,29 @@ sidebar_position: 1
 
 Software Lifecycle Improvement & Modernization (SLIM) is a project focused on collecting, developing, and disseminating best practices and process improvement strategies in NASA multi-mission software development lifecycle ecosystems. SLIM represents both a community of contributors as well as a continually evolving repository for best practices documentation.
 
-## Scope
+## Our Focus
 
 There are three key areas within the software development lifecycle improvement space that SLIM focuses on providing best practice guidance for:
 
 ![SLIM-scope](/img/scope.png)
 
-## Process
+## Our Process
+
+### Community Outreach 
 
 We reach out to community member projects, and solicit input on outstanding process improvement needs, including the respective needs' relative ranking in importance / criticality. A few needs are chosen to focus active contributor time upon - seeking to develop best practice guides, including items such as use case lists, trade-studies, reference architectures and starter kits. 
 
 ![SLIM-community-process](/img/community-process.png)
 
-Once prioritized needs are identified, contributors go through a series of steps to create best practice guides for the community. 
+### Standards-as-Code
 
-![SLIM-dev-process](/img/dev-process.png)
+We use a technique we like to call "standards-as-code", which basically means that we develop best practices that are _patchable_ to existing or new community member project codebases or are _deployable_ to their infrastructure. Therefore, we target providing best practices in a way that is most easily can be infused into existing projects. This way, we are actually able to scale out our best practice dissemination widely to many projects at once. 
+
+![SLIM-dev-process](/img/standards-as-code.png)
 
 More information on our development process for best practice guides can be found in our [Contributing Guide](docs/contribute/contributing/development-process).
 
-## Community Members
+## Our Community Members
 
 What does it mean to be a community member of SLIM? The following ideas apply to member projects:
 - Has a representative (a point-of-contact) who interfaces with the SLIM effort
@@ -55,7 +59,7 @@ The following list of projects are currently SLIM member projects:
         </li>
 </ul>
 
-## Get Involved
+## How To Get Involved
 
 SLIM best practice guides and recommendations are open source, which means you have the freedom to use our work (in accordance with our [LICENSE](https://nasa-ammos.github.io/slim/LICENSE)) as well as contribute and help shape our future work. We're excited to welcome new contributors and users.
 
