@@ -29,8 +29,10 @@ Ready to dive in? Follow these steps to get started quickly:
 
 **Run the Setup Script:**
 
+-- TODO -- Add proper link to script without commit hash
+
 ```bash
-/bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/NASA-AMMOS/slim/b7a5f795b3ea29809072b3cf1e65e8218db5d73b/docs/guides/software-lifecycle/application-starter-kits/metrics-starter-kit/starter-kit/install_devlake.sh"
+/bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/NASA-AMMOS/slim/b7a5f795b3ea29809072b3cf1e65e8218db5d73b/docs/guides/software-lifecycle/metrics/metrics-starter-kit/starter-kit/install_devlake.sh"
 ```
 
 **Explore Metrics and Tools:**
