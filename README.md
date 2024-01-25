@@ -3,7 +3,7 @@
 
 <div align="center">
 
-<img src="https://github.com/riverma/test-repo/assets/3129134/24ecf032-8754-472b-8991-4accf0618871" alt="SLIM Logo" width="200" height="150">
+<img src="https://raw.githubusercontent.com/NASA-AMMOS/slim/main/static/img/logo.svg" alt="SLIM Logo" height="275"/>
 
 <!-- ☝️ If you see logo rendering errors, make sure you're not using indentation, or try an HTML IMG tag -->
 
@@ -17,7 +17,7 @@
 
 [![SLIM](https://img.shields.io/badge/Best%20Practices%20from-SLIM-blue)](https://nasa-ammos.github.io/slim/)
 
-![screen-slim](https://github.com/riverma/test-repo/assets/3129134/3afb3179-4433-4848-a4d5-366d50a57988)
+![screen-slim](https://github.com/NASA-AMMOS/slim/assets/3129134/d4da5150-aae6-4986-b18e-5c463f8ff38a)
 
 This repository hosts the SLIM website, a project aimed at developing a common set of best practices in software development standards for NASA multi-mission space and ground software. The website leverages Docusaurus 2, a static website generator.  
 

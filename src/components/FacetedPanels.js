@@ -2,7 +2,7 @@ import React, { useState, useEffect } from 'react';
 import { Container, Row, Col, Form, Card, Dropdown, Badge, Button, ListGroup, ListGroupItem, Navbar, Nav, Glyphicon } from 'react-bootstrap';
 import 'bootstrap/dist/css/bootstrap.min.css';
 
-const Panel = ({ title, uri, tags, lastUpdated, description }) => (
+const Panel = ({ title, uri, tags, description }) => (
     <Card>
         <Card.Header as="h5">{title}</Card.Header>
         <Card.Body>
@@ -10,7 +10,6 @@ const Panel = ({ title, uri, tags, lastUpdated, description }) => (
                 <p>{description}</p>
             </Card.Text>
             <ListGroup>
-                <ListGroupItem>Last Updated: <Badge bg="secondary">{lastUpdated}</Badge></ListGroupItem>
                 <ListGroupItem>Tags:
                     {tags.map((tag) => (
                         <Badge bg="secondary" className="ms-1">{prettifyTag(tag)}</Badge>
@@ -29,7 +28,6 @@ const Panel = ({ title, uri, tags, lastUpdated, description }) => (
 const FacetedPanels = ({ panelsData }) => {
     const [selectedCategory, setSelectedCategory] = useState('All');
     const [selectedTags, setSelectedTags] = useState({});
-    const [selectedSortOrder, setSelectedSortOrder] = useState('ascending');
     const [panels, setPanels] = useState([]);
     const [tags, setTags] = useState([]);
     const [filteredTags, setFilteredTags] = useState([]);
@@ -55,10 +53,6 @@ const FacetedPanels = ({ panelsData }) => {
         });
     };
 
-    const handleSortOrderChange = (eventKey) => {
-        setSelectedSortOrder(eventKey);
-    };
-
     const handleTagSearch = (event) => {
         const searchTerm = event.target.value.toLowerCase();
         const filtered = tags.filter((tag) => tag.toLowerCase().includes(searchTerm));
@@ -69,14 +63,10 @@ const FacetedPanels = ({ panelsData }) => {
         setSearchTerm(event.target.value);
     };
 
-    const compareDates = (dateA, dateB) => {
-        return selectedSortOrder === 'ascending' ? dateA.localeCompare(dateB) : dateB.localeCompare(dateA);
-    };
-
     const filteredPanels = panels.filter((panel) => {
         const isTagMatch = Object.entries(selectedTags).every(([tag, isSelected]) => !isSelected || panel.tags.includes(tag));
         return isTagMatch && (panel.title.toLowerCase().includes(searchTerm.toLowerCase()) || panel.description.toLowerCase().includes(searchTerm.toLowerCase()));
-    }).sort((panelA, panelB) => compareDates(panelA['last-updated'], panelB['last-updated']));
+    });
 
     return (
         <Container>
@@ -119,17 +109,6 @@ const FacetedPanels = ({ panelsData }) => {
                                 </Dropdown.Menu>
                             </Dropdown>
                         </Nav>
-                        <Nav className="mr-auto ps-2">
-                            <Dropdown onSelect={handleSortOrderChange}>
-                                <Dropdown.Toggle variant="primary" id="sort-order-dropdown">
-                                    {selectedSortOrder === 'ascending' ? 'Show Newest First' : 'Show Oldest First'}
-                                </Dropdown.Toggle>
-                                <Dropdown.Menu>
-                                    <Dropdown.Item eventKey="ascending">Show Newest First</Dropdown.Item>
-                                    <Dropdown.Item eventKey="descending">Show Oldest First</Dropdown.Item>
-                                </Dropdown.Menu>
-                            </Dropdown>
-                        </Nav>
                     </Navbar.Collapse>
                 </Navbar>
             </div>
@@ -140,7 +119,6 @@ const FacetedPanels = ({ panelsData }) => {
                             title={panel.title}
                             uri={panel.uri}
                             tags={panel.tags}
-                            lastUpdated={panel['last-updated']}
                             description={panel.description}
                         />
                     </Col>

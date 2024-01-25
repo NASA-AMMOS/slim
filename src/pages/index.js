@@ -4,6 +4,8 @@ import Link from '@docusaurus/Link';
 import useDocusaurusContext from '@docusaurus/useDocusaurusContext';
 import Layout from '@theme/Layout';
 import HomepageFeatures from '@site/src/components/HomepageFeatures';
+import { Row, Col } from 'react-bootstrap';
+import 'bootstrap/dist/css/bootstrap.min.css';
 
 import styles from './index.module.css';
 
@@ -12,21 +14,20 @@ function HomepageHeader() {
   return (
     <header className={clsx('hero hero--info', styles.heroBanner)}>
       <div className="container">
-        <img src="img/logo.svg" height="200"/>
-        <p className="hero__subtitle">{siteConfig.tagline}</p>
-        <p>A shared resource for discussing, iterating and referencing best practices in software lifecycle process improvements.</p>
-        <div style={{ display: 'flex', justifyContent: 'center' }}>
-          <div className={styles.buttonWrapper}>
+        <img src="img/logo.svg" height="275"/>
+        <p style={{ padding: '15px' }}>A community-resource for exchanging and implementing best practices in software lifecycle improvements.</p>
+        <Row className="justify-content-center">
+          <Col xs={12} md="auto" className={styles.buttonWrapper}>
             <Link className="button button--primary button--lg" to="/docs/guides/search">
               See our Best Practice Guides
             </Link>
-          </div>
-          <div className={styles.buttonWrapper}>
-            <Link className="button button--secondary button--lg" to="/docs/contribute/submit-best-practice" style={{ marginLeft: '10px' }}>
+          </Col>
+          <Col xs={12} md="auto" className={`${styles.buttonWrapper} mt-3 mt-md-0`}>
+            <Link className="button button--secondary button--lg" to="/docs/contribute/submit-best-practice">
               Submit a Best Practice Guide
             </Link>
-          </div>
-        </div>
+          </Col>
+        </Row>
       </div>
     </header>
   );

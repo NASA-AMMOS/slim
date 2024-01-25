@@ -21,26 +21,24 @@ body:
   - type: dropdown
     id: guide
     attributes:
-      label: Best Practice Guide
-      description: Which best practice guide are you looking to improve?
+      label: Best Practice Guide Category
+      description: Which best practice guide category are you looking to improve?
       multiple: false
       options:
-        - "Continuous Integration"
-        - "Continuous Testing"
+        - "Software Lifecycle"
+        - "Governance"
         - "Documentation"
     validations:
       required: true
-  - type: dropdown
-    id: sections
+  - type: textarea
+    id: url
     attributes:
-      label: Best Practice Guide Sections
-      description: Which sections within the best practice guide would you like to improve? Check all that apply.
-      multiple: true
-      options:
-        - "Use Cases"
-        - "Trade Studies"
-        - "Reference Architectures"
-        - "Starter Kits"
+      label: Best practice guide URL
+      description: Paste the URL of the best practice guide you want to improve.
+      placeholder: URL
+      value: "ex. https://nasa-ammos.github.io/slim/docs/guides/documentation/readme/"
+    validations:
+      required: true
   - type: textarea
     id: need
     attributes:

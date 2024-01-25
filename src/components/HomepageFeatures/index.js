@@ -8,7 +8,7 @@ const FeatureList = [
     Svg: require('@site/static/img/scope.svg').default,
     description: (
       <>
-        We focus on best practices related to software project governance, documentation, and development life-cycles.
+        We <a href="docs/about#our-focus">focus on best practices</a> related to software project governance, documentation, and development life-cycles.
       </>
     ),
   },
@@ -17,7 +17,7 @@ const FeatureList = [
     Svg: require('@site/static/img/community.svg').default,
     description: (
       <>
-        <p>We solicit improvement ideas and solutions from our community deliver best practices back to our members.</p>
+        <p>We solicit improvement ideas and solutions from our community deliver best practices back to our members. See our <a href="https://github.com/orgs/NASA-AMMOS/projects/3">community planning board</a>.</p>
       </>
     ),
   },
@@ -26,7 +26,7 @@ const FeatureList = [
     Svg: require('@site/static/img/iterative.svg').default,
     description: (
       <>
-        We treat best practices and standards-as-code. We iteratively improve our recommendations through the open source tickets and pull requests.
+        We develop best practices through <a href="docs/about#standards-as-code">standards-as-code</a>. We iteratively improve our recommendations through the open source tickets and pull requests.
       </>
     ),
   },
