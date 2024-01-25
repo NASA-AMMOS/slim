@@ -37,8 +37,8 @@ Ready to dive in? Follow these steps to get started quickly:
 
 **Explore Metrics and Tools:**
 
-- [Metrics Documentation](software-delivery-metrics/general-metrics.md)
-- [Trade Study Documentation](software-delivery-metrics/metrics-tool-trade-study.md)
+- [Metrics Documentation](docs/guides/software-lifecycle/metrics/software-delivery-metrics/general-metrics.md)
+- [Trade Study Documentation](docs/guides/software-lifecycle/metrics/software-delivery-metrics/metrics-tool-trade-study.md)
 
 ---
 
