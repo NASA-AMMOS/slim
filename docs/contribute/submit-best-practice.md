@@ -159,3 +159,43 @@ To document metadata about your best practice and have your best practice show u
 ```
 
 Customize the fields according to your best practice guide. This entry will serve as a reference for users and allow them to discover your contribution through the registry. Make sure to include relevant and accurate information to help users understand the purpose and benefits of your best practice guide.
+
+
+## 4⃣️ Get Feedback For Your Contribution
+
+Once you've initiated a draft pull request or issue, it's important to gather feedback from the SLIM community. This will help ensure that your contribution aligns with the project's standards and meets the community's needs.
+
+To request feedback, you can use the following platforms:
+
+- **Slack**: Post a message in the relevant SLIM Slack channels (e.g. #slim, #mightydevs). Use the provided template below as a guide for your message. Don't forget to include a link to your pull request or issue for easy reference.
+
+    ```plaintext
+    Hello @channel,
+
+    I am seeking feedback on my recent contribution to the SLIM project, titled [INSERT YOUR CONTRIBUTION TITLE]. The contribution is aimed at [INSERT BRIEF DESCRIPTION OF THE PURPOSE]. 
+
+    Your insights and suggestions would be super valuable to ensure the contribution effectively addresses our project goals. You can find the details here: [Link to Pull Request/Issue].
+
+    Thank you in advance for your support and feedback!
+
+    Best,
+    [Your Name]
+    ```
+
+- **E-mail**: Send an email to the SLIM community mailing list, using a similar template as above.
+
+- **GitHub Comment**: Within your issue ticket or pull request, include a comment tagging the "@slim-community" team to directly notify them.
+
+Feedback from the community is crucial for the refinement of your contribution and ensures its successful integration into the SLIM project.
+
+## 5⃣️ Merge Your Contribution
+
+The final step in the contribution process involves the review and potential merging of your pull request by SLIM committers and reviewers. This process includes:
+
+1. **Review by SLIM Committers and Reviewers**: Your pull request will be thoroughly reviewed by the project's committers and reviewers. They will provide feedback, suggest improvements, or approve the changes.
+
+2. **Iterate as Required**: Based on the feedback, you may need to make further adjustments to your contribution. Promptly addressing these suggestions is crucial for the progression of your pull request.
+
+3. **Final Decision**: Once your pull request meets all the criteria and standards of the SLIM project, the committers will decide to merge your contribution into the main branch. Alternatively, they might request additional changes if needed.
+
+This process ensures that every contribution is in line with the project's goals, standards, and quality expectations, contributing to the overall excellence and reliability of the SLIM project.
