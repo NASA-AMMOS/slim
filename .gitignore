@@ -1,10 +1,6 @@
 # auto-generated files
 .docusaurus/
 
-
-# files generated from DevLake
-.env
-
 # development environment
 **/node_modules
 **/package-lock.json
