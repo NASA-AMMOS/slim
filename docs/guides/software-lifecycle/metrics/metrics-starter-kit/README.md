@@ -1,4 +1,4 @@
-# Apache DevLake Installation Guide
+# Metrics Guide
 
 <p align="center">A step-by-step guide for setting up and configuring Apache DevLake using the Starter Kit.</p>
 
@@ -64,11 +64,6 @@ Ready to dive in? Follow these steps to get started quickly:
 **Authorship**:
 
 - [ddalton-jpl](https://github.com/ddalton-jpl)
-
-**Acknowledgements**:
-
-- SLIM for best practice guidelines
-- Apache DevLake community
 
 ---
 
