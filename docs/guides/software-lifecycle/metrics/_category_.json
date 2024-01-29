@@ -1,6 +1,5 @@
 {
   "label": "Metrics",
-  "position": 1,
   "link": {
     "type": "generated-index",
     "description": "Software Metrics Best Practices."
