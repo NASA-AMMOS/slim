@@ -74,6 +74,6 @@ Ready to dive in? Follow these steps to get started quickly:
 
 ## Feedback and Contributions
 
-We value your feedback and welcome contributions to improve the Apache DevLake Starter Kit. Please see our [contribution guidelines](https://link-to-contribution-guidelines).
+We value your feedback and welcome contributions to improve this guide. Please see our [contribution guidelines](https://link-to-contribution-guidelines).
 
 ---
