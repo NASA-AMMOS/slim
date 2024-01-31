@@ -8,7 +8,9 @@ For comprehensive software metrics collection and analysis, we recommend deployi
 
 **Use Cases**:
 
-- Streamlining Apache DevLake setup and configuration
+- Collecting and analyzing [DORA metrics](https://devlake.apache.org/docs/DORA/) for your project
+- Having a visual dashboard to view metrics from multiple different sources (i.e. GitHub, JIRA, etc.) in one place
+- Helping to make the setup and configuration of Apache DevLake simple through a _single-command_ setup step
 - Implementing best practices in Apache DevLake projects
 - Providing comprehensive documentation for Apache DevLake developers
 
