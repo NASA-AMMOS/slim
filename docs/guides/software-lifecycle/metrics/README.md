@@ -4,7 +4,7 @@
 
 ## Introduction
 
-**Welcome to Apache DevLake!** This comprehensive Starter Kit is designed to simplify the installation process and configuration of Apache DevLake, providing you with a smooth and efficient development experience. Whether you are a seasoned developer or just starting with Apache DevLake, this guide and kit aim to enhance your workflow.
+For comprehensive software metrics collection and analysis, we recommend deploying  **Apache DevLake**. This guide is designed to simplify the installation process and configuration of Apache DevLake, providing you with a smooth and efficient development experience. This guide is relevant especially for beginners to metrics collection.
 
 **Use Cases**:
 
