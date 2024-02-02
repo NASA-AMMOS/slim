@@ -4,7 +4,7 @@
 
 ## Introduction
 
-**Background**: Continuous testing (CT) is a powerful approach that automatically analyzes your software throughout the development process, not just to find bugs, but to ensure it performs well, is secure, and functions flawlessly. CT provides rapid feedback, letting you identify and fix problems early, before they become major issues. This leads to faster releases, improved software quality, and happier users.
+**Background**: Continuous testing (CT) is a powerful approach that automatically analyzes your software throughout the development process, not just to find bugs, but to ensure it performs well, is secure, and functions flawlessly. CT can be complex to set up, however, so we present a simplified guide to getting started with CT through a best-practice testing plan template and guidance on tools and frameworks to leverage. The goal is to enable your project to identify and fix problems early, before they become major issues, leading to faster releases, improved software quality, and happier users.
 
 **Philosophy**: To provide a simple, consistent, easy-to-use continuous testing plan template and recommend tools to bootstrap your project with the essentials needed for a high-quality continuous testing setup. 
 
