@@ -79,10 +79,10 @@ Ready for swift CT implementation? Copy/paste our template, fill it with your te
 
 ## Step-by-Step Guide
 
-1. **Define Goals:**
+1. **Define Goals:** https://github.com/NASA-AMMOS/slim/blob/0a3e8cf878f1c280bebe0384e5750b4c708a3ce6/docs/guides/software-lifecycle/continuous-testing/continuous-testing-plan-template.md?plain=1#L16
    - Clearly outline objectives and key performance indicators for continuous testing.
 
-2. **Automated Unit Testing:**
+2. **Automated Unit Testing:** https://github.com/NASA-AMMOS/slim/blob/f1bce51e7e18358b667cdd051c9728084730d42f/docs/guides/software-lifecycle/continuous-testing/continuous-testing-plan-template.md?plain=1#L64
    - Implement automated unit testing using language-specific frameworks (e.g., JUnit for Java, Pytest for Python).
 
 3. **Integration Testing:**
@@ -103,10 +103,10 @@ Ready for swift CT implementation? Copy/paste our template, fill it with your te
 8. **UI/UX Testing:**
    - Implement automated UI/UX testing using tools like Selenium or Playwright.
 
-9. **Reporting and Analysis:**
+9. **Reporting and Analysis:** https://github.com/NASA-AMMOS/slim/blob/f1bce51e7e18358b667cdd051c9728084730d42f/docs/guides/software-lifecycle/continuous-testing/continuous-testing-plan-template.md?plain=1#L83
     - Utilize tools like SonarQube for comprehensive code quality and analysis reporting.
 
-10. **Monitor and Adjust:**
+10. **Monitor and Adjust:** https://github.com/NASA-AMMOS/slim/blob/f1bce51e7e18358b667cdd051c9728084730d42f/docs/guides/software-lifecycle/continuous-testing/continuous-testing-plan-template.md?plain=1#L92
     - Continuously monitor testing performance and make adjustments based on feedback and project requirements.
 
 
