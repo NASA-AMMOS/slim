@@ -13,6 +13,10 @@ This document outlines the Continuous Testing plan for Project X, a Python-based
 #### **2. Test Requirements**
 - **Objective:** Ensure codebase integrity, performance, and security for reliable software releases.
 - **Test Artifacts:** Front-end components, APIs, Database layer.
+- ** Key Performance Indicators (KPIs):** Identify KPIs and success criteria.
+  1. Measure the percentage of code covered by automated tests.
+  2. Monitor the average time for a full test suite to execute.
+  3. Track the percentage of defects detected in testing compared to total defects.
 
 #### **3. Testing Workflow Architecture**
 ```mermaid
@@ -60,11 +64,26 @@ graph TD;
 | Performance Testing | Load Testing | [Apache JMeter](https://jmeter.apache.org/) | Measures system performance under various conditions. | [JMeter User Manual](https://jmeter.apache.org/usermanual/index.html) | Jane Doe |
 | Requirements Verification & Validation | Requirement Traceability | [Pylint](https://pypi.org/project/pylint/) | Checks Python code against coding standards and helps catch errors. | [Pylint Docs](https://pylint.readthedocs.io/en/latest/) | Jane Doe |
 
+#### **5. Reporting and Analysis**
 
-#### 5. Implementation Checklist
-- [ ] Continuous Testing Plan (this document) defined, including all relevant parts
-- [ ] Security Testing tools, people, and tests implemented/deployed
-- [ ] Unit Testing tools, people, and tests implemented/deployed
-- [ ] All planned test cases defined in the test plan are implemented/deployed
-- [ ] Defects are reported and tracked.
-- [ ] Test summary report is generated and shared with stakeholders.
+Define how testing results will be reported and analyzed.
+
+- **Reporting Tools:** Utilize SonarQube for comprehensive code quality and analysis reporting.
+- **Frequency of Reporting:** Generate reports after each testing cycle and major code changes.
+- **Key Metrics Tracked:** Monitor automated test coverage, defect density, and execution time.
+- **Analysis Process:** Conduct regular meetings to review reports, identify improvement areas, and plan actions.
+
+#### **6. Collaboration and Issue Tracking**
+
+Integrate with project management tools for efficient collaboration and issue tracking.
+
+- **Project Management Tool:** Jira
+- **Integration Approach:** Establish bidirectional integration with Jira for seamless collaboration.
+- **Issue Tracking Process:** Create issues in Jira directly from testing tools, track progress, and link issues to test cases.
+
+## Revision History
+
+| Version | Description                     | Date       |
+|---------|---------------------------------|------------|
+| 1.0     | Initial Draft                   | 2024-04-01 |
+| 1.1     | Added reporting and collaboration details | 2024-04-05 |
