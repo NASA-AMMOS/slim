@@ -20,12 +20,6 @@
   
 ---
 
-## Prerequisites
-- A list of your software tools, a diagram of their interaction, and a list of all third-party dependencies
-
-
----
-
 ## Continuous Testing Phases
 
 ```mermaid
