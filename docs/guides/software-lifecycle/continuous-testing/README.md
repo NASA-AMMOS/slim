@@ -1,6 +1,6 @@
 # Continuous Testing
 
-<pre align="center">This page provides an overview of continuous testing, offers a ready-to-use continuous testing plan template, and addresses valuable feedback from our community members.</pre>
+<pre align="center">A ready-to-use continuous testing plan template with guidance on helpful tools and frameworks to leverage</pre>
 
 ## Introduction
 
