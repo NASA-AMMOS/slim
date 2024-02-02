@@ -59,26 +59,33 @@ graph TD;
     end
 
 
+#### 4. **Testing Tools Selection:**
 
+- **Automated Unit Testing:**
+  - Framework: Pytest for Python
+  - Measure Success: 90% of codebase covered by automated unit tests.
+  - Frequency: Run on each code commit.
 
-#### **4. Test Specifications**
+- **Integration Testing:**
+  - Framework: Pytest for Python
+  - Measure Success: All critical interactions between components validated.
+  - Frequency: Run after major code merges.
 
-Choose suitable continuous testing tools that align with your development environment.
+- **Regression Testing:**
+  - Tools: Selenium for UI regression testing
+  - Measure Success: No new issues introduced by code changes.
+  - Frequency: Run after each code commit.
 
-| Phase | High-level Tests | Recommended Tool | Description | Starter Kit | Key People |
-|-------|------------------|-----------------|-------------|-------------|------------|
-| Security Testing | Vulnerability Scan | [GitHub Dependabot](https://dependabot.com/) | Monitors dependencies for known vulnerabilities. | [GitHub Docs](https://docs.github.com/en/code-security/supply-chain-security/keeping-your-dependencies-updated-automatically/about-dependabot-version-updates) | [INSERT NAME HERE] |
-| | Secure Code Review | [SonarQube](https://www.sonarqube.org/) | Continuous inspection of code quality. | [SonarQube Docs](https://docs.sonarqube.org/latest/) | [INSERT NAME HERE] |
-| Unit Testing | Function Validity | [JUnit](https://junit.org/junit5/) | Verifies individual units of Java software. | [JUnit 5 Guide](https://junit.org/junit5/docs/current/user-guide/) | [INSERT NAME HERE] |
-| | Null Checks | [xUnit](https://xunit.net/) | Unit testing tool for .NET. | [xUnit.net Docs](https://xunit.github.io/docs/) | [INSERT NAME HERE] |
-| Regression Testing | Feature Consistency | [Cucumber](https://cucumber.io/) | Supports behavior-driven development (BDD). | [Cucumber Starter](https://cucumber.io/docs/guides/10-minute-tutorial/) | [INSERT NAME HERE] |
-| | User Flow Validation | [Selenium](https://www.selenium.dev/) | Ensures that new code changes do not adversely affect existing functionalities. | [Selenium HQ](https://www.selenium.dev/documentation/en/getting_started_with_webdriver/) | [INSERT NAME HERE] |
-| Integration Testing | API Contract Validation | [REST Assured](https://rest-assured.io/) | Java DSL for simplifying testing of REST based services. | [REST Assured Guide](https://github.com/rest-assured/rest-assured/wiki/GettingStarted) | [INSERT NAME HERE] |
-| | Data Flow Checks | [Postman](https://www.postman.com/) | Validates the interfaces and interactions between different software modules. | [Postman Learning Center](https://learning.postman.com/) | [INSERT NAME HERE] |
-| Performance Testing | Load Testing | [JMeter](https://jmeter.apache.org/) | Measures system performance under various conditions. | [JMeter User Manual](https://jmeter.apache.org/usermanual/index.html) | [INSERT NAME HERE] |
-| Requirements Verification & Validation | Requirement Traceability | [TestRail](https://www.gurock.com/testrail) | Ensures that the system meets the defined requirements. | [TestRail Docs](https://www.gurock.com/testrail/docs/) | [INSERT NAME HERE] |
-| Deployment Testing | Cloud Deployment | [Terraform](https://www.terraform.io/) | Infrastructure as code for cloud provisioning. | [Terraform Get Started](https://learn.hashicorp.com/terraform/getting-started/install.html) | [INSERT NAME HERE] |
-| | Chaos Testing | [Chaos Monkey](https://github.com/Netflix/chaosmonkey) | Simulates random failures to test system resilience. | [Chaos Monkey Wiki](https://github.com/Netflix/chaosmonkey/wiki) | [INSERT NAME HERE] |
+- **Performance Testing:**
+  - Tool: Apache JMeter
+  - Measure Success: The system handles expected workloads with response times within acceptable limits.
+  - Frequency: Run performance tests every month.
+
+- **Security Testing:**
+  - Tools: Dependabot for dependency scanning, SonarQube for code security analysis
+  - Measure Success: No critical security vulnerabilities are present in the code.
+  - Frequency: Run security scans on each code commit.
+
 
 #### **5. Reporting and Analysis**
 
