@@ -1,10 +1,10 @@
 # Continuous Testing
 
-<pre align="center">This page provides an overview of continuous testing, offers a ready-to-use continuous testing plan template, and addresses valuable feedback from our community members.</pre>
+<pre align="center">A ready-to-use continuous testing plan template with guidance on helpful tools and frameworks to leverage</pre>
 
 ## Introduction
 
-**Background**: Continuous testing (CT) is a powerful approach that automatically analyzes your software throughout the development process, not just to find bugs, but to ensure it performs well, is secure, and functions flawlessly. CT provides rapid feedback, letting you identify and fix problems early, before they become major issues. This leads to faster releases, improved software quality, and happier users.
+**Background**: Continuous testing (CT) is a powerful approach that automatically analyzes your software throughout the development process, not just to find bugs, but to ensure it performs well, is secure, and functions flawlessly. CT can be complex to set up, however, so we present a simplified guide to getting started with CT through a best-practice testing plan template and guidance on tools and frameworks to leverage. The goal is to enable your project to identify and fix problems early, before they become major issues, leading to faster releases, improved software quality, and happier users.
 
 **Philosophy**: To provide a simple, consistent, easy-to-use continuous testing plan template and recommend tools to bootstrap your project with the essentials needed for a high-quality continuous testing setup. 
 
@@ -18,12 +18,6 @@
 - Facilitating quicker releases
 - Fostering a culture of continuous improvement in software development
   
----
-
-## Prerequisites
-- A list of your software tools, a diagram of their interaction, and a list of all third-party dependencies
-
-
 ---
 
 ## Continuous Testing Phases
@@ -79,41 +73,35 @@ Ready for swift CT implementation? Copy/paste our template, fill it with your te
 
 ## Step-by-Step Guide
 
-1. **Step 1: Define Your Continuous Testing Goals**
-   - Clearly outline the objectives and goals you aim to achieve with continuous testing. Identify key performance indicators and success criteria.
+1. **Define Goals:** https://github.com/NASA-AMMOS/slim/blob/0a3e8cf878f1c280bebe0384e5750b4c708a3ce6/docs/guides/software-lifecycle/continuous-testing/continuous-testing-plan-template.md?plain=1#L16
+   - Clearly outline objectives and key performance indicators for continuous testing.
 
-2. **Step 2: Select Continuous Testing (CT) Tools**
-   - Choose a CT tool that aligns with your development environment. 
+2. **Automated Unit Testing:** https://github.com/NASA-AMMOS/slim/blob/f1bce51e7e18358b667cdd051c9728084730d42f/docs/guides/software-lifecycle/continuous-testing/continuous-testing-plan-template.md?plain=1#L64
+   - Implement automated unit testing using language-specific frameworks (e.g., JUnit for Java, Pytest for Python).
 
-3. **Step 3: Set Up Automated Unit Testing**
-   - Implement automated unit testing using suitable frameworks for your programming language (e.g., JUnit for Java, Pytest for Python).
+3. **Integration Testing:**
+   - Set up automated integration tests using frameworks like Jest (JavaScript) or Pytest (Python).
 
-4. **Step 4: Implement Integration Testing**
-   - Set up automated integration tests to verify the interactions between different components. Use frameworks like Jest (JavaScript) or Pytest (Python).
+4. **Regression Testing:**
+   - Implement regression tests to ensure new changes don't impact existing functionalities, using tools like Selenium or Playwright.
 
-5. **Step 5: Establish Regression Testing**
-   - Implement regression tests to ensure new code changes do not introduce issues in existing functionalities. Tools like Selenium and Playwright are popular for UI regression testing.
+5. **Performance Testing:**
+   - Integrate performance testing tools like Apache JMeter to validate system capacity under various conditions.
 
-6. **Step 6: Integrate Performance Testing**
-   - Use tools like Apache JMeter to perform load and performance testing. Ensure your system can handle various conditions and workloads.
+6. **Security Testing:**
+   - Integrate security testing tools such as Dependabot and SonarQube for code security analysis.
 
-7. **Step 7: Implement Security Testing**
-   - Integrate security testing tools such as Dependabot for dependency scanning and SonarQube for code security analysis.
+7. **Verification and Validation:**
+   - Set up static code analysis tools (e.g., ESLint, PyLint) for code quality and adherence to standards.
 
-8. **Step 8: Verification and Validation (V&V)**
-   - Set up tools like ESLint (JavaScript), PyLint (Python), or other linters for static code analysis. Ensure code quality and adherence to coding standards.
+8. **UI/UX Testing:**
+   - Implement automated UI/UX testing using tools like Selenium or Playwright.
 
-9. **Step 9: UI/UX Testing**
-    - Implement automated UI/UX testing using tools like Selenium or Playwright to validate the user interface and overall user experience.
+9. **Reporting and Analysis:** https://github.com/NASA-AMMOS/slim/blob/f1bce51e7e18358b667cdd051c9728084730d42f/docs/guides/software-lifecycle/continuous-testing/continuous-testing-plan-template.md?plain=1#L83
+    - Utilize tools like SonarQube for comprehensive code quality and analysis reporting.
 
-10. **Step 10: Reporting and Analysis**
-    - Utilize tools like SonarQube for comprehensive code quality and analysis reporting. Leverage reporting to identify areas for improvement.
-
-11. **Step 11: Collaboration with Jira**
-    - Integrate with project management tools like Jira to enhance collaboration, track issues, and manage tasks efficiently.
-
-12. **Step 12: Monitor and Adjust**
-    - Continuously monitor the performance of your continuous testing process. Make adjustments based on feedback, changing project requirements, and evolving best practices.
+10. **Monitor and Adjust:** https://github.com/NASA-AMMOS/slim/blob/f1bce51e7e18358b667cdd051c9728084730d42f/docs/guides/software-lifecycle/continuous-testing/continuous-testing-plan-template.md?plain=1#L92
+    - Continuously monitor testing performance and make adjustments based on feedback and project requirements.
 
 
    
