@@ -140,13 +140,13 @@ This idea is represented in the following diagram:
 ```mermaid
 graph TD
     subgraph Developers' Machines
-        A[Local Git Commit] -->|Unit Test| B{Test Passed?}
-        B -->|Yes| C[Code Ready]
+        A[Local Git Commit] -->|Run Unit Tests| B{Tests Passed?}
+        B -->|Yes| C[Locally Committed]
         B -->|No| D[Fix Code]
     end
 
-    subgraph Version Control System
-        E[Git Push to Specific Branch] -->|Unit Test| F{Test Passed?}
+    subgraph VCS[Version Control System e.g. GitHub]
+        E[Git Push to Specific Branch] -->|Run Unit Tests| F{Tests Passed?}
         F -->|Yes| G[Accept Pull Request]
         F -->|No| H[Review Code Changes]
     end
@@ -340,14 +340,29 @@ graph TD
 ##### Types of System Tests
 
 You should outline the types of system tests you plan to implement in your `TESTING.md` file. We suggest the following types of tests to include:
-- Testing the interaction of multiple software components that compose your software product
-  - Include software components you wrote
-  - Include software components external teams created
-  - Test command-line interfaces, user interfaces, APIs, exchange of files, exchange of messages, etc.
+- Testing for integration
+  - Interaction between software components
+  - Interaction with external services, provided files, exchange of messages, etc.
 - Testing for security
   - See existing [SLIM security best practices](/slim/docs/category/security) as part of your software development workflow.
 - Testing for performance and load
 - Testing user interfaces for gaps and compliance against policies
+
+##### Integration Tests Automation
+
+TBD - automation to help script tests
+
+##### Security Tests Automation
+
+To aid in security testing automation, we recommend two steps:
+1. Add security testing to your developers' local coding environment via pre-commit (see [Unit Test Automation](#31-unit-test-automation) section above)
+2. Enable existing [SLIM security best practices](/slim/docs/category/security) as part of your software development workflow.
+
+##### Performance Tests Automation
+
+TBD - automation to help script tests
+
+##### User Interface Tests Automation
 
 TBD - automation to help script tests
 
