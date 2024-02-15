@@ -122,7 +122,21 @@ Include specifics about your testing setup in this template section as follows:
 
 ### 2. Write Your Tests
 
-TBD
+Our recommendation is to use llama2 to quickly and automatically generate a test code and update as needed as described below: 
+
+1. **Download and Install:**
+   - [OLLAMA](https://github.com/ollama/ollama)
+
+2. **Invoke LLM and Generate Test Code:**
+   ```bash
+   ollama run llama2 "$(cat ~/app_pack_generator/docker.py)" write a unit test code
+   ```
+
+3. **Fix Errors and Add Missing Edge Cases:**
+   - Review the generated code, fix errors, and include any missing edge cases.
+
+4. **Update Prompt and Obtain Revised Test Code:**
+   - If needed, iterate on the prompt and obtain the revised test code. Go back to step 2 if necessary.
 
 ### 3. Automate Your Tests
 
