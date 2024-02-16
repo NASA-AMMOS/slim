@@ -82,11 +82,11 @@ Include specifics about your testing setup in this template section as follows:
 
 #### 1.3 System Tests
 
-System Tests help verify your final application meets end-user needs in a finalized form. There's a couple recommendations we have on performing system tests.
+System Tests help verify your final application meets end-user needs in a finalized form. There are a couple of recommendations we have for performing system tests.
 
 ##### Integration Tests
 
-In this section, we suggest you outline the process for integration testing, including the tools and frameworks used (e.g., Cypress, Postman). Specify where integration tests are located within the project repository and the trigger for these tests (e.g., merge requests, scheduled nightly builds). Integration testing ensures that combined parts of your application function together as expected as well as interaction with your users (other programs or people).
+In this section, we suggest you outline the process for integration testing, including the tools and frameworks used (e.g., Cypress, Postman). Specify where integration tests are located within the project repository and the trigger for these tests (e.g., merge requests, scheduled nightly builds). Integration testing ensures that combined parts of your application function together as expected, as well as interact with your users (other programs or people).
 
 Include specifics about your testing setup in this template section as follows:
 
@@ -123,21 +123,42 @@ Include specifics about your testing setup in this template section as follows:
 
 ### 2. Write Your Tests
 
-Our recommendation is to use llama2 to quickly and automatically generate a test code and update as needed as described below: 
+Writing unit tests for large software applications with numerous components can be time-consuming. We initially tested Pynguin, a popular automatic test code generation tool. However, it is in its early stage, and we found it not ready for practical use. Recent studies have shown promise in using LLM-based tools for test code generation. According to a study (https://arxiv.org/pdf/2305.00418.pdf), these models can automatically cover a significant percentage of test methods (~85%). 
+
+Our recommendation is to use large language models (e.g., llama2) to quickly and automatically generate an initial test code and update as needed as described below: 
 
 1. **Download and Install:**
    - [OLLAMA](https://github.com/ollama/ollama)
+   - Ollama is a streamlined tool for running open-source LLMs locally. 
 
-2. **Invoke LLM and Generate Test Code:**
+3. **Invoke LLM and Generate Test Code:**
    ```bash
    ollama run llama2 "$(cat ~/app_pack_generator/docker.py)" write a unit test code
    ```
-
-3. **Fix Errors and Add Missing Edge Cases:**
+   
+4. **Fix Errors and Add Missing Edge Cases:**
    - Review the generated code, fix errors, and include any missing edge cases.
 
-4. **Update Prompt and Obtain Revised Test Code:**
+5. **Update Prompt and Obtain Revised Test Code:**
    - If needed, iterate on the prompt and obtain the revised test code. Go back to step 2 if necessary.
+
+#### 2.1 Recommended Prompts for Auto-generated Unit Tests
+
+- **Basic Functionality Testing:**
+  "Generate unit tests for a function/method that performs basic arithmetic operations (addition, subtraction, multiplication, division)."
+
+- **Handling Edge Cases:**
+  "Create tests for a function that handles edge cases, such as zero division, boundary values, and unexpected input types."
+
+- **String Manipulation:**
+  "Generate unit tests for a function that involves string manipulation, including tests for string concatenation, slicing, and length calculations."
+
+- **List/Array Operations:**
+  "Create tests for functions that operate on lists/arrays, covering scenarios like element addition, removal, and list comprehensions."
+
+- **Exception Handling:**
+  "Generate unit tests to ensure proper exception handling in functions that may encounter errors. Include tests for both expected and unexpected exceptions."
+  
 
 ### 3. Automate Your Tests
 
