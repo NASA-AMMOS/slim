@@ -188,7 +188,7 @@ graph TD
     end
 ```
 
-To make the above automation a reality, we recommend using [pre-commit](https://pre-commit.com/), a framework that manages and maintains multi-language pre-commit hooks that can be used client side as well as server (VCS) side. Here's how to set it up:
+To make the above automation a reality, we recommend using [pre-commit](https://pre-commit.com/), a framework that manages and maintains multi-language pre-commit hooks that can be used on the client side as well as the server (VCS) side. Here's how to set it up:
 
 ##### Developers' Machines
 
@@ -317,7 +317,7 @@ To run the pre-commit hooks as part of a Jenkins build, you'll need to configure
 
    ```
    #!/bin/bash
-   # Install pre-commit if not already installed, optional based on your setup
+   # Install pre-commit if not already installed; optional based on your setup
    pip install pre-commit
 
    # Run pre-commit hooks
@@ -329,16 +329,16 @@ To run the pre-commit hooks as part of a Jenkins build, you'll need to configure
 
 #### 3.2 System Test Automation
 
-To aid in automation of system tests, we suggest doing the following:
+To aid in the automation of system tests, we suggest doing the following:
 
 1. Have a schedule for running system tests (e.g. nightly, weekly)
 2. Ensure software is built and published to repositories:
-   - Stand-alone components of your software should be independently released, built or packaged to be published on public repositories
+   - Stand-alone components of your software should be independently released, built, or packaged to be published on public repositories
    - (Optional) a final, single build of an integrated software consisting of multiple components is built, packaged, and published to a public repository
 3. Pull built or packaged artifacts from repositories and deploy software release (components or single package) to a virtualized environment
 4. Test the deployed release against a set of specified system tests
 
-The below diagram illustrates this concept:
+The diagram below illustrates this concept:
 
 ```mermaid
 graph TD
