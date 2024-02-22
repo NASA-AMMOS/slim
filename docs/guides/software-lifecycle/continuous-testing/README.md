@@ -443,7 +443,7 @@ A: We emphasize iterative implementation for continuous testing success, underst
 - [Rishi Verma](https://github.com/riverma)
 
 **Acknowledgements**:
-* Thank you to John Engelke for insightful comments and feedback, which contributed to the enhancement of this work.
+* Thank you to John Engelke and Dillon Dalton for insightful comments and feedback, which contributed to the enhancement of this work.
   
 ---
 
