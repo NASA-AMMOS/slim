@@ -30,7 +30,8 @@ Our decision to select Apache DevLake was informed by thorough trade study docum
 
 To quickly deploy DevLake on one of your servers or locally for testing, we've developed a convenient 1-step command. Please ensure Docker is running on your system before executing this command.
 
-The purpose of this script is to automate the installation process DevLake recommends [here](https://devlake.apache.org/docs/GettingStarted/DockerComposeSetup). The script does the following: 
+The purpose of this script is to automate the installation process DevLake recommends [here](https://devlake.apache.org/docs/GettingStarted/DockerComposeSetup). The script does the following:
+
 - Checks for necessary software: ensures you have Docker and docker-compose installed to run DevLake.
 - Downloads required files: automatically retrieves setup files if they're not already present on your system.
 - Prepares setup files: adjusts file permissions and sets up the necessary environment variables for DevLake.
@@ -45,18 +46,23 @@ cd /path/to/your/chosen/deployment/directory
 ```
 
 **To Stop Services:**
+
 1. Navigate to the directory containing your `docker-compose.yml` file (where you ran the above command).
 2. Run the following command to gracefully stop all containers defined in the `docker-compose.yml` file:
+
     ```bash
     docker-compose down
     ```
 
 **To Restart Services:**
+
 1. Navigate to the directory containing your `docker-compose.yml` file.
 2. Run the following command to start containers for services defined in the `docker-compose.yml` file:
+
     ```bash
     docker-compose up -d
     ```
+
    The `-d` flag runs containers in detached mode, allowing them to run in the background.
 
 ---
@@ -64,25 +70,23 @@ cd /path/to/your/chosen/deployment/directory
 ## Step-by-Step Configuration Guide
 
 1. Run the **[Quick Start](#quick-start)** steps above.
-2. Once you have a working DevLake instance, we recommend going through DevLake's [official start guide](https://devlake.apache.org/docs/Overview/Introduction/#2-configuring-data-source) step-by-step, beginning with the data sources section. 
+2. Once you have a working DevLake instance, we recommend going through DevLake's [official start guide](https://devlake.apache.org/docs/Overview/Introduction/#2-configuring-data-source) step-by-step, beginning with the data sources section.
 
 There are two additional topics we'd like to emphasize. Our recommendations for data sources and metrics to collect.
 
 ### Recommended Data Sources
 
 We recommend, at a minimum, connecting the following data sources (see the DevLake docs on [configuring data sources](https://devlake.apache.org/docs/Overview/Introduction#2-configuring-data-source) for further assistance):
-   - Source code repository, i.e. GitHub, GitLab
-     - Example: see guide for [GitHub configuration](https://devlake.apache.org/docs/v0.20/Configuration/GitHub)
-   - Issue ticket tracker, i.e. JIRA or GitHub
-   - Build tool, i.e. Jenkins or GitHub Actions
-   - TBD
+
+- Source code repository, i.e. GitHub, GitLab
+  - Example: see guide for [GitHub configuration](https://devlake.apache.org/docs/v0.20/Configuration/GitHub)
 
 ### Recommended Metrics to Collect
 
 See [this list](https://devlake.apache.org/docs/Metrics) of metrics on the DevLake documentation guide for why certain metrics are important and how to collect them. As a minium, we recommend the following metrics should be collected for your projects:
-   - TBD
-   - TBD 
-   - TBD
+
+- Change failure Rate: What % of changes to production result in failures or anomalies
+- Lead time for changes: How long does it take for code to go from a commit to production
 
 ---
 
