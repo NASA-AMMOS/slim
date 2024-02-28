@@ -123,26 +123,202 @@ Include specifics about your testing setup in this template section as follows:
 
 ### 2. Write Your Tests
 
-Writing unit tests for large software applications with numerous components can be time-consuming. We initially tested Pynguin, a popular automatic test code generation tool. However, it is in its early stage, and we found it not ready for practical use. Recent studies have shown promise in using LLM-based tools for test code generation. According to a study (https://arxiv.org/pdf/2305.00418.pdf), these models can automatically cover a significant percentage of test methods (~85%). 
+Writing comprehensive tests for large software applications can be a time-consuming process. While automatic test code generation tools like Pynguin show promise, they may not yet meet practical needs. Recent studies suggest that Large Language Models (LLMs) offer a viable solution, covering up to 85% of test methods automatically (source: [study](https://arxiv.org/pdf/2305.00418.pdf)).
 
-Our recommendation is to use large language models (e.g., llama2) to quickly and automatically generate an initial test code and update as needed as described below: 
+Our recommendation is to leverage LLM-based tools, such as llama2, to quickly generate initial test code, with developers refining and expanding as necessary. Here's how:
 
-1. **Download and Install:**
-   - [OLLAMA](https://github.com/ollama/ollama)
-   - Ollama is a streamlined tool for running open-source LLMs locally. 
+1. **Download and Install OLLAMA:**
+   - [OLLAMA](https://github.com/ollama/ollama): A streamlined tool for running LLMs locally.
 
 3. **Invoke LLM and Generate Test Code:**
    ```bash
    ollama run llama2 "$(cat ~/app_pack_generator/docker.py)" write a unit test code
    ```
    
-4. **Fix Errors and Add Missing Edge Cases:**
-   - Review the generated code, fix errors, and include any missing edge cases.
+4. **Review and Refine Generated Code:**
+   - Developers should review the generated code, fixing errors and adding any missing edge cases.
 
-5. **Update Prompt and Obtain Revised Test Code:**
-   - If needed, iterate on the prompt and obtain the revised test code. Go back to step 2 if necessary.
+5. **Iterate as Needed:**
+   - If necessary, update the prompt and obtain a revised test code. Repeat the process until satisfactory.
 
-#### 2.1 Recommended Prompts for Auto-generated Unit Tests
+**Disclaimer:** While LLMs can generate approximately 80% of test code automatically, developers must verify and refine the remaining 20%, ensuring comprehensive test coverage.
+
+#### 2.1 Recommended Test Types
+
+- **Unit Tests:**
+  - Automatically generated to cover basic functionality and common scenarios.
+
+- **System Tests:**
+  - *Integration Tests:* Verify interactions between components.
+  - *Performance Tests:* Assess system responsiveness and scalability.
+  - *Security Tests:* Check for vulnerabilities and adherence to security protocols.
+  - *User Interface Tests:* Ensure intuitive and error-free user experiences.
+
+**Example Generated Unit Test:**
+```python
+import unittest
+
+class TestCalculator(unittest.TestCase):
+    def test_addition(self):
+        # Test addition functionality
+        self.assertEqual(calculator.add(2, 3), 5)
+
+    def test_subtraction(self):
+        # Test subtraction functionality
+        self.assertEqual(calculator.subtract(5, 3), 2)
+```
+
+**Example Generated Integration Test:**
+```python
+import unittest
+
+class TestDatabaseIntegration(unittest.TestCase):
+    def test_database_connection(self):
+        # Test database connection
+        self.assertTrue(database.is_connected())
+
+    def test_data_insertion(self):
+        # Test data insertion into the database
+        self.assertTrue(database.insert_data(data))
+```
+
+**Example Generated Performance Test:**
+```python
+import unittest
+import time
+
+class TestPerformance(unittest.TestCase):
+    def setUp(self):
+        # Setup any necessary resources or configurations
+        pass
+
+    def tearDown(self):
+        # Clean up resources after each test
+        pass
+
+    def test_performance_operation(self):
+        # Measure the performance of a specific operation
+        start_time = time.time()
+
+        # Perform the operation (e.g., sorting a large list)
+        data = list(range(1000000))
+        sorted_data = sorted(data)
+
+        # Calculate the execution time
+        execution_time = time.time() - start_time
+
+        # Define a threshold for acceptable performance
+        threshold = 1.0  # 1 second
+
+        # Assert that the execution time is within the acceptable threshold
+        self.assertLessEqual(execution_time, threshold)
+
+if __name__ == '__main__':
+    unittest.main()
+```
+
+**Example Generated Security Test:**
+```python
+import unittest
+
+class TestSecurity(unittest.TestCase):
+    def setUp(self):
+        # Setup any necessary resources or configurations
+        pass
+
+    def tearDown(self):
+        # Clean up resources after each test
+        pass
+
+    def test_secure_authentication(self):
+        # Simulate a secure authentication process
+        username = "admin"
+        password = "password123"
+
+        # Check if password meets security requirements
+        # For example, minimum length and presence of special characters
+        self.assertTrue(len(password) >= 8)
+        self.assertTrue(any(char.isdigit() for char in password))
+        self.assertTrue(any(char.isupper() for char in password))
+        self.assertTrue(any(char.islower() for char in password))
+        self.assertTrue(any(char in "!@#$%^&*()-_=+[]" for char in password))
+
+        # Check if username is not easily guessable
+        common_usernames = ["admin", "root", "user", "test"]
+        self.assertNotIn(username, common_usernames)
+
+    def test_data_encryption(self):
+        # Simulate data encryption process
+        plaintext_data = "Sensitive information"
+        encrypted_data = encrypt(plaintext_data)
+
+        # Check if the encryption process is secure
+        self.assertNotEqual(plaintext_data, encrypted_data)
+
+    def test_permission_checks(self):
+        # Simulate permission checks for sensitive operations
+        user_role = "admin"
+        operation = "delete_user_data"
+
+        # Check if the user role has permission for the operation
+        self.assertTrue(check_permission(user_role, operation))
+
+if __name__ == '__main__':
+    unittest.main()
+```
+
+**Example Generated UI Test:**
+```python
+import unittest
+
+class TestUserInterface(unittest.TestCase):
+    def setUp(self):
+        # Set up the UI testing environment
+        self.app = create_test_app()  # Function to create a test instance of the application
+        self.client = self.app.test_client()  # Client for interacting with the application
+
+    def tearDown(self):
+        # Clean up after each test
+        pass
+
+    def test_login_page(self):
+        # Test the login page UI elements and functionality
+        response = self.client.get('/login')
+        self.assertEqual(response.status_code, 200)  # Check if the page loads successfully
+        self.assertIn(b'Login', response.data)  # Check if the login form is present
+        self.assertIn(b'Username:', response.data)  # Check if username input field is present
+        self.assertIn(b'Password:', response.data)  # Check if password input field is present
+        self.assertIn(b'Submit', response.data)  # Check if submit button is present
+
+    def test_registration_page(self):
+        # Test the registration page UI elements and functionality
+        response = self.client.get('/register')
+        self.assertEqual(response.status_code, 200)  # Check if the page loads successfully
+        self.assertIn(b'Register', response.data)  # Check if the registration form is present
+        self.assertIn(b'Username:', response.data)  # Check if username input field is present
+        self.assertIn(b'Email:', response.data)  # Check if email input field is present
+        self.assertIn(b'Password:', response.data)  # Check if password input field is present
+        self.assertIn(b'Confirm Password:', response.data)  # Check if confirm password input field is present
+        self.assertIn(b'Register', response.data)  # Check if register button is present
+
+    def test_dashboard_page(self):
+        # Test the dashboard page UI elements and functionality
+        response = self.client.get('/dashboard')
+        self.assertEqual(response.status_code, 200)  # Check if the page loads successfully
+        self.assertIn(b'Dashboard', response.data)  # Check if the dashboard content is present
+        self.assertIn(b'Welcome', response.data)  # Check if the user welcome message is present
+        self.assertIn(b'Logout', response.data)  # Check if the logout link is present
+
+if __name__ == '__main__':
+    unittest.main()
+```
+
+
+
+**Note:** These are simplified examples; actual test cases may vary depending on the application's complexity and requirements.
+
+
+#### 2.2 Recommended Prompts for Auto-generated Unit Tests
 
 - **Basic Functionality Testing:**
   "Generate unit tests for a function/method that performs basic arithmetic operations (addition, subtraction, multiplication, division)."
