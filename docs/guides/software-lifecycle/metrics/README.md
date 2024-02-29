@@ -42,7 +42,7 @@ The purpose of this script is to automate the installation process DevLake recom
 
 ```bash
 cd /path/to/your/chosen/deployment/directory
-/bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/ddalton-jpl/slim/issue-117/docs/guides/software-lifecycle/metrics/metrics-starter-kit/install_devlake.sh)"
+/bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/NASA-AMMOS/slim/main/docs/guides/software-lifecycle/metrics/metrics-starter-kit/install_devlake.sh)"
 ```
 
 **To Stop Services:**
