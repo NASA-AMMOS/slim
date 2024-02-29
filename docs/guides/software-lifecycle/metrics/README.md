@@ -78,16 +78,14 @@ There are two additional topics we'd like to emphasize. Our recommendations for 
 
 We recommend, at a minimum, connecting the following data sources (see the DevLake docs on [configuring data sources](https://devlake.apache.org/docs/Overview/Introduction#2-configuring-data-source) for further assistance):
 
-- Source code repository, i.e. GitHub, GitLab
-  - Example: see guide for [GitHub configuration](https://devlake.apache.org/docs/v0.20/Configuration/GitHub)
+- [GitHub](https://devlake.apache.org/docs/v0.20/Configuration/GitHub)
 
 ### Recommended Metrics to Collect
 
 See [this list](https://devlake.apache.org/docs/Metrics) of metrics on the DevLake documentation guide for why certain metrics are important and how to collect them. As a minium, we recommend the following metrics should be collected for your projects:
 
-- Change failure Rate: What % of changes to production result in failures or anomalies
-- Lead time for changes: How long does it take for code to go from a commit to production
-
+- [Change Failure Rate](https://devlake.apache.org/docs/Metrics/CFR): *"The percentage of changes that were made to a code that then resulted in incidents, rollbacks, or any type of production failure."*
+- [Lead Time for Changes](https://devlake.apache.org/docs/Metrics/LeadTimeForChanges): *"The median amount of time for a code change to be deployed into production."*
 ---
 
 ## Frequently Asked Questions (FAQ)
@@ -102,6 +100,7 @@ See [this list](https://devlake.apache.org/docs/Metrics) of metrics on the DevLa
 **Authorship**:
 
 - Dillon Dalton [ddalton-jpl](https://github.com/ddalton-jpl)
+- Rishi Verma [riverma](https://github.com/riverma)
 
 ---
 
