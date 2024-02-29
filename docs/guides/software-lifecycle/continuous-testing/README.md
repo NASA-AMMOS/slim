@@ -318,7 +318,45 @@ if __name__ == '__main__':
 **Note:** These are simplified examples; actual test cases may vary depending on the application's complexity and requirements.
 
 
-#### 2.2 Recommended Prompts for Auto-generated Unit Tests
+#### 2.2 Robot Framework and LLM Synergy 
+
+In scenarios where you are already well-versed in **Robot Framework**, leveraging the synergy between Robot Framework and **LLM (Llama2)** can yield significant benefits. Specifically, using LLM to auto-generate Robot Framework pseudocode streamlines the process of creating integration test cases. Here's an example:
+
+1. **Generating Robot Framework Pseudocode with LLM**:
+    - Use Llama2 to generate test case pseudocode in Robot Framework syntax.
+        ```robot
+        *** Settings ***
+        Documentation    Example test suite
+        Library          SeleniumLibrary
+        *** Test Cases ***
+        Valid Login
+            Open Browser    https://dummy-website.com    chrome
+            Input Text      username_field    valid_username
+            Input Text      password_field    valid_password
+            Click Button    login_button
+            Page Should Contain    Welcome, User!
+        
+        Invalid Login
+            Open Browser    https://dummy-website.com    chrome
+            Input Text      username_field    invalid_username
+            Input Text      password_field    invalid_password
+            Click Button    login_button
+            Page Should Contain    Invalid credentials
+        ```
+
+2. **Direct Revision and Enhancement**:
+    - Revise the Robot Framework pseudocode as needed:
+        - Add additional steps.
+        - Include assertions for edge cases.
+        - Incorporate custom keywords or libraries.
+
+3. **Test Execution**:
+    - Run the tests locally or integrate them into your CI pipeline.
+
+By combining LLM's natural language capabilities with Robot Framework's structured format, you can efficiently create and adapt  test cases.
+
+
+#### 2.3 Recommended Prompts for Auto-generated Unit Tests
 
 - **Basic Functionality Testing:**
   "Generate unit tests for a function/method that performs basic arithmetic operations (addition, subtraction, multiplication, division)."
