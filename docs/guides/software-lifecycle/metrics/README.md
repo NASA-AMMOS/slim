@@ -2,6 +2,8 @@
 
 <pre align="center">A Comprehensive Guide for Setting up and Configuring Metrics Tracking</pre>
 
+![slim-dashboard](../../../../static/img/slim-dashboard-devlake.png)
+
 ## Introduction
 
 Metrics collection is important for project management and software quality assurance. We recommend [Apache DevLake](https://devlake.apache.org/) for easy tracking and analysis. This guide simplifies its installation and configuration, especially for developers new to metrics collection.
@@ -86,6 +88,7 @@ See [this list](https://devlake.apache.org/docs/Metrics) of metrics on the DevLa
 
 - [Change Failure Rate](https://devlake.apache.org/docs/Metrics/CFR): *"The percentage of changes that were made to a code that then resulted in incidents, rollbacks, or any type of production failure."*
 - [Lead Time for Changes](https://devlake.apache.org/docs/Metrics/LeadTimeForChanges): *"The median amount of time for a code change to be deployed into production."*
+
 ---
 
 ## Frequently Asked Questions (FAQ)
