@@ -1,12 +1,18 @@
-# Detecting Secrets with detect-secrets
+# Secrets Detection
 
-<pre align="center">Best practice approach to identify and prevent leaking of sensitive information in your codebase.</pre>
+<pre align="center">Guide to identify and automatically prevent leaking of sensitive information into your codebase.</pre>
 
 ## Introduction
 
-**Background**: In the age of open source collaboration and rapid software deployment, sensitive information like API keys, passwords, or tokens may inadvertently be committed into repositories. Such slip-ups can pose significant security risks. We champion the use of [detect-secrets](https://github.com/Yelp/detect-secrets) to mitigate these risks. It stands out due to its extensible Python plugin system, enabling tailored detection suited to diverse types of secrets. Designed with efficiency in mind, it's primed for use in continuous integration pipelines, ensuring a swift scan of current project states without delving into the entire git history. Its unique "baseline file" approach, leveraging `.secrets.baseline`, streamlines the management of legitimate secrets and reduces false positives. This guarantees a seamless integration process even in established projects.
+**Background**: Sensitive information like API keys, passwords, or tokens may inadvertently be getting committed into your repository. Such slip-ups can pose significant security risks. We recommend not only scanning for sensitive information recurringly, but preventing sensitive information from getting infused in the first place. To support these goals, we recommend a tool called [detect-secrets](https://github.com/Yelp/detect-secrets) to mitigate these risks. It scans for common sensitive information categories like passwords, high-entropy entries that may contain sensitive information, and a plugin system that supports customization. It's compatible for use in continuous integration pipelines and execution on local-developer machines. It has a "baseline file" approach, leveraging `.secrets.baseline`, that streamlines the management of legitimate secrets and reduces false positives. This helps both new and established projects detect and prevent secrets getting into source code.
 
 **Use Cases**:
+- Finding and preventing commits of sensitive information such as:
+  - Username / passwords
+  - High entropy strings
+  - IP addresses
+  - E-mail addresses
+  - AWS sensitive information
 - Scanning local client repositories for exposed sensitive information _before_ making them public.
 - Preventing secrets from being committed to a local repository using pre-commit hooks.
 - Implementing a safety net in continuous integration (CI) pipelines using GitHub Actions to catch inadvertent secret commits.
@@ -19,6 +25,7 @@ To get the most out of `detect-secrets`, you'll need:
 
 * Python `pip` tool.
 * (Optional) Familiarity with Python for potential custom plugin development.
+* (Optional) A GitHub repository supporting GitHub Actions
 
 ---
 
@@ -27,18 +34,20 @@ To get the most out of `detect-secrets`, you'll need:
 ## Quick Start
 
 1. Install slim-detect-secrets:
+  
+  > ℹ️ **Note:** the SLIM project has customized the Detect Secrets tool to identify additional sensitive keywords such as IP addresses, file paths, and AWS information. These additions are currently [under review](https://github.com/Yelp/detect-secrets/pulls/perryzjc) by the detect-secrets team for merger into the main codebase of the tool. Until then, we recommend using our SLIM fork per below. 
    
    ```bash
    pip install git+https://github.com/NASA-AMMOS/slim-detect-secrets.git@exp
    ```
    
-3. Execute a baseline scan:
+2. Execute a baseline scan:
 
    ```bash
-   detect-secrets scan ./ --all-files --disable-plugin AbsolutePathDetectorExperimental --exclude-files '.secrets.*' --exclude-files '.git*' > .secrets.baseline
+   detect-secrets scan --all-files --disable-plugin AbsolutePathDetectorExperimental --exclude-files '\.secrets.*' --exclude-files '\.git*' > .secrets.baseline
    ```
 
-6. Review the `.secrets.baseline` file for any detected secrets via an audit:
+3. Review the `.secrets.baseline` file for any detected secrets via an audit:
 
    ```bash
    detect-secrets audit .secrets.baseline
@@ -53,11 +62,23 @@ Additional steps like whitelisting, establishing pre-commit hooks or enabling fu
 There are three recommended layers of protection we suggest you enable to ensure maximum security. Please see the below sections for details. 
 
 ### Table of Contents
-1. [Layer 1: Full Scan and Audit (Client-side)](#layer-1-full-scan-and-audit-client-side)
-2. [Layer 2: Git Commit Scan (Client-side)](#layer-2-git-commit-scan-client-side)
-3. [Layer 3: Server-side Push to GitHub.com](#layer-3-server-side-push-to-githubcom)
+- [Secrets Detection](#secrets-detection)
+  - [Introduction](#introduction)
+  - [Prerequisites](#prerequisites)
+  - [Quick Start](#quick-start)
+  - [Step-by-Step Guide](#step-by-step-guide)
+    - [Table of Contents](#table-of-contents)
+    - [Layer 1: Full Scan and Audit (Client-side)](#layer-1-full-scan-and-audit-client-side)
+      - [Steps](#steps)
+    - [Layer 2: Git Commit Scan (Client-side)](#layer-2-git-commit-scan-client-side)
+      - [Steps](#steps-1)
+    - [Layer 3: Server-side Push to GitHub.com](#layer-3-server-side-push-to-githubcom)
+      - [Steps](#steps-2)
+    - [Frequently Asked Questions (FAQ)](#frequently-asked-questions-faq)
+  - [Credits](#credits)
+  - [Feedback and Contributions](#feedback-and-contributions)
 
-### Full Scan and Audit (Client-side)
+### Layer 1: Full Scan and Audit (Client-side)
 This layer directly scans the developer's local environment using the `detect-secrets` tool. After scanning, a baseline file containing detected secrets is generated. Developers can audit this file for detailed information on detected secrets.
 
 #### Steps
@@ -70,7 +91,7 @@ This layer directly scans the developer's local environment using the `detect-se
 2. **Scanning**
    - Scan all local files from the current directory and output results to a baseline file.
      ```bash
-     detect-secrets scan ./ --all-files --disable-plugin AbsolutePathDetectorExperimental --exclude-files '.secrets.*' --exclude-files '.git*' > .secrets.baseline
+     detect-secrets scan --all-files --disable-plugin AbsolutePathDetectorExperimental --exclude-files '\.secrets.*' --exclude-files '\.git*' > .secrets.baseline
      ```
 
 3. **Checking Results**
@@ -87,20 +108,25 @@ This layer directly scans the developer's local environment using the `detect-se
 
 [View more on Auditing Secrets in Baseline](https://github.com/Yelp/detect-secrets#auditing-secrets-in-baseline)
 
-> **Note**: If you've marked any secrets as true positives, make sure to remove all references to these secrets and rerun a full scan.
+> ℹ️ **Note**: If you've marked any secrets as true positives, make sure to remove all references to these secrets and rerun a full scan.
 
 ### Layer 2: Git Commit Scan (Client-side)
-This layer is a pre-commit hook in the local environment that scans changes when a developer tries to commit. If new secrets are detected, the commit is blocked.
+This layer represents a prevention mechanism in the local developer environment that scans changes when a developer tries to commit and if new secrets are detected, the commit is blocked.
+
+To support this strategy, we recommend the installation of another third party tool called [pre-commit](https://pre-commit.com/#install), which is integral in allowing specialized plugins to run during the local developer's commit phase of using Git. It allows detect-secrets to prevent commits that are flagged with sensitive information.
 
 #### Steps
 1. **Installation**
+
    - Install [pre-commit](https://pre-commit.com/#install).
+  
      ```bash
      pip install pre-commit
      ```
 
 2. **Configuration**
-   - Create a `.pre-commit-config.yaml` configuration file.
+   - Create a `.pre-commit-config.yaml` configuration file with the below contents.
+  
     ```yaml
       repos:
         - repo: https://github.com/NASA-AMMOS/slim-detect-secrets
@@ -112,13 +138,14 @@ This layer is a pre-commit hook in the local environment that scans changes when
                 - '--baseline'
                 - '.secrets.baseline'
                 - '--exclude-files'
-                - '.git*'
+                - '\.git*'
                 - '--exclude-files'
-                - '.secrets.*' 
+                - '\.secrets.*' 
      ```
 
 3. **Hook Installation**
-   - Install the pre-commit hook.
+   - Install the pre-commit hook into your local environment, ensuring the hook gets invoked during local git commits.
+  
      ```bash
      pre-commit install
      ```
@@ -126,14 +153,18 @@ This layer is a pre-commit hook in the local environment that scans changes when
 4. **Committing Changes**
    - Commit changes. If new secrets are detected, the commit will be blocked.
 
-> **Note**: The pre-commit hook does not automatically update the `.secrets.baseline` file. Update it by re-running the scan command.
+>   ℹ️ **Note**: The pre-commit hook does not automatically update the `.secrets.baseline` file. Update it by re-running the scan command.
 
-### Layer 3: Server-side Push to GitHub.com [EXPERIMENTAL / UNDER DEVELOPMENT]
-This layer scans server-side pre-commits using [GitHub Action](https://github.com/features/actions). The scan is triggered during a push or pull request. Any detected new secrets are reported, and a status check on GitHub prevents merges or pushes to protected branches.
+### Layer 3: Server-side Push to GitHub.com
+
+> ⚠️ Warning: the strategy recommended below is currently experimental and may not work as intended. Use with caution. 
+
+This strategy provides a final layer of protection by scanning server-side commits for sensitive information during pull request creation. It leverages the [pre-commit](https://pre-commit.com/#install) tool and [GitHub Action](https://github.com/features/actions). The scan is triggered during a push or pull request and any detected new secrets are reported, while merges or pushes to protected branches are prevented.
 
 #### Steps
 1. **Workflow Creation**
-   - Create a `detect-secrets.yaml` workflow file in the `.github/workflows` directory.
+   - The first step is to create a `detect-secrets.yaml` workflow file in the `.github/workflows` directory to define the GitHub action. Copy and paste the below while ensuring the correct branch of your codebase is referenced.
+  
      ```yaml
       name: Secret Detection Workflow
       on:
@@ -185,7 +216,7 @@ This layer scans server-side pre-commits using [GitHub Action](https://github.co
                 echo "✅ Created backup of known secrets"
 
                 # find the secrets in the repository
-                detect-secrets scan --disable-plugin AbsolutePathDetectorExperimental --baseline .secrets.new --exclude-files '.secrets.*' --exclude-files '.git*'
+                detect-secrets scan --disable-plugin AbsolutePathDetectorExperimental --baseline .secrets.new --exclude-files '\.secrets.*' --exclude-files '\.git*'
                 echo "✅ Scanned repository for secrets"
                     
                 # if there is any difference between the known and newly detected secrets, break the build
@@ -210,13 +241,11 @@ This layer scans server-side pre-commits using [GitHub Action](https://github.co
                   echo "✅ No new secrets detected"
                 fi
      ```
+     > ℹ️  Explanation: The GitHub Action checks out code, installs necessary packages, checks for a baseline file, and scans the repository for secrets. If new secrets are detected, the build fails and provides guidance.
 
-2. **Workflow Explanation**
-   - The GitHub Action checks out code, installs necessary packages, checks for a baseline file, and scans the repository for secrets. If new secrets are detected, the build fails and provides guidance.
+After setting this up, GitHub will run the workflow during pushes or pull requests. If any new secrets are detected, the status check will fail and the user will be notified in the pull request.
 
-After setting this up, GitHub will run the workflow during pushes or pull requests.
-
-> **Note**: If any new secrets are detected, the status check will fail.
+> ⚠️ Warning: the check ensures the specific line of code that may have sensitive information is not disclosed publicly in the GitHub Action logs, only a yes / no indication if sensitive information was detected. That being said, it may not be too many steps for an attacker to identify sensitive information. Monitor your pull requests actively to respond and always ensure [Layer 1](#layer-1-full-scan-and-audit-client-side) and [Layer 2](#layer-2-git-commit-scan-client-side) are actively used by your team to prevent issues in the first place.  
 
 ---
 
