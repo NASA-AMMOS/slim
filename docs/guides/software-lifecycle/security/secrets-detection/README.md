@@ -282,6 +282,7 @@ After setting this up, GitHub will run the workflow during pushes or pull reques
 
 **Acknowledgements**:
 - [Yelp's detect-secrets maintainers](https://github.com/Yelp/detect-secrets)
+- [@nutjob4life](https://github.com/nutjob4life) for detect-secrets usage tips
 
 ---
 
