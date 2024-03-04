@@ -148,10 +148,15 @@
       "title": "Continuous Testing",
       "uri": "/slim/docs/guides/software-lifecycle/continuous-testing/",
       "category": "software lifecycle",
-      "description": "An extensive list of resources and tools for continuous testing including module testing, service endpoint testing, performance testing, and mobile testing among others.",
+      "description": "An extensive guide for enacting continuous testing including setting up a test plan, writing unit and system level tests, as well as automating deployments of those tests.",
       "tags": [
         "testing",
-        "tools"
+        "tools",
+        "llm",
+        "robot-framework",
+        "automation",
+        "ai",
+        "deployment"
       ]
     },
     { 
