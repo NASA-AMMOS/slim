@@ -146,13 +146,13 @@ Our recommendation is to leverage LLM-based tools, such as llama2, to quickly ge
 #### 2.1 Recommended Test Types
 
 - **Unit Tests:**
-  - Automatically generated to cover basic functionality and common scenarios.
+  - Automatically generated to cover basic functionality and common scenarios. ([Unit Tests in TESTING.md Template](TESTING#L26))
 
 - **System Tests:**
-  - *Integration Tests:* Verify interactions between components.
-  - *Performance Tests:* Assess system responsiveness and scalability.
-  - *Security Tests:* Check for vulnerabilities and adherence to security protocols.
-  - *User Interface Tests:* Ensure intuitive and error-free user experiences.
+  - *Integration Tests:* Verify interactions between components. ([Integration Tests in TESTING.md Template](TESTING#L62))
+  - *Performance Tests:* Assess system responsiveness and scalability. ([Performance Tests in TESTING.md Template](TESTING#L114))
+  - *Security Tests:* Check for vulnerabilities and adherence to security protocols. ([Security Tests in TESTING.md Template](TESTING#L88))
+  - *User Interface Tests:* Ensure intuitive and error-free user experiences. ([User Interface Tests in TESTING.md Template](TESTING#L143))
 
 **Example Generated Unit Test:**
 ```python
@@ -312,7 +312,6 @@ class TestUserInterface(unittest.TestCase):
 if __name__ == '__main__':
     unittest.main()
 ```
-
 
 
 **Note:** These are simplified examples; actual test cases may vary depending on the application's complexity and requirements.
