@@ -3,7 +3,7 @@
 <pre align="center">A Comprehensive Guide for Setting up and Configuring Metrics Tracking</pre>
 
 ![slim-dashboard](../../../../static/img/slim-dashboard-devlake.png)
-
+*Example Metrics Dashboard using Apache DevLake*
 ## Introduction
 
 Metrics collection is important for project management and software quality assurance. We recommend [Apache DevLake](https://devlake.apache.org/) for easy tracking and analysis. This guide simplifies its installation and configuration, especially for developers new to metrics collection.
