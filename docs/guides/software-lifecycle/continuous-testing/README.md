@@ -355,6 +355,69 @@ In scenarios where you are already well-versed in **Robot Framework**, leveragin
 
 By combining LLM's natural language capabilities with Robot Framework's structured format, you can efficiently create and adapt  test cases.
 
+##### 2.2.1 Example - Robot Framework and LLM Synergy 
+
+Generate a Robot Framework script for MFA login with the following steps:
+
+1. Navigate to the login page.
+2. Fill in the username and password.
+3. Generate a TOTP (Time-Based One-Time Password).
+4. Fill in the TOTP code field.
+5. Click the "Sign in" button.
+6. Verify that the login was successful.
+
+Here's a simple prompt to generate the script:
+
+"Generate a Robot Framework script to perform MFA (Multi-Factor Authentication) login. The script should navigate to the login page, fill in the username and password fields, generate a TOTP code using the provided secret, enter the TOTP code, click the 'Sign in' button, and verify that the login was successful by checking the welcome message."
+
+Here's the LLM output Robot Framework script:
+
+```robot
+*** Settings ***
+Library    Browser
+Library    totp.py
+Suite Setup    New Browser    browser=${BROWSER}    headless=${HEADLESS}
+Test Setup    New Context
+Test Teardown    Close Context
+Suite Teardown    Close Browser
+
+*** Variables ***
+${BROWSER}    chromium
+${HEADLESS}    False
+
+*** Test Cases ***
+MFA Login Test
+    Open Browser    https://example.com/login    ${BROWSER}
+    Input Text    id=username    your_username
+    Input Text    id=password    your_password
+    ${totp}    Generate TOTP    your_totp_secret
+    Input Text    id=totpcode    ${totp}
+    Click Button    id=signin_button
+    Wait Until Page Contains Element    xpath=//h1[text()='Welcome!']
+```
+
+Here's the test output:
+
+```
+% robot --pythonpath . tests
+==============================================================================
+Tests                                                                         
+==============================================================================
+Tests.Mfa Login                                                               
+==============================================================================
+Login with MFA                                                        | PASS |
+------------------------------------------------------------------------------
+Tests.Mfa Login                                                       | PASS |
+1 test, 1 passed, 0 failed
+==============================================================================
+Tests                                                                 | PASS |
+1 test, 1 passed, 0 failed
+==============================================================================
+Output:  MFA_Login/output.xml
+Log:     MFA_Login/log.html
+Report:  MFA_Login/report.html
+```
+
 
 #### 2.3 Recommended Prompts for Auto-generated Unit Tests
 
