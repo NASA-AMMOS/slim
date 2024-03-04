@@ -147,7 +147,18 @@ Our recommendation is to leverage LLM-based tools, such as llama2, to quickly ge
 
 - **Unit Tests:**
   - Automatically generated to cover basic functionality and common scenarios. ([Unit Tests in TESTING.md Template](TESTING#L26))
-
+  - Recommended Prompts for Auto-generated Unit Tests: 
+    - **Basic Functionality Testing:**
+      "Generate unit tests for a function/method that performs basic arithmetic operations (addition, subtraction, multiplication, division)."
+    - **Handling Edge Cases:**
+      "Create tests for a function that handles edge cases, such as zero division, boundary values, and unexpected input types."
+    - **String Manipulation:**
+      "Generate unit tests for a function that involves string manipulation, including tests for string concatenation, slicing, and length calculations."
+    - **List/Array Operations:**
+      "Create tests for functions that operate on lists/arrays, covering scenarios like element addition, removal, and list comprehensions."
+    - **Exception Handling:**
+      "Generate unit tests to ensure proper exception handling in functions that may encounter errors. Include tests for both expected and unexpected exceptions."
+  
 - **System Tests:**
   - *Integration Tests:* Verify interactions between components. ([Integration Tests in TESTING.md Template](TESTING#L62))
   - *Performance Tests:* Assess system responsiveness and scalability. ([Performance Tests in TESTING.md Template](TESTING#L114))
@@ -418,23 +429,7 @@ Report:  MFA_Login/report.html
 ```
 
 
-#### 2.3 Recommended Prompts for Auto-generated Unit Tests
 
-- **Basic Functionality Testing:**
-  "Generate unit tests for a function/method that performs basic arithmetic operations (addition, subtraction, multiplication, division)."
-
-- **Handling Edge Cases:**
-  "Create tests for a function that handles edge cases, such as zero division, boundary values, and unexpected input types."
-
-- **String Manipulation:**
-  "Generate unit tests for a function that involves string manipulation, including tests for string concatenation, slicing, and length calculations."
-
-- **List/Array Operations:**
-  "Create tests for functions that operate on lists/arrays, covering scenarios like element addition, removal, and list comprehensions."
-
-- **Exception Handling:**
-  "Generate unit tests to ensure proper exception handling in functions that may encounter errors. Include tests for both expected and unexpected exceptions."
-  
 
 ### 3. Automate Your Tests
 
