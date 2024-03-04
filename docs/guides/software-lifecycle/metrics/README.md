@@ -1,6 +1,6 @@
 # Metrics
 
-<pre align="center">A Comprehensive Guide for Setting up and Configuring Metrics Tracking</pre>
+<pre align="center">A Guide for Configuring and Deploying Software Lifecycle Metrics Tracking.</pre>
 
 ![slim-dashboard](../../../../static/img/slim-dashboard-devlake.png)
 *Example Metrics Dashboard using Apache DevLake*
