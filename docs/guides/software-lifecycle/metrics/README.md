@@ -4,6 +4,7 @@
 
 ![slim-dashboard](../../../../static/img/slim-dashboard-devlake.png)
 *Example Metrics Dashboard using Apache DevLake*
+
 ## Introduction
 
 Metrics collection is important for project management and software quality assurance. We recommend [Apache DevLake](https://devlake.apache.org/) for easy tracking and analysis. This guide simplifies its installation and configuration, especially for developers new to metrics collection.
@@ -12,7 +13,7 @@ Metrics collection is important for project management and software quality assu
 
 - Collecting and analyzing [DORA metrics](https://devlake.apache.org/docs/DORA/) along with many others for your project.
 - Creating a visual dashboard to view metrics from multiple sources (e.g., GitHub, JIRA) in one place.
-- Streamlining the setup and configuration of Apache DevLake through a _single-command_ setup step.
+- Streamlining the setup and configuration of Apache DevLake through a *single-command* setup step.
 - Gain insight into organizational and project performance for software development and the overall software lifecycle.
 
 **Why We Chose Apache DevLake:**
@@ -73,6 +74,7 @@ cd /path/to/your/chosen/deployment/directory
 
 1. Run the **[Quick Start](#quick-start)** steps above.
 2. Once you have a working DevLake instance, we recommend going through DevLake's [official start guide](https://devlake.apache.org/docs/Overview/Introduction/#2-configuring-data-source) step-by-step, beginning with the data sources section.
+3. If you're interested in sharing your dashboards with your community but are unable to host a server, you can export your dashboards by following the instructions provided [here](https://grafana.com/docs/grafana/latest/dashboards/create-reports/).
 
 There are two additional topics we'd like to emphasize. Our recommendations for data sources and metrics to collect.
 
