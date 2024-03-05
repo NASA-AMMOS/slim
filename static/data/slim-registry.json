@@ -168,7 +168,7 @@
   },
   {
     "title": "Metrics Tracking",
-    "uri": "/slim/docs/guides/software-lifecycle/metrics/metrics-starter-kit",
+    "uri": "/slim/docs/guides/software-lifecycle/metrics",
     "category": "metrics tracking",
     "description": "Recommendations for metrics collection and an installation tool for Apache DevLake.",
     "tags": [
