@@ -41,7 +41,7 @@ The purpose of this script is to automate the installation process DevLake recom
 - Secures the setup: generates a unique encryption key for data security.
 - Starts DevLake: uses Docker to initialize the DevLake application in the background and guides you to visit a web address to start using DevLake for data analysis and viewing dashboards.
 
-**Copy and Paste the Below Command in Your Terminal:**
+**Run This Command in Your Terminal and Then Move on to the Next Step of the [Configuration Guide](#step-by-step-configuration-guide):**
 
 ```bash
 cd /path/to/your/chosen/deployment/directory
