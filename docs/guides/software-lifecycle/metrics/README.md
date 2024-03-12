@@ -98,6 +98,9 @@ See [this list](https://devlake.apache.org/docs/Metrics) of metrics on the DevLa
 - **Q:** How do I customize the DevLake Quick Start script for more functionality?
 - **A:** If you have already provided DevLake with a data source, you can further configure your dashboard by following [this guide](https://devlake.apache.org/docs/Configuration/Dashboards/GrafanaUserGuide). Use simple queries to gather the information you need.
 
+- **Q:** How do export the Grafana dashboard to a PDF?
+- **A:** You can use [this](https://github.com/IzakMarais/reporter) tool.
+
 ---
 
 ## Credits
