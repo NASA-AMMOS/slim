@@ -1,169 +1,180 @@
 [
-    { 
-      "title": "GOVERNANCE.md",
-      "uri": "/slim/docs/guides/governance/governance-model", 
-      "category": "governance",
-      "description": "A governance model template seeking to generalize how most government-sponsored open source projects can expect to operate in the open source arena.",
-      "tags": [
-        "governance",
-        "templates",
-        "repository-setup",
-        "github"
-      ]
-    },
-    { 
-      "title": "Secrets Detection", 
-      "uri": "/slim/docs/guides/software-lifecycle/security/secrets-detection", 
-      "category": "software lifecycle",
-      "description": "Detect-secrets is a security tool that scans code repositories to identify and prevent the accidental inclusion of sensitive information, such as API keys or passwords, by utilizing various detection techniques.",
-      "tags": [
-        "software-lifecycle",
-        "security",
-        "testing",
-        "tools"
-      ]
-    },
-    { 
-      "title": "README.md",
-      "uri": "/slim/docs/guides/documentation/readme",
-      "category": "documentation",
-      "description": "A template that can be used to help developers and users understand your repository's project code concisely and clearly.",
-      "tags": [
-        "documentation",
-        "repository-setup",
-        "templates",
-        "github"
-      ]
-    },
-    { 
-      "title": "Issue Ticket Templates",
-      "uri": "/slim/docs/guides/governance/contributions/issue-templates/",
-      "category": "documentation",
-      "description": "Issue tickets templates helping development teams keep the language of bug, feature, and other types of issues readable and consistent.",
-      "tags": [
-        "documentation",
-        "templates",
-        "repository-setup",
-        "github"
-      ]
-    },
-    {
-      "title": "Change Log",
-      "uri": "/slim/docs/guides/documentation/change-log/",
-      "category": "documentation",
-      "description": "A guide on creating and maintaining a human-readable change log for software development projects, emphasizing the importance of a `CHANGELOG.md` file.",
-      "tags": [
-        "documentation",
-        "versioning",
-        "templates",
-        "repository-setup",
-        "github"
-      ]
-    },
-    {
-      "title": "Documentation Hosts",
-      "uri": "/slim/docs/guides/documentation/documentation-hosts/trade-study-hostingdocs-user",
-      "category": "documentation",
-      "description": "A guide on possible use cases and recommended tools for hosting various types of documentation with a call for contributions.",
-      "tags": [
-        "documentation",
-        "trade-studies",
-        "tools"
-      ]
-    },
-    {
-      "title": "Pull Requests",
-      "uri": "/slim/docs/guides/governance/contributions/change-request-templates",
-      "category": "governance",
-      "description": "A guide outlining how to implement a pre-filled pull request template to provide guidance to potential contributors on GitHub.",
-      "tags": [
-        "github",
-        "templates",
-        "governance",
-        "repository-setup"
-      ]
-    },
-    {
-      "title": "Code of Conduct",
-      "uri": "/slim/docs/guides/governance/contributions/code-of-conduct",
-      "category": "governance",
-      "description": "A guide on how to create and implement a code of conduct for project teams, with a specific recommendation to use the Contributor Covenant.",
-      "tags": [
-        "governance",
-        "repository-setup",
-        "github",
-        "templates"
-      ]
-    },
-    {
-      "title": "Contributing Guide",
-      "uri": "/slim/docs/guides/governance/contributions/contributing-guide",
-      "category": "governance",
-      "description": "A detailed guide about creating a contributing guide for your project, featuring a customizable template and instructions on how to use it.",
-      "tags": [
-        "templates",
-        "governance",
-        "repository-setup",
-        "github",
-        "templates"
-      ]
-    },
-    {
-      "title": "Python Starter Kit",
-      "uri": "/slim/docs/guides/software-lifecycle/application-starter-kits/python-starter-kit",
-      "category": "software-lifecycle",
-      "description": "A guide to a complete, deployment-ready Python 3 application that's bundled into a reusable template repository for quick implementation, with integrated build, release, and publish on GitHub.",
-      "tags": [
-        "python",
-        "templates",
-        "repository-setup",
-        "continuous-integration",
-        "github"
-      ]
-    },
-    {
-      "title": "Continuous Integration Frameworks",
-      "uri": "/slim/docs/guides/software-lifecycle/continuous-integration/continuous-integration-frameworks",
-      "category": "software lifecycle",
-      "description": "An overview of different continuous integration frameworks and their use cases.",
-      "tags": [
-        "tools",
-        "continuous-integration",
-        "trade-studies"
-      ]
-    },
-    {
-      "title": "Reference Architectures",
-      "uri": "/slim/docs/guides/software-lifecycle/continuous-integration/reference-architecture",
-      "category": "software lifecycle",
-      "description": "A high-level reference guide for the implementation of continuous integration best practices, detailing structure, component interrelationships, and processes.",
-      "tags": [
-        "continuous-integration",
-        "testing",
-        "versioning",
-        "devops"
-      ]
-    },
-    {
-      "title": "Continuous Testing",
-      "uri": "/slim/docs/guides/software-lifecycle/continuous-testing/",
-      "category": "software lifecycle",
-      "description": "An extensive list of resources and tools for continuous testing including module testing, service endpoint testing, performance testing, and mobile testing among others.",
-      "tags": [
-        "testing",
-        "tools"
-      ]
-    },
-    { 
-      "title": "GitHub Security Best Practices", 
-      "uri": "/slim/docs/guides/software-lifecycle/security/github-security", 
-      "category": "software lifecycle",
-      "description": "Recommendations for enabling GitHub security features for repositories, including using GitHub native tools like CodeQL, code scanning and more.",
-      "tags": [
-        "software-lifecycle",
-        "security",
-        "testing",
-        "tools"
-      ]
-    }
+  {
+    "title": "GOVERNANCE.md",
+    "uri": "/slim/docs/guides/governance/governance-model",
+    "category": "governance",
+    "description": "A governance model template seeking to generalize how most government-sponsored open source projects can expect to operate in the open source arena.",
+    "tags": [
+      "governance",
+      "templates",
+      "repository-setup",
+      "github"
+    ]
+  },
+  {
+    "title": "Secrets Detection",
+    "uri": "/slim/docs/guides/software-lifecycle/security/secrets-detection",
+    "category": "software lifecycle",
+    "description": "Detect-secrets is a security tool that scans code repositories to identify and prevent the accidental inclusion of sensitive information, such as API keys or passwords, by utilizing various detection techniques.",
+    "tags": [
+      "software-lifecycle",
+      "security",
+      "testing",
+      "tools"
+    ]
+  },
+  {
+    "title": "README.md",
+    "uri": "/slim/docs/guides/documentation/readme",
+    "category": "documentation",
+    "description": "A template that can be used to help developers and users understand your repository's project code concisely and clearly.",
+    "tags": [
+      "documentation",
+      "repository-setup",
+      "templates",
+      "github"
+    ]
+  },
+  {
+    "title": "Issue Ticket Templates",
+    "uri": "/slim/docs/guides/governance/contributions/issue-templates/",
+    "category": "documentation",
+    "description": "Issue tickets templates helping development teams keep the language of bug, feature, and other types of issues readable and consistent.",
+    "tags": [
+      "documentation",
+      "templates",
+      "repository-setup",
+      "github"
+    ]
+  },
+  {
+    "title": "Change Log",
+    "uri": "/slim/docs/guides/documentation/change-log/",
+    "category": "documentation",
+    "description": "A guide on creating and maintaining a human-readable change log for software development projects, emphasizing the importance of a `CHANGELOG.md` file.",
+    "tags": [
+      "documentation",
+      "versioning",
+      "templates",
+      "repository-setup",
+      "github"
+    ]
+  },
+  {
+    "title": "Documentation Hosts",
+    "uri": "/slim/docs/guides/documentation/documentation-hosts/trade-study-hostingdocs-user",
+    "category": "documentation",
+    "description": "A guide on possible use cases and recommended tools for hosting various types of documentation with a call for contributions.",
+    "tags": [
+      "documentation",
+      "trade-studies",
+      "tools"
+    ]
+  },
+  {
+    "title": "Pull Requests",
+    "uri": "/slim/docs/guides/governance/contributions/change-request-templates",
+    "category": "governance",
+    "description": "A guide outlining how to implement a pre-filled pull request template to provide guidance to potential contributors on GitHub.",
+    "tags": [
+      "github",
+      "templates",
+      "governance",
+      "repository-setup"
+    ]
+  },
+  {
+    "title": "Code of Conduct",
+    "uri": "/slim/docs/guides/governance/contributions/code-of-conduct",
+    "category": "governance",
+    "description": "A guide on how to create and implement a code of conduct for project teams, with a specific recommendation to use the Contributor Covenant.",
+    "tags": [
+      "governance",
+      "repository-setup",
+      "github",
+      "templates"
+    ]
+  },
+  {
+    "title": "Contributing Guide",
+    "uri": "/slim/docs/guides/governance/contributions/contributing-guide",
+    "category": "governance",
+    "description": "A detailed guide about creating a contributing guide for your project, featuring a customizable template and instructions on how to use it.",
+    "tags": [
+      "templates",
+      "governance",
+      "repository-setup",
+      "github",
+      "templates"
+    ]
+  },
+  {
+    "title": "Python Starter Kit",
+    "uri": "/slim/docs/guides/software-lifecycle/application-starter-kits/python-starter-kit",
+    "category": "software-lifecycle",
+    "description": "A guide to a complete, deployment-ready Python 3 application that's bundled into a reusable template repository for quick implementation, with integrated build, release, and publish on GitHub.",
+    "tags": [
+      "python",
+      "templates",
+      "repository-setup",
+      "continuous-integration",
+      "github"
+    ]
+  },
+  {
+    "title": "Continuous Integration Frameworks",
+    "uri": "/slim/docs/guides/software-lifecycle/continuous-integration/continuous-integration-frameworks",
+    "category": "software lifecycle",
+    "description": "An overview of different continuous integration frameworks and their use cases.",
+    "tags": [
+      "tools",
+      "continuous-integration",
+      "trade-studies"
+    ]
+  },
+  {
+    "title": "Reference Architectures",
+    "uri": "/slim/docs/guides/software-lifecycle/continuous-integration/reference-architecture",
+    "category": "software lifecycle",
+    "description": "A high-level reference guide for the implementation of continuous integration best practices, detailing structure, component interrelationships, and processes.",
+    "tags": [
+      "continuous-integration",
+      "testing",
+      "versioning",
+      "devops"
+    ]
+  },
+  {
+    "title": "Continuous Testing",
+    "uri": "/slim/docs/guides/software-lifecycle/continuous-testing/",
+    "category": "software lifecycle",
+    "description": "An extensive list of resources and tools for continuous testing including module testing, service endpoint testing, performance testing, and mobile testing among others.",
+    "tags": [
+      "testing",
+      "tools"
+    ]
+  },
+  {
+    "title": "GitHub Security Best Practices",
+    "uri": "/slim/docs/guides/software-lifecycle/security/github-security",
+    "category": "software lifecycle",
+    "description": "Recommendations for enabling GitHub security features for repositories, including using GitHub native tools like CodeQL, code scanning and more.",
+    "tags": [
+      "software-lifecycle",
+      "security",
+      "testing",
+      "tools"
+    ]
+  },
+  {
+    "title": "Metrics Tracking",
+    "uri": "/slim/docs/guides/software-lifecycle/metrics",
+    "category": "metrics tracking",
+    "description": "Recommendations for metrics collection and an installation tool for Apache DevLake.",
+    "tags": [
+      "software-lifecycle",
+      "metrics",
+      "tools"
+    ]
+  }
 ]
