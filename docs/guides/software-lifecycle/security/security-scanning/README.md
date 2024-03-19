@@ -1,6 +1,6 @@
 # Security Scanning
 
-<pre align="center">Guide to scan code for security issues.</pre>
+<pre align="center">Guide to code scanning for security issues.</pre>
 
 ## Introduction
 
