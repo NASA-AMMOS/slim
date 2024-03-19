@@ -8,7 +8,8 @@
 
 **Use Cases**:
 - Streamlining Python project setup and configuration.
-- Facilitating the build and release process of Python packages to PyPi.
+- Turn-key code analyses, linting and security scanning.
+- Facilitating publishing of Python packages to PyPi.
 - Update build and release tooling to modern standards using PEP [517](https://peps.python.org/pep-0517/)/[518](https://peps.python.org/pep-0518/) compliant tooling with declarative [TOML-based](https://toml.io/en/) configurations in a `pyproject.toml` file.
 
 ---
@@ -90,14 +91,13 @@ A release kicks off a build and release process in GitHub Actions.
 ## Additional Files
 This starter kit produces several deliverables deployed for distribution:
 * **GitHub**
+  * [PEP 8 compliance report](https://github.com/NASA-AMMOS/slim-starterkit-python/actions/workflows/pylint.yml), [SCRUB code scan and security report](https://github.com/NASA-AMMOS/slim-starterkit-python/actions/workflows/codeql.yml), [secret detection notification](https://github.com/NASA-AMMOS/slim-starterkit-python/actions/workflows/secrets-detection.yml)
   * [Release report with automatic changelog summaries based on commit history.](https://github.com/NASA-AMMOS/slim-starterkit-python/releases/latest)
   * [Tagged build versions corresponding to release versions.](https://github.com/NASA-AMMOS/slim-starterkit-python/tags)
-  * Source distribution:
-    * [Tarball](https://github.com/NASA-AMMOS/slim-starterkit-python/tags/)
-    * [ZIP](https://github.com/NASA-AMMOS/slim-starterkit-python/tags/)
+    * [Tarball](https://github.com/NASA-AMMOS/slim-starterkit-python/tags/) and [ZIP](https://github.com/NASA-AMMOS/slim-starterkit-python/tags/) source distributions
 * **PyPi**
   * [Fully documented site with project links](https://test.pypi.org/project/slim-sample-project/) 
-  * Completely built Python 3 distributions:
+  * Released Python 3 distributions:
     * [Compressed ZIP source code with release hashes](https://test.pypi.org/project/slim-sample-project/#files)
     * [Python wheel](https://test.pypi.org/project/slim-sample-project/#files)
 
@@ -122,6 +122,7 @@ This starter kit produces several deliverables deployed for distribution:
 
 **Authorship**:
 - [John Engelke](https://github.com/jpl-jengelke)
+- [Rishi Verma](https://github.com/riverma)
 
 **Acknowledgements**:
 * Inspiration and practices from modern Python tooling and GitHub CI/CD workflows.
