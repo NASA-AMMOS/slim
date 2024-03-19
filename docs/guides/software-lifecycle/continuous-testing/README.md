@@ -128,14 +128,16 @@ Include specifics about your testing setup in this template section as follows:
 
 Writing comprehensive tests for large software applications can be a time-consuming process. Recent studies suggest that Large Language Models (LLMs) offer a strong solution to automatically generating test files, in some cases being able to cover up to 85% of test scenarios automatically (source: [study](https://arxiv.org/pdf/2305.00418.pdf)). We therefore strongly using LLM automation to generate test cases, which is covered below. 
 
-Our recommendation is to leverage LLM-based tools, such as llama2, to quickly generate initial test code, with developers refining and expanding as necessary. Here's how:
+We recommend leveraging LLM-based tools like [codellama](https://ollama.com/library/codellama) to rapidly generate initial test code, which developers can then refine and expand as needed. The model landscape is evolving rapidly, so we suggest referring to the code model ranking to stay updated on the latest advancements. You can find the ranking at https://huggingface.co/spaces/bigcode/bigcode-models-leaderboard.
+
+Here's how to write your tests leveraging LLM:
 
 1. **Download and Install OLLAMA:**
-   - [OLLAMA](https://github.com/ollama/ollama): A streamlined tool for running LLMs locally.
+   - [OLLAMA](https://github.com/ollama/ollama): A streamlined tool for running various LLMs locally.
 
 3. **Invoke LLM and Generate Test Code:**
    ```bash
-   ollama run llama2 "$(cat ~/app_pack_generator/docker.py)" write a unit test code
+   ollama run llama2 "$(cat ~/app_pack_generator/docker.py) write a unit test code"
    ```
    
 4. **Review and Refine Generated Code:**
