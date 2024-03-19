@@ -38,7 +38,9 @@ graph TD
 ---
 ## Quick Start
 
-The fastest way to get started with Continuous Testing is to have a shared plan of approach for your team. We've created a template `TESTING.md` to help you communicate your testing architecture to existing and new team members to support implementation. Copy/paste our below template, fill it with your testing setup 
+Although there are many steps in setting up a continuous testing architecture, the most important step is to document a shared plan of approach for your team. 
+- **If you already have continuous testing enabled for your project**: we recommend documenting your plan for internal and external team members' benefit within a `TESTING.md`. This will help you communicate your testing architecture so that team members can contribute easily to improve code through additional tests and automation. Copy/paste our below template, fill it with your testing setup. Further steps are detailed in the (#step-by-step) guide section, which we encourage you to also follow to make test writing and automation more efficient.  
+- **If you are brand new to continuous testing**: we recommend starting with our (#step-by-step) guide to set up an efficient continuous testing plan for your project. 
 
 **[⬇️ Download our TESTING.md Template](TESTING)** (see [example](TESTING-example) of template in action)
 
