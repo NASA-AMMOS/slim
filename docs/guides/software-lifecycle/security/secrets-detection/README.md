@@ -4,7 +4,7 @@
 
 ## Introduction
 
-**Background**: Sensitive information like API keys, passwords, or tokens may inadvertently be getting committed into your repository. Such slip-ups can pose significant security risks. We recommend not only scanning for sensitive information recurringly, but preventing sensitive information from getting infused in the first place. To support these goals, we recommend a tool called [detect-secrets](https://github.com/Yelp/detect-secrets) to mitigate these risks. It scans for common sensitive information categories like passwords, high-entropy entries that may contain sensitive information, and a plugin system that supports customization. It's compatible for use in continuous integration pipelines and execution on local-developer machines. It has a "baseline file" approach, leveraging `.secrets.baseline`, that streamlines the management of legitimate secrets and reduces false positives. This helps both new and established projects detect and prevent secrets getting into source code.
+**Background**: Sensitive information like API keys, passwords or tokens may inadvertently be committed to your repository. Such slip-ups can pose significant security risks. We recommend not only recurring scans for sensitive information, but proactively preventing sensitive information from getting infused. To support these goals, we recommend a tool called [detect-secrets](https://github.com/Yelp/detect-secrets) that mitigates these risks. It scans for common sensitive information categories like passwords and other high-entropy values that contain sensitive data. It also provides a plugin system to support additional customization. It's fast for use in continuous integration pipelines and quickly executes on local-developer machines. It has a "baseline file" approach, leveraging `.secrets.baseline`, that streamlines management of legitimate secrets and reduces false positives. This helps both new and established projects detect and prevent secrets getting from entering the code base.
 
 **Use Cases**:
 - Finding and preventing commits of sensitive information such as:
@@ -23,19 +23,17 @@
 ## Prerequisites
 To get the most out of `detect-secrets`, you'll need:
 
-* Python `pip` tool.
+* Python 3 with the `pip` tool installed.
 * (Optional) Familiarity with Python for potential custom plugin development.
-* (Optional) A GitHub repository supporting GitHub Actions
+* (Optional) A GitHub repository supporting GitHub Actions.
 
 ---
-
-
 
 ## Quick Start
 
 1. Install slim-detect-secrets:
   
-  > ℹ️ **Note:** the SLIM project has customized the Detect Secrets tool to identify additional sensitive keywords such as IP addresses, file paths, and AWS information. These additions are currently [under review](https://github.com/Yelp/detect-secrets/pulls/perryzjc) by the detect-secrets team for merger into the main codebase of the tool. Until then, we recommend using our SLIM fork per below. 
+  > ℹ️ **Note:** the SLIM project has customized the Detect Secrets tool to identify additional sensitive keywords such as IP addresses, file paths, and AWS information. These additions are currently [under review](https://github.com/Yelp/detect-secrets/pulls/perryzjc) by the detect-secrets team for merge into the tool's `main` codebase. Until then we recommend using our SLIM fork as described below. 
    
    ```bash
    pip install git+https://github.com/NASA-AMMOS/slim-detect-secrets.git@exp
@@ -53,13 +51,13 @@ To get the most out of `detect-secrets`, you'll need:
    detect-secrets audit .secrets.baseline
    ```
 
-Additional steps like whitelisting, establishing pre-commit hooks or enabling further automation are covered in detail below.
+Additional steps like whitelisting accepted values and false positives, establishing pre-commit hooks and/or enabling further automation are covered in detail below.
 
 ---
 
 ## Step-by-Step Guide
 
-There are three recommended layers of protection we suggest you enable to ensure maximum security. Please see the below sections for details. 
+There are three recommended layers of protection we suggest you enable to ensure comprehensive security. Please see below sections for further details. 
 
 ### Table of Contents
 - [Secrets Detection](#secrets-detection)
@@ -157,95 +155,98 @@ To support this strategy, we recommend the installation of another third party t
 
 ### Layer 3: Server-side Push to GitHub.com
 
-> ⚠️ Warning: the strategy recommended below is currently experimental and may not work as intended. Use with caution. 
-
-This strategy provides a final layer of protection by scanning server-side commits for sensitive information during pull request creation. It leverages the [pre-commit](https://pre-commit.com/#install) tool and [GitHub Action](https://github.com/features/actions). The scan is triggered during a push or pull request and any detected new secrets are reported, while merges or pushes to protected branches are prevented.
+This strategy provides a final layer of protection by scanning server-side commits for sensitive information during pull request creation. It leverages the [pre-commit](https://pre-commit.com/#install) tool and [GitHub Action](https://github.com/features/actions). The scan is triggered during a push or pull request and any detected new secrets are reported while blocking merges or pushes to protected branches.
 
 #### Steps
 1. **Workflow Creation**
-   - The first step is to create a `detect-secrets.yaml` workflow file in the `.github/workflows` directory to define the GitHub action. Copy and paste the below while ensuring the correct branch of your codebase is referenced.
+   - The first step is to create a `detect-secrets.yaml` workflow file in the `.github/workflows` directory to define the GitHub action. Copy and paste the below while ensuring the correct branch of your codebase is referenced. For example (from the [Slim Python Starter Kit](https://github.com/NASA-AMMOS/slim-starterkit-python/blob/main/.github/workflows/secrets-detection.yml)):
   
-     ```yaml
-      name: Secret Detection Workflow
-      on:
-        push:
-          branches:
-            - main
-        pull_request:
-          branches:
-            - main
+```yaml
+name: "Secret Detection"
+on:
+  push:
+    branches: [main, develop]
+  pull_request:
+    # The branches below must be a subset of the branches above
+    branches: [develop]
 
-      jobs:
-        secret-detection:
-          runs-on: ubuntu-latest
-          steps:
-            - name: Checkout code
-              uses: actions/checkout@v2
-
-            - name: Install necessary packages
-              run: |
-                # This is the experimental version of slim-detect-secrets.
-                # It will be updated to the official Yelp/detect-secrets version once the customized plugins are merged.
-                # For more information about slim/detect-secrets, check the following:
-                # 1. https://github.com/NASA-AMMOS/slim-detect-secrets/tree/exp
-                # 2. https://github.com/NASA-AMMOS/slim/blob/d20ee6134a0dc0e0dab11d2d2570e358ef7e4550/continuous-testing/starter-kits/README.md#detect-secrets
-                pip install git+https://github.com/NASA-AMMOS/slim-detect-secrets.git@exp
-                # This library is used for JSON operations.
-                pip install jq
-                
-            - name: Create an initial .secrets.baseline if .secrets.baseline does not exist
-              run: |
-                if [ ! -f .secrets.baseline ]; then
-                  # This generated baseline file will only be temporarily available on the GitHub side and will not appear in the user's local files.
-                  # Scanning an empty folder to generate an initial .secrets.baseline without secrets in the results.
-                  echo "⚠️ No existing .secrets.baseline file detected. Creating a new blank baseline file."
-                  mkdir empty-dir
-                  detect-secrets scan empty-dir > .secrets.baseline
-                  echo "✅ Blank .secrets.baseline file created successfully."
-                  rm -r empty-dir
-                else
-                  echo "✅ Existing .secrets.baseline file detected. No new baseline file will be created."
-                fi
-
-            - name: Scan repository for secrets
-              run: |
-                echo "✅ Scanning repository for new secrets"
-                
-                # backup the list of known secrets
-                cp .secrets.baseline .secrets.new
-                echo "✅ Created backup of known secrets"
-
-                # find the secrets in the repository
-                detect-secrets scan --disable-plugin AbsolutePathDetectorExperimental --baseline .secrets.new --exclude-files '\.secrets.*' --exclude-files '\.git*'
-                echo "✅ Scanned repository for secrets"
-                    
-                # if there is any difference between the known and newly detected secrets, break the build
-                # Function to compare secrets without listing them
-                compare_secrets() { diff <(jq -r '.results | keys[] as $key | "\($key),\(.[$key] | .[] | .hashed_secret)"' "$1" | sort) <(jq -r '.results | keys[] as $key | "\($key),\(.[$key] | .[] | .hashed_secret)"' "$2" | sort) >/dev/null; }
-                echo "✅ Run comparison against baseline secrets file"
-              
-                # Check if there's any difference between the known and newly detected secrets
-                if ! compare_secrets .secrets.baseline .secrets.new; then
-                  echo "⚠️ Attention Required! ⚠️" >&2
-                  echo "New secrets have been detected in your recent commit. Due to security concerns, we cannot display detailed information here and we cannot proceed until this issue is resolved." >&2
-                  echo "" >&2
-                  echo "Please follow the steps below on your local machine to reveal and handle the secrets:" >&2
-                  echo "" >&2
-                  echo "1️⃣ Run the 'detect-secrets' tool on your local machine. This tool will identify and clean up the secrets. You can find detailed instructions at this link: https://nasa-ammos.github.io/slim/continuous-testing/starter-kits/#detect-secrets" >&2
-                  echo "" >&2
-                  echo "2️⃣ After cleaning up the secrets, commit your changes and re-push your update to the repository." >&2
-                  echo "" >&2
-                  echo "Your efforts to maintain the security of our codebase are greatly appreciated!" >&2
-                  exit 1
-                else
-                  echo "✅ No new secrets detected"
-                fi
-     ```
+jobs:
+  secret-detection:
+    name: Secret-Detection
+    runs-on: ubuntu-latest
+    permissions:
+      actions: write
+      contents: read
+      security-events: write
+    steps:
+    - name: Checkout repository
+      uses: actions/checkout@v4
+      with:
+        fetch-depth: 0
+    - name: Upgrade tooling
+      run: |
+        python3 -m pip install --upgrade pip
+        pip install --upgrade git+https://github.com/NASA-AMMOS/slim-detect-secrets.git@exp
+        pip install --upgrade jq
+    - name: Create baseline config
+      run: |
+        if [ ! -f .secrets.baseline ] ; 
+        then
+            # This generated baseline file will only be temporarily available on the GitHub side and will not appear in the user's local files.
+            # Scanning an empty folder to generate an initial .secrets.baseline without secrets in the results.
+            echo "⚠️ No existing .secrets.baseline file detected. Creating a new blank baseline file."
+            mkdir empty-dir
+            detect-secrets scan empty-dir > .secrets.baseline
+            echo "✅ Blank .secrets.baseline file created successfully."
+            rm -r empty-dir
+        else
+            echo "✅ Existing .secrets.baseline file detected. No new baseline file will be created."
+        fi
+    - name: Scan
+      run: |
+        # scripts scan repository for new secrets
+        # backup list of known secrets
+        cp -pr .secrets.baseline .secrets.new
+        # find secrets in the repository
+        detect-secrets scan --disable-plugin AbsolutePathDetectorExperimental --baseline .secrets.new \
+            --exclude-files '\.secrets..*' \
+            --exclude-files '\.git.*' \
+            --exclude-files '\.mypy_cache' \
+            --exclude-files '\.pytest_cache' \
+            --exclude-files '\.tox' \
+            --exclude-files '\.venv' \
+            --exclude-files 'venv' \
+            --exclude-files 'dist' \
+            --exclude-files 'build' \
+            --exclude-files '.*\.egg-info'
+        # break build when new secrets discovered
+        # function compares baseline/new secrets w/o listing results -- success(0) when new secret found
+        compare_secrets() { diff <(jq -r '.results | keys[] as $key | "\($key),\(.[$key] | .[] | .hashed_secret)"' "${1}" | sort) <(jq -r '.results | keys[] as $key | "\($key),\(.[$key] | .[] | .hashed_secret)"' "${2}" | sort) | grep -q '>' ; }
+        # test baseline versus new secret files
+        if compare_secrets .secrets.baseline .secrets.new; 
+        then
+            echo "⚠️ Attention Required! ⚠️" >&2
+            echo "New secrets have been detected in your recent commit. Due to security concerns, we cannot display detailed information here and we cannot proceed until this issue is resolved." >&2
+            echo "" >&2
+            echo "Please follow the steps below on your local machine to reveal and handle the secrets:" >&2
+            echo "" >&2
+            echo "1️⃣ Run the 'detect-secrets' tool on your local machine. This tool will identify and clean up the secrets. You can find detailed instructions at this link: https://nasa-ammos.github.io/slim/continuous-testing/starter-kits/#detect-secrets" >&2
+            echo "" >&2
+            echo "2️⃣ After cleaning up the secrets, commit your changes and re-push your update to the repository." >&2
+            echo "" >&2
+            echo "Your efforts to maintain the security of our codebase are greatly appreciated!" >&2
+            exit 1
+        else
+            echo "🟢 Secrets tests PASSED! 🟢" >&1
+            echo "No new secrets were detected in comparison to any baseline configurations."  >&1
+            exit 0
+        fi 
+```
      > ℹ️  Explanation: The GitHub Action checks out code, installs necessary packages, checks for a baseline file, and scans the repository for secrets. If new secrets are detected, the build fails and provides guidance.
 
 After setting this up, GitHub will run the workflow during pushes or pull requests. If any new secrets are detected, the status check will fail and the user will be notified in the pull request.
 
-> ⚠️ Warning: the check ensures the specific line of code that may have sensitive information is not disclosed publicly in the GitHub Action logs, only a yes / no indication if sensitive information was detected. That being said, it may not be too many steps for an attacker to identify sensitive information. Monitor your pull requests actively to respond and always ensure [Layer 1](#layer-1-full-scan-and-audit-client-side) and [Layer 2](#layer-2-git-commit-scan-client-side) are actively used by your team to prevent issues in the first place.  
+> ⚠️ Warning: The check ensures specific lines of code that may contain sensitive information are not disclosed publicly. In GitHub Action logs only a yes/no indication of sensitive information appears. However, the surface area exists for potential attackers to readily identify sensitive information. Monitor your pull requests actively to respond and always ensure your team actively uses [Layer 1](#layer-1-full-scan-and-audit-client-side) and [Layer 2](#layer-2-git-commit-scan-client-side) to mitigate issues in the first place.  
 
 ---
 
@@ -262,9 +263,13 @@ After setting this up, GitHub will run the workflow during pushes or pull reques
     - _Commit Safely:_ When you're sure all secrets have been removed, you can safely commit your changes. Remember, the Git commit scan (Layer 2) and the server-side push scan (Layer 3) will provide additional layers of checks.
     - _Educate and Prevent:_ To avoid such instances in the future, educate your team on the importance of not committing secrets and the potential risks associated with it. Consider adopting practices or tools that prevent the accidental inclusion of secrets in your codebase.
    
-- Q: **Does detect-secrets scan the entire git history?**
+- Q: **Does detect-secrets scan the entire Git history?**
   
   A: No, it's designed to scan the current state of a project for efficiency.
+
+- Q: **How are commits containing secrets removed permanently from Git history?**
+
+  A: The process of scrubbing errant commits and their content involves a destructive rewrite of repository commit history. Backups are essential and changes must be handled with precision and caution. One solution is to start a new repository from scratch with only the latest cleaned code, thereby negating the need to change existing repository content. Solutions involving more entropy include Git filter commands or well-known cleaning applications, such as [BFG Repo-Cleaner](https://rtyley.github.io/bfg-repo-cleaner/). Because of the risks involved in mutating repository history and content, such changes _always_ must be handled with backups, expertise and extreme care.
 
 - Q: **Where can I find more configurations and options for detect-secrets?**
   
