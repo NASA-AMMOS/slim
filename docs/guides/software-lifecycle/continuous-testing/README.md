@@ -28,6 +28,7 @@ graph TD
 
 ### Use Cases
 
+- Using artificial intelligence tools like large-language models (LLMs) to speed up test writing
 - Establishing a continuous testing plan that coordinates your testing goals
 - Automating as many of your tests as possible to run automatically
 - Providing frequent test results and feedback for development teams
