@@ -176,7 +176,20 @@ sidebar_label: Testing Frameworks
    - For AI/ML Testing
       - [TensorFlow Test](https://www.tensorflow.org/tfx): A testing framework for machine learning models developed using TensorFlow.
 
+- For code coverage
+  - [pytest-cov](https://github.com/pytest-dev/pytest-cov): A pytest plugin that measures code execution and provides coverage reports. It is often used in conjunction with [coveralls-python](https://coveralls-python.readthedocs.io/en/latest/) for publishing coverage stats online. Check out this [example code coverage reporting dashboard](https://coveralls.io/github/unity-sds/unity-py).
+  
+  - [Istanbul](https://istanbul.js.org/): A popular code coverage tool for JavaScript and Node.js projects. It is commonly used alongside the [nyc](https://github.com/istanbuljs/nyc) command-line tool to generate coverage reports in various formats.
+  
+  - [JaCoCo](https://www.eclemma.org/jacoco/) (Java Code Coverage): Widely used for code coverage analysis in Java projects. It provides detailed coverage reports, including line, branch, and method coverage.
+  
+  - [gcov](https://docs.oracle.com/en/operating-systems/oracle-linux/6/porting/ch02s05s01.html): Works alongside the GNU Compiler Collection (GCC) to analyze code coverage in C and C++ applications.
+  
+  - [SimpleCov](https://github.com/colszowka/simplecov): A code coverage analysis tool for Ruby projects. It offers coverage metrics and generates reports in various formats.
+  
+  - [Coverlet](https://github.com/coverlet-coverage/coverlet): A cross-platform code coverage library for .NET applications, particularly in C#. It provides code coverage measurement with various reporting options.
+
+
 - For more comprehensive continuous testing frameworks, please refer to the following links:
-   - [Code Coverage Tools](code-coverage-tools)
    - [OWASP DevSecOps Guideline](https://owasp.org/www-project-devsecops-guideline/latest/)
    - [Static Code Analysis Tools by OWASP](https://owasp.org/www-project-devsecops-guideline/latest/02a-Static-Application-Security-Testing#tools)
