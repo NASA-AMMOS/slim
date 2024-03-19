@@ -126,7 +126,7 @@ Include specifics about your testing setup in this template section as follows:
 
 ### 2. Write Your Tests
 
-Writing comprehensive tests for large software applications can be a time-consuming process. While automatic test code generation tools like Pynguin show promise, they may not yet meet practical needs. Recent studies suggest that Large Language Models (LLMs) offer a viable solution, covering up to 85% of test methods automatically (source: [study](https://arxiv.org/pdf/2305.00418.pdf)).
+Writing comprehensive tests for large software applications can be a time-consuming process. Recent studies suggest that Large Language Models (LLMs) offer a strong solution to automatically generating test files, in some cases being able to cover up to 85% of test scenarios automatically (source: [study](https://arxiv.org/pdf/2305.00418.pdf)). We therefore strongly using LLM automation to generate test cases, which is covered below. 
 
 Our recommendation is to leverage LLM-based tools, such as llama2, to quickly generate initial test code, with developers refining and expanding as necessary. Here's how:
 
