@@ -27,52 +27,48 @@ To get the most out of `SCRUB`, you'll need:
 ## Quick Start
 
 1. Install SCRUB:
-  
-  > ℹ️ **Note:** the SLIM project has customized the SCRUB tool to identify additional sensitive keywords such as IP addresses, file paths, and AWS information. These additions are currently [under review](https://github.com/Yelp/detect-secrets/pulls/perryzjc) by the detect-secrets team for merge into the tool's `main` codebase. Until then we recommend using our SLIM fork as described below. 
-   
+
    ```bash
-   pip install git+https://github.com/NASA-AMMOS/slim-detect-secrets.git@exp
+   pip install --upgrade nasa-scrub
    ```
    
 2. Execute a baseline scan:
 
    ```bash
-   detect-secrets scan --all-files --disable-plugin AbsolutePathDetectorExperimental --exclude-files '\.secrets.*' --exclude-files '\.git*' > .secrets.baseline
+   scrub ...
    ```
 
-3. Review the `.secrets.baseline` file for any detected secrets via an audit:
+3. Review the `foo` file to audit any reported security issues:
 
    ```bash
-   detect-secrets audit .secrets.baseline
+   vi ...
    ```
 
-Additional steps like whitelisting accepted values and false positives, establishing pre-commit hooks and/or enabling further automation are covered in detail below.
+Additional steps such as customizing reports and/or enabling further automation are covered in detail below.
 
 ---
 
 ## Step-by-Step Guide
 
-There are three recommended layers of protection we suggest you enable to ensure comprehensive security. Please see below sections for further details. 
+SCRUB may be run locally or as a CI workflow action, such as in GitHub Actions. Please see below sections for further details. 
 
 ### Table of Contents
-- [Secrets Detection](#secrets-detection)
+- [Security Scanning](#security-scanning)
   - [Introduction](#introduction)
   - [Prerequisites](#prerequisites)
   - [Quick Start](#quick-start)
   - [Step-by-Step Guide](#step-by-step-guide)
     - [Table of Contents](#table-of-contents)
-    - [Layer 1: Full Scan and Audit (Client-side)](#layer-1-full-scan-and-audit-client-side)
+    - [Client-side Scan and Audit](#client-side-scan-and-audit)
       - [Steps](#steps)
-    - [Layer 2: Git Commit Scan (Client-side)](#layer-2-git-commit-scan-client-side)
-      - [Steps](#steps-1)
-    - [Layer 3: Server-side Push to GitHub.com](#layer-3-server-side-push-to-githubcom)
+    - [GitHub.com Actions Analysis on Push and Pull Request](#githubcom-actions-analysis-on-push-and-pull-request)
       - [Steps](#steps-2)
     - [Frequently Asked Questions (FAQ)](#frequently-asked-questions-faq)
   - [Credits](#credits)
   - [Feedback and Contributions](#feedback-and-contributions)
 
 ### Client-side Scan and Audit
-This layer directly scans the developer's local environment using the `detect-secrets` tool. After scanning, a baseline file containing detected secrets is generated. Developers can audit this file for detailed information on detected secrets.
+The developer's local environment is scanned directly using the `SCRUB` tool. After scanning, a report containing detected security issues is generated. Developers can audit this report for detailed information on detected security concerns.
 
 #### Steps
 1. **Installation**
@@ -99,11 +95,11 @@ This layer directly scans the developer's local environment using the `detect-se
      ...
      ```
 
-[View more on SCRUB scanning configuration](https://nasa.github.io/scrub/configuration-inputs.html)
+[View more on advanced SCRUB scan configuration](https://nasa.github.io/scrub/configuration-inputs.html)
 
-> ℹ️ **Note**: If you've marked any secrets as true positives, make sure to remove all references to these secrets and rerun a full scan.
+> ℹ️ **Note**: Any confirmed security issues should be addressed and mitigated before pushing to remote repositories.
 
-### GitHub Actions Analysis on Push and Pull Request
+### GitHub.com Actions Analysis on Push and Pull Request
 
 Code is scanned for security risks within the repository. It leverages [GitHub Action](https://github.com/features/actions). The scan is triggered during a push or pull request and any detected security vulnerabilities are reported while blocking merges or pushes to protected branches.
 
