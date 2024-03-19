@@ -20,7 +20,7 @@ There are three key areas within the software development lifecycle improvement 
 
 ### 1. Ask Our Community
 
-We reach out to community member projects, and solicit input on outstanding process improvement needs, including the respective needs' relative ranking in importance / criticality. A few needs are chosen to focus active contributor time upon - seeking to develop best practice guides, including items such as use case lists, trade-studies, reference architectures and starter kits. 
+We reach out to community member projects, and solicit input on outstanding process improvement needs, including the respective needs' relative ranking in importance / criticality. A few needs are chosen to focus active contributor time upon - seeking to develop best practice guides, including items such as use case lists, trade-studies, reference architectures and starter kits. That being said, any external contributors are free to propose best practice guides to our project at any time in the form of a contribution. See our /slim/docs/contribute/submit-best-practice for more details.  
 
 You can see our current prioritized list of community-ranked best practice development ideas in our [planning board](https://github.com/orgs/NASA-AMMOS/projects/3).
 
