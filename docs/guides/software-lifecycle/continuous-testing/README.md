@@ -148,7 +148,7 @@ Our recommendation is to leverage LLM-based tools, such as llama2, to quickly ge
 
 #### 2.1 Recommended Test Types
 
-- **Unit Tests:**
+##### 2.1.1 Unit Tests
   - Automatically generated to cover basic functionality and common scenarios. ([Unit Tests in TESTING.md Template](TESTING#L26))
   - Recommended Prompts for Auto-generated Unit Tests: 
     - **Basic Functionality Testing:**
