@@ -5,7 +5,7 @@ toc_max_heading_level: 5
 
 # Continuous Testing
 
-<pre align="center">Guidance and automation for implementing continuous testing for your project.</pre>
+<pre align="center">A comprehensive guide to developing a continuous testing plan, implementation, and automation approach for your project using AI tools.</pre>
 
 ## Introduction
 
