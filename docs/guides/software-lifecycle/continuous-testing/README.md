@@ -133,26 +133,76 @@ We recommend leveraging LLM-based tools like [codellama](https://ollama.com/libr
 Here's how to write your tests leveraging LLM:
 
 1. **Download and Install OLLAMA:**
-   - [OLLAMA](https://github.com/ollama/ollama): A streamlined tool for running various LLMs locally.
+   - [OLLAMA](https://ollama.com): A streamlined tool for running various LLMs, like `llama2` and `codellama`, locally. Follow the steps to install this tool locally. 
 
 3. **Invoke LLM and Generate Test Code:**
+   - Example script: https://github.com/nasa/opera-sds-pcm/blob/issue-703/report/dswx-s1-validator/dswx_s1_validator.py
+
    ```bash
-   ollama run llama2 "$(cat ~/app_pack_generator/docker.py) write a unit test code"
+   ollama run codellama "$(cat dswx_s1_validator.py) from the above code, write a unit test for the function get_burst_id. do not explain the code. only provide the unit test script"
    ```
+
+   - The given bash script above utilizes the ollama command to execute the codellama tool, passing it the content of the file dswx_s1_validator.py as an argument within double quotes. This content is retrieved using the cat command. The purpose of this script is to run the llama2 tool on the code provided in dswx_s1_validator.py and generate a unit test specifically for the get_burst_id function within that code.
+
+   - Output looks like this:
+   ```
+    [PYTHON]
+    import re
+    
+    def get_burst_id(granule_id):
+        pattern = r'_T(\d+)-(\d+)-([A-Z]+\d+)_\d+T\d+Z_\d+T\d+Z_S1A_\d+_v\d+\.\d+'
+        match = re.search(pattern, granule_id)
+        if (match):
+            return match.group()
+        else:
+            return None
+    [/PYTHON]
+    [TESTS]
+    # Test data
+    test_data = [
+        ("S1A_IW_GRDH_1SDV_20150729T181324_20150729T181346_012658_019B4C_C", 
+    "T1-16-JYCZ"),
+        ("S1A_IW_GRDH_1SDV_20150729T181324_20150729T181346_012658_019B4C_Q", None),
+        ("S1A_IW_GRDH_1SDV_20150729T181324_20150729T181346_012658_019B4C", None),
+        ("S1A_IW_GRDH_1SDV_20150729T181324_20150729T181346_012658_019B4C_R", 
+    "T1-16-JYCZ"),
+        ("S1A_IW_GRDH_1SDV_20150729T181324_20150729T181346_012658_019B4C_O", None),
+        ("S1A_IW_GRDH_1SDV_20150729T181324_20150729T181346_012658_019B4C_N", None),
+        ("S1A_IW_GRDH_1SDV_20150729T181324_20150729T181346_012658_019B4C_M", None),
+        ("S1A_IW_GRDH_1SDV_20150729T181324_20150729T181346_012658_019B4C_L", None),
+    ]
+    
+    # Test get_burst_id function
+    def test_get_burst_id():
+        for granule, burst in test_data:
+            assert get_burst_id(granule) == burst
+    [/TESTS]
+    [EXAMPLE]
+    # Example usage
+    assert 
+    get_burst_id("S1A_IW_GRDH_1SDV_20150729T181324_20150729T181346_012658_019B4C_N")get_burst_id("S1A_IW_GRDH_1SDV_20150729T181324_20150729T181346_012658_0194C_N") == "T1-16-JYCZ"
+    # Example usage with multiple bursts
+    assert 
+    get_burst_id("S1A_IW_GRDH_1SDV_20150729T181324_20150729T181346_012658_019B4C_N")get_burst_id("S1A_IW_GRDH_1SDV_20150729T181324_20150729T181346_012658_0194C_N") == "T1-16-JYCZ"
+    # Example usage with multiple bursts
+    assert 
+    get_burst_id("S1A_IW_GRDH_1SDV_20150729T181324_20150729T181346_012658_019B4C_M")get_burst_id("S1A_IW_GRDH_1SDV_20150729T181324_20150729T181346_012658_0194C_M") == "T1-16-JYCZ"
+    [/EXAMPLE]
+    ```
    
-4. **Review and Refine Generated Code:**
+5. **Review and Refine Generated Code:**
    - Developers should review the generated code, fixing errors and adding any missing edge cases.
 
-5. **Iterate as Needed:**
+6. **Iterate as Needed:**
    - If necessary, update the prompt and obtain a revised test code. Repeat the process until satisfactory.
 
 **Disclaimer:** While LLMs can generate approximately 80% of test code automatically, developers must verify and refine the remaining 20%, ensuring comprehensive test coverage.
 
-#### 2.1 Recommended Test Types
+#### 2.1 Types of Tests
 
 ##### 2.1.1 Unit Tests
-  - Automatically generated to cover basic functionality and common scenarios. ([Unit Tests in TESTING.md Template](TESTING#L26))
-  - Recommended Prompts for Auto-generated Unit Tests: 
+  - If you recall from earlier in this guide, unit tests cover basic functionality and common scenarios. ([Unit Tests in TESTING.md Template](TESTING#L26)). The following are suggested LLM prompts to use with automated generation. 
+  - Example Prompts for Auto-generated Unit Tests: 
     - **Basic Functionality Testing:**
       "Generate unit tests for a function/method that performs basic arithmetic operations (addition, subtraction, multiplication, division)."
     - **Handling Edge Cases:**
@@ -163,182 +213,49 @@ Here's how to write your tests leveraging LLM:
       "Create tests for functions that operate on lists/arrays, covering scenarios like element addition, removal, and list comprehensions."
     - **Exception Handling:**
       "Generate unit tests to ensure proper exception handling in functions that may encounter errors. Include tests for both expected and unexpected exceptions."
-  
-- **System Tests:**
+    - **Example Generated Unit Test:**
+    ```python
+    % ollama run codellama "Generate unit tests for a function/method that performs basic arithmetic operations (addition, subtraction, multiplication, division)"
+    
+    import unittest
+    
+    class TestArithmeticOperations(unittest.TestCase):
+        def test_addition(self):
+            result = add(2, 3)
+            self.assertEqual(result, 5)
+    
+        def test_subtraction(self):
+            result = subtract(5, 3)
+            self.assertEqual(result, 2)
+    
+        def test_multiplication(self):
+            result = multiply(4, 6)
+            self.assertEqual(result, 24)
+    
+        def test_division(self):
+            result = divide(10, 5)
+            self.assertEqual(result, 2)
+    
+    if __name__ == "__main__":
+        unittest.main()
+    ```
+
+##### 2.1.2 System Tests
   - *Integration Tests:* Verify interactions between components. ([Integration Tests in TESTING.md Template](TESTING#L62))
   - *Performance Tests:* Assess system responsiveness and scalability. ([Performance Tests in TESTING.md Template](TESTING#L114))
   - *Security Tests:* Check for vulnerabilities and adherence to security protocols. ([Security Tests in TESTING.md Template](TESTING#L88))
   - *User Interface Tests:* Ensure intuitive and error-free user experiences. ([User Interface Tests in TESTING.md Template](TESTING#L143))
 
-**Example Generated Unit Test:**
-```python
-import unittest
-
-class TestCalculator(unittest.TestCase):
-    def test_addition(self):
-        # Test addition functionality
-        self.assertEqual(calculator.add(2, 3), 5)
-
-    def test_subtraction(self):
-        # Test subtraction functionality
-        self.assertEqual(calculator.subtract(5, 3), 2)
-```
-
-**Example Generated Integration Test:**
-```python
-import unittest
-
-class TestDatabaseIntegration(unittest.TestCase):
-    def test_database_connection(self):
-        # Test database connection
-        self.assertTrue(database.is_connected())
-
-    def test_data_insertion(self):
-        # Test data insertion into the database
-        self.assertTrue(database.insert_data(data))
-```
-
-**Example Generated Performance Test:**
-```python
-import unittest
-import time
-
-class TestPerformance(unittest.TestCase):
-    def setUp(self):
-        # Setup any necessary resources or configurations
-        pass
-
-    def tearDown(self):
-        # Clean up resources after each test
-        pass
-
-    def test_performance_operation(self):
-        # Measure the performance of a specific operation
-        start_time = time.time()
-
-        # Perform the operation (e.g., sorting a large list)
-        data = list(range(1000000))
-        sorted_data = sorted(data)
-
-        # Calculate the execution time
-        execution_time = time.time() - start_time
-
-        # Define a threshold for acceptable performance
-        threshold = 1.0  # 1 second
-
-        # Assert that the execution time is within the acceptable threshold
-        self.assertLessEqual(execution_time, threshold)
-
-if __name__ == '__main__':
-    unittest.main()
-```
-
-**Example Generated Security Test:**
-```python
-import unittest
-
-class TestSecurity(unittest.TestCase):
-    def setUp(self):
-        # Setup any necessary resources or configurations
-        pass
-
-    def tearDown(self):
-        # Clean up resources after each test
-        pass
-
-    def test_secure_authentication(self):
-        # Simulate a secure authentication process
-        username = "admin"
-        password = "password123"
-
-        # Check if password meets security requirements
-        # For example, minimum length and presence of special characters
-        self.assertTrue(len(password) >= 8)
-        self.assertTrue(any(char.isdigit() for char in password))
-        self.assertTrue(any(char.isupper() for char in password))
-        self.assertTrue(any(char.islower() for char in password))
-        self.assertTrue(any(char in "!@#$%^&*()-_=+[]" for char in password))
-
-        # Check if username is not easily guessable
-        common_usernames = ["admin", "root", "user", "test"]
-        self.assertNotIn(username, common_usernames)
-
-    def test_data_encryption(self):
-        # Simulate data encryption process
-        plaintext_data = "Sensitive information"
-        encrypted_data = encrypt(plaintext_data)
-
-        # Check if the encryption process is secure
-        self.assertNotEqual(plaintext_data, encrypted_data)
-
-    def test_permission_checks(self):
-        # Simulate permission checks for sensitive operations
-        user_role = "admin"
-        operation = "delete_user_data"
-
-        # Check if the user role has permission for the operation
-        self.assertTrue(check_permission(user_role, operation))
-
-if __name__ == '__main__':
-    unittest.main()
-```
-
-**Example Generated UI Test:**
-```python
-import unittest
-
-class TestUserInterface(unittest.TestCase):
-    def setUp(self):
-        # Set up the UI testing environment
-        self.app = create_test_app()  # Function to create a test instance of the application
-        self.client = self.app.test_client()  # Client for interacting with the application
-
-    def tearDown(self):
-        # Clean up after each test
-        pass
-
-    def test_login_page(self):
-        # Test the login page UI elements and functionality
-        response = self.client.get('/login')
-        self.assertEqual(response.status_code, 200)  # Check if the page loads successfully
-        self.assertIn(b'Login', response.data)  # Check if the login form is present
-        self.assertIn(b'Username:', response.data)  # Check if username input field is present
-        self.assertIn(b'Password:', response.data)  # Check if password input field is present
-        self.assertIn(b'Submit', response.data)  # Check if submit button is present
-
-    def test_registration_page(self):
-        # Test the registration page UI elements and functionality
-        response = self.client.get('/register')
-        self.assertEqual(response.status_code, 200)  # Check if the page loads successfully
-        self.assertIn(b'Register', response.data)  # Check if the registration form is present
-        self.assertIn(b'Username:', response.data)  # Check if username input field is present
-        self.assertIn(b'Email:', response.data)  # Check if email input field is present
-        self.assertIn(b'Password:', response.data)  # Check if password input field is present
-        self.assertIn(b'Confirm Password:', response.data)  # Check if confirm password input field is present
-        self.assertIn(b'Register', response.data)  # Check if register button is present
-
-    def test_dashboard_page(self):
-        # Test the dashboard page UI elements and functionality
-        response = self.client.get('/dashboard')
-        self.assertEqual(response.status_code, 200)  # Check if the page loads successfully
-        self.assertIn(b'Dashboard', response.data)  # Check if the dashboard content is present
-        self.assertIn(b'Welcome', response.data)  # Check if the user welcome message is present
-        self.assertIn(b'Logout', response.data)  # Check if the logout link is present
-
-if __name__ == '__main__':
-    unittest.main()
-```
-
-
-**Note:** These are simplified examples; actual test cases may vary depending on the application's complexity and requirements.
-
 
 #### 2.2 Robot Framework and LLM Synergy 
 
-In scenarios where you are already well-versed in **Robot Framework**, leveraging the synergy between Robot Framework and **LLM (Llama2)** can yield significant benefits. Specifically, using LLM to auto-generate Robot Framework pseudocode streamlines the process of creating integration test cases. Here's an example:
+Unit or system-level tests that involve interaction with external software or files can be complicated to test. To help write tests automatically in these scenarios, we recommend leveraging the [**Robot Framework**](https://github.com/robotframework/QuickStartGuide/blob/master/QuickStart.rst) in collaboration with the Large-Language Models to meet the challenge. Specifically, using LLMs to auto-generate Robot Framework pseudocode can help streamline the process of creating integration test cases. Here's an example:
 
 1. **Generating Robot Framework Pseudocode with LLM**:
-    - Use Llama2 to generate test case pseudocode in Robot Framework syntax.
+    - Use Codellama to generate test case pseudocode in Robot Framework syntax.
+        ```
+        % ollama run codellama "Generate a Robot Framework script to perform MFA (Multi-Factor Authentication) login. The script should navigate to the login page, fill in the username and password fields, generate a TOTP code using the provided secret, enter the TOTP code, click the 'Sign in' button, and verify that the login was successful by checking the welcome message."
+        ```
         ```robot
         *** Settings ***
         Documentation    Example test suite
@@ -372,7 +289,7 @@ By combining LLM's natural language capabilities with Robot Framework's structur
 
 ##### 2.2.1 Example - Robot Framework and LLM Synergy 
 
-Generate a Robot Framework script for MFA login with the following steps:
+Generate a Robot Framework script for MFA (Multi-Factor Authentication) login with the following steps:
 
 1. Navigate to the login page.
 2. Fill in the username and password.
@@ -433,7 +350,7 @@ Log:     MFA_Login/log.html
 Report:  MFA_Login/report.html
 ```
 
-
+The quality of generated test code can be compared with the example provided by Robot Framework [here](https://docs.robotframework.org/docs/examples/mfa_login). The website name that you are testing needs to be updated, but other than that, it was perfect! 
 
 
 ### 3. Automate Your Tests
