@@ -12,7 +12,7 @@
 </div>
 
 <pre align="center">A shared community resource for discussing, iterating and referencing a common set of best practices in software development standards for NASA multi-mission space and ground software.</pre>
-
+  
 <!-- Header block for project -->
 
 [![SLIM](https://img.shields.io/badge/Best%20Practices%20from-SLIM-blue)](https://nasa-ammos.github.io/slim/)
@@ -20,7 +20,7 @@
 ![screen-slim](https://github.com/NASA-AMMOS/slim/assets/3129134/d4da5150-aae6-4986-b18e-5c463f8ff38a)
 
 This repository hosts the SLIM website, a project aimed at developing a common set of best practices in software development standards for NASA multi-mission space and ground software. The website leverages Docusaurus 2, a static website generator.  
-
+ 
 [Website](https://nasa-ammos.github.io/slim/) | [Discussion Board](https://github.com/NASA-AMMOS/slim/discussions) | [Issue Tracker](https://github.com/NASA-AMMOS/slim/issues)
 
 ## Features

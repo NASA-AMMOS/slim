@@ -1,3 +1,8 @@
+---
+title: Governance Model (Large Teams)
+sidebar_label: For Large Teams
+---
+
 ````markdown
 # [INSERT PROJECT NAME] Project Governance
 
@@ -7,15 +12,15 @@ The project follows a fairly liberal contribution model where people and/or orga
 
 ## Roles
 
-| Role                                | Restricted To | Description                                                                                                                                                                           | Read/Clone                           | Propose Pull Request                 | Comment in Tickets / Discussions     | Triage                               | Review                               | Commit                               | Technical Decisions                  | Project Decisions                    |
-| ----------------------------------- | ------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ------------------------------------ | ------------------------------------ | ------------------------------------ | ------------------------------------ | ------------------------------------ | ------------------------------------ | ------------------------------------ | ------------------------------------ |
-| User                                | None          | Anyone downloading, deploying, or operating the software to meet a specific objective.                                                                                                | ✅ | ✅ | ✅ | ❌    | ❌    | ❌    | ❌    | ❌    |
-| Contributor                         | None          | Anyone providing input to the project, including: code, issues, documentation, graphics, etc.                                                                                         | ✅ | ✅ | ✅ | ❌    | ❌    | ❌    | ❌    | ❌    |
-| Triager                             | Contributor   | Subset of contributors demonstrating a strong familiarity with the project.                                                                                                           | ✅ | ✅ | ✅ | ✅ | ❌    | ❌    | ❌    | ❌    |
-| Collaborator                        | Contributor   | Subset of contributors granted write access to one or more of the project repositories upon selection by TSC                                                                          | ✅ | ✅ | ✅ | ✅ | ✅ | ✅ | ❌    | ❌    |
-| Technical Steering Committee Member | Collaborator  | A subset of collaborators having technical decision making authority and admin privileges                                                                                             | ✅ | ✅ | ✅ | ✅ | ✅ | ✅ | ✅ | ❌    |
-| Project Steering Committee Member   | Stakeholders  | Sponsor organization representatives (i.e. those providing funding to the project) and key stakeholders with authority to guide project based on requirements, budget, schedule, etc. | ✅ | ✅ | ✅ | ✅ | ✅ | ✅ | ✅ | ✅ |
-| Product Manager                     | Stakeholders  | Overall manager of project with final authority over all key decisions when consensus cannot be reached                                                                                    | ✅ | ✅ | ✅ | ✅ | ✅ | ✅ | ✅ | ✅ |
+| Role                                | Restricted To | Description                                                                                                                                                                           | Read/Clone | Propose Pull Request | Comment in Tickets / Discussions | Triage | Review | Commit | Technical Decisions | Project Decisions |
+| ----------------------------------- | ------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ---------- | -------------------- | -------------------------------- | ------ | ------ | ------ | ------------------- | ----------------- |
+| User                                | None          | Anyone downloading, deploying, or operating the software to meet a specific objective.                                                                                                | ✅         | ✅                   | ✅                               | ❌     | ❌     | ❌     | ❌                  | ❌                |
+| Contributor                         | None          | Anyone providing input to the project, including: code, issues, documentation, graphics, etc.                                                                                         | ✅         | ✅                   | ✅                               | ❌     | ❌     | ❌     | ❌                  | ❌                |
+| Triager                             | Contributor   | Subset of contributors demonstrating a strong familiarity with the project.                                                                                                           | ✅         | ✅                   | ✅                               | ✅     | ❌     | ❌     | ❌                  | ❌                |
+| Committer                           | Committer     | Subset of contributors granted write access to one or more of the project repositories upon selection by TSC                                                                          | ✅         | ✅                   | ✅                               | ✅     | ✅     | ✅     | ❌                  | ❌                |
+| Technical Steering Committee Member | Committer     | A subset of committers having technical decision making authority and admin privileges                                                                                             | ✅         | ✅                   | ✅                               | ✅     | ✅     | ✅     | ✅                  | ❌                |
+| Project Steering Committee Member   | Stakeholders  | Sponsor organization representatives (i.e. those providing funding to the project) and key stakeholders with authority to guide project based on requirements, budget, schedule, etc. | ✅         | ✅                   | ✅                               | ✅     | ✅     | ✅     | ✅                  | ✅                |
+| Product Manager                     | Stakeholders  | Overall manager of project with final authority over all key decisions when consensus cannot be reached                                                                               | ✅         | ✅                   | ✅                               | ✅     | ✅     | ✅     | ✅                  | ✅                |
 
 ### User
 
@@ -34,23 +39,23 @@ Subset of contributors who have demonstrated a strong familiarity with the proje
 
 [List of current Triagers]([INSERT LINK TO GITHUB, GITLAB, ETC. TEAM ASSOCIATED WITH TRIAGERS])
  
-### Collaborator
+### Committer
 
-Subset of contributors who have been given write access to one or more project repositories. Both contributors and collaborators can propose changes to the project via pull requests, but only collaborators can formally review and approve (merge) these requests. Any contributor who has made a non-trivial contribution should be on-boarded as a collaborator in a timely manner. 
+Subset of contributors who have been given write access to one or more project repositories. Both contributors and committer can propose changes to the project via pull requests, but only committers can formally review and approve (merge) these requests. Any contributor who has made a non-trivial contribution should be on-boarded as a committer in a timely manner. 
 
 If you are planning on making a substantial contribution to the project or feel as though you should be given write access to a repository, please send a request to [INSERT LINK TO EMAIL/GITHUB USER HANDLE]
 
-[List of current collaborators]([INSERT LINK TO GITHUB, GITLAB, ETC. TEAM ASSOCIATED WITH COLLABORATORS])
+[List of current committers]([INSERT LINK TO GITHUB, GITLAB, ETC. TEAM ASSOCIATED WITH COMMITTERS])
 
 ### Technical Steering Committee Member
 
-A subset of the collaborators forms the Technical Steering Committee (TSC). The TSC has authority over the following aspects of this project:
+A subset of the committers forms the Technical Steering Committee (TSC). The TSC has authority over the following aspects of this project:
 
 - Technical direction and guidance
 - Committee governance and process 
 - Contribution policy
 - Conduct guidelines
-- Maintaining the list of collaborators
+- Maintaining the list of committers
 
 #### TSC Committee Members
 - [INSERT MEMBER NAME] ([username1]([INSERT LINK TO USERNAME]), [INSERT ORG ASSOCIATION]
@@ -81,7 +86,7 @@ However, the TSC also has the responsibility to interface with and monitor third
 
 Any community member can create an issue or comment asking the TSC to review something. Prior to implementing a substantial contribution, the design of that contribution should be reviewed by at least one member of the TSC. If consensus-seeking fails during the review of a pull request or in design discussions, the issue will be addressed by the TSC to make a determination on direction. TSC members will meet regularly and will keep track of decisions made when consensus was not met. 
 
-The TSC can nominate new members at any time. Candidates for membership tend to be collaborators who have shown great dedication to the project and/or experts in a particular domain or project component. TSC members are expected to be active contributors or members who have made significant contributions within the past 12 months. 
+The TSC can nominate new members at any time. Candidates for membership tend to be committers who have shown great dedication to the project and/or experts in a particular domain or project component. TSC members are expected to be active contributors or members who have made significant contributions within the past 12 months. 
 
 ### Project Management Committee (PMC) Member
 
