@@ -126,16 +126,21 @@ Include specifics about your testing setup in this template section as follows:
 
 ### 2. Write Your Tests
 
-Writing comprehensive tests for large software applications can be a time-consuming process. Recent studies suggest that Large Language Models (LLMs) offer a strong solution to automatically generating test files, in some cases being able to cover up to 85% of test scenarios automatically (source: [study](https://arxiv.org/pdf/2305.00418.pdf)). We therefore strongly using LLM automation to generate test cases, which is covered below. 
+Writing comprehensive tests for large software applications can be a time-consuming process. Recent studies suggest that Large Language Models (LLMs) offer a strong solution to automatically generating test files, in some cases being able to cover up to 85% of test scenarios automatically (source: [study](https://arxiv.org/pdf/2305.00418.pdf)). We therefore strongly recommend using LLM automation to generate test cases, which are covered below. 
 
-We recommend leveraging LLM-based tools like [codellama](https://ollama.com/library/codellama) to rapidly generate initial test code, which developers can then refine and expand as needed. The model landscape is evolving rapidly, so we suggest referring to the code model ranking to stay updated on the latest advancements. You can find the ranking at https://huggingface.co/spaces/bigcode/bigcode-models-leaderboard.
+We recommend leveraging open-source LLM-based tools like [codellama](https://ollama.com/library/codellama) to rapidly generate initial test code, which developers can then refine and expand as needed. These open-source models can run completely locally, so you don't need to worry about data privacy. The model landscape is evolving rapidly, so we suggest referring to the code model ranking to stay updated on the latest advancements. You can find the ranking at https://huggingface.co/spaces/bigcode/bigcode-models-leaderboard.
 
-Here's how to write your tests leveraging LLM:
+For your open-source code that can be shared publicly, consider utilizing cloud-based models like GPT-4, which outperform open-source models (https://paperswithcode.com/sota/code-generation-on-humaneval). 
+
+We recommend adopting different approaches for unit tests and system tests. While unit tests can be efficiently generated directly by LLMs, system tests are better generated using Robot Framework as an intermediary. This approach ensures that system tests are more accurate and easier to manage within the testing framework.
+
+#### 2.1 Unit Tests
+  - For unit tests, please follow the steps below: 
 
 1. **Download and Install OLLAMA:**
    - [OLLAMA](https://ollama.com): A streamlined tool for running various LLMs, like `llama2` and `codellama`, locally. Follow the steps to install this tool locally. 
 
-3. **Invoke LLM and Generate Test Code:**
+2. **Invoke LLM and Generate Test Code:**
    - Example script: https://github.com/nasa/opera-sds-pcm/blob/issue-703/report/dswx-s1-validator/dswx_s1_validator.py
 
    ```bash
@@ -189,19 +194,15 @@ Here's how to write your tests leveraging LLM:
     get_burst_id("S1A_IW_GRDH_1SDV_20150729T181324_20150729T181346_012658_019B4C_M")get_burst_id("S1A_IW_GRDH_1SDV_20150729T181324_20150729T181346_012658_0194C_M") == "T1-16-JYCZ"
     [/EXAMPLE]
     ```
-   
-5. **Review and Refine Generated Code:**
+3. **Review and Refine Generated Code:**
    - Developers should review the generated code, fixing errors and adding any missing edge cases.
 
-6. **Iterate as Needed:**
+4. **Iterate as Needed:**
    - If necessary, update the prompt and obtain a revised test code. Repeat the process until satisfactory.
 
 **Disclaimer:** While LLMs can generate approximately 80% of test code automatically, developers must verify and refine the remaining 20%, ensuring comprehensive test coverage.
 
-#### 2.1 Types of Tests
-
-##### 2.1.1 Unit Tests
-  - If you recall from earlier in this guide, unit tests cover basic functionality and common scenarios. ([Unit Tests in TESTING.md Template](TESTING#L26)). The following are suggested LLM prompts to use with automated generation. 
+The following are suggested LLM prompts to use with automated generation. 
   - Example Prompts for Auto-generated Unit Tests: 
     - **Basic Functionality Testing:**
       "Generate unit tests for a function/method that performs basic arithmetic operations (addition, subtraction, multiplication, division)."
@@ -240,16 +241,9 @@ Here's how to write your tests leveraging LLM:
         unittest.main()
     ```
 
-##### 2.1.2 System Tests
-  - *Integration Tests:* Verify interactions between components. ([Integration Tests in TESTING.md Template](TESTING#L62))
-  - *Performance Tests:* Assess system responsiveness and scalability. ([Performance Tests in TESTING.md Template](TESTING#L114))
-  - *Security Tests:* Check for vulnerabilities and adherence to security protocols. ([Security Tests in TESTING.md Template](TESTING#L88))
-  - *User Interface Tests:* Ensure intuitive and error-free user experiences. ([User Interface Tests in TESTING.md Template](TESTING#L143))
+#### 2.2 System Tests
 
-
-#### 2.2 Robot Framework and LLM Synergy 
-
-Unit or system-level tests that involve interaction with external software or files can be complicated to test. To help write tests automatically in these scenarios, we recommend leveraging the [**Robot Framework**](https://github.com/robotframework/QuickStartGuide/blob/master/QuickStart.rst) in collaboration with the Large-Language Models to meet the challenge. Specifically, using LLMs to auto-generate Robot Framework pseudocode can help streamline the process of creating integration test cases. Here's an example:
+System-level tests that involve interaction with external software or files can be complicated to test. To help write tests automatically in these scenarios, we recommend leveraging the [**Robot Framework**](https://github.com/robotframework/QuickStartGuide/blob/master/QuickStart.rst) in collaboration with the Large-Language Models to meet the challenge. Specifically, using LLMs to auto-generate Robot Framework pseudocode can help streamline the process of creating integration test cases. Here's an example:
 
 1. **Generating Robot Framework Pseudocode with LLM**:
     - Use Codellama to generate test case pseudocode in Robot Framework syntax.
@@ -287,9 +281,7 @@ Unit or system-level tests that involve interaction with external software or fi
 
 By combining LLM's natural language capabilities with Robot Framework's structured format, you can efficiently create and adapt  test cases.
 
-##### 2.2.1 Example - Robot Framework and LLM Synergy 
-
-Generate a Robot Framework script for MFA (Multi-Factor Authentication) login with the following steps:
+Here is an example to generate a Robot Framework script for MFA (Multi-Factor Authentication) login with the following steps:
 
 1. Navigate to the login page.
 2. Fill in the username and password.
