@@ -23,10 +23,10 @@ changelog:
         - governance
     - title: 🔄 Software Lifecycle
       labels:
-        - software-lifecycle
+        - software lifecycle
     - title: 💬 Information Sharing
       labels:
-        - information-sharing
+        - information sharing
     - title: 🌐 Website
       labels:
         - website
@@ -40,6 +40,6 @@ changelog:
           - documentation
           - dependencies
           - governance
-          - software-lifecycle
-          - information-sharing
+          - software lifecycle
+          - information sharing
           - website
