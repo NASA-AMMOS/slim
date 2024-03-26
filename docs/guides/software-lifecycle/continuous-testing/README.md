@@ -571,7 +571,9 @@ You should outline the types of system tests you plan to implement in your `TEST
 
 ##### Integration Tests Automation
 
-TBD - automation to help script tests
+We recommend the following steps for integration tests automation:
+1. Integrate your integration tests into a [Continuous Integration (CI) pipeline](/docs/guides/software-lifecycle/continuous-integration), allowing for automatic execution of tests upon code changes. This helps catch integration issues early and provides rapid feedback to developers.
+2. Ensure that each integration test can run independently without relying on the state or output of other tests. Use proper setup and teardown methods to maintain a clean and consistent test environment for each test case.
 
 ##### Security Tests Automation
 
