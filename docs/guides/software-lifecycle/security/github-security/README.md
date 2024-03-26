@@ -48,7 +48,7 @@ If you do not have organizational permissions or if you wish to customize securi
      - For added security, we suggest turning on Dependabot security updates to automatically generate pull requests for known vulnerabilities in your dependencies.
      - We also recommend enabling Dependabot version updates _if you are using a package manager for your project_. This will help you keep your dependencies up-to-date. To configure Dependabot version updates:
        1. Create a `.github/dependabot.yml` file in your repository.
-       2. Specify the package-ecosystem, directory, schedule and branch to update. For example (from the [Slim Python Starter Kit](https://github.com/NASA-AMMOS/slim-starterkit-python/blob/main/.github/dependabot.yml)):
+       2. Specify the package-ecosystem, directory, schedule and branch to update. For example, the below demonstrates a Python [dependabot.yml](https://github.com/NASA-AMMOS/slim-starterkit-python/blob/main/.github/dependabot.yml) example from the [SLIM Python Starter Kit](https://nasa-ammos.github.io/slim/docs/guides/software-lifecycle/application-starter-kits/python-starter-kit/):
           ```yml
           version: 2
           updates:
