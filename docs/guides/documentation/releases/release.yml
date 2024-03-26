@@ -1,9 +1,3 @@
----
-title: Release Template (GitHub)
-sidebar_label: Release Template (GitHub)
----
-
-```yaml
 # place in .github/release.yml
 
 changelog:
@@ -27,10 +21,9 @@ changelog:
     - title: 💻 Other Changes
       labels:
         - "*"
-      exclude: # place the list of all labels you've categorized aboved to avoid duplication!
+      exclude: # place the list of all labels you've categorized above to avoid duplication!
         labels:
           - enhancement
           - bug
           - documentation
           - dependencies
-```

@@ -21,7 +21,7 @@
 ---
 
 ## Quick Start
-**[⬇️ Recommended GitHub release.yml Template](release.yml.md)**
+**[⬇️ Recommended GitHub release.yml Template](release.yml)**
 
 _A customizable GitHub-specific release template. Customize it to fit your project's labeling scheme and presentation preferences for release notes and place it in your GitHub repository's `.github/release.yml` path._
 
@@ -47,15 +47,15 @@ NOTE: You'll need a configuration file to use the above Python script. See step 
    2.1 Download our script 
    - Copy/download our script to your local machine
       ```
-      curl -o gh_aggregate_release_notes.py https://...
+      curl -o gh_aggregate_release_notes.py https://raw.githubusercontent.com/NASA-AMMOS/slim/issue-97/docs/guides/documentation/releases/gh_aggregate_release_notes.py
       ```
 
    2.2 Create a configuration file with your project's release information. Save the file with extension `.yml` A sample is provided below:
       ```
       github_token: <INSERT YOUR GH PERSONAL TOKEN>
       urls:
-      - https://github.com/NASA-AMMOS/slim/releases/tag/v1.3.0
-      - https://github.com/your-org/your-repo/releases/tag/v1.0.0
+      - https://github.com/your-org/your-repo-1/releases/tag/v1.1.0
+      - https://github.com/your-org/your-repo-2/releases/tag/v2.5.3
       ```
    2.3 Run the script to generate aggregated release notes
       ```
@@ -84,10 +84,11 @@ NOTE: You'll need a configuration file to use the above Python script. See step 
 - [@riverma](https://www.github.com/riverma)
 
 **Acknowledgements**:
-* @hookhua for inspiration to make this guide.
+* [@hookhua](https://github.com/hookhua) for inspiration to make this guide.
+* [HySDS project](https://github.com/hysds) for inspiration and feedback.
   
 ---
 
 ## Feedback and Contributions
 
-We welcome feedback and contributions to help improve and grow this page. Please see our [contribution guidelines](https://github.com/YOUR_REPOSITORY/contributing.md).
+We welcome feedback and contributions to help improve and grow this page. Please see our [contribution guidelines](https://nasa-ammos.github.io/slim/docs/contribute/contributing/).
