@@ -11,7 +11,7 @@ toc_max_heading_level: 5
 
 ### Background 
 
-Continuous testing (CT) is the practice of automatically and continuously testing code changes throughout the development process to identify and address issues *early*. The scope of continuous testing tests can include testing code modules, interaction between software components, security, user interfaces, etc. Implementing continuous testing is often difficult and time-consuming - we therefore recommend a simplified approach to getting started with CT through a templates and by using artificial intelligence tools like large-language models to quickly make a test plan a reality. The goal is to enable your project to identify and fix problems early, before they become major issues, leading to faster releases, improved software quality, and happier users.
+Continuous testing (CT) is the practice of automatically and continuously testing code changes throughout the development process to identify and address issues *early*. The scope of CT includes testing code modules, interaction between software components, security, and user interfaces. Implementing CT is often difficult and time-consuming - we, therefore, recommend a simplified approach to get started with CT through a template and by using artificial intelligence tools like large-language models to quickly make a test plan a reality. The goal is to enable your project to identify and fix problems early, before they become major issues, leading to faster releases, improved software quality, and happier users.
 
 ### Approach
 
