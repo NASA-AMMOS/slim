@@ -12,19 +12,19 @@ Here we present a checklist you can run through for your project, as well as lin
 
 Review your project's repositories, and ensure all have the following (in prioritized order):
 
-| Checklist Item                                                                             | Why?                                                                                   | Done? |
-| -------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------- | ----- |
-| LICENSE                                                                          | Spell out legal terms for software usage & modification                               | ✅ or ❌    |
-| [README](documentation/readme/)                                                  | Provide project overview, setup, & usage instructions                                 | ✅ or ❌    |
-| [Contributing Guide](governance/contributions/contributing-guide)                | Outline how to contribute & the process for submissions                               | ✅ or ❌    |
-| [Code of Conduct](governance/contributions/code-of-conduct)                      | Establish community behavior standards                                               | ✅ or ❌    |
-| [Issue Templates](governance/contributions/issue-templates/)                     | Streamline issue reporting for consistency & clarity                                  | ✅ or ❌    |
-| [Pull Request Templates](governance/contributions/pull-requests/)                | Ensure PRs are comprehensive & adhere to project standards                            | ✅ or ❌    |
-| [Documentation](documentation/documentation-hosts/)                              | Offer detailed info on features, APIs, & customizations not covered in README                               | ✅ or ❌    |
-| [Change Log](documentation/change-log/)                                          | Keep track of all notable changes in each version in a human-readable format                                     | ✅ or ❌    |
-| [Security & Dependency Scanning](software-lifecycle/security/github-security)    | Identify vulnerabilities & outdated dependencies for security                        | ✅ or ❌    |
-| [Sensitive Information Scanning](software-lifecycle/security/secrets-detection/) | Detect accidental commits of sensitive info                   | ✅ or ❌    |
-| [Governance Model](governance/governance-model/)                                 | Define decision-making structure & project leadership for transparency & organization | ✅ or ❌    |
+| Checklist Item                                                                   | Why?                                                                                  | Done?    |
+| -------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------- | -------- |
+| LICENSE                                                                          | Spell out legal terms for software usage & modification                               | ✅ or ❌ |
+| [README](documentation/readme/)                                                  | Provide project overview, setup, & usage instructions                                 | ✅ or ❌ |
+| [Contributing Guide](governance/contributions/contributing-guide)                | Outline how to contribute & the process for submissions                               | ✅ or ❌ |
+| [Code of Conduct](governance/contributions/code-of-conduct)                      | Establish community behavior standards                                                | ✅ or ❌ |
+| [Issue Templates](governance/contributions/issue-templates/)                     | Streamline issue reporting for consistency & clarity                                  | ✅ or ❌ |
+| [Pull Request Templates](governance/contributions/pull-requests/)                | Ensure PRs are comprehensive & adhere to project standards                            | ✅ or ❌ |
+| [Documentation](documentation/documentation-hosts/)                              | Offer detailed info on features, APIs, & customizations not covered in README         | ✅ or ❌ |
+| [Change Log](documentation/change-log/)                                          | Keep track of all notable changes in each version in a human-readable format          | ✅ or ❌ |
+| [Security & Dependency Scanning](software-lifecycle/security/github-security)    | Identify vulnerabilities & outdated dependencies for security                         | ✅ or ❌ |
+| [Sensitive Information Scanning](software-lifecycle/security/secrets-detection/) | Detect accidental commits of sensitive info                                           | ✅ or ❌ |
+| [Governance Model](governance/governance-model/)                                 | Define decision-making structure & project leadership for transparency & organization | ✅ or ❌ |
 
 
 ## Repository Starter Kit
@@ -33,7 +33,7 @@ If you're starting a new project / repository, you can automatically get many of
 
 **🌐 [Repository Starter Kit](https://github.com/nasa-ammos/slim-starterkit)**
 
-### Using GitHub's "Use this template" Button
+### Using our Template Repository
 
 1. **Navigate to the Starter Kit**: Go to the [SLIM Repository Starter Kit](https://github.com/nasa-ammos/slim-starterkit) on GitHub.
 2. **Create Your Repository**: Click the "Use this template" button at the top right of the GitHub repository page.
@@ -43,7 +43,7 @@ If you're starting a new project / repository, you can automatically get many of
 4. **Customize Your Repository**: After creation, go through your new repository and look for files containing the `[INSERT ...]` text. These are placeholders for you to replace with information specific to your project. This includes project name, description, contributing guidelines, etc.
 5. **Push Changes**: Once you've made your customizations, commit and push the changes to your repository to ensure all your project information is up to date.
 
-### Manually Cloning and Using the Repository
+### Manually Cloning and Using the Template
 
 If you prefer to set up your project manually or need more control over the initial setup, follow these steps:
 
