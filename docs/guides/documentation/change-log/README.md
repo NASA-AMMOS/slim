@@ -2,6 +2,10 @@
 
 <pre align="center">A guide for setting up a log to document software changes in a human-centric format.</pre>
 
+![changelog-screenshot-example](/img/changelog-screen.png)
+
+*Example CHANGELOG.md template rendering*
+
 ## Introduction
 
 **Background**: A change log is a vital tool for documenting significant changes in software over time in a format accessible to humans. It plays a critical role in conveying the evolution of software, including additions, deprecations, and removals. This guide outlines the best practices for maintaining a `CHANGELOG.md` file, complementing release pages and enhancing software distribution transparency.
@@ -21,7 +25,7 @@
 
 ## Quick Start
 
-**[⬇️ Keep a Changelog](https://keepachangelog.com/en/1.0.0/#how)**
+**[⬇️ Keep a Changelog](https://keepachangelog.com/en/1.0.0/#how)** ([see example](https://github.com/riverma/terraformly/blob/main/CHANGELOG.md))
 
 Download a template for creating a human-readable change log for your software project.
 
