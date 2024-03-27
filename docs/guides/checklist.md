@@ -29,9 +29,11 @@ Review your project's repositories, and ensure all have the following (in priori
 
 ## Repository Starter Kit
 
-If you're starting a new project / repository, you can automatically get many of the above setup quickly using our:
+If you're starting a new project / repository, you can automatically get many of the above set up quickly using our:
 
 **🌐 [Repository Starter Kit](https://github.com/nasa-ammos/slim-starterkit)**
+
+There's two ways to use the Repository Starter Kit:
 
 ### Using our Template Repository
 
