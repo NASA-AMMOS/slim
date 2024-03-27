@@ -1,6 +1,10 @@
 # Pull Requests
 
-<pre align="center">A walk-through on using our standardized template for pull requests.</pre>
+<pre align="center">A template to standardize pull-requests.</pre>
+
+![pr-screenshot-example](/img/pr-screen.png)
+
+*Example pull request template in action rendering*
 
 ## Introduction
 
@@ -21,7 +25,7 @@
 
 ## Quick Start
 
-**[⬇️ Pull Request Template](PULL_REQUEST_TEMPLATE)**
+**[⬇️ Pull Request Template](PULL_REQUEST_TEMPLATE)** ([see example](https://github.com/riverma/terraformly/blob/main/.github/PULL_REQUEST_TEMPLATE))
 
 Our recommended pull request template for projects.
 

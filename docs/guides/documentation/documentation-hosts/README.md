@@ -2,6 +2,10 @@
 
 <pre align="center">Guidance on selecting and implementing documentation hosting tools.</pre>
 
+![docs-screenshot-example](/img/docs-screen.png)
+
+*Example documentation hosts (no endorsement implied)*
+
 ## Introduction
 
 **Background**: Choosing the right platform for hosting various types of documentation is crucial for project success. This guide explores use cases for different documentation types and recommends tools for hosting user, developer, admin, API docs, and more, aiding in informed decision-making for documentation management.

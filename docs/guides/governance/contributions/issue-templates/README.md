@@ -2,6 +2,10 @@
 
 <pre align="center">Make issue tracking clear and consistent with structured issue templates for your contributors.</pre>
 
+![issue-bug-screenshot-example](/img/issue-bug-screen.png)
+
+*Example bug issue ticket template rendering*
+
 ## Introduction
 
 **Background**: Implementing issue templates in GitHub projects standardizes and clarifies the submission of bug reports, feature requests, and other types of issues. It guides contributors in providing essential details, helping developers understand and address issues more efficiently.
@@ -23,14 +27,16 @@
 ## Quick Start
 
 **Bug Reports:**
-- **[⬇️ Bug Report Template (Markdown)](bug-reports/bug_report)**
-- **[⬇️ Bug Report Template (GitHub Form)](bug-reports/bug_report.yml)**
+- **[⬇️ Bug Report Template (Markdown)](bug-reports/bug_report)** ([see example](https://github.com/riverma/terraformly/issues/new?assignees=&labels=bug&projects=&template=bug_report.md&title=%5BBug%5D%3A+))
+- **[⬇️ Bug Report Template (GitHub Form)](bug-reports/bug_report.yml)** ([see example](https://github.com/riverma/terraformly/issues/new?assignees=&labels=bug&projects=&template=bug_report.yml&title=%5BBug%5D%3A+))
 
 **New Features:**
-- **[⬇️ New Feature Template (Markdown)](features/new_feature)**
-- **[⬇️ New Feature Template (GitHub Form)](features/new_feature.yml)**
+- **[⬇️ New Feature Template (Markdown)](features/new_feature)** ([see example](https://github.com/riverma/terraformly/issues/new?assignees=&labels=enhancement&projects=&template=feature_request.md&title=%5BNew+Feature%5D%3A+))
+- **[⬇️ New Feature Template (GitHub Form)](features/new_feature.yml)** ([see example](https://github.com/riverma/terraformly/issues/new?assignees=&labels=enhancement&projects=&template=feature_request.yml&title=%5BNew+Feature%5D%3A+))
 
-**[📔 GitHub Issue Template Documentation](https://docs.github.com/en/communities/using-templates-to-encourage-useful-issues-and-pull-requests/about-issue-and-pull-request-templates)**
+**Resources: **
+
+**[📔 GitHub Issue Template Documentation](https://docs.github.com/en/communities/using-templates-to-encourage-useful-issues-and-pull-requests/about-issue-and-pull-request-templates)** 
 
 ---
 

@@ -2,6 +2,10 @@
 
 <pre align="center">Establish a project guide for effective open source governance.</pre>
 
+![governance-screenshot-example](/img/governance-screen.png)
+
+*Example GOVERNANCE.md template rendering*
+
 ## Introduction
 
 **Background**: A governance model is essential for government-sponsored open source projects, particularly for medium and large-sized teams. It helps in liberal acceptance of public contributions while retaining decision-making authority with funding sources. This guide provides a template to integrate a generalized governance model into your project, promoting clear operational structure and community engagement.
@@ -22,7 +26,7 @@
 
 ## Quick Start
 
-**[Governance Model Template](GOVERNANCE-TEMPLATE.md)**
+**[Governance Model Template](GOVERNANCE-TEMPLATE.md)** ([see example](https://nasa-ammos.github.io/slim/docs/about/GOVERNANCE/))
 
 Access our recommended template to start integrating a governance model into your project.
 

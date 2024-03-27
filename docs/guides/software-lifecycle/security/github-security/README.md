@@ -2,6 +2,10 @@
 
 <pre align="center">Recommendations for enabling GitHub security features for your repositories.</pre>
 
+![gh-security-screenshot-example](/img/gh-security-screen.png)
+
+*Example GitHub security tools rendering*
+
 ## Introduction
 
 **Background:** GitHub offers a suite of security features to help maintainers and developers protect their code and ensure the safety of their repositories. From automatically detecting vulnerabilities in dependencies to scanning for secrets and setting security policies, these tools are essential for any project, especially in today’s security-conscious environment.
