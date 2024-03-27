@@ -2,6 +2,10 @@
 
 <pre align="center">A walkthrough on setting up a code-of-conduct policy for your project.</pre>
 
+![code-of-conduct-screenshot-example](/img/code-of-conduct-screen.png)
+
+*Example CODE_OF_CONDUCT.md template rendering*
+
 ## Introduction
 
 **Background**: A Code of Conduct is important in setting the standards for interaction within a project team. It promotes a positive community environment, addressing unacceptable behaviors and providing mechanisms for conflict resolution. In this guide, we'll help you bootstrap your project with a recommended a Code of Conduct, notably the Contributor Covenant, which is widely recognized and adopted in open-source communities.
@@ -21,7 +25,7 @@
 
 ## Quick Start
 
-**[⬇️ Contributor Covenant Template](https://www.contributor-covenant.org/version/2/1/code_of_conduct/code_of_conduct.md)**
+**[⬇️ Contributor Covenant Template](https://www.contributor-covenant.org/version/2/1/code_of_conduct/code_of_conduct.md)** ([see example](https://github.com/riverma/terraformly/blob/main/CODE_OF_CONDUCT.md))
 
 Access the standard Contributor Covenant template for a robust Code of Conduct policy to use in your project.
 

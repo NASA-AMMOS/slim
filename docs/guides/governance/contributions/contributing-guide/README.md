@@ -2,6 +2,10 @@
 
 <pre align="center">Fast track developing a contribution guide for your new contributors.</pre>
 
+![contributing-screenshot-example](/img/contributing-screen.png)
+
+*Example CONTRIBUTING.md template rendering*
+
 ## Introduction
 
 **Background**: A well-defined contribution guide is crucial for open-source projects. It helps new contributors understand the expectations and processes for contributing effectively. We walk you through developing a contribution guide for your project via our template, which sets clear standards for contributions and details a recommended process to follow.
@@ -22,7 +26,7 @@
 
 ## Quick Start
 
-**[⬇️ Contributing Guide Template](CONTRIBUTING.md)**
+**[⬇️ Contributing Guide Template](CONTRIBUTING)** ([see example](https://github.com/riverma/terraformly/blob/main/CONTRIBUTING.md))
 
 Download our customizable template to create a contributing guide for your project.
 

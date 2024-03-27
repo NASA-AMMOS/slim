@@ -2,6 +2,10 @@
 
 <pre align="center">A guide to constructing an effective and impressive README for your project.</pre>
 
+![readme-screenshot-example](/img/readme-screen.png)
+
+*Example README.md template rendering*
+
 ## Introduction
 
 **Background**: A well-crafted `README.md` is essential for introducing your software repository. It serves as the first point of contact for developers and users, providing a concise and clear overview. This guide offers a template suitable for various software projects, aiding in the creation of effective README files.
@@ -24,7 +28,7 @@
 
 ## Quick Start
 
-**[⬇️ README Template](README-TEMPLATE)**
+**[⬇️ README Template](README-TEMPLATE)** ([see example](https://github.com/riverma/terraformly/blob/main/README.md))
 
 Download and fill-out our recommended README template to get started on crafting your project's introduction.
 

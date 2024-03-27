@@ -2,6 +2,10 @@
 
 <pre align="center">Guide to identify and automatically prevent leaking of sensitive information into your codebase.</pre>
 
+![secrets-screenshot-example](/img/secrets-screen.png)
+
+*Example secrets scanning rendering*
+
 ## Introduction
 
 **Background**: Sensitive information like API keys, passwords or tokens may be inadvertently committed to your repository. Such slip-ups can pose significant security risks. We recommend not only recurring scans for sensitive information, but proactively preventing sensitive information from getting infused. To support these goals, we recommend a tool called [detect-secrets](https://github.com/Yelp/detect-secrets) that mitigates these risks. It scans for common sensitive information categories like passwords and other high-entropy values that contain sensitive data. It also provides a plugin system to support additional customization. It's fast for use in continuous integration pipelines and quickly executes on local-developer machines. It uses a "baseline file" approach, leveraging `.secrets.baseline`, that streamlines management of legitimate secrets and reduces false positives. This helps both new and established projects detect and prevent secrets from entering the code base.
@@ -58,23 +62,6 @@ Additional steps like whitelisting accepted values and false positives, establis
 ## Step-by-Step Guide
 
 There are three recommended layers of protection we suggest you enable to ensure comprehensive security. Please see below sections for further details. 
-
-### Table of Contents
-- [Secrets Detection](#secrets-detection)
-  - [Introduction](#introduction)
-  - [Prerequisites](#prerequisites)
-  - [Quick Start](#quick-start)
-  - [Step-by-Step Guide](#step-by-step-guide)
-    - [Table of Contents](#table-of-contents)
-    - [Layer 1: Full Scan and Audit (Client-side)](#layer-1-full-scan-and-audit-client-side)
-      - [Steps](#steps)
-    - [Layer 2: Git Commit Scan (Client-side)](#layer-2-git-commit-scan-client-side)
-      - [Steps](#steps-1)
-    - [Layer 3: Server-side Push to GitHub.com](#layer-3-server-side-push-to-githubcom)
-      - [Steps](#steps-2)
-    - [Frequently Asked Questions (FAQ)](#frequently-asked-questions-faq)
-  - [Credits](#credits)
-  - [Feedback and Contributions](#feedback-and-contributions)
 
 ### Layer 1: Full Scan and Audit (Client-side)
 This layer directly scans the developer's local environment using the `detect-secrets` tool. After scanning, a baseline file containing detected secrets is generated. Developers can audit this file for detailed information on detected secrets.
