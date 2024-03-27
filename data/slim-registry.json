@@ -73,7 +73,7 @@
   },
   {
     "title": "Pull Requests",
-    "uri": "/slim/docs/guides/governance/contributions/change-request-templates",
+    "uri": "/slim/docs/guides/governance/contributions/pull-requests",
     "category": "governance",
     "description": "A guide outlining how to implement a pre-filled pull request template to provide guidance to potential contributors on GitHub.",
     "tags": [
