@@ -4,12 +4,15 @@
 
 ## Introduction
 
-**Background**: Software security is critical in modern systems with application code at its root. Identifying and addressing vulnerabilities rapidly mitigates risk and limits the potential surface area of attacks. We recommend [NASA's SCRUB platform](https://github.com/nasa/scrub) to manage code scanning by identifying, orchestrating and aggregating security information. SCRUB's GitHub implementation wraps [CodeQL](https://codeql.github.com/) results into compact, curated reports that highlight security assessments and are suitable for ingestion by automated reporting tools. A small configuration is appended to an existing CodeQL configuration (`codeql-config.yml` file) that specifies security analyses and reporting properties.  
+**Background**: Software security is critical in modern systems with application code at its root. Identifying and addressing vulnerabilities rapidly mitigates risk and limits the potential surface area of attacks. We recommend [NASA's SCRUB platform](https://github.com/nasa/scrub) to manage code scanning by identifying, orchestrating and aggregating security information. SCRUB's GitHub implementation wraps [CodeQL](https://codeql.github.com/) results into compact, curated reports that highlight security assessments and are suitable for ingestion by automated reporting tools. A small configuration is appended to an existing CodeQL configuration (`codeql-config.yml` file) that specifies security analyses and reporting properties.
 
 **Use Cases**:
 - Finding and mitigating security risks in code, such as:
-  - unknown
+  - Improper input validation
+  - Weak encryption
+  - Use of dangerous library functions
 - Scanning local client repositories to identify exploitable security risks.
+- Identifying issues that may be difficult to identify via unit testing.
 - Implementing a reporting loop in continuous integration (CI) pipelines using GitHub Actions to catch unforeseen risks.
 - Streamlining management of known security considerations during codebase audits.
 
@@ -18,48 +21,25 @@
 ## Prerequisites
 To get the most out of `SCRUB`, you'll need:
 
-* Python 3 with the `pip` tool installed.
-* (Optional) Familiarity with BASH and/or Python for potential customizations.
-* (Optional) A GitHub repository supporting GitHub Actions.
-
----
-
-## Quick Start
-
-1. Install SCRUB:
-
-   ```bash
-   pip install --upgrade nasa-scrub
-   ```
-   
-2. Execute a baseline scan:
-
-   ```bash
-   scrub ...
-   ```
-
-3. Review the `foo` file to audit any reported security issues:
-
-   ```bash
-   vi ...
-   ```
-
-Additional steps such as customizing reports and/or enabling further automation are covered in detail below.
+* Python 3 with the `pip` tool installed
+* Static analysis tools installed and ready for use
+   * CodeQL, SonarQube, and Pylint are some common examples
+* (Optional) Familiarity with BASH and/or Python for potential customizations
+* (Optional) A GitHub repository supporting GitHub Actions
 
 ---
 
 ## Step-by-Step Guide
 
-SCRUB may be run locally or as a CI workflow action, such as in GitHub Actions. Please see below sections for further details. 
+SCRUB may be run locally or as a CI workflow action, such as in GitHub Actions. Please see below sections for further details.
 
 ### Table of Contents
 - [Security Scanning](#security-scanning)
   - [Introduction](#introduction)
   - [Prerequisites](#prerequisites)
-  - [Quick Start](#quick-start)
   - [Step-by-Step Guide](#step-by-step-guide)
     - [Table of Contents](#table-of-contents)
-    - [Client-side Scan and Audit](#client-side-scan-and-audit)
+    - [Client-side Scan and Audit](#client-side-scan-and-analysis)
       - [Steps](#steps)
     - [GitHub.com Actions Analysis on Push and Pull Request](#githubcom-actions-analysis-on-push-and-pull-request)
       - [Steps](#steps-2)
@@ -67,7 +47,7 @@ SCRUB may be run locally or as a CI workflow action, such as in GitHub Actions. 
   - [Credits](#credits)
   - [Feedback and Contributions](#feedback-and-contributions)
 
-### Client-side Scan and Audit
+### Client-side Scan and Analysis
 The developer's local environment is scanned directly using the `SCRUB` tool. After scanning, a report containing detected security issues is generated. Developers can audit this report for detailed information on detected security concerns.
 
 #### Steps
@@ -77,23 +57,26 @@ The developer's local environment is scanned directly using the `SCRUB` tool. Af
      pip3 install --upgrade --user nasa-scrub
      ```
 
-2. **Scanning**
-   - Scan all local files from the current directory and output results to a baseline file.
-     ```bash
-     detect-secrets scan --all-files --disable-plugin AbsolutePathDetectorExperimental --exclude-files '\.secrets.*' --exclude-files '\.git*' > .secrets.baseline
+2. **Configuration**
+   - Create a `scrub.cfg` configuration file. This file must be populated with project specific configuration values, depending on the tool that is being used. More information can be found in the [SCRUB documentation](https://nasa.github.io/scrub/configuration.html).
+
+     ``` bash
+     scrub get-conf --output scrub.cfg
      ```
 
-3. **Checking Results**
-   - View the results in the baseline file.
-     ```bash
-     ...
-     ```
+3. **Scanning**
+   - For more information about running SCRUB, refer to the [user documentation](https://nasa.github.io/scrub/usage.html)
 
-4. **Analysis**
-   - Analyze results using the `audit` tool.
-     ```bash
-     ...
-     ```
+    ```bash
+    scrub run
+    ```
+
+4. **Checking Results**
+   - Review the `<tool>.scrub` file to audit any reported security issues:
+
+      ```bash
+      vi .scrub/<tool>.scrub
+      ```
 
 [View more on advanced SCRUB scan configuration](https://nasa.github.io/scrub/configuration-inputs.html)
 
@@ -106,7 +89,11 @@ Code is scanned for security risks within the repository. It leverages [GitHub A
 #### Steps
 1. **Workflow Creation**
    - The first step is to create a `codeql.yaml` workflow file in the `.github/workflows` directory to define the GitHub action. Copy and paste the below while ensuring the correct branch of your codebase is referenced. For example (from the [Slim Python Starter Kit](https://github.com/NASA-AMMOS/slim-starterkit-python/blob/main/.github/workflows/codeql.yml)):
-  
+   - This workflow is based on the default CodeQL workflow file with three modifications:
+      1. Under the *Initialize CodeQL* step, the `queries` entity has been added to enable all of the available security queries
+      2. A new *Post-Process Output* step has been added to generate a CSV output file that may be easily ingested by other systems
+      3. A new *Upload CodeQL Artifacts* step has been added to produce a set of archive files for each run
+
 ```yaml
 name: "CodeQL"
 
@@ -166,7 +153,7 @@ jobs:
 
     - name: Perform CodeQL Analysis
       uses: github/codeql-action/analyze@v3
-    
+
     - name: Post-Process Output
       run: |
         python3 -m pip install nasa-scrub
@@ -184,8 +171,8 @@ jobs:
         python3 -m scrub.tools.parsers.csv_parser $results_dir
 
         echo "RESULTS_DIR=$results_dir" >> $GITHUB_ENV
-        
-      
+
+
     - name: Upload CodeQL Artifacts
       uses: actions/upload-artifact@v4
       with:
@@ -199,7 +186,7 @@ jobs:
 
 After setting this up, GitHub will run the workflow during pushes or pull requests. If any new secrets are detected, the status check will fail and the user will be notified in the pull request.
 
-> ⚠️ Warning: The check ensures specific lines of code that may contain sensitive information are not disclosed publicly. In GitHub Action logs only a yes/no indication of sensitive information appears. However, the surface area exists for potential attackers to readily identify sensitive information. Monitor your pull requests actively to respond and always ensure your team actively uses [Layer 1](#layer-1-full-scan-and-audit-client-side) and [Layer 2](#layer-2-git-commit-scan-client-side) to mitigate issues in the first place.  
+> ⚠️ Warning: The check ensures specific lines of code that may contain sensitive information are not disclosed publicly. In GitHub Action logs only a yes/no indication of sensitive information appears. However, the surface area exists for potential attackers to readily identify sensitive information. Monitor your pull requests actively to respond and always ensure your team actively uses [Layer 1](#layer-1-full-scan-and-audit-client-side) and [Layer 2](#layer-2-git-commit-scan-client-side) to mitigate issues in the first place.
 
 ---
 
@@ -208,21 +195,22 @@ After setting this up, GitHub will run the workflow during pushes or pull reques
 - Q: **If security concerns are detected in my code, what should I do?**
 
   A: Follow these steps:
-  
-    - _Identify and Confirm:_ 
-    - _Mitigate:_ .
-    - _Validate Scans:_ .
-    - _Commit:_ .
-    - _Educate and Prevent:_ To avoid such instances in the future, educate your team on the importance of code security and potential risks. Consider adopting practices or tools that identify risks early in development cycles.
-   
+    1. _Identify and Confirm:_ The first step is to confirm if the vulnerability is actually valid. Static analysis is not perfect and can sometimes generate false positives. Try to refrain from assessing severity and instead focus on determining the accuracy of the finding.
+    2. _Assess Severity:_ After you have confirmed that the vulnerability is valid, now it's time to assess severity. This generally means answering two questions: "How difficult is this vulnerability to exploit?" and "What are the consequences if this vulnerability is exploited?" This is often a fairly nuanced discussion, but the overall goal is a thoughtful assessment of potential risks.
+    3. _Mitigate:_ The next step is to decide what action is required. In an ideal world all security vulnerabilities would be addressed, but this is often not a reasonable expectation. Sometimes the risk posed by a vulnerability is low and the effort the rectify is high, so the risk is acceptable. Mitigations can take many forms and can range from accepting the risk (e.g. doing nothing) to fully rewriting modules to address the vulnerability.
+    4. _Validate Scans:_ After a mitigation is in place, we need to confirm that the vulnerability has been closed. This can be done by rerunning the static analysis scan or implementing new unit test cases. Validation is completed
+    5. _Commit:_ At this point you're ready to commit your code changes. Merge as you normally would. You may want to call out the security specific nature in your commit message to make users aware of the criticality.
+    6. _Educate and Prevent:_ To avoid such instances in the future, educate your team on the importance of code security and potential risks. Consider adopting practices or tools that identify risks early in development cycles. You may also consider if it would be helpful to modify your project's coding standard to improve code quality.
+
+
 - Q: **Where can I find more configurations and options for `SCRUB`?**
-  
+
   A: Refer to the official documentation for [SCRUB](https://nasa.github.io/scrub).
 
 
 ---
 
-## Credits 
+## Credits
 
 **Authorship**:
 - Lyle Barner [@lylebarner](https://github.com/lylebarner)
