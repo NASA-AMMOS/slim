@@ -602,11 +602,18 @@ We recommend the following steps for user interface test automation:
 
 ### 4. Maintain Your Tests
 
-Here are some best practices for maintaining your tests:
-1. Modular Test Design: Follow a modular test design approach by separating the test logic, test data, and page objects or UI elements.
-2. Continuous Integration (CI): Integrate your tests into a CI pipeline, which automatically executes the tests whenever changes are made to the codebase.
-3. Regression Testing: Establish a regression testing strategy to ensure that new changes or updates do not break existing functionality.
-4. Continuous Improvement: Regularly review and refactor your tests to ensure they remain maintainable and efficient.
+Here are the triggers of test maintenance: 
+1. Whenever **code changes** occur (e.g., new features, bug fixes, refactoring), revisit related tests.
+2. When **new developers** join a project, educating them about existing tests (documented in [TESTING.md](TESTING)) ensures consistent testing practices.
+3. **Upgrading libraries, frameworks, or testing tools** may necessitate adjustments to existing tests.
+4. As your **application data evolves**, ensure test data remains relevant.
+5. Use [code coverage tools](testing-frameworks) to identify **underused or obsolete tests**.
+
+This is the list of items to be maintained:
+1. [TESTING.md](TESTING)
+2. [Unit tests](#21-unit-tests)
+3. [System tests](#22-system-tests)
+4. [Test automation](#3-automate-your-tests)
 
 ---
 
