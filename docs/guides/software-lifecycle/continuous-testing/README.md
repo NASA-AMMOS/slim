@@ -39,7 +39,7 @@ graph TD
 ## Quick Start
 
 Although there are many steps in setting up a continuous testing architecture, the most important step is to document a shared plan of approach for your team. 
-- **If you already have continuous testing enabled for your project**: we recommend documenting your plan for internal and external team members' benefit within a `TESTING.md`. This will help you communicate your testing architecture so that team members can contribute easily to improve code through additional tests and automation. Copy/paste our below template, fill it with your testing setup. Further steps are detailed in the (#step-by-step) guide section, which we encourage you to also follow to make test writing and automation more efficient.  
+- **If you already have continuous testing enabled for your project**: we recommend documenting your plan for internal and external team members' benefit within a `TESTING.md`. This will help you communicate your testing architecture so that team members can contribute easily to improve code through additional tests and automation. Copy/paste our below template and fill it in with your testing setup. Further steps are detailed in the (#step-by-step) guide section, which we encourage you to follow to make test writing and automation more efficient.  
 - **If you are brand new to continuous testing**: we recommend starting with our (#step-by-step) guide to set up an efficient continuous testing plan for your project. 
 
 **[⬇️ Download our TESTING.md Template](TESTING)** (see [example](TESTING-example) of template in action)
@@ -74,7 +74,7 @@ Scroll to the "Types of Testing" section within your `TESTING.md` and begin chec
 
 #### 1.2 Unit Testing
 
-In this section you'll want to explain how unit tests are structured within your project, including where they are stored (e.g., /tests/unit), and how frequently they are run. Mention the unit testing framework you're using (e.g., Jest, NUnit), and provide guidelines or a link to best practices for writing unit tests. This section is important for ensuring that new contributors understand how to write and run unit tests in your project.
+In this section you'll want to explain how unit tests are structured within your project, including where they are stored (e.g., /tests/unit), and how frequently they are run. Mention the unit testing framework you're using (e.g., Jest, NUnit), and provide guidelines or a link to best practices for writing unit tests. This section is important for ensuring new contributors understand how to write and run unit tests in your project.
 
 Include specifics about your testing setup in this template section as follows:
 
@@ -85,7 +85,7 @@ Include specifics about your testing setup in this template section as follows:
 
 #### 1.3 System Tests
 
-System Tests help verify your final application meets end-user needs in a finalized form. There are a couple of recommendations we have for performing system tests.
+System Tests help verify that your final application meets end-user needs in a finalized form. We have a couple of recommendations for performing system tests.
 
 ##### Integration Tests
 
