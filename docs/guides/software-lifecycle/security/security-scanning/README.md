@@ -33,20 +33,6 @@ To get the most out of `SCRUB`, you'll need:
 
 SCRUB may be run locally or as a CI workflow action, such as in GitHub Actions. Please see below sections for further details.
 
-### Table of Contents
-- [Security Scanning](#security-scanning)
-  - [Introduction](#introduction)
-  - [Prerequisites](#prerequisites)
-  - [Step-by-Step Guide](#step-by-step-guide)
-    - [Table of Contents](#table-of-contents)
-    - [Client-side Scan and Audit](#client-side-scan-and-analysis)
-      - [Steps](#steps)
-    - [GitHub.com Actions Analysis on Push and Pull Request](#githubcom-actions-analysis-on-push-and-pull-request)
-      - [Steps](#steps-2)
-    - [Frequently Asked Questions (FAQ)](#frequently-asked-questions-faq)
-  - [Credits](#credits)
-  - [Feedback and Contributions](#feedback-and-contributions)
-
 ### Client-side Scan and Analysis
 The developer's local environment is scanned directly using the `SCRUB` tool. After scanning, a report containing detected security issues is generated. Developers can audit this report for detailed information on detected security concerns.
 
