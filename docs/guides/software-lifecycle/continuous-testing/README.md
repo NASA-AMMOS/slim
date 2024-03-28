@@ -546,10 +546,12 @@ graph TD
     end
 
     Code --> UnitTests
+    style UnitTests fill:#f9f
     UnitTests -->|Yes| BuildComponents
     UnitTests -->|No| Code
     BuildComponents --> PublishArtifacts
     SingleIntegratedBuild -->|Yes| BuildIntegratedSoftware
+    style SingleIntegratedBuild fill:#f9f
     PublishArtifacts --> BuildIntegratedSoftware
     BuildIntegratedSoftware --> PublishIntegratedArtifact
     PullArtifacts --> DeployRelease
