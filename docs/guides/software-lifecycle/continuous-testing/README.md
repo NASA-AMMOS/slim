@@ -523,7 +523,7 @@ To aid in the automation of system tests, we suggest doing the following:
 3. Pull built or packaged artifacts from repositories and deploy software release (components or single package) to a virtualized environment
 4. Test the deployed release against a set of specified system tests
 
-The diagram below illustrates this concept:
+The diagram below illustrates this concept (Continuous Testing parts are highlighted in pink):
 
 ```mermaid
 graph TD
@@ -571,29 +571,34 @@ You should outline the types of system tests you plan to implement in your `TEST
 - Testing for performance and load
 - Testing user interfaces for gaps and compliance against policies
 
-##### Integration Tests Automation
+##### Integration Test Automation
 
-We recommend the following steps for integration tests automation:
-1. Integrate your integration tests into a [Continuous Integration (CI) pipeline](/docs/guides/software-lifecycle/continuous-integration), allowing for automatic execution of tests upon code changes.
-2. Ensure that each integration test can run independently without relying on the state or output of other tests. 
+We recommend the following steps: 
+1. Integrate your integration tests into a [Continuous Integration (CI) pipeline](/docs/guides/software-lifecycle/continuous-integration), allowing for automatic execution of tests upon code changes. 
+2. Follow the process of above [diagram](#32-system-test-automation) for integration test automation.
+3. Take a look at the following [Playbook](https://microsoft.github.io/code-with-engineering-playbook/automated-testing/integration-testing/) for more information about applying integration testing. 
 
-##### Security Tests Automation
+
+##### Security Test Automation
 
 To aid in security testing automation, we recommend two steps:
 1. Add security testing to your developers' local coding environment via pre-commit (see [Unit Test Automation](#31-unit-test-automation) section above)
 2. Enable existing [SLIM security best practices](/slim/docs/category/security) as part of your software development workflow.
 
-##### Performance Tests Automation
+##### Performance Test Automation
 
 We recommend the following steps for performance test automation:
 1. Integrate performance tests into your Continuous Integration and Continuous Delivery (CI/CD) pipeline to enable regular and automated execution of performance tests as part of the software delivery process.
-2. Implement assertions or checks that flag any deviations from the baseline performance that exceed a predefined threshold. These assertions can be based on various metrics, such as response time deviations, throughput degradation, or resource utilization spikes.
+2. Refer to the [Testing Frameworks](testing-frameworks) page for performance test tools and frameworks.
+3. Take a look at the following [Playbook](https://microsoft.github.io/code-with-engineering-playbook/automated-testing/performance-testing/) for more information about applying performance testing.
 
-##### User Interface Tests Automation
+##### User Interface Test Automation
 
 We recommend the following steps for user interface test automation: 
 1. Set up a CI pipeline to automatically trigger UI test execution upon code changes or at scheduled intervals.
-2. Implement parallel test execution to automatically run multiple tests simultaneously and reduce overall execution time.
+2. Refer to the [Testing Frameworks](testing-frameworks) page for user interface test tools and frameworks.
+3. Take a look at the following [Playbook](https://microsoft.github.io/code-with-engineering-playbook/automated-testing/ui-testing/) for more information about applying user interface testing.
+
 
 ### 4. Maintain Your Tests
 
