@@ -63,7 +63,7 @@ NOTE: You'll need a configuration file to use the above Python script. See step 
       ```
 
    2.3 Review your aggregated release notes
-   - Your aggregated release notes should be printed to standard out
+   - Your aggregated release notes should be printed to standard output (`stdout`)
 
 3. **Set Up Notifications**:
    - Integrate GitHub with your IM channels, such as Slack, for example installing and configuring extensions like: [GitHub's Slack integration](https://slack.github.com).
