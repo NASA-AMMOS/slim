@@ -47,7 +47,7 @@ NOTE: You'll need a configuration file to use the above Python script. See step 
    2.1 Download our script 
    - Copy/download our script to your local machine
       ```
-      curl -o gh_aggregate_release_notes.py https://raw.githubusercontent.com/NASA-AMMOS/slim/issue-97/docs/guides/documentation/releases/gh_aggregate_release_notes.py
+      curl --output gh_aggregate_release_notes.py https://raw.githubusercontent.com/NASA-AMMOS/slim/issue-97/docs/guides/documentation/releases/gh_aggregate_release_notes.py
       ```
 
    2.2 Create a configuration file with your project's release information. Save the file with extension `.yml` A sample is provided below:
