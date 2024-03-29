@@ -46,7 +46,11 @@ Although there are many steps in setting up a continuous testing architecture, t
 - **If you already have continuous testing enabled for your project**: we recommend documenting your plan for internal and external team members' benefit within a `TESTING.md`. This will help you communicate your testing architecture so that team members can contribute easily to improve code through additional tests and automation. Copy/paste our below template and fill it in with your testing setup. Further steps are detailed in the (#step-by-step) guide section, which we encourage you to follow to make test writing and automation more efficient.  
 - **If you are brand new to continuous testing**: we recommend starting with our (#step-by-step) guide to set up an efficient continuous testing plan for your project. 
 
-**[⬇️ Download our TESTING.md Template](TESTING)** (see [example](TESTING-example) of template in action)
+- **[⬇️ Download our TESTING.md Template](TESTING)** (see [example](TESTING-example) of template in action)
+- **📝 Run a Large Language Model (LLM) to generate unit tests automatically** (see [example](#21-unit-tests) of unit test script generation)
+- **🤖 Run an LLM to generate a Robot Framework pseudocode automatically for system tests** (see [example](#22-system-tests) of system test script generation)
+- **🚀 Tie continuous testing scripts all together with a continuous integration pipeline**
+
 
 ---
 
