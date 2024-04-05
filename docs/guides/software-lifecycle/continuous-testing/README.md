@@ -48,9 +48,9 @@ Although there are many steps in setting up a continuous testing architecture, t
 
 **[⬇️ Download our TESTING.md Template](TESTING)** (see [example](TESTING-example) of template in action)
 
-**📝 Run a Large Language Model (LLM) to generate unit tests automatically** (see [example](#21-unit-tests) of unit test script generation)
+**📝 Generate unit tests automatically using a Large Language Model (LLM), such as [codellama](https://ollama.com/library/codellama) via [ollama](https://ollama.com)** (see [example](#21-unit-tests) of unit test script generation)
 
-**🤖 Run an LLM to generate a Robot Framework pseudocode automatically for system tests** (see [example](#22-system-tests) of system test script generation)
+**🤖 Generate system tests automatically using an LLM, such as [codellama](https://ollama.com/library/codellama) via [ollama](https://ollama.com) and [Robot Framework](https://github.com/robotframework/QuickStartGuide/blob/master/QuickStart.rst)** (see [example](#22-system-tests) of system test script generation)
 
 **🚀 Tie continuous testing scripts all together with a continuous integration pipeline**
 
