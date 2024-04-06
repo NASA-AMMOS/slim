@@ -534,7 +534,7 @@ To aid in the automation of system tests, we suggest doing the following:
 3. Pull built or packaged artifacts from repositories and deploy software release (components or single package) to a virtualized environment
 4. Test the deployed release against a set of specified system tests
 
-The diagram below illustrates this concept (Continuous Testing parts are highlighted in pink):
+The diagram below illustrates this concept (Continuous Testing parts are highlighted in blue):
 
 ```mermaid
 graph TD
