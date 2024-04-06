@@ -46,13 +46,13 @@ Although there are many steps in setting up a continuous testing architecture, t
 - **If you already have continuous testing enabled for your project**: we recommend documenting your plan for internal and external team members' benefit within a `TESTING.md`. This will help you communicate your testing architecture so that team members can contribute easily to improve code through additional tests and automation. Copy/paste our below template and fill it in with your testing setup. Further steps are detailed in the (#step-by-step) guide section, which we encourage you to follow to make test writing and automation more efficient.  
 - **If you are brand new to continuous testing**: we recommend starting with our (#step-by-step) guide to set up an efficient continuous testing plan for your project. 
 
-**[⬇️ Download our TESTING.md Template](TESTING)** (see [example](TESTING-example) of template in action)
+**[⬇️ Download and setup a TESTING.md Test Plan](TESTING)** (see [example](TESTING-example) of template in action)
 
 **📝 Generate unit tests automatically using a Large Language Model (LLM), such as [codellama](https://ollama.com/library/codellama) via [ollama](https://ollama.com)** (see [example](#21-unit-tests) of unit test script generation)
 
 **🤖 Generate system tests automatically using an LLM, such as [codellama](https://ollama.com/library/codellama) via [ollama](https://ollama.com) and [Robot Framework](https://github.com/robotframework/QuickStartGuide/blob/master/QuickStart.rst)** (see [example](#22-system-tests) of system test script generation)
 
-**🚀 Tie continuous testing scripts all together with a continuous integration pipeline**
+**🚀 Tie continuous testing scripts all together with a [continuous integration pipeline](/docs/guides/software-lifecycle/continuous-integration)**
 
 
 ---
@@ -557,12 +557,12 @@ graph TD
     end
 
     Code --> UnitTests
-    style UnitTests fill:#f9f
+    style UnitTests fill:#f9f, stroke:#333
     UnitTests -->|Yes| BuildComponents
     UnitTests -->|No| Code
     BuildComponents --> PublishArtifacts
     SingleIntegratedBuild -->|Yes| BuildIntegratedSoftware
-    style SingleIntegratedBuild fill:#f9f
+    style SingleIntegratedBuild fill:#f9f, stroke:#333
     PublishArtifacts --> BuildIntegratedSoftware
     BuildIntegratedSoftware --> PublishIntegratedArtifact
     PullArtifacts --> DeployRelease
