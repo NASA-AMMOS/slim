@@ -585,9 +585,9 @@ You should outline the types of system tests you plan to implement in your `TEST
 ##### Integration Test Automation
 
 We recommend the following steps: 
-1. Integrate your integration tests into a [Continuous Integration (CI) pipeline](/docs/guides/software-lifecycle/continuous-integration), allowing for automatic execution of tests upon code changes. 
+1. Take a look at the following external [guide](https://microsoft.github.io/code-with-engineering-playbook/automated-testing/integration-testing/) from Microsoft Engineering Fundamentals for more information about applying integration testing.
 2. Follow the process of above [diagram](#32-system-test-automation) for integration test automation.
-3. Take a look at the following [Playbook](https://microsoft.github.io/code-with-engineering-playbook/automated-testing/integration-testing/) for more information about applying integration testing. 
+3. Integrate your integration tests into a [Continuous Integration (CI) pipeline](/docs/guides/software-lifecycle/continuous-integration), allowing for automatic execution of tests upon code changes. 
 
 
 ##### Security Test Automation
@@ -599,26 +599,25 @@ To aid in security testing automation, we recommend two steps:
 ##### Performance Test Automation
 
 We recommend the following steps for performance test automation:
-1. Integrate performance tests into your Continuous Integration and Continuous Delivery (CI/CD) pipeline to enable regular and automated execution of performance tests as part of the software delivery process.
+1. Take a look at the following external [guide](https://microsoft.github.io/code-with-engineering-playbook/automated-testing/performance-testing/) from Microsoft Engineering Fundamentals for more information about applying performance testing.
 2. Refer to the [Testing Frameworks](testing-frameworks) page for performance test tools and frameworks.
-3. Take a look at the following [Playbook](https://microsoft.github.io/code-with-engineering-playbook/automated-testing/performance-testing/) for more information about applying performance testing.
+3. Integrate performance tests into your Continuous Integration and Continuous Delivery (CI/CD) pipeline to enable regular and automated execution of performance tests as part of the software delivery process.
 
 ##### User Interface Test Automation
 
 We recommend the following steps for user interface test automation: 
-1. Set up a CI pipeline to automatically trigger UI test execution upon code changes or at scheduled intervals.
+1. Take a look at the following external [guide](https://microsoft.github.io/code-with-engineering-playbook/automated-testing/ui-testing/) from Microsoft Engineering Fundamentals for more information about applying user interface testing.
 2. Refer to the [Testing Frameworks](testing-frameworks) page for user interface test tools and frameworks.
-3. Take a look at the following [Playbook](https://microsoft.github.io/code-with-engineering-playbook/automated-testing/ui-testing/) for more information about applying user interface testing.
+3. Set up a CI pipeline to automatically trigger UI test execution upon code changes or at scheduled intervals.
 
 
 ### 4. Maintain Your Tests
 
-Here are the triggers of test maintenance: 
+Your tests should be updated, at minimum, upon the following events: 
 1. Whenever **code changes** occur (e.g., new features, bug fixes, refactoring), revisit related tests.
-2. When **new developers** join a project, educating them about existing tests (documented in [TESTING.md](TESTING)) ensures consistent testing practices.
-3. **Upgrading libraries, frameworks, or testing tools** may necessitate adjustments to existing tests.
-4. As your **application data evolves**, ensure test data remains relevant.
-5. Use [code coverage tools](testing-frameworks) to identify **underused or obsolete tests**.
+2. **Upgrading libraries, frameworks, or testing tools** may necessitate adjustments to existing tests.
+3. As your **application data evolves**, ensure test data remains relevant.
+4. Periodic [code coverage](testing-frameworks) analysis identifies **underused or obsolete tests**.
 
 This is the list of items to be maintained:
 1. [TESTING.md](TESTING)
