@@ -557,12 +557,12 @@ graph TD
     end
 
     Code --> UnitTests
-    style UnitTests fill:#f96
+    style UnitTests fill:#4169E1
     UnitTests -->|Yes| BuildComponents
     UnitTests -->|No| Code
     BuildComponents --> PublishArtifacts
     SingleIntegratedBuild -->|Yes| BuildIntegratedSoftware
-    style SingleIntegratedBuild fill:#f96
+    style SingleIntegratedBuild fill:#4169E1
     PublishArtifacts --> BuildIntegratedSoftware
     BuildIntegratedSoftware --> PublishIntegratedArtifact
     PullArtifacts --> DeployRelease
