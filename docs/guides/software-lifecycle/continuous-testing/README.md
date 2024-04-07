@@ -152,59 +152,45 @@ We recommend adopting different approaches for unit tests and system tests. Whil
    - [OLLAMA](https://ollama.com): A streamlined tool for running various LLMs, like `llama2` and `codellama`, locally. Follow the steps to install this tool locally. 
 
 2. **Invoke LLM and Generate Test Code:**
-   - Example script: https://github.com/nasa/opera-sds-pcm/blob/issue-703/report/dswx-s1-validator/dswx_s1_validator.py
+   - Example script: 
+   ```python
+   # calculator.py
+   class Calculator:
+      def add(self, a, b):
+         return a + b
 
+      def subtract(self, a, b):
+         return a - b
+   ```
+
+   - Example LLM code generation command: 
    ```bash
-   ollama run codellama "$(cat dswx_s1_validator.py) from the above code, write a unit test for the function get_burst_id. do not explain the code. only provide the unit test script"
+   ollama run codellama "$(cat calculator.py) from the above code, write a unit test for the functions add and subtract. do not explain the code. only provide the unit test script"
    ```
 
    - The given bash script above utilizes the ollama command to execute the codellama tool, passing it the content of the file dswx_s1_validator.py as an argument within double quotes. This content is retrieved using the cat command. The purpose of this script is to run the llama2 tool on the code provided in dswx_s1_validator.py and generate a unit test specifically for the get_burst_id function within that code.
 
    - Output looks like this:
+   ```python
+   from calculator import Calculator
+   import unittest
+
+   class TestCalculator(unittest.TestCase):
+      def setUp(self) -> None:
+         self.calculator = Calculator()
+
+      def test_add(self):
+         result = self.calculator.add(3, 5)
+         self.assertEqual(result, 8)
+
+      def test_subtract(self):
+         result = self.calculator.subtract(10, 2)
+         self.assertEqual(result, 8)
+
+   if __name__ == "__main__":
+      unittest.main()
    ```
-    [PYTHON]
-    import re
-    
-    def get_burst_id(granule_id):
-        pattern = r'_T(\d+)-(\d+)-([A-Z]+\d+)_\d+T\d+Z_\d+T\d+Z_S1A_\d+_v\d+\.\d+'
-        match = re.search(pattern, granule_id)
-        if (match):
-            return match.group()
-        else:
-            return None
-    [/PYTHON]
-    [TESTS]
-    # Test data
-    test_data = [
-        ("S1A_IW_GRDH_1SDV_20150729T181324_20150729T181346_012658_019B4C_C", 
-    "T1-16-JYCZ"),
-        ("S1A_IW_GRDH_1SDV_20150729T181324_20150729T181346_012658_019B4C_Q", None),
-        ("S1A_IW_GRDH_1SDV_20150729T181324_20150729T181346_012658_019B4C", None),
-        ("S1A_IW_GRDH_1SDV_20150729T181324_20150729T181346_012658_019B4C_R", 
-    "T1-16-JYCZ"),
-        ("S1A_IW_GRDH_1SDV_20150729T181324_20150729T181346_012658_019B4C_O", None),
-        ("S1A_IW_GRDH_1SDV_20150729T181324_20150729T181346_012658_019B4C_N", None),
-        ("S1A_IW_GRDH_1SDV_20150729T181324_20150729T181346_012658_019B4C_M", None),
-        ("S1A_IW_GRDH_1SDV_20150729T181324_20150729T181346_012658_019B4C_L", None),
-    ]
-    
-    # Test get_burst_id function
-    def test_get_burst_id():
-        for granule, burst in test_data:
-            assert get_burst_id(granule) == burst
-    [/TESTS]
-    [EXAMPLE]
-    # Example usage
-    assert 
-    get_burst_id("S1A_IW_GRDH_1SDV_20150729T181324_20150729T181346_012658_019B4C_N")get_burst_id("S1A_IW_GRDH_1SDV_20150729T181324_20150729T181346_012658_0194C_N") == "T1-16-JYCZ"
-    # Example usage with multiple bursts
-    assert 
-    get_burst_id("S1A_IW_GRDH_1SDV_20150729T181324_20150729T181346_012658_019B4C_N")get_burst_id("S1A_IW_GRDH_1SDV_20150729T181324_20150729T181346_012658_0194C_N") == "T1-16-JYCZ"
-    # Example usage with multiple bursts
-    assert 
-    get_burst_id("S1A_IW_GRDH_1SDV_20150729T181324_20150729T181346_012658_019B4C_M")get_burst_id("S1A_IW_GRDH_1SDV_20150729T181324_20150729T181346_012658_0194C_M") == "T1-16-JYCZ"
-    [/EXAMPLE]
-    ```
+   
 3. **Review and Refine Generated Code:**
    - Developers should review the generated code, fixing errors and adding any missing edge cases.
 
