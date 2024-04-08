@@ -183,9 +183,9 @@ sidebar_label: Testing Frameworks
    - Downloadable Open-Source Models 
       - [Ollama](https://ollama.com): A streamlined tool for running various large language models.
       - [codellama](https://huggingface.co/docs/transformers/model_doc/code_llama): A large language model-based code generation tool.
-   - Cloud-Based Models (⚠️ Careful with your sensitive data)
-      - [GPT-4](https://openai.com/gpt-4): The latest version of Generative Pre-trained Transformers, a type of deep learning model used for natural language processing and text generation
-      - [Claude](https://www.anthropic.com/claude): One of the leading models with longer context windows than GPT-4
+   - Cloud-Based Models (⚠️ Exercise caution when using sensitive data)
+      - [GPT-4](https://openai.com/gpt-4): The latest version of Generative Pre-trained Transformers (GPT), a type of deep learning model used for natural language processing and text generation. 
+      - [Claude](https://www.anthropic.com/claude): One of the leading models with longer context windows than GPT-4, allowing it to maintain coherence and understanding over longer sequences of text.
 
 
 - For more comprehensive continuous testing frameworks, please refer to the following links:
