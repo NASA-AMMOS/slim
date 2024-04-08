@@ -180,7 +180,7 @@ sidebar_label: Testing Frameworks
       - [Robot Framework](https://robotframework.org): An open-source automation framework that supports both test automation and test process automation.
      
 - For Test Code Generation
-   - Downloadable open-source models 
+   - Downloadable Open-Source Models 
       - [Ollama](https://ollama.com): A streamlined tool for running various large language models.
       - [codellama](https://huggingface.co/docs/transformers/model_doc/code_llama): A large language model-based code generation tool.
    - Cloud-Based Models (⚠️ Careful with your sensitive data)
