@@ -137,13 +137,14 @@ Include specifics about your testing setup in this template section as follows:
 
 ### 2. Write Your Tests
 
-Writing comprehensive tests for large software applications can be a time-consuming process. Recent studies suggest that Large Language Models (LLMs) offer a strong solution to automatically generating test files, in some cases being able to cover up to 85% of test scenarios automatically (source: [study](https://arxiv.org/pdf/2305.00418.pdf)). We therefore strongly recommend using LLM automation to generate test cases, which are covered below. 
+Large software applications often require extensive testing, which can be time-consuming. Recent studies suggest that Large Language Models (LLMs) can offer a solution by automatically generating test codes, covering up to 85% of test scenarios (source: [study](https://arxiv.org/pdf/2305.00418.pdf)). To leverage this capability, it is recommended to use open-source LLM-based tools like [codellama](https://ollama.com/library/codellama), which can generate initial test code that developers can then refine and expand as needed. These open-source models can run locally, addressing data privacy concerns. The model landscape is rapidly evolving, so it is suggested to refer to the [code model ranking](https://huggingface.co/spaces/bigcode/bigcode-models-leaderboard) to stay updated on the latest advancements in this field.
 
-We recommend leveraging open-source LLM-based tools like [codellama](https://ollama.com/library/codellama) to rapidly generate initial test code, which developers can then refine and expand as needed. These open-source models can run completely locally, so you don't need to worry about data privacy. The model landscape is evolving rapidly, so we suggest referring to the code model ranking to stay updated on the latest advancements. You can find the ranking at https://huggingface.co/spaces/bigcode/bigcode-models-leaderboard.
+Here's our recommended approach to deciding the right model for you to use:
 
-For your open-source code that can be shared publicly, consider utilizing cloud-based models like GPT-4, which outperform open-source models (https://paperswithcode.com/sota/code-generation-on-humaneval). 
+Is your code open source and permissively licensed?
+- Yes: We recommend high-performance cloud-based LLM models (e.g., [GPT-4](https://openai.com/gpt-4), [Github Copilot](https://github.com/features/copilot))
+- No: We recommend using locally-run LLM models (e.g., [codellama](https://ollama.com/library/codellama)) for sensitive data, such as those provided by the [Ollama](https://ollama.com/) tool, to protect your code from dissemination. (⚠️ These models may not perform as well as cloud-based bigger models, such as `GPT-4`. We recommend asking the LLM to generate a simple test template for you to fill out.) 
 
-We recommend adopting different approaches for unit tests and system tests. While unit tests can be efficiently generated directly by LLMs, system tests are better generated using Robot Framework as an intermediary. This approach ensures that system tests are more accurate and easier to manage within the testing framework.
 
 #### 2.1 Unit Tests
   - For unit tests, please follow the steps below: 
