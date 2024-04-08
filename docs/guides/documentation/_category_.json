@@ -1,8 +1,8 @@
 {
-  "label": "Documentation",
-  "position": 3,
+  "label": "💬 Information Sharing",
+  "position": 5,
   "link": {
     "type": "generated-index",
-    "description": "Check out our below list of guides and sub-sections related to documentation best practices."
+    "description": "Check out our below list of guides and sub-sections related to information sharing best practices."
   }
 }

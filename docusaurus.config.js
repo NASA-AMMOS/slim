@@ -86,6 +86,12 @@ const config = {
           },
           {
             type: 'docSidebar',
+            sidebarId: 'joinSidebar',
+            position: 'left',
+            label: 'Join',
+          },
+          {
+            type: 'docSidebar',
             sidebarId: 'aboutSidebar',
             position: 'left',
             label: 'About',
@@ -110,6 +116,10 @@ const config = {
               {
                 label: 'Contribute',
                 to: '/docs/contribute/CONTRIBUTING',
+              },
+              {
+                label: 'Join',
+                to: '/docs/join/',
               },
               {
                 label: 'About',
