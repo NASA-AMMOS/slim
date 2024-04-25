@@ -75,7 +75,7 @@ Code is scanned for security risks within the repository. It leverages [GitHub A
 
 #### Steps
 1. **Workflow Creation**
-   - The first step is to create a `codeql.yaml` workflow file in the `.github/workflows` directory to define the GitHub action. Copy and paste the below while ensuring the correct branch of your codebase is referenced. For example (from the [Slim Python Starter Kit](https://github.com/NASA-AMMOS/slim-starterkit-python/blob/main/.github/workflows/codeql.yml)):
+   - The first step is to create a `codeql.yaml` workflow file in the `.github/workflows` directory to define the GitHub action. Copy and paste the below to your new file while ensuring the correct branch of your codebase is referenced. For example, the following configuration scans for CodeQL security and quality checks for Python language code. Note: a version of the below is also available through the [SLIM Python Starter Kit](https://github.com/NASA-AMMOS/slim-starterkit-python/blob/main/.github/workflows/codeql.yml):
    - This workflow is based on the default CodeQL workflow file with three modifications:
       1. Under the *Initialize CodeQL* step, the `queries` entity has been added to enable all of the available security queries
       2. A new *Post-Process Output* step has been added to generate a CSV output file that may be easily ingested by other systems
