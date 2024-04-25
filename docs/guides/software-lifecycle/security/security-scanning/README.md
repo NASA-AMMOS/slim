@@ -7,14 +7,15 @@
 **Background**: Software security is critical in modern systems with application code at its root. Identifying and addressing vulnerabilities rapidly mitigates risk and limits the potential surface area of attacks. We recommend [NASA's SCRUB platform](https://github.com/nasa/scrub) to manage code scanning by identifying, orchestrating and aggregating security information. SCRUB's GitHub implementation wraps [CodeQL](https://codeql.github.com/) results into compact, curated reports that highlight security assessments and are suitable for ingestion by automated reporting tools. A small configuration is appended to an existing CodeQL configuration (`codeql-config.yml` file) that specifies security analyses and reporting properties.
 
 **Use Cases**:
-- Finding and mitigating security risks in code, such as:
+- Standardized security reports that enables rapid interchange of scanning tools.
+  - Streamlining management of known security considerations during codebase audits.
+- Discovering security risks in code, such as:
   - Improper input validation
   - Weak encryption
   - Use of dangerous library functions
+  - Other issues that may be difficult to identify via unit testing.
 - Scanning local client repositories to identify exploitable security risks.
-- Identifying issues that may be difficult to identify via unit testing.
 - Implementing a reporting loop in continuous integration (CI) pipelines using GitHub Actions to catch unforeseen risks.
-- Streamlining management of known security considerations during codebase audits.
 
 ---
 
