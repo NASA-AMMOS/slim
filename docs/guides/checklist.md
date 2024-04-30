@@ -15,17 +15,17 @@ Review your project's repositories, and ensure all have the following (in priori
 | Checklist Item                                                                      | Why?                                                                                  |
 | ----------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------- |
 | ✅ LICENSE                                                                          | Spell out legal terms for software usage & modification                               |
-| ✅ [README](documentation/readme/)                                                  | Provide project overview, setup, & usage instructions                                 |
-| ✅ [Contributing Guide](governance/contributions/contributing-guide)                | Outline how to contribute & the process for submissions                               |
-| ✅ [Code of Conduct](governance/contributions/code-of-conduct)                      | Establish community behavior standards                                                |
-| ✅ [Issue Templates](governance/contributions/issue-templates/)                     | Streamline issue reporting for consistency & clarity                                  |
-| ✅ [Pull Request Templates](governance/contributions/pull-requests/)                | Ensure PRs are comprehensive & adhere to project standards                            |
-| ✅ [Documentation](documentation/documentation-hosts/)                              | Offer detailed info on features, APIs, & customizations not covered in README         |
-| ✅ [Change Log](documentation/change-log/)                                          | Keep track of all notable changes in each version in a human-readable format          |
-| ✅ [Security & Dependency Scanning](software-lifecycle/security/github-security)    | Identify vulnerabilities & outdated dependencies for security                         |
-| ✅ [Sensitive Information Scanning](software-lifecycle/security/secrets-detection/) | Detect accidental commits of sensitive info                                           |
-| ✅ [Governance Model](governance/governance-model/)                                 | Define decision-making structure & project leadership for transparency & organization |
-| ✅ [Software Metrics](software-lifecycle/metrics/)                                  | Collect metrics on performance of your software's governance and lifecycle            |
+| ✅ [README](/slim/docs/guides/documentation/readme/)                                                  | Provide project overview, setup, & usage instructions                                 |
+| ✅ [Contributing Guide](/slim/docs/guides/governance/contributions/contributing-guide/)                | Outline how to contribute & the process for submissions                               |
+| ✅ [Code of Conduct](/slim/docs/guides/governance/contributions/code-of-conduct/)                      | Establish community behavior standards                                                |
+| ✅ [Issue Templates](/slim/docs/guides/governance/contributions/issue-templates/)                     | Streamline issue reporting for consistency & clarity                                  |
+| ✅ [Pull Request Templates](/slim/docs/guides/governance/contributions/pull-requests/)                | Ensure PRs are comprehensive & adhere to project standards                            |
+| ✅ [Documentation](/slim/docs/guides/documentation/documentation-hosts/)                              | Offer detailed info on features, APIs, & customizations not covered in README         |
+| ✅ [Change Log](/slim/docs/guides/documentation/change-log/)                                          | Keep track of all notable changes in each version in a human-readable format          |
+| ✅ [Security & Dependency Scanning](/slim/docs/guides/software-lifecycle/security/github-security)    | Identify vulnerabilities & outdated dependencies for security                         |
+| ✅ [Sensitive Information Scanning](/slim/docs/guides/software-lifecycle/security/secrets-detection/) | Detect accidental commits of sensitive info                                           |
+| ✅ [Governance Model](/slim/docs/guides/governance/governance-model/)                                 | Define decision-making structure & project leadership for transparency & organization |
+| ✅ [Software Metrics](/slim/docs/guides/software-lifecycle/metrics/)                                  | Collect metrics on performance of your software's governance and lifecycle            |
 
 ## Repository Starter Kit
 
