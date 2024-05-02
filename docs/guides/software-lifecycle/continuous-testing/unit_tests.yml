@@ -1,0 +1,27 @@
+# example .github/workflows/unit_tests.yml
+
+name: Unit Tests  # Name of the workflow
+
+on: [pull_request]  # Triggers the workflow on pull requests
+
+jobs:
+  unit-tests:  # Defines a job named unit-tests
+    runs-on: ubuntu-latest  # Specifies the runner environment as Ubuntu latest
+
+    steps:  # Specifies the steps to execute in the job
+    - uses: actions/checkout@v4  # Checks out the code repository
+
+    - name: Set up Python  # Name of the step
+      uses: actions/setup-python@v5  # Uses the setup-python action to set up Python
+      with:
+        python-version: '3.11'  # Specifies Python version 3.11
+
+    - name: Install dependencies  # Name of the step
+      run: |  # Executes the following shell commands
+        python -m pip install --upgrade pip  # Upgrades pip to the latest version
+        pip install -e ".[test]"  # Installs project dependencies in editable mode with additional test dependencies
+
+    - name: Run unit tests  # Name of the step
+      run: |  # Executes the following shell commands
+        pytest -vv --gherkin-terminal-reporter \  # Runs pytest with increased verbosity and enables Gherkin terminal reporter
+        unity-test/unit  # Specifies the directory where unit tests are located
