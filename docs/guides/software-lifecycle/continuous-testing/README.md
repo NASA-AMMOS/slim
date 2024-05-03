@@ -348,7 +348,10 @@ The quality of generated test code can be compared with the example provided by 
 
 Our recommendation is to automate as many of your tests as possible. For tests that can't be automated, we suggest scheduling specific times for personnel to run manual tests.
 
-#### 3.1 Unit Test Automation
+#### 3.1 Static Test Automation
+We recommend setting up a static test using `.pre-commit-config.yaml`. A working example is [here](.pre-commit-config.yaml). 
+
+#### 3.2 Unit Test Automation
 
 Please consult our [Testing Frameworks guide](testing-frameworks) for a choice of unit testing tools we recommend. Once selected, we recommend automating the execution of your unit tests in both of the following ways:
 
@@ -511,7 +514,7 @@ To run the pre-commit hooks as part of a Jenkins build, you'll need to configure
 6. **Triggering the Job:** You can configure the job to be triggered on each push to your repository by using Jenkins webhooks or polling SCM, depending on your preference and setup.
 
 
-#### 3.2 System Test Automation
+#### 3.3 System Test Automation
 
 To aid in the automation of system tests, we suggest doing the following:
 
