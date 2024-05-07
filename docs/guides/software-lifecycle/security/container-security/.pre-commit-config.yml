@@ -1,0 +1,7 @@
+repos:
+  - repo: local
+    hooks:
+      - id: docker-scout-cve-scan
+        name: Docker Scout CVE Scan
+        entry: docker scout cves fs://.
+        language: system
