@@ -47,8 +47,9 @@ To see the current adoption status and how these practices are being integrated 
 
 What does it mean to be a community member of SLIM? The following ideas apply to community member projects:
 - Has a representative (a point-of-contact) who interfaces with the SLIM effort
+- Receives pull-requests / issues containing SLIM best practice recommendations
 - Openness and willingness to infuse SLIM best practices 
-- Prioritizes contributing back to the SLIM project with best practice guides
+- Prioritizes contributing back to the SLIM project
 
 The following list of public projects are currently SLIM community members:
 
