@@ -69,7 +69,7 @@ Download the file above to access the recommended `dependabot.yml` file, which c
     docker scout cves fs://.
     ```
 
-    NOTE: you can use the `--only-severity critical` to limit scanning to just specific criticality levels. See documentation [here](https://docs.docker.com/reference/cli/docker/scout/cves/#options). 
+    NOTE: you can use the `--only-severity critical` to limit scanning to just specific criticality levels. [See options documentation here](https://docs.docker.com/reference/cli/docker/scout/cves/#options). 
 
 ### Step 2: Setup Automated Local Scanning of Container Vulnerabilities
 
@@ -86,7 +86,7 @@ Download the file above to access the recommended `dependabot.yml` file, which c
 3. Create a `.pre-commit-config.yaml` file in the root directory of your Git repository with the following content (note we suggest only scanning for critical vulnerabilities to reduce developer overhead):
    <CodeBlock language="yaml">{PreCommitConfigSource}</CodeBlock>
 
-   NOTE: you'll need a DockerHub account to run the `docker scout` tool. Note that this command will compare a local scan's results with Docker's database. See more information [here](https://docs.docker.com/scout/quickstart/).
+   NOTE: you'll need a DockerHub account to run the `docker scout` tool. Note that this command will compare a local scan's results with Docker's database. [More information about Docker Scout is available here](https://docs.docker.com/scout/quickstart/).
 
 ### Step 3: Set Up Automated Repository Scanning
 - **Docker Hub**:
