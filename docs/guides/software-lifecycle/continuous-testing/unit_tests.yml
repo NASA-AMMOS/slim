@@ -30,7 +30,7 @@ jobs:
 
     - name: Run unit tests  # Name of the step
       run: |  # Executes the following shell commands
-        pytest -vv --gherkin-terminal-reporter \  # Runs pytest with increased verbosity and enables Gherkin terminal reporter
+        pytest -vv # Runs pytest with increased verbosity
         unity-test/unit  # Specifies the directory where unit tests are located
         # Modify the following block for other programming languages
         # run: |
