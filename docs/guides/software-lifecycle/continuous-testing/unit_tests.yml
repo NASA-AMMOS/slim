@@ -1,4 +1,5 @@
 # example .github/workflows/unit_tests.yml
+# This GitHub Actions workflow is designed to run unit tests on pull requests. It checks out the code repository, sets up Python version 3.11, installs project dependencies including additional test dependencies, and then executes unit tests using pytest with increased verbosity and Gherkin terminal reporter enabled. Modify the Python version or test directory path as needed.
 
 name: Unit Tests  # Name of the workflow
 
