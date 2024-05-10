@@ -1,4 +1,5 @@
 # example .github/workflows/unit_tests.yml
+# This GitHub Actions workflow is designed to run unit tests on pull requests. It checks out the code repository, sets up Python version 3.11, installs project dependencies including additional test dependencies, and then executes unit tests using pytest with increased verbosity and Gherkin terminal reporter enabled. Modify the Python version or test directory path as needed.
 
 name: Unit Tests  # Name of the workflow
 
@@ -15,13 +16,22 @@ jobs:
       uses: actions/setup-python@v5  # Uses the setup-python action to set up Python
       with:
         python-version: '3.11'  # Specifies Python version 3.11
+        # Modify the following block for other programming languages
+        # with:
+        #   <language>-version: '<version>'  # Specify the version of the programming language
 
     - name: Install dependencies  # Name of the step
       run: |  # Executes the following shell commands
         python -m pip install --upgrade pip  # Upgrades pip to the latest version
         pip install -e ".[test]"  # Installs project dependencies in editable mode with additional test dependencies
+        # Modify the following block for other programming languages
+        # run: |
+        #   <install_command>  # Command to install dependencies for the specific language
 
     - name: Run unit tests  # Name of the step
       run: |  # Executes the following shell commands
-        pytest -vv --gherkin-terminal-reporter \  # Runs pytest with increased verbosity and enables Gherkin terminal reporter
+        pytest -vv # Runs pytest with increased verbosity
         unity-test/unit  # Specifies the directory where unit tests are located
+        # Modify the following block for other programming languages
+        # run: |
+        #   <test_command>  # Command to run unit tests for the specific language
