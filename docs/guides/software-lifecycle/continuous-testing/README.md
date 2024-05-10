@@ -64,77 +64,68 @@ This step-by-step guide walks you through establishing, writing, automating, and
 
 ### 1. Create a TESTING.md
 
-We recommend creating a `TESTING.md` file that spells out the testing objectives and plans for your software in an easy-to-view location.  
+We recommend creating a `TESTING.md` file that outlines the testing objectives and plans for your software in an easy-to-find location. This file will provide your development team and contributors with:
 
-This file will provide your development team (and other potential contributors) with:
-1. A list of the types of tests you run against your software
-2. Locations where your tests are defined
-3. When and how your tests are run
+1. A list of the types of tests you run against your software.
+2. Locations where your tests are defined.
+3. When and how your tests are run.
+4. How to contribute / modify tests.
 
-The benefit of having the above in a single file is to help guide your testing journey as well as to add clarity for your development team on where and how your tests are written and run. 
-
-To get you started, download our template to get started and place it at the root of your repository.
+Having this information in a single file helps guide your testing journey and adds clarity for your team. 
 
 **[⬇️ Download our TESTING.md Template](TESTING)** (see [example](TESTING-example) of template in action)
 
-#### 1.1 Types of Testing
+#### 1.1 Testing Categories
 
-Scroll to the "Types of Testing" section within your `TESTING.md` and begin checking off the types of testing your project intends to (or already does) implement from the provided list. Each type of testing serves a different purpose:
+Scroll to the "Testing Categories" section within your `TESTING.md` file and check off the testing categories relevant to your project from the provided list. You can also add your own if needed. Here are some common testing categories:
 
-- Unit Tests check the smallest parts of an application, like functions or methods.
-- System Tests help ensure different parts of your application work together as well as verify the final released application product meets expected standards like security constraints, performance needs, user interface needs, etc.
+- **Static Code Analysis:** Checks code for syntax, style, vulnerabilities, and bugs.
+- **Unit Tests:** Tests functions or components to verify that they perform as intended.
+- **Security Tests:** Identifies potential security vulnerabilities.
+- **Build Tests:** Checks if the code builds into binaries or packages successfully.
+- **Acceptance Tests:** Validates against end-user and stakeholder requirements.
 
-#### 1.2 Unit Testing
+Once you've identified the testing categories important to your project, write a description for each using the provided template section. Be sure to include:
 
-In this section you'll want to explain how unit tests are structured within your project, including where they are stored (e.g., /tests/unit), and how frequently they are run. Mention the unit testing framework you're using (e.g., Jest, NUnit), and provide guidelines or a link to best practices for writing unit tests. This section is important for ensuring new contributors understand how to write and run unit tests in your project.
+1. The purpose of that testing category.
+2. The location where the tests are stored.
+3. How the tests are triggered.
+4. The framework used for testing.
+5. Best practices or guidelines for contributing to that testing category.
 
-Include specifics about your testing setup in this template section as follows:
+#### 1.2 Example: Unit Testing
 
-- `[INSERT PATH TO UNIT TEST FOLDER ON REVISION CONTROL]`: Specify the location of your unit tests, such as /tests/unit.
-- `[INSERT TRIGGER OF WHAT KICKS OFF YOUR TESTS]`: Describe what initiates the unit tests, such as "upon every commit", "pull request creation", or "nightly builds".
-- `[INSERT YOUR UNIT TESTING FRAMEWORK OF CHOICE]`: Mention the framework used for unit testing, e.g., "Jest for JavaScript", "JUnit for Java", and provide a link to the framework's documentation or getting started guide. Consult our [Testing Frameworks](testing-frameworks) guide for recommended frameworks to choose from. See [Write Your Tests](#2-write-your-tests) for more details. 
+In the "Unit Testing" section, explain how unit tests are structured, where they're stored, and how frequently they run. Include the testing framework used and best practices for writing unit tests. For example:
 
+- **Location:** `/tests/unit`
+- **Purpose:** Verify that individual functions or components work as intended.
+- **Running Tests:**
+  - **Manually:**
+    1. Navigate to the `/tests/unit` directory.
+    2. Run the relevant unit testing command (e.g., `npm test` for JavaScript).
+    3. Review results in the terminal or generated reports.
+  - **Automatically:**
+    - **Frequency:** Upon every commit or pull request.
+    - **Results Location:** [GitHub Actions Unit Tests Workflow](#)
+- **Framework Used:** Jest for JavaScript.
+- **Tips:** Focus on core functions and methods, use mocks for dependencies, and handle edge cases.
 
-#### 1.3 System Tests
+#### 1.3 Example: Performance Testing
 
-System Tests help verify that your final application meets end-user needs in a finalized form. We have a couple of recommendations for performing system tests.
+In the "Performance Testing" section, detail how you ensure your application can handle expected and peak loads. For example:
 
-##### Integration Tests
-
-In this section, we suggest you outline the process for integration testing, including the tools and frameworks used (e.g., Cypress, Postman). Specify where integration tests are located within the project repository and the trigger for these tests (e.g., merge requests, scheduled nightly builds). Integration testing ensures that combined parts of your application function together as expected, as well as interact with your users (other programs or people).
-
-Include specifics about your testing setup in this template section as follows:
-
-- `[INSERT PATH TO INTEGRATION TEST FOLDER ON REVISION CONTROL]`: Indicate where integration tests are stored within your repository, for example, /tests/system/integration.
-- `[INSERT YOUR INTEGRATION TESTING FRAMEWORK OF CHOICE]`: Recommend the integration testing tool or framework, such as "Cypress for end-to-end tests", "Postman for API testing", and include a reference link. Consult our [Testing Frameworks](testing-frameworks) guide for recommended frameworks to choose from.
-
-
-##### Security Tests
-
-Security testing is important for identifying vulnerabilities in your application early. In this section, recommend tools and frameworks for security testing, such as OWASP ZAP for dynamic analysis or GitHub.com Dependabot for dependency scanning. Explain how and when security tests are run, and provide guidance on adhering to security best practices, such as avoiding OWASP Top 10 Vulnerabilities - which can ensure your development team is aware of how to design for minimum vulnerability risks. 
-
-Include specifics about your testing setup in this template section as follows:
-
-- `[INSERT NAME AND LINK TO SECURITY FRAMEWORK]`: Suggest security testing tools or services, for instance, "OWASP ZAP for web applications", "GitHub.com Dependabot for dependency scanning", and provide their official documentation or homepage links. Consult our [Testing Frameworks](testing-frameworks) guide for recommended frameworks to choose from.
-- `[INSERT TRIGGER OF WHAT KICKS OFF YOUR TESTS]`: Define when security tests are performed, like "before merging to the main branch", "weekly automated scans".
-
-##### Performance Tests
-
-In this section, discuss the importance of performance testing and recommend tools (e.g., Apache JMeter, Chaos Monkey for simulating failures). Describe where performance tests are located, what triggers them (e.g., before release candidates, monthly), and the goals (e.g., handling 2X expected user load). Performance testing ensures your application can handle expected and peak loads.
-
-Include specifics about your testing setup in this template section as follows:
-
-- `[INSERT PATH TO PERFORMANCE TEST FOLDER ON REVISION CONTROL]`: Specify the directory for performance tests, such as /tests/system/performance.
-- `[INSERT YOUR INTEGRATION TESTING FRAMEWORK OF CHOICE]`: Indicate the performance testing tool or framework, plus an additional tool for simulating failures, e.g., "Apache JMeter for load testing", "Chaos Monkey for resilience testing", along with links to their guides or documentation. Consult our [Testing Frameworks](testing-frameworks) guide for recommended frameworks to choose from.
-
-##### User Interface (UI) Tests
-
-In this section, you'll detail the UI testing process, including how these tests ensure compliance with user interaction needs. Mention the framework used for UI testing (e.g., Selenium). Provide information on the location of UI tests within the project repository and the testing schedule.
-
-Include specifics about your testing setup in this template section as follows:
-
-- `[INSERT PATH TO UI TEST FOLDER ON REVISION CONTROL]`: Direct where UI tests can be found in your project, for instance, /tests/system/ui.
-- `[INSERT YOUR INTEGRATION TESTING FRAMEWORK OF CHOICE]`: Mention the framework or tool used for V&V testing, such as "TestRail for test management", and provide a link to how to use it within your project. Consult our [Testing Frameworks](testing-frameworks) guide for recommended frameworks to choose from.
+- **Location:** `/tests/performance`
+- **Purpose:** Validate that the application meets performance goals under load.
+- **Running Tests:**
+  - **Manually:**
+    1. Navigate to the `/tests/performance` directory.
+    2. Run the performance testing tool command (e.g., `jmeter -n -t test.jmx`).
+    3. Review generated reports for analysis.
+  - **Automatically:**
+    - **Frequency:** Monthly stress tests or before release candidates.
+    - **Results Location:** deployment test server's `/var/log/myapp/performance-tests.log
+- **Framework Used:** Apache JMeter.
+- **Tips:** Simulate peak load scenarios, monitor resource usage, and use tools like Chaos Monkey for resilience testing.
 
 ### 2. Write Your Tests
 
@@ -351,25 +342,25 @@ Our recommendation is to automate as many of your tests as possible. For tests t
 #### 3.1 Static Test Automation
 We recommend setting up a static test using `.pre-commit-config.yaml`. A working example is [here](.pre-commit-config.yaml). 
 
-#### 3.2 Unit Test Automation
+#### 3.2 Component Test Automation
 
-Please consult our [Testing Frameworks guide](testing-frameworks) for a choice of unit testing tools we recommend. Once selected, we recommend automating the execution of your unit tests in both of the following ways:
+Component tests refer to tests for your immediate code base, code file, or something that does not require system level interaction. Please consult our [Testing Frameworks guide](testing-frameworks) for a choice of testing tools we recommend. Once selected, we recommend automating the execution of your tests in both of the following ways:
 
-1. Execute unit tests locally on your developers' machines upon local Git commits
-2. Execute unit tests upon Git pushes to given Git branches on your version control system (VCS) - hosted on GitHub.com or alternate
+1. Execute tests locally on your developers' machines upon local Git commits
+2. Execute tests upon Git pushes to given Git branches on your version control system (VCS) - hosted on GitHub.com or alternate
 
 This idea is represented in the following diagram:
 
 ```mermaid
 graph TD
     subgraph Developers' Machines
-        A[Local Git Commit] -->|Run Unit Tests| B{Tests Passed?}
+        A[Local Git Commit] -->|Run Component Tests| B{Tests Passed?}
         B -->|Yes| C[Locally Committed]
         B -->|No| D[Fix Code]
     end
 
     subgraph VCS[Version Control System e.g. GitHub]
-        E[Git Push to Specific Branch] -->|Run Unit Tests| F{Tests Passed?}
+        E[Git Push to Specific Branch] -->|Run Component Tests| F{Tests Passed?}
         F -->|Yes| G[Accept Pull Request]
         F -->|No| H[Review Code Changes]
     end
@@ -384,7 +375,7 @@ To make the above automation a reality, we recommend using [pre-commit](https://
   ```bash
   pip install pre-commit
 
-- **Step 2:** Create a .pre-commit-config.yaml file at the root of your repository with the configuration for your Python unit tests using PyTest. Here's an example template you can start with:
+- **Step 2:** Create a .pre-commit-config.yaml file at the root of your repository with the configuration for your Python component tests using PyTest. Here's an example template you can start with:
 
    **Python**
 
@@ -414,7 +405,7 @@ To make the above automation a reality, we recommend using [pre-commit](https://
         files: '\.tf$'
         stages: [commit]
    ```
-   This configuration uses Terraform's built-in fmt command to format Terraform configuration files. While not a direct unit test, it's a common practice to ensure code quality and consistency in HCL-based projects.
+   This configuration uses Terraform's built-in fmt command to format Terraform configuration files. While not a direct component test, it's a common practice to ensure code quality and consistency in HCL-based projects.
 
    **JavaScript**
 
@@ -454,11 +445,11 @@ To make the above automation a reality, we recommend using [pre-commit](https://
    pre-commit install
    ```
 
-   Now, every time you commit changes, your unit tests will run automatically on the specified (pattern-matching) files you've staged for commit.
+   Now, every time you commit changes, your component tests will run automatically on the specified (pattern-matching) files you've staged for commit.
 
 ##### Version Control System
 
-For automated execution of unit tests upon Git pushes using a VCS, we recommend using GitHub Actions or a configuration for Jenkins:
+For automated execution of component tests upon Git pushes using a VCS, we recommend using GitHub Actions or a configuration for Jenkins:
 
 To invoke a `.pre-commit-config.yml` configuration from GitHub Actions or Jenkins for automated execution of unit tests upon Git pushes, follow these detailed directions:
 
@@ -516,7 +507,7 @@ To run the pre-commit hooks as part of a Jenkins build, you'll need to configure
 
 #### 3.3 System Test Automation
 
-To aid in the automation of system tests, we suggest doing the following:
+System tests refer to tests that require interaction between multiple components. Not every project has this complexity. To aid in the automation of system tests, we suggest doing the following:
 
 1. Have a schedule for running system tests (e.g. nightly, weekly)
 2. Ensure software is built and published to repositories:
@@ -531,7 +522,7 @@ The diagram below illustrates this concept (Continuous Testing parts are highlig
 graph TD
     subgraph SoftwareDevelopment[Software Components]
         Code[Code Development]
-        UnitTests{Unit Tests Success?}
+        ComponentTests{Component Tests Success?}
         BuildComponents[Build Stand-alone Components]
         PublishArtifacts[(Publish Artifacts to Repositories)]
     end
@@ -547,10 +538,10 @@ graph TD
         IntegrationTests[Test Against System Tests]
     end
 
-    Code --> UnitTests
-    style UnitTests fill:#4169E1
-    UnitTests -->|Yes| BuildComponents
-    UnitTests -->|No| Code
+    Code --> ComponentTests
+    style ComponentTests fill:#4169E1
+    ComponentTests -->|Yes| BuildComponents
+    ComponentTests -->|No| Code
     BuildComponents --> PublishArtifacts
     SingleIntegratedBuild -->|Yes| BuildIntegratedSoftware
     style SingleIntegratedBuild fill:#4169E1
@@ -562,7 +553,7 @@ graph TD
     PublishIntegratedArtifact --> TestDeployment
 ```
 
-##### Types of System Tests
+**Types of System Tests**
 
 You should outline the types of system tests you plan to implement in your `TESTING.md` file. We suggest the following types of tests to include:
 - Testing for integration
@@ -573,7 +564,7 @@ You should outline the types of system tests you plan to implement in your `TEST
 - Testing for performance and load
 - Testing user interfaces for gaps and compliance against policies
 
-##### Integration Test Automation
+##### Example: Integration Test Automation
 
 We recommend the following steps: 
 1. Take a look at the following external [guide](https://microsoft.github.io/code-with-engineering-playbook/automated-testing/integration-testing/) from Microsoft Engineering Fundamentals for more information about applying integration testing.
@@ -581,20 +572,20 @@ We recommend the following steps:
 3. Integrate your integration tests into a [Continuous Integration (CI) pipeline](/docs/guides/software-lifecycle/continuous-integration), allowing for automatic execution of tests upon code changes. 
 
 
-##### Security Test Automation
+##### Example: Security Test Automation
 
 To aid in security testing automation, we recommend two steps:
 1. Add security testing to your developers' local coding environment via pre-commit (see [Unit Test Automation](#31-unit-test-automation) section above)
 2. Enable existing [SLIM security best practices](/slim/docs/category/security) as part of your software development workflow.
 
-##### Performance Test Automation
+##### Example: Performance Test Automation
 
 We recommend the following steps for performance test automation:
 1. Take a look at the following external [guide](https://microsoft.github.io/code-with-engineering-playbook/automated-testing/performance-testing/) from Microsoft Engineering Fundamentals for more information about applying performance testing.
 2. Refer to the [Testing Frameworks](testing-frameworks) page for performance test tools and frameworks.
 3. Integrate performance tests into your Continuous Integration and Continuous Delivery (CI/CD) pipeline to enable regular and automated execution of performance tests as part of the software delivery process.
 
-##### User Interface Test Automation
+##### Example: User Interface Test Automation
 
 We recommend the following steps for user interface test automation: 
 1. Take a look at the following external [guide](https://microsoft.github.io/code-with-engineering-playbook/automated-testing/ui-testing/) from Microsoft Engineering Fundamentals for more information about applying user interface testing.
@@ -612,7 +603,7 @@ Your tests should be updated, at minimum, upon the following events:
 
 This is the list of items to be maintained:
 1. [TESTING.md](TESTING)
-2. [Unit tests](#21-unit-tests)
+2. [Component tests](#21-component-tests)
 3. [System tests](#22-system-tests)
 4. [Test automation](#3-automate-your-tests)
 
