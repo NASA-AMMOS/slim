@@ -342,6 +342,13 @@ Our recommendation is to automate as many of your tests as possible. For tests t
 #### 3.1 Static Test Automation
 We recommend setting up a static test using `.pre-commit-config.yaml`. A working example is [here](.pre-commit-config.yaml). 
 
+import codeblock from '@codeday/topo/Atom/CodeBlock';
+import preCommitConfig from '!!raw-loader!./pre-commit-config.yaml';
+
+<codeblock metaString="yaml" hideCopy={true} hideHeader={true}>
+{preCommitConfig}
+</codeblock>
+
 #### 3.2 Component Test Automation
 
 Component tests refer to tests for your immediate code base, code file, or something that does not require system level interaction. Please consult our [Testing Frameworks guide](testing-frameworks) for a choice of testing tools we recommend. Once selected, we recommend automating the execution of your tests in both of the following ways:
