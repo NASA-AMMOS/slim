@@ -21,7 +21,7 @@ jobs:
       - name: Install dependencies
         run: |
           yarn install --frozen-lockfile
-          yarn add @codeday/topo
+          npm update @codeday/topo
       - name: Build website
         run: yarn build
 
