@@ -1,5 +1,5 @@
-import codeblock from '@codeday/topo/Atom/CodeBlock';
-import preCommitConfig from '!!raw-loader!./pre-commit-config.yaml';
+import CodeBlock from '@theme/CodeBlock';
+import PreCommitConfigSource from '!!raw-loader!./.pre-commit-config.yml';
 
 ---
 toc_min_heading_level: 2
@@ -347,9 +347,7 @@ Our recommendation is to automate as many of your tests as possible. For tests t
 #### 3.1 Static Test Automation
 We recommend setting up a static test using `.pre-commit-config.yaml`. A working example is [here](.pre-commit-config.yaml). 
 
-<codeblock metaString="yaml" hideCopy={true} hideHeader={true}>
-{preCommitConfig}
-</codeblock>
+<CodeBlock language="yaml">{PreCommitConfigSource}</CodeBlock>
 
 #### 3.2 Component Test Automation
 
