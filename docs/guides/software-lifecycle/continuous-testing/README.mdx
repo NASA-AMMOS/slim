@@ -132,7 +132,9 @@ In the "Performance Testing" section, detail how you ensure your application can
 
 ### 2. Write Your Tests
 
-Large software applications often require extensive testing, which can be time-consuming. Recent studies suggest that Large Language Models (LLMs) can offer a solution by automatically generating test codes, covering up to 85% of test scenarios (source: [study](https://arxiv.org/pdf/2305.00418.pdf)). To leverage this capability, it is recommended to use open-source LLM-based tools like [codellama](https://ollama.com/library/codellama), which can generate initial test code that developers can then refine and expand as needed. These open-source models can run locally, addressing data privacy concerns. The model landscape is rapidly evolving, so it is suggested to refer to the [code model ranking](https://huggingface.co/spaces/bigcode/bigcode-models-leaderboard) to stay updated on the latest advancements in this field.
+We recommend using [Testing Frameworks](testing-frameworks) when writing your tests to automate, organize, and analyze your testing efforts effectively. You can write your test code from scratch, but another way to write it is using large language models (LLMs). 
+
+Recent studies suggest that LLMs can offer a solution by automatically generating test codes, covering up to 85% of test scenarios (source: [study](https://arxiv.org/pdf/2305.00418.pdf)). To leverage this capability, it is recommended to use open-source LLM-based tools like [codellama](https://ollama.com/library/codellama), which can generate initial test code that developers can then refine and expand as needed. These open-source models can run locally, addressing data privacy concerns. The model landscape is rapidly evolving, so it is suggested that you refer to the [code model ranking](https://huggingface.co/spaces/bigcode/bigcode-models-leaderboard) to stay updated on the latest advancements in this field.
 
 Here's our recommended approach to deciding the right model for you to use:
 
@@ -141,7 +143,7 @@ Is your code open source and permissively licensed?
 - No: We recommend using locally-run LLM models (e.g., [codellama](https://ollama.com/library/codellama)) for sensitive data, such as those provided by the [Ollama](https://ollama.com/) tool, to protect your code from dissemination. (⚠️ These models may not perform as well as cloud-based bigger models, such as `GPT-4`. We recommend asking the LLM to generate a simple test template for you to fill out.) 
 
 
-#### 2.1 Unit Tests
+#### Use Case 1: Writing Unit Tests using LLMs
   - For unit tests, please follow the steps below: 
 
 1. **Download and Install OLLAMA:**
@@ -234,7 +236,7 @@ The following are suggested LLM prompts to use with automated generation.
         unittest.main()
     ```
 
-#### 2.2 System Tests
+#### Use Case 2: Writing System Tests using LLMs and Robot Framework
 
 System-level tests that involve interaction with external software or files can be complicated to test. To help write tests automatically in these scenarios, we recommend leveraging the [**Robot Framework**](https://github.com/robotframework/QuickStartGuide/blob/master/QuickStart.rst) in collaboration with the Large-Language Models to meet the challenge. Specifically, using LLMs to auto-generate Robot Framework pseudocode can help streamline the process of creating integration test cases. Here's an example:
 
@@ -335,7 +337,7 @@ Log:     MFA_Login/log.html
 Report:  MFA_Login/report.html
 ```
 
-The quality of generated test code can be compared with the example provided by Robot Framework [here](https://docs.robotframework.org/docs/examples/mfa_login). The website name that you are testing needs to be updated, but other than that, it was perfect! 
+The quality of the generated test code can be compared with the example provided by Robot Framework [here](https://docs.robotframework.org/docs/examples/mfa_login). The website name that you are testing needs to be updated, but other than that, it was perfect! 
 
 
 ### 3. Automate Your Tests
