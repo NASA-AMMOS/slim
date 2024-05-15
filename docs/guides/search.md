@@ -13,37 +13,37 @@ import { Link } from 'react-router-dom';
 Explore our guides via the categories below or the left-hand navigation. You may also search our guides.
 
 <div style={{ display: 'flex', flexWrap: 'wrap', gap: '20px', justifyContent: 'center' }}>
-  <Link to="/slim/docs/category/software-lifecycle" style={{ width: '18rem', textDecoration: 'none' }}>
+  <Link to="/slim/docs/category/-software-lifecycle" style={{ width: '18rem', textDecoration: 'none' }}>
     <Card style={{ flex: '1 0 auto', cursor: 'pointer' }}>
       <Card.Body style={{ textAlign: 'center' }}>
         <img src="/slim/img/lifecycle.svg" alt="Software Lifecycle" style={{ maxHeight: '200px' }}></img>
         <Card.Title>Software Lifecycle</Card.Title>
         <Card.Text>
-          Covers the entire process of software development, continuous pipelines, application kits, testing, and security.
+          Covers the entire process of software development: from code development, testing, building, security to deployment and delivery.
         </Card.Text>
       </Card.Body>
     </Card>
   </Link>
 
-  <Link to="/slim/docs/category/governance" style={{ width: '18rem', textDecoration: 'none' }}>
+  <Link to="/slim/docs/category/-governance" style={{ width: '18rem', textDecoration: 'none' }}>
     <Card style={{ flex: '1 0 auto', cursor: 'pointer' }}>
       <Card.Body style={{ textAlign: 'center' }}>
         <img src="/slim/img/governance.svg" alt="Governance" style={{ maxHeight: '200px' }}></img>
         <Card.Title>Governance</Card.Title>
         <Card.Text>
-          Dedicated to establishing robust governance frameworks, with standards for contributions and governance models.
+          Covers governance topics like governance frameworks, standards for contributions, triaging and other ideas.
         </Card.Text>
       </Card.Body>
     </Card>
   </Link>
 
-  <Link to="/slim/docs/category/documentation" style={{ width: '18rem', textDecoration: 'none' }}>
+  <Link to="/slim/docs/category/-information-sharing" style={{ width: '18rem', textDecoration: 'none' }}>
     <Card style={{ flex: '1 0 auto', cursor: 'pointer' }}>
       <Card.Body style={{ textAlign: 'center' }}>
-        <img src="/slim/img/documentation.svg" alt="Documentation" style={{ maxHeight: '200px' }}></img>
+        <img src="/slim/img/documentation.svg" alt="Information Sharing" style={{ maxHeight: '200px' }}></img>
         <Card.Title>Information Sharing</Card.Title>
         <Card.Text>
-          Focuses on creating effective project documentation, including Change Logs, Documentation Hosts, and README templates.
+          Focuses on project information sharing best practices, including documentation, communication channels, and other topics. 
         </Card.Text>
       </Card.Body>
     </Card>
