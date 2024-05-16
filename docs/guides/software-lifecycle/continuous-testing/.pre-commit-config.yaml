@@ -36,7 +36,7 @@ repos:  # List of repositories containing pre-commit hooks
       - id: bandit  # Runs Bandit, a security linter for Python code
         args:
           - "--configfile=pyproject.toml"  # Specifies a configuration file for Bandit
-          - "--severity-level=h
+          - "--severity-level=h"
 
   # Language-Specific Hooks: Markdown
   - repo: https://github.com/igorshubovych/markdownlint-cli
