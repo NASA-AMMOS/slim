@@ -1,8 +1,7 @@
+<!--
 import CodeBlock from '@theme/CodeBlock';
 import PreCommitConfigSource from '!!raw-loader!./.pre-commit-config.yaml';
-
-
----
+-->
 
 # Continuous Testing
 
@@ -344,8 +343,9 @@ Our recommendation is to automate as many of your tests as possible. For tests t
 
 #### 3.1 Static Test Automation
 We recommend setting up a static test using `.pre-commit-config.yaml`. A working example is [here](.pre-commit-config.yaml). 
-
+<!--
 <CodeBlock language="yaml">{PreCommitConfigSource}</CodeBlock>
+-->
 
 #### 3.2 Component Test Automation
 
