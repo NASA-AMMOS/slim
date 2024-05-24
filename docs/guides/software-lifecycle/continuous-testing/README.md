@@ -2,7 +2,6 @@
 import CodeBlock from '@theme/CodeBlock';
 import PreCommitConfigSource from '!!raw-loader!./.pre-commit-config.yaml';
 -->
-
 # Continuous Testing
 
 <pre align="center">A comprehensive guide to developing a continuous testing plan, implementation, and automation approach for your project using AI tools.</pre>
@@ -131,7 +130,58 @@ In the "Performance Testing" section, detail how you ensure your application can
 
 We recommend using [Testing Frameworks](testing-frameworks) when writing your tests to automate, organize, and analyze your testing efforts effectively. You can write your test code from scratch, but another way to write it is using large language models (LLMs). 
 
-Recent studies suggest that LLMs can offer a solution by automatically generating test codes, covering up to 85% of test scenarios (source: [study](https://arxiv.org/pdf/2305.00418.pdf)). To leverage this capability, it is recommended to use open-source LLM-based tools like [codellama](https://ollama.com/library/codellama), which can generate initial test code that developers can then refine and expand as needed. These open-source models can run locally, addressing data privacy concerns. The model landscape is rapidly evolving, so it is suggested that you refer to the [code model ranking](https://huggingface.co/spaces/bigcode/bigcode-models-leaderboard) to stay updated on the latest advancements in this field.
+We recommend adding inline comments in your tests to clarify the purpose of each test. These comments should include details on the function being tested, the test type (e.g., bug fix, change request, requirements validation, anomaly reports), and any relevant context. For example: 
+```python
+import unittest
+from computeTime import projectPoint  
+
+class TestProjectPoint(unittest.TestCase):
+    """
+    Unit tests for the `projectPoint` function in the `computeTime.py` module.
+    """
+    def test_projectPoint_2D(self):
+        """
+        Purpose: Test the `projectPoint` function with 2D vectors to ensure it
+        correctly handles the case where the input vectors are the same.
+
+        Function: `projectPoint(vector1, vector2)`
+
+        Test Type: Bug fix validation (ref BUG-REPORT-1234)
+
+        Description: This test validates that the function no longer raises
+        an error when the input vectors are the same. Previously, it incorrectly
+        raised an error by summing the elements of the difference vector. The 
+        function has been fixed to compute the magnitude of the difference vector 
+        and only raise an error if that magnitude is zero. This test provides
+        input vectors that used to erroneously return errors and checks that
+        the errors are no longer raised.
+        """
+
+        # Test case with 2D vectors that are the same
+        vector1 = [1, 2]
+        vector2 = [1, 2]
+
+        # Call the function and assert that it does not raise an error
+        try:
+            projectPoint(vector1, vector2)
+        except ValueError:
+            self.fail("projectPoint() raised ValueError unexpectedly with identical vectors")
+
+        # Test case with 2D vectors that are different
+        vector1 = [1, 2]
+        vector2 = [2, 3]
+
+        # Call the function and assert that it completes successfully
+        try:
+            projectPoint(vector1, vector2)
+        except ValueError:
+            self.fail("projectPoint() raised ValueError unexpectedly with different vectors")
+
+if __name__ == '__main__':
+    unittest.main()
+```
+
+Recent studies show that large language models (LLMs) can generate test code covering up to 85% of scenarios (source: [study](https://arxiv.org/pdf/2305.00418.pdf)). Open-source LLM tools like [codellama](https://ollama.com/library/codellama) can create initial test code, which developers can refine. Running these models locally addresses data privacy concerns. For the latest advancements, refer to the [code model ranking](https://huggingface.co/spaces/bigcode/bigcode-models-leaderboard).
 
 Here's our recommended approach to deciding the right model for you to use:
 
@@ -144,7 +194,7 @@ Is your code open source and permissively licensed?
   - For unit tests, please follow the steps below: 
 
 1. **Download and Install OLLAMA:**
-   - [OLLAMA](https://ollama.com): A streamlined tool for running various LLMs, like `llama2` and `codellama`, locally. Follow the steps to install this tool locally. 
+   - [OLLAMA](https://ollama.com): A streamlined tool for running various LLMs, like `llama3` and `codellama`, locally. Follow the steps to install this tool locally. 
 
 2. **Invoke LLM and Generate Test Code:**
    - Example script: 
@@ -160,30 +210,31 @@ Is your code open source and permissively licensed?
 
    - Example LLM code generation command: 
    ```bash
-   ollama run codellama "$(cat calculator.py) from the above code, write a unit test for the functions add and subtract. do not explain the code. only provide the unit test script"
+   ollama run codellama "$(cat calculator.py) from the above code, write a unit test for the functions add and subtract. do not explain the code. only provide the unit test script. Add inline comments in your tests to clarify the purpose of each test. These comments should include details on the function being tested, the test type (e.g., bug fix, change request, requirements validation, anomaly reports), and any relevant context."
    ```
 
    - The given bash script above utilizes the ollama command to execute the codellama tool, passing it the content of the file dswx_s1_validator.py as an argument within double quotes. This content is retrieved using the cat command. The purpose of this script is to run the llama2 tool on the code provided in dswx_s1_validator.py and generate a unit test specifically for the get_burst_id function within that code.
 
    - Output looks like this:
    ```python
-   from calculator import Calculator
-   import unittest
-
-   class TestCalculator(unittest.TestCase):
-      def setUp(self) -> None:
-         self.calculator = Calculator()
-
-      def test_add(self):
-         result = self.calculator.add(3, 5)
-         self.assertEqual(result, 8)
-
-      def test_subtract(self):
-         result = self.calculator.subtract(10, 2)
-         self.assertEqual(result, 8)
-
-   if __name__ == "__main__":
-      unittest.main()
+    import unittest
+    from calculator import add, subtract
+    
+    class TestCalculator(unittest.TestCase):
+        def test_add(self):
+            """
+            Test the add function to ensure it correctly adds two numbers.
+            Test Type: Requirements Validation
+            """
+            self.assertEqual(add(2, 3), 5)
+    
+        def test_subtract(self):
+            """
+            Test the subtract function to ensure it correctly subtracts two 
+    numbers.
+            Test Type: Requirements Validation
+            """
+            self.assertEqual(subtract(5, 2), 3)
    ```
    
 3. **Review and Refine Generated Code:**
