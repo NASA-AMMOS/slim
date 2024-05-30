@@ -15,7 +15,7 @@ import PreCommitConfigSource from '!!raw-loader!./.pre-commit-config.yaml';
 
 ### Background 
 
-Continuous testing (CT) is the practice of automatically and continuously testing code changes throughout the development process to identify and address issues *early*. The scope of CT includes testing code modules, interaction between software components, security, and user interfaces. Implementing CT is often difficult and time-consuming - we, therefore, recommend a simplified approach to get started with CT through a template and by using artificial intelligence tools like large-language models to quickly make a test plan a reality. The goal is to enable your project to identify and fix problems early, before they become major issues, leading to faster releases, improved software quality, and happier users.
+Continuous testing (CT) is the practice of automatically and continuously testing code changes throughout the development process to identify and address issues *early*. The scope of CT includes testing code modules, interaction between software components, security, and user interfaces. Implementing CT is often difficult and time-consuming - we, therefore, recommend a simplified approach to get started with CT through a template and by using artificial intelligence tools like large-language models to make a test plan a reality quickly. The goal is to enable your project to identify and fix problems early, before they become major issues, leading to faster releases, improved software quality, and happier users.
 
 ### Approach
 
@@ -59,7 +59,7 @@ Although there are many steps in setting up a continuous testing architecture, t
 
 ## Step-by-Step Guide
 
-This step-by-step guide walks you through establishing, writing, automating, and maintaining a continuous testing solution for your project.
+This step-by-step guide will help you establish, write, automate, and maintain a continuous testing solution for your project.
 
 ### 1. Create a TESTING.md
 
@@ -68,7 +68,7 @@ We recommend creating a `TESTING.md` file that outlines the testing objectives a
 1. A list of the types of tests you run against your software.
 2. Locations where your tests are defined.
 3. When and how your tests are run.
-4. How to contribute / modify tests.
+4. How to contribute/modify tests.
 
 Having this information in a single file helps guide your testing journey and adds clarity for your team. 
 
@@ -152,8 +152,8 @@ class TestProjectPoint(unittest.TestCase):
         an error when the input vectors are the same. Previously, it incorrectly
         raised an error by summing the elements of the difference vector. The 
         function has been fixed to compute the magnitude of the difference vector 
-        and only raise an error if that magnitude is zero. This test provides
-        input vectors that used to erroneously return errors and checks that
+        and only raises an error if that magnitude is zero. This test provides
+        input vectors that are used to erroneously return errors and checks that
         the errors are no longer raised.
         """
 
@@ -213,7 +213,7 @@ Is your code open source and permissively licensed?
    ollama run codellama "$(cat calculator.py) from the above code, write a unit test for the functions add and subtract. do not explain the code. only provide the unit test script. Add inline comments in your tests to clarify the purpose of each test. These comments should include details on the function being tested, the test type (e.g., bug fix, change request, requirements validation, anomaly reports), and any relevant context."
    ```
 
-   - The given bash script above utilizes the ollama command to execute the codellama tool, passing it the content of the file dswx_s1_validator.py as an argument within double quotes. This content is retrieved using the cat command. The purpose of this script is to run the llama2 tool on the code provided in dswx_s1_validator.py and generate a unit test specifically for the get_burst_id function within that code.
+   - The given bash script above utilizes the ollama command to execute the codellama tool, passing it the content of the file dswx_s1_validator.py as an argument within double quotes. This content is retrieved using the cat command. The purpose of this script is to run the codellama tool on the code provided in dswx_s1_validator.py and generate a unit test specifically for the get_burst_id function within that code.
 
    - Output looks like this:
    ```python
@@ -236,14 +236,15 @@ Is your code open source and permissively licensed?
             """
             self.assertEqual(subtract(5, 2), 3)
    ```
-   
+   - Codellama is one example of a model available in the library. You can explore other models at [Ollama's library](https://ollama.com/library).
+
 3. **Review and Refine Generated Code:**
-   - Developers should review the generated code, fixing errors and adding any missing edge cases.
+   - Developers should review the generated code, fix errors, and add any missing edge cases.
 
 4. **Iterate as Needed:**
    - If necessary, update the prompt and obtain a revised test code. Repeat the process until satisfactory.
 
-**Disclaimer:** While LLMs can generate approximately 80% of test code automatically, developers must verify and refine the remaining 20%, ensuring comprehensive test coverage.
+**Disclaimer:** While LLMs can generate approximately 80% of test code automatically, developers must verify and refine the remaining 20% to ensure comprehensive test coverage.
 
 The following are suggested LLM prompts to use with automated generation. 
   - Example Prompts for Auto-generated Unit Tests: 
@@ -400,7 +401,7 @@ We recommend setting up a static test using `.pre-commit-config.yaml`. A working
 
 #### 3.2 Component Test Automation
 
-Component tests refer to tests for your immediate code base, code file, or something that does not require system level interaction. Please consult our [Testing Frameworks guide](testing-frameworks) for a choice of testing tools we recommend. Once selected, we recommend automating the execution of your tests in both of the following ways:
+Component tests refer to tests for your immediate code base, code file, or something that does not require system-level interaction. Please consult our [Testing Frameworks guide](testing-frameworks) for a choice of testing tools we recommend. Once selected, we recommend automating the execution of your tests in both of the following ways:
 
 1. Execute tests locally on your developers' machines upon local Git commits
 2. Execute tests upon Git pushes to given Git branches on your version control system (VCS) - hosted on GitHub.com or alternate
@@ -511,7 +512,7 @@ To invoke a `.pre-commit-config.yml` configuration from GitHub Actions or Jenkin
 
 ###### GitHub Actions
 
-To execute the pre-commit hooks defined in your `.pre-commit-config.yml` as part of a GitHub Actions workflow, you will create a workflow file in your repository that triggers on push events. Here’s how to set it up:
+To execute the pre-commit hooks defined in your `.pre-commit-config.yml` as part of a GitHub Actions workflow, you will create a workflow file in your repository that triggers push events. Here’s how to set it up:
 
 1. **Create a Workflow File:** Navigate to the `.github/workflows` directory in your repository. If it doesn't exist, create it.
    
@@ -565,7 +566,7 @@ To run the pre-commit hooks as part of a Jenkins build, you'll need to configure
 
 System tests refer to tests that require interaction between multiple components. Not every project has this complexity. To aid in the automation of system tests, we suggest doing the following:
 
-1. Have a schedule for running system tests (e.g. nightly, weekly)
+1. Have a schedule for running system tests (e.g., nightly, weekly)
 2. Ensure software is built and published to repositories:
    - Stand-alone components of your software should be independently released, built, or packaged to be published on public repositories
    - (Optional) a final, single build of an integrated software consisting of multiple components is built, packaged, and published to a public repository
@@ -623,9 +624,9 @@ You should outline the types of system tests you plan to implement in your `TEST
 ##### Example: Integration Test Automation
 
 We recommend the following steps: 
-1. Take a look at the following external [guide](https://microsoft.github.io/code-with-engineering-playbook/automated-testing/integration-testing/) from Microsoft Engineering Fundamentals for more information about applying integration testing.
+1. For more information about applying integration testing, take a look at the following external [guide](https://microsoft.github.io/code-with-engineering-playbook/automated-testing/integration-testing/) from Microsoft Engineering Fundamentals.
 2. Follow the process of above [diagram](#32-system-test-automation) for integration test automation.
-3. Integrate your integration tests into a [Continuous Integration (CI) pipeline](/docs/guides/software-lifecycle/continuous-integration), allowing for automatic execution of tests upon code changes. 
+3. Integrate your integration tests into a [Continuous Integration (CI) pipeline](docs/guides/software-lifecycle/continuous-integration), which will allow for the automatic execution of tests upon code changes. 
 
 
 ##### Example: Security Test Automation
@@ -700,7 +701,8 @@ A: We emphasize iterative implementation for continuous testing success, underst
 - [Rishi Verma](https://github.com/riverma)
 
 **Acknowledgements**:
-* Thank you to John Engelke and Dillon Dalton for insightful comments and feedback, which contributed to the enhancement of this work.
+* We are grateful to John Engelke and Dillon Dalton for their insightful comments and feedback, which have greatly improved this work.
+* We also appreciate Drew Meyers and Luca Cinquini for providing exemplary best practices for various tests and pre-commit hooks.
   
 ---
 
