@@ -125,15 +125,16 @@ Include specifics about your testing setup in this template section as follows:
 
 Writing comprehensive tests for large software applications can be a time-consuming process. While automatic test code generation tools like Pynguin show promise, they may not yet meet practical needs. Recent studies suggest that Large Language Models (LLMs) offer a viable solution, covering up to 85% of test methods automatically (source: [study](https://arxiv.org/pdf/2305.00418.pdf)).
 
-Our recommendation is to leverage LLM-based tools, such as llama2, to quickly generate initial test code, with developers refining and expanding as necessary. Here's how:
+Our recommendation is to leverage LLM-based tools, such as llama3, to quickly generate initial test code, with developers refining and expanding as necessary. Here's how:
 
 1. **Download and Install OLLAMA:**
    - [OLLAMA](https://github.com/ollama/ollama): A streamlined tool for running LLMs locally.
 
-3. **Invoke LLM and Generate Test Code:**
+2. **Invoke LLM and Generate Test Code:**
    ```bash
-   ollama run llama2 "$(cat ~/app_pack_generator/docker.py)" write a unit test code
+   ollama run llama3 "$(cat ~/app_pack_generator/docker.py)" write a unit test code
    ```
+   - Llama3 is one example of a model available in the library. You can explore other models at [Ollama's library](https://ollama.com/library).
    
 4. **Review and Refine Generated Code:**
    - Developers should review the generated code, fixing errors and adding any missing edge cases.
@@ -330,10 +331,10 @@ if __name__ == '__main__':
 
 #### 2.2 Robot Framework and LLM Synergy 
 
-In scenarios where you are already well-versed in **Robot Framework**, leveraging the synergy between Robot Framework and **LLM (Llama2)** can yield significant benefits. Specifically, using LLM to auto-generate Robot Framework pseudocode streamlines the process of creating integration test cases. Here's an example:
+In scenarios where you are already well-versed in **Robot Framework**, leveraging the synergy between Robot Framework and **LLM** can yield significant benefits. Specifically, using LLM to auto-generate Robot Framework pseudocode streamlines the process of creating integration test cases. Here's an example:
 
 1. **Generating Robot Framework Pseudocode with LLM**:
-    - Use Llama2 to generate test case pseudocode in Robot Framework syntax.
+    - Use LLM to generate test case pseudocode in Robot Framework syntax.
         ```robot
         *** Settings ***
         Documentation    Example test suite
