@@ -138,7 +138,7 @@ Recent studies show that large language models (LLMs) can generate test code cov
 Here's our recommended approach to deciding the right model for you to use:
 
 Is your code open source and permissively licensed?
-- Yes: We recommend high-performance cloud-based LLM models (e.g., [GPT-4](https://openai.com/gpt-4), [Github Copilot](https://github.com/features/copilot))
+- Yes: We recommend high-performance cloud-based LLM models (see our [recommended cloud-based models](testing-frameworks/#cloud-based-models))
 - No: We recommend using locally-run LLM models (e.g., [codellama](https://ollama.com/library/codellama)) for sensitive data, such as those provided by the [Ollama](https://ollama.com/) tool, to protect your code from dissemination. (⚠️ These models may not perform as well as cloud-based bigger models, such as `GPT-4`. We recommend asking the LLM to generate a simple test template for you to fill out.) 
 
 
