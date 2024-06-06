@@ -135,7 +135,7 @@ We recommend using [Testing Frameworks](testing-frameworks#for-code-development)
 
 Recent studies show that large language models (LLMs) can generate test code covering up to 85% of scenarios (source: [study](https://arxiv.org/pdf/2305.00418.pdf)). Open-source LLM tools like [codellama](https://ollama.com/library/codellama) can create initial test code, which developers can refine. Running these models locally addresses data privacy concerns. For the latest advancements, refer to the [code model ranking](https://huggingface.co/spaces/bigcode/bigcode-models-leaderboard).
 
-Here's our recommended approach to deciding the right model for you to use:
+Here's our recommended approach to deciding the right model for you to use (see our full list of [recommended code generation models](continuous-testing/testing-frameworks/#for-test-code-generation)):
 
 Is your code open source and permissively licensed?
 - Yes: We recommend high-performance cloud-based LLM models (see our [recommended cloud-based models](testing-frameworks/#cloud-based-models))
