@@ -240,7 +240,7 @@ The following are suggested LLM prompts to use with automated generation.
 
 #### Use Case 2: Writing System Tests using LLMs and Behavior-Driven Development (Robot Framework)
 
-System-level tests that involve interaction with external software or files can be complicated to test. To help write tests automatically in these scenarios, we recommend leveraging the behavior-driven development (BDD), such as [**Robot Framework**](https://github.com/robotframework/QuickStartGuide/blob/master/QuickStart.rst) in collaboration with the Large-Language Models to meet the challenge. Specifically, using LLMs to auto-generate Robot Framework pseudocode can help streamline the process of creating integration test cases. Here's an example:
+System-level tests that involve interaction with external software or files can be complicated to test. Please refer to our [Testing Frameworks guide](testing-frameworks#for-system-testing) for system testing tools. We recommend leveraging the behavior-driven development (BDD), such as [**Robot Framework**](https://github.com/robotframework/QuickStartGuide/blob/master/QuickStart.rst) in collaboration with the Large-Language Models to meet the challenge. Specifically, using LLMs to auto-generate Robot Framework pseudocode can help streamline the process of creating integration test cases. Here's an example:
 
 1. **Generating Robot Framework Pseudocode with LLM**:
     - Use Codellama to generate test case pseudocode in Robot Framework syntax.
