@@ -7,24 +7,24 @@
 **Background**: Software security is critical in modern systems with application code at its root. Identifying and addressing vulnerabilities rapidly mitigates risk and limits the potential surface area of attacks. We recommend [NASA's SCRUB platform](https://github.com/nasa/scrub) to manage code scanning by identifying, orchestrating and aggregating security information. SCRUB's GitHub implementation wraps [CodeQL](https://codeql.github.com/) results into compact, curated reports that highlight security assessments and are suitable for ingestion by automated reporting tools. A small configuration is appended to an existing CodeQL configuration (`codeql-config.yml` file) that specifies security analyses and reporting properties.
 
 **Use Cases**:
-- Standardized security reports that enables rapid interchange of scanning tools.
-   - Streamlining management of known security considerations during codebase audits.
+- Standardized security reports that enables rapid interchange of scanning tools
+   - Streamlining management of known security considerations during codebase audits
 - Discovering security risks in code, such as:
    - Improper input validation
    - Weak encryption
    - Use of dangerous library functions
    - Other issues that may be difficult to identify via unit testing.
 - Scanning local client repositories to identify exploitable security risks.
-- Implementing a reporting loop in continuous integration (CI) pipelines using GitHub Actions to catch unforeseen risks.
+- Implementing a reporting loop in continuous integration (CI) pipelines using GitHub Actions to catch unforeseen risks
 
 ---
 
 ## Prerequisites
-To get the most out of `SCRUB`, you'll need:
+To get the most out of SCRUB, you'll need:
 
 * Python 3 with the `pip` tool installed
 * Static analysis tools installed and ready for use
-   * CodeQL, SonarQube, and Pylint are some common examples
+   * CodeQL, SonarQube and Pylint are some common examples
 * (Optional) Familiarity with BASH and/or Python for potential customizations
 * (Optional) A GitHub repository supporting GitHub Actions
 
@@ -35,17 +35,17 @@ To get the most out of `SCRUB`, you'll need:
 SCRUB may be run locally or as a CI workflow action, such as in GitHub Actions. Please see below sections for further details.
 
 ### Client-side Scan and Analysis
-The developer's local environment is scanned directly using the `SCRUB` tool. After scanning, a report containing detected security issues is generated. Developers can audit this report for detailed information on detected security concerns.
+The developer's local environment is scanned directly using the SCRUB tool. After scanning, a report containing detected security issues is generated. Developers can audit this report for detailed information on detected security concerns.
 
 #### Steps
 1. **Installation**
-   - Install the release version of  [SCRUB](https://nasa.github.io/scrub/installation.html).
+   - Install the release version of [SCRUB](https://nasa.github.io/scrub/installation.html)
       ```bash
       pip3 install --upgrade --user nasa-scrub
       ```
 
 2. **Configuration**
-   - Create a `scrub.cfg` configuration file. This file must be populated with project specific configuration values, depending on the tool that is being used. More information can be found in the [SCRUB documentation](https://nasa.github.io/scrub/configuration.html).
+   - Create a `scrub.cfg` configuration file. This file must be populated with project specific configuration values, depending on the tool that is being used. More information can be found in the [SCRUB documentation](https://nasa.github.io/scrub/configuration.html)
 
       ``` bash
       scrub get-conf --output scrub.cfg
@@ -69,13 +69,13 @@ The developer's local environment is scanned directly using the `SCRUB` tool. Af
 
 > ℹ️ **Note**: Any confirmed security issues should be addressed and mitigated before pushing to remote repositories.
 
-### GitHub.com Actions Analysis on Push and Pull Request
+### GitHub Actions Analysis on Push and Pull Request
 
-Code is scanned for security risks within the repository. It leverages [GitHub Action](https://github.com/features/actions). The scan is triggered during a push or pull request and any detected security vulnerabilities are reported while blocking merges or pushes to protected branches.
+Code is scanned for security risks within the repository. It leverages [GitHub Actions](https://github.com/features/actions). The scan is triggered during a push or pull request and any detected security vulnerabilities are reported while blocking merges or pushes to protected branches.
 
 #### Steps
 1. **Workflow Creation**
-   - The first step is to create a `scrub.yaml` workflow file in the `.github/workflows` directory to define the GitHub action. Copy and paste the below to your new file while ensuring the correct branch of your codebase is referenced. For example, the following configuration scans for CodeQL security and quality checks for Python language code. Note: a version of the below is also available through the [SLIM Python Starter Kit](https://github.com/NASA-AMMOS/slim-starterkit-python/blob/main/.github/workflows/codeql.yml):
+   - The first step is to create a `scrub.yaml` workflow file in the `.github/workflows` directory to define a GitHub action. Copy and paste the below to your new file while ensuring the correct branch of your codebase is referenced. For example, the following configuration scans for CodeQL security and quality checks for Python language code. Note: a version of the below is also available through the [SLIM Python Starter Kit](https://github.com/NASA-AMMOS/slim-starterkit-python/blob/main/.github/workflows/codeql.yml):
       - This workflow is based on the default CodeQL workflow file with three modifications:
          1. Under the *Initialize CodeQL* step, the `queries` entity has been added to enable all of the available security queries
          2. A new *Post-Process Output* step has been added to generate a CSV output file that may be easily ingested by other systems
@@ -175,7 +175,7 @@ Code is scanned for security risks within the repository. It leverages [GitHub A
 
 ---
 
-### Frequently Asked Questions (FAQ)
+## Frequently Asked Questions (FAQ)
 
 - Q: **If security concerns are detected in my code, what should I do?**
 
@@ -188,7 +188,7 @@ Code is scanned for security risks within the repository. It leverages [GitHub A
      6. _Educate and Prevent:_ To avoid such instances in the future, educate your team on the importance of code security and potential risks. Consider adopting practices or tools that identify risks early in development cycles. You may also consider if it would be helpful to modify your project's coding standard to improve code quality.
 
 
-- Q: **Where can I find more configurations and options for `SCRUB`?**
+- Q: **Where can I find more configurations and options for SCRUB?**
 
   A: Refer to the official documentation for [SCRUB](https://nasa.github.io/scrub).
 
