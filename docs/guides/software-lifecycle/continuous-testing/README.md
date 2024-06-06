@@ -238,7 +238,7 @@ The following are suggested LLM prompts to use with automated generation.
         unittest.main()
     ```
 
-#### Use Case 2: Writing System Tests using LLMs and Behavior-Driven Development (Robot Framework)
+#### Use Case 2: Writing System Tests using Downloadable, Open Source Code Generation Models and Behavior-Driven Development Frameworks
 
 System-level tests that involve interaction with external software or files can be complicated to test. Please refer to our [Testing Frameworks guide](testing-frameworks#for-system-testing) for system testing tools. We recommend leveraging the behavior-driven development (BDD), such as [**Robot Framework**](https://github.com/robotframework/QuickStartGuide/blob/master/QuickStart.rst) in collaboration with the Large-Language Models to meet the challenge. Specifically, using LLMs to auto-generate Robot Framework pseudocode can help streamline the process of creating integration test cases. Here's an example:
 
