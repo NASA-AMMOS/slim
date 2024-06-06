@@ -133,57 +133,6 @@ In the "Performance Testing" section, detail how you ensure your application can
 
 We recommend using [Testing Frameworks](testing-frameworks#for-test-code-generation) when writing your tests to automate, organize, and analyze your testing efforts effectively. You can write your test code from scratch, but another way to write it is using large language models (LLMs). 
 
-We recommend adding inline comments in your tests to clarify the purpose of each test. These comments should include details on the function being tested, the test type (e.g., bug fix, change request, requirements validation, anomaly reports), and any relevant context. For example: 
-```python
-import unittest
-from computeTime import projectPoint  
-
-class TestProjectPoint(unittest.TestCase):
-    """
-    Unit tests for the `projectPoint` function in the `computeTime.py` module.
-    """
-    def test_projectPoint_2D(self):
-        """
-        Purpose: Test the `projectPoint` function with 2D vectors to ensure it
-        correctly handles the case where the input vectors are the same.
-
-        Function: `projectPoint(vector1, vector2)`
-
-        Test Type: Bug fix validation (ref BUG-REPORT-1234)
-
-        Description: This test validates that the function no longer raises
-        an error when the input vectors are the same. Previously, it incorrectly
-        raised an error by summing the elements of the difference vector. The 
-        function has been fixed to compute the magnitude of the difference vector 
-        and only raises an error if that magnitude is zero. This test provides
-        input vectors that are used to erroneously return errors and checks that
-        the errors are no longer raised.
-        """
-
-        # Test case with 2D vectors that are the same
-        vector1 = [1, 2]
-        vector2 = [1, 2]
-
-        # Call the function and assert that it does not raise an error
-        try:
-            projectPoint(vector1, vector2)
-        except ValueError:
-            self.fail("projectPoint() raised ValueError unexpectedly with identical vectors")
-
-        # Test case with 2D vectors that are different
-        vector1 = [1, 2]
-        vector2 = [2, 3]
-
-        # Call the function and assert that it completes successfully
-        try:
-            projectPoint(vector1, vector2)
-        except ValueError:
-            self.fail("projectPoint() raised ValueError unexpectedly with different vectors")
-
-if __name__ == '__main__':
-    unittest.main()
-```
-
 Recent studies show that large language models (LLMs) can generate test code covering up to 85% of scenarios (source: [study](https://arxiv.org/pdf/2305.00418.pdf)). Open-source LLM tools like [codellama](https://ollama.com/library/codellama) can create initial test code, which developers can refine. Running these models locally addresses data privacy concerns. For the latest advancements, refer to the [code model ranking](https://huggingface.co/spaces/bigcode/bigcode-models-leaderboard).
 
 Here's our recommended approach to deciding the right model for you to use:
@@ -194,7 +143,7 @@ Is your code open source and permissively licensed?
 
 
 #### Use Case 1: Writing Unit Tests using LLMs
-  - For unit tests, please follow the steps below: 
+For unit tests, please follow the steps below: 
 
 1. **Download and Install OLLAMA:**
    - [OLLAMA](https://ollama.com): A streamlined tool for running various LLMs, like `llama3` and `codellama`, locally. Follow the steps to install this tool locally. 
@@ -217,6 +166,7 @@ Is your code open source and permissively licensed?
    ```
 
    - The given bash script above utilizes the ollama command to execute the codellama tool, passing it the content of the file dswx_s1_validator.py as an argument within double quotes. This content is retrieved using the cat command. The purpose of this script is to run the codellama tool on the code provided in dswx_s1_validator.py and generate a unit test specifically for the get_burst_id function within that code.
+   - We recommend adding inline comments in your tests to clarify the purpose, including details on the function being tested, the test type (e.g., bug fix, change request), and relevant context.
 
    - Output looks like this:
    ```python
@@ -242,10 +192,10 @@ Is your code open source and permissively licensed?
    - Codellama is one example of a model available in the library. You can explore other models at [Ollama's library](https://ollama.com/library).
 
 3. **Review and Refine Generated Code:**
-   - Developers should review the generated code, fix errors, and add any missing edge cases.
+  - Developers should review the generated code, fix errors, and add any missing edge cases.
 
 4. **Iterate as Needed:**
-   - If necessary, update the prompt and obtain a revised test code. Repeat the process until satisfactory.
+  - If necessary, update the prompt and obtain a revised test code. Repeat the process until satisfactory.
 
 **Disclaimer:** While LLMs can generate approximately 80% of test code automatically, developers must verify and refine the remaining 20% to ensure comprehensive test coverage.
 
