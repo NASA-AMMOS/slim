@@ -155,6 +155,21 @@
     ]
   },
   {
+    "title": "Code Security Scanning",
+    "uri": "/slim/docs/guides/software-lifecycle/security/security-scanning",
+    "category": "software-lifecycle",
+    "description": "A guide to scanning code for security issues using NASA's SCRUB tool.",
+    "tags": [
+      "continuous-integration",
+      "devops",
+      "github",
+      "metrics",
+      "scanning",
+      "testing",
+      "tools"
+    ]
+  },
+  {
     "title": "GitHub Security Best Practices",
     "uri": "/slim/docs/guides/software-lifecycle/security/github-security",
     "category": "software lifecycle",
