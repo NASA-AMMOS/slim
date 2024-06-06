@@ -142,7 +142,7 @@ Is your code open source and permissively licensed?
 - No: We recommend using locally-run LLM models (e.g., [codellama](https://ollama.com/library/codellama)) for sensitive data, such as those provided by the [Ollama](https://ollama.com/) tool, to protect your code from dissemination. (⚠️ These models may not perform as well as cloud-based bigger models, such as `GPT-4`. We recommend asking the LLM to generate a simple test template for you to fill out.) 
 
 
-#### Use Case 1: Writing Unit Tests using LLMs
+#### Use Case 1: Writing Unit Tests using Downloadable, Open Source Code Generation Models
 For unit tests, please follow the steps below: 
 
 1. **Download and Install OLLAMA:**
