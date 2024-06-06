@@ -131,7 +131,7 @@ In the "Performance Testing" section, detail how you ensure your application can
 
 ### 2. Write Your Tests
 
-We recommend using [Testing Frameworks](testing-frameworks#for-test-code-generation) when writing your tests to automate, organize, and analyze your testing efforts effectively. You can write your test code from scratch, but another way to write it is using large language models (LLMs). 
+We recommend using [Testing Frameworks](testing-frameworks#for-code-development) when writing your tests to automate, organize, and analyze your testing efforts effectively. You can write your test code from scratch, but another way to write it is using large language models (LLMs), and specifically our recommended [Test Code Generation Frameworks](testing-frameworks#for-test-code-generation). 
 
 Recent studies show that large language models (LLMs) can generate test code covering up to 85% of scenarios (source: [study](https://arxiv.org/pdf/2305.00418.pdf)). Open-source LLM tools like [codellama](https://ollama.com/library/codellama) can create initial test code, which developers can refine. Running these models locally addresses data privacy concerns. For the latest advancements, refer to the [code model ranking](https://huggingface.co/spaces/bigcode/bigcode-models-leaderboard).
 
