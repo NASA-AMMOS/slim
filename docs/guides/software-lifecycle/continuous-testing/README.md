@@ -131,7 +131,7 @@ In the "Performance Testing" section, detail how you ensure your application can
 
 ### 2. Write Your Tests
 
-We recommend using [Testing Frameworks](testing-frameworks) when writing your tests to automate, organize, and analyze your testing efforts effectively. You can write your test code from scratch, but another way to write it is using large language models (LLMs). 
+We recommend using [Testing Frameworks](testing-frameworks#for-test-code-generation) when writing your tests to automate, organize, and analyze your testing efforts effectively. You can write your test code from scratch, but another way to write it is using large language models (LLMs). 
 
 We recommend adding inline comments in your tests to clarify the purpose of each test. These comments should include details on the function being tested, the test type (e.g., bug fix, change request, requirements validation, anomaly reports), and any relevant context. For example: 
 ```python
@@ -642,14 +642,14 @@ To aid in security testing automation, we recommend two steps:
 
 We recommend the following steps for performance test automation:
 1. Take a look at the following external [guide](https://microsoft.github.io/code-with-engineering-playbook/automated-testing/performance-testing/) from Microsoft Engineering Fundamentals for more information about applying performance testing.
-2. Refer to the [Testing Frameworks](testing-frameworks) page for performance test tools and frameworks.
+2. Refer to the [Testing Frameworks](testing-frameworks#for-performance-testing) page for performance test tools and frameworks.
 3. Integrate performance tests into your Continuous Integration and Continuous Delivery (CI/CD) pipeline to enable regular and automated execution of performance tests as part of the software delivery process.
 
 ##### Example: User Interface Test Automation
 
 We recommend the following steps for user interface test automation: 
 1. Take a look at the following external [guide](https://microsoft.github.io/code-with-engineering-playbook/automated-testing/ui-testing/) from Microsoft Engineering Fundamentals for more information about applying user interface testing.
-2. Refer to the [Testing Frameworks](testing-frameworks) page for user interface test tools and frameworks.
+2. Refer to the [Testing Frameworks](testing-frameworks#for-user-interfaces-uis) page for user interface test tools and frameworks.
 3. Set up a CI pipeline to automatically trigger UI test execution upon code changes or at scheduled intervals.
 
 
