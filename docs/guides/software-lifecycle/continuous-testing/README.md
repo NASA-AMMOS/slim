@@ -1,5 +1,5 @@
 ---
-title: Continuous Testing Guide
+title: Continuous Testing
 description: A comprehensive guide to continuous testing in software development.
 sidebar_label: Continuous Testing
 ---
@@ -8,7 +8,6 @@ sidebar_label: Continuous Testing
 import CodeBlock from '@theme/CodeBlock';
 import PreCommitConfigSource from '!!raw-loader!./.pre-commit-config.yaml';
 -->
-# Continuous Testing
 
 <pre align="center">A comprehensive guide to developing a continuous testing plan, implementation, and automation approach for your project using AI tools.</pre>
 
