@@ -202,6 +202,7 @@ sidebar_label: Testing Frameworks
 ## For System Testing
 
 - [Robot Framework](https://robotframework.org): An open-source automation framework that supports both test automation and test process automation.
+- [pytest-bdd](https://pytest-bdd.readthedocs.io/en/latest/): A behavior-driven testing framework for Python, built on top of pytest.
 
 ## For Test Code Generation
 
