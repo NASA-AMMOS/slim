@@ -213,7 +213,9 @@ sidebar_label: Testing Frameworks
 - [StarCoder](https://huggingface.co/bigcode/starcoder): A popular large language model for code generation, particularly suited for multi-language support.
 - [Llama3](https://ollama.com/library): A language model designed for code generation and other tasks.
 
-### Cloud-Based Models (⚠️ Exercise caution when using sensitive data)
+### Cloud-Based Models 
+
+⚠️ Exercise caution when using sensitive data
 
 - [GPT-4](https://openai.com/gpt-4): The latest version of Generative Pre-trained Transformers (GPT), a type of deep learning model used for natural language processing and text generation. 
 - [Claude](https://www.anthropic.com/claude): One of the leading models with longer context windows than GPT-4, allowing it to maintain coherence and understanding over longer sequences of text.
