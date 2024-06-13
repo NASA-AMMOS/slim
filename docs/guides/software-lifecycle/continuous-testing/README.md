@@ -344,13 +344,10 @@ The quality of the generated test code can be compared with the example provided
 
 ### 3. Automate Your Tests
 
-Our recommendation is to automate as many of your tests as possible. For tests that can't be automated, we suggest scheduling specific times for personnel to run manual tests.
+Our recommendation is to automate as many of your tests as possible using [pre-commit](https://pre-commit.com/), a framework that manages and maintains multi-language pre-commit hooks that can be used on the client side as well as the server (VCS) side. 
 
 #### 3.1 Static Test Automation
-We recommend setting up a static test using `.pre-commit-config.yaml`. A working example is [here](.pre-commit-config.yaml). 
-<!--
-<CodeBlock language="yaml">{PreCommitConfigSource}</CodeBlock>
--->
+We recommend setting up a static test using [`.pre-commit-config.yaml`](.pre-commit-config.yaml). 
 
 #### 3.2 Component Test Automation
 
@@ -376,7 +373,7 @@ graph TD
     end
 ```
 
-To make the above automation a reality, we recommend using [pre-commit](https://pre-commit.com/), a framework that manages and maintains multi-language pre-commit hooks that can be used on the client side as well as the server (VCS) side. Here's how to set it up:
+we recommend using [pre-commit](https://pre-commit.com/). Here's how to set it up:
 
 ##### Developers' Machines
 
