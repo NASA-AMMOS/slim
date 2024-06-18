@@ -2,7 +2,7 @@
 
 <pre align="center">Establish a project guide for effective open source governance.</pre>
 
-![governance-screenshot-example](/img/governance-screen.png)
+![governance-screenshot-example](assets/governance-screen.png)
 
 *Example GOVERNANCE.md template rendering*
 
@@ -26,7 +26,7 @@
 
 ## Quick Start
 
-**[Governance Model Template](GOVERNANCE-TEMPLATE.md)** ([see example](https://nasa-ammos.github.io/slim/docs/about/GOVERNANCE/))
+**[⬇️ Governance Model Template (Markdown)](assets/GOVERNANCE-TEMPLATE.txt)** ([see example](https://nasa-ammos.github.io/slim/docs/about/GOVERNANCE/))
 
 Access our recommended template to start integrating a governance model into your project.
 
@@ -38,7 +38,7 @@ Access our recommended template to start integrating a governance model into you
    - Roles (and how contributors can be promoted between roles)
    - Committees (the groups that guide your project)
 2. **Customize the Template**:
-   - View and download our [Governance Model Template](GOVERNANCE-TEMPLATE.md).
+   - View and download our [⬇️ Governance Model Template (Markdown)](assets/GOVERNANCE-TEMPLATE.txt).
    - Place the template in a `GOVERNANCE.md` file within the root folder of your repository.
    - Modify and personalize the template, replacing `[INSERT ...]` text with specifics for your project.
 3. **Implement the Governance Model**:

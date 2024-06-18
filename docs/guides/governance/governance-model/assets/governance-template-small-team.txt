@@ -1,4 +1,3 @@
-````markdown
 # [INSERT PROJECT NAME] Project Governance
 
 This governance model aims to create an open source community that encourages transparency, contributions, and collaboration, but maintains sound technical and quality standards. Our goal is to build a community comprised of members across the [INSERT PROJECT DOMAIN] community and beyond, including from private organizations, universities, government organizations, and international organizations.
@@ -72,4 +71,3 @@ A subset of collaborators form the Steering Committee. The Steering Committee ha
 
 # Acknowledgements
 (Description remains the same)
-````

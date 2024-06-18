@@ -9,6 +9,18 @@
       "templates",
       "repository-setup",
       "github"
+    ],
+    "assets": [
+      {
+        "name": "Governance Template",
+        "type": "text/md",
+        "uri": "/slim/docs/guides/governance/governance-model/assets/GOVERNANCE-TEMPLATE.txt"
+      },
+      {
+        "name": "Governance Template (Small Teams)",
+        "type": "text/md",
+        "uri": "/slim/docs/guides/governance/governance-model/assets/governance-template-small-team.txt"
+      }
     ]
   },
   {
