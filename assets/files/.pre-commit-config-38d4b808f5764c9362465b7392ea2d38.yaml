@@ -1,0 +1,52 @@
+# example .pre-commit-config.yaml
+fail_fast: true  # Stops running hooks after the first failure
+
+repos:  # List of repositories containing pre-commit hooks
+
+  # Language-Agnostic Hooks
+  - repo: https://github.com/pre-commit/pre-commit-hooks  # Repository URL
+    rev: v4.5.0  # Version or commit hash to use
+    hooks:  # List of hooks to be executed
+      - id: trailing-whitespace  # Removes trailing whitespace from files
+      - id: end-of-file-fixer  # Ensures that files end with a newline character
+      - id: check-yaml  # Lints YAML files for syntax errors
+      - id: check-xml  # Lints XML files for syntax errors
+      - id: check-json  # Checks JSON files for parsable syntax
+      - id: check-added-large-files  # Checks for large files added to the repository
+        args:
+          - --maxkb=50000  # Specifies the maximum allowed file size in kilobytes
+
+  # Language-Specific Hooks: Python
+  - repo: https://github.com/PyCQA/isort
+    rev: 5.13.2
+    hooks:
+      - id: isort  # Sorts Python import statements
+      - id: black  # Formats Python code using the Black formatter
+
+  # Language-Specific Hooks: Ruby
+  - repo: https://github.com/astral-sh/ruff-pre-commit
+    rev: v0.2.1
+    hooks:
+      - id: ruff  # Runs Ruff, a Ruby static code analyzer
+
+  # General Security Checks
+  - repo: https://github.com/PyCQA/bandit
+    rev: "1.7.7"
+    hooks:
+      - id: bandit  # Runs Bandit, a security linter for Python code
+        args:
+          - "--configfile=pyproject.toml"  # Specifies a configuration file for Bandit
+          - "--severity-level=h"
+
+  # Language-Specific Hooks: Markdown
+  - repo: https://github.com/igorshubovych/markdownlint-cli
+    rev: "v0.39.0"
+    hooks:
+      - id: markdownlint  # Lints Markdown files according to specified configuration
+        args: ["--config", ".markdownlintrc", "--ignore", "CHANGELOG.md"]
+
+  # Additional Hooks: Other Languages
+  - repo: https://github.com/pre-commit/pre-commit-hooks  # Repository URL
+    rev: v4.5.0  # Version or commit hash to use
+    hooks:  # List of hooks to be executed
+      - id: check-toml  # Lints TOML files for syntax errors
