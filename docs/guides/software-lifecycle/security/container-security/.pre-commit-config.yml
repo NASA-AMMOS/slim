@@ -1,0 +1,6 @@
+- repo: local
+  hooks:
+    - id: docker-scout-cve-scan
+      name: Docker Scout CVE Scan
+      entry: python -c "import subprocess; import sys; result=subprocess.run(['docker', 'scout', 'cves', 'fs://.', '--only-severity', 'critical', '--exit-code']); sys.exit(result.returncode)"
+      language: system

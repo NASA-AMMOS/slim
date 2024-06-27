@@ -1,0 +1,130 @@
+import CodeBlock from '@theme/CodeBlock';
+import PreCommitConfigSource from '!!raw-loader!./.pre-commit-config.yml';
+import DependabotSource from '!!raw-loader!./dependabot.yml';
+
+# Container Security
+
+<pre align="center">Comprehensive guide to scanning container images for security vulnerabilities using pre-commit hooks and automated repository scanning tools.</pre>
+
+![banner-image](/img/container-security-screen.png)
+
+## Introduction
+
+**Background**: Container security is crucial for ensuring that your applications and services run in a secure environment. Containers encapsulate software and dependencies, providing consistency across environments. However, they also carry the risk of vulnerabilities within the base images or dependencies. This guide will help you establish a secure environment by implementing proactive vulnerability scanning. By using pre-commit hooks and repository-level automated scanning, you'll be able to identify security issues early, before they impact production.
+
+**Use Cases**:
+- Running vulnerability scans for all containers at the development stage
+- Ensuring that base images used in CI/CD pipelines are free from known vulnerabilities
+- Automating container vulnerability scans in repositories hosting container images
+
+---
+
+## Prerequisites
+**Software:**
+- Docker containers
+- `pre-commit` framework
+- Docker Hub or GitHub Dependabot
+
+**Skills:**
+- Basic understanding of Git hooks and Docker commands
+- Familiarity with YAML files for pre-commit configuration
+
+---
+
+## Quick Start
+
+**Run a local scan of your container's repository (folder containing the Dockerfile)**
+
+```
+docker scout cves fs://.
+```
+
+**⬇️ [.pre-commit-config.yml](.pre-commit-config.yml)**
+
+Download the file above to access the pre-commit configuration file, which includes an example hook for Docker Scout vulnerability scanning. The file should be placed within your local Git repository. You'll want to ensure you have the [pre-commit](https://pre-commit.com) framework installed. 
+
+**⬇️ [dependabot.yml](dependabot.yml)**
+
+Download the file above to access the recommended `dependabot.yml` file, which configures a GitHub dependabot deployment to perform Docker vulnerability scanning. The file should be placed within `.github/dependabot.yml`. You'll want to ensure you have dependabot configured - see our [GitHub Security Best Practices](/docs/guides/software-lifecycle/security/github-security/README.md) guide for details. 
+
+---
+
+## Step-by-Step Guide
+
+### Step 1: Setup Automated Local Scanning of Container Vulnerabilities
+
+1. Ensure you have `docker` installed and the `scout` plugin. See [this quickstart](https://docs.docker.com/scout/quickstart/#step-2-enable-docker-scout) from Docker's documentation.
+
+    `docker scout`
+
+2. Login to DockerHub to enable scout (required)
+
+    ```
+    docker login
+    ```
+
+3. Perform a scan of the local repository for CVES (vulnerabilities)
+
+    ```
+    docker scout cves fs://.
+    ```
+
+    NOTE: you can use the `--only-severity critical` to limit scanning to just specific criticality levels. [See options documentation here](https://docs.docker.com/reference/cli/docker/scout/cves/#options). 
+
+### Step 2: Setup Automated Local Scanning of Container Vulnerabilities
+
+⚠️ NOTE: we only recommend installing this pre-commit hook if you've already scanned your repository and eliminated vulnerabilities first. See Step 1.
+
+1. Install the pre-commit framework via Python:
+   ```bash
+   pip install pre-commit
+   ```
+2. Initialize pre-commit in your repository:
+   ```bash
+   pre-commit install
+   ```
+3. Create a `.pre-commit-config.yaml` file in the root directory of your Git repository with the following content (note we suggest only scanning for critical vulnerabilities to reduce developer overhead):
+   <CodeBlock language="yaml">{PreCommitConfigSource}</CodeBlock>
+
+   NOTE: you'll need a DockerHub account to run the `docker scout` tool. Note that this command will compare a local scan's results with Docker's database. [More information about Docker Scout is available here](https://docs.docker.com/scout/quickstart/).
+
+### Step 3: Set Up Automated Repository Scanning
+- **Docker Hub**:
+   - Push your images to Docker Hub, where automatic scans are enabled by default.
+
+- **GitHub**:
+   - Leverage Dependabot to perform automated scans of containers (Docker) at a prescribed schedule.
+   - Example `.github/dependabot.yml` file contents:
+   <CodeBlock language="yaml">{DependabotSource}</CodeBlock>
+
+---
+
+## Frequently Asked Questions (FAQ)
+
+**Q: What happens if the pre-commit scan finds vulnerabilities?**
+
+A: The pre-commit hook will prevent you from committing your changes until vulnerabilities are resolved. The scan is configured to only alert for `critical` vulnerabilities by default to be less obtrusive. You can disable the plugin via `SKIP=docker-scout-cve-scan git commit ...`
+
+**Q: What if I want to skip the pre-commit scan temporarily?**
+
+A: Use the `--no-verify` flag with the `git commit` command to bypass the hook, though this is not recommended.
+
+**Q: Is it possible to run vulnerability scans without pre-commit hooks?**
+
+A: Yes, you can incorporate scans into your CI/CD pipeline or use repository scanning tools like Docker Hub or Dependabot, though this poses the risk of having code pushed to other developers that may be vulnerable.
+
+---
+
+## Credits 
+
+**Authorship**:
+- [Rishi Verma](https://www.github.com/riverma)
+
+**Acknowledgements**:
+* OPERA SDS Project for implementation guidance
+
+---
+
+## Feedback and Contributions
+
+We welcome feedback and contributions to help improve and grow this guide. Please see our [contribution guidelines](https://nasa-ammos.github.io/slim/docs/contribute/contributing/).
