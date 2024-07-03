@@ -67,6 +67,8 @@ Download the file above to access the pre-commit configuration file, which inclu
 
 ⚠️ NOTE: We recommend installing this pre-commit hook only if you have already scanned your repository and addressed any vulnerabilities.
 
+The below steps, once enacted, will ensure that any local `git commit` actions taken will be followed by an automated vulnerability scan. If vulnerabilities at the CRITICAL level are found, the commit will be blocked by default.
+
 1. Install the pre-commit framework via Python:
    ```bash
    pip install pre-commit
@@ -79,7 +81,7 @@ Download the file above to access the pre-commit configuration file, which inclu
    pre-commit install
    ```
 
-4. Grype-based vulnerability scanning should run every time a `git commit` is invoked.
+4. Grype-based vulnerability scanning should run every time a `git commit` is invoked. The commit will be blocked if CRITICAL level vulnerabilities are found and will ask the developer to fix them prior to committing. 
 
 ### Step 3: Set Up Automated Repository Scanning
 - **GitHub**:
