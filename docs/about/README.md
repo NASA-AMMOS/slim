@@ -57,7 +57,8 @@ The following list of public projects are currently SLIM community members:
 |------|------------------------|
 | <img src="https://avatars.githubusercontent.com/u/37851411?s=48&v=4" width="48" height="48"/> [Advanced Multi-Mission Operations System (AMMOS) Multimission Ground System and Services (MGSS) Instrument Data System (IDS)](https://github.com/nasa-ammos/) | [@PaulMRamirez](https://github.com/PaulMRamirez) |
 | <img src="https://avatars.githubusercontent.com/u/32575998?s=48&v=4" width="48" height="48"/> [Hybrid Science Data System (HySDS)](https://github.com/hysds/) | [@hookhua](https://github.com/hookhua) |
-| <img src="https://avatars.githubusercontent.com/u/848102?s=48&v=4" width="48" height="48"/> [F' (FPrime)](https://github.com/nasa/fprime) | [@LeStarch](https://github.com/LeStarch) |
+| <img src="https://avatars.githubusercontent.com/u/848102?s=48&v=4" width="48" height="48"/> [F' (FPrime)](https://github.com/nasa/fprime) | [@LeStarch](https://github.com/LeStarch) [@thomas-bc](https://github.com/thomas-bc) |
 | <img src="https://avatars.githubusercontent.com/u/848102?s=48&v=4" width="48" height="48"/> [Observational Products for End-Users from Remote Sensing Analysis (OPERA)](https://www.jpl.nasa.gov/go/opera) | [@riverma](https://github.com/riverma) |
-| <img src="https://avatars.githubusercontent.com/u/92333776?s=48&v=4" width="48" height="48"/> [Unity Science Data System (SDS)](https://github.com/unity-sds/) | [@mike-gangl](https://github.com/mike-gangl) |
+| <img src="https://avatars.githubusercontent.com/u/46757714?s=200&v=4" width="48" height="48"/> [Planetary Data System (PDS) Engineering Node (EN)](https://pds-engineering.jpl.nasa.gov) | [@jordanpadams](https://github.com/jordanpadams) [@nutjob4life](https://github.com/nutjob4life) |
+| <img src="https://avatars.githubusercontent.com/u/92333776?s=48&v=4" width="48" height="48"/> [Unity Science Data System (SDS)](https://github.com/unity-sds/) | [@GodwinShen](https://github.com/GodwinShen) [@mike-gangl](https://github.com/mike-gangl) [@nutjob4life](https://github.com/nutjob4life)  |
 
