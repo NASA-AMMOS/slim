@@ -1,0 +1,9 @@
+repos:
+  - repo: local
+    hooks:
+      - id: grype-cve-scan
+        name: Grype Vulnerability Scan
+        description: Scans for dependency vulnerabilities. Fails if CRITICAL vulnerabilities detected.
+        entry: python -c "import os; import subprocess; import sys; os.environ['GRYPE_DB_AUTO_UPDATE'] = 'false'; result=subprocess.run(['grype', 'dir:.', '--fail-on', 'critical'], capture_output=True); print(result.stdout.decode()); print('CRITICAL level vulnerabilities found. To address issues, run scan via `grype dir:.`, then `git add` followed by `git commit` your fix or ignore via `git commit --no-verify`') if result.returncode != 0 else print('No CRITICAL level vulnerabilities found.'); sys.exit(result.returncode)"
+        language: system
+        verbose: true
