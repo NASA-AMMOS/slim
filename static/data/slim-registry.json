@@ -84,7 +84,7 @@
         "uri": "https://raw.githubusercontent.com/NASA-AMMOS/slim/issue-154/static/assets/governance/issue-templates/new_feature.md"
       },
       {
-        "name": "New Feature Template (Markdown)",
+        "name": "New Feature Template (GitHub Form)",
         "type": "text/md",
         "uri": "https://raw.githubusercontent.com/NASA-AMMOS/slim/issue-154/static/assets/governance/issue-templates/new_feature.yml"
       }
