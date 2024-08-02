@@ -1,4 +1,3 @@
-````markdown
 # Contributing Guide
 
 Thanks for taking the time to consider contributing! We very much appreciate your time and effort. This document outlines the many ways you can contribute to our project, and provides detailed guidance on best practices. We look forward to your help!
@@ -331,5 +330,4 @@ A great way to contribute towards our project goals is to socialize and encourag
 - Help point project contributors and community members to conferences and publications where they may socialize their unique innovations
 - Schedule in-person or virtual happy-hours to help create a more social atmosphere within the project community
 
-For the above ideas, use our [communication channels](#communication-channels) to propose get-togethers.  
-````
+For the above ideas, use our [communication channels](#communication-channels) to propose get-togethers.
