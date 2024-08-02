@@ -14,12 +14,12 @@
       {
         "name": "Governance Template",
         "type": "text/md",
-        "uri": "https://raw.githubusercontent.com/NASA-AMMOS/slim/main/static/assets/governance/governance-model/GOVERNANCE-TEMPLATE.md"
+        "uri": "https://raw.githubusercontent.com/NASA-AMMOS/slim/issue-154/static/assets/governance/governance-model/GOVERNANCE-TEMPLATE.md"
       },
       {
         "name": "Governance Template (Small Teams)",
         "type": "text/md",
-        "uri": "https://raw.githubusercontent.com/NASA-AMMOS/slim/main/static/assets/governance/governance-model/governance-template-small-team.md"
+        "uri": "https://raw.githubusercontent.com/NASA-AMMOS/slim/issue-154/static/assets/governance/governance-model/governance-template-small-team.md"
       }
     ]
   },
@@ -52,7 +52,7 @@
       {
         "name": "README Template",
         "type": "text/md",
-        "uri": "https://raw.githubusercontent.com/NASA-AMMOS/slim/main/static/assets/information-sharing/readme/README.md"
+        "uri": "https://raw.githubusercontent.com/NASA-AMMOS/slim/issue-154/static/assets/information-sharing/readme/README.md"
       }
     ]
   },
