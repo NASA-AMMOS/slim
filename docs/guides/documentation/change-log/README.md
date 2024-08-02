@@ -8,10 +8,10 @@
 
 ## Introduction
 
-**Background**: A change log is a vital tool for documenting significant changes in software over time in a format accessible to humans. It plays a critical role in conveying the evolution of software, including additions, deprecations, and removals. This guide outlines the best practices for maintaining a `CHANGELOG.md` file, complementing release pages and enhancing software distribution transparency.
+**Background**: A change log is a vital tool for documenting significant changes in software over time in a format accessible **to humans**. It plays a critical role in conveying the evolution of software, including additions, deprecations, and removals. We feel a change log is especially good for noting feature changes, rather than focusing on developer oriented commit changes. This guide outlines the best practices for maintaining a `CHANGELOG.md` file, complementing release pages and enhancing software distribution transparency.
 
 **Use Cases**:
-- Documenting software changes for easy understanding and tracking.
+- Documenting software changes for easy understanding and tracking for a broad audience.
 - Enhancing transparency in software development and release cycles.
 - Storing the history of significant changes independent of code hosts like GitHub.com
 ---
@@ -25,7 +25,7 @@
 
 ## Quick Start
 
-**[⬇️ Keep a Changelog](https://keepachangelog.com/en/1.0.0/#how)** ([see example](https://github.com/riverma/terraformly/blob/main/CHANGELOG.md))
+**[⬇️ Keep a Changelog](pathname:///assets/communication/changelog/CHANGELOG.md)** ([see example](https://keepachangelog.com/en/1.0.0/#how))
 
 Download a template for creating a human-readable change log for your software project.
 
@@ -46,7 +46,7 @@ Download a template for creating a human-readable change log for your software p
 ## Frequently Asked Questions (FAQ)
 
 - Q: Why is a `CHANGELOG.md` crucial even if there's a GitHub auto-generated release changes page?
-- A: It ensures future-proof accessibility of change information, especially for users who may not have access to the project's release page or if the software has changed hands. Moreover, its meant to be feature-centric and designed for people to understand, rather than GitHub's commit-oriented change reports. 
+- A: We think they are complementary. Releases are great for commit-level information; but changelogs are better suited to a broader audience. It also ensures future-proof accessibility of change information, especially for users who may not have access to the project's release page or if the software has changed hands. Moreover, its meant to be feature-centric and designed for people to understand, rather than GitHub's commit-oriented change reports. 
 
 ---
 
