@@ -1,13 +1,3 @@
-```markdown
----
-name: New Feature
-about: Suggest a new feature for us to implement
-title: '[New Feature]: '
-labels: 'enhancement'
-assignees: ''
-
----
-
 **Checked for duplicates**
 
 > Have you checked for duplicate issue tickets?
@@ -33,4 +23,3 @@ Ex. I'm frustrated when [...] happens as documented in issue-XYZ
 > A clear and concise description of your request. 
 
 Ex. I need or want [...]
-```
