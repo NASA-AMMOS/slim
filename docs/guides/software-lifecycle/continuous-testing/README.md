@@ -50,7 +50,7 @@ Although there are many steps in setting up a continuous testing architecture, t
 - **If you are brand new to continuous testing**: we recommend starting with our (#step-by-step) guide to set up an efficient continuous testing plan for your project. 
 Key Concepts to Get Started with:
 
-**[⬇️ Download and setup a TESTING.md Test Plan](TESTING)** (see [example](TESTING-example) of template in action)
+**[⬇️ Download and setup a TESTING.md Test Plan](pathname:///assets/software-lifecycle/continuous-testing/TESTING.md)** (see [example](TESTING-example) of template in action)
 
 **📝 Generate unit tests automatically using a Large Language Model (LLM), such as [codellama](https://ollama.com/library/codellama) via [ollama](https://ollama.com)** (see [example](#21-unit-tests) of unit test script generation)
 
@@ -76,7 +76,7 @@ We recommend creating a `TESTING.md` file that outlines the testing objectives a
 
 Having this information in a single file helps guide your testing journey and adds clarity for your team. 
 
-**[⬇️ Download our TESTING.md Template](TESTING)** (see [example](TESTING-example) of template in action)
+**[⬇️ Download our TESTING.md Template](pathname:///assets/software-lifecycle/continuous-testing/TESTING.md)** (see [example](TESTING-example) of template in action)
 
 #### 1.1 Testing Categories
 
@@ -610,7 +610,7 @@ Your tests should be updated, at minimum, upon the following events:
 4. Periodic [code coverage](testing-frameworks) analysis identifies **underused or obsolete tests**.
 
 This is the list of items to be maintained:
-1. [TESTING.md](TESTING)
+1. [TESTING.md](pathname:///assets/software-lifecycle/continuous-testing/TESTING.md)
 2. [Component tests](#21-component-tests)
 3. [System tests](#22-system-tests)
 4. [Test automation](#3-automate-your-tests)
