@@ -9,6 +9,18 @@
       "templates",
       "repository-setup",
       "github"
+    ],
+    "assets": [
+      {
+        "name": "Governance Template",
+        "type": "text/md",
+        "uri": "https://raw.githubusercontent.com/NASA-AMMOS/slim/main/static/assets/governance/governance-model/GOVERNANCE-TEMPLATE.md"
+      },
+      {
+        "name": "Governance Template (Small Teams)",
+        "type": "text/md",
+        "uri": "https://raw.githubusercontent.com/NASA-AMMOS/slim/main/static/assets/governance/governance-model/governance-template-small-team.md"
+      }
     ]
   },
   {
@@ -21,7 +33,8 @@
       "security",
       "testing",
       "tools"
-    ]
+    ],
+    "assets": []
   },
   {
     "title": "README.md",
@@ -93,6 +106,13 @@
       "repository-setup",
       "github",
       "templates"
+    ],
+    "assets": [
+      {
+        "name": "Contributor Covenant Code of Conduct",
+        "type": "text/md",
+        "uri": "https://www.contributor-covenant.org/version/2/1/code_of_conduct/code_of_conduct.md"
+      }
     ]
   },
   {
