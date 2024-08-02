@@ -28,17 +28,17 @@
 
 ## Quick Start
 
-**[⬇️ README Template](README-TEMPLATE)** ([see example](https://github.com/riverma/terraformly/blob/main/README.md))
+**[⬇️ README Template](pathname:///assets/communication/readme/README.md)** ([see example](https://github.com/riverma/terraformly/blob/main/README.md))
 
 Download and fill-out our recommended README template to get started on crafting your project's introduction.
 
----
+--- 
 
 ## Step-by-Step Guide
 
-1. **Discuss with Your Team**: Ensure consensus on adopting the [README Template](README-TEMPLATE).
+1. **Discuss with Your Team**: Ensure consensus on adopting the [README Template](pathname:///assets/communication/readme/README.md).
 2. **Customize the Template**:
-   - Copy the [README Template](README-TEMPLATE) into a `README.md` file in your repository.
+   - Copy the [README Template](pathname:///assets/communication/readme/README.md) into a `README.md` file in your repository.
    - Replace `[INSERT ...]` placeholders with your project's specifics.
 3. **Integrate into Your Project**:
    - Link to the `CONTRIBUTING.md` within your `README.md` for easy access.
