@@ -169,11 +169,22 @@
   {
     "title": "Metrics Tracking",
     "uri": "/slim/docs/guides/software-lifecycle/metrics",
-    "category": "metrics tracking",
+    "category": "software lifecycle",
     "description": "Recommendations for metrics collection and an installation tool for Apache DevLake.",
     "tags": [
       "software-lifecycle",
       "metrics",
+      "tools"
+    ]
+  },
+  {
+    "title": "Website",
+    "uri": "/slim/docs/guides/information-sharing/website",
+    "category": "documentation",
+    "description": "Template project to help set up a software product website with documentation.",
+    "tags": [
+      "documentation",
+      "website",
       "tools"
     ]
   }
