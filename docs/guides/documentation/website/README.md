@@ -1,4 +1,3 @@
-
 # Website
 <pre align="center">Guide to set up a software product website with docs</pre>
 
@@ -53,16 +52,73 @@ _The above link provides a working template project for setting up a Docusaurus-
 
 3. **Adjust Website Content**:  
    Customize the content of your site by editing the files in the `/blog`, `/docs`, and `/src` directories:
-   - **/blog**: This directory contains Markdown files for blog posts. You can remove the example posts and create new ones relevant to your project.
-   - **/docs**: This directory contains your documentation files. Structure your documentation into logical sections like "Getting Started", "API Reference", and "User Guides".
-   - **/src**: This directory contains the source code for the site’s layout and components. Adjust the layout, styling, or add new components as needed to fit your branding and content requirements.
+
+   ### **/docs Directory**
+   The `/docs` directory contains your documentation files. The following are provided as samples to help you structure your documentation:
+
+   - **`index.md`**: This file serves as the entry point for your documentation. It provides a high-level overview and introduction to your project’s documentation.
+
+   - **`contributing.md`**: This file outlines the guidelines for contributing to the project. It typically includes instructions on how to submit issues, pull requests, and coding standards.
+
+   - **`developer/`**: This subdirectory contains documentation specifically aimed at developers:
+     - **`api.md`**: Provides detailed information on the project's API, including endpoints, request/response formats, and example usage.
+     - **`getting-started-dev.md`**: A guide for developers to set up their development environment and start contributing to the project.
+     - **`project-structure.md`**: Explains the organization of the codebase, helping developers understand the structure and purpose of various files and directories.
+     - **`testing.md`**: Describes how to run and write tests for the project to ensure code quality.
+     - **`tutorials.md`**: Offers step-by-step tutorials for common development tasks or advanced features.
+     - **`index.md`**: Provides an overview and entry point for the developer documentation section.
+
+   - **`download.md`**: Instructions on how to download and install the software, including links to different versions and checksums for verification.
+
+   - **`faqs.md`**: A compilation of frequently asked questions and their answers, helping users troubleshoot common issues.
+
+   - **`user/`**: This subdirectory contains user-focused documentation:
+     - **`advanced-usage.md`**: Guides users through advanced features and custom configurations.
+     - **`features.md`**: Describes the key features of the software and how to use them effectively.
+     - **`installation.md`**: Step-by-step instructions for installing the software on various platforms.
+     - **`quick-start.md`**: A concise guide to help users get started quickly with the software.
+     - **`troubleshooting.md`**: Provides solutions to common issues that users might encounter.
+     - **`tutorials.md`**: Contains tutorials that guide users through specific use cases or advanced topics.
+     - **`index.md`**: Serves as the entry point for user documentation, providing an overview and links to key sections.
+
+   ### **/src Directory**
+   The `/src` directory contains the source code for the site’s layout and components. Here's an overview of what's included:
+
+   - **`components/`**: This subdirectory contains reusable UI components:
+     - **`HomepageFeatures/`**: A sample component that displays features on the homepage, complete with a `styles.module.css` file for custom styling.
+     - **`index.js`**: The main file that aggregates and exports the component.
+     - **`styles.module.css`**: A CSS module for styling the component.
+
+   - **`css/`**: Contains global styles for the site:
+     - **`custom.css`**: A file for adding custom CSS that applies site-wide, allowing you to easily modify the look and feel of your site.
+
+   - **`pages/`**: This directory contains the pages of the website:
+     - **`about.js`**: A sample "About" page implemented as a React component, with its corresponding stylesheet in `about.module.css`.
+     - **`index.js`**: The main homepage file, which is also implemented as a React component, with styling in `index.module.css`.
+     - **`markdown-page.md`**: A sample page written in Markdown, demonstrating how you can create simple content pages using Markdown syntax.
+
+   Customize these files and directories to fit your branding and content requirements. The provided samples offer a solid foundation to build upon, allowing you to quickly create a comprehensive and professional-looking documentation site.
 
 4. **Deploy the Website to GitHub Pages**:  
-   After making the necessary adjustments, you can deploy your site to GitHub Pages. Ensure you have a GitHub repository set up, and then run the following command:
-   ```bash
-   GIT_USER=<Your GitHub Username> USE_SSH=true yarn deploy
-   ```
-   This command builds the site and pushes the static files to the `gh-pages` branch of your repository, making your website live on GitHub Pages.
+   The project is configured to automatically build and deploy using GitHub Actions. The workflow files located within the `.github/workflows` directory are set up to trigger builds whenever commits are pushed to the `main` branch. Additionally, pull requests will be automatically built for testing purposes.
+
+   To ensure your site is properly deployed:
+
+   1. **Enable GitHub Pages**: Ensure that GitHub Pages is enabled for your repository. You can enable it by going to the repository settings on GitHub and selecting the branch you want to use for GitHub Pages, typically `gh-pages` or `main`.
+
+   2. **Manual Deployment**: If you prefer manual deployment or are not using GitHub Actions, you can still deploy manually:
+      - **Deploy using SSH**:
+        ```bash
+        USE_SSH=true yarn deploy
+        ```
+      - **Deploy without SSH**:
+        ```bash
+        GIT_USER=<Your GitHub Username> yarn deploy
+        ```
+
+   By following these steps, your site will be automatically built and deployed when changes are made to the `main` branch or when pull requests are created. Manual deployment commands are also available if needed.
+
+   > **Note**: For more detailed information on deploying with GitHub Actions, please refer to the [Docusaurus documentation](https://docusaurus.io/docs/deployment#triggering-deployment-with-github-actions).
 
 ---
 
