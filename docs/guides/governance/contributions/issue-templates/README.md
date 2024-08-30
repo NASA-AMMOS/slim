@@ -27,12 +27,12 @@
 ## Quick Start
 
 **Bug Reports:**
-- **[⬇️ Bug Report Template (Markdown)](bug-reports/bug_report)** ([see example](https://github.com/riverma/terraformly/issues/new?assignees=&labels=bug&projects=&template=bug_report.md&title=%5BBug%5D%3A+))
-- **[⬇️ Bug Report Template (GitHub Form)](bug-reports/bug_report.yml)** ([see example](https://github.com/riverma/terraformly/issues/new?assignees=&labels=bug&projects=&template=bug_report.yml&title=%5BBug%5D%3A+))
+- **[⬇️ Bug Report Template (Markdown)](pathname:///assets/governance/issue-templates/bug_report.md)** ([see example](https://github.com/riverma/terraformly/issues/new?assignees=&labels=bug&projects=&template=bug_report.md&title=%5BBug%5D%3A+))
+- **[⬇️ Bug Report Template (GitHub Form)](pathname:///assets/governance/issue-templates/bug_report.yml)** ([see example](https://github.com/riverma/terraformly/issues/new?assignees=&labels=bug&projects=&template=bug_report.yml&title=%5BBug%5D%3A+))
 
 **New Features:**
-- **[⬇️ New Feature Template (Markdown)](features/new_feature)** ([see example](https://github.com/riverma/terraformly/issues/new?assignees=&labels=enhancement&projects=&template=feature_request.md&title=%5BNew+Feature%5D%3A+))
-- **[⬇️ New Feature Template (GitHub Form)](features/new_feature.yml)** ([see example](https://github.com/riverma/terraformly/issues/new?assignees=&labels=enhancement&projects=&template=feature_request.yml&title=%5BNew+Feature%5D%3A+))
+- **[⬇️ New Feature Template (Markdown)](pathname:///assets/governance/issue-templates/new_feature.md)** ([see example](https://github.com/riverma/terraformly/issues/new?assignees=&labels=enhancement&projects=&template=feature_request.md&title=%5BNew+Feature%5D%3A+))
+- **[⬇️ New Feature Template (GitHub Form)](pathname:///assets/governance/issue-templates/new_feature.yml)** ([see example](https://github.com/riverma/terraformly/issues/new?assignees=&labels=enhancement&projects=&template=feature_request.yml&title=%5BNew+Feature%5D%3A+))
 
 **Resources: **
 
@@ -58,9 +58,9 @@
 
 2. **Setting Up Issue Templates**:
    - Create a `.github/ISSUE_TEMPLATE` folder in your repository.
-   - Add [Bug Report](bug-reports/bug_report) and [New Feature](features/new_feature) templates to this folder.
+   - Add [Bug Report](pathname:///assets/governance/issue-templates/bug_report.md) and [New Feature](pathname:///assets/governance/issue-templates/new_feature.md) templates to this folder.
    - For a form-like experience, use [GitHub Issue Forms](https://docs.github.com/en/communities/using-templates-to-encourage-useful-issues-and-pull-requests/configuring-issue-templates-for-your-repository#creating-issue-forms). 
-     - Place YAML formatted templates, like [Bug Report Form](bug-reports/bug_report.yml) and [New Feature Form](features/new_feature.yml), in the same folder.
+     - Place YAML formatted templates, like [Bug Report Form](pathname:///assets/governance/issue-templates/bug_report.yml) and [New Feature Form](pathname:///assets/governance/issue-templates/new_feature.yml), in the same folder.
 
 3. **Commit and Use Templates**:
    - Commit these files to the `main` branch.

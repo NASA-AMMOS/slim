@@ -26,7 +26,7 @@
 
 ## Quick Start
 
-**[Governance Model Template](GOVERNANCE-TEMPLATE.md)** ([see example](https://nasa-ammos.github.io/slim/docs/about/GOVERNANCE/))
+**[⬇️ Governance Model Template](pathname:///assets/governance/governance-model/GOVERNANCE-TEMPLATE.md)** ([see example](https://nasa-ammos.github.io/slim/docs/about/GOVERNANCE/))
 
 Access our recommended template to start integrating a governance model into your project.
 

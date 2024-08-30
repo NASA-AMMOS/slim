@@ -1,9 +1,3 @@
----
-title: TESTING.md Template
-sidebar_label: TESTING.md Template
----
-
-```markdown
 # [INSERT PROJECT NAME HERE] Testing
 
 ## Introduction
@@ -57,4 +51,3 @@ The below list of test categories are included in our testing setup. Further det
     - Test every non-trivial function or method in your code
     - Test conditions including malformed arguments and null conditions
     > 
-```
