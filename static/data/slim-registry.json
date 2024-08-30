@@ -14,12 +14,12 @@
       {
         "name": "Governance Template",
         "type": "text/md",
-        "uri": "https://raw.githubusercontent.com/NASA-AMMOS/slim/issue-154/static/assets/governance/governance-model/GOVERNANCE-TEMPLATE.md"
+        "uri": "https://raw.githubusercontent.com/NASA-AMMOS/slim/main/static/assets/governance/governance-model/GOVERNANCE-TEMPLATE.md"
       },
       {
         "name": "Governance Template (Small Teams)",
         "type": "text/md",
-        "uri": "https://raw.githubusercontent.com/NASA-AMMOS/slim/issue-154/static/assets/governance/governance-model/governance-template-small-team.md"
+        "uri": "https://raw.githubusercontent.com/NASA-AMMOS/slim/main/static/assets/governance/governance-model/governance-template-small-team.md"
       }
     ]
   },
@@ -38,12 +38,12 @@
       {
         "name": "GitHub Action Workflow Scan",
         "type": "text/yaml",
-        "uri": "https://raw.githubusercontent.com/NASA-AMMOS/slim/issue-154/static/assets/software-lifecycle/security/secrets-detection/detect-secrets.yaml"
+        "uri": "https://raw.githubusercontent.com/NASA-AMMOS/slim/main/static/assets/software-lifecycle/security/secrets-detection/detect-secrets.yaml"
       },
       {
         "name": "Scan Pre-commit Configuration",
         "type": "text/yaml",
-        "uri": "https://raw.githubusercontent.com/NASA-AMMOS/slim/issue-154/static/assets/software-lifecycle/security/secrets-detection/pre-commit-config.yml"
+        "uri": "https://raw.githubusercontent.com/NASA-AMMOS/slim/main/static/assets/software-lifecycle/security/secrets-detection/pre-commit-config.yml"
       }
     ]
   },
@@ -63,7 +63,7 @@
       {
         "name": "README Template",
         "type": "text/md",
-        "uri": "https://raw.githubusercontent.com/NASA-AMMOS/slim/issue-154/static/assets/communication/readme/README.md"
+        "uri": "https://raw.githubusercontent.com/NASA-AMMOS/slim/main/static/assets/communication/readme/README.md"
       }
     ]
   },
@@ -82,22 +82,22 @@
       {
         "name": "Bug Report Template (Markdown)",
         "type": "text/md",
-        "uri": "https://raw.githubusercontent.com/NASA-AMMOS/slim/issue-154/static/assets/governance/issue-templates/bug_report.md"
+        "uri": "https://raw.githubusercontent.com/NASA-AMMOS/slim/main/static/assets/governance/issue-templates/bug_report.md"
       },
       {
         "name": "Bug Report Template (GitHub Form)",
         "type": "text/yml",
-        "uri": "https://raw.githubusercontent.com/NASA-AMMOS/slim/issue-154/static/assets/governance/issue-templates/bug_report.yml"
+        "uri": "https://raw.githubusercontent.com/NASA-AMMOS/slim/main/static/assets/governance/issue-templates/bug_report.yml"
       },
       {
         "name": "New Feature Template (Markdown)",
         "type": "text/md",
-        "uri": "https://raw.githubusercontent.com/NASA-AMMOS/slim/issue-154/static/assets/governance/issue-templates/new_feature.md"
+        "uri": "https://raw.githubusercontent.com/NASA-AMMOS/slim/main/static/assets/governance/issue-templates/new_feature.md"
       },
       {
         "name": "New Feature Template (GitHub Form)",
         "type": "text/md",
-        "uri": "https://raw.githubusercontent.com/NASA-AMMOS/slim/issue-154/static/assets/governance/issue-templates/new_feature.yml"
+        "uri": "https://raw.githubusercontent.com/NASA-AMMOS/slim/main/static/assets/governance/issue-templates/new_feature.yml"
       }
     ]
   },
@@ -117,7 +117,7 @@
       {
         "name": "Keep A Changelog Template",
         "type": "text/md",
-        "uri": "https://raw.githubusercontent.com/NASA-AMMOS/slim/issue-154/static/assets/communication/changelog/CHANGELOG.md"
+        "uri": "https://raw.githubusercontent.com/NASA-AMMOS/slim/main/static/assets/communication/changelog/CHANGELOG.md"
       }
     ]
   },
@@ -147,7 +147,7 @@
       {
         "name": "Pull Request Template",
         "type": "text/md",
-        "uri": "https://raw.githubusercontent.com/NASA-AMMOS/slim/issue-154/static/assets/governance/pull-requests/PULL_REQUEST_TEMPLATE.md"
+        "uri": "https://raw.githubusercontent.com/NASA-AMMOS/slim/main/static/assets/governance/pull-requests/PULL_REQUEST_TEMPLATE.md"
       }
     ]
   },
@@ -186,7 +186,7 @@
       {
         "name": "Contributing Guide Template",
         "type": "text/md",
-        "uri": "https://raw.githubusercontent.com/NASA-AMMOS/slim/issue-154/static/assets/governance/contributing-guide/CONTRIBUTING.md"
+        "uri": "https://raw.githubusercontent.com/NASA-AMMOS/slim/main/static/assets/governance/contributing-guide/CONTRIBUTING.md"
       }
     ]
   },
@@ -239,12 +239,12 @@
       {
         "name": "TESTING.md Test Plan",
         "type": "text/md",
-        "uri": "https://raw.githubusercontent.com/NASA-AMMOS/slim/issue-154/static/assets/software-lifecycle/continuous-testing/TESTING.md"
+        "uri": "https://raw.githubusercontent.com/NASA-AMMOS/slim/main/static/assets/software-lifecycle/continuous-testing/TESTING.md"
       },
       {
         "name": "Static Tests Pre-commit Configuration",
         "type": "text/md",
-        "uri": "https://raw.githubusercontent.com/NASA-AMMOS/slim/issue-154/static/assets/software-lifecycle/continuous-testing/pre-commit-config.yml"
+        "uri": "https://raw.githubusercontent.com/NASA-AMMOS/slim/main/static/assets/software-lifecycle/continuous-testing/pre-commit-config.yml"
       }
     ]
   },
