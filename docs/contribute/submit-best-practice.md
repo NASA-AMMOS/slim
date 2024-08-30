@@ -153,26 +153,42 @@ _A brief description of what the link provides, e.g., "Click the link above to a
 We welcome feedback and contributions to help improve and grow this page. Please see our [contribution guidelines](https://nasa-ammos.github.io/slim/docs/contribute/contributing/).
 ```
 
+
 ### Add Entry to the Registry
 
-To document metadata about your best practice and have your best practice show up in our [search page](https://nasa-ammos.github.io/slim/docs/guides/search), add a JSON entry to the file `data/slim-registry.json` within the [NASA-AMMOS/slim](https://github.com/NASA-AMMOS/slim) repository. Fill out the following fields in the example below:
+To document metadata about your best practice and ensure that it appears in our [search page](https://nasa-ammos.github.io/slim/docs/guides/search), you need to add a JSON entry to the `data/slim-registry.json` file within the [NASA-AMMOS/slim](https://github.com/NASA-AMMOS/slim) repository. Here's how you can do it:
 
-```json
-{
-  "title": "README.md",
-  "uri": "/docs/guides/documentation/readme",
-  "category": "documentation",
-  "description": "A template that can be used to help developers and users understand your repository's project code concisely and clearly.",
-  "tags": [
-    "documentation",
-    "repository-setup",
-    "project-template"
-  ],
-  "last-updated": "2023-04-27"
-}
-```
+1. **Basic Fields**: Start by filling out the basic fields as shown in the example below. These include `title`, `uri`, `category`, `description`, `tags`, and `last-updated`.
 
-Customize the fields according to your best practice guide. This entry will serve as a reference for users and allow them to discover your contribution through the registry. Make sure to include relevant and accurate information to help users understand the purpose and benefits of your best practice guide.
+2. **Assets Metadata**: Additionally, you should include an `assets` metadata element to describe any infusible assets associated with your best practice. These could be templates, code samples, or other resources that enhance the usability of your guide. Each asset should include `name`, `type`, and `uri` to specify the asset’s details. Adding this is especially important so that infusion can be automated via the [slim-cli tool](https://github.com/nasa-ammos/slim-cli) - which queries the `data/slim-registry.json` file. 
+
+   Here’s an example of how to structure your JSON entry:
+
+   ```json
+   {
+     "title": "README.md",
+     "uri": "/docs/guides/documentation/readme",
+     "category": "documentation",
+     "description": "A template that can be used to help developers and users understand your repository's project code concisely and clearly.",
+     "tags": [
+       "documentation",
+       "repository-setup",
+       "project-template"
+     ],
+     "last-updated": "2023-04-27",
+     "assets": [
+       {
+         "name": "README Template",
+         "type": "text/md",
+         "uri": "https://raw.githubusercontent.com/NASA-AMMOS/slim/issue-154/static/assets/communication/readme/README.md"
+       }
+     ]
+   }
+   ```
+
+3. **Customization**: Tailor the fields to match the specifics of your best practice guide. Ensure that the `assets` section is comprehensive and includes all relevant resources that could help users implement your guide effectively.
+
+4. **Final Check**: Before submitting, review the JSON entry to ensure all details are accurate and that the assets are correctly linked and described.
 
 ## 4⃣️ Get Feedback For Your Contribution
 
