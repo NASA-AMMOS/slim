@@ -1,3 +1,7 @@
+import CodeBlock from '@theme/CodeBlock';
+import PreCommitConfigSource from '!!raw-loader!/assets/software-lifecycle/security/secrets-detection/pre-commit-config.yml';
+import GitHubActionWorkflow from '!!raw-loader!/assets/software-lifecycle/security/secrets-detection/detect-secrets.yaml';
+
 # Secrets Detection
 
 <pre align="center">Guide to identify and automatically prevent leaking of sensitive information into your codebase.</pre>
@@ -55,6 +59,11 @@ To get the most out of `detect-secrets`, you'll need:
    detect-secrets audit .secrets.baseline
    ```
 
+**⬇️ [Secrets detection .pre-commit-config.yml](pathname:///assets/software-lifecycle/security/secrets-detection/pre-commit-config.yml)**
+
+Download the file above to access the pre-commit configuration file, which includes an a scan for sensitive information upon Git pushes. This file should be placed within your local Git repository after installing the pre-commit framework.
+
+
 Additional steps like whitelisting accepted values and false positives, establishing pre-commit hooks and/or enabling further automation are covered in detail below.
 
 ---
@@ -111,22 +120,7 @@ To support this strategy, we recommend the installation of another third party t
 
 2. **Configuration**
    - Create a `.pre-commit-config.yaml` configuration file with the below contents.
-  
-    ```yaml
-      repos:
-        - repo: https://github.com/NASA-AMMOS/slim-detect-secrets
-          # using commit id for now, will change to tag when official version is released
-          rev: 91e097ad4559ae6ab785c883dc5ed989202c7fbe
-          hooks:
-            - id: detect-secrets
-              args:
-                - '--baseline'
-                - '.secrets.baseline'
-                - '--exclude-files'
-                - '\.git*'
-                - '--exclude-files'
-                - '\.secrets.*' 
-     ```
+    <CodeBlock language="yaml">{PreCommitConfigSource}</CodeBlock>
 
 3. **Hook Installation**
    - Install the pre-commit hook into your local environment, ensuring the hook gets invoked during local git commits.
@@ -147,88 +141,9 @@ This strategy provides a final layer of protection by scanning server-side commi
 #### Steps
 1. **Workflow Creation**
    - The first step is to create a `detect-secrets.yaml` workflow file in the `.github/workflows` directory to define the GitHub action. Copy and paste the below while ensuring the correct branch of your codebase is referenced. For example (from the [Slim Python Starter Kit](https://github.com/NASA-AMMOS/slim-starterkit-python/blob/main/.github/workflows/secrets-detection.yml)):
-  
-```yaml
-name: "Secret Detection"
-on:
-  push:
-    branches: [main, develop]
-  pull_request:
-    # The branches below must be a subset of the branches above
-    branches: [develop]
 
-jobs:
-  secret-detection:
-    name: Secret-Detection
-    runs-on: ubuntu-latest
-    permissions:
-      actions: write
-      contents: read
-      security-events: write
-    steps:
-    - name: Checkout repository
-      uses: actions/checkout@v4
-      with:
-        fetch-depth: 0
-    - name: Upgrade tooling
-      run: |
-        python3 -m pip install --upgrade pip
-        pip install --upgrade git+https://github.com/NASA-AMMOS/slim-detect-secrets.git@exp
-        pip install --upgrade jq
-    - name: Create baseline config
-      run: |
-        if [ ! -f .secrets.baseline ] ; 
-        then
-            # This generated baseline file will only be temporarily available on the GitHub side and will not appear in the user's local files.
-            # Scanning an empty folder to generate an initial .secrets.baseline without secrets in the results.
-            echo "⚠️ No existing .secrets.baseline file detected. Creating a new blank baseline file."
-            mkdir empty-dir
-            detect-secrets scan empty-dir > .secrets.baseline
-            echo "✅ Blank .secrets.baseline file created successfully."
-            rm -r empty-dir
-        else
-            echo "✅ Existing .secrets.baseline file detected. No new baseline file will be created."
-        fi
-    - name: Scan
-      run: |
-        # scripts scan repository for new secrets
-        # backup list of known secrets
-        cp -pr .secrets.baseline .secrets.new
-        # find secrets in the repository
-        detect-secrets scan --disable-plugin AbsolutePathDetectorExperimental --baseline .secrets.new \
-            --exclude-files '\.secrets..*' \
-            --exclude-files '\.git.*' \
-            --exclude-files '\.mypy_cache' \
-            --exclude-files '\.pytest_cache' \
-            --exclude-files '\.tox' \
-            --exclude-files '\.venv' \
-            --exclude-files 'venv' \
-            --exclude-files 'dist' \
-            --exclude-files 'build' \
-            --exclude-files '.*\.egg-info'
-        # break build when new secrets discovered
-        # function compares baseline/new secrets w/o listing results -- success(0) when new secret found
-        compare_secrets() { diff <(jq -r '.results | keys[] as $key | "\($key),\(.[$key] | .[] | .hashed_secret)"' "${1}" | sort) <(jq -r '.results | keys[] as $key | "\($key),\(.[$key] | .[] | .hashed_secret)"' "${2}" | sort) | grep -q '>' ; }
-        # test baseline versus new secret files
-        if compare_secrets .secrets.baseline .secrets.new; 
-        then
-            echo "⚠️ Attention Required! ⚠️" >&2
-            echo "New secrets have been detected in your recent commit. Due to security concerns, we cannot display detailed information here and we cannot proceed until this issue is resolved." >&2
-            echo "" >&2
-            echo "Please follow the steps below on your local machine to reveal and handle the secrets:" >&2
-            echo "" >&2
-            echo "1️⃣ Run the 'detect-secrets' tool on your local machine. This tool will identify and clean up the secrets. You can find detailed instructions at this link: https://nasa-ammos.github.io/slim/continuous-testing/starter-kits/#detect-secrets" >&2
-            echo "" >&2
-            echo "2️⃣ After cleaning up the secrets, commit your changes and re-push your update to the repository." >&2
-            echo "" >&2
-            echo "Your efforts to maintain the security of our codebase are greatly appreciated!" >&2
-            exit 1
-        else
-            echo "🟢 Secrets tests PASSED! 🟢" >&1
-            echo "No new secrets were detected in comparison to any baseline configurations."  >&1
-            exit 0
-        fi 
-```
+  <CodeBlock language="yaml">{GitHubActionWorkflow}</CodeBlock>  
+
      > ℹ️  Explanation: The GitHub Action checks out code, installs necessary packages, checks for a baseline file, and scans the repository for secrets. If new secrets are detected, the build fails and provides guidance.
 
 After setting this up, GitHub will run the workflow during pushes or pull requests. If any new secrets are detected, the status check will fail and the user will be notified in the pull request.
