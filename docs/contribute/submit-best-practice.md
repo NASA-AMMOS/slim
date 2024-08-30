@@ -50,11 +50,15 @@ To make it easier for users to adopt your best practice solution, consider prese
 
 Read more about our automation philosophy in [Develop Standards & Best Practices](/slim/docs/about/#2-develop-standards--best-practices). 
 
+
 ### Adhere to Folder Structure
 
 To maintain organization and consistency within the repository, create a new folder for your best practice guide. Place this folder within the appropriate sub-folder in the `docs/guides` directory of the [NASA-AMMOS/slim](https://github.com/NASA-AMMOS/slim) repository. Ensure that the folder structure aligns with the type of best practice you are developing, allowing users to easily locate and reference your guide.
 
+Additionally, if your best practice guide includes infusible assets such as templates, code, or any other kind of automation that helps integrate your best practice into projects, you should store these assets within the `/static/assets` directory. Within this directory, create a sub-category that reflects the nature of the assets. This organization allows users to find and utilize the assets more easily, and it aligns with the repository's structure.
+
 For example, if you were to add a new best practice guide related to software-lifecycle security, you'd create a new folder called "my-security-guide" in the below directory:
+
 ```
 docs/
 ├── about
@@ -75,6 +79,18 @@ docs/
                 └── other-file.txt
                 └── other-file.json
                 └── other-file.jpg
+```
+
+And for infusible assets related to this guide, you would store them in a structure like this:
+
+```
+static/
+├── assets
+│   └── software-lifecycle
+│       └── security
+│           ├── my-security-guide-template.md
+│           ├── my-security-script.sh
+│           └── my-security-tool-config.json
 ```
 
 ### Use our Standard Guide Template
