@@ -25,7 +25,7 @@
 
 ## Quick Start
 
-**[⬇️ Pull Request Template](PULL_REQUEST_TEMPLATE)** ([see example](https://github.com/riverma/terraformly/blob/main/.github/PULL_REQUEST_TEMPLATE))
+**[⬇️ Pull Request Template](pathname:///assets/governance/pull-requests/PULL_REQUEST_TEMPLATE.md)** ([see example](https://github.com/riverma/terraformly/blob/main/.github/PULL_REQUEST_TEMPLATE))
 
 Our recommended pull request template for projects.
 
@@ -37,7 +37,7 @@ Recommendations from GitHub.com on how-to facilitate the use of pull request tem
 
 ## Step-by-Step Guide
 
-1. **Team Discussion**: Discuss the benefits of a pull request template with your team. Gain consensus on adopting this approach for consistency in contributions. Below is an explanation of our recommended [Pull Request Template](PULL_REQUEST_TEMPLATE.md) file's fields. Adjust as necessary.
+1. **Team Discussion**: Discuss the benefits of a pull request template with your team. Gain consensus on adopting this approach for consistency in contributions. Below is an explanation of our recommended [Pull Request Template](pathname:///assets/governance/pull-requests/PULL_REQUEST_TEMPLATE.md) file's fields. Adjust as necessary.
    - ***Purpose***: To clearly state the intention behind the pull request. This helps reviewers understand the context and significance of your changes.
    - ***Proposed Changes***:
       - `[ADD]` for new features or content the contributor introduced.
@@ -51,7 +51,7 @@ Recommendations from GitHub.com on how-to facilitate the use of pull request tem
    - In your GitHub repository, create a `.github/` folder to hold community health files.
 
 3. **Add Pull Request Template**:
-   - Copy the [Pull Request Template](PULL_REQUEST_TEMPLATE.md) into `.github/PULL_REQUEST_TEMPLATE`.
+   - Copy the [Pull Request Template](pathname:///assets/governance/pull-requests/PULL_REQUEST_TEMPLATE.md) into `.github/PULL_REQUEST_TEMPLATE`.
    - Commit and push this file to the `main` branch of your repository.
 
 4. **Usage**:

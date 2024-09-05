@@ -9,6 +9,23 @@
       "templates",
       "repository-setup",
       "github"
+    ],
+    "assets": [
+      {
+        "name": "Governance Template (Small Teams)",
+        "type": "text/md",
+        "uri": "https://raw.githubusercontent.com/NASA-AMMOS/slim/main/static/assets/governance/governance-model/GOVERNANCE-TEMPLATE-SMALL-TEAMS.md"
+      },
+      {
+        "name": "Governance Template (Medium Teams)",
+        "type": "text/md",
+        "uri": "https://raw.githubusercontent.com/NASA-AMMOS/slim/main/static/assets/governance/governance-model/GOVERNANCE-TEMPLATE-MEDIUM-TEAMS.md"
+      },
+      {
+        "name": "Governance Template (Large Teams)",
+        "type": "text/md",
+        "uri": "https://raw.githubusercontent.com/NASA-AMMOS/slim/main/static/assets/governance/governance-model/GOVERNANCE-TEMPLATE-LARGE-TEAMS.md"
+      }
     ]
   },
   {
@@ -21,30 +38,72 @@
       "security",
       "testing",
       "tools"
+    ],
+    "assets": [
+      {
+        "name": "GitHub Action Workflow Scan",
+        "type": "text/yaml",
+        "uri": "https://raw.githubusercontent.com/NASA-AMMOS/slim/main/static/assets/software-lifecycle/security/secrets-detection/detect-secrets.yaml"
+      },
+      {
+        "name": "Scan Pre-commit Configuration",
+        "type": "text/yaml",
+        "uri": "https://raw.githubusercontent.com/NASA-AMMOS/slim/main/static/assets/software-lifecycle/security/secrets-detection/pre-commit-config.yml"
+      }
     ]
   },
   {
     "title": "README.md",
     "uri": "/slim/docs/guides/documentation/readme",
-    "category": "documentation",
+    "category": "communication",
     "description": "A template that can be used to help developers and users understand your repository's project code concisely and clearly.",
     "tags": [
+      "communication",
       "documentation",
       "repository-setup",
       "templates",
       "github"
+    ],
+    "assets": [
+      {
+        "name": "README Template",
+        "type": "text/md",
+        "uri": "https://raw.githubusercontent.com/NASA-AMMOS/slim/main/static/assets/communication/readme/README.md"
+      }
     ]
   },
   {
     "title": "Issue Ticket Templates",
     "uri": "/slim/docs/guides/governance/contributions/issue-templates/",
-    "category": "documentation",
+    "category": "governance",
     "description": "Issue tickets templates helping development teams keep the language of bug, feature, and other types of issues readable and consistent.",
     "tags": [
-      "documentation",
+      "governance",
       "templates",
       "repository-setup",
       "github"
+    ],
+    "assets": [
+      {
+        "name": "Bug Report Template (Markdown)",
+        "type": "text/md",
+        "uri": "https://raw.githubusercontent.com/NASA-AMMOS/slim/main/static/assets/governance/issue-templates/bug_report.md"
+      },
+      {
+        "name": "Bug Report Template (GitHub Form)",
+        "type": "text/yml",
+        "uri": "https://raw.githubusercontent.com/NASA-AMMOS/slim/main/static/assets/governance/issue-templates/bug_report.yml"
+      },
+      {
+        "name": "New Feature Template (Markdown)",
+        "type": "text/md",
+        "uri": "https://raw.githubusercontent.com/NASA-AMMOS/slim/main/static/assets/governance/issue-templates/new_feature.md"
+      },
+      {
+        "name": "New Feature Template (GitHub Form)",
+        "type": "text/md",
+        "uri": "https://raw.githubusercontent.com/NASA-AMMOS/slim/main/static/assets/governance/issue-templates/new_feature.yml"
+      }
     ]
   },
   {
@@ -58,6 +117,13 @@
       "templates",
       "repository-setup",
       "github"
+    ],
+    "assets": [
+      {
+        "name": "Keep A Changelog Template",
+        "type": "text/md",
+        "uri": "https://raw.githubusercontent.com/NASA-AMMOS/slim/main/static/assets/communication/changelog/CHANGELOG.md"
+      }
     ]
   },
   {
@@ -81,6 +147,13 @@
       "templates",
       "governance",
       "repository-setup"
+    ],
+    "assets": [
+      {
+        "name": "Pull Request Template",
+        "type": "text/md",
+        "uri": "https://raw.githubusercontent.com/NASA-AMMOS/slim/main/static/assets/governance/pull-requests/PULL_REQUEST_TEMPLATE.md"
+      }
     ]
   },
   {
@@ -93,6 +166,13 @@
       "repository-setup",
       "github",
       "templates"
+    ],
+    "assets": [
+      {
+        "name": "Contributor Covenant Code of Conduct",
+        "type": "text/md",
+        "uri": "https://www.contributor-covenant.org/version/2/1/code_of_conduct/code_of_conduct.md"
+      }
     ]
   },
   {
@@ -106,6 +186,13 @@
       "repository-setup",
       "github",
       "templates"
+    ],
+    "assets": [
+      {
+        "name": "Contributing Guide Template",
+        "type": "text/md",
+        "uri": "https://raw.githubusercontent.com/NASA-AMMOS/slim/main/static/assets/governance/contributing-guide/CONTRIBUTING.md"
+      }
     ]
   },
   {
@@ -152,6 +239,18 @@
     "tags": [
       "testing",
       "tools"
+    ],
+    "assets": [
+      {
+        "name": "TESTING.md Test Plan",
+        "type": "text/md",
+        "uri": "https://raw.githubusercontent.com/NASA-AMMOS/slim/main/static/assets/software-lifecycle/continuous-testing/TESTING.md"
+      },
+      {
+        "name": "Static Tests Pre-commit Configuration",
+        "type": "text/md",
+        "uri": "https://raw.githubusercontent.com/NASA-AMMOS/slim/main/static/assets/software-lifecycle/continuous-testing/pre-commit-config.yml"
+      }
     ]
   },
   {
@@ -178,6 +277,25 @@
     ]
   },
   {
+    "title": "Container Vulnerability Scanning",
+    "uri": "/slim/docs/guides/software-lifecycle/security/container-vulnerability-scanning",
+    "category": "software lifecycle",
+    "description": "A guide to scanning containers and container repositories for security vulnerabilities both manually and automatically using Grype.",
+    "tags": [
+      "software-lifecycle",
+      "security",
+      "vulnerability-scanning",
+      "tools"
+    ],
+    "assets": [
+      {
+        "name": "Grype Pre-commit Configuration",
+        "type": "text/yaml",
+        "uri": "https://raw.githubusercontent.com/NASA-AMMOS/slim/main/static/assets/software-lifecycle/security/container-vulnerability-scanning/.pre-commit-config.yaml"
+      }
+    ]
+  },
+  {
     "title": "Website",
     "uri": "/slim/docs/guides/information-sharing/website",
     "category": "documentation",
@@ -186,6 +304,14 @@
       "documentation",
       "website",
       "tools"
+    ],
+    "assets": [
+      {
+        "name": "SLIM's Docusaurus Website Starter Kit (Git Project)",
+        "type": "application/x-git",
+        "uri": "https://github.com/NASA-AMMOS/slim-docsite-template.git"
+      }
     ]
   }
+  
 ]

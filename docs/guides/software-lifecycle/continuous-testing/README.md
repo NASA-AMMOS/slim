@@ -6,7 +6,7 @@ sidebar_label: Continuous Testing
 
 <!--
 import CodeBlock from '@theme/CodeBlock';
-import PreCommitConfigSource from '!!raw-loader!./.pre-commit-config.yaml';
+import PreCommitConfigSource from '!!raw-loader!/assets/software-lifecycle/continuous-testing/pre-commit-config.yaml';
 -->
 
 <pre align="center">A comprehensive guide to developing a continuous testing plan, implementation, and automation approach for your project using AI tools.</pre>
@@ -50,7 +50,9 @@ Although there are many steps in setting up a continuous testing architecture, t
 - **If you are brand new to continuous testing**: we recommend starting with our (#step-by-step) guide to set up an efficient continuous testing plan for your project. 
 Key Concepts to Get Started with:
 
-**[⬇️ Download and setup a TESTING.md Test Plan](TESTING)** (see [example](TESTING-example) of template in action)
+**[⬇️ Download and setup a TESTING.md test plan](pathname:///assets/software-lifecycle/continuous-testing/TESTING.md)** (see [example](TESTING-example) of template in action)
+
+**[⬇️ Download our .pre-commit-config.yaml](pathname:///assets/software-lifecycle/continuous-testing/pre-commit-config.yaml)** for a standard code styling, formatting and linting checker
 
 **📝 Generate unit tests automatically using a Large Language Model (LLM), such as [codellama](https://ollama.com/library/codellama) via [ollama](https://ollama.com)** (see [example](#21-unit-tests) of unit test script generation)
 
@@ -76,7 +78,7 @@ We recommend creating a `TESTING.md` file that outlines the testing objectives a
 
 Having this information in a single file helps guide your testing journey and adds clarity for your team. 
 
-**[⬇️ Download our TESTING.md Template](TESTING)** (see [example](TESTING-example) of template in action)
+**[⬇️ Download our TESTING.md Template](pathname:///assets/software-lifecycle/continuous-testing/TESTING.md)** (see [example](TESTING-example) of template in action)
 
 #### 1.1 Testing Categories
 
@@ -348,7 +350,7 @@ The quality of the generated test code can be compared with the example provided
 Our recommendation is to automate as many of your tests as possible using [pre-commit](https://pre-commit.com/), a framework that manages and maintains multi-language pre-commit hooks that can be used on the client side as well as the server (VCS) side. 
 
 #### 3.1 Static Test Automation
-We recommend setting up a static test using [`.pre-commit-config.yaml`](.pre-commit-config.yaml). 
+We recommend setting up a static test using [`.pre-commit-config.yaml`](pathname:///assets/software-lifecycle/continuous-testing/pre-commit-config.yaml). 
 
 #### 3.2 Component Test Automation
 
@@ -610,7 +612,7 @@ Your tests should be updated, at minimum, upon the following events:
 4. Periodic [code coverage](testing-frameworks) analysis identifies **underused or obsolete tests**.
 
 This is the list of items to be maintained:
-1. [TESTING.md](TESTING)
+1. [TESTING.md](pathname:///assets/software-lifecycle/continuous-testing/TESTING.md)
 2. [Component tests](#21-component-tests)
 3. [System tests](#22-system-tests)
 4. [Test automation](#3-automate-your-tests)

@@ -26,7 +26,7 @@
 
 ## Quick Start
 
-**[⬇️ Contributing Guide Template](CONTRIBUTING)** ([see example](https://github.com/riverma/terraformly/blob/main/CONTRIBUTING.md))
+**[⬇️ Contributing Guide Template](pathname:///assets/governance/contributing-guide/CONTRIBUTING.md)** ([see example](https://github.com/riverma/terraformly/blob/main/CONTRIBUTING.md))
 
 Download our customizable template to create a contributing guide for your project.
 
@@ -46,7 +46,7 @@ Download our customizable template to create a contributing guide for your proje
    - etc.
 
 
-2. **Customize the Template**: Modify the [Contributing Guide Template](CONTRIBUTING.md) to fit your project's specifics.
+2. **Customize the Template**: Modify the [Contributing Guide Template](pathname:///assets/governance/contributing-guide/CONTRIBUTING.md) to fit your project's specifics.
    - Copy the template and create a `CONTRIBUTING.md` file at the root level of your repository.
    - Replace `[INSERT ...]` placeholders with your project's details. These markers are used throughout to designate customization options.
 3. **Integrate with Project**:

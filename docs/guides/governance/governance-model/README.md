@@ -26,22 +26,35 @@
 
 ## Quick Start
 
-**[Governance Model Template](GOVERNANCE-TEMPLATE.md)** ([see example](https://nasa-ammos.github.io/slim/docs/about/GOVERNANCE/))
+**[⬇️ Governance Model Template (Small Teams)](pathname:///assets/governance/governance-model/GOVERNANCE-TEMPLATE-SMALL-TEAMS.md)**
 
-Access our recommended template to start integrating a governance model into your project.
+Our recommended governance model for small teams of 1-3 active members.
+
+**[⬇️ Governance Model Template (Medium Teams)](pathname:///assets/governance/governance-model/GOVERNANCE-TEMPLATE-MEDIUM-TEAMS.md)**
+
+Our recommended governance model for small teams of 3-10 active members.
+
+**[⬇️ Governance Model Template (Large Teams)](pathname:///assets/governance/governance-model/GOVERNANCE-TEMPLATE-LARGE-TEAMS.md)**
+
+Our recommended governance model for small teams of 10+ active members.
 
 ---
 
 ## Step-by-Step Guide
 
 1. **Team Consultation**: Collaborate with your team and stakeholders to discuss adopting the governance model template. You'll want to consider topics like:
+   - Decide on how big of a team you currently estimate wanting to be
    - Roles (and how contributors can be promoted between roles)
-   - Committees (the groups that guide your project)
-2. **Customize the Template**:
-   - View and download our [Governance Model Template](GOVERNANCE-TEMPLATE.md).
+   - Committees (the groups that guide your project - if any)
+2. **Choose the Right Template**:
+   - Depending on the size of your team, choose between:
+     - [Governance Model Template (Small Teams)](pathname:///assets/governance/governance-model/GOVERNANCE-TEMPLATE-SMALL-TEAMS.md) - ideal for 1-3 active team members.
+     - [Governance Model Template (Medium Teams)](pathname:///assets/governance/governance-model/GOVERNANCE-TEMPLATE-MEDIUM-TEAMS.md) - ideal for 3-10 active team members.
+     - [Governance Model Template (Large Teams)](pathname:///assets/governance/governance-model/GOVERNANCE-TEMPLATE-LARGE-TEAMS.md) - ideal for 10+ active team members.
+3. **Customize the Template**:
    - Place the template in a `GOVERNANCE.md` file within the root folder of your repository.
    - Modify and personalize the template, replacing `[INSERT ...]` text with specifics for your project.
-3. **Implement the Governance Model**:
+4. **Implement the Governance Model**:
    - Commit the `GOVERNANCE.md` file to the `main` branch.
    - Link to the governance document in your `README.md` file under the `Contributing` section.
 
@@ -63,6 +76,10 @@ Access our recommended template to start integrating a governance model into you
 
 - **Q: Can the governance structure be modified as the project evolves?**
 - A: Yes, the model is flexible and can adapt to changing project needs, subject to agreement by the Project Steering Committee (PMC) and stakeholders.
+
+
+- **Q: Should I choose the right GOVERNANCE template for my current team size or intended team size?**
+- A: Governance models should evolve slowly - therefore, choose the governance model that is right for your aspirational team size and modify if needed in the future. 
 
 ---
 
