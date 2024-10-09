@@ -1,3 +1,5 @@
+[DRAFT work in progress]
+
 ### Overview
 This document outlines the expectations for collaboration, contribution, and interaction with this project. It is designed to balance the needs of the open-source community with the realities of scientific research, including publishing, funding, and achieving scientific impact. 
 
@@ -73,7 +75,6 @@ Successful collaboration requires transparency, communication, and mutual respec
    - Citing our contributions appropriately.
    - Acknowledging our work when applicable.
 
----
 
 ### **Conclusion**
 By following these expectations, we can ensure a productive and respectful collaboration that benefits everyone involved. Open science requires time, dedication, and a shared commitment to advancing scientific knowledge. Let’s work together to achieve meaningful impact while supporting the sustainability of scientific research.
