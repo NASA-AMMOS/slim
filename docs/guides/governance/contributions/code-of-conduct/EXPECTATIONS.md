@@ -1,5 +1,7 @@
 [DRAFT work in progress]
 
+## Code of Conduct for Collaboration
+
 ### Overview
 This document outlines the expectations for collaboration, contribution, and interaction with this project. It is designed to balance the needs of the open-source community with the realities of scientific research, including publishing, funding, and achieving scientific impact. 
 
