@@ -46,7 +46,7 @@ The most important step in setting up continuous delivery is choosing the right 
 - PyPI for Python packages
 - Maven Central for Java
 - NPM Registry for NodeJS
-- ECR/DockerHub for Containers
+- ECR (Amazon Elastic Container Registry)/DockerHub for Containers
 
 **📝 Implement [Standardized Naming Conventions](#naming-conventions):**
 - `nasa-[project-org]-[module-name]` for Python
