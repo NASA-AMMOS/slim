@@ -193,15 +193,19 @@ Regular maintenance tasks:
 ## Frequently Asked Questions (FAQ)
 
 **Q: How do I handle dependencies between packages?**
+
 A: Use semantic versioning and dependency ranges to manage package relationships.
 
 **Q: What about handling sensitive data in artifacts?**
+
 A: Use private repositories and encrypted secrets in CI/CD pipelines.
 
 **Q: How often should artifacts be published?**
+
 A: Publish on every tagged release for stable versions, and optionally for development versions.
 
 **Q: How to manage large binary artifacts?**
+
 A: Use specialized repositories like Amazon S3 for large artifacts and reference them in package metadata.
 
 ## Credits
