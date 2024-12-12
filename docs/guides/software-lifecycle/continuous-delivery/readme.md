@@ -22,7 +22,7 @@ Our recommendation is to follow a 4-step plan for continuous delivery: (1) selec
 
 ```mermaid
 graph TD
-    Repository[Select Repository] --> Naming[Implement Naming Convention] --> Automate[Automate Publishing]
+    Repository[Select Repository] --> Naming[Implement Naming <br/>Convention] --> Automate[Automate Publishing]
     Automate --> Maintain[Maintain Pipeline]
     Maintain --> Repository
 ```
