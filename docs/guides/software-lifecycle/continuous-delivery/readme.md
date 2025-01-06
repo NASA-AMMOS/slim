@@ -8,7 +8,9 @@ sidebar_label: Continuous Delivery
 
 <pre align="center">A comprehensive guide to developing a continuous delivery plan, implementation, and automation approach for your project.</pre>
 
+<!--
 ![continuous-delivery-representative-image](/img/continuous-delivery-image.png)
+-->
 
 ## Introduction
 
