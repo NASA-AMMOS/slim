@@ -196,7 +196,7 @@ Regular maintenance tasks:
 5. Clean up old artifacts
 
 ### 5. GitHub Actions Workflow Example for PyPI Project Continuous Delivery
-Create a `.github/workflows/pypi-cd.yml` file in your GitHub repository with the following content:
+Create a `.github/workflows/pypi-cd.yml` file in your GitHub repository with the following [content](pypi-cd-template.yml):
 
 ```yaml
 name: Continuous Delivery for PyPI Project
