@@ -195,6 +195,50 @@ Regular maintenance tasks:
 4. Review and update workflows
 5. Clean up old artifacts
 
+### 5. GitHub Actions Workflow Example for PyPI Project Continuous Delivery
+Create a `.github/workflows/pypi-cd.yml` file in your GitHub repository with the following content:
+
+```yaml
+name: Continuous Delivery for PyPI Project
+
+on:
+  push:
+    branches:
+      - main  # Trigger on push to the 'main' branch
+    tags:
+      - 'v*.*.*'  # Trigger on tags matching semantic versioning (v1.0.0)
+
+jobs:
+  # Job to set up the environment, install dependencies, and publish to PyPI
+  publish-to-pypi:
+    runs-on: ubuntu-latest
+
+    steps:
+    - name: Checkout repository
+      uses: actions/checkout@v3
+
+    - name: Set up Python
+      uses: actions/setup-python@v3
+      with:
+        python-version: '3.x'  # Use a specific Python version, e.g., '3.8', '3.9', etc.
+
+    - name: Install dependencies
+      run: |
+        python -m pip install --upgrade pip
+        pip install build twine  # Required for building and publishing to PyPI
+
+    - name: Build the package
+      run: |
+        python -m build  # This creates the distribution files under the 'dist' directory
+
+    - name: Publish package to PyPI
+      env:
+        TWINE_USERNAME: ${{ secrets.PYPI_USERNAME }}  # Store PyPI credentials as GitHub secrets
+        TWINE_PASSWORD: ${{ secrets.PYPI_PASSWORD }}
+      run: |
+        python -m twine upload dist/*  # Uploads the package to PyPI
+```
+
 ## Frequently Asked Questions (FAQ)
 
 **Q: How do I handle dependencies between packages?**
