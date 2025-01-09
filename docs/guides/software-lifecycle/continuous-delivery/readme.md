@@ -1,12 +1,11 @@
 ---
 title: Continuous Delivery
-description: A comprehensive guide to continuous delivery in software development.
-sidebar_label: Continuous Delivery
+description: A streamlined guide to setting up a robust continuous delivery pipeline, automating releases, and maintaining best practices.
 ---
 
 # Continuous Delivery
 
-<pre align="center">A comprehensive guide to developing a continuous delivery plan, implementation, and automation approach for your project.</pre>
+<pre align="center">A streamlined guide to setting up a robust continuous delivery pipeline, automating releases, and maintaining best practices.</pre>
 
 <!--
 ![continuous-delivery-representative-image](/img/continuous-delivery-image.png)
@@ -16,27 +15,31 @@ sidebar_label: Continuous Delivery
 
 ### Background 
 
-Continuous Delivery (CD) is the practice of automatically building, testing, and preparing code changes for release to production. It extends Continuous Integration by ensuring that all code changes after passing automated tests are immediately ready for deployment. This guide provides a streamlined approach to implementing CD through standardized repository choices, naming conventions, and automation processes.
+Continuous Delivery (CD) is the practice of automatically preparing code changes for production release, extending Continuous Integration (CI) to ensure that every validated change is always production-ready. This guide presents a simplified, practical approach to implementing CD through standardized repository selections, naming conventions, and automation.
 
 ### Approach
 
-Our recommendation is to follow a 4-step plan for continuous delivery: (1) select appropriate repositories, (2) implement standardized naming, (3) automate publishing, and (4) maintain delivery pipeline.
+Adopt a clear, four-step plan to implement Continuous Delivery effectively:
+1. **Choose repositories**.
+2. **Adopt standardized naming conventions**.
+3. **Automate publishing**.
+4. **Maintain the delivery pipeline**.
 
 ```mermaid
 graph TD
-    Repository[Select Repository] --> Naming[Implement Naming <br/>Convention] --> Automate[Automate Publishing]
+    Repository[Choose Repositories] --> Naming[Adopt Naming <br/>Conventions] --> Automate[Automate Publishing]
     Automate --> Maintain[Maintain Pipeline]
     Maintain --> Repository
 ```
 
-### Use Cases
+### Key Use Cases
 
-- Automatically publishing built artifacts to package managers
-- Standardizing package naming across repositories
-- Implementing versioned releases with semantic versioning
-- Managing test data distribution
-- Automating container image publishing
-- Facilitating infrastructure as code deployment
+- Auto-publishing built artifacts to package managers.
+- Standardizing naming conventions across repositories.
+- Versioning releases using semantic versioning.
+- Distributing test data automatically.
+- Automating container image publication.
+- Enabling infrastructure-as-code deployment.
 
 ## Quick Start
 
