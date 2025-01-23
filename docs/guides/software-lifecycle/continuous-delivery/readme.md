@@ -136,7 +136,7 @@ graph TD
     A[Package Type] --> B{Language?}
     B -->|Python| C[nasa-project-module]
     B -->|Java| D[gov.nasa.project.module]
-    B -->|NodeJS| E[@nasa-project\/module]
+    B -->|NodeJS| E[_at_nasa-project/module]
 ```
 
 #### 2.2 Version Naming
