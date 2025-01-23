@@ -47,18 +47,18 @@ The most important step in setting up continuous delivery is choosing the right 
 
 **Key Concepts to Get Started:**
 
-**[⬇️ Choose a Package Repository](#package-repositories)** based on your artifact type:
+**[⬇️ Choose a Package Repository](#select-package-repositories)** based on your artifact type:
 - PyPI for Python packages
 - Maven Central for Java
 - NPM Registry for NodeJS
 - ECR (Amazon Elastic Container Registry)/DockerHub for Containers
 
-**📝 Implement [Standardized Naming Conventions](#naming-conventions):**
+**📝 Implement [Standardized Naming Conventions](#implement-naming-conventions):**
 - `nasa-[project-org]-[module-name]` for Python
 - `gov.nasa.[project-org].[module-name]` for Java
 - `@nasa-[project-org]/[module-name]` for NodeJS
 
-**🚀 Set up [Automated Publishing](#automated-publishing)** using GitHub Actions
+**🚀 Set up [Automated Publishing](#automate-publishing)** using GitHub Actions
 
 ## Step-by-Step Guide
 
