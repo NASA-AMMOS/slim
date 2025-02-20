@@ -59,10 +59,10 @@ graph TD;
 - Implement policy enforcement with tools like Open Policy Agent (OPA).
 - Automate security scanning using tools like Snyk, Trivy, and OWASP ZAP.
 
-### 5.2 Starter Kits & Templates
-- Provide pre-configured Terraform modules for cloud deployments.
-- Include Ansible playbooks for post-deployment configuration.
-- Use Helm charts for Kubernetes-based deployments.
+### 5.2 Starter Kits & Templates (to be updated...) 
+- Pre-configured Terraform modules for cloud deployments.
+- Ansible playbooks for post-deployment configuration.
+- Helm charts for Kubernetes-based deployments.
 
 ### 5.3 Environment Isolation
 - Use separate Terraform state files for different environments.
