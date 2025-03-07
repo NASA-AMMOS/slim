@@ -294,6 +294,17 @@
         "uri": "https://raw.githubusercontent.com/NASA-AMMOS/slim/main/static/assets/software-lifecycle/security/container-vulnerability-scanning/.pre-commit-config.yaml"
       }
     ]
+  },
+  {
+    "title": "Continuous Delivery",
+    "uri": "/slim/docs/guides/software-lifecycle/continuous-delivery",
+    "category": "software lifecycle",
+    "description": "A guide for setting up a continuous delivery pipeline, automating release builds to external repositories.",
+    "tags": [
+      "continuous-delivery",
+      "automation",
+      "pipelines",
+      "software-lifecycle"
+    ]
   }
-  
 ]
