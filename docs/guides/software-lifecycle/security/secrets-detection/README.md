@@ -40,17 +40,15 @@ To get the most out of `detect-secrets`, you'll need:
 ## Quick Start
 
 1. Install slim-detect-secrets:
-  
-  > ℹ️ **Note:** the SLIM project has customized the Detect Secrets tool to identify additional sensitive keywords such as IP addresses, file paths, and AWS information. These additions are currently [under review](https://github.com/Yelp/detect-secrets/pulls/perryzjc) by the detect-secrets team for merge into the tool's `main` codebase. Until then we recommend using our SLIM fork as described below. 
    
    ```bash
-   pip install git+https://github.com/NASA-AMMOS/slim-detect-secrets.git@exp
+   pip install git+https://github.com/Yelp/detect-secrets.git
    ```
    
 2. Execute a baseline scan:
 
    ```bash
-   detect-secrets scan --all-files --disable-plugin AbsolutePathDetectorExperimental --exclude-files '\.secrets.*' --exclude-files '\.git*' > .secrets.baseline
+   detect-secrets scan --all-files --exclude-files '\.secrets.*' --exclude-files '\.git*' > .secrets.baseline
    ```
 
 3. Review the `.secrets.baseline` file for any detected secrets via an audit:
@@ -77,15 +75,15 @@ This layer directly scans the developer's local environment using the `detect-se
 
 #### Steps
 1. **Installation**
-   - Install the experimental version of [slim-detect-secrets](https://github.com/NASA-AMMOS/slim-detect-secrets/tree/exp).
+   - Install [detect-secrets](https://github.com/Yelp/detect-secrets).
      ```bash
-     pip install git+https://github.com/NASA-AMMOS/slim-detect-secrets.git@exp
+     pip install git+https://github.com/Yelp/detect-secrets.git
      ```
 
 2. **Scanning**
    - Scan all local files from the current directory and output results to a baseline file.
      ```bash
-     detect-secrets scan --all-files --disable-plugin AbsolutePathDetectorExperimental --exclude-files '\.secrets.*' --exclude-files '\.git*' > .secrets.baseline
+     detect-secrets scan --all-files --exclude-files '\.secrets.*' --exclude-files '\.git*' > .secrets.baseline
      ```
 
 3. **Checking Results**
