@@ -7,6 +7,6 @@ repos:
           - '--baseline'
           - '.secrets.baseline'
           - '--exclude-files'
-          - '\.git*'
+          - '\.git.*'
           - '--exclude-files'
           - '\.secrets.*' 

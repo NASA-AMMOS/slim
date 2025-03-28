@@ -48,7 +48,7 @@ To get the most out of `detect-secrets`, you'll need:
 2. Execute a baseline scan:
 
    ```bash
-   detect-secrets scan --all-files --exclude-files '\.secrets.*' --exclude-files '\.git*' > .secrets.baseline
+   detect-secrets scan --all-files --exclude-files '\.secrets.*' --exclude-files '\.git.*' > .secrets.baseline
    ```
 
 3. Review the `.secrets.baseline` file for any detected secrets via an audit:
@@ -81,9 +81,9 @@ This layer directly scans the developer's local environment using the `detect-se
      ```
 
 2. **Scanning**
-   - Scan all local files from the current directory and output results to a baseline file.
+   - Scan all local files from the current directory and output results to a baseline file. Note: add additional `--exclude-files` as needed using regular expression patterns.
      ```bash
-     detect-secrets scan --all-files --exclude-files '\.secrets.*' --exclude-files '\.git*' > .secrets.baseline
+     detect-secrets scan --all-files --exclude-files '\.secrets.*' --exclude-files '\.git.*' > .secrets.baseline
      ```
 
 3. **Checking Results**
