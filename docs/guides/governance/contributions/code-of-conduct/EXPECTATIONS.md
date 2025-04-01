@@ -1,5 +1,3 @@
-[DRAFT work in progress]
-
 ## Code of Conduct for Collaboration
 
 ### Overview
