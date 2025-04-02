@@ -59,6 +59,12 @@ Recommendations from GitHub.com on how-to facilitate the use of pull request tem
 
 ---
 
+## Best Practices
+
+1. 
+
+---
+
 ## Frequently Asked Questions (FAQ)
 
 - Q: How does a pull request template improve contributions?
