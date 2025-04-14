@@ -42,7 +42,7 @@ Recommendations from GitHub.com on how-to facilitate the use of pull request tem
    - ***Proposed Changes***:
       - `[ADD]` for new features or content the contributor introduced.
       - `[CHANGE]` for modifications to existing features or code.
-      - `[REMOVE]` for removals features or code.
+      - `[REMOVE]` for removals of features or code.
       - `[FIX]` for bug fixes the contributor implemented.
    - ***Issues***: To link any related issues your PR addresses. This creates a traceable connection between the issue and the solution provided.
    - ***Testing***: To document how the contributor tested the changes. Including links to test results or noting the operating systems on which the tests were performed. This assures reviewers of the reliability and effectiveness of changes.
