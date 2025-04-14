@@ -37,7 +37,7 @@ Recommendations from GitHub.com on how-to facilitate the use of pull request tem
 
 ## Step-by-Step Guide
 
-1. **Team Discussion**: Discuss the benefits of a pull request template with your team. Gain consensus on adopting this approach for consistency in contributions. Below is an explanation of our recommended [Pull Request Template](pathname:///assets/governance/pull-requests/PULL_REQUEST_TEMPLATE.md) file's fields. Adjust as necessary.
+1. **Team Discussion - Pull Request Template**: Discuss the benefits of a pull request template with your team. Gain consensus on adopting this approach for consistency in contributions. Below is an explanation of our recommended [Pull Request Template](pathname:///assets/governance/pull-requests/PULL_REQUEST_TEMPLATE.md) file's fields. Adjust as necessary.
    - ***Purpose***: To clearly state the intention behind the pull request. This helps reviewers understand the context and significance of your changes.
    - ***Proposed Changes***:
       - `[ADD]` for new features or content the contributor introduced.
@@ -47,14 +47,16 @@ Recommendations from GitHub.com on how-to facilitate the use of pull request tem
    - ***Issues***: To link any related issues your PR addresses. This creates a traceable connection between the issue and the solution provided.
    - ***Testing***: To document how the contributor tested the changes. Including links to test results or noting the operating systems on which the tests were performed. This assures reviewers of the reliability and effectiveness of changes.
 
-2. **Create Template Directory**:
+2. **Team Discussion - Pull Request Reviewers and Assignees**: Discuss the benefits of creating a `CODEOWNERS` file that informs GitHub of who should be designated as the reviewer(s) when a pull request is opened. Refer to the [GitHub documentation for Code Owners](https://docs.github.com/en/repositories/managing-your-repositorys-settings-and-features/customizing-your-repository/about-code-owners) for the specifics of how to to create and configure this file for your project's needs. See the best practices information in this guide titled "Designation of Pull-Request Reviewers and Assignees" for more clarity.
+
+3. **Create Template Directory**:
    - In your GitHub repository, create a `.github/` folder to hold community health files.
 
-3. **Add Pull Request Template**:
+4. **Add Pull Request Template**:
    - Copy the [Pull Request Template](pathname:///assets/governance/pull-requests/PULL_REQUEST_TEMPLATE.md) into `.github/PULL_REQUEST_TEMPLATE`.
    - Commit and push this file to the `main` branch of your repository.
 
-4. **Usage**:
+5. **Usage**:
    - Once set up, this template will automatically appear in the pull request description box for contributors to fill out.
 
 ---
@@ -79,7 +81,13 @@ Versioning provides your development team and the consumers of your codebase the
 
 ### Automated Code Quality and Security Scans
 
+### Designation of Pull-Request Reviewers and Assignees
 
+Pull requests need to be acted on in a timely manner to keep the team's development lifecycle running efficiently and so that they don't hinder the team's release schedule. This can be accomplished by:
+
+1. Determining who should review a pull request — This can be accomplished by adding a CODEOWNERS file to the repository that will instruct GitHub to automatically request a review from those specified in the `CODEOWNERS` file when the pull request is opened.
+
+2. Who should take action after the pull request has been approved — Have a discussion with your team about how to merge and close the pull request after an pull request approval has been issued. Some teams may prefer that the approver merge and close the pull request, other teams may designate the original submitter of the pull request merge and close the pull request. In either scenario, be sure to also clean up any artifacts of the pull request, like the removal of the branch the pull request targeted.
 
 ---
 
