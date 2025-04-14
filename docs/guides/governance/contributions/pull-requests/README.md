@@ -61,7 +61,25 @@ Recommendations from GitHub.com on how-to facilitate the use of pull request tem
 
 ## Best Practices
 
-1. 
+### Versioning
+
+Versioning provides your development team and the consumers of your codebase the ability to keep track of the differences between the release states of your code. To faciliate versioning, we recommend the use of [semantic versioning](https://semver.org/) because it provides a simple set of guidelines that describe how to increment your version numbers based on the changes that are being introduced. Below is a short summary from the semantic versioning website that describe a typical version number scheme:
+
+> Given a version number MAJOR.MINOR.PATCH, increment the:
+> 
+>1. MAJOR version when you make incompatible API changes
+>2. MINOR version when you add functionality in a backward compatible manner
+>3. PATCH version when you make backward compatible bug fixes
+>
+>Additional labels for pre-release and build metadata are available as extensions to the MAJOR.MINOR.PATCH format.
+
+#### Takeaways:
+* Your team's versioning scheme may require additional delination between versions ala build identifiers, release desiginations (e.g. unstable, stable, prerelease), so have a discussion with your team about the code versioning convention the project will follow and document the versioning scheme to refer back to as new developers are onboarded or when there are questions about the adopted versioning scheme.
+* For each pull request, ensure that the code changes are captured in the repo's CHANGELOG and that the changes are associated with a version number that follows the team's/project's code versioning scheme.
+
+### Automated Code Quality and Security Scans
+
+
 
 ---
 
@@ -76,6 +94,7 @@ Recommendations from GitHub.com on how-to facilitate the use of pull request tem
 
 **Authorship**:
 - [Rishi Verma](https://www.github.com/riverma)
+- [Anil Natha](https://www.github.com/anilnatha)
 
 ---
 
