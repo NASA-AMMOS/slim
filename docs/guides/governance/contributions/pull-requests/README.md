@@ -35,9 +35,11 @@ Recommendations from GitHub.com on how-to facilitate the use of pull request tem
 
 ---
 
-## Step-by-Step Guide
+## Step-by-Step Guides
 
-1. **Team Discussion - Pull Request Template**: Discuss the benefits of a pull request template with your team. Gain consensus on adopting this approach for consistency in contributions. Below is an explanation of our recommended [Pull Request Template](pathname:///assets/governance/pull-requests/PULL_REQUEST_TEMPLATE.md) file's fields. Adjust as necessary.
+### Pull Request Template
+
+1. **Team Discussion**: Discuss the benefits of a pull request template with your team. Gain consensus on adopting this approach for consistency in contributions. Below is an explanation of our recommended [Pull Request Template](pathname:///assets/governance/pull-requests/PULL_REQUEST_TEMPLATE.md) file's fields. Adjust as necessary.
    - ***Purpose***: To clearly state the intention behind the pull request. This helps reviewers understand the context and significance of your changes.
    - ***Proposed Changes***:
       - `[ADD]` for new features or content the contributor introduced.
@@ -47,18 +49,57 @@ Recommendations from GitHub.com on how-to facilitate the use of pull request tem
    - ***Issues***: To link any related issues your PR addresses. This creates a traceable connection between the issue and the solution provided.
    - ***Testing***: To document how the contributor tested the changes. Including links to test results or noting the operating systems on which the tests were performed. This assures reviewers of the reliability and effectiveness of changes.
 
-2. **Team Discussion - Pull Request Reviewers and Assignees**: Discuss the benefits of creating a `CODEOWNERS` file that informs GitHub of who should be designated as the reviewer(s) when a pull request is opened. Refer to the [GitHub documentation for Code Owners](https://docs.github.com/en/repositories/managing-your-repositorys-settings-and-features/customizing-your-repository/about-code-owners) for the specifics of how to to create and configure this file for your project's needs. See the best practices information in this guide titled "Designation of Pull-Request Reviewers and Assignees" for more clarity.
-
-3. **Create Template Directory**:
+2. **Create Template Directory**:
    - In your GitHub repository, create a `.github/` folder to hold community health files.
 
-4. **Add Pull Request Template**:
+3. **Add Pull Request Template**:
    - Copy the [Pull Request Template](pathname:///assets/governance/pull-requests/PULL_REQUEST_TEMPLATE.md) into `.github/PULL_REQUEST_TEMPLATE`.
    - Commit and push this file to the `main` branch of your repository.
 
-5. **Usage**:
+4. **Usage**:
    - Once set up, this template will automatically appear in the pull request description box for contributors to fill out.
 
+### Pull Request Automatic Reviewer Assignment
+
+1. **Team Discussion**: Discuss the benefits of automatically requesting reviews for opened pull requests, see [best practice information below](#designation-of-pull-request-reviewers-and-assignees). This is achieved by creating a `CODEOWNERS` file that details the individuals and/or teams from which a review should automatically be requested when a pull request is opened. 
+
+2. **Create `CODEOWNERS` file**:
+    - Add a file named `CODEOWNERS` at one of the following locations in your repo (folder location are based off the root of your repository)
+      - root of your repository
+      - `.github/`
+      - `docs/`
+
+3. **Select Reviewers**:
+
+    - A note from the [GitHub code owners documentation](https://docs.github.com/en/repositories/managing-your-repositorys-settings-and-features/customizing-your-repository/about-code-owners):
+
+        > The people you choose as code owners must have write permissions for the repository. When the code owner is a team, that team must be visible and it must have write permissions, even if all the individual members of the team already have write permissions directly, through organization membership, or through another team membership.
+
+    - Every line added to the codeowners file should include a file pattern, followed by a space, and the individual(s) or team that manages those files. Using this method, one could associate individuals/teams with different parts of your codebase for review; however, if the set of reviewers covers your entire codebase, the setup is very simple. Examples of these two are shown below.
+    
+      Both of these examples assumes:
+      1. There are two users named, `johndoe`, and `janedoe`
+      2. Teams are two teams named, `AppsTeam` and `ApiTeam` 
+      3. The codebase contains two folders at the root, `apps` and `api`.
+
+      ##### Example 1 - Any change to the codebase is sent to members, `johndoe` and `janedoe`, and the team, `AppsTeam`.
+
+      ```
+      # Each line is a file pattern followed by one or more owners.
+      * @johndoe @janedoe @AppsTeam
+      ```
+
+      ##### Example 2 - Changes to the `apps` folder and `api` folder have differing reviewers
+
+        ```
+        # Each line is a file pattern followed by one or more owners.
+        apps/ @johndoe @AppsTeam
+        api/ @janedoe @ApiTeam
+        ```
+
+      Please refer to the [GitHub code owners documentation](https://docs.github.com/en/repositories/managing-your-repositorys-settings-and-features/customizing-your-repository/about-code-owners) for more customization information.
+
+Refer to the [GitHub documentation for Code Owners](https://docs.github.com/en/repositories/managing-your-repositorys-settings-and-features/customizing-your-repository/about-code-owners) for the specifics of how to to create and configure this file for your project's needs. See the best practices information in this guide titled "Designation of Pull-Request Reviewers and Assignees" for more clarity.
 ---
 
 ## Best Practices
@@ -76,7 +117,7 @@ Versioning provides your development team and the consumers of your codebase the
 >Additional labels for pre-release and build metadata are available as extensions to the MAJOR.MINOR.PATCH format.
 
 #### Takeaways:
-* Your team's versioning scheme may require additional delination between versions ala build identifiers, release desiginations (e.g. unstable, stable, prerelease), so have a discussion with your team about the code versioning convention the project will follow and document the versioning scheme to refer back to as new developers are onboarded or when there are questions about the adopted versioning scheme.
+* Your team's versioning scheme may require additional delienation between versions, e.g. build identifiers or release desiginations (e.g. unstable, stable, prerelease). Have a discussion with your team about adopting a code versioning convention the project will follow and document it to refer back to as new developers are onboarded or when there are questions about the adopted versioning scheme.
 * For each pull request, ensure that the code changes are captured in the repo's CHANGELOG and that the changes are associated with a version number that follows the team's/project's code versioning scheme.
 
 ### Automated Code Quality and Security Scans
