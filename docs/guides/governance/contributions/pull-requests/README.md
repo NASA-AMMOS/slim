@@ -99,7 +99,9 @@ Recommendations from GitHub.com on how-to facilitate the use of pull request tem
 
       Please refer to the [GitHub code owners documentation](https://docs.github.com/en/repositories/managing-your-repositorys-settings-and-features/customizing-your-repository/about-code-owners) for more customization information.
 
-Refer to the [GitHub documentation for Code Owners](https://docs.github.com/en/repositories/managing-your-repositorys-settings-and-features/customizing-your-repository/about-code-owners) for the specifics of how to to create and configure this file for your project's needs. See the best practices information in this guide titled "Designation of Pull-Request Reviewers and Assignees" for more clarity.
+    References:
+      * [GitHub documentation for Code Owners](https://docs.github.com/en/repositories/managing-your-repositorys-settings-and-features/customizing-your-repository/about-code-owners)
+      * [Designation of Pull-Request Reviewers and Assignees](#designation-of-pull-request-reviewers-and-assignees) Best Practice.
 ---
 
 ## Best Practices
