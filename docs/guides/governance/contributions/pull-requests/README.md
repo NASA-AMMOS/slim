@@ -124,6 +124,19 @@ Versioning provides your development team and the consumers of your codebase the
 
 ### Automated Code Quality and Security Scans
 
+If your project is not currently employing automated code quality and/or security scans, it is highly recommended that they be added to your repositories. The code quality scans can provide a wealth of information to improve the maintainability of your code and avoid potential bugs and the security scans are invaluable in indentifying potential threat vectors. They will help your team ensure that releases of your code will not only be secure and free of known vulnerabilities at the time of the scan, but can help avoid the unnecessary publishing of secrets (e.g. tokens, passwords, PII, etc.).
+
+If the automated scans find issues, regardless if they are related to code changes that were introduced as part of the newly opened pull request, it's important that they are handled in a timely manner.
+
+  - If the changes _can be_ addressed as part of your pull request, [convert the pull request into a draft](https://docs.github.com/en/pull-requests/collaborating-with-pull-requests/proposing-changes-to-your-work-with-pull-requests/changing-the-stage-of-a-pull-request#converting-a-pull-request-to-a-draft) to signal to reviewers that a review is not needed and add a comment that you will be address the fixes. As you resolve the issues, periodically push the changes to the branch associated with the pull request on GitHub to retrigger the scans to verify the applied fixes resolved the previously reported issues. Repeat this process until all the issues have been fixed and [mark the pull request as ready for review](https://docs.github.com/en/pull-requests/collaborating-with-pull-requests/proposing-changes-to-your-work-with-pull-requests/changing-the-stage-of-a-pull-request#marking-a-pull-request-as-ready-for-review).
+  - If the changes _can't be_ addressed as part of your pull request, be sure to catalogue the reported issues as new tickets so that they are not forgotten and in the newly created issues, link to the pull request in which the issues were found for reference.
+
+For more information about code quality and security scans, visit:
+
+- [GitHub Security](../../../software-lifecycle/security/github-security/README.md)
+- [Secrets Detection](../../../software-lifecycle/security/secrets-detection/README.md)
+- [Container Vulnerability Scanning](../../../software-lifecycle/security/container-vulnerability-scanning/README.mdx)
+
 ### Designation of Pull-Request Reviewers and Assignees
 
 Pull requests need to be acted on in a timely manner to keep the team's development lifecycle running efficiently and so that they don't hinder the team's release schedule. This can be accomplished by:
