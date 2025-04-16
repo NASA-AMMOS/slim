@@ -46,6 +46,19 @@ Access the standard Contributor Covenant template for a robust Code of Conduct p
 
 ---
 
+## Additional Guidance on Collaboration
+
+In addition to the standard Contributor Covenant, this project includes a supplementary document: [`CODE_OF_COLLAB.md`](./CODE_OF_COLLAB.md), which outlines expectations specific to scientific research collaboration.
+
+We recommend all contributors read both documents:
+
+- Use the [**Contributor Covenant**](https://www.contributor-covenant.org/version/2/1/code_of_conduct/code_of_conduct.md) for general behavior and inclusive participation in open-source settings.
+- Refer to [**CODE_OF_COLLAB.md**](./CODE_OF_COLLAB.md) to understand our **collaboration expectations** in the context of research, publication, and funding goals.
+
+You may adopt one or both depending on your community and objectives.
+
+---
+
 ## Frequently Asked Questions (FAQ)
 
 - Q: Why is a Code of Conduct important for projects?
