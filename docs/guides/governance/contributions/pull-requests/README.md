@@ -69,39 +69,44 @@ Recommendations from GitHub.com on how-to facilitate the use of pull request tem
       - `.github/`
       - `docs/`
 
-3. **Select Reviewers**:
+3. **Configure Reviewers**:
 
-    - A note from the [GitHub code owners documentation](https://docs.github.com/en/repositories/managing-your-repositorys-settings-and-features/customizing-your-repository/about-code-owners):
+    - Every line added to the `CODEOWNERS` file should include a file pattern, followed by a space, and the people or team(s) that manages those files. A note from the [GitHub code owners documentation](https://docs.github.com/en/repositories/managing-your-repositorys-settings-and-features/customizing-your-repository/about-code-owners) about people and teams:
 
         > The people you choose as code owners must have write permissions for the repository. When the code owner is a team, that team must be visible and it must have write permissions, even if all the individual members of the team already have write permissions directly, through organization membership, or through another team membership.
-
-    - Every line added to the codeowners file should include a file pattern, followed by a space, and the individual(s) or team that manages those files. Using this method, one could associate individuals/teams with different parts of your codebase for review; however, if the set of reviewers covers your entire codebase, the setup is very simple. Examples of these two are shown below.
     
-      Both of these examples assumes:
-      1. There are two users named, `johndoe`, and `janedoe`
-      2. Teams are two teams named, `AppsTeam` and `ApiTeam` 
-      3. The codebase contains two folders at the root, `apps` and `api`.
+    - Using this method described above, one could associate people/teams with different parts of your codebase for review; however, if your people/teams need to review your entire codebase, the setup is very simple. Some examples of how a code owners file may be configured are shown below.
+    
+      These examples assume:
 
-      ##### Example 1 - Any change to the codebase is sent to members, `johndoe` and `janedoe`, and the team, `AppsTeam`.
+      1. A repository has two collaborators with the usernames, `johndoe` and `janedoe`
+      2. A GitHub Organization has two teams named, `AppsTeam` and `ApiTeam` 
+      3. At the root of a repository, there are two folders named, `apps` and `api`.
+
+      **Example 1 - A request for review needs to be sent to specific collaborators for changes to any file:**
 
       ```
       # Each line is a file pattern followed by one or more owners.
-      * @johndoe @janedoe @AppsTeam
+      * @johndoe @janedoe
       ```
 
-      ##### Example 2 - Changes to the `apps` folder and `api` folder have differing reviewers
+      **Example 2 - A request for review needs to be sent to a team for changes to any file:**
+
+      ```
+      # Each line is a file pattern followed by one or more owners.
+      * @AppsTeam
+      ```
+
+      **Example 3 - A request for review needs to be sent to specific collaborators and teams depending on the files that are changed:**
 
         ```
         # Each line is a file pattern followed by one or more owners.
-        apps/ @johndoe @AppsTeam
-        api/ @janedoe @ApiTeam
+        /apps/ @johndoe @AppsTeam
+        /api/ @janedoe @ApiTeam
         ```
 
-      Please refer to the [GitHub code owners documentation](https://docs.github.com/en/repositories/managing-your-repositorys-settings-and-features/customizing-your-repository/about-code-owners) for more customization information.
+      Visit the [GitHub code owners documentation](https://docs.github.com/en/repositories/managing-your-repositorys-settings-and-features/customizing-your-repository/about-code-owners) to learn of additional code owners file configuration capabilities.
 
-    References:
-      * [GitHub documentation for Code Owners](https://docs.github.com/en/repositories/managing-your-repositorys-settings-and-features/customizing-your-repository/about-code-owners)
-      * [Designation of Pull-Request Reviewers and Assignees](#designation-of-pull-request-reviewers-and-assignees) Best Practice.
 ---
 
 ## Best Practices
