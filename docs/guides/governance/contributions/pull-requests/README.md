@@ -124,8 +124,8 @@ Versioning provides your development team and the consumers of your codebase the
 >Additional labels for pre-release and build metadata are available as extensions to the MAJOR.MINOR.PATCH format.
 
 #### Takeaways:
-* Your team's versioning scheme may require additional delienation between versions, e.g. build identifiers or release desiginations (e.g. unstable, stable, prerelease). Have a discussion with your team about adopting a code versioning convention the project will follow and document it to refer back to as new developers are onboarded or when there are questions about the adopted versioning scheme.
-* For each pull request, ensure that the code changes are captured in the repo's CHANGELOG and that the changes are associated with a version number that follows the team's/project's code versioning scheme.
+* Have a discussion with your team about adopting a code versioning convention your project will follow and document it to refer back to as new developers are onboarded or when there are questions about the adopted versioning scheme. Your project's versioning scheme may require additional qualifiers, e.g. build identifiers or release desiginations (e.g. unstable, stable, prerelease), so be sure to discuss all aspects of your software development lifecycle when defining your versioning scheme.
+* For each pull request, ensure that a summary of the changes are captured in the repository's CHANGELOG and that those changes are associated with a version number that follows the team's/project's code versioning scheme.
 
 ### Automated Code Quality and Security Scans
 
