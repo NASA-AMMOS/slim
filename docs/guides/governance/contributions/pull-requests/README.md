@@ -29,6 +29,10 @@
 
 Our recommended pull request template for projects.
 
+**[⬇️ CODEOWNERS Template](pathname:///assets/governance/pull-requests/CODEOWNERS)**
+
+Our recommended CODEOWNERS template for automatic reviewer assignment in pull requests.
+
 **[📔 GitHub Pull Request Template Documentation](https://docs.github.com/en/communities/using-templates-to-encourage-useful-issues-and-pull-requests/creating-a-pull-request-template-for-your-repository)**
 
 Recommendations from GitHub.com on how-to facilitate the use of pull request templates.
@@ -61,9 +65,10 @@ Recommendations from GitHub.com on how-to facilitate the use of pull request tem
 
 ### Pull Request Automatic Reviewer Assignment
 
-1. **Team Discussion**: Discuss the benefits of automatically requesting reviews for opened pull requests, see [best practice information below](#designation-of-pull-request-reviewers-and-assignees). This is achieved by creating a `CODEOWNERS` file that details the individuals and/or teams from which a review should automatically be requested when a pull request is opened. 
+1. **Team Discussion**: Discuss the benefits of automatically requesting reviews for opened pull requests, see [best practice information below](#designation-of-pull-request-reviewers-and-assignees). This is achieved by creating a `CODEOWNERS` file that details the individuals and/or teams from which a review should automatically be requested when a pull request is opened.
 
 2. **Create `CODEOWNERS` file**:
+    - Download our [CODEOWNERS template](pathname:///assets/governance/pull-requests/CODEOWNERS) that you can customize and use to kick start the use of CODEOWNERS for your project.
     - Add a file named `CODEOWNERS` at one of the following locations in your repo (folder location are based off the root of your repository)
       - root of your repository
       - `.github/`
@@ -159,7 +164,7 @@ Pull requests need to be acted on in a timely manner to keep the team's developm
 
 ---
 
-## Credits 
+## Credits
 
 **Authorship**:
 - [Rishi Verma](https://www.github.com/riverma)
