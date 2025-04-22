@@ -118,7 +118,7 @@ Recommendations from GitHub.com on how-to facilitate the use of pull request tem
 
 ### Versioning
 
-Versioning provides your development team and the consumers of your codebase the ability to keep track of the differences between the release states of your code. To faciliate versioning, we recommend the use of [semantic versioning](https://semver.org/) because it provides a simple set of guidelines that describe how to increment your version numbers based on the changes that are being introduced. Below is a short summary from the semantic versioning website that describe a typical version number scheme:
+Versioning provides your development team and the consumers of your codebase the ability to keep track of the differences between the release states of your code. To facilitate versioning, we recommend the use of [semantic versioning](https://semver.org/) because it provides a simple set of guidelines that describe how to increment your version numbers based on the changes that are being introduced. Below is a short summary from the semantic versioning website that describe a typical version number scheme:
 
 > Given a version number MAJOR.MINOR.PATCH, increment the:
 > 
@@ -129,12 +129,12 @@ Versioning provides your development team and the consumers of your codebase the
 >Additional labels for pre-release and build metadata are available as extensions to the MAJOR.MINOR.PATCH format.
 
 #### Takeaways:
-* Have a discussion with your team about adopting a code versioning convention your project will follow and document it to refer back to as new developers are onboarded or when there are questions about the adopted versioning scheme. Your project's versioning scheme may require additional qualifiers, e.g. build identifiers or release desiginations (e.g. unstable, stable, prerelease), so be sure to discuss all aspects of your software development lifecycle when defining your versioning scheme.
+* Have a discussion with your team about adopting a code versioning convention your project will follow and document it to refer back to as new developers are onboarded or when there are questions about the adopted versioning scheme. Your project's versioning scheme may require additional qualifiers, e.g. build identifiers or release designations (e.g. unstable, stable, prerelease), so be sure to discuss all aspects of your software development lifecycle when defining your versioning scheme.
 * For each pull request, ensure that a summary of the changes are captured in the repository's CHANGELOG and that those changes are associated with a version number that follows the team's/project's code versioning scheme.
 
 ### Automated Code Quality and Security Scans
 
-If your project is not currently employing automated code quality and/or security scans, it is highly recommended that they be added to your repositories. The code quality scans can provide a wealth of information to improve the maintainability of your code and avoid potential bugs and the security scans are invaluable in indentifying potential threat vectors. They will help your team ensure that releases of your code will not only be secure and free of known vulnerabilities at the time of the scan, but can help avoid the unnecessary publishing of secrets (e.g. tokens, passwords, PII, etc.).
+If your project is not currently employing automated code quality and/or security scans, it is highly recommended that they be added to your repositories. The code quality scans can provide a wealth of information to improve the maintainability of your code and avoid potential bugs and the security scans are invaluable in identifying potential threat vectors. They will help your team ensure that releases of your code will not only be secure and free of known vulnerabilities at the time of the scan, but can help avoid the unnecessary publishing of secrets (e.g. tokens, passwords, PII, etc.).
 
 If the automated scans find issues, regardless if they are related to code changes that were introduced as part of the newly opened pull request, it's important that they are handled in a timely manner.
 
