@@ -29,7 +29,7 @@
 
 Our recommended pull request template for projects.
 
-**[⬇️ CODEOWNERS Template](pathname:///assets/governance/pull-requests/CODEOWNERS)**
+**[⬇️ CODEOWNERS Template](pathname:///assets/governance/pull-requests/CODEOWNERS)** ([see example](https://github.com/riverma/terraformly/blob/main/CODEOWNERS))
 
 Our recommended CODEOWNERS template for automatic reviewer assignment in pull requests.
 
