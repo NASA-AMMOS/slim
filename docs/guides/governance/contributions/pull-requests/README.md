@@ -80,7 +80,7 @@ Recommendations from GitHub.com on how-to facilitate the use of pull request tem
       These examples assume:
 
       1. A repository has two collaborators with the usernames, `johndoe` and `janedoe`
-      2. A GitHub Organization has two teams named, `AppsTeam` and `ApiTeam` 
+      2. A GitHub Organization has two teams named, `apps-team` and `api-team` 
       3. At the root of a repository, there are two folders named, `apps` and `api`.
 
       **Example 1 - A request for review needs to be sent to specific collaborators for changes to any file:**
@@ -94,15 +94,15 @@ Recommendations from GitHub.com on how-to facilitate the use of pull request tem
 
       ```
       # Each line is a file pattern followed by one or more owners.
-      * @AppsTeam
+      * @apps-team
       ```
 
       **Example 3 - A request for review needs to be sent to specific collaborators and teams depending on the files that are changed:**
 
         ```
         # Each line is a file pattern followed by one or more owners.
-        /apps/ @johndoe @AppsTeam
-        /api/ @janedoe @ApiTeam
+        /apps/ @johndoe @apps-team
+        /api/ @janedoe @api-team
         ```
 
       Visit the [GitHub code owners documentation](https://docs.github.com/en/repositories/managing-your-repositorys-settings-and-features/customizing-your-repository/about-code-owners) to learn of additional code owners file configuration capabilities.
