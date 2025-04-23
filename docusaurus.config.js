@@ -10,24 +10,18 @@ const config = {
   tagline: 'Software Lifecycle Improvement & Modernization (SLIM)',
   favicon: '/img/favicon.ico',
 
-
   // Set the production url of your site here
   url: 'https://nasa-ammos.github.io',
   // Set the /<baseUrl>/ pathname under which your site is served
-  // For GitHub pages deployment, it is often '/<projectName>/'
   baseUrl: '/slim/',
 
   // GitHub pages deployment config.
-  // If you aren't using GitHub pages, you don't need these.
-  organizationName: 'nasa-ammos', // Usually your GitHub org/user name.
-  projectName: 'slim', // Usually your repo name.
+  organizationName: 'nasa-ammos',
+  projectName: 'slim',
 
   onBrokenLinks: 'ignore',
   onBrokenMarkdownLinks: 'ignore',
 
-  // Even if you don't use internalization, you can use this field to set useful
-  // metadata like html lang. For example, if your site is Chinese, you may want
-  // to replace "en" with "zh-Hans".
   i18n: {
     defaultLocale: 'en',
     locales: ['en'],
@@ -40,18 +34,12 @@ const config = {
       ({
         docs: {
           sidebarPath: require.resolve('./sidebars.js'),
-          // Please change this to your repo.
-          // Remove this to remove the "edit this page" links.
-          editUrl:
-            'https://github.com/nasa-ammos/slim/tree/main/',
+          editUrl: 'https://github.com/nasa-ammos/slim/tree/main/',
           sidebarCollapsed: true,
         },
         blog: {
           showReadingTime: true,
-          // Please change this to your repo.
-          // Remove this to remove the "edit this page" links.
-          editUrl:
-            'https://github.com/nasa-ammos/slim/tree/main/',
+          editUrl: 'https://github.com/nasa-ammos/slim/tree/main/',
         },
         theme: {
           customCss: require.resolve('./src/css/custom.css'),
@@ -63,7 +51,6 @@ const config = {
   themeConfig:
     /** @type {import('@docusaurus/preset-classic').ThemeConfig} */
     ({
-      // Replace with your project's social card
       image: 'img/docusaurus-social-card.jpg',
       navbar: {
         title: 'SLIM',
@@ -158,11 +145,36 @@ const config = {
         respectPrefersColorScheme: false
       },
     }),
+  
+  markdown: {
+    mermaid: true,
+  },
+  
+  themes: ['@docusaurus/theme-mermaid'],
 
-    markdown: {
-      mermaid: true,
+  plugins: [
+    [
+      '@docusaurus/plugin-client-redirects',
+      {
+        redirects: [
+          {
+            from: [
+              '/continuous-testing/starter-kits', // without baseUrl
+              '/slim/continuous-testing/starter-kits', // with baseUrl
+            ],
+            to: '/docs/guides/software-lifecycle/security/secrets-detection/',
+          },
+        ],
+      },
+    ],
+  ],
+
+  scripts: [
+    {
+      src: '/js/redirect-handler.js',
+      async: true,
     },
-    themes: ['@docusaurus/theme-mermaid']
+  ],
 };
 
 module.exports = config;

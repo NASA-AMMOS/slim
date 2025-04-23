@@ -249,7 +249,7 @@
       {
         "name": "Static Tests Pre-commit Configuration",
         "type": "text/md",
-        "uri": "https://raw.githubusercontent.com/NASA-AMMOS/slim/main/static/assets/software-lifecycle/continuous-testing/pre-commit-config.yml"
+        "uri": "https://raw.githubusercontent.com/NASA-AMMOS/slim/refs/heads/main/static/assets/software-lifecycle/continuous-testing/pre-commit-config.yaml"
       }
     ]
   },
@@ -312,6 +312,17 @@
         "uri": "https://github.com/NASA-AMMOS/slim-docsite-template.git"
       }
     ]
+  },
+  {
+    "title": "Continuous Delivery",
+    "uri": "/slim/docs/guides/software-lifecycle/continuous-delivery",
+    "category": "software lifecycle",
+    "description": "A guide for setting up a continuous delivery pipeline, automating release builds to external repositories.",
+    "tags": [
+      "continuous-delivery",
+      "automation",
+      "pipelines",
+      "software-lifecycle"
+    ]
   }
-  
 ]

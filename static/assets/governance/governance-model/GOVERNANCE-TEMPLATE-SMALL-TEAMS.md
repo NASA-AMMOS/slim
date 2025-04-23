@@ -1,9 +1,3 @@
----
-title: Governance Model (Small Teams)
-sidebar_label: For Small Teams
----
-
-````markdown
 # [INSERT PROJECT NAME] Project Governance
 
 This governance model aims to create an open source community that encourages transparency, contributions, and collaboration, but maintains sound technical and quality standards. Our goal is to build a community comprised of members across the [INSERT PROJECT DOMAIN] community and beyond, including from private organizations, universities, government organizations, and international organizations. 
@@ -39,4 +33,3 @@ Overall manager of the project with final authority over all key decisions when 
 # Acknowledgements
 
 Much of this governance model was adapted from other notable open source projects including [node.js](https://github.com/nodejs/node/blob/main/GOVERNANCE.md), [OpenSSL](https://www.openssl.org/policies/omc-bylaws.html), [PostgresQL](https://www.postgresql.org/developer/), and [OpenMCT](https://github.com/nasa/openmct/blob/master/CONTRIBUTING.md). We would like to thank those projects for setting the foundation upon which this model was built.
-````
