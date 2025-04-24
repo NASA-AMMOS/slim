@@ -27,6 +27,11 @@ function HomepageHeader() {
               Submit a Best Practice Guide
             </Link>
           </Col>
+          <Col xs={12} md="auto" className={`${styles.buttonWrapper} mt-3 mt-md-0`}>
+            <Link className="button button--primary button--lg" to="/docs/tools">
+              Use our Tools
+            </Link>
+          </Col>
         </Row>
       </div>
     </header>

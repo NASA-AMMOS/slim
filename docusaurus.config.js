@@ -67,6 +67,12 @@ const config = {
           },
           {
             type: 'docSidebar',
+            sidebarId: 'toolsSidebar',
+            position: 'left',
+            label: 'Tools',
+          },
+          {
+            type: 'docSidebar',
             sidebarId: 'contributeSidebar',
             position: 'left',
             label: 'Contribute',
@@ -99,6 +105,10 @@ const config = {
               {
                 label: 'Guides',
                 to: '/docs/guides/search',
+              },
+              {
+                label: 'Tools',
+                to: '/docs/tools',
               },
               {
                 label: 'Contribute',
@@ -145,11 +155,11 @@ const config = {
         respectPrefersColorScheme: false
       },
     }),
-  
+
   markdown: {
     mermaid: true,
   },
-  
+
   themes: ['@docusaurus/theme-mermaid'],
 
   plugins: [
