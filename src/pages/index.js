@@ -19,17 +19,17 @@ function HomepageHeader() {
         <Row className="justify-content-center">
           <Col xs={12} md="auto" className={styles.buttonWrapper}>
             <Link className="button button--primary button--lg" to="/docs/guides/search">
-              See our Best Practice Guides
-            </Link>
-          </Col>
-          <Col xs={12} md="auto" className={`${styles.buttonWrapper} mt-3 mt-md-0`}>
-            <Link className="button button--secondary button--lg" to="/docs/contribute/submit-best-practice">
-              Submit a Best Practice Guide
+            📒 Guides
             </Link>
           </Col>
           <Col xs={12} md="auto" className={`${styles.buttonWrapper} mt-3 mt-md-0`}>
             <Link className="button button--primary button--lg" to="/docs/tools">
-              Use our Tools
+            🛠️ Tools
+            </Link>
+          </Col>
+          <Col xs={12} md="auto" className={`${styles.buttonWrapper} mt-3 mt-md-0`}>
+            <Link className="button button--secondary button--lg" to="/docs/contribute/submit-best-practice">
+            ⬆️ Contribute
             </Link>
           </Col>
         </Row>

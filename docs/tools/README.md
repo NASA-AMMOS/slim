@@ -12,10 +12,10 @@ This section provides an overview of tools created by the SLIM community to help
 flowchart TD
     %% == Nodes representing the components ==
     %% Using Font Awesome icons (fa: for solid, fab: for brands)
-    CLI(💻 SLIM CLI Tool)
-    Registry(📒 SLIM Registry)
-    GenAI(✨ GenAI Agent)
-    GitRepos(🧑‍💻️ Target Git Repositories)
+    CLI(fa:fa-terminal SLIM CLI Tool)
+    Registry(fa:fa-database SLIM Registry)
+    GenAI(fa:fa-brain GenAI Agent)
+    GitRepos(fab:fa-git-alt Target Git Repositories)
     %% == Interactions / Flow ==
     %% Using numbered labels to indicate sequence
     CLI -->|Requests Best Practices| Registry
@@ -41,6 +41,15 @@ flowchart TD
 ```
 
 The SLIM CLI is a command-line tool designed to infuse SLIM best practices seamlessly into your development workflow. It fetches and applies structured SLIM best practices directly into your Git repositories and leverages artificial intelligence capabilities to customize and tailor the application of best practices based on your repository's specifics.
+
+### Demo
+
+Watch SLIM CLI in action:
+
+<video controls width="100%">
+  <source src="/slim/img/slim-cli-example.mov" type="video/quicktime" />
+  Your browser does not support the video tag.
+</video>
 
 ### Features
 
@@ -75,10 +84,13 @@ slim --help
 slim list
 
 # Apply best practices to repositories
-slim apply --best-practice-ids SLIM-123 --repo-urls https://github.com/your-username/your-repo
+slim apply --best-practice-ids SLIM-1.1 --repo-urls https://github.com/your-username/your-repo
 
 # Apply a best practice using AI customization
-slim apply --best-practice-ids SLIM-123 --repo-urls https://github.com/your-username/your-repo --use-ai azure/gpt-4o
+slim apply --best-practice-ids SLIM-1.1 --repo-urls https://github.com/your-username/your-repo --use-ai azure/gpt-4o
+
+# Apply best practices and then push those changes to a new repository branch on GitHub.com - all automatically
+slim apply-deploy --best-practice-ids SLIM-1.1 SLIM 1.2 --repo-urls https://github.com/your-username/your-repo
 ```
 
 ### Documentation Generation
@@ -86,8 +98,7 @@ slim apply --best-practice-ids SLIM-123 --repo-urls https://github.com/your-user
 The SLIM CLI includes a website generator that can automatically create [Docusaurus](https://docusaurus.io/) documentation from your repository content:
 
 ```bash
-# Generate documentation
-slim generate-docs --repo-dir /path/to/your/repo --output-dir /path/to/output --use-ai ollama/llama3.3
+TBD
 ```
 
 ### Unit Test Generation
@@ -95,18 +106,8 @@ slim generate-docs --repo-dir /path/to/your/repo --output-dir /path/to/output --
 The SLIM CLI offers AI-powered test generation to automatically create unit tests for your codebase:
 
 ```bash
-# Generate tests
-slim generate-tests --repo-dir /path/to/your/repo --output-dir /path/to/tests --model ollama/llama3.3
+TBD
 ```
-
-### Demo
-
-Watch SLIM CLI in action:
-
-<video controls width="100%">
-  <source src="/slim/img/slim-cli-example.mov" type="video/quicktime" />
-  Your browser does not support the video tag.
-</video>
 
 ### Learn More
 
@@ -115,6 +116,15 @@ For more detailed information about SLIM CLI, visit the [GitHub repository](http
 ## SLIM Leaderboard
 
 The SLIM Leaderboard is a tool that generates scan reports of SLIM best practices compliance across GitHub repositories. It helps you measure, rank, and showcase how well a set of repositories follows SLIM best practices.
+
+### Demo
+
+Watch SLIM Leaderboard in action:
+
+<video controls width="100%">
+  <source src="/slim/img/slim-leaderboard-example.mov" type="video/quicktime" />
+  Your browser does not support the video tag.
+</video>
 
 ### Features
 
@@ -168,6 +178,9 @@ Create a configuration file (e.g., `slim-config.json`) to specify the repositori
 # Generate a report using default settings (tree format)
 slim-leaderboard slim-config.json
 
+# Generate a report using default settings (tree format) for an adhoc repository
+slim-leaderboard --repositories https://github.com/riverma/terraformly
+
 # Generate a report in table format
 slim-leaderboard --output_format TABLE slim-config.json
 
@@ -177,15 +190,6 @@ slim-leaderboard --output_format TREE --verbose slim-config.json
 # Generate a markdown report with emojis instead of text for statuses
 slim-leaderboard --output_format MARKDOWN --emoji slim-config.json
 ```
-
-### Demo
-
-Watch SLIM Leaderboard in action:
-
-<video controls width="100%">
-  <source src="/slim/img/slim-leaderboard-example.mov" type="video/quicktime" />
-  Your browser does not support the video tag.
-</video>
 
 ### Learn More
 
