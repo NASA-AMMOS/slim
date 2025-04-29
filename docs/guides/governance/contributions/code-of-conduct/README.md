@@ -50,16 +50,12 @@ Add a supplementary collaboration policy specifically designed for scientific re
 
 ---
 
-## Additional Guidance on Collaboration
+## Additional Guidance on Scientific Collaboration
 
 In addition to the standard Contributor Covenant, this project includes a supplementary document: [`CODE_OF_COLLAB.md`](https://raw.githubusercontent.com/NASA-AMMOS/slim/main/static/assets/governance/code-of-conduct/CODE_OF_COLLAB.md), which outlines expectations specific to scientific research collaboration.
 
-We recommend all contributors read both documents:
-
 - Use the [**Contributor Covenant**](https://www.contributor-covenant.org/version/2/1/code_of_conduct/code_of_conduct.md) for general behavior and inclusive participation in open-source settings.
-- Refer to [**CODE_OF_COLLAB.md**]([./CODE_OF_COLLAB.md](https://raw.githubusercontent.com/NASA-AMMOS/slim/main/static/assets/governance/code-of-conduct/CODE_OF_COLLAB.md)) to understand our **collaboration expectations** in the context of research, publication, and funding goals.
-
-You may adopt one or both depending on your community and objectives.
+- For scientific research collaboration, refer to [**CODE_OF_COLLAB.md**]([./CODE_OF_COLLAB.md](https://raw.githubusercontent.com/NASA-AMMOS/slim/main/static/assets/governance/code-of-conduct/CODE_OF_COLLAB.md)) to understand our **collaboration expectations** in the context of research, publication, and funding goals.
 
 ---
 
