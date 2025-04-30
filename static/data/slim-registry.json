@@ -274,7 +274,15 @@
       "software-lifecycle",
       "metrics",
       "tools"
+    ],
+    "assets": [
+      {
+        "name": "Simple Metrics Collection",
+        "type": "text/yaml",
+        "uri": "https://raw.githubusercontent.com/NASA-AMMOS/slim/main/static/assets/software-lifecycle/metrics/metrics.yml"
+      }
     ]
+
   },
   {
     "title": "Container Vulnerability Scanning",

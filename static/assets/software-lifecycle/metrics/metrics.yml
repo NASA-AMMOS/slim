@@ -1,0 +1,14 @@
+name: Collect DORA Metrics
+    on:
+      push:
+        branches:
+          - main
+    jobs:
+      collect-metrics:
+        runs-on: ubuntu-latest
+        steps:
+          - uses: actions/checkout@v2
+          - name: Run DORA Metrics Collection
+            uses: DeveloperMetrics/collect@v1
+            with:
+              GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}

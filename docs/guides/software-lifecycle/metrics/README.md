@@ -95,7 +95,7 @@ cd /path/to/your/chosen/deployment/directory
 
 To add simple metrics collection for a single repository:
 
-1. Add the following GitHub Action to your repository's `.github/workflows/metrics.yml` file:
+1. Add the following GitHub Action to your repository's [`.github/workflows/metrics.yml` file](https://raw.githubusercontent.com/NASA-AMMOS/slim/main/static/assets/software-lifecycle/metrics/metrics.yml):
 
     ```yaml
     name: Collect DORA Metrics
