@@ -16,7 +16,7 @@
 <!-- Header block for project -->
 
 [![SLIM](https://img.shields.io/badge/Best%20Practices%20from-SLIM-blue)](https://nasa-ammos.github.io/slim/)
-![DORA Metrics](https://img.shields.io/endpoint?url=https://raw.githubusercontent.com/NASA-AMMOS/slim/tree/issue-160/.github/badges/dora-metrics.json)
+![DORA Metrics](https://img.shields.io/endpoint?url=https://raw.githubusercontent.com/NASA-AMMOS/slim/main/.github/badges/dora-metrics.json)
 
 ![screen-slim](https://github.com/NASA-AMMOS/slim/assets/3129134/d4da5150-aae6-4986-b18e-5c463f8ff38a)
 
