@@ -97,9 +97,8 @@ To add simple metrics collection for a single repository:
 
 1. Add the following GitHub Action to your repository's [`.github/workflows/metrics.yml` file](/static/assets/software-lifecycle/metrics/metrics.yml):
 
-2. After a push to your repository, metrics such as deployment frequency and lead time for changes will be collected and displayed as badges on your project README.
+2. After a push to your repository, metrics such as deployment frequency and lead time for changes will be collected and displayed as badges on your project README. For example: ![DORA Metrics](https://img.shields.io/endpoint?url=https://raw.githubusercontent.com/yunks128/slim-leaderboard/main/.github/badges/dora-metrics.json)
 
-For more information, check out the [DeveloperMetrics repository](https://github.com/DeveloperMetrics).
 
 ---
 
