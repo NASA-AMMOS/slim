@@ -95,24 +95,7 @@ cd /path/to/your/chosen/deployment/directory
 
 To add simple metrics collection for a single repository:
 
-1. Add the following GitHub Action to your repository's [`.github/workflows/metrics.yml` file](https://raw.githubusercontent.com/NASA-AMMOS/slim/main/static/assets/software-lifecycle/metrics/metrics.yml):
-
-    ```yaml
-    name: Collect DORA Metrics
-    on:
-      push:
-        branches:
-          - main
-    jobs:
-      collect-metrics:
-        runs-on: ubuntu-latest
-        steps:
-          - uses: actions/checkout@v2
-          - name: Run DORA Metrics Collection
-            uses: DeveloperMetrics/collect@v1
-            with:
-              GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-    ```
+1. Add the following GitHub Action to your repository's [`.github/workflows/metrics.yml` file](/static/assets/software-lifecycle/metrics/metrics.yml):
 
 2. After a push to your repository, metrics such as deployment frequency and lead time for changes will be collected and displayed as badges on your project README.
 
