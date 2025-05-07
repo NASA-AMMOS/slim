@@ -268,7 +268,7 @@
   {
     "title": "Metrics Tracking",
     "uri": "/slim/docs/guides/software-lifecycle/metrics",
-    "category": "metrics tracking",
+    "category": "software lifecycle",
     "description": "Recommendations for metrics collection and an installation tool for Apache DevLake.",
     "tags": [
       "software-lifecycle",
@@ -292,6 +292,24 @@
         "name": "Grype Pre-commit Configuration",
         "type": "text/yaml",
         "uri": "https://raw.githubusercontent.com/NASA-AMMOS/slim/main/static/assets/software-lifecycle/security/container-vulnerability-scanning/.pre-commit-config.yaml"
+      }
+    ]
+  },
+  {
+    "title": "Website",
+    "uri": "/slim/docs/guides/information-sharing/website",
+    "category": "documentation",
+    "description": "Template project to help set up a software product website with documentation.",
+    "tags": [
+      "documentation",
+      "website",
+      "tools"
+    ],
+    "assets": [
+      {
+        "name": "SLIM's Docusaurus Website Starter Kit (Git Project)",
+        "type": "application/x-git",
+        "uri": "https://github.com/NASA-AMMOS/slim-docsite-template.git"
       }
     ]
   },
