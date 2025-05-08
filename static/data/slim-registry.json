@@ -172,6 +172,11 @@
         "name": "Contributor Covenant Code of Conduct",
         "type": "text/md",
         "uri": "https://www.contributor-covenant.org/version/2/1/code_of_conduct/code_of_conduct.md"
+      },
+      {
+      "name": "Code of Conduct for Collaboration",
+      "type": "text/md",
+      "uri": "https://raw.githubusercontent.com/NASA-AMMOS/slim/main/docs/guides/governance/contributions/code-of-conduct/CODE_OF_COLLAB.md"
       }
     ]
   },

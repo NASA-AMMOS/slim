@@ -29,6 +29,14 @@
 
 Access the standard Contributor Covenant template for a robust Code of Conduct policy to use in your project.
 
+**[⬇️ CODE_OF_COLLAB.md Template](https://raw.githubusercontent.com/NASA-AMMOS/slim/main/static/assets/governance/code-of-conduct/CODE_OF_COLLAB.md)**
+
+Add a supplementary collaboration policy specifically designed for scientific research environments, addressing publication ethics, authorship, and research integrity.
+
+**[⬇️ CITATION.cff Template]([#citation-file-template](https://raw.githubusercontent.com/NASA-AMMOS/slim/main/static/assets/governance/code-of-conduct/CITATION.cff))**
+
+Add a citation file to make your project properly citable in academic and research contexts.
+
 ---
 
 ## Step-by-Step Guide
@@ -45,6 +53,71 @@ Access the standard Contributor Covenant template for a robust Code of Conduct p
     ```
 
 ---
+
+## Additional Guidance on Scientific Collaboration
+
+In addition to the standard Contributor Covenant, this project includes a supplementary document: [`CODE_OF_COLLAB.md`](https://raw.githubusercontent.com/NASA-AMMOS/slim/main/static/assets/governance/code-of-conduct/CODE_OF_COLLAB.md), which outlines expectations specific to scientific research collaboration.
+
+- Use the [**Contributor Covenant**](https://www.contributor-covenant.org/version/2/1/code_of_conduct/code_of_conduct.md) for general behavior and inclusive participation in open-source settings.
+- For scientific research collaboration, refer to [**CODE_OF_COLLAB.md**]([./CODE_OF_COLLAB.md](https://raw.githubusercontent.com/NASA-AMMOS/slim/main/static/assets/governance/code-of-conduct/CODE_OF_COLLAB.md)) to understand our **collaboration expectations** in the context of research, publication, and funding goals.
+
+---
+
+## Citation Guidance
+
+Academic citation is a crucial aspect of scientific and research software projects. Making your project citable helps ensure that contributors receive appropriate credit when others build upon your work and enables tracking of your project's impact in the research community.
+
+### Creating a CITATION.cff File
+
+We recommend adding a `CITATION.cff` file to the root of your repository. This file follows the [Citation File Template](https://raw.githubusercontent.com/NASA-AMMOS/slim/main/static/assets/governance/code-of-conduct/CITATION.cff) specification and provides structured metadata that can be automatically processed by citation management tools.
+
+1. **Setting Up the Citation File**:
+   - Create a `CITATION.cff` file in the root of your repository.
+   - Use the [template](https://raw.githubusercontent.com/NASA-AMMOS/slim/main/static/assets/governance/code-of-conduct/CITATION.cff), replacing placeholder values with your project details.
+   - Include all significant contributors as authors.
+
+2. **Integrate with Your Project**:
+   - Add a citation section to your `README.md` with instructions on how to cite your work.
+   - Consider connecting your repository to [Zenodo](https://zenodo.org/) to obtain a DOI.
+
+### [Citation File Template](https://raw.githubusercontent.com/NASA-AMMOS/slim/main/static/assets/governance/code-of-conduct/CITATION.cff)
+
+<a id="citation-file-template"></a>
+```yaml
+# CITATION.cff - This file provides citation information for your project
+cff-version: 1.2.0
+message: "If you use this software, please cite it as below."
+type: software
+title: "Title of Your Software"
+version: "1.0.0"
+date-released: "YYYY-MM-DD"
+abstract: "A brief abstract describing your software."
+authors:
+  - family-names: "Last Name"
+    given-names: "First Name"
+    affiliation: "Your Institution"
+    orcid: "https://orcid.org/xxxx-xxxx-xxxx-xxxx"  # Optional
+url: "https://github.com/username/repository"
+repository-code: "https://github.com/username/repository"
+license: "LICENSE-NAME"  # e.g., "Apache-2.0", "MIT", etc.
+keywords:
+  - "keyword1"
+  - "keyword2"
+  - "keyword3"
+# For software related to published research, include the reference:
+references:
+  - type: "article"
+    authors:
+      - family-names: "Author Last"
+        given-names: "Author First"
+    title: "Title of the related publication"
+    year: YYYY
+    journal: "Journal Name"
+    doi: "10.xxxx/xxxxx"  # If available
+```
+
+---
+
 
 ## Frequently Asked Questions (FAQ)
 

@@ -1,0 +1,92 @@
+# This CITATION.cff file is a template.
+# Replace placeholders with your specific project information.
+
+# Basic required fields
+cff-version: 1.2.0  # Use the current CFF version
+message: "If you use this software, please cite it as below."
+type: software  # Options include: software, dataset, article, etc.
+
+# Project identifiers
+title: "Title of Your Software"
+version: "1.0.0"  # Your software version
+date-released: "YYYY-MM-DD"  # Release date
+doi: "10.xxxx/xxxxx"  # Digital Object Identifier (if available)
+
+# Description fields
+abstract: "A brief abstract describing your software (1-2 sentences)."
+description: >
+  A more detailed description of your software that can span
+  multiple lines. Explain what your software does, why it's
+  useful, and any other relevant information.
+
+# Project URLs
+url: "https://github.com/username/repository"  # Project homepage
+repository-code: "https://github.com/username/repository"  # Code repository
+repository-artifact: "https://username.github.io/repository"  # Project website
+documentation: "https://username.github.io/repository/docs"  # Documentation
+
+# License information
+license: "MIT"  # License identifier: MIT, Apache-2.0, GPL-3.0, etc.
+
+# Authors
+authors:
+  - family-names: "Last Name"
+    given-names: "First Name"
+    email: "email@example.com"  # Optional
+    affiliation: "Your Institution"  # Optional
+    orcid: "https://orcid.org/xxxx-xxxx-xxxx-xxxx"  # Optional
+  - family-names: "Last Name 2"
+    given-names: "First Name 2"
+    email: "email2@example.com"
+    affiliation: "Their Institution"
+    orcid: "https://orcid.org/xxxx-xxxx-xxxx-xxxx"
+
+# Maintainers (if different from authors)
+maintainers:
+  - family-names: "Maintainer Last"
+    given-names: "Maintainer First"
+    email: "maintainer@example.com"
+
+# Funding information (optional)
+funding:
+  - funder:
+      name: "Funding Organization Name"
+      grant-number: "Grant123"
+
+# Related identifiers (optional)
+identifiers:
+  - type: "doi"
+    value: "10.xxxx/xxxxx"
+    description: "DOI for this version"
+
+# Keywords
+keywords:
+  - "keyword1"
+  - "keyword2"
+  - "keyword3"
+
+# Related works
+references:
+  - type: "article"  # Can be: article, book, software, dataset, etc.
+    authors:
+      - family-names: "Author Last"
+        given-names: "Author First"
+    title: "Title of the related publication"
+    year: YYYY
+    journal: "Journal Name"  # For articles
+    volume: "X"  # For articles
+    issue: "Y"  # For articles
+    pages: "start-end"  # For articles
+    doi: "10.xxxx/xxxxx"  # For any type with a DOI
+  
+  - type: "conference-paper"
+    authors:
+      - family-names: "Author Last"
+        given-names: "Author First"
+    title: "Title of the conference paper"
+    year: YYYY
+    conference:
+      name: "Name of the Conference"
+      address: "City, Country"  # Where the conference was held
+      date-start: "YYYY-MM-DD"  # Start date
+      date-end: "YYYY-MM-DD"  # End date

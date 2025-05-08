@@ -1,0 +1,39 @@
+cff-version: 1.0.0
+message: "If you use this software, please cite it as below."
+type: software
+title: "Software Lifecycle Improvement & Modernization (SLIM)"
+abstract: "A shared community resource for discussing, iterating and referencing a common set of best practices in software development standards for NASA multi-mission space and ground software."
+version: "1.0.0"
+date-released: "2025-04-30"
+url: "https://github.com/NASA-AMMOS/slim"
+repository-code: "https://github.com/NASA-AMMOS/slim"
+repository-artifact: "https://nasa-ammos.github.io/slim/"
+license: "Apache-2.0"
+references:
+  - type: conference-paper
+    authors:
+      - family-names: "Verma"
+        given-names: "Rishi"
+      - family-names: "Yun"
+        given-names: "Kyongsik"
+      - family-names: "Ramirez"
+        given-names: "Paul"
+    title: "Open Source Community-Built Software Standards for Space and Ground Software. An Overview of the Software Lifecycle Improvement & Modernization (SLIM) Project from NASA's Jet Propulsion Laboratory"
+    year: 2025
+    conference:
+      name: "SpaceOps"
+      address: "Conference Location"
+      date-start: "2025-05-26"
+      date-end: "2025-05-30"
+keywords:
+  - "software lifecycle"
+  - "software standards"
+  - "NASA"
+  - "JPL"
+  - "AMMOS"
+  - "space software"
+  - "ground software"
+  - "best practices"
+  - "software governance"
+  - "documentation standards"
+description: "The Software Lifecycle Improvement & Modernization (SLIM) project provides sample scripts, configuration, documentation, and recommendations for best practices in software lifecycle modernization, software governance improvements and standards, as well as software information sharing consistency and standards for NASA multi-mission space and ground software."
