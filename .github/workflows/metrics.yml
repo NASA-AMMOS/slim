@@ -1,0 +1,421 @@
+name: DORA Metrics
+on:
+  # Schedule to run weekly
+  schedule:
+    - cron: '0 0 * * 0'  # Run at midnight every Sunday
+  # Allow manual triggering
+  workflow_dispatch:
+  
+jobs:
+  collect-metrics:
+    runs-on: ubuntu-latest
+    permissions:
+      actions: read
+      contents: write  # Required to commit badge files
+      issues: read     # Required to analyze bug/incident issues
+    
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v4
+      
+      - name: Set up directory for badge files
+        run: mkdir -p .github/badges
+      
+      - name: Calculate DORA Metrics
+        run: |
+          # Get date 30 days ago in ISO format
+          THIRTY_DAYS_AGO=$(date -d "30 days ago" -u +"%Y-%m-%dT%H:%M:%SZ")
+          
+          echo "=== Calculating DORA Metrics for Last 30 Days ==="
+          
+          #=========================================================
+          # 1. Deployment Frequency
+          #=========================================================
+          echo "Calculating Deployment Frequency..."
+          
+          # Get pushes to main branch in last 30 days as a proxy for deployments
+          # Or use your actual deployment workflow runs if available
+          DEPLOY_COUNT=$(curl -s -H "Authorization: token ${{ secrets.GITHUB_TOKEN }}" \
+            "https://api.github.com/repos/${{ github.repository }}/commits?since=$THIRTY_DAYS_AGO&sha=main" | \
+            jq '. | length')
+          
+          echo "Total deployments in last 30 days: $DEPLOY_COUNT"
+          
+          if [ -z "$DEPLOY_COUNT" ] || [ "$DEPLOY_COUNT" == "null" ]; then
+            DEPLOY_COUNT=0
+          fi
+          
+          # Calculate per day/week/month metrics
+          if [ "$DEPLOY_COUNT" -gt 0 ]; then
+            DEPLOY_PER_DAY=$(echo "scale=2; $DEPLOY_COUNT / 30" | bc)
+            DEPLOY_PER_WEEK=$(echo "scale=2; $DEPLOY_COUNT / 4.3" | bc)
+            DEPLOY_PER_MONTH="$DEPLOY_COUNT"
+            
+            echo "Deployments per day: $DEPLOY_PER_DAY"
+            echo "Deployments per week: $DEPLOY_PER_WEEK"
+            
+            # Determine DORA level based on deployment frequency
+            if (( $(echo "$DEPLOY_PER_DAY >= 1" | bc -l) )); then
+              DF_VALUE="$DEPLOY_PER_DAY per day"
+              DF_LEVEL="Elite"
+              DF_COLOR="brightgreen"
+            elif (( $(echo "$DEPLOY_PER_WEEK >= 1" | bc -l) )); then
+              DF_VALUE="$DEPLOY_PER_WEEK per week"
+              DF_LEVEL="High"
+              DF_COLOR="green"
+            elif (( $(echo "$DEPLOY_PER_MONTH >= 1" | bc -l) )); then
+              DF_VALUE="$DEPLOY_PER_MONTH per month"
+              DF_LEVEL="Medium"
+              DF_COLOR="yellow"
+            else
+              DF_VALUE="$DEPLOY_PER_MONTH per month"
+              DF_LEVEL="Low"
+              DF_COLOR="red"
+            fi
+          else
+            DF_VALUE="0 per month"
+            DF_LEVEL="Low"
+            DF_COLOR="red"
+          fi
+          
+          echo "Deployment Frequency: $DF_VALUE ($DF_LEVEL)"
+          
+          #=========================================================
+          # 2. Lead Time for Changes
+          #=========================================================
+          echo "Calculating Lead Time for Changes..."
+          
+          # Get merged PRs in the last 30 days
+          MERGED_PRS=$(curl -s -H "Authorization: token ${{ secrets.GITHUB_TOKEN }}" \
+            "https://api.github.com/repos/${{ github.repository }}/pulls?state=closed&sort=updated&direction=desc&per_page=100" | \
+            jq '[.[] | select(.merged_at != null and .merged_at > "'$THIRTY_DAYS_AGO'")]')
+          
+          PR_COUNT=$(echo "$MERGED_PRS" | jq 'length')
+          echo "Merged PRs in last 30 days: $PR_COUNT"
+          
+          if [ "$PR_COUNT" -gt 0 ]; then
+            TOTAL_HOURS=0
+            
+            for i in $(seq 0 $(($PR_COUNT-1))); do
+              CREATED=$(echo "$MERGED_PRS" | jq -r ".[$i].created_at")
+              MERGED=$(echo "$MERGED_PRS" | jq -r ".[$i].merged_at")
+              
+              CREATED_TS=$(date -d "$CREATED" +%s)
+              MERGED_TS=$(date -d "$MERGED" +%s)
+              
+              DIFF_SECS=$(($MERGED_TS - $CREATED_TS))
+              PR_HOURS=$(echo "scale=2; $DIFF_SECS / 3600" | bc)
+              
+              TOTAL_HOURS=$(echo "scale=2; $TOTAL_HOURS + $PR_HOURS" | bc)
+            done
+            
+            AVG_HOURS=$(echo "scale=2; $TOTAL_HOURS / $PR_COUNT" | bc)
+            echo "Average lead time: $AVG_HOURS hours"
+            
+            # Determine DORA level based on lead time
+            if (( $(echo "$AVG_HOURS < 24" | bc -l) )); then
+              LT_VALUE="$AVG_HOURS hours"
+              LT_LEVEL="Elite"
+              LT_COLOR="brightgreen"
+            elif (( $(echo "$AVG_HOURS < 168" | bc -l) )); then
+              AVG_DAYS=$(echo "scale=2; $AVG_HOURS / 24" | bc)
+              LT_VALUE="$AVG_DAYS days"
+              LT_LEVEL="High"
+              LT_COLOR="green"
+            elif (( $(echo "$AVG_HOURS < 730" | bc -l) )); then
+              AVG_DAYS=$(echo "scale=2; $AVG_HOURS / 24" | bc)
+              LT_VALUE="$AVG_DAYS days"
+              LT_LEVEL="Medium"
+              LT_COLOR="yellow"
+            else
+              AVG_DAYS=$(echo "scale=2; $AVG_HOURS / 24" | bc)
+              LT_VALUE="$AVG_DAYS days"
+              LT_LEVEL="Low"
+              LT_COLOR="red"
+            fi
+          else
+            LT_VALUE="No PRs"
+            LT_LEVEL="N/A"
+            LT_COLOR="gray"
+          fi
+          
+          echo "Lead Time: $LT_VALUE ($LT_LEVEL)"
+          
+          #=========================================================
+          # 3. Change Failure Rate
+          #=========================================================
+          echo "Calculating Change Failure Rate..."
+          
+          # Get bugs/incidents reported in the last 30 days
+          # (Using issues with "bug" or "incident" labels)
+          BUG_COUNT=$(curl -s -H "Authorization: token ${{ secrets.GITHUB_TOKEN }}" \
+            "https://api.github.com/repos/${{ github.repository }}/issues?state=all&labels=bug&since=$THIRTY_DAYS_AGO&per_page=100" | \
+            jq '. | length')
+          
+          INCIDENT_COUNT=$(curl -s -H "Authorization: token ${{ secrets.GITHUB_TOKEN }}" \
+            "https://api.github.com/repos/${{ github.repository }}/issues?state=all&labels=incident&since=$THIRTY_DAYS_AGO&per_page=100" | \
+            jq '. | length')
+          
+          if [ -z "$BUG_COUNT" ] || [ "$BUG_COUNT" == "null" ]; then
+            BUG_COUNT=0
+          fi
+          
+          if [ -z "$INCIDENT_COUNT" ] || [ "$INCIDENT_COUNT" == "null" ]; then
+            INCIDENT_COUNT=0
+          fi
+          
+          TOTAL_FAILURES=$(($BUG_COUNT + $INCIDENT_COUNT))
+          echo "Bugs/incidents in last 30 days: $TOTAL_FAILURES"
+          
+          if [ "$DEPLOY_COUNT" -gt 0 ]; then
+            FAILURE_RATE=$(echo "scale=2; $TOTAL_FAILURES / $DEPLOY_COUNT * 100" | bc)
+            echo "Change failure rate: $FAILURE_RATE%"
+            
+            # Determine DORA level based on failure rate
+            if (( $(echo "$FAILURE_RATE <= 15" | bc -l) )); then
+              CFR_VALUE="$FAILURE_RATE%"
+              CFR_LEVEL="Elite"
+              CFR_COLOR="brightgreen"
+            elif (( $(echo "$FAILURE_RATE <= 30" | bc -l) )); then
+              CFR_VALUE="$FAILURE_RATE%"
+              CFR_LEVEL="High"
+              CFR_COLOR="green"
+            elif (( $(echo "$FAILURE_RATE <= 45" | bc -l) )); then
+              CFR_VALUE="$FAILURE_RATE%"
+              CFR_LEVEL="Medium"
+              CFR_COLOR="yellow"
+            else
+              CFR_VALUE="$FAILURE_RATE%"
+              CFR_LEVEL="Low"
+              CFR_COLOR="red"
+            fi
+          else
+            CFR_VALUE="N/A (No deployments)"
+            CFR_LEVEL="N/A"
+            CFR_COLOR="gray"
+          fi
+          
+          echo "Change Failure Rate: $CFR_VALUE ($CFR_LEVEL)"
+          
+          #=========================================================
+          # 4. Mean Time to Recovery (MTTR)
+          #=========================================================
+          echo "Calculating Mean Time to Recovery..."
+          
+          # Get closed incidents in the last 30 days
+          CLOSED_INCIDENTS=$(curl -s -H "Authorization: token ${{ secrets.GITHUB_TOKEN }}" \
+            "https://api.github.com/repos/${{ github.repository }}/issues?state=closed&labels=incident&per_page=100" | \
+            jq '[.[] | select(.closed_at > "'$THIRTY_DAYS_AGO'")]')
+          
+          INCIDENT_COUNT=$(echo "$CLOSED_INCIDENTS" | jq 'length')
+          echo "Closed incidents in last 30 days: $INCIDENT_COUNT"
+          
+          if [ "$INCIDENT_COUNT" -gt 0 ]; then
+            TOTAL_MINUTES=0
+            
+            for i in $(seq 0 $(($INCIDENT_COUNT-1))); do
+              CREATED=$(echo "$CLOSED_INCIDENTS" | jq -r ".[$i].created_at")
+              CLOSED=$(echo "$CLOSED_INCIDENTS" | jq -r ".[$i].closed_at")
+              
+              CREATED_TS=$(date -d "$CREATED" +%s)
+              CLOSED_TS=$(date -d "$CLOSED" +%s)
+              
+              DIFF_MINS=$(echo "scale=2; ($CLOSED_TS - $CREATED_TS) / 60" | bc)
+              TOTAL_MINUTES=$(echo "scale=2; $TOTAL_MINUTES + $DIFF_MINS" | bc)
+            done
+            
+            AVG_MINUTES=$(echo "scale=2; $TOTAL_MINUTES / $INCIDENT_COUNT" | bc)
+            AVG_HOURS=$(echo "scale=2; $AVG_MINUTES / 60" | bc)
+            echo "Average recovery time: $AVG_HOURS hours"
+            
+            # Determine DORA level based on recovery time
+            if (( $(echo "$AVG_HOURS < 1" | bc -l) )); then
+              MTTR_VALUE="$AVG_MINUTES minutes"
+              MTTR_LEVEL="Elite"
+              MTTR_COLOR="brightgreen"
+            elif (( $(echo "$AVG_HOURS < 24" | bc -l) )); then
+              MTTR_VALUE="$AVG_HOURS hours"
+              MTTR_LEVEL="High"
+              MTTR_COLOR="green"
+            elif (( $(echo "$AVG_HOURS < 168" | bc -l) )); then
+              MTTR_VALUE="$AVG_HOURS hours"
+              MTTR_LEVEL="Medium"
+              MTTR_COLOR="yellow"
+            else
+              AVG_DAYS=$(echo "scale=2; $AVG_HOURS / 24" | bc)
+              MTTR_VALUE="$AVG_DAYS days"
+              MTTR_LEVEL="Low"
+              MTTR_COLOR="red"
+            fi
+          else
+            MTTR_VALUE="N/A (No incidents)"
+            MTTR_LEVEL="N/A"
+            MTTR_COLOR="gray"
+          fi
+          
+          echo "Mean Time to Recovery: $MTTR_VALUE ($MTTR_LEVEL)"
+          
+          #=========================================================
+          # Generate Badge Files
+          #=========================================================
+          echo "Generating badge files..."
+          
+          # Deployment Frequency Badge
+          cat > .github/badges/deployment-frequency.json << EOF
+          {
+            "schemaVersion": 1,
+            "label": "Deployment Frequency",
+            "message": "$DF_VALUE ($DF_LEVEL)",
+            "color": "$DF_COLOR"
+          }
+          EOF
+          
+          # Lead Time Badge
+          cat > .github/badges/lead-time.json << EOF
+          {
+            "schemaVersion": 1,
+            "label": "Lead Time",
+            "message": "$LT_VALUE ($LT_LEVEL)",
+            "color": "$LT_COLOR"
+          }
+          EOF
+          
+          # Change Failure Rate Badge
+          cat > .github/badges/change-failure-rate.json << EOF
+          {
+            "schemaVersion": 1,
+            "label": "Change Failure Rate",
+            "message": "$CFR_VALUE ($CFR_LEVEL)",
+            "color": "$CFR_COLOR"
+          }
+          EOF
+          
+          # MTTR Badge
+          cat > .github/badges/mttr.json << EOF
+          {
+            "schemaVersion": 1,
+            "label": "MTTR",
+            "message": "$MTTR_VALUE ($MTTR_LEVEL)",
+            "color": "$MTTR_COLOR"
+          }
+          EOF
+          
+          # Combined DORA Metrics Badge
+          cat > .github/badges/dora-metrics.json << EOF
+          {
+            "schemaVersion": 1,
+            "label": "DORA Metrics",
+            "message": "Deployment Frequency: $DF_LEVEL | Lead Time: $LT_LEVEL | Change Failure Rate: $CFR_LEVEL | Mean Time to Recovery: $MTTR_LEVEL",
+            "color": "blue"
+          }
+          EOF
+          
+          echo "Badge files generated successfully!"
+          
+          #=========================================================
+          # Generate Metrics Report
+          #=========================================================
+          echo "Generating metrics report..."
+          
+          cat > dora-metrics-report.md << EOF
+          # DORA Metrics Report
+          
+          *Generated on $(date)*
+          
+          ## Summary
+          
+          | Metric | Value | Performance Level |
+          |--------|-------|------------------|
+          | Deployment Frequency | $DF_VALUE | $DF_LEVEL |
+          | Lead Time for Changes | $LT_VALUE | $LT_LEVEL |
+          | Change Failure Rate | $CFR_VALUE | $CFR_LEVEL |
+          | Mean Time to Recovery | $MTTR_VALUE | $MTTR_LEVEL |
+          
+          ## How to Add Badges to Your README
+          
+          Add the following to your README.md:
+          
+          \`\`\`markdown
+          ![Deployment Frequency](https://img.shields.io/endpoint?url=https://raw.githubusercontent.com/${{ github.repository }}/main/.github/badges/deployment-frequency.json)
+          ![Lead Time](https://img.shields.io/endpoint?url=https://raw.githubusercontent.com/${{ github.repository }}/main/.github/badges/lead-time.json)
+          ![Change Failure Rate](https://img.shields.io/endpoint?url=https://raw.githubusercontent.com/${{ github.repository }}/main/.github/badges/change-failure-rate.json)
+          ![MTTR](https://img.shields.io/endpoint?url=https://raw.githubusercontent.com/${{ github.repository }}/main/.github/badges/mttr.json)
+          ![DORA Metrics](https://img.shields.io/endpoint?url=https://raw.githubusercontent.com/${{ github.repository }}/main/.github/badges/dora-metrics.json)
+          \`\`\`
+          
+          ## Details
+          
+          ### Deployment Frequency
+          
+          - Total deployments in last 30 days: $DEPLOY_COUNT
+          - Deployments per day: $DEPLOY_PER_DAY
+          - Performance level: $DF_LEVEL
+          
+          ### Lead Time for Changes
+          
+          - Merged PRs in last 30 days: $PR_COUNT
+          - Average lead time: $LT_VALUE
+          - Performance level: $LT_LEVEL
+          
+          ### Change Failure Rate
+          
+          - Total failures in last 30 days: $TOTAL_FAILURES
+          - Change failure rate: $CFR_VALUE
+          - Performance level: $CFR_LEVEL
+          
+          ### Mean Time to Recovery
+          
+          - Closed incidents in last 30 days: $INCIDENT_COUNT
+          - Average recovery time: $MTTR_VALUE
+          - Performance level: $MTTR_LEVEL
+          EOF
+          
+          echo "Metrics report generated successfully!"
+      
+      - name: Create GitHub Issue with Report
+        run: |
+          REPORT=$(cat dora-metrics-report.md)
+          TODAY=$(date +"%Y-%m-%d")
+          
+          # Create or update issue with metrics report
+          ISSUE_DATA=$(cat << EOF
+          {
+            "title": "DORA Metrics Report - $TODAY",
+            "body": $REPORT,
+            "labels": ["metrics", "dora"]
+          }
+          EOF
+          )
+          
+          # Try to find existing open issue with the same label
+          EXISTING_ISSUES=$(curl -s -H "Authorization: token ${{ secrets.GITHUB_TOKEN }}" \
+            "https://api.github.com/repos/${{ github.repository }}/issues?state=open&labels=dora")
+          
+          ISSUE_COUNT=$(echo "$EXISTING_ISSUES" | jq 'length')
+          
+          if [ "$ISSUE_COUNT" -gt 0 ]; then
+            # Update existing issue
+            ISSUE_NUMBER=$(echo "$EXISTING_ISSUES" | jq -r '.[0].number')
+            echo "Updating existing issue #$ISSUE_NUMBER"
+            
+            curl -s -X PATCH -H "Authorization: token ${{ secrets.GITHUB_TOKEN }}" \
+              -H "Accept: application/vnd.github.v3+json" \
+              -d "$ISSUE_DATA" \
+              "https://api.github.com/repos/${{ github.repository }}/issues/$ISSUE_NUMBER"
+          else
+            # Create new issue
+            echo "Creating new DORA metrics issue"
+            
+            curl -s -X POST -H "Authorization: token ${{ secrets.GITHUB_TOKEN }}" \
+              -H "Accept: application/vnd.github.v3+json" \
+              -d "$ISSUE_DATA" \
+              "https://api.github.com/repos/${{ github.repository }}/issues"
+          fi
+      
+      - name: Commit badge files
+        run: |
+          git config --local user.email "github-actions[bot]@users.noreply.github.com"
+          git config --local user.name "github-actions[bot]"
+          git add .github/badges/
+          git commit -m "Update DORA metrics badges [skip ci]" || echo "No changes to commit"
+          git push
