@@ -97,7 +97,13 @@ To add simple metrics collection for a single repository:
 
 1. Add the following GitHub Action to your repository's [`.github/workflows/metrics.yml` file](/static/assets/software-lifecycle/metrics/metrics.yml):
 
-2. After a push to your repository, metrics such as deployment frequency and lead time for changes will be collected and displayed as badges on your project README. For example: ![DORA Metrics](https://img.shields.io/endpoint?url=https://raw.githubusercontent.com/yunks128/slim-leaderboard/main/.github/badges/dora-metrics.json)
+2. After a push to your repository, metrics such as deployment frequency and lead time for changes are automatically computed, and the results are saved to `.github/badges/` as JOSN files. 
+
+3. Add badges to your project `README.md` to showcase metrics. 
+```
+![DORA Metrics](https://img.shields.io/endpoint?url=https://raw.githubusercontent.com/<OWNER>/<REPO>/main/.github/badges/dora-metrics.json)
+```
+For example: ![DORA Metrics](https://img.shields.io/endpoint?url=https://raw.githubusercontent.com/yunks128/slim-leaderboard/main/.github/badges/dora-metrics.json) ![Deployment Frequency](https://img.shields.io/endpoint?url=https://raw.githubusercontent.com/yunks128/slim-leaderboard/main/.github/badges/deployment-frequency.json) ![Change Failure Rate](https://img.shields.io/endpoint?url=https://raw.githubusercontent.com/yunks128/slim-leaderboard/main/.github/badges/change-failure-rate.json)
 
 
 ---
