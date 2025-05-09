@@ -146,6 +146,7 @@ For more information about code quality and security scans, visit:
 - [GitHub Security](../../../software-lifecycle/security/github-security/README.md)
 - [Secrets Detection](../../../software-lifecycle/security/secrets-detection/README.md)
 - [Container Vulnerability Scanning](../../../software-lifecycle/security/container-vulnerability-scanning/README.mdx)
+- [SonarQube Cloud](https://github.com/marketplace/actions/official-sonarqube-scan)
 
 ### Designation of Pull-Request Reviewers and Assignees
 
