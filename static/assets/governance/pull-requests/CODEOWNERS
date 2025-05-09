@@ -1,0 +1,58 @@
+# This is a CODEOWNERS file for GitHub repositories
+# It automatically assigns reviewers for pull requests based on file paths
+# Documentation: https://docs.github.com/en/repositories/managing-your-repositorys-settings-and-features/customizing-your-repository/about-code-owners
+
+# Syntax:
+# file-pattern    @user-or-team-name
+
+# ===== EXAMPLES (All commented out! Make sure to uncomment the patterns you want to use) =====
+
+# Default owners for everything in the repo (unless a later match takes precedence)
+# A request for review needs to be sent to a team for changes to any file
+# *    @johndoe @janedoe
+# *    @apps-team
+
+# Owners for all files in the root directory
+# /*    @root-directory-owners
+
+# Owners for specific file types across the entire repository
+# *.js    @javascript-owners
+# *.go    @go-owners
+# *.sql   @database-team
+
+# Owners for specific directories and all contained files
+# Each line is a file pattern followed by one or more owners.
+# You can use team names as well (must be in the same org)
+# /apps/ @johndoe @apps-team
+# /api/ @janedoe @api-team
+# /docs/ @documentation-team
+# /config/ @platform-team
+# /scripts/ @devops-team
+
+# Owners for specific files
+# /CONTRIBUTING.md        @community-manager
+# /LICENSE                @legal-team
+# /SECURITY.md            @security-team
+
+# Path exclusions with ! - the following will not match
+# /logs/                  @logger-team
+# !/logs/high-priority/   @emergency-team
+
+# Nested team ownership
+# /src/                   @dev-team
+# /src/api/               @api-team
+# /src/ui/                @frontend-team
+
+# Different owners based on file location
+# package.json            @dependency-managers
+# /test/package.json      @test-dependency-managers
+
+# Wildcard patterns
+# /src/**/test/           @test-owners
+# /src/*/index.js         @index-owners
+
+# IMPORTANT NOTES:
+# - Order matters! The last matching pattern takes precedence.
+# - CODEOWNERS only works on branch protections that require PR reviews.
+# - @username, @org/team-name or email@domain.com formats are supported.
+# - CODEOWNERS must be in the root, .github/, or docs/ directory to work.
