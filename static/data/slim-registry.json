@@ -153,6 +153,11 @@
         "name": "Pull Request Template",
         "type": "text/md",
         "uri": "https://raw.githubusercontent.com/NASA-AMMOS/slim/main/static/assets/governance/pull-requests/PULL_REQUEST_TEMPLATE.md"
+      },
+      {
+        "name": "CODEOWNERS Template",
+        "type": "text/plain",
+        "uri": "https://raw.githubusercontent.com/NASA-AMMOS/slim/main/static/assets/governance/pull-requests/CODEOWNERS"
       }
     ]
   },
