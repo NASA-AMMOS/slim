@@ -6,16 +6,10 @@ title: Software Lifecycle Improvement & Modernization (SLIM)
 message: 'If you use this software, please cite it as below.'
 type: software
 authors:
-  - {}
-  - given-names: Rishi
-    family-names: Verma
-    affiliation: JPL
-  - given-names: Kyongsik
-    family-names: Yun
-    affiliation: JPL
-  - given-names: Paul
-    family-names: Ramirez
-    affiliation: JPL
+  - family-names: 'NASA AMMOS'
+    given-names: 'NASA Advanced Multi-Mission Operations System'
+    orcid: '0000-0002-1234-5678'
+    affiliation: 'NASA'
 identifiers:
   - type: url
     value: 'https://github.com/NASA-AMMOS/slim'
