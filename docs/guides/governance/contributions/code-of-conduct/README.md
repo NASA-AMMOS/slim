@@ -33,7 +33,7 @@ Access the standard Contributor Covenant template for a robust Code of Conduct p
 
 Add a supplementary collaboration policy specifically designed for scientific research environments, addressing publication ethics, authorship, and research integrity.
 
-**[✓️ CITATION.cff Template](#citation-file-template)**
+**[⬇️ CITATION.cff Template](#citation-file-template)**
 
 Add a citation file to make your project properly citable in academic and research contexts.
 
