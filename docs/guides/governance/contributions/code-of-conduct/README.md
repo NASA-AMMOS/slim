@@ -25,7 +25,7 @@
 
 ## Quick Start
 
-**[✓️ Contributor Covenant Template](https://www.contributor-covenant.org/version/2/1/code_of_conduct/code_of_conduct.md)** ([see example](https://github.com/riverma/terraformly/blob/main/CODE_OF_CONDUCT.md))
+**[⬇️ Contributor Covenant Template](https://www.contributor-covenant.org/version/2/1/code_of_conduct/code_of_conduct.md)** ([see example](https://github.com/riverma/terraformly/blob/main/CODE_OF_CONDUCT.md))
 
 Access the standard Contributor Covenant template for a robust Code of Conduct policy to use in your project.
 
