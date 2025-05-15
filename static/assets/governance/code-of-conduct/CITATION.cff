@@ -11,14 +11,14 @@ authors:
     given-names: "First Name"
     affiliation: "Your Institution"
     orcid: "https://orcid.org/xxxx-xxxx-xxxx-xxxx"  # Optional
-  - family-names: "David"
-    given-names: "Cedric"
-    affiliation: "NASA Jet Propulsion Laboratory"
-    orcid: "https://orcid.org/0000-0002-0915-579X"  # Replace with actual ORCID if available
-  - family-names: "Yun"
-    given-names: "Kyongsik"
-    affiliation: "NASA Jet Propulsion Laboratory"
-    orcid: "https://orcid.org/0000-0002-1788-8502"  # Replace with actual ORCID if available
+  - family-names: "Last Name 2"
+    given-names: "First Name 2"
+    affiliation: "Second Institution"
+    orcid: "https://orcid.org/xxxx-xxxx-xxxx-xxxx"  # Optional
+  - family-names: "Last Name 3"
+    given-names: "First Name 3"
+    affiliation: "Third Institution"
+    orcid: "https://orcid.org/xxxx-xxxx-xxxx-xxxx"  # Optional
 url: "https://github.com/username/repository"
 repository-code: "https://github.com/username/repository"
 license: "LICENSE-NAME"  # e.g., "Apache-2.0", "MIT", etc.
