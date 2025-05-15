@@ -25,15 +25,15 @@
 
 ## Quick Start
 
-**[⬇️ Contributor Covenant Template](https://www.contributor-covenant.org/version/2/1/code_of_conduct/code_of_conduct.md)** ([see example](https://github.com/riverma/terraformly/blob/main/CODE_OF_CONDUCT.md))
+**[✓️ Contributor Covenant Template](https://www.contributor-covenant.org/version/2/1/code_of_conduct/code_of_conduct.md)** ([see example](https://github.com/riverma/terraformly/blob/main/CODE_OF_CONDUCT.md))
 
 Access the standard Contributor Covenant template for a robust Code of Conduct policy to use in your project.
 
-**[⬇️ CODE_OF_COLLAB.md Template](https://raw.githubusercontent.com/NASA-AMMOS/slim/main/static/assets/governance/code-of-conduct/CODE_OF_COLLAB.md)**
+**[✓️ CODE_OF_COLLAB.md Template](https://raw.githubusercontent.com/NASA-AMMOS/slim/main/static/assets/governance/code-of-conduct/CODE_OF_COLLAB.md)**
 
 Add a supplementary collaboration policy specifically designed for scientific research environments, addressing publication ethics, authorship, and research integrity.
 
-**[⬇️ CITATION.cff Template]([#citation-file-template](https://raw.githubusercontent.com/NASA-AMMOS/slim/main/static/assets/governance/code-of-conduct/CITATION.cff))**
+**[✓️ CITATION.cff Template](#citation-file-template)**
 
 Add a citation file to make your project properly citable in academic and research contexts.
 
@@ -114,14 +114,14 @@ authors:
     given-names: "First Name"
     affiliation: "Your Institution"
     orcid: "https://orcid.org/xxxx-xxxx-xxxx-xxxx"  # Optional
-  - family-names: "David"
-    given-names: "Cedric"
-    affiliation: "NASA Jet Propulsion Laboratory"
-    orcid: "https://orcid.org/0000-0002-0915-579X"  # Replace with actual ORCID if available
-  - family-names: "Yun"
-    given-names: "Kyongsik"
-    affiliation: "NASA Jet Propulsion Laboratory"
-    orcid: "https://orcid.org/0000-0002-1788-8502"  # Replace with actual ORCID if available
+  - family-names: "Last Name 2"
+    given-names: "First Name 2"
+    affiliation: "Second Institution"
+    orcid: "https://orcid.org/xxxx-xxxx-xxxx-xxxx"  # Optional
+  - family-names: "Last Name 3"
+    given-names: "First Name 3"
+    affiliation: "Third Institution"
+    orcid: "https://orcid.org/xxxx-xxxx-xxxx-xxxx"  # Optional
 url: "https://github.com/username/repository"
 repository-code: "https://github.com/username/repository"
 license: "LICENSE-NAME"  # e.g., "Apache-2.0", "MIT", etc.
