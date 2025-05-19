@@ -146,7 +146,8 @@
       "github",
       "templates",
       "governance",
-      "repository-setup"
+      "repository-setup",
+      "codeowners"
     ],
     "assets": [
       {
@@ -170,7 +171,8 @@
       "governance",
       "repository-setup",
       "github",
-      "templates"
+      "templates",
+      "collaboration"
     ],
     "assets": [
       {
@@ -283,7 +285,8 @@
     "tags": [
       "software-lifecycle",
       "metrics",
-      "tools"
+      "tools",
+      "DORA"
     ]
   },
   {
