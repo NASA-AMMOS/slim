@@ -8,7 +8,8 @@
       "governance",
       "templates",
       "repository-setup",
-      "github"
+      "github",
+      "markdown"
     ],
     "assets": [
       {
@@ -37,7 +38,11 @@
       "software-lifecycle",
       "security",
       "testing",
-      "tools"
+      "tools",
+      "pre-commit",
+      "github",
+      "github-action",
+      "yaml"
     ],
     "assets": [
       {
@@ -62,7 +67,8 @@
       "documentation",
       "repository-setup",
       "templates",
-      "github"
+      "github",
+      "markdown"
     ],
     "assets": [
       {
@@ -81,7 +87,10 @@
       "governance",
       "templates",
       "repository-setup",
-      "github"
+      "github",
+      "markdown",
+      "yaml",
+      "form"
     ],
     "assets": [
       {
@@ -116,7 +125,8 @@
       "versioning",
       "templates",
       "repository-setup",
-      "github"
+      "github",
+      "markdown"
     ],
     "assets": [
       {
@@ -134,7 +144,8 @@
     "tags": [
       "documentation",
       "trade-studies",
-      "tools"
+      "tools",
+      "docusaurus"
     ]
   },
   {
@@ -146,7 +157,9 @@
       "github",
       "templates",
       "governance",
-      "repository-setup"
+      "repository-setup",
+      "codeowners",
+      "markdown"
     ],
     "assets": [
       {
@@ -165,12 +178,15 @@
     "title": "Code of Conduct",
     "uri": "/slim/docs/guides/governance/contributions/code-of-conduct",
     "category": "governance",
-    "description": "A guide on how to create and implement a code of conduct for project teams, with a specific recommendation to use the Contributor Covenant.",
+    "description": "A guide on how to create and implement a code of conduct and a code of collaboration for project teams, including a specific recommendation to use the Contributor Covenant.",
     "tags": [
       "governance",
       "repository-setup",
       "github",
-      "templates"
+      "templates",
+      "collaboration",
+      "collaborator",
+      "markdown"
     ],
     "assets": [
       {
@@ -195,7 +211,8 @@
       "governance",
       "repository-setup",
       "github",
-      "templates"
+      "templates",
+      "markdown"
     ],
     "assets": [
       {
@@ -215,7 +232,10 @@
       "templates",
       "repository-setup",
       "continuous-integration",
-      "github"
+      "github",
+      "pypi",
+      "git",
+      "repository"
     ]
   },
   {
@@ -248,7 +268,18 @@
     "description": "An extensive list of resources and tools for continuous testing including module testing, service endpoint testing, performance testing, and mobile testing among others.",
     "tags": [
       "testing",
-      "tools"
+      "tools",
+      "pre-commit",
+      "ai",
+      "robot-framework",
+      "jenkins",
+      "github-actions",
+      "selinium",
+      "jmeter",
+      "llm",
+      "ollama",
+      "markdown",
+      "yaml"
     ],
     "assets": [
       {
@@ -258,7 +289,7 @@
       },
       {
         "name": "Static Tests Pre-commit Configuration",
-        "type": "text/md",
+        "type": "text/yaml",
         "uri": "https://raw.githubusercontent.com/NASA-AMMOS/slim/refs/heads/main/static/assets/software-lifecycle/continuous-testing/pre-commit-config.yaml"
       }
     ]
@@ -272,7 +303,9 @@
       "software-lifecycle",
       "security",
       "testing",
-      "tools"
+      "tools",
+      "dependabot",
+      "codeql"
     ]
   },
   {
@@ -283,7 +316,9 @@
     "tags": [
       "software-lifecycle",
       "metrics",
-      "tools"
+      "tools",
+      "DORA",
+      "devlake"
     ]
   },
   {
@@ -295,7 +330,10 @@
       "software-lifecycle",
       "security",
       "vulnerability-scanning",
-      "tools"
+      "tools",
+      "docker",
+      "pre-commit",
+      "yaml"
     ],
     "assets": [
       {
@@ -313,7 +351,10 @@
     "tags": [
       "documentation",
       "website",
-      "tools"
+      "tools",
+      "docusaurus",
+      "git",
+      "github"
     ],
     "assets": [
       {
@@ -332,7 +373,8 @@
       "continuous-delivery",
       "automation",
       "pipelines",
-      "software-lifecycle"
+      "software-lifecycle",
+      "ci-cd"
     ]
   }
 ]
