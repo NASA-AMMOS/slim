@@ -54,12 +54,28 @@ Add a citation file to make your project properly citable in academic and resear
 
 ---
 
-## Additional Guidance on Scientific Collaboration
+## Code of Collaboration
 
-In addition to the standard Contributor Covenant, this project includes a supplementary document: [`CODE_OF_COLLAB.md`](https://raw.githubusercontent.com/NASA-AMMOS/slim/main/static/assets/governance/code-of-conduct/CODE_OF_COLLAB.md), which outlines expectations specific to scientific research collaboration.
+In addition to the standard Contributor Covenant, you should consider adding a supplementary document: `CODE_OF_COLLAB.md`, which outlines expectations specific to scientific research collaboration.
 
-- Use the [**Contributor Covenant**](https://www.contributor-covenant.org/version/2/1/code_of_conduct/code_of_conduct.md) for general behavior and inclusive participation in open-source settings.
-- For scientific research collaboration, refer to [**CODE_OF_COLLAB.md**]([./CODE_OF_COLLAB.md](https://raw.githubusercontent.com/NASA-AMMOS/slim/main/static/assets/governance/code-of-conduct/CODE_OF_COLLAB.md)) to understand our **collaboration expectations** in the context of research, publication, and funding goals.
+### Step-by-Step Guide for Adding Code of Collaboration:
+
+1. **Creating the Document**:
+   - Create a `CODE_OF_COLLAB.md` file in the root of your repository.
+   - Use the [template](https://raw.githubusercontent.com/NASA-AMMOS/slim/main/static/assets/governance/code-of-conduct/CODE_OF_COLLAB.md) as a starting point.
+   - Customize the content to reflect your project's specific needs and context.
+
+2. **Key Components to Include**:
+   - Research integrity principles
+   - Collaborative expectations
+   - Authorship and publication guidelines
+   - Open science commitments
+
+3. **Integration with Your Project**:
+   - Reference the `CODE_OF_COLLAB.md` in your `README.md`
+   - Link to it from your `CODE_OF_CONDUCT.md` as a supplementary document
+
+For scientific research collaboration, refer to [**CODE_OF_COLLAB.md**](https://raw.githubusercontent.com/NASA-AMMOS/slim/main/static/assets/governance/code-of-conduct/CODE_OF_COLLAB.md) to understand our **collaboration expectations** in the context of research, publication, and funding goals.
 
 ---
 
@@ -69,20 +85,21 @@ Academic citation is a crucial aspect of scientific and research software projec
 
 ### Creating a CITATION.cff File
 
-We recommend adding a `CITATION.cff` file to the root of your repository. This file follows the [Citation File Template](https://raw.githubusercontent.com/NASA-AMMOS/slim/main/static/assets/governance/code-of-conduct/CITATION.cff) specification and provides structured metadata that can be automatically processed by citation management tools.
+We recommend adding a `CITATION.cff` file to the root of your repository. This file follows the [Citation File Format](https://citation-file-format.github.io/) specification and provides structured metadata that can be automatically processed by citation management tools.
 
 1. **Setting Up the Citation File**:
    - Create a `CITATION.cff` file in the root of your repository.
-   - Use the [template](https://raw.githubusercontent.com/NASA-AMMOS/slim/main/static/assets/governance/code-of-conduct/CITATION.cff), replacing placeholder values with your project details.
+   - Use the [template](#citation-file-template), replacing placeholder values with your project details.
    - Include all significant contributors as authors.
 
 2. **Integrate with Your Project**:
    - Add a citation section to your `README.md` with instructions on how to cite your work.
    - Consider connecting your repository to [Zenodo](https://zenodo.org/) to obtain a DOI.
 
-### [Citation File Template](https://raw.githubusercontent.com/NASA-AMMOS/slim/main/static/assets/governance/code-of-conduct/CITATION.cff)
+### Citation File Template
 
 <a id="citation-file-template"></a>
+
 ```yaml
 # CITATION.cff - This file provides citation information for your project
 cff-version: 1.2.0
@@ -96,6 +113,14 @@ authors:
   - family-names: "Last Name"
     given-names: "First Name"
     affiliation: "Your Institution"
+    orcid: "https://orcid.org/xxxx-xxxx-xxxx-xxxx"  # Optional
+  - family-names: "Last Name 2"
+    given-names: "First Name 2"
+    affiliation: "Second Institution"
+    orcid: "https://orcid.org/xxxx-xxxx-xxxx-xxxx"  # Optional
+  - family-names: "Last Name 3"
+    given-names: "First Name 3"
+    affiliation: "Third Institution"
     orcid: "https://orcid.org/xxxx-xxxx-xxxx-xxxx"  # Optional
 url: "https://github.com/username/repository"
 repository-code: "https://github.com/username/repository"
@@ -117,7 +142,6 @@ references:
 ```
 
 ---
-
 
 ## Frequently Asked Questions (FAQ)
 
@@ -142,6 +166,8 @@ references:
 
 **Authorship**:
 - [Rishi Verma](https://github.com/riverma)
+- [Cedric David](https://github.com/c-h-david)
+- [Kyongsik Yun](https://github.com/yunks128/)
 
 **Acknowledgements**:
 * Inspired by the [Contributor Covenant](https://www.contributor-covenant.org).
