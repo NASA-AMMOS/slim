@@ -172,11 +172,11 @@ We welcome feedback and contributions to help improve and grow this page. Please
 
 ### Add Entry to the Registry
 
-To document metadata about your best practice and ensure that it appears in our [search page](https://nasa-ammos.github.io/slim/docs/guides/search), you need to add a JSON entry to the `data/slim-registry.json` file within the [NASA-AMMOS/slim](https://github.com/NASA-AMMOS/slim) repository. Here's how you can do it:
+To document metadata about your best practice and ensure that it appears in our [search page](https://nasa-ammos.github.io/slim/docs/guides/search), you need to add a JSON entry to the `static/data/slim-registry.json` file within the [NASA-AMMOS/slim](https://github.com/NASA-AMMOS/slim) repository. Here's how you can do it:
 
 1. **Basic Fields**: Start by filling out the basic fields as shown in the example below. These include `title`, `uri`, `category`, `description`, `tags`, and `last-updated`.
 
-2. **Assets Metadata**: Additionally, you should include an `assets` metadata element to describe any infusible assets associated with your best practice. These could be templates, code samples, or other resources that enhance the usability of your guide. Each asset should include `name`, `type`, and `uri` to specify the asset’s details. Adding this is especially important so that infusion can be automated via the [slim-cli tool](https://github.com/nasa-ammos/slim-cli) - which queries the `data/slim-registry.json` file. 
+2. **Assets Metadata**: Additionally, you should include an `assets` metadata element to describe any infusible assets associated with your best practice. These could be templates, code samples, or other resources that enhance the usability of your guide. Each asset should include `name`, `type`, and `uri` to specify the asset’s details. Adding this is especially important so that infusion can be automated via the [slim-cli tool](https://github.com/nasa-ammos/slim-cli) - which queries the `static/data/slim-registry.json` file. 
 
    Here’s an example of how to structure your JSON entry:
 
