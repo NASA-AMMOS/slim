@@ -334,5 +334,41 @@
       "pipelines",
       "software-lifecycle"
     ]
+  },
+  {
+    "title": "LICENSE",
+    "uri": "/slim/docs/guides/governance/licensing",
+    "category": "governance",
+    "description": "A comprehensive guide for selecting, implementing, and managing software licenses for NASA and open source projects, including templates for common license types.",
+    "tags": [
+      "governance",
+      "licensing",
+      "legal",
+      "templates",
+      "repository-setup",
+      "nasa"
+    ],
+    "assets": [
+      {
+        "name": "Apache License 2.0 Template",
+        "type": "text/plain",
+        "uri": "https://raw.githubusercontent.com/galenaidev/slim/main/static/assets/governance/licensing/LICENSE-Apache-2.0"
+      },
+      {
+        "name": "MIT License Template",
+        "type": "text/plain",
+        "uri": "https://raw.githubusercontent.com/galenaidev/slim/main/static/assets/governance/licensing/LICENSE-MIT"
+      },
+      {
+        "name": "NASA Open Source Agreement (NOSA) Template",
+        "type": "text/plain",
+        "uri": "https://raw.githubusercontent.com/galenaidev/slim/main/static/assets/governance/licensing/LICENSE-NOSA"
+      },
+      {
+        "name": "Government Purpose License Template",
+        "type": "text/plain",
+        "uri": "https://raw.githubusercontent.com/galenaidev/slim/main/static/assets/governance/licensing/LICENSE-Government-Purpose"
+      }
+    ]
   }
 ]
