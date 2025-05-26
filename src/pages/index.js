@@ -15,7 +15,7 @@ function HomepageHeader() {
     <header className={clsx('hero hero--info', styles.heroBanner)}>
       <div className="container">
         <img src="img/logo.svg" height="275"/>
-        <p style={{ padding: '15px' }}>A community-resource for exchanging and implementing best practices in software lifecycle improvements.</p>
+        <p style={{ padding: '15px' }}>Modernizing software through the automated infusion of best practices.</p>
         <Row className="justify-content-center">
           <Col xs={12} md="auto" className={styles.buttonWrapper}>
             <Link className="button button--primary button--lg" to="/docs/guides/search">

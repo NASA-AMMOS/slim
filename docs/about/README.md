@@ -4,7 +4,7 @@ sidebar_position: 1
 
 # About
 
-> _A shared resource for discussing, iterating and referencing best practices in software lifecycle process improvements for multi-mission space and ground software_
+> _Modernizing software through the automated infusion of best practices._
 
 [📖 View our Infographic (PDF)](SLIM-Infographic.pdf)
 
