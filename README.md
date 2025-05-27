@@ -11,7 +11,7 @@
 
 </div>
 
-<pre align="center">A shared community resource for discussing, iterating and referencing a common set of best practices in software development standards for NASA multi-mission space and ground software.</pre>
+<pre align="center">Modernizing software through the automated infusion of best practices.</pre>
 
 <!-- Header block for project -->
 
