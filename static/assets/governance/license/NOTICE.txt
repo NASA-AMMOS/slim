@@ -1,0 +1,65 @@
+[PROJECT NAME]
+Copyright (c) [YEAR] [INSTITUTION NAME] and/or other contributors.
+
+This product includes software developed at [INSTITUTION NAME].
+
+===============================================================================
+
+GOVERNMENT SPONSORSHIP ACKNOWLEDGMENT
+
+[Include appropriate acknowledgment, for example:]
+This work was supported by [AGENCY NAME] under [GRANT/CONTRACT NUMBER].
+U.S. Government sponsorship acknowledged.
+
+===============================================================================
+
+EXPORT CONTROL NOTICE
+
+[Include if applicable:]
+This software may be subject to U.S. export control laws. By downloading or 
+using this software, you acknowledge that you comply with applicable export 
+control laws and regulations.
+
+===============================================================================
+
+DISTRIBUTION STATEMENT
+
+[Include any required distribution statements, for example:]
+Approved for public release; distribution is unlimited.
+
+===============================================================================
+
+THIRD-PARTY SOFTWARE ACKNOWLEDGMENTS
+
+This product includes software developed by third parties:
+
+[List third-party components with their copyright and license information:]
+
+* [COMPONENT NAME]
+  Copyright [YEAR] [COPYRIGHT HOLDER]
+  Licensed under [LICENSE TYPE]
+  [BRIEF DESCRIPTION OF USAGE]
+
+* [COMPONENT NAME]
+  Copyright [YEAR] [COPYRIGHT HOLDER]  
+  Licensed under [LICENSE TYPE]
+  [BRIEF DESCRIPTION OF USAGE]
+
+===============================================================================
+
+INSTITUTIONAL DISCLAIMERS
+
+[Include any institutional disclaimers, for example:]
+This software is provided "as is" without warranty of any kind. [INSTITUTION] 
+disclaims all warranties, express or implied, including but not limited to 
+warranties of merchantability and fitness for a particular purpose.
+
+===============================================================================
+
+CONTACT INFORMATION
+
+For questions regarding this software:
+* Technical: [EMAIL]
+* Legal/IP: [EMAIL]
+
+=============================================================================== 

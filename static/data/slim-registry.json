@@ -376,5 +376,45 @@
       "software-lifecycle",
       "ci-cd"
     ]
+  },
+  {
+    "title": "License Management",
+    "uri": "/slim/docs/guides/governance/license",
+    "category": "governance",
+    "description": "Institutionally authorized approaches to implementing popular open source licenses while respecting organizational copyright and markup requirements.",
+    "tags": [
+      "governance",
+      "licensing",
+      "legal",
+      "institutional",
+      "copyright",
+      "apache",
+      "mit",
+      "templates",
+      "repository-setup"
+    ],
+    "last-updated": "2025-01-30",
+    "assets": [
+      {
+        "name": "Apache 2.0 with Institutional Markup Template",
+        "type": "text/plain",
+        "uri": "https://raw.githubusercontent.com/NASA-AMMOS/slim/main/static/assets/governance/license/LICENSE-APACHE-INSTITUTIONAL.txt"
+      },
+      {
+        "name": "MIT with Institutional Markup Template",
+        "type": "text/plain",
+        "uri": "https://raw.githubusercontent.com/NASA-AMMOS/slim/main/static/assets/governance/license/LICENSE-MIT-INSTITUTIONAL.txt"
+      },
+      {
+        "name": "COPYRIGHT.md Template",
+        "type": "text/md",
+        "uri": "https://raw.githubusercontent.com/NASA-AMMOS/slim/main/static/assets/governance/license/COPYRIGHT.md"
+      },
+      {
+        "name": "NOTICE.txt Template",
+        "type": "text/plain",
+        "uri": "https://raw.githubusercontent.com/NASA-AMMOS/slim/main/static/assets/governance/license/NOTICE.txt"
+      }
+    ]
   }
 ]
