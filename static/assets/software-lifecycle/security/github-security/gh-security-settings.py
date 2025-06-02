@@ -12,23 +12,24 @@ Manages specific GitHub security settings for a repository:
 """
 
 import argparse
-
 import json
-
+import logging
 import sys
 from typing import Dict, Optional, Tuple
+
 import requests
 from requests.adapters import HTTPAdapter
 from urllib3.util.retry import Retry
+from rich.console import Console
+from rich.table import Table
+from rich import print as rprint
 
+# Setup logging
+logging.basicConfig(level=logging.WARNING)
+logger = logging.getLogger(__name__)
 
-class Colors:
-    """ANSI color codes for terminal output"""
-    RED = '\033[0;31m'
-    GREEN = '\033[0;32m'
-    YELLOW = '\033[1;33m'
-    BLUE = '\033[0;34m'
-    NC = '\033[0m'  # No Color
+# Initialize Rich console
+console = Console()
 
 
 class GitHubSecurityManager:
@@ -60,16 +61,6 @@ class GitHubSecurityManager:
         })
         return session
 
-    def print_status(self, status: str, message: str) -> None:
-        """Print colored status messages"""
-        colors = {
-            'success': f"{Colors.GREEN}✓{Colors.NC}",
-            'error': f"{Colors.RED}✗{Colors.NC}",
-            'warning': f"{Colors.YELLOW}⚠{Colors.NC}",
-            'info': f"{Colors.BLUE}ℹ{Colors.NC}"
-        }
-        print(f"{colors.get(status, '')} {message}")
-
     def github_api(self, method: str, endpoint: str, data: Optional[Dict] = None) -> Tuple[int, Dict]:
         """Make GitHub API calls and return status code and response body"""
         url = f"{self.base_url}{endpoint}"
@@ -89,7 +80,7 @@ class GitHubSecurityManager:
             return response.status_code, response_data
 
         except requests.RequestException as e:
-            self.print_status('error', f"Request failed: {e}")
+            console.print(f"[red]✗[/red] Request failed: {e}")
             return 0, {}
 
     def check_repository(self) -> bool:
@@ -99,7 +90,7 @@ class GitHubSecurityManager:
         if status_code == 200:
             return True
         else:
-            self.print_status('error', f"Repository not found or no access (HTTP {status_code})")
+            console.print(f"[red]✗[/red] Repository not found or no access (HTTP {status_code})")
             return False
 
     def check_private_reporting(self) -> bool:
@@ -153,8 +144,18 @@ class GitHubSecurityManager:
 
     def check_dependabot_updates(self) -> bool:
         """Check if Dependabot security updates are enabled"""
-        status_code, _ = self.github_api('GET', f'/repos/{self.owner}/{self.repo}/automated-security-fixes')
-        return status_code == 204
+        status_code, response_data = self.github_api('GET', f'/repos/{self.owner}/{self.repo}/automated-security-fixes')
+        logger.debug(f"Dependabot security updates check: status_code={status_code}, response={response_data}")
+
+        if status_code == 200:
+            # GitHub returns 200 with JSON response containing enabled status
+            return response_data.get('enabled', False)
+        elif status_code == 204:
+            # Some repositories might still return 204 for enabled
+            return True
+        else:
+            # Any other status code means disabled or error
+            return False
 
     def check_secret_scanning(self) -> bool:
         """Check if secret scanning is enabled"""
@@ -183,54 +184,48 @@ class GitHubSecurityManager:
         if not self.check_repository():
             return
 
-        print(f"\n{Colors.BLUE}=== Security Settings for {self.owner}/{self.repo} ==={Colors.NC}\n")
+        # Create Rich table
+        table = Table(show_header=True, header_style="bold blue")
+        table.add_column("Repo", style="cyan", no_wrap=True)
+        table.add_column("Status", justify="center")
+        table.add_column("Setting", style="magenta")
 
-        # Check private vulnerability reporting
-        private_reporting = self.check_private_reporting()
-        print(f"Private vulnerability reporting: {Colors.GREEN if private_reporting else Colors.RED}"
-              f"{'Enabled' if private_reporting else 'Disabled'}{Colors.NC}")
+        repo_name = f"{self.owner}/{self.repo}"
 
-        # Check dependency graph
-        dependency_graph = self.check_dependency_graph()
-        print(f"Dependency graph: {Colors.GREEN if dependency_graph else Colors.RED}"
-              f"{'Enabled' if dependency_graph else 'Disabled'}{Colors.NC}")
+        # Check all security settings
+        settings = [
+            ("Private Repository Reporting", self.check_private_reporting()),
+            ("Dependency Graph", self.check_dependency_graph()),
+            ("Dependabot Alerts", self.check_dependabot_alerts()),
+            ("Dependabot Security Updates", self.check_dependabot_updates()),
+            ("Secret Scanning", self.check_secret_scanning()),
+            ("Secret Scanning Push Protection", self.check_secret_protection())
+        ]
 
-        # Check Dependabot alerts
-        dependabot_alerts = self.check_dependabot_alerts()
-        print(f"Dependabot alerts: {Colors.GREEN if dependabot_alerts else Colors.RED}"
-              f"{'Enabled' if dependabot_alerts else 'Disabled'}{Colors.NC}")
+        for setting_name, is_enabled in settings:
+            status = "[green]✓[/green]" if is_enabled else "[red]✗[/red]"
+            table.add_row(repo_name, status, setting_name)
 
-        # Check Dependabot security updates
-        dependabot_updates = self.check_dependabot_updates()
-        print(f"Dependabot security updates: {Colors.GREEN if dependabot_updates else Colors.RED}"
-              f"{'Enabled' if dependabot_updates else 'Disabled'}{Colors.NC}")
-
-        # Check secret scanning
-        secret_scanning = self.check_secret_scanning()
-        print(f"Secret scanning: {Colors.GREEN if secret_scanning else Colors.RED}"
-              f"{'Enabled' if secret_scanning else 'Disabled'}{Colors.NC}")
-
-        # Check secret scanning push protection
-        secret_protection = self.check_secret_protection()
-        print(f"Secret scanning push protection: {Colors.GREEN if secret_protection else Colors.RED}"
-              f"{'Enabled' if secret_protection else 'Disabled'}{Colors.NC}")
+        console.print()
+        console.print(table)
+        console.print()
 
     def enable_private_reporting(self) -> None:
         """Enable private vulnerability reporting"""
-        self.print_status('info', "Enabling private vulnerability reporting...")
+        logger.debug("Enabling private vulnerability reporting...")
 
         # Use the dedicated endpoint
         data = {"enabled": True}
         status_code, _ = self.github_api('PUT', f'/repos/{self.owner}/{self.repo}/private-vulnerability-reporting', data)
 
         if status_code == 204:
-            self.print_status('success', "Private vulnerability reporting enabled")
+            console.print(f"[green]✓[/green] Private vulnerability reporting enabled")
         else:
-            self.print_status('error', f"Failed to enable private vulnerability reporting (HTTP {status_code})")
+            console.print(f"[red]✗[/red] Failed to enable private vulnerability reporting (HTTP {status_code})")
 
     def enable_dependency_graph(self) -> None:
         """Enable dependency graph"""
-        self.print_status('info', "Enabling dependency graph...")
+        logger.debug("Enabling dependency graph...")
         data = {
             "security_and_analysis": {
                 "dependency_graph": {"status": "enabled"}
@@ -239,33 +234,33 @@ class GitHubSecurityManager:
         status_code, _ = self.github_api('PATCH', f'/repos/{self.owner}/{self.repo}', data)
 
         if status_code == 200:
-            self.print_status('success', "Dependency graph enabled")
+            console.print(f"[green]✓[/green] Dependency graph enabled")
         else:
-            self.print_status('error', f"Failed to enable dependency graph (HTTP {status_code})")
+            console.print(f"[red]✗[/red] Failed to enable dependency graph (HTTP {status_code})")
 
     def enable_dependabot_alerts(self) -> None:
         """Enable Dependabot alerts"""
-        self.print_status('info', "Enabling Dependabot alerts...")
+        logger.debug("Enabling Dependabot alerts...")
         status_code, _ = self.github_api('PUT', f'/repos/{self.owner}/{self.repo}/vulnerability-alerts')
 
         if status_code == 204:
-            self.print_status('success', "Dependabot alerts enabled")
+            console.print(f"[green]✓[/green] Dependabot alerts enabled")
         else:
-            self.print_status('error', f"Failed to enable Dependabot alerts (HTTP {status_code})")
+            console.print(f"[red]✗[/red] Failed to enable Dependabot alerts (HTTP {status_code})")
 
     def enable_dependabot_updates(self) -> None:
         """Enable Dependabot security updates"""
-        self.print_status('info', "Enabling Dependabot security updates...")
+        logger.debug("Enabling Dependabot security updates...")
         status_code, _ = self.github_api('PUT', f'/repos/{self.owner}/{self.repo}/automated-security-fixes')
 
         if status_code == 204:
-            self.print_status('success', "Dependabot security updates enabled")
+            console.print(f"[green]✓[/green] Dependabot security updates enabled")
         else:
-            self.print_status('error', f"Failed to enable Dependabot security updates (HTTP {status_code})")
+            console.print(f"[red]✗[/red] Failed to enable Dependabot security updates (HTTP {status_code})")
 
     def enable_secret_scanning(self) -> None:
         """Enable secret scanning"""
-        self.print_status('info', "Enabling secret scanning...")
+        logger.debug("Enabling secret scanning...")
         data = {
             "security_and_analysis": {
                 "secret_scanning": {"status": "enabled"}
@@ -274,13 +269,13 @@ class GitHubSecurityManager:
         status_code, _ = self.github_api('PATCH', f'/repos/{self.owner}/{self.repo}', data)
 
         if status_code == 200:
-            self.print_status('success', "Secret scanning enabled")
+            console.print(f"[green]✓[/green] Secret scanning enabled")
         else:
-            self.print_status('error', f"Failed to enable secret scanning (HTTP {status_code})")
+            console.print(f"[red]✗[/red] Failed to enable secret scanning (HTTP {status_code})")
 
     def enable_secret_protection(self) -> None:
         """Enable secret scanning push protection"""
-        self.print_status('info', "Enabling secret scanning push protection...")
+        logger.debug("Enabling secret scanning push protection...")
 
         # First make sure secret scanning is enabled
         data = {
@@ -292,78 +287,78 @@ class GitHubSecurityManager:
         status_code, _ = self.github_api('PATCH', f'/repos/{self.owner}/{self.repo}', data)
 
         if status_code == 200:
-            self.print_status('success', "Secret scanning push protection enabled")
+            console.print(f"[green]✓[/green] Secret scanning push protection enabled")
         else:
-            self.print_status('error', f"Failed to enable secret scanning push protection (HTTP {status_code})")
+            console.print(f"[red]✗[/red] Failed to enable secret scanning push protection (HTTP {status_code})")
 
     def disable_private_reporting(self) -> None:
         """Disable private vulnerability reporting"""
-        self.print_status('info', "Disabling private vulnerability reporting...")
+        logger.debug("Disabling private vulnerability reporting...")
 
         # Use the dedicated endpoint
         status_code, response_data = self.github_api('DELETE', f'/repos/{self.owner}/{self.repo}/private-vulnerability-reporting')
 
         if status_code == 204:
-            self.print_status('success', "Private vulnerability reporting disabled")
+            console.print(f"[green]✓[/green] Private vulnerability reporting disabled")
         elif status_code == 404:
             # If 404, the feature might already be disabled or not available
-            self.print_status('success', "Private vulnerability reporting is already disabled or not available")
+            console.print(f"[green]✓[/green] Private vulnerability reporting is already disabled or not available")
         elif status_code == 422:
             # 422 can happen when the feature is already disabled
-            self.print_status('success', "Private vulnerability reporting is already disabled")
+            console.print(f"[green]✓[/green] Private vulnerability reporting is already disabled")
         else:
-            self.print_status('error', f"Failed to disable private vulnerability reporting (HTTP {status_code})")
+            console.print(f"[red]✗[/red] Failed to disable private vulnerability reporting (HTTP {status_code})")
 
     def disable_dependency_graph(self) -> None:
         """Disable dependency graph"""
-        self.print_status('info', "Disabling dependency graph...")
+        logger.debug("Disabling dependency graph...")
 
         # Try to disable dependency graph via vulnerability alerts endpoint
         status_code, _ = self.github_api('DELETE', f'/repos/{self.owner}/{self.repo}/vulnerability-alerts')
 
         if status_code == 204:
-            self.print_status('success', "Dependency graph disabled")
+            console.print(f"[green]✓[/green] Dependency graph disabled")
         elif status_code == 404:
             # If 404, the feature might already be disabled or not available
-            self.print_status('success', "Dependency graph is already disabled or not available")
+            console.print(f"[green]✓[/green] Dependency graph is already disabled or not available")
         else:
-            self.print_status('error', f"Failed to disable dependency graph (HTTP {status_code})")
+            console.print(f"[red]✗[/red] Failed to disable dependency graph (HTTP {status_code})")
 
     def disable_dependabot_alerts(self) -> None:
         """Disable Dependabot alerts"""
-        self.print_status('info', "Disabling Dependabot alerts...")
+        logger.debug("Disabling Dependabot alerts...")
         status_code, _ = self.github_api('DELETE', f'/repos/{self.owner}/{self.repo}/vulnerability-alerts')
 
         if status_code == 204:
-            self.print_status('success', "Dependabot alerts disabled")
+            console.print(f"[green]✓[/green] Dependabot alerts disabled")
         elif status_code == 404:
             # If 404, the feature might already be disabled or not available
-            self.print_status('success', "Dependabot alerts are already disabled or not available")
+            console.print(f"[green]✓[/green] Dependabot alerts are already disabled or not available")
         else:
-            self.print_status('error', f"Failed to disable Dependabot alerts (HTTP {status_code})")
+            console.print(f"[red]✗[/red] Failed to disable Dependabot alerts (HTTP {status_code})")
 
     def disable_dependabot_updates(self) -> None:
         """Disable Dependabot security updates"""
-        self.print_status('info', "Disabling Dependabot security updates...")
+        logger.debug("Disabling Dependabot security updates...")
         status_code, response_data = self.github_api('DELETE', f'/repos/{self.owner}/{self.repo}/automated-security-fixes')
 
         if status_code == 204:
-            self.print_status('success', "Dependabot security updates disabled")
+            console.print(f"[green]✓[/green] Dependabot security updates disabled")
         elif status_code == 404:
             # If 404, the feature might already be disabled or not available
-            self.print_status('success', "Dependabot security updates are already disabled or not available")
+            console.print(f"[green]✓[/green] Dependabot security updates are already disabled or not available")
         elif status_code == 422:
             # 422 can happen when the feature is already disabled or when Dependabot alerts are disabled
             # In this case, we should consider it a success since the end state is what we want
-            self.print_status('success', "Dependabot security updates are already disabled")
+            console.print(f"[green]✓[/green] Dependabot security updates are already disabled")
         else:
-            self.print_status('error', f"Failed to disable Dependabot security updates (HTTP {status_code})")
+            console.print(f"[red]✗[/red] Failed to disable Dependabot security updates (HTTP {status_code})")
 
     # CodeQL/Code scanning methods removed - functionality no longer supported
 
     def disable_secret_scanning(self) -> None:
         """Disable secret scanning"""
-        self.print_status('info', "Disabling secret scanning...")
+        logger.debug("Disabling secret scanning...")
         data = {
             "security_and_analysis": {
                 "secret_scanning": {"status": "disabled"}
@@ -372,16 +367,16 @@ class GitHubSecurityManager:
         status_code, _ = self.github_api('PATCH', f'/repos/{self.owner}/{self.repo}', data)
 
         if status_code == 200:
-            self.print_status('success', "Secret scanning disabled")
+            console.print(f"[green]✓[/green] Secret scanning disabled")
         elif status_code == 404:
             # If 404, the feature might already be disabled or not available
-            self.print_status('success', "Secret scanning is already disabled or not available")
+            console.print(f"[green]✓[/green] Secret scanning is already disabled or not available")
         else:
-            self.print_status('error', f"Failed to disable secret scanning (HTTP {status_code})")
+            console.print(f"[red]✗[/red] Failed to disable secret scanning (HTTP {status_code})")
 
     def disable_secret_protection(self) -> None:
         """Disable secret scanning push protection"""
-        self.print_status('info', "Disabling secret scanning push protection...")
+        logger.debug("Disabling secret scanning push protection...")
         data = {
             "security_and_analysis": {
                 "secret_scanning_push_protection": {"status": "disabled"}
@@ -390,12 +385,12 @@ class GitHubSecurityManager:
         status_code, _ = self.github_api('PATCH', f'/repos/{self.owner}/{self.repo}', data)
 
         if status_code == 200:
-            self.print_status('success', "Secret scanning push protection disabled")
+            console.print(f"[green]✓[/green] Secret scanning push protection disabled")
         elif status_code == 404:
             # If 404, the feature might already be disabled or not available
-            self.print_status('success', "Secret scanning push protection is already disabled or not available")
+            console.print(f"[green]✓[/green] Secret scanning push protection is already disabled or not available")
         else:
-            self.print_status('error', f"Failed to disable secret scanning push protection (HTTP {status_code})")
+            console.print(f"[red]✗[/red] Failed to disable secret scanning push protection (HTTP {status_code})")
 
     def enable_features(self, features: str) -> None:
         """Enable specified security features"""
@@ -501,8 +496,14 @@ Required Token Permissions:
                                'dependabot-alerts', 'dependabot-updates',
                                'secret-scanning', 'secret-protection'],
                        default='all', help='Features to manage (default: all)')
+    parser.add_argument('-v', '--verbose', action='store_true',
+                       help='Enable verbose debug logging')
 
     args = parser.parse_args()
+
+    # Set logging level based on verbose flag
+    if args.verbose:
+        logging.getLogger().setLevel(logging.DEBUG)
 
     # Create GitHub security manager instance
     manager = GitHubSecurityManager(args.owner, args.repo, args.token)
@@ -512,17 +513,17 @@ Required Token Permissions:
         if args.action == 'check':
             manager.check_settings()
         elif args.action == 'enable':
-            print(f"\n{Colors.BLUE}=== Enabling Security Features for {args.owner}/{args.repo} ==={Colors.NC}\n")
+            console.print(f"\n[bold blue]Enabling Security Features for {args.owner}/{args.repo}[/bold blue]\n")
             manager.enable_features(args.features)
         elif args.action == 'disable':
-            print(f"\n{Colors.BLUE}=== Disabling Security Features for {args.owner}/{args.repo} ==={Colors.NC}\n")
+            console.print(f"\n[bold blue]Disabling Security Features for {args.owner}/{args.repo}[/bold blue]\n")
             manager.disable_features(args.features)
 
     except KeyboardInterrupt:
-        print(f"\n{Colors.YELLOW}Operation cancelled by user{Colors.NC}")
+        console.print(f"\n[yellow]Operation cancelled by user[/yellow]")
         sys.exit(1)
     except Exception as e:
-        print(f"\n{Colors.RED}Error: {e}{Colors.NC}")
+        console.print(f"\n[red]Error: {e}[/red]")
         sys.exit(1)
 
 
