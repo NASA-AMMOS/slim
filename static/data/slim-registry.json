@@ -311,7 +311,7 @@
       {
         "name": "GitHub Security Settings Script",
         "type": "text/python",
-        "uri": "pathname:///assets/software-lifecycle/security/github-security/gh-security-settings.py"
+        "uri": "https://raw.githubusercontent.com/NASA-AMMOS/slim/main/static/assets/software-lifecycle/security/github-security/gh-security-settings.py"
       }
     ]
   },
