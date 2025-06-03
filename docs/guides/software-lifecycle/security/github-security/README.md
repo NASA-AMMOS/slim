@@ -29,9 +29,6 @@ The fastest way to enable recommended GitHub Security features is to perform it 
 
 We recommend enabling the below features for all your repositories:
 
-![img](https://github.com/NASA-AMMOS/slim/assets/3129134/be02ee5f-74cb-4869-bdf2-020c184516ec)
-
-Specifically:
 - **Private vulnerability reporting** (select "Enable All")
   - Allows community members to privately report security vulnerabilities
 - **Dependency graphs** (select "Enable All")
