@@ -11,9 +11,9 @@
 **Background:** GitHub offers a suite of security features to help maintainers and developers protect their code and ensure the safety of their repositories. From automatically detecting vulnerabilities in dependencies to scanning for secrets and setting security policies, these tools are essential for any project, especially in today’s security-conscious environment.
 
 **Use Cases:**
-- Being alerted over e-mail or GitHub notifications about known vulnerabilities in your dependencies and having pull-requests automatically created to resolve the issues. 
+- Being alerted over e-mail or GitHub notifications about known vulnerabilities in your dependencies and having pull-requests automatically created to resolve the issues.
 - Being alerted if your dependencies have updated versions available.
-- Being alerted if your commits have potentially harmful secrets or sensitive information within the code - including being blocked from pushing your commits. 
+- Being alerted if your commits have potentially harmful secrets or sensitive information within the code - including being blocked from pushing your commits.
 
 ## Prerequisites
 
@@ -24,7 +24,7 @@
 
 ## Quick Start
 
-The fastest way to enable recommended GitHub Security features is to perform it in bulk for _all_ of your repositories within a given organization. Consult [Enabling security features for multiple repositories](https://docs.github.com/en/enterprise-cloud@latest/code-security/security-overview/enabling-security-features-for-multiple-repositories) for details. Organization administrative-level access is required. 
+The fastest way to enable recommended GitHub Security features is to perform it in bulk for _all_ of your repositories within a given organization. Consult [Enabling security features for multiple repositories](https://docs.github.com/en/enterprise-cloud@latest/code-security/security-overview/enabling-security-features-for-multiple-repositories) for details. Organization administrative-level access is required.
 
 We recommend enabling the below features for all your repositories:
 
@@ -40,9 +40,42 @@ Specifically:
 - Code Scanning (select "Enable All")
   - Select the default "CodeQL high-precision queries" option
 
-If you do not have organizational permissions or if you wish to customize security features per repository, see our Step-by-Step guide below for repository-specific guidance. 
- 
+**Alternatively, use our automation script:** For automated configuration of security settings on individual repositories, you can use our [GitHub Security Settings Script](pathname:///assets/software-lifecycle/security/github-security/gh-security-settings.py).
+
+If you do not have organizational permissions or if you wish to customize security features per repository, see our Step-by-Step guide below for repository-specific guidance.
+
 ## Step-by-Step Guide per Repository
+
+### Option A: Using the Automation Script
+
+For automated setup, use our [GitHub Security Settings Script](pathname:///assets/software-lifecycle/security/github-security/gh-security-settings.py):
+
+1. **Prerequisites:**
+   - Python 3.6+ with `requests` and `rich` packages installed
+   - GitHub Personal Access Token with required permissions (repo, security_events, admin:repo_hook)
+
+2. **Basic Usage:**
+   ```bash
+   # Check current security settings
+   python gh-security-settings.py -o OWNER -r REPO -t TOKEN
+
+   # Enable all security features
+   python gh-security-settings.py -o OWNER -r REPO -t TOKEN -a enable
+
+   # Enable specific features only
+   python gh-security-settings.py -o OWNER -r REPO -t TOKEN -a enable -f dependabot-alerts
+   ```
+
+3. **Available Features:**
+   - `all` - All supported security features
+   - `private-reporting` - Private vulnerability reporting
+   - `dependency-graph` - Dependency graph
+   - `dependabot-alerts` - Dependabot vulnerability alerts
+   - `dependabot-updates` - Dependabot security updates
+   - `secret-scanning` - Secret scanning
+   - `secret-protection` - Secret scanning push protection
+
+### Option B: Manual Configuration
 
 1. **Set Up Dependabot:**
    - Navigate to your repository and click on the `Settings` tab.
@@ -94,12 +127,12 @@ If you do not have organizational permissions or if you wish to customize securi
 
 - **Q: Are these security features available on GitHub Enterprise?**
 
-  A: It depends on your institution's particular version of GitHub deployed. You'll have to check your Settings tab to view the features that are provided. GitHub.com is the most up-to-date version we recommend for. 
+  A: It depends on your institution's particular version of GitHub deployed. You'll have to check your Settings tab to view the features that are provided. GitHub.com is the most up-to-date version we recommend for.
 
 - **Q: If I receive security alerts, what should I do and how soon should I act?**
 
   A: When you receive a security alert, it indicates a potential vulnerability in your repository. First, review the details of the alert to understand the severity and the affected component. Address critical vulnerabilities immediately, as they can pose a significant risk to your project. For less severe alerts, plan to address them in a timely manner. Always keep in mind that the sooner you act on security alerts, the better you can protect your code and users from potential threats.
-  
+
 ## Credits
 
 **Authorship:**
@@ -109,7 +142,7 @@ If you do not have organizational permissions or if you wish to customize securi
 **Acknowledgements:**
 - GitHub for providing the security features and related documentation. See [GitHub’s Security Features](https://docs.github.com/en/code-security) to access an overview of the suite of security features GitHub provides for repositories.
 - [OWASP DevSecOps Guideline](https://owasp.org/www-project-devsecops-guideline/latest/) for providing a Shift Left strategy to secure all phases of development.
-  
+
 ## Feedback and Contributions
 
 We welcome feedback and contributions to help improve and grow this guide. Please see our [contribution guidelines](https://nasa-ammos.github.io/slim/docs/contribute/contributing/).

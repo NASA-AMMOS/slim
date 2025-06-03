@@ -306,6 +306,13 @@
       "tools",
       "dependabot",
       "codeql"
+    ],
+    "assets": [
+      {
+        "name": "GitHub Security Settings Script",
+        "type": "text/python",
+        "uri": "pathname:///assets/software-lifecycle/security/github-security/gh-security-settings.py"
+      }
     ]
   },
   {
