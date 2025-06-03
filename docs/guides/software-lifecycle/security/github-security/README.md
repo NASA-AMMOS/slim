@@ -44,7 +44,7 @@ Specifically:
   - Select "Automatically enable for new repositories"
   - Enable "Push protection" to block commits containing secrets
 
-**Alternatively, use our automation script:** For automated configuration of security settings on individual repositories, you can use our [GitHub Security Settings Script](pathname:///assets/software-lifecycle/security/github-security/gh-security-settings.py).
+⬇️ **Use our GitHub Security Settings automation script:** For automated configuration of security settings on individual repositories, you can also use our [GitHub Security Settings Script](pathname:///assets/software-lifecycle/security/github-security/gh-security-settings.py).
 
 If you do not have organizational permissions or if you wish to customize security features per repository, see our Step-by-Step guide below for repository-specific guidance.
 
