@@ -14,6 +14,7 @@
 - Being alerted over e-mail or GitHub notifications about known vulnerabilities in your dependencies and having pull-requests automatically created to resolve the issues.
 - Being alerted if your dependencies have updated versions available.
 - Being alerted if your commits have potentially harmful secrets or sensitive information within the code - including being blocked from pushing your commits.
+- Allowing your community to privately report security vulnerabilities to maintainers and repository owners.
 
 ## Prerequisites
 
@@ -31,14 +32,17 @@ We recommend enabling the below features for all your repositories:
 ![img](https://github.com/NASA-AMMOS/slim/assets/3129134/be02ee5f-74cb-4869-bdf2-020c184516ec)
 
 Specifically:
-- Dependency graphs (select "Enable All")
+- **Private vulnerability reporting** (select "Enable All")
+  - Allows community members to privately report security vulnerabilities
+- **Dependency graphs** (select "Enable All")
   - Select "Automatically enable for new private repositories"
-- Dependabot Alerts (select "Enable All")
+- **Dependabot Alerts** (select "Enable All")
   - Select "Automatically enable for new repositories"
-- Dependabot Security Updates (select "Enable All")
+- **Dependabot Security Updates** (select "Enable All")
   - Select "Automatically enable for new repositories"
-- Code Scanning (select "Enable All")
-  - Select the default "CodeQL high-precision queries" option
+- **Secret Scanning** (select "Enable All")
+  - Select "Automatically enable for new repositories"
+  - Enable "Push protection" to block commits containing secrets
 
 **Alternatively, use our automation script:** For automated configuration of security settings on individual repositories, you can use our [GitHub Security Settings Script](pathname:///assets/software-lifecycle/security/github-security/gh-security-settings.py).
 
@@ -77,13 +81,23 @@ For automated setup, use our [GitHub Security Settings Script](pathname:///asset
 
 ### Option B: Manual Configuration
 
-1. **Set Up Dependabot:**
+1. **Enable Private Vulnerability Reporting:**
    - Navigate to your repository and click on the `Settings` tab.
    - From the left sidebar, select the `Code security and analysis` menu.
+   - Under the "Private vulnerability reporting" section:
+     - Click the "Enable" button to allow your community to privately report potential security vulnerabilities to maintainers and repository owners.
+
+2. **Set Up Dependency Graph:**
+   - In the `Code security and analysis` menu from the `Settings` tab:
+     - Under the "Dependency graph" section, click "Enable" to understand your dependencies.
+     - This feature is automatically enabled for public repositories and must be enabled for private repositories.
+
+3. **Set Up Dependabot:**
+   - In the `Code security and analysis` menu:
    - Under the "Dependabot" section:
-     - We recommend enabling Dependabot alerts to stay informed about insecure dependencies in your project.
-     - For added security, we suggest turning on Dependabot security updates to automatically generate pull requests for known vulnerabilities in your dependencies.
-     - We also recommend enabling Dependabot version updates _if you are using a package manager for your project_. This will help you keep your dependencies up-to-date. To configure Dependabot version updates:
+     - **Dependabot alerts:** Enable to stay informed about insecure dependencies in your project.
+     - **Dependabot security updates:** Enable to automatically generate pull requests for known vulnerabilities in your dependencies.
+     - **Dependabot version updates:** Enable if you are using a package manager for your project. This will help you keep your dependencies up-to-date. To configure Dependabot version updates:
        1. Create a `.github/dependabot.yml` file in your repository.
        2. Specify the package-ecosystem, directory, schedule and branch to update. For example, the below demonstrates a Python [dependabot.yml](https://github.com/NASA-AMMOS/slim-starterkit-python/blob/main/.github/dependabot.yml) example from the [SLIM Python Starter Kit](https://nasa-ammos.github.io/slim/docs/guides/software-lifecycle/application-starter-kits/python-starter-kit/):
           ```yml
@@ -103,15 +117,7 @@ For automated setup, use our [GitHub Security Settings Script](pathname:///asset
      - Head back to the main page of your repository.
      - Click on the `Security` tab. Here, you can select `Dependabot alerts` to view security alerts, and you can see version updates in the `Pull requests` tab labeled with "Dependabot".
 
-
-2. **Enable Code Scanning:**
-   - In the `Code security and analysis` menu from the `Settings` tab, click the "Set Up" or enable the following workflows:
-     - _CodeQL Analysis workflow:_ a free tool provided by GitHub that scans your code for vulnerabilities across a variety of languages. Simply choose a CodeQL Analysis template (default is acceptable) and follow the instructions.
-   - To view Code scanning alerts:
-     - Return to the repository main page.
-     - Click on the `Security` tab and select `Code scanning alerts`.
-
-3. **Enable Secret Scanning:**
+4. **Enable Secret Scanning:**
    - In the `Code security and analysis` menu from the `Settings` tab:
      - Click on the `Secret scanning` enable button.
      - We recommend enabling "Push protection" for blocking commits containing secrets
