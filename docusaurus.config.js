@@ -19,8 +19,8 @@ const config = {
   organizationName: 'nasa-ammos',
   projectName: 'slim',
 
-  onBrokenLinks: 'ignore',
-  onBrokenMarkdownLinks: 'ignore',
+  onBrokenLinks: 'warn',
+  onBrokenMarkdownLinks: 'warn',
 
   i18n: {
     defaultLocale: 'en',

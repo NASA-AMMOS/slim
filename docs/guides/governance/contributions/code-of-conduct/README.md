@@ -33,7 +33,7 @@ Access the standard Contributor Covenant template for a robust Code of Conduct p
 
 Add a supplementary collaboration policy specifically designed for scientific research environments, addressing publication ethics, authorship, and research integrity.
 
-**[⬇️ CITATION.cff Template]([#citation-file-template](https://raw.githubusercontent.com/NASA-AMMOS/slim/main/static/assets/governance/code-of-conduct/CITATION.cff))**
+**[⬇️ CITATION.cff Template](https://raw.githubusercontent.com/NASA-AMMOS/slim/main/static/assets/governance/code-of-conduct/CITATION.cff)**
 
 Add a citation file to make your project properly citable in academic and research contexts.
 
@@ -59,7 +59,7 @@ Add a citation file to make your project properly citable in academic and resear
 In addition to the standard Contributor Covenant, this project includes a supplementary document: [`CODE_OF_COLLAB.md`](https://raw.githubusercontent.com/NASA-AMMOS/slim/main/static/assets/governance/code-of-conduct/CODE_OF_COLLAB.md), which outlines expectations specific to scientific research collaboration.
 
 - Use the [**Contributor Covenant**](https://www.contributor-covenant.org/version/2/1/code_of_conduct/code_of_conduct.md) for general behavior and inclusive participation in open-source settings.
-- For scientific research collaboration, refer to [**CODE_OF_COLLAB.md**]([./CODE_OF_COLLAB.md](https://raw.githubusercontent.com/NASA-AMMOS/slim/main/static/assets/governance/code-of-conduct/CODE_OF_COLLAB.md)) to understand our **collaboration expectations** in the context of research, publication, and funding goals.
+- For scientific research collaboration, refer to [**CODE_OF_COLLAB.md**](https://raw.githubusercontent.com/NASA-AMMOS/slim/main/static/assets/governance/code-of-conduct/CODE_OF_COLLAB.md) to understand our **collaboration expectations** in the context of research, publication, and funding goals.
 
 ---
 

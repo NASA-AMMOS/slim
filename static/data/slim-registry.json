@@ -197,7 +197,7 @@
       {
       "name": "Code of Conduct for Collaboration",
       "type": "text/md",
-      "uri": "https://raw.githubusercontent.com/NASA-AMMOS/slim/main/docs/guides/governance/contributions/code-of-conduct/CODE_OF_COLLAB.md"
+      "uri": "https://raw.githubusercontent.com/NASA-AMMOS/slim/main/static/assets/governance/code-of-conduct/CODE_OF_COLLAB.md"
       }
     ]
   },
@@ -339,7 +339,7 @@
       {
         "name": "Grype Pre-commit Configuration",
         "type": "text/yaml",
-        "uri": "https://raw.githubusercontent.com/NASA-AMMOS/slim/main/static/assets/software-lifecycle/security/container-vulnerability-scanning/.pre-commit-config.yaml"
+        "uri": "https://raw.githubusercontent.com/NASA-AMMOS/slim/main/static/assets/software-lifecycle/security/container-vulnerability-scanning/pre-commit-config.yml"
       }
     ]
   },
