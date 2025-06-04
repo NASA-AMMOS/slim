@@ -90,7 +90,7 @@ Here are just a few ways you can help provide design recommendations for our pro
 - Conduct user research to understand user needs better. Save your findings within spreadsheets that the project team / contributors can review.
 - Create art, such as logos or icons, to support the user experience for the project
 
-Each of the above can be contributed directly to repository code, and you should use our [development process](#our-development-process) to contribute your additions.
+Each of the above can be contributed directly to repository code, and you should use our development process to contribute your additions.
 
 ## 🎟️ Meetups
 
@@ -98,5 +98,3 @@ A great way to contribute towards our project goals is to socialize and encourag
 - Propose workshops or meetups regarding some topic within our project
 - Help point project contributors and community members to conferences and publications where they may socialize their unique innovations
 - Schedule in-person or virtual happy-hours to help create a more social atmosphere within the project community
-
-For the above ideas, use our [communication channels](#communication-channels) to propose get-togethers.  
