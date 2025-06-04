@@ -29,11 +29,11 @@
 
 Access the standard Contributor Covenant template for a robust Code of Conduct policy to use in your project.
 
-**[⬇️ CODE_OF_COLLAB.md Template](https://raw.githubusercontent.com/NASA-AMMOS/slim/main/static/assets/governance/code-of-conduct/CODE_OF_COLLAB.md)**
+**[⬇️ CODE_OF_COLLAB.md Template](pathname:///assets/governance/code-of-conduct/CODE_OF_COLLAB.md)** ([see example](https://github.com/c-h-david/rapid2/blob/main/CODE_OF_COLLAB.md))
 
 Add a supplementary collaboration policy specifically designed for scientific research environments, addressing publication ethics, authorship, and research integrity.
 
-**[⬇️ CITATION.cff Template](https://raw.githubusercontent.com/NASA-AMMOS/slim/main/static/assets/governance/code-of-conduct/CITATION.cff)**
+**[⬇️ CITATION.cff Template](pathname:///assets/governance/code-of-conduct/CITATION.cff)** ([see example](https://github.com/c-h-david/rapid2/blob/main/CITATION.cff))
 
 Add a citation file to make your project properly citable in academic and research contexts.
 
@@ -56,10 +56,10 @@ Add a citation file to make your project properly citable in academic and resear
 
 ## Additional Guidance on Scientific Collaboration
 
-In addition to the standard Contributor Covenant, this project includes a supplementary document: [`CODE_OF_COLLAB.md`](https://raw.githubusercontent.com/NASA-AMMOS/slim/main/static/assets/governance/code-of-conduct/CODE_OF_COLLAB.md), which outlines expectations specific to scientific research collaboration.
+In addition to the standard Contributor Covenant, this project includes a supplementary document: [`CODE_OF_COLLAB.md`](pathname:///assets/governance/code-of-conduct/CODE_OF_COLLAB.md), which outlines expectations specific to scientific research collaboration.
 
 - Use the [**Contributor Covenant**](https://www.contributor-covenant.org/version/2/1/code_of_conduct/code_of_conduct.md) for general behavior and inclusive participation in open-source settings.
-- For scientific research collaboration, refer to [**CODE_OF_COLLAB.md**](https://raw.githubusercontent.com/NASA-AMMOS/slim/main/static/assets/governance/code-of-conduct/CODE_OF_COLLAB.md) to understand our **collaboration expectations** in the context of research, publication, and funding goals.
+- For scientific research collaboration, refer to [**CODE_OF_COLLAB.md**](pathname:///assets/governance/code-of-conduct/CODE_OF_COLLAB.md) to understand our **collaboration expectations** in the context of research, publication, and funding goals.
 
 ---
 
@@ -69,18 +69,18 @@ Academic citation is a crucial aspect of scientific and research software projec
 
 ### Creating a CITATION.cff File
 
-We recommend adding a `CITATION.cff` file to the root of your repository. This file follows the [Citation File Template](https://raw.githubusercontent.com/NASA-AMMOS/slim/main/static/assets/governance/code-of-conduct/CITATION.cff) specification and provides structured metadata that can be automatically processed by citation management tools.
+We recommend adding a `CITATION.cff` file to the root of your repository. This file follows the [Citation File Template](pathname:///assets/governance/code-of-conduct/CITATION.cff) specification and provides structured metadata that can be automatically processed by citation management tools.
 
 1. **Setting Up the Citation File**:
    - Create a `CITATION.cff` file in the root of your repository.
-   - Use the [template](https://raw.githubusercontent.com/NASA-AMMOS/slim/main/static/assets/governance/code-of-conduct/CITATION.cff), replacing placeholder values with your project details.
+   - Use the [template](pathname:///assets/governance/code-of-conduct/CITATION.cff), replacing placeholder values with your project details.
    - Include all significant contributors as authors.
 
 2. **Integrate with Your Project**:
    - Add a citation section to your `README.md` with instructions on how to cite your work.
    - Consider connecting your repository to [Zenodo](https://zenodo.org/) to obtain a DOI.
 
-### [Citation File Template](https://raw.githubusercontent.com/NASA-AMMOS/slim/main/static/assets/governance/code-of-conduct/CITATION.cff)
+### [Citation File Template](pathname:///assets/governance/code-of-conduct/CITATION.cff)
 
 <a id="citation-file-template"></a>
 ```yaml
@@ -138,7 +138,7 @@ references:
 
 ---
 
-## Credits 
+## Credits
 
 **Authorship**:
 - [Rishi Verma](https://github.com/riverma)

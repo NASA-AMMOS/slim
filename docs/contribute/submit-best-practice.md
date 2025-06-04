@@ -196,7 +196,7 @@ To document metadata about your best practice and ensure that it appears in our 
        {
          "name": "README Template",
          "type": "text/md",
-         "uri": "https://raw.githubusercontent.com/NASA-AMMOS/slim/issue-154/static/assets/communication/readme/README.md"
+         "uri": "https://raw.githubusercontent.com/NASA-AMMOS/slim/main/static/assets/communication/readme/README.md"
        }
      ]
    }
