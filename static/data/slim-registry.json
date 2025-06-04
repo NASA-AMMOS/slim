@@ -345,7 +345,7 @@
   },
   {
     "title": "Website",
-    "uri": "/slim/docs/guides/information-sharing/website",
+    "uri": "/slim/docs/guides/documentation/website",
     "category": "documentation",
     "description": "Template project to help set up a software product website with documentation.",
     "tags": [
