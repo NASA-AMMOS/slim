@@ -32,7 +32,7 @@ We use a technique we like to call "standards-as-code", which basically means th
 
 ![SLIM-dev-process](/img/standards-as-code.png)
 
-More information on our development process for best practice guides can be found in our [Contributing Guide](docs/contribute/contributing/development-process).
+More information on our development process for best practice guides can be found in our [Contributing Guide](/docs/contribute/contributing/development-process).
 
 ### 3. Publish Best Practices
 

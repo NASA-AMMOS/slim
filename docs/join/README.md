@@ -31,7 +31,7 @@ Here's how you can tell us you're interested in joining:
 
 ## Contribute to Our Guides
 
-We'd be delighted to see your contribution! Please see our [Contributing Guide](docs/contribute/contributing) on details for how to contribute. We accept many non-code contributions as well, so feel free to think creatively. 
+We'd be delighted to see your contribution! Please see our [Contributing Guide](/docs/contribute/contributing) on details for how to contribute. We accept many non-code contributions as well, so feel free to think creatively. 
 
 ## Spread the Word
 

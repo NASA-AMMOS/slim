@@ -54,9 +54,9 @@ Key Concepts to Get Started with:
 
 **[⬇️ Download our .pre-commit-config.yaml](pathname:///assets/software-lifecycle/continuous-testing/pre-commit-config.yaml)** for a standard code styling, formatting and linting checker
 
-**📝 Generate unit tests automatically using a Large Language Model (LLM), such as [codellama](https://ollama.com/library/codellama) via [ollama](https://ollama.com)** (see [example](#21-unit-tests) of unit test script generation)
+**📝 Generate unit tests automatically using a Large Language Model (LLM), such as [codellama](https://ollama.com/library/codellama) via [ollama](https://ollama.com)** (see [example](#21-example-writing-unit-tests-using-downloadable-open-source-code-generation-models) of unit test script generation)
 
-**🤖 Generate system tests automatically using an LLM, such as [codellama](https://ollama.com/library/codellama) via [ollama](https://ollama.com) and [Robot Framework](https://github.com/robotframework/QuickStartGuide/blob/master/QuickStart.rst)** (see [example](#22-system-tests) of system test script generation)
+**🤖 Generate system tests automatically using an LLM, such as [codellama](https://ollama.com/library/codellama) via [ollama](https://ollama.com) and [Robot Framework](https://github.com/robotframework/QuickStartGuide/blob/master/QuickStart.rst)** (see [example](#22-example-writing-system-tests-using-downloadable-open-source-code-generation-models-and-behavior-driven-development-frameworks) of system test script generation)
 
 **🚀 Tie continuous testing scripts all together with a [continuous integration pipeline](/docs/guides/software-lifecycle/continuous-integration)**
 
@@ -578,14 +578,14 @@ You should outline the types of system tests you plan to implement in your `TEST
 
 We recommend the following steps: 
 1. For more information about applying integration testing, take a look at the following external [guide](https://microsoft.github.io/code-with-engineering-playbook/automated-testing/integration-testing/) from Microsoft Engineering Fundamentals.
-2. Follow the process of above [diagram](#32-system-test-automation) for integration test automation.
-3. Integrate your integration tests into a [Continuous Integration (CI) pipeline](docs/guides/software-lifecycle/continuous-integration), which will allow for the automatic execution of tests upon code changes. 
+2. Follow the process of above [diagram](#33-system-test-automation) for integration test automation.
+3. Integrate your integration tests into a [Continuous Integration (CI) pipeline](/docs/guides/software-lifecycle/continuous-integration), which will allow for the automatic execution of tests upon code changes. 
 
 
 ##### Example: Security Test Automation
 
 To aid in security testing automation, we recommend two steps:
-1. Add security testing to your developers' local coding environment via pre-commit (see [Unit Test Automation](#31-unit-test-automation) section above)
+1. Add security testing to your developers' local coding environment via pre-commit (see [Static Test Automation](#31-static-test-automation) section above)
 2. Enable existing [SLIM security best practices](/slim/docs/category/security) as part of your software development workflow.
 
 ##### Example: Performance Test Automation
@@ -613,8 +613,8 @@ Your tests should be updated, at minimum, upon the following events:
 
 This is the list of items to be maintained:
 1. [TESTING.md](pathname:///assets/software-lifecycle/continuous-testing/TESTING.md)
-2. [Component tests](#21-component-tests)
-3. [System tests](#22-system-tests)
+2. [Component tests](#32-component-test-automation)
+3. [System tests](#33-system-test-automation)
 4. [Test automation](#3-automate-your-tests)
 
 ---
