@@ -1,1 +1,0 @@
-"use strict";(self.webpackChunkdocusaurus=self.webpackChunkdocusaurus||[]).push([[7170],{1495:s=>{s.exports=JSON.parse('{"label":"hola","permalink":"/slim/blog/tags/hola","allTagsPath":"/slim/blog/tags","count":1}')}}]);
