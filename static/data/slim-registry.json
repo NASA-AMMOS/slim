@@ -202,6 +202,41 @@
     ]
   },
   {
+    "title": "LICENSE Best Practices",
+    "uri": "/slim/docs/guides/governance/license",
+    "category": "governance",
+    "description": "Guidelines for selecting, implementing, and managing software licenses while respecting institutional copyright and markup requirements for NASA and government projects.",
+    "tags": [
+      "governance",
+      "licensing",
+      "apache-2.0",
+      "mit",
+      "copyright",
+      "institutional",
+      "templates",
+      "repository-setup",
+      "legal"
+    ],
+    "last-updated": "2025-01-06",
+    "assets": [
+      {
+        "name": "Apache 2.0 License Template (NASA)",
+        "type": "text/plain",
+        "uri": "https://raw.githubusercontent.com/NASA-AMMOS/slim/main/static/assets/governance/license/LICENSE-Apache-2.0-NASA.txt"
+      },
+      {
+        "name": "MIT License Template (NASA)",
+        "type": "text/plain",
+        "uri": "https://raw.githubusercontent.com/NASA-AMMOS/slim/main/static/assets/governance/license/LICENSE-MIT-NASA.txt"
+      },
+      {
+        "name": "Source Code Header Template",
+        "type": "text/plain",
+        "uri": "https://raw.githubusercontent.com/NASA-AMMOS/slim/main/static/assets/governance/license/source-header-template.txt"
+      }
+    ]
+  },
+  {
     "title": "Contributing Guide",
     "uri": "/slim/docs/guides/governance/contributions/contributing-guide",
     "category": "governance",
