@@ -141,12 +141,7 @@
     "uri": "/slim/docs/guides/documentation/documentation-hosts/trade-study-hostingdocs-user",
     "category": "documentation",
     "description": "A guide on possible use cases and recommended tools for hosting various types of documentation with a call for contributions.",
-    "tags": [
-      "documentation",
-      "trade-studies",
-      "tools",
-      "docusaurus"
-    ]
+    "tags": ["documentation", "trade-studies", "tools", "docusaurus"]
   },
   {
     "title": "Pull Requests",
@@ -195,20 +190,21 @@
         "uri": "https://www.contributor-covenant.org/version/2/1/code_of_conduct/code_of_conduct.md"
       },
       {
-      "name": "Code of Conduct for Collaboration",
-      "type": "text/md",
-      "uri": "https://raw.githubusercontent.com/NASA-AMMOS/slim/main/static/assets/governance/code-of-conduct/CODE_OF_COLLAB.md"
+        "name": "Code of Conduct for Collaboration",
+        "type": "text/md",
+        "uri": "https://raw.githubusercontent.com/NASA-AMMOS/slim/main/static/assets/governance/code-of-conduct/CODE_OF_COLLAB.md"
       }
     ]
   },
   {
-    "title": "LICENSE Best Practices",
+    "title": "LICENSE",
     "uri": "/slim/docs/guides/governance/license",
     "category": "governance",
     "description": "Guidelines for selecting, implementing, and managing software licenses while respecting institutional copyright and markup requirements for NASA and government projects.",
     "tags": [
       "governance",
       "licensing",
+      "apache",
       "apache-2.0",
       "mit",
       "copyright",
@@ -217,22 +213,27 @@
       "repository-setup",
       "legal"
     ],
-    "last-updated": "2025-01-06",
+    "last-updated": "2025-06-11",
     "assets": [
       {
-        "name": "Apache 2.0 License Template (NASA)",
+        "name": "Apache 2.0 + JPL-Caltech copyright",
         "type": "text/plain",
-        "uri": "https://raw.githubusercontent.com/NASA-AMMOS/slim/main/static/assets/governance/license/LICENSE-Apache-2.0-NASA.txt"
+        "uri": "https://raw.githubusercontent.com/NASA-AMMOS/slim/main/static/assets/governance/license/LICENSE-Apache-2.0-JPL.txt"
       },
       {
-        "name": "MIT License Template (NASA)",
+        "name": "MIT + JPL-Caltech copyright",
         "type": "text/plain",
-        "uri": "https://raw.githubusercontent.com/NASA-AMMOS/slim/main/static/assets/governance/license/LICENSE-MIT-NASA.txt"
+        "uri": "https://raw.githubusercontent.com/NASA-AMMOS/slim/main/static/assets/governance/license/LICENSE-MIT-JPL.txt"
       },
       {
-        "name": "Source Code Header Template",
+        "name": "Apache 2.0 License",
         "type": "text/plain",
-        "uri": "https://raw.githubusercontent.com/NASA-AMMOS/slim/main/static/assets/governance/license/source-header-template.txt"
+        "uri": "https://www.apache.org/licenses/LICENSE-2.0.txt"
+      },
+      {
+        "name": "MIT License",
+        "type": "text/plain",
+        "uri": "https://mit-license.org/"
       }
     ]
   },
@@ -278,23 +279,14 @@
     "uri": "/slim/docs/guides/software-lifecycle/continuous-integration/continuous-integration-frameworks",
     "category": "software lifecycle",
     "description": "An overview of different continuous integration frameworks and their use cases.",
-    "tags": [
-      "tools",
-      "continuous-integration",
-      "trade-studies"
-    ]
+    "tags": ["tools", "continuous-integration", "trade-studies"]
   },
   {
     "title": "Reference Architectures",
     "uri": "/slim/docs/guides/software-lifecycle/continuous-integration/reference-architecture",
     "category": "software lifecycle",
     "description": "A high-level reference guide for the implementation of continuous integration best practices, detailing structure, component interrelationships, and processes.",
-    "tags": [
-      "continuous-integration",
-      "testing",
-      "versioning",
-      "devops"
-    ]
+    "tags": ["continuous-integration", "testing", "versioning", "devops"]
   },
   {
     "title": "Continuous Testing",
@@ -348,13 +340,7 @@
     "uri": "/slim/docs/guides/software-lifecycle/metrics",
     "category": "software lifecycle",
     "description": "Recommendations for metrics collection and an installation tool for Apache DevLake.",
-    "tags": [
-      "software-lifecycle",
-      "metrics",
-      "tools",
-      "DORA",
-      "devlake"
-    ]
+    "tags": ["software-lifecycle", "metrics", "tools", "DORA", "devlake"]
   },
   {
     "title": "Container Vulnerability Scanning",

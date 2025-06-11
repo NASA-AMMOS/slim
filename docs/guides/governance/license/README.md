@@ -1,4 +1,4 @@
-# LICENSE Best Practices
+# LICENSE
 
 <pre align="center">Guidelines for selecting, implementing, and managing software licenses while respecting institutional copyright and markup requirements.</pre>
 
@@ -29,15 +29,22 @@ Proper licensing practices enable broader adoption of NASA software, facilitate 
 ---
 
 ## Quick Start
-**[Link to LICENSE Templates and Tools](#license-templates-and-examples)**
 
-Access our curated collection of license templates specifically designed for NASA and government projects, including proper institutional copyright markup and boilerplate text that complies with federal requirements.
+**Ready-to-Use License Templates (with JPL-Caltech Copyright):**
+- ⬇️ [Apache 2.0 + JPL-Caltech copyright](pathname:///assets/governance/license/LICENSE-Apache-2.0-JPL.txt) - Apache 2.0 with embedded JPL copyright
+- ⬇️ [MIT + JPL-Caltech copyright](pathname:///assets/governance/license/LICENSE-MIT-JPL.txt) - MIT with embedded JPL copyright
+
+**Standard License Templates:**
+- ⬇️ [Apache 2.0 License](https://www.apache.org/licenses/LICENSE-2.0.txt) - Official Apache License text
+- ⬇️ [MIT License](https://mit-license.org/) - Official MIT License text
+
+**Installation:** Download your chosen license and save it at the root of your repository as `LICENSE` (no extension) or `LICENSE.txt`. GitHub will automatically recognize and display the license information.
 
 ---
 
 ## Step-by-Step Guide
 
-1. **Understand Institutional Requirements**
+### 1. Understand Institutional Requirements
    
    Before selecting any license, consult with your institution's technology transfer office or legal counsel to understand:
    - Institutional copyright policies and requirements
@@ -46,7 +53,7 @@ Access our curated collection of license templates specifically designed for NAS
    - Export control considerations (ITAR, EAR)
    - Any specific institutional markup language requirements
 
-2. **Evaluate Project Requirements**
+### 2. Evaluate Project Requirements
    
    Consider your project's specific needs:
    - **Permissive vs. Copyleft**: Determine if you need strong copyleft (GPL), weak copyleft (LGPL), or permissive licensing (MIT, Apache 2.0)
@@ -55,77 +62,65 @@ Access our curated collection of license templates specifically designed for NAS
    - **Commercial Use**: Decide whether commercial use should be permitted
    - **Derivative Works**: Consider how you want derivative works to be licensed
 
-3. **Select Appropriate License**
+### 3. Select Appropriate License
    
-   **For NASA/Government Projects, Common Choices Include:**
+#### Ready-to-Use Templates
+   - ⬇️ [Apache 2.0 + JPL-Caltech copyright](pathname:///assets/governance/license/LICENSE-Apache-2.0-JPL.txt) - Apache 2.0 with embedded JPL copyright
+   - ⬇️ [MIT + JPL-Caltech copyright](pathname:///assets/governance/license/LICENSE-MIT-JPL.txt) - MIT with embedded JPL copyright
    
-   - **Apache License 2.0**: Recommended for most NASA projects
-     - Includes explicit patent grant
-     - Permissive licensing allowing commercial use
-     - Requires preservation of copyright and license notices
-     - Compatible with institutional copyright requirements
+#### Standard License Templates
+   - ⬇️ [Apache 2.0 License](https://www.apache.org/licenses/LICENSE-2.0.txt) - Official Apache License text
+   - ⬇️ [MIT License](https://mit-license.org/) - Official MIT License text
    
-   - **MIT License**: Simple permissive license
-     - Minimal requirements (just attribution)
-     - Very permissive and widely compatible
-     - May need additional patent language for some projects
-   
-   - **Custom Government Licenses**: Some institutions have specific licenses
-     - NOSA (NASA Open Source Agreement)
-     - Custom institutional licenses with specific terms
+#### License Comparison
+  - **Apache License 2.0**: Recommended for most NASA projects
+    - Includes explicit patent grant
+    - Permissive licensing allowing commercial use
+    - Requires preservation of copyright and license notices
+    - Compatible with institutional copyright requirements
+  
+  - **MIT License**: Simple permissive license
+    - Minimal requirements (just attribution)
+    - Very permissive and widely compatible
+    - May need additional patent language for some projects
 
-4. **Implement Proper Copyright Headers**
-   
-   Add institutional copyright notices to all source files:
-   ```
-   /* Copyright [YEAR] [INSTITUTION NAME]
-    * 
-    * Licensed under the Apache License, Version 2.0 (the "License");
-    * you may not use this file except in compliance with the License.
-    * You may obtain a copy of the License at
-    * 
-    *     http://www.apache.org/licenses/LICENSE-2.0
-    * 
-    * Unless required by applicable law or agreed to in writing, software
-    * distributed under the License is distributed on an "AS IS" BASIS,
-    * WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
-    * See the License for the specific language governing permissions and
-    * limitations under the License.
-    */
-   ```
+### 4. Create LICENSE File
 
-5. **Create LICENSE File**
-   
    Include a complete LICENSE file in your repository root:
-   - Use the full license text for your chosen license
-   - Add institutional copyright notice at the top
+   - Download one of the ready-to-use templates from the [Quick Start](#quick-start) section or prepare your own
+   - If using standard licenses, add your institutional copyright notice at the bottom
    - Include any required government markings or notices
    - Ensure the file is named `LICENSE` (no extension) for GitHub recognition
 
-6. **Document Licensing in README**
+### 5. Document Licensing in README
    
    Include licensing information in your project README:
    - Clear statement of the project's license
    - Link to the LICENSE file
    - Attribution instructions for users
    - Any special licensing considerations
-
-7. **Handle Third-Party Dependencies**
    
-   - Audit all dependencies for license compatibility
-   - Document third-party licenses in a `THIRD_PARTY_LICENSES` file
-   - Ensure dependency licenses are compatible with your chosen license
-   - Consider using tools like `license-checker` for Node.js or `pip-licenses` for Python
-
-8. **Establish Contributor Agreement Process**
+   For more details on creating a comprehensive README, see our [README Guide](../../communication/readme/).
    
-   For projects accepting external contributions:
-   - Implement a Contributor License Agreement (CLA) if required by your institution
-   - Use GitHub's built-in contribution attribution
-   - Document contribution licensing requirements in CONTRIBUTING.md
-   - Consider using automated CLA tools for larger projects
+   **Example README License Section:**
+   ```markdown
+   ## License
 
-9. **Regular License Compliance Checks**
+   See our: [LICENSE](LICENSE)
+   <!-- ☝️ Replace with the text of your copyright and license, or directly link to your license file ☝️ -->
+
+   ## Support
+
+   [INSERT CONTACT INFORMATION OR PROFILE LINKS TO MAINTAINERS AMONG COMMITTER LIST]
+
+   <!-- example list of contacts>
+   Key points of contact are: [@github-user-1](link to github profile) [@github-user-2](link to github profile)
+   -->
+
+   <!-- ☝️ Replace with the key individuals who should be contacted for questions ☝️ -->
+   ```
+
+### 6. Regular License Compliance Checks
    
    - Periodically audit your project's licensing compliance
    - Check for new dependencies and their licenses
@@ -134,49 +129,18 @@ Access our curated collection of license templates specifically designed for NAS
 
 ---
 
-## License Templates and Examples
+## Resources
 
-### Apache 2.0 License Template for NASA Projects
-
-```text
-                                 Apache License
-                           Version 2.0, January 2004
-                        http://www.apache.org/licenses/
-
-[Full Apache 2.0 license text follows...]
-
-Copyright [YEAR] National Aeronautics and Space Administration (NASA)
-
-Licensed under the Apache License, Version 2.0 (the "License");
-you may not use this file except in compliance with the License.
-You may obtain a copy of the License at
-
-    http://www.apache.org/licenses/LICENSE-2.0
-
-Unless required by applicable law or agreed to in writing, software
-distributed under the License is distributed on an "AS IS" BASIS,
-WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
-See the License for the specific language governing permissions and
-limitations under the License.
-```
-
-### Source Code Header Template
-
-```text
-Copyright [YEAR] [INSTITUTION NAME]
-
-Licensed under the Apache License, Version 2.0 (the "License");
-you may not use this file except in compliance with the License.
-You may obtain a copy of the License at
-
-    http://www.apache.org/licenses/LICENSE-2.0
-
-Unless required by applicable law or agreed to in writing, software
-distributed under the License is distributed on an "AS IS" BASIS,
-WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
-See the License for the specific language governing permissions and
-limitations under the License.
-```
+- **Ready-to-Use Templates (with JPL-Caltech Copyright)**: 
+  - [Apache 2.0 + JPL-Caltech copyright](pathname:///assets/governance/license/LICENSE-Apache-2.0-JPL.txt)
+  - [MIT + JPL-Caltech copyright](pathname:///assets/governance/license/LICENSE-MIT-JPL.txt)
+- **Standard License Templates**: 
+  - [Apache 2.0 License](https://www.apache.org/licenses/LICENSE-2.0.txt) - Recommended for most NASA projects
+  - [MIT License](https://mit-license.org/) - Simple permissive license
+- **Additional License Information**: 
+  - [Choose a License](https://choosealicense.com/) - Simple license selection tool
+  - [SPDX License List](https://spdx.org/licenses/) - Comprehensive license database
+  - [OSI Approved Licenses](https://opensource.org/licenses) - Open Source Initiative approved licenses
 
 ---
 
@@ -189,10 +153,10 @@ A: MIT license can be used for NASA projects, but Apache 2.0 is often preferred 
 A: Ensure all dependency licenses are compatible with your chosen license. Create a comprehensive third-party license document and consider using automated license scanning tools.
 
 **Q: What's the difference between copyright and licensing?**
-A: Copyright establishes ownership of the work, while licensing defines how others can use it. NASA typically retains copyright while granting usage rights through open-source licenses.
+A: Copyright establishes ownership of the work, while licensing defines how others can use it. NASA/Caltech or your institution typically retains copyright while granting usage rights through open-source licenses.
 
 **Q: Do I need a CLA for my project?**
-A: CLA requirements vary by institution and project. Consult with your legal team to determine if a CLA is necessary for your specific project.
+A: Contributing License Agreement (CLA) requirements vary by institution and project. Consult with your legal team to determine if a CLA is necessary for your specific project.
 
 **Q: How often should I update copyright years?**
 A: Update copyright years annually or when making significant changes. Some organizations use ranges (e.g., "2020-2024") to simplify maintenance.
@@ -205,9 +169,8 @@ A: Changing licenses can be complex, especially with external contributors. It's
 ## Credits 
 
 **Authorship**:
-- SLIM Community Contributors
-- NASA AMMOS Technology Transfer Office
-- [Open Source Initiative](https://opensource.org/)
+- [@galenatjpl](https://github.com/galenatjpl)
+- [@riverma](https://github.com/riverma)
 
 **Acknowledgements**:
 * [Apache Software Foundation](https://www.apache.org/) for the Apache License 2.0
@@ -220,4 +183,4 @@ A: Changing licenses can be complex, especially with external contributors. It's
 
 ## Feedback and Contributions
 
-We welcome feedback and contributions to help improve and grow this page. Please see our [contribution guidelines](https://nasa-ammos.github.io/slim/docs/contribute/contributing/). 
+We welcome feedback and contributions to help improve and grow this page. Please see our [contribution guidelines](https://nasa-ammos.github.io/slim/docs/contribute/contributing/).
