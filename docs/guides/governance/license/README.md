@@ -1,4 +1,4 @@
-# LICENSE
+# License
 
 <pre align="center">Guidelines for selecting, implementing, and managing software licenses while respecting institutional copyright and markup requirements.</pre>
 
