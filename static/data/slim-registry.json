@@ -141,12 +141,7 @@
     "uri": "/slim/docs/guides/documentation/documentation-hosts/trade-study-hostingdocs-user",
     "category": "documentation",
     "description": "A guide on possible use cases and recommended tools for hosting various types of documentation with a call for contributions.",
-    "tags": [
-      "documentation",
-      "trade-studies",
-      "tools",
-      "docusaurus"
-    ]
+    "tags": ["documentation", "trade-studies", "tools", "docusaurus"]
   },
   {
     "title": "Pull Requests",
@@ -284,23 +279,14 @@
     "uri": "/slim/docs/guides/software-lifecycle/continuous-integration/continuous-integration-frameworks",
     "category": "software lifecycle",
     "description": "An overview of different continuous integration frameworks and their use cases.",
-    "tags": [
-      "tools",
-      "continuous-integration",
-      "trade-studies"
-    ]
+    "tags": ["tools", "continuous-integration", "trade-studies"]
   },
   {
     "title": "Reference Architectures",
     "uri": "/slim/docs/guides/software-lifecycle/continuous-integration/reference-architecture",
     "category": "software lifecycle",
     "description": "A high-level reference guide for the implementation of continuous integration best practices, detailing structure, component interrelationships, and processes.",
-    "tags": [
-      "continuous-integration",
-      "testing",
-      "versioning",
-      "devops"
-    ]
+    "tags": ["continuous-integration", "testing", "versioning", "devops"]
   },
   {
     "title": "Continuous Testing",
@@ -354,13 +340,7 @@
     "uri": "/slim/docs/guides/software-lifecycle/metrics",
     "category": "software lifecycle",
     "description": "Recommendations for metrics collection and an installation tool for Apache DevLake.",
-    "tags": [
-      "software-lifecycle",
-      "metrics",
-      "tools",
-      "DORA",
-      "devlake"
-    ]
+    "tags": ["software-lifecycle", "metrics", "tools", "DORA", "devlake"]
   },
   {
     "title": "Container Vulnerability Scanning",
@@ -416,6 +396,28 @@
       "pipelines",
       "software-lifecycle",
       "ci-cd"
+    ]
+  },
+  {
+    "title": "Versioning",
+    "uri": "/slim/docs/guides/software-lifecycle/versioning",
+    "category": "software lifecycle",
+    "description": "Master semantic versioning, conventional commits, and version management for your projects.",
+    "tags": [
+      "versioning",
+      "semantic-versioning",
+      "conventional-commits",
+      "commitizen",
+      "software-lifecycle",
+      "changelog",
+      "version-management"
+    ],
+    "assets": [
+      {
+        "name": "Commitizen Python Package",
+        "type": "application/zip",
+        "uri": "https://files.pythonhosted.org/packages/11/37/5a8e1dadd02eede38bf5a92af108071f6a11b6fc50b7ae27d9083c649ba9/commitizen-4.8.3-py3-none-any.whl"
+      }
     ]
   }
 ]

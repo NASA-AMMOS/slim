@@ -118,19 +118,13 @@ Recommendations from GitHub.com on how-to facilitate the use of pull request tem
 
 ### Versioning
 
-Versioning provides your development team and the consumers of your codebase the ability to keep track of the differences between the release states of your code. To facilitate versioning, we recommend the use of [semantic versioning](https://semver.org/) because it provides a simple set of guidelines that describe how to increment your version numbers based on the changes that are being introduced. Below is a short summary from the semantic versioning website that describe a typical version number scheme:
+Consistent versioning practices are essential for tracking changes and communicating impact to users. For comprehensive guidance on implementing semantic versioning, conventional commits, and automated version management, see our dedicated [Versioning Guide](/docs/guides/software-lifecycle/versioning).
 
-> Given a version number MAJOR.MINOR.PATCH, increment the:
-> 
->1. MAJOR version when you make incompatible API changes
->2. MINOR version when you add functionality in a backward compatible manner
->3. PATCH version when you make backward compatible bug fixes
->
->Additional labels for pre-release and build metadata are available as extensions to the MAJOR.MINOR.PATCH format.
-
-#### Takeaways:
-* Have a discussion with your team about adopting a code versioning convention your project will follow and document it to refer back to as new developers are onboarded or when there are questions about the adopted versioning scheme. Your project's versioning scheme may require additional qualifiers, e.g. build identifiers or release designations (e.g. unstable, stable, prerelease), so be sure to discuss all aspects of your software development lifecycle when defining your versioning scheme.
-* For each pull request, ensure that a summary of the changes are captured in the repository's CHANGELOG and that those changes are associated with a version number that follows the team's/project's code versioning scheme.
+#### Key Takeaways for Pull Requests:
+* Ensure commit messages follow conventional commit format to enable automated version bumping
+* Include version impact in pull request descriptions (major/minor/patch)
+* Update CHANGELOG.md entries as part of your pull request when appropriate
+* Review that proposed changes align with the intended version bump
 
 ### Automated Code Quality and Security Scans
 

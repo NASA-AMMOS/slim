@@ -18,7 +18,7 @@
 
 ## Prerequisites
 
-* Familiarity with semantic versioning and release cycles.
+* Familiarity with semantic versioning and release cycles. For comprehensive guidance, see our [Versioning Guide](/docs/guides/software-lifecycle/versioning).
 * Basic knowledge of Markdown formatting.
 
 ---
