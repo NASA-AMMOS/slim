@@ -36,7 +36,7 @@ Proper licensing practices enable broader adoption of NASA software, facilitate 
 
 **Standard License Templates:**
 - ⬇️ [Apache 2.0 License](https://www.apache.org/licenses/LICENSE-2.0.txt) - Official Apache License text
-- ⬇️ [MIT License](https://mit-license.org/) - Official MIT License text
+- ⬇️ [MIT License](pathname:///assets/governance/license/LICENSE-MIT.txt) - Official MIT License text
 
 **Installation:** Download your chosen license and save it at the root of your repository as `LICENSE` (no extension) or `LICENSE.txt`. GitHub will automatically recognize and display the license information.
 
@@ -70,7 +70,7 @@ Proper licensing practices enable broader adoption of NASA software, facilitate 
    
 #### Standard License Templates
    - ⬇️ [Apache 2.0 License](https://www.apache.org/licenses/LICENSE-2.0.txt) - Official Apache License text
-   - ⬇️ [MIT License](https://mit-license.org/) - Official MIT License text
+   - ⬇️ [MIT License](pathname:///assets/governance/license/LICENSE-MIT.txt) - Official MIT License text
    
 #### License Comparison
   - **Apache License 2.0**: Recommended for most NASA projects
