@@ -100,7 +100,7 @@ Proper licensing practices enable broader adoption of NASA software, facilitate 
    - Attribution instructions for users
    - Any special licensing considerations
    
-   For more details on creating a comprehensive README, see our [README Guide](../../communication/readme/).
+   For more details on creating a comprehensive README, see our [README Guide](/slim/docs/guides/documentation/readme/).
    
    **Example README License Section:**
    ```markdown
