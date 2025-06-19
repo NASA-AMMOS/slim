@@ -256,7 +256,7 @@
       {
         "name": "MIT License",
         "type": "text/plain",
-        "uri": "https://mit-license.org/",
+        "uri": "https://raw.githubusercontent.com/NASA-AMMOS/slim/main/static/assets/governance/license/LICENSE-MIT.txt",
         "alias": "license-mit"
       }
     ]
