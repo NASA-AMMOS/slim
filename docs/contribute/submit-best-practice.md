@@ -176,7 +176,10 @@ To document metadata about your best practice and ensure that it appears in our 
 
 1. **Basic Fields**: Start by filling out the basic fields as shown in the example below. These include `title`, `uri`, `category`, `description`, `tags`, and `last-updated`.
 
-2. **Assets Metadata**: Additionally, you should include an `assets` metadata element to describe any infusible assets associated with your best practice. These could be templates, code samples, or other resources that enhance the usability of your guide. Each asset should include `name`, `type`, and `uri` to specify the asset’s details. Adding this is especially important so that infusion can be automated via the [slim-cli tool](https://github.com/nasa-ammos/slim-cli) - which queries the `static/data/slim-registry.json` file. 
+2. **Assets Metadata**: You should include an `assets` metadata element to describe any infusible assets associated with your best practice. These could be templates, code samples, or other resources that enhance the usability of your guide. Each asset should include `name`, `type`, `uri`, and the required `alias` field to specify the asset’s details. Adding this is especially important so that infusion can be automated via the [slim-cli tool](https://github.com/nasa-ammos/slim-cli) - which queries the `static/data/slim-registry.json` file. 
+
+3. **Asset Alias Requirement**: Additionally, each asset in the `assets` array **must** include a unique `alias` field. This provides a short, lowercase, descriptive identifier that allows users of the [slim-cli tool](https://github.com/nasa-ammos/slim-cli) to easily invoke the best practice using commands like `slim apply --best-practice-ids readme` or `slim apply --best-practice-ids governance-small`. Choose aliases that are intuitive and describe the purpose of the asset (e.g., `readme`, `secrets-github`, `governance-small`). Double-check that the aliast doesn't already existing within the `static/data/slim-registry.json` file - it must be unique. 
+
 
    Here’s an example of how to structure your JSON entry:
 
@@ -196,15 +199,16 @@ To document metadata about your best practice and ensure that it appears in our 
        {
          "name": "README Template",
          "type": "text/md",
-         "uri": "https://raw.githubusercontent.com/NASA-AMMOS/slim/main/static/assets/communication/readme/README.md"
+         "uri": "https://raw.githubusercontent.com/NASA-AMMOS/slim/main/static/assets/communication/readme/README.md",
+         "alias": "readme"
        }
      ]
    }
    ```
 
-3. **Customization**: Tailor the fields to match the specifics of your best practice guide. Ensure that the `assets` section is comprehensive and includes all relevant resources that could help users implement your guide effectively.
+4. **Customization**: Tailor the fields to match the specifics of your best practice guide. Ensure that the `assets` section is comprehensive and includes all relevant resources that could help users implement your guide effectively.
 
-4. **Final Check**: Before submitting, review the JSON entry to ensure all details are accurate and that the assets are correctly linked and described.
+5. **Final Check**: Before submitting, review the JSON entry to ensure all details are accurate, that the assets are correctly linked and described, and that each asset has a unique `alias` field for slim-cli integration.
 
 ## 4⃣️ Get Feedback For Your Contribution
 
