@@ -378,10 +378,17 @@
     "description": "Recommendations for metrics collection and an installation tool for Apache DevLake.",
     "tags": [
       "software-lifecycle",
-      "metrics",
+      "metrics", 
       "tools",
       "DORA",
       "devlake"
+    ],
+    "assets": [
+      {
+        "name": "Simple Metrics Collection",
+        "type": "text/yaml",
+        "uri": "https://raw.githubusercontent.com/NASA-AMMOS/slim/main/static/assets/software-lifecycle/metrics/metrics.yml"
+      }
     ]
   },
   {
