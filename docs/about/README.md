@@ -4,7 +4,7 @@ sidebar_position: 1
 
 # About
 
-> _A shared resource for discussing, iterating and referencing best practices in software lifecycle process improvements for multi-mission space and ground software_
+> _Modernizing software through the automated infusion of best practices._
 
 [📖 View our Infographic (PDF)](SLIM-Infographic.pdf)
 
@@ -32,7 +32,7 @@ We use a technique we like to call "standards-as-code", which basically means th
 
 ![SLIM-dev-process](/img/standards-as-code.png)
 
-More information on our development process for best practice guides can be found in our [Contributing Guide](docs/contribute/contributing/development-process).
+More information on our development process for best practice guides can be found in our [Contributing Guide](/docs/contribute/contributing/development-process).
 
 ### 3. Publish Best Practices
 

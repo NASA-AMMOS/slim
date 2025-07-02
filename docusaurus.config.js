@@ -1,8 +1,9 @@
 // @ts-check
 // Note: type annotations allow type checking and IDEs autocompletion
 
-const lightCodeTheme = require('prism-react-renderer/themes/github');
-const darkCodeTheme = require('prism-react-renderer/themes/dracula');
+const {themes} = require('prism-react-renderer');
+const lightCodeTheme = themes.github;
+const darkCodeTheme = themes.dracula;
 
 /** @type {import('@docusaurus/types').Config} */
 const config = {
@@ -19,8 +20,8 @@ const config = {
   organizationName: 'nasa-ammos',
   projectName: 'slim',
 
-  onBrokenLinks: 'ignore',
-  onBrokenMarkdownLinks: 'ignore',
+  onBrokenLinks: 'warn',
+  onBrokenMarkdownLinks: 'warn',
 
   i18n: {
     defaultLocale: 'en',
@@ -67,6 +68,12 @@ const config = {
           },
           {
             type: 'docSidebar',
+            sidebarId: 'toolsSidebar',
+            position: 'left',
+            label: 'Tools',
+          },
+          {
+            type: 'docSidebar',
             sidebarId: 'contributeSidebar',
             position: 'left',
             label: 'Contribute',
@@ -101,8 +108,12 @@ const config = {
                 to: '/docs/guides/search',
               },
               {
+                label: 'Tools',
+                to: '/docs/tools',
+              },
+              {
                 label: 'Contribute',
-                to: '/docs/contribute/CONTRIBUTING',
+                to: '/docs/contribute/contributing/',
               },
               {
                 label: 'Join',
@@ -145,11 +156,11 @@ const config = {
         respectPrefersColorScheme: false
       },
     }),
-  
+
   markdown: {
     mermaid: true,
   },
-  
+
   themes: ['@docusaurus/theme-mermaid'],
 
   plugins: [

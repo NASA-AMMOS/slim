@@ -20,8 +20,7 @@ jobs:
 
       - name: Install dependencies
         run: |
-          yarn install --frozen-lockfile
-          npm install raw-loader --save-dev
+          yarn
       - name: Build website
         run: yarn build
 

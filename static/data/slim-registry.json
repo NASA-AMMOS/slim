@@ -8,23 +8,27 @@
       "governance",
       "templates",
       "repository-setup",
-      "github"
+      "github",
+      "markdown"
     ],
     "assets": [
       {
         "name": "Governance Template (Small Teams)",
         "type": "text/md",
-        "uri": "https://raw.githubusercontent.com/NASA-AMMOS/slim/main/static/assets/governance/governance-model/GOVERNANCE-TEMPLATE-SMALL-TEAMS.md"
+        "uri": "https://raw.githubusercontent.com/NASA-AMMOS/slim/main/static/assets/governance/governance-model/GOVERNANCE-TEMPLATE-SMALL-TEAMS.md",
+        "alias": "governance-small"
       },
       {
         "name": "Governance Template (Medium Teams)",
         "type": "text/md",
-        "uri": "https://raw.githubusercontent.com/NASA-AMMOS/slim/main/static/assets/governance/governance-model/GOVERNANCE-TEMPLATE-MEDIUM-TEAMS.md"
+        "uri": "https://raw.githubusercontent.com/NASA-AMMOS/slim/main/static/assets/governance/governance-model/GOVERNANCE-TEMPLATE-MEDIUM-TEAMS.md",
+        "alias": "governance-medium"
       },
       {
         "name": "Governance Template (Large Teams)",
         "type": "text/md",
-        "uri": "https://raw.githubusercontent.com/NASA-AMMOS/slim/main/static/assets/governance/governance-model/GOVERNANCE-TEMPLATE-LARGE-TEAMS.md"
+        "uri": "https://raw.githubusercontent.com/NASA-AMMOS/slim/main/static/assets/governance/governance-model/GOVERNANCE-TEMPLATE-LARGE-TEAMS.md",
+        "alias": "governance-large"
       }
     ]
   },
@@ -37,18 +41,24 @@
       "software-lifecycle",
       "security",
       "testing",
-      "tools"
+      "tools",
+      "pre-commit",
+      "github",
+      "github-action",
+      "yaml"
     ],
     "assets": [
       {
         "name": "GitHub Action Workflow Scan",
         "type": "text/yaml",
-        "uri": "https://raw.githubusercontent.com/NASA-AMMOS/slim/main/static/assets/software-lifecycle/security/secrets-detection/detect-secrets.yaml"
+        "uri": "https://raw.githubusercontent.com/NASA-AMMOS/slim/main/static/assets/software-lifecycle/security/secrets-detection/detect-secrets.yaml",
+        "alias": "secrets-github"
       },
       {
         "name": "Scan Pre-commit Configuration",
         "type": "text/yaml",
-        "uri": "https://raw.githubusercontent.com/NASA-AMMOS/slim/main/static/assets/software-lifecycle/security/secrets-detection/pre-commit-config.yml"
+        "uri": "https://raw.githubusercontent.com/NASA-AMMOS/slim/main/static/assets/software-lifecycle/security/secrets-detection/pre-commit-config.yml",
+        "alias": "secrets-precommit"
       }
     ]
   },
@@ -62,13 +72,15 @@
       "documentation",
       "repository-setup",
       "templates",
-      "github"
+      "github",
+      "markdown"
     ],
     "assets": [
       {
         "name": "README Template",
         "type": "text/md",
-        "uri": "https://raw.githubusercontent.com/NASA-AMMOS/slim/main/static/assets/communication/readme/README.md"
+        "uri": "https://raw.githubusercontent.com/NASA-AMMOS/slim/main/static/assets/communication/readme/README.md",
+        "alias": "readme"
       }
     ]
   },
@@ -81,28 +93,35 @@
       "governance",
       "templates",
       "repository-setup",
-      "github"
+      "github",
+      "markdown",
+      "yaml",
+      "form"
     ],
     "assets": [
       {
         "name": "Bug Report Template (Markdown)",
         "type": "text/md",
-        "uri": "https://raw.githubusercontent.com/NASA-AMMOS/slim/main/static/assets/governance/issue-templates/bug_report.md"
+        "uri": "https://raw.githubusercontent.com/NASA-AMMOS/slim/main/static/assets/governance/issue-templates/bug_report.md",
+        "alias": "issue-bug-md"
       },
       {
         "name": "Bug Report Template (GitHub Form)",
         "type": "text/yml",
-        "uri": "https://raw.githubusercontent.com/NASA-AMMOS/slim/main/static/assets/governance/issue-templates/bug_report.yml"
+        "uri": "https://raw.githubusercontent.com/NASA-AMMOS/slim/main/static/assets/governance/issue-templates/bug_report.yml",
+        "alias": "issue-bug-form"
       },
       {
         "name": "New Feature Template (Markdown)",
         "type": "text/md",
-        "uri": "https://raw.githubusercontent.com/NASA-AMMOS/slim/main/static/assets/governance/issue-templates/new_feature.md"
+        "uri": "https://raw.githubusercontent.com/NASA-AMMOS/slim/main/static/assets/governance/issue-templates/new_feature.md",
+        "alias": "issue-feature-md"
       },
       {
         "name": "New Feature Template (GitHub Form)",
         "type": "text/md",
-        "uri": "https://raw.githubusercontent.com/NASA-AMMOS/slim/main/static/assets/governance/issue-templates/new_feature.yml"
+        "uri": "https://raw.githubusercontent.com/NASA-AMMOS/slim/main/static/assets/governance/issue-templates/new_feature.yml",
+        "alias": "issue-feature-form"
       }
     ]
   },
@@ -116,13 +135,15 @@
       "versioning",
       "templates",
       "repository-setup",
-      "github"
+      "github",
+      "markdown"
     ],
     "assets": [
       {
         "name": "Keep A Changelog Template",
         "type": "text/md",
-        "uri": "https://raw.githubusercontent.com/NASA-AMMOS/slim/main/static/assets/communication/changelog/CHANGELOG.md"
+        "uri": "https://raw.githubusercontent.com/NASA-AMMOS/slim/main/static/assets/communication/changelog/CHANGELOG.md",
+        "alias": "changelog"
       }
     ]
   },
@@ -134,7 +155,8 @@
     "tags": [
       "documentation",
       "trade-studies",
-      "tools"
+      "tools",
+      "docusaurus"
     ]
   },
   {
@@ -146,13 +168,22 @@
       "github",
       "templates",
       "governance",
-      "repository-setup"
+      "repository-setup",
+      "codeowners",
+      "markdown"
     ],
     "assets": [
       {
         "name": "Pull Request Template",
         "type": "text/md",
-        "uri": "https://raw.githubusercontent.com/NASA-AMMOS/slim/main/static/assets/governance/pull-requests/PULL_REQUEST_TEMPLATE.md"
+        "uri": "https://raw.githubusercontent.com/NASA-AMMOS/slim/main/static/assets/governance/pull-requests/PULL_REQUEST_TEMPLATE.md",
+        "alias": "pull-request"
+      },
+      {
+        "name": "CODEOWNERS Template",
+        "type": "text/plain",
+        "uri": "https://raw.githubusercontent.com/NASA-AMMOS/slim/main/static/assets/governance/pull-requests/CODEOWNERS",
+        "alias": "codeowners"
       }
     ]
   },
@@ -160,18 +191,73 @@
     "title": "Code of Conduct",
     "uri": "/slim/docs/guides/governance/contributions/code-of-conduct",
     "category": "governance",
-    "description": "A guide on how to create and implement a code of conduct for project teams, with a specific recommendation to use the Contributor Covenant.",
+    "description": "A guide on how to create and implement a code of conduct and a code of collaboration for project teams, including a specific recommendation to use the Contributor Covenant.",
     "tags": [
       "governance",
       "repository-setup",
       "github",
-      "templates"
+      "templates",
+      "collaboration",
+      "collaborator",
+      "markdown"
     ],
     "assets": [
       {
         "name": "Contributor Covenant Code of Conduct",
         "type": "text/md",
-        "uri": "https://www.contributor-covenant.org/version/2/1/code_of_conduct/code_of_conduct.md"
+        "uri": "https://www.contributor-covenant.org/version/2/1/code_of_conduct/code_of_conduct.md",
+        "alias": "code-of-conduct"
+      },
+      {
+        "name": "Code of Conduct for Collaboration",
+        "type": "text/md",
+        "uri": "https://raw.githubusercontent.com/NASA-AMMOS/slim/main/static/assets/governance/code-of-conduct/CODE_OF_COLLAB.md",
+        "alias": "code-of-conduct-collab"
+      }
+    ]
+  },
+  {
+    "title": "LICENSE",
+    "uri": "/slim/docs/guides/governance/license",
+    "category": "governance",
+    "description": "Guidelines for selecting, implementing, and managing software licenses while respecting institutional copyright and markup requirements for NASA and government projects.",
+    "tags": [
+      "governance",
+      "licensing",
+      "apache",
+      "apache-2.0",
+      "mit",
+      "copyright",
+      "institutional",
+      "templates",
+      "repository-setup",
+      "legal"
+    ],
+    "last-updated": "2025-06-11",
+    "assets": [
+      {
+        "name": "Apache 2.0 + JPL-Caltech copyright",
+        "type": "text/plain",
+        "uri": "https://raw.githubusercontent.com/NASA-AMMOS/slim/main/static/assets/governance/license/LICENSE-Apache-2.0-JPL.txt",
+        "alias": "license-apache-jpl"
+      },
+      {
+        "name": "MIT + JPL-Caltech copyright",
+        "type": "text/plain",
+        "uri": "https://raw.githubusercontent.com/NASA-AMMOS/slim/main/static/assets/governance/license/LICENSE-MIT-JPL.txt",
+        "alias": "license-mit-jpl"
+      },
+      {
+        "name": "Apache 2.0 License",
+        "type": "text/plain",
+        "uri": "https://www.apache.org/licenses/LICENSE-2.0.txt",
+        "alias": "license-apache"
+      },
+      {
+        "name": "MIT License",
+        "type": "text/plain",
+        "uri": "https://raw.githubusercontent.com/NASA-AMMOS/slim/main/static/assets/governance/license/LICENSE-MIT.txt",
+        "alias": "license-mit"
       }
     ]
   },
@@ -185,13 +271,15 @@
       "governance",
       "repository-setup",
       "github",
-      "templates"
+      "templates",
+      "markdown"
     ],
     "assets": [
       {
         "name": "Contributing Guide Template",
         "type": "text/md",
-        "uri": "https://raw.githubusercontent.com/NASA-AMMOS/slim/main/static/assets/governance/contributing-guide/CONTRIBUTING.md"
+        "uri": "https://raw.githubusercontent.com/NASA-AMMOS/slim/main/static/assets/governance/contributing-guide/CONTRIBUTING.md",
+        "alias": "contributing"
       }
     ]
   },
@@ -205,7 +293,10 @@
       "templates",
       "repository-setup",
       "continuous-integration",
-      "github"
+      "github",
+      "pypi",
+      "git",
+      "repository"
     ]
   },
   {
@@ -238,18 +329,31 @@
     "description": "An extensive list of resources and tools for continuous testing including module testing, service endpoint testing, performance testing, and mobile testing among others.",
     "tags": [
       "testing",
-      "tools"
+      "tools",
+      "pre-commit",
+      "ai",
+      "robot-framework",
+      "jenkins",
+      "github-actions",
+      "selinium",
+      "jmeter",
+      "llm",
+      "ollama",
+      "markdown",
+      "yaml"
     ],
     "assets": [
       {
         "name": "TESTING.md Test Plan",
         "type": "text/md",
-        "uri": "https://raw.githubusercontent.com/NASA-AMMOS/slim/main/static/assets/software-lifecycle/continuous-testing/TESTING.md"
+        "uri": "https://raw.githubusercontent.com/NASA-AMMOS/slim/main/static/assets/software-lifecycle/continuous-testing/TESTING.md",
+        "alias": "testing-plan"
       },
       {
         "name": "Static Tests Pre-commit Configuration",
-        "type": "text/md",
-        "uri": "https://raw.githubusercontent.com/NASA-AMMOS/slim/refs/heads/main/static/assets/software-lifecycle/continuous-testing/pre-commit-config.yaml"
+        "type": "text/yaml",
+        "uri": "https://raw.githubusercontent.com/NASA-AMMOS/slim/refs/heads/main/static/assets/software-lifecycle/continuous-testing/pre-commit-config.yaml",
+        "alias": "static-tests-precommit"
       }
     ]
   },
@@ -262,18 +366,22 @@
       "software-lifecycle",
       "security",
       "testing",
-      "tools"
+      "tools",
+      "dependabot",
+      "codeql"
     ]
   },
   {
     "title": "Metrics Tracking",
     "uri": "/slim/docs/guides/software-lifecycle/metrics",
-    "category": "metrics tracking",
+    "category": "software lifecycle",
     "description": "Recommendations for metrics collection and an installation tool for Apache DevLake.",
     "tags": [
       "software-lifecycle",
-      "metrics",
-      "tools"
+      "metrics", 
+      "tools",
+      "DORA",
+      "devlake"
     ],
     "assets": [
       {
@@ -282,7 +390,6 @@
         "uri": "https://raw.githubusercontent.com/NASA-AMMOS/slim/main/static/assets/software-lifecycle/metrics/metrics.yml"
       }
     ]
-
   },
   {
     "title": "Container Vulnerability Scanning",
@@ -293,13 +400,39 @@
       "software-lifecycle",
       "security",
       "vulnerability-scanning",
-      "tools"
+      "tools",
+      "docker",
+      "pre-commit",
+      "yaml"
     ],
     "assets": [
       {
         "name": "Grype Pre-commit Configuration",
         "type": "text/yaml",
-        "uri": "https://raw.githubusercontent.com/NASA-AMMOS/slim/main/static/assets/software-lifecycle/security/container-vulnerability-scanning/.pre-commit-config.yaml"
+        "uri": "https://raw.githubusercontent.com/NASA-AMMOS/slim/main/static/assets/software-lifecycle/security/container-vulnerability-scanning/pre-commit-config.yml",
+        "alias": "container-scan-precommit"
+      }
+    ]
+  },
+  {
+    "title": "Website",
+    "uri": "/slim/docs/guides/documentation/website",
+    "category": "documentation",
+    "description": "Template project to help set up a software product website with documentation.",
+    "tags": [
+      "documentation",
+      "website",
+      "tools",
+      "docusaurus",
+      "git",
+      "github"
+    ],
+    "assets": [
+      {
+        "name": "SLIM's Docusaurus Website Starter Kit (Git Project)",
+        "type": "application/x-git",
+        "uri": "https://github.com/NASA-AMMOS/slim-docsite-template.git",
+        "alias": "docs-website"
       }
     ]
   },
@@ -312,7 +445,8 @@
       "continuous-delivery",
       "automation",
       "pipelines",
-      "software-lifecycle"
+      "software-lifecycle",
+      "ci-cd"
     ]
   }
 ]
