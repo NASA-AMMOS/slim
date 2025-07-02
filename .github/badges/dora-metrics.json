@@ -1,0 +1,6 @@
+{
+  "schemaVersion": 1,
+  "label": "DORA Metrics",
+  "message": "Deployment Frequency: High | Lead Time: Medium | Change Failure Rate: Elite | Mean Time to Recovery: N/A",
+  "color": "blue"
+}
