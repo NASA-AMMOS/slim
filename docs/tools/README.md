@@ -199,15 +199,25 @@ slim models setup anthropic
 
 The SLIM CLI includes a website generator that can automatically create [Docusaurus](https://docusaurus.io/) documentation from your repository content:
 
+#### Demo
+
+Watch SLIM CLI documentation generation in action:
+
+<p style={{textAlign: 'center', marginBottom: '5px'}}>
+  <a href="#" onClick={(e) => {e.preventDefault(); document.getElementById('slim-cli-docs-video').currentTime = 0; document.getElementById('slim-cli-docs-video').play();}} style={{fontSize: '20px', color: '#666'}}>🔄 Restart Demo</a>
+</p>
+<video id="slim-cli-docs-video" src="/slim/img/tools/slim-cli-demo-docs.webm" width="100%" controls>
+  Your browser does not support the video tag.
+</video>
+
+#### Example Usage
+
 ```bash
-# Generate documentation with AI enhancement (recommended)
-slim apply --best-practice-ids docs-website --repo-dir /path/to/your/repo --output-dir /path/to/output --use-ai openai/gpt-4o
+# Generate documentation with AI enhancement using local Ollama Llama 3.1
+slim apply --best-practice-ids docs-website --repo-dir /path/to/your/repo --output-dir /path/to/output --use-ai ollama/llama3.1
 
-# Generate template-only structure without repository analysis
-slim apply --best-practice-ids docs-website --template-only --output-dir ../docs-site
-
-# Revise an existing documentation site
-slim apply --best-practice-ids docs-website --revise-site --repo-dir /path/to/your/repo --output-dir ./docs-site --use-ai openai/gpt-4o
+# Generate documentation with AI enhancement using Anthropic Claude
+slim apply --best-practice-ids docs-website --repo-dir /path/to/your/repo --output-dir /path/to/output --use-ai anthropic/claude-3-5-sonnet-20241022
 ```
 
 **AI Model Recommendations:**
