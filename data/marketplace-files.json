@@ -1,0 +1,610 @@
+{
+  "skills": {
+    "slim-changelog": {
+      "name": "slim-changelog",
+      "type": "directory",
+      "children": [
+        {
+          "name": "SKILL.md",
+          "type": "file",
+          "path": "SKILL.md",
+          "size": 7493
+        },
+        {
+          "name": "assets",
+          "type": "directory",
+          "path": "assets",
+          "children": [
+            {
+              "name": "CHANGELOG.md",
+              "type": "file",
+              "path": "assets/CHANGELOG.md",
+              "size": 495
+            }
+          ],
+          "fileCount": 1
+        }
+      ],
+      "fileCount": 2
+    },
+    "slim-code-of-conduct": {
+      "name": "slim-code-of-conduct",
+      "type": "directory",
+      "children": [
+        {
+          "name": "SKILL.md",
+          "type": "file",
+          "path": "SKILL.md",
+          "size": 12712
+        },
+        {
+          "name": "assets",
+          "type": "directory",
+          "path": "assets",
+          "children": [
+            {
+              "name": "CITATION.cff",
+              "type": "file",
+              "path": "assets/CITATION.cff",
+              "size": 1494
+            },
+            {
+              "name": "CODE_OF_COLLAB.md",
+              "type": "file",
+              "path": "assets/CODE_OF_COLLAB.md",
+              "size": 4475
+            },
+            {
+              "name": "CODE_OF_CONDUCT.md",
+              "type": "file",
+              "path": "assets/CODE_OF_CONDUCT.md",
+              "size": 5480
+            }
+          ],
+          "fileCount": 3
+        }
+      ],
+      "fileCount": 4
+    },
+    "slim-container-vulnerability-scanning": {
+      "name": "slim-container-vulnerability-scanning",
+      "type": "directory",
+      "children": [
+        {
+          "name": "SKILL.md",
+          "type": "file",
+          "path": "SKILL.md",
+          "size": 9022
+        },
+        {
+          "name": "assets",
+          "type": "directory",
+          "path": "assets",
+          "children": [
+            {
+              "name": "pre-commit-config.yml",
+              "type": "file",
+              "path": "assets/pre-commit-config.yml",
+              "size": 803
+            }
+          ],
+          "fileCount": 1
+        }
+      ],
+      "fileCount": 2
+    },
+    "slim-continuous-testing": {
+      "name": "slim-continuous-testing",
+      "type": "directory",
+      "children": [
+        {
+          "name": "SKILL.md",
+          "type": "file",
+          "path": "SKILL.md",
+          "size": 8315
+        },
+        {
+          "name": "assets",
+          "type": "directory",
+          "path": "assets",
+          "children": [
+            {
+              "name": "TESTING.md",
+              "type": "file",
+              "path": "assets/TESTING.md",
+              "size": 2260
+            },
+            {
+              "name": "pre-commit-config.yaml",
+              "type": "file",
+              "path": "assets/pre-commit-config.yaml",
+              "size": 2132
+            }
+          ],
+          "fileCount": 2
+        }
+      ],
+      "fileCount": 3
+    },
+    "slim-contributing-guide": {
+      "name": "slim-contributing-guide",
+      "type": "directory",
+      "children": [
+        {
+          "name": "SKILL.md",
+          "type": "file",
+          "path": "SKILL.md",
+          "size": 23160
+        },
+        {
+          "name": "assets",
+          "type": "directory",
+          "path": "assets",
+          "children": [
+            {
+              "name": "CONTRIBUTING.md",
+              "type": "file",
+              "path": "assets/CONTRIBUTING.md",
+              "size": 21730
+            }
+          ],
+          "fileCount": 1
+        }
+      ],
+      "fileCount": 2
+    },
+    "slim-executive-summary": {
+      "name": "slim-executive-summary",
+      "type": "directory",
+      "children": [
+        {
+          "name": "SKILL.md",
+          "type": "file",
+          "path": "SKILL.md",
+          "size": 7618
+        },
+        {
+          "name": "assets",
+          "type": "directory",
+          "path": "assets",
+          "children": [
+            {
+              "name": "executive-summary-template.md",
+              "type": "file",
+              "path": "assets/executive-summary-template.md",
+              "size": 2488
+            }
+          ],
+          "fileCount": 1
+        }
+      ],
+      "fileCount": 2
+    },
+    "slim-governance": {
+      "name": "slim-governance",
+      "type": "directory",
+      "children": [
+        {
+          "name": "SKILL.md",
+          "type": "file",
+          "path": "SKILL.md",
+          "size": 11314
+        },
+        {
+          "name": "assets",
+          "type": "directory",
+          "path": "assets",
+          "children": [
+            {
+              "name": "governance-large.md",
+              "type": "file",
+              "path": "assets/governance-large.md",
+              "size": 11465
+            },
+            {
+              "name": "governance-medium.md",
+              "type": "file",
+              "path": "assets/governance-medium.md",
+              "size": 6673
+            },
+            {
+              "name": "governance-small.md",
+              "type": "file",
+              "path": "assets/governance-small.md",
+              "size": 4532
+            }
+          ],
+          "fileCount": 3
+        }
+      ],
+      "fileCount": 4
+    },
+    "slim-issue-templates": {
+      "name": "slim-issue-templates",
+      "type": "directory",
+      "children": [
+        {
+          "name": "SKILL.md",
+          "type": "file",
+          "path": "SKILL.md",
+          "size": 4779
+        },
+        {
+          "name": "assets",
+          "type": "directory",
+          "path": "assets",
+          "children": [
+            {
+              "name": "bug_report.md",
+              "type": "file",
+              "path": "assets/bug_report.md",
+              "size": 877
+            },
+            {
+              "name": "bug_report.yml",
+              "type": "file",
+              "path": "assets/bug_report.yml",
+              "size": 1954
+            },
+            {
+              "name": "new_feature.md",
+              "type": "file",
+              "path": "assets/new_feature.md",
+              "size": 645
+            },
+            {
+              "name": "new_feature.yml",
+              "type": "file",
+              "path": "assets/new_feature.yml",
+              "size": 1614
+            }
+          ],
+          "fileCount": 4
+        }
+      ],
+      "fileCount": 5
+    },
+    "slim-license": {
+      "name": "slim-license",
+      "type": "directory",
+      "children": [
+        {
+          "name": "SKILL.md",
+          "type": "file",
+          "path": "SKILL.md",
+          "size": 3283
+        },
+        {
+          "name": "assets",
+          "type": "directory",
+          "path": "assets",
+          "children": [
+            {
+              "name": "LICENSE-APACHE",
+              "type": "file",
+              "path": "assets/LICENSE-APACHE",
+              "size": 11358
+            },
+            {
+              "name": "LICENSE-APACHE-JPL",
+              "type": "file",
+              "path": "assets/LICENSE-APACHE-JPL",
+              "size": 11427
+            },
+            {
+              "name": "LICENSE-MIT",
+              "type": "file",
+              "path": "assets/LICENSE-MIT",
+              "size": 1059
+            },
+            {
+              "name": "LICENSE-MIT-JPL",
+              "type": "file",
+              "path": "assets/LICENSE-MIT-JPL",
+              "size": 1145
+            }
+          ],
+          "fileCount": 4
+        }
+      ],
+      "fileCount": 5
+    },
+    "slim-meeting-agenda": {
+      "name": "slim-meeting-agenda",
+      "type": "directory",
+      "children": [
+        {
+          "name": "SKILL.md",
+          "type": "file",
+          "path": "SKILL.md",
+          "size": 3661
+        },
+        {
+          "name": "WORKFLOW.md",
+          "type": "file",
+          "path": "WORKFLOW.md",
+          "size": 13744
+        },
+        {
+          "name": "assets",
+          "type": "directory",
+          "path": "assets",
+          "children": [
+            {
+              "name": "meeting-agenda-template.md",
+              "type": "file",
+              "path": "assets/meeting-agenda-template.md",
+              "size": 1413
+            }
+          ],
+          "fileCount": 1
+        }
+      ],
+      "fileCount": 3
+    },
+    "slim-meeting-summary": {
+      "name": "slim-meeting-summary",
+      "type": "directory",
+      "children": [
+        {
+          "name": "SKILL.md",
+          "type": "file",
+          "path": "SKILL.md",
+          "size": 7806
+        },
+        {
+          "name": "assets",
+          "type": "directory",
+          "path": "assets",
+          "children": [
+            {
+              "name": "meeting-summary-template.md",
+              "type": "file",
+              "path": "assets/meeting-summary-template.md",
+              "size": 1161
+            }
+          ],
+          "fileCount": 1
+        }
+      ],
+      "fileCount": 2
+    },
+    "slim-project-aware-workspace": {
+      "name": "slim-project-aware-workspace",
+      "type": "directory",
+      "children": [
+        {
+          "name": "SKILL.md",
+          "type": "file",
+          "path": "SKILL.md",
+          "size": 5637
+        },
+        {
+          "name": "assets",
+          "type": "directory",
+          "path": "assets",
+          "children": [
+            {
+              "name": "AGENTS.md",
+              "type": "file",
+              "path": "assets/AGENTS.md",
+              "size": 5488
+            },
+            {
+              "name": "MEETINGS.md",
+              "type": "file",
+              "path": "assets/MEETINGS.md",
+              "size": 596
+            },
+            {
+              "name": "PRODUCTS.md",
+              "type": "file",
+              "path": "assets/PRODUCTS.md",
+              "size": 884
+            },
+            {
+              "name": "PROJECT.md",
+              "type": "file",
+              "path": "assets/PROJECT.md",
+              "size": 909
+            },
+            {
+              "name": "TEAM.md",
+              "type": "file",
+              "path": "assets/TEAM.md",
+              "size": 1451
+            },
+            {
+              "name": "TECH.md",
+              "type": "file",
+              "path": "assets/TECH.md",
+              "size": 1832
+            }
+          ],
+          "fileCount": 6
+        },
+        {
+          "name": "scripts",
+          "type": "directory",
+          "path": "scripts",
+          "children": [
+            {
+              "name": "create_ai_workspace.py",
+              "type": "file",
+              "path": "scripts/create_ai_workspace.py",
+              "size": 6508
+            }
+          ],
+          "fileCount": 1
+        }
+      ],
+      "fileCount": 8
+    },
+    "slim-readme": {
+      "name": "slim-readme",
+      "type": "directory",
+      "children": [
+        {
+          "name": "SKILL.md",
+          "type": "file",
+          "path": "SKILL.md",
+          "size": 6322
+        },
+        {
+          "name": "assets",
+          "type": "directory",
+          "path": "assets",
+          "children": [
+            {
+              "name": "README.md",
+              "type": "file",
+              "path": "assets/README.md",
+              "size": 6229
+            }
+          ],
+          "fileCount": 1
+        }
+      ],
+      "fileCount": 2
+    },
+    "slim-skill-creator": {
+      "name": "slim-skill-creator",
+      "type": "directory",
+      "children": [
+        {
+          "name": "SKILL.md",
+          "type": "file",
+          "path": "SKILL.md",
+          "size": 22703
+        },
+        {
+          "name": "assets",
+          "type": "directory",
+          "path": "assets",
+          "children": [
+            {
+              "name": "quality-checklist.md",
+              "type": "file",
+              "path": "assets/quality-checklist.md",
+              "size": 12040
+            },
+            {
+              "name": "registry-entry-template.json",
+              "type": "file",
+              "path": "assets/registry-entry-template.json",
+              "size": 1584
+            },
+            {
+              "name": "registry-management.md",
+              "type": "file",
+              "path": "assets/registry-management.md",
+              "size": 11678
+            },
+            {
+              "name": "skill-development-patterns.md",
+              "type": "file",
+              "path": "assets/skill-development-patterns.md",
+              "size": 10901
+            },
+            {
+              "name": "skill-template.md",
+              "type": "file",
+              "path": "assets/skill-template.md",
+              "size": 6379
+            }
+          ],
+          "fileCount": 5
+        },
+        {
+          "name": "scripts",
+          "type": "directory",
+          "path": "scripts",
+          "children": [
+            {
+              "name": "create-skill-directory.py",
+              "type": "file",
+              "path": "scripts/create-skill-directory.py",
+              "size": 4711
+            },
+            {
+              "name": "extract-categories.py",
+              "type": "file",
+              "path": "scripts/extract-categories.py",
+              "size": 10904
+            },
+            {
+              "name": "update-registry.py",
+              "type": "file",
+              "path": "scripts/update-registry.py",
+              "size": 9304
+            },
+            {
+              "name": "validate-skill.py",
+              "type": "file",
+              "path": "scripts/validate-skill.py",
+              "size": 12180
+            }
+          ],
+          "fileCount": 4
+        }
+      ],
+      "fileCount": 10
+    },
+    "slim-website": {
+      "name": "slim-website",
+      "type": "directory",
+      "children": [
+        {
+          "name": "SKILL.md",
+          "type": "file",
+          "path": "SKILL.md",
+          "size": 13432
+        },
+        {
+          "name": "assets",
+          "type": "directory",
+          "path": "assets",
+          "children": [
+            {
+              "name": "docusaurus-guide.md",
+              "type": "file",
+              "path": "assets/docusaurus-guide.md",
+              "size": 4532
+            }
+          ],
+          "fileCount": 1
+        }
+      ],
+      "fileCount": 2
+    }
+  },
+  "mcp-servers": {
+    "github-mcp-server": {
+      "name": "github-mcp-server",
+      "type": "directory",
+      "children": [
+        {
+          "name": "MCP.md",
+          "type": "file",
+          "path": "MCP.md",
+          "size": 4385
+        },
+        {
+          "name": "assets",
+          "type": "directory",
+          "path": "assets",
+          "children": [
+            {
+              "name": "claude-code-config.example",
+              "type": "file",
+              "path": "assets/claude-code-config.example",
+              "size": 2050
+            }
+          ],
+          "fileCount": 1
+        }
+      ],
+      "fileCount": 2
+    }
+  }
+}
