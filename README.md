@@ -1,98 +1,52 @@
-<!-- Header block for project -->
-<hr>
+# SLIM - Software Lifecycle Improvement & Modernization
 
-<div align="center">
+An AI-native platform where DevOps best practices are discoverable and executable by AI agents through Claude Code skills, MCP servers, and autonomous agents.
 
-<img src="https://raw.githubusercontent.com/NASA-AMMOS/slim/main/static/img/logo.svg" alt="SLIM Logo" height="275"/>
+## Architecture
 
-<!-- ☝️ If you see logo rendering errors, make sure you're not using indentation, or try an HTML IMG tag -->
+This repository follows a "Single Source of Truth" philosophy:
 
-<h1 align="center">Software Lifecycle Improvement & Modernization (SLIM)</h1>
+- **static/marketplace/**: Complete skills, agents, and MCP servers with content only (no metadata files)
+- **static/data/registry.json**: Manually curated marketplace metadata registry
+- **website/**: Docusaurus-based website for browsing and discovering best practices
 
-</div>
+## Getting Started
 
-<pre align="center">Modernizing software through the automated infusion of best practices.</pre>
+### For Users
 
-<!-- Header block for project -->
+Browse available skills at the SLIM website, then install via:
 
-[![SLIM](https://img.shields.io/badge/Best%20Practices%20from-SLIM-blue)](https://nasa-ammos.github.io/slim/)
+**Claude Code:**
+```bash
+/plugin install https://github.com/NASA-AMMOS/slim/tree/main/static/marketplace/skills/<skill-name>
+```
 
-![screen-slim](https://github.com/NASA-AMMOS/slim/assets/3129134/d4da5150-aae6-4986-b18e-5c463f8ff38a)
+**Gemini:**
+```bash
+gem install slim-<skill-name>
+```
 
-This repository hosts the SLIM website, a project aimed at developing a common set of best practices in software development standards for NASA multi-mission space and ground software. The website leverages Docusaurus 2, a static website generator.  
+### For Contributors
 
-[Website](https://nasa-ammos.github.io/slim/) | [Discussion Board](https://github.com/NASA-AMMOS/slim/discussions) | [Issue Tracker](https://github.com/NASA-AMMOS/slim/issues)
+1. Add your skill content to `static/marketplace/skills/<skill-name>/` (SKILL.md, assets, scripts, etc.)
+2. Manually add/update the skill entry in `static/data/registry.json`
+3. Test the website: `cd website && npm run serve`
+4. Submit a pull request
 
-## Features
+**Note:** Skills contain only content files (SKILL.md, assets, scripts, references). All metadata is maintained in registry.json.
 
-* Community-developed best practices and recommendations for software development encoded as Markdown guides
-* Static content for the SLIM website, including live preview during local development, and deployment support for GitHub pages hosting
+## Available Skills
 
-## Contents
-
-* [Quick Start](#quick-start)
-* [Changelog](#changelog)
-* [FAQ](#frequently-asked-questions-faq)
-* [Contributing Guide](#contributing)
-* [License](#license)
-* [Support](#support)
-
-## Quick Start
-
-To get started with the SLIM project website (including developing and building / deploying it), please follow the steps below.
-
-### Requirements
-
-* Node.js 12 or higher
-* Yarn package manager
-  
-### Setup Instructions
-
-1. Clone the repository
-2. Navigate into the directory
-3. Run `yarn` to install dependencies
-
-### Run Instructions
-
-1. Run `yarn start` to start a local development server
-2. The command should open a browser window with the website running
-
-### Usage Examples
-
-* After making changes to the website, you can see them reflected live in your browser without having to restart the server.
-
-### Build Instructions
-
-1. Run `yarn build` to generate static content into the `build` directory
-
-### Test Instructions
-
-1. After building, the website can be served using any static contents hosting service.
-
-## Changelog
-
-See our [CHANGELOG.md](CHANGELOG.md) for a history of our changes.
-
-See our [releases page](https://github.com/NASA-AMMOS/slim/releases) for our key versioned releases.
-
-## Frequently Asked Questions (FAQ)
-
-Ask us a question in our [discussion board](https://github.com/NASA-AMMOS/slim/discussions). We'll migrate common questions here. 
-
-## Contributing
-
-Please refer to the following resources for more information on contributing:
-
-- To learn how to contribute to our project, please consult our [Contributing Guide](CONTRIBUTING.md).
-- To understand the community ideals and policies we adhere to, please review our [Code of Conduct](CODE_OF_CONDUCT.md).
-- For insights into the governance model that governs our project, please refer to our [Governance Model](GOVERNANCE.md).
+- **new-project**: Initialize foundational project structure
+- **license**: Add appropriate open source licenses
+- **issue-templates**: GitHub issue templates for bugs and features
+- **readme**: Comprehensive README.md templates
 
 ## License
 
-Please refer to our [LICENSE](LICENSE) for details regarding the licensing terms and conditions of our project.
+Apache 2.0 - see LICENSE file
 
-## Support
+## Credits
 
-For inquiries regarding support, please reach out to the members of our [Technical Steering Committee](https://github.com/orgs/NASA-AMMOS/teams/slim-tsc). They will be able to provide you with the necessary information and assistance.
-
----
+- UI components adapted from [aitmpl.com](https://aitmpl.com) (MIT License)
+- Maintained by NASA AMMOS SLIM team

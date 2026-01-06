@@ -47,19 +47,288 @@ body {
 }
 
 [data-theme='dark'] .card {
-  background-color: #3b3b3b !important;
-  color: #FFF;
+  background-color: #2a2d31 !important;
+  color: #e3e4e6 !important;
+}
+[data-theme='dark'] .card .card-header {
+  background-color: #1e2125 !important;
+  color: #e3e4e6 !important;
+  border-bottom-color: #404347 !important;
+}
+[data-theme='dark'] .card .card-body {
+  background-color: #2a2d31 !important;
+}
+
+/* Ensure skill card borders are visible in dark mode, but preserve left border color coding */
+[data-theme='dark'] .skill-card {
+  border-top-color: #404347 !important;
+  border-right-color: #404347 !important;
+  border-bottom-color: #404347 !important;
+  /* Left border color is preserved from inline style for type-based color coding */
 }
 [data-theme='dark'] .list-group-item {
-  background-color: #3b3b3b !important;
-  color: #FFF;
+  background-color: #2a2d31 !important;
+  color: #e3e4e6 !important;
+  border-color: #404347 !important;
+}
+[data-theme='dark'] .list-group-item:hover {
+  background-color: #33373b !important;
+}
+[data-theme='dark'] .list-group-item.active {
+  background-color: var(--ifm-color-primary-dark) !important;
+  border-color: var(--ifm-color-primary-dark) !important;
 }
 [data-theme='dark'] .navbar {
   background-color: #1c1c1c !important;
   color: #FFF;
 }
+[data-theme='dark'] .dropdown-menu {
+  background-color: #2a2d31 !important;
+  border-color: #404347 !important;
+}
+
 [data-theme='dark'] .dropdown-item {
-  color: unset;
+  color: #e3e4e6 !important;
+}
+
+[data-theme='dark'] .dropdown-item:hover {
+  background-color: #33373b !important;
+  color: #ffffff !important;
+}
+
+[data-theme='dark'] .modal-content {
+  background-color: #2a2d31 !important;
+  border-color: #404347 !important;
+}
+
+[data-theme='dark'] .modal-header {
+  background-color: #1e2125 !important;
+  border-bottom-color: #404347 !important;
+}
+
+[data-theme='dark'] .modal-title {
+  color: #e3e4e6 !important;
+}
+
+[data-theme='dark'] .modal-footer {
+  background-color: #1e2125 !important;
+  border-top-color: #404347 !important;
+}
+
+/* Close button visibility in dark mode */
+[data-theme='dark'] .btn-close {
+  filter: invert(1) grayscale(100%) brightness(200%) !important;
+  opacity: 0.8 !important;
+}
+
+[data-theme='dark'] .btn-close:hover {
+  opacity: 1 !important;
+}
+
+/* Modal button styling for dark mode */
+[data-theme='dark'] .modal-footer .btn-primary {
+  background-color: var(--ifm-color-primary-dark) !important;
+  border-color: var(--ifm-color-primary-dark) !important;
+  color: #000000 !important;
+}
+
+[data-theme='dark'] .modal-footer .btn-primary:hover {
+  background-color: var(--ifm-color-primary-lightest) !important;
+  border-color: var(--ifm-color-primary-lightest) !important;
+  color: #000000 !important;
+}
+
+[data-theme='dark'] .modal-footer .btn-secondary {
+  background-color: #555860 !important;
+  border-color: #555860 !important;
+  color: #e3e4e6 !important;
+}
+
+[data-theme='dark'] .modal-footer .btn-secondary:hover {
+  background-color: #6b7280 !important;
+  border-color: #6b7280 !important;
+  color: #ffffff !important;
+}
+
+[data-theme='dark'] .modal-body {
+  color: #e3e4e6 !important;
+}
+
+/* File size badge in modal header */
+[data-theme='dark'] .modal-header .badge {
+  background-color: #404347 !important;
+  color: #a8a9ab !important;
+}
+
+/* Alert styling in dark mode */
+[data-theme='dark'] .alert {
+  border-color: #404347 !important;
+}
+
+[data-theme='dark'] .alert-info {
+  background-color: rgba(13, 110, 253, 0.15) !important;
+  color: #9ec5fe !important;
+  border-color: rgba(13, 110, 253, 0.3) !important;
+}
+
+[data-theme='dark'] .alert-warning {
+  background-color: rgba(255, 193, 7, 0.15) !important;
+  color: #ffc107 !important;
+  border-color: rgba(255, 193, 7, 0.3) !important;
+}
+
+[data-theme='dark'] .alert-danger {
+  background-color: rgba(220, 53, 69, 0.15) !important;
+  color: #ea868f !important;
+  border-color: rgba(220, 53, 69, 0.3) !important;
+}
+
+/* Markdown content in modals - dark mode enhancements */
+[data-theme='dark'] .markdown-content h1 {
+  border-bottom-color: #404347 !important;
+}
+
+[data-theme='dark'] .markdown-content code {
+  background-color: #1a1d21 !important;
+  color: #e78a96 !important;
+}
+
+[data-theme='dark'] .markdown-content pre {
+  background-color: #1a1d21 !important;
+  border: 1px solid #404347;
+}
+
+[data-theme='dark'] .markdown-content blockquote {
+  border-left-color: var(--ifm-color-primary-lightest) !important;
+  color: #a8a9ab !important;
+}
+
+[data-theme='dark'] .markdown-content table th,
+[data-theme='dark'] .markdown-content table td {
+  border-color: #404347 !important;
+}
+
+[data-theme='dark'] .markdown-content table th {
+  background-color: #1e2125 !important;
+}
+
+/* Dark mode improvements for skill cards */
+[data-theme='dark'] .skill-card .p-3 {
+  background-color: #1e2125 !important;
+  border-color: #404347 !important;
+}
+
+[data-theme='dark'] .nav-tabs {
+  border-bottom-color: #404347 !important;
+}
+
+[data-theme='dark'] .nav-tabs .nav-link {
+  background-color: #1e2125 !important;
+  color: #a8a9ab !important;
+  border-color: #404347 !important;
+}
+
+[data-theme='dark'] .nav-tabs .nav-link:hover {
+  background-color: #2a2d31 !important;
+  color: #e3e4e6 !important;
+  border-color: #404347 !important;
+}
+
+[data-theme='dark'] .nav-tabs .nav-link.active {
+  background-color: #2a2d31 !important;
+  color: var(--ifm-color-primary-lightest) !important;
+  border-color: #404347 #404347 #2a2d31 !important;
+}
+
+[data-theme='dark'] code {
+  background-color: #1a1d21 !important;
+  color: #e78a96 !important;
+  padding: 2px 6px;
+  border-radius: 3px;
+}
+
+[data-theme='dark'] .btn-outline-primary {
+  color: var(--ifm-color-primary-lightest) !important;
+  border-color: var(--ifm-color-primary-dark) !important;
+}
+
+[data-theme='dark'] .btn-outline-primary:hover {
+  background-color: var(--ifm-color-primary-dark) !important;
+  color: #ffffff !important;
+}
+
+[data-theme='dark'] .btn-outline-secondary {
+  color: #a8a9ab !important;
+  border-color: #555860 !important;
+}
+
+[data-theme='dark'] .btn-outline-secondary:hover {
+  background-color: #555860 !important;
+  color: #ffffff !important;
+}
+
+[data-theme='dark'] .btn-outline-warning {
+  color: #ffc107 !important;
+  border-color: #ffc107 !important;
+}
+
+[data-theme='dark'] .btn-outline-warning:hover {
+  background-color: #ffc107 !important;
+  color: #000000 !important;
+}
+
+[data-theme='dark'] .badge.bg-light {
+  background-color: #404347 !important;
+  color: #a8a9ab !important;
+}
+
+[data-theme='dark'] .badge.bg-secondary {
+  background-color: #555860 !important;
+  color: #e3e4e6 !important;
+}
+
+[data-theme='dark'] .text-muted {
+  color: #a8a9ab !important;
+}
+
+[data-theme='dark'] .form-control {
+  background-color: #1e2125 !important;
+  border-color: #404347 !important;
+  color: #e3e4e6 !important;
+}
+
+[data-theme='dark'] .form-control:focus {
+  background-color: #1e2125 !important;
+  border-color: var(--ifm-color-primary) !important;
+  color: #e3e4e6 !important;
+  box-shadow: 0 0 0 0.2rem rgba(79, 221, 191, 0.25) !important;
+}
+
+[data-theme='dark'] .form-control::placeholder {
+  color: #6b7280 !important;
+}
+
+[data-theme='dark'] .form-check-input {
+  background-color: #1e2125 !important;
+  border-color: #404347 !important;
+}
+
+[data-theme='dark'] .form-check-input:checked {
+  background-color: var(--ifm-color-primary-dark) !important;
+  border-color: var(--ifm-color-primary-dark) !important;
+}
+
+/* Search clear button styling */
+.search-clear-btn:hover {
+  color: var(--ifm-color-emphasis-800) !important;
+}
+
+[data-theme='dark'] .search-clear-btn {
+  color: #a8a9ab !important;
+}
+
+[data-theme='dark'] .search-clear-btn:hover {
+  color: #ffffff !important;
 }
 
 .footer .col {
@@ -208,4 +477,228 @@ a:hover {
 }
 [data-theme='dark'] .navbar__logo {
   content: url('/static/img/nasa-jpl-dark.png')
+}
+
+/* Full viewport hero */
+.hub-hero {
+  min-height: 100vh;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  overflow: hidden;
+}
+
+/* Center content container */
+.hub-hero-center {
+  position: relative;
+  z-index: 10;
+  text-align: center;
+}
+
+/* Corner features */
+.corner-feature {
+  position: absolute;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  max-width: 220px;
+  opacity: 0.9;
+  transition: opacity 0.3s ease;
+  z-index: 25;
+}
+
+.corner-feature:hover {
+  opacity: 1;
+}
+
+.corner-feature img {
+  width: 100px;
+  height: 100px;
+  margin-bottom: 12px;
+}
+
+.corner-feature p {
+  font-size: 1.1rem;
+  line-height: 1.5;
+  margin: 0;
+  color: var(--ifm-font-color-base);
+}
+
+/* Corner positions - vertically centered as groups */
+.corner-top-left {
+  top: 40%;
+  left: 12%;
+  transform: translate(-50%, -100%);
+}
+
+.corner-bottom-left {
+  top: 40%;
+  left: 12%;
+  transform: translate(-50%, 20px);
+}
+
+.corner-top-right {
+  top: 40%;
+  right: 12%;
+  transform: translate(50%, -100%);
+}
+
+.corner-bottom-right {
+  top: 40%;
+  right: 12%;
+  transform: translate(50%, 20px);
+}
+
+/* Scroll down button */
+.scroll-down-btn {
+  position: relative;
+  background: none;
+  border: none !important;
+  border-bottom: 3px solid #4fddbf !important;
+  border-radius: 0 !important;
+  cursor: pointer;
+  padding: 0.5rem;
+  margin-top: 2rem;
+  color: #4fddbf !important;
+  transition: all 0.3s ease;
+  z-index: 20;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  text-decoration: none !important;
+}
+
+.scroll-down-btn:hover {
+  color: #4fddbf !important;
+  border-bottom: 3px solid #4fddbf !important;
+  border-radius: 0 !important;
+  transform: translateY(5px);
+  text-decoration: none !important;
+}
+
+.scroll-arrow {
+  font-size: 2rem;
+  display: block;
+  animation: bounce 2s infinite;
+  color: #4fddbf;
+}
+
+@keyframes bounce {
+  0%, 20%, 50%, 80%, 100% {
+    transform: translateY(0);
+  }
+  40% {
+    transform: translateY(-10px);
+  }
+  60% {
+    transform: translateY(-5px);
+  }
+}
+
+/* Hub content section */
+#hub-content {
+  min-height: 100vh;
+  padding-top: 2rem;
+  position: relative;
+  z-index: 20;
+  background-color: var(--ifm-background-color);
+}
+
+/* Responsive adjustments for corner features */
+@media (max-width: 1200px) {
+  .corner-feature {
+    max-width: 180px;
+  }
+
+  .corner-feature img {
+    width: 80px;
+    height: 80px;
+  }
+
+  .corner-feature p {
+    font-size: 0.95rem;
+  }
+
+  .corner-top-left,
+  .corner-bottom-left {
+    left: 9%;
+  }
+
+  .corner-top-right,
+  .corner-bottom-right {
+    right: 9%;
+  }
+}
+
+@media (max-width: 996px) {
+  .corner-feature {
+    max-width: 160px;
+  }
+
+  .corner-feature img {
+    width: 70px;
+    height: 70px;
+  }
+
+  .corner-feature p {
+    font-size: 0.85rem;
+  }
+
+  .corner-top-left,
+  .corner-bottom-left {
+    left: 6%;
+  }
+
+  .corner-top-right,
+  .corner-bottom-right {
+    right: 6%;
+  }
+}
+
+/* Hide corner features on very small screens */
+@media (max-width: 768px) {
+  .corner-feature {
+    display: none;
+  }
+
+  .hub-hero-center img {
+    height: 200px !important;
+  }
+
+  .scroll-down-btn {
+    margin-top: 1.5rem;
+  }
+}
+
+/* Tag filter dropdown dark mode fix */
+[data-theme='dark'] .tag-filter-dropdown {
+  background-color: #2a2d31 !important;
+  border: 1px solid #404347 !important;
+}
+
+[data-theme='dark'] .tag-filter-dropdown .form-check {
+  color: #e3e4e6 !important;
+}
+
+[data-theme='dark'] .tag-filter-dropdown .form-check-label {
+  color: #e3e4e6 !important;
+}
+
+[data-theme='dark'] .tag-filter-dropdown .form-check-input {
+  background-color: #1e2125 !important;
+  border-color: #404347 !important;
+}
+
+[data-theme='dark'] .tag-filter-dropdown .form-check-input:checked {
+  background-color: var(--ifm-color-primary) !important;
+  border-color: var(--ifm-color-primary) !important;
+}
+
+[data-theme='dark'] .tag-filter-dropdown .form-check-input:focus {
+  border-color: var(--ifm-color-primary) !important;
+  box-shadow: 0 0 0 0.25rem rgba(79, 221, 191, 0.25) !important;
 }
