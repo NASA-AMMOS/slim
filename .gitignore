@@ -1,0 +1,6 @@
+# Development artifacts that shouldn't be in gh-pages
+build/
+node_modules/
+package-lock.json
+.docusaurus/
+static/
