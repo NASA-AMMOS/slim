@@ -133,6 +133,11 @@ const SkillCard = ({ skill, onTagClick, isHighlighted, currentFilters }) => {
 
   // Generate Claude Code install command for localhost (single-step with curl)
   const getClaudeCodeInstallCommand = (item) => {
+    // For external-only entries, Claude Code can't install them directly
+    if (item.external_only) {
+      return `# External ${item.type} - install manually using: ${getManualInstallCommand(item)}`;
+    }
+
     const isLocalhost =
       window.location.hostname === "localhost" ||
       window.location.hostname === "127.0.0.1";
@@ -150,6 +155,16 @@ const SkillCard = ({ skill, onTagClick, isHighlighted, currentFilters }) => {
 
   // Generate manual install command for localhost
   const getManualInstallCommand = (item) => {
+    // For external-only entries, use npm or direct repository instructions
+    if (item.external_only) {
+      if (item.type === 'mcp' && item.npm_package) {
+        return `npm install -g ${item.npm_package}`;
+      } else if (item.repository?.url) {
+        return `git clone ${item.repository.url}`;
+      }
+      return `# Visit ${item.repository?.url || 'the official repository'} for installation instructions`;
+    }
+
     const isLocalhost =
       window.location.hostname === "localhost" ||
       window.location.hostname === "127.0.0.1";

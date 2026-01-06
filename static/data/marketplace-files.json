@@ -578,33 +578,5 @@
       "fileCount": 2
     }
   },
-  "mcp-servers": {
-    "github-mcp-server": {
-      "name": "github-mcp-server",
-      "type": "directory",
-      "children": [
-        {
-          "name": "MCP.md",
-          "type": "file",
-          "path": "MCP.md",
-          "size": 4385
-        },
-        {
-          "name": "assets",
-          "type": "directory",
-          "path": "assets",
-          "children": [
-            {
-              "name": "claude-code-config.example",
-              "type": "file",
-              "path": "assets/claude-code-config.example",
-              "size": 2050
-            }
-          ],
-          "fileCount": 1
-        }
-      ],
-      "fileCount": 2
-    }
-  }
+  "mcp-servers": {}
 }

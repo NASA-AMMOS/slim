@@ -91,6 +91,10 @@ function generateMarketplaceZips() {
   if (registry.skills && Array.isArray(registry.skills)) {
     console.log(`📦 Processing ${registry.skills.length} skills...`);
     for (const skill of registry.skills) {
+      if (skill.external_only) {
+        console.log(`ℹ Skipping ${skill.name}: external-only entry`);
+        continue;
+      }
       totalItems++;
       if (createZip(skill.name, 'skills')) {
         successCount++;
@@ -104,6 +108,10 @@ function generateMarketplaceZips() {
   if (registry.mcp && Array.isArray(registry.mcp)) {
     console.log(`\n🔌 Processing ${registry.mcp.length} MCP servers...`);
     for (const mcp of registry.mcp) {
+      if (mcp.external_only) {
+        console.log(`ℹ Skipping ${mcp.name}: external-only entry`);
+        continue;
+      }
       totalItems++;
       if (createZip(mcp.name, 'mcp-servers')) {
         successCount++;
@@ -117,6 +125,10 @@ function generateMarketplaceZips() {
   if (registry.agents && Array.isArray(registry.agents)) {
     console.log(`\n🤖 Processing ${registry.agents.length} agents...`);
     for (const agent of registry.agents) {
+      if (agent.external_only) {
+        console.log(`ℹ Skipping ${agent.name}: external-only entry`);
+        continue;
+      }
       totalItems++;
       if (createZip(agent.name, 'agents')) {
         successCount++;

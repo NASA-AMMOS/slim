@@ -284,7 +284,8 @@
         "url": "https://github.com/github/github-mcp-server",
         "type": "git"
       },
-      "skill_file_url": "/slim/marketplace/mcp-servers/github-mcp-server/MCP.md",
+      "skill_file_url": "https://raw.githubusercontent.com/github/github-mcp-server/main/README.md",
+      "external_only": true,
       "type": "mcp",
       "npm_package": "@github/github-mcp-server",
       "example": "Show me open pull requests in this repository"

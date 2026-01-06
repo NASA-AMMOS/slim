@@ -122,20 +122,25 @@
     },
     {
       "name": "slim-github-mcp-server",
-      "source": "./mcp-servers/github-mcp-server",
+      "source": "https://github.com/github/github-mcp-server",
       "description": "MCP server providing GitHub repository access and management capabilities including issues, PRs, and repository operations",
       "version": "1.0.0",
       "author": {
-        "name": "NASA AMMOS",
-        "url": "https://github.com/NASA-AMMOS"
+        "name": "GitHub",
+        "url": "https://github.com/github/github-mcp-server"
       },
       "category": "integrations",
-      "homepage": "https://github.com/NASA-AMMOS/slim/tree/main/static/marketplace/mcp-servers/github-mcp-server",
+      "homepage": "https://github.com/github/github-mcp-server",
       "keywords": [
         "github",
         "git",
-        "integration"
-      ]
+        "integration",
+        "external",
+        "third-party"
+      ],
+      "external_only": true,
+      "npm_package": "@github/github-mcp-server",
+      "install_command": "npm install -g @github/github-mcp-server"
     },
     {
       "name": "slim-governance",
