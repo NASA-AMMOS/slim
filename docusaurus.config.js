@@ -62,27 +62,15 @@ const config = {
         items: [
           {
             type: 'docSidebar',
-            sidebarId: 'guidesSidebar',
-            position: 'left',
-            label: 'Guides',
-          },
-          {
-            type: 'docSidebar',
-            sidebarId: 'toolsSidebar',
-            position: 'left',
-            label: 'Tools',
-          },
-          {
-            type: 'docSidebar',
             sidebarId: 'contributeSidebar',
             position: 'left',
             label: 'Contribute',
           },
           {
             type: 'docSidebar',
-            sidebarId: 'joinSidebar',
+            sidebarId: 'faqSidebar',
             position: 'left',
-            label: 'Join',
+            label: 'FAQ',
           },
           {
             type: 'docSidebar',
@@ -104,20 +92,12 @@ const config = {
             title: 'Resources',
             items: [
               {
-                label: 'Guides',
-                to: '/docs/guides/search',
-              },
-              {
-                label: 'Tools',
-                to: '/docs/tools',
-              },
-              {
                 label: 'Contribute',
                 to: '/docs/contribute/contributing/',
               },
               {
-                label: 'Join',
-                to: '/docs/join/',
+                label: 'FAQ',
+                to: '/docs/faq',
               },
               {
                 label: 'About',
@@ -173,7 +153,7 @@ const config = {
               '/continuous-testing/starter-kits', // without baseUrl
               '/slim/continuous-testing/starter-kits', // with baseUrl
             ],
-            to: '/docs/guides/software-lifecycle/security/secrets-detection/',
+            to: '/', // Redirect to marketplace hub
           },
         ],
       },

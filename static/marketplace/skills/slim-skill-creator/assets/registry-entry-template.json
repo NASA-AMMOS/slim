@@ -1,0 +1,50 @@
+{
+  "name": "[INSERT_SKILL_NAME]",
+  "displayName": "[INSERT_DISPLAY_NAME]",
+  "description": "[INSERT_BRIEF_MARKETPLACE_DESCRIPTION]",
+  "category": "[INSERT_CATEGORY]",
+  "tags": [
+    "[INSERT_TAG_1]",
+    "[INSERT_TAG_2]",
+    "[INSERT_TAG_3]",
+    "[INSERT_TAG_4]",
+    "[INSERT_TAG_5]"
+  ],
+  "version": "1.0.0",
+  "install_commands": {
+    "plugin": "/plugin install slim-[INSERT_SKILL_NAME]@slim-marketplace",
+    "marketplace_add_local_template": "/plugin marketplace add {{MARKETPLACE_PATH}}",
+    "marketplace_add_github": "/plugin marketplace add https://github.com/nasa-ammos/slim/tree/main/website/static/marketplace"
+  },
+  "download_url": "/slim/downloads/skills/[INSERT_SKILL_NAME].zip",
+  "skill_file_url": "/slim/marketplace/skills/[INSERT_SKILL_NAME]/SKILL.md",
+  "readme_url": "/slim/marketplace/skills/[INSERT_SKILL_NAME]/README.md",
+  "type": "skill",
+  "dependencies": {
+    "skills": [
+      "[INSERT_REQUIRED_SKILL_1]",
+      "[INSERT_REQUIRED_SKILL_2]"
+    ],
+    "mcp_servers": [
+      "[INSERT_REQUIRED_MCP_SERVER_1]",
+      "[INSERT_REQUIRED_MCP_SERVER_2]"
+    ],
+    "external": [
+      "[INSERT_EXTERNAL_DEPENDENCY_1]",
+      "[INSERT_EXTERNAL_DEPENDENCY_2]"
+    ]
+  },
+  "metadata": {
+    "created": "[INSERT_CREATION_DATE]",
+    "updated": "[INSERT_LAST_UPDATE_DATE]",
+    "author": "[INSERT_AUTHOR_NAME]",
+    "license": "[INSERT_LICENSE]",
+    "repository": "[INSERT_REPOSITORY_URL]",
+    "documentation": "[INSERT_DOCUMENTATION_URL]",
+    "keywords": [
+      "[INSERT_KEYWORD_1]",
+      "[INSERT_KEYWORD_2]",
+      "[INSERT_KEYWORD_3]"
+    ]
+  }
+}

@@ -1,0 +1,38 @@
+cff-version: 1.2.0
+title: "[INSERT PROJECT TITLE]"
+message: >-
+  If you use this software, please cite it using the Digital Object Identifier
+  (DOI) or information provided in this file.
+type: software
+authors:
+  - given-names: "[INSERT FIRST NAME]"
+    family-names: "[INSERT LAST NAME]"
+    orcid: '[INSERT ORCID ID if available, format: https://orcid.org/0000-0000-0000-0000]'
+    email: "[INSERT EMAIL]"
+    affiliation: "[INSERT INSTITUTION/ORGANIZATION]"
+identifiers:
+  - type: doi
+    value: "[INSERT DOI if available]"
+    description: "[INSERT DESCRIPTION OF PUBLICATION/DATASET]"
+repository-code: "[INSERT REPOSITORY URL]"
+url: "[INSERT PROJECT WEBSITE if available]"
+abstract: >-
+  [INSERT PROJECT ABSTRACT/DESCRIPTION - Brief summary of what the software does,
+  its purpose, and key capabilities]
+keywords:
+  - "[INSERT KEYWORD 1]"
+  - "[INSERT KEYWORD 2]"
+  - "[INSERT KEYWORD 3]"
+  - "[INSERT ADDITIONAL KEYWORDS]"
+license: "[INSERT LICENSE - e.g., Apache-2.0, MIT, BSD-3-Clause, GPL-3.0]"
+version: "[INSERT VERSION - e.g., 1.0.0]"
+date-released: "[INSERT RELEASE DATE - YYYY-MM-DD format]"
+references:
+  - type: "article"
+    authors:
+      - family-names: "[INSERT AUTHOR LAST NAME if applicable]"
+        given-names: "[INSERT AUTHOR FIRST NAME if applicable]"
+    title: "[INSERT RELATED PUBLICATION TITLE if applicable]"
+    year: "[INSERT PUBLICATION YEAR if applicable]"
+    journal: "[INSERT JOURNAL NAME if applicable]"
+    doi: "[INSERT PUBLICATION DOI if applicable]"

@@ -1,0 +1,116 @@
+/* Markdown rendering styles for modal */
+.markdown-content {
+  font-size: 0.95rem;
+  line-height: 1.6;
+}
+
+.markdown-content h1 {
+  font-size: 1.8rem;
+  margin-top: 1.5rem;
+  margin-bottom: 1rem;
+  color: var(--ifm-heading-color);
+  border-bottom: 2px solid var(--ifm-color-emphasis-300);
+  padding-bottom: 0.3rem;
+}
+
+.markdown-content h2 {
+  font-size: 1.5rem;
+  margin-top: 1.5rem;
+  margin-bottom: 0.8rem;
+  color: var(--ifm-heading-color);
+}
+
+.markdown-content h3 {
+  font-size: 1.25rem;
+  margin-top: 1.2rem;
+  margin-bottom: 0.6rem;
+  color: var(--ifm-heading-color);
+}
+
+.markdown-content h4 {
+  font-size: 1.1rem;
+  margin-top: 1rem;
+  margin-bottom: 0.5rem;
+  color: var(--ifm-heading-color);
+}
+
+.markdown-content p {
+  margin-bottom: 1rem;
+}
+
+.markdown-content ul,
+.markdown-content ol {
+  margin-bottom: 1rem;
+  padding-left: 2rem;
+}
+
+.markdown-content li {
+  margin-bottom: 0.25rem;
+}
+
+.markdown-content code {
+  background-color: var(--ifm-code-background);
+  color: var(--ifm-code-color);
+  padding: 0.2rem 0.4rem;
+  border-radius: 3px;
+  font-size: 0.9em;
+  font-family: var(--ifm-font-family-monospace);
+}
+
+.markdown-content pre {
+  background-color: var(--ifm-code-background);
+  padding: 1rem;
+  border-radius: 4px;
+  overflow-x: auto;
+  margin-bottom: 1rem;
+}
+
+.markdown-content pre code {
+  background-color: transparent;
+  padding: 0;
+}
+
+.markdown-content blockquote {
+  border-left: 4px solid var(--ifm-color-primary);
+  padding-left: 1rem;
+  margin-left: 0;
+  margin-bottom: 1rem;
+  color: var(--ifm-color-emphasis-700);
+}
+
+.markdown-content table {
+  width: 100%;
+  margin-bottom: 1rem;
+  border-collapse: collapse;
+}
+
+.markdown-content table th,
+.markdown-content table td {
+  padding: 0.5rem;
+  border: 1px solid var(--ifm-color-emphasis-300);
+}
+
+.markdown-content table th {
+  background-color: var(--ifm-color-emphasis-100);
+  font-weight: 600;
+}
+
+.markdown-content a {
+  color: var(--ifm-color-primary);
+  text-decoration: none;
+}
+
+.markdown-content a:hover {
+  text-decoration: underline;
+}
+
+.markdown-content hr {
+  margin: 1.5rem 0;
+  border: 0;
+  border-top: 1px solid var(--ifm-color-emphasis-300);
+}
+
+.markdown-content img {
+  max-width: 100%;
+  height: auto;
+}

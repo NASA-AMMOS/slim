@@ -1,0 +1,353 @@
+{
+  "name": "slim-marketplace",
+  "owner": {
+    "name": "NASA AMMOS",
+    "email": "slim@jpl.nasa.gov"
+  },
+  "metadata": {
+    "description": "SLIM - Software Lifecycle Improvement & Modernization best practices",
+    "version": "1.0.0"
+  },
+  "plugins": [
+    {
+      "name": "slim-changelog",
+      "source": "./skills/slim-changelog",
+      "description": "Create and maintain human-readable changelogs for software projects using Keep a Changelog standards",
+      "version": "1.0.0",
+      "author": {
+        "name": "NASA AMMOS",
+        "url": "https://github.com/NASA-AMMOS"
+      },
+      "category": "documentation",
+      "homepage": "https://github.com/NASA-AMMOS/slim/tree/main/static/marketplace/skills/slim-changelog",
+      "keywords": [
+        "documentation",
+        "versioning",
+        "templates",
+        "project-setup"
+      ]
+    },
+    {
+      "name": "slim-code-of-conduct",
+      "source": "./skills/slim-code-of-conduct",
+      "description": "Create and implement code of conduct and collaboration policies using Contributor Covenant standards, with specialized templates for scientific research environments and academic citation",
+      "version": "1.0.0",
+      "author": {
+        "name": "NASA AMMOS",
+        "url": "https://github.com/NASA-AMMOS"
+      },
+      "category": "governance",
+      "homepage": "https://github.com/NASA-AMMOS/slim/tree/main/static/marketplace/skills/slim-code-of-conduct",
+      "keywords": [
+        "governance",
+        "project-setup",
+        "templates",
+        "collaboration",
+        "community"
+      ]
+    },
+    {
+      "name": "slim-container-vulnerability-scanning",
+      "source": "./skills/slim-container-vulnerability-scanning",
+      "description": "Implement Grype-based container and dependency vulnerability scanning with automated pre-commit hooks",
+      "version": "1.0.0",
+      "author": {
+        "name": "NASA AMMOS",
+        "url": "https://github.com/NASA-AMMOS"
+      },
+      "category": "security",
+      "homepage": "https://github.com/NASA-AMMOS/slim/tree/main/static/marketplace/skills/slim-container-vulnerability-scanning",
+      "keywords": [
+        "security",
+        "containers",
+        "automation"
+      ]
+    },
+    {
+      "name": "slim-continuous-testing",
+      "source": "./skills/slim-continuous-testing",
+      "description": "Implement comprehensive testing strategies with documentation and automation templates for static analysis, security scanning, and code quality checks",
+      "version": "1.0.0",
+      "author": {
+        "name": "NASA AMMOS",
+        "url": "https://github.com/NASA-AMMOS"
+      },
+      "category": "testing",
+      "homepage": "https://github.com/NASA-AMMOS/slim/tree/main/static/marketplace/skills/slim-continuous-testing",
+      "keywords": [
+        "testing",
+        "automation",
+        "code-quality",
+        "deployment"
+      ]
+    },
+    {
+      "name": "slim-contributing-guide",
+      "source": "./skills/slim-contributing-guide",
+      "description": "Create comprehensive contributing guides for open source projects with workflow guidance and customizable templates",
+      "version": "1.0.0",
+      "author": {
+        "name": "NASA AMMOS",
+        "url": "https://github.com/NASA-AMMOS"
+      },
+      "category": "governance",
+      "homepage": "https://github.com/NASA-AMMOS/slim/tree/main/static/marketplace/skills/slim-contributing-guide",
+      "keywords": [
+        "governance",
+        "templates",
+        "project-setup",
+        "workflow",
+        "community",
+        "onboarding"
+      ]
+    },
+    {
+      "name": "slim-executive-summary",
+      "source": "./skills/slim-executive-summary",
+      "description": "Generate comprehensive executive summaries from workspace communication files using AI analysis with automatic context discovery",
+      "version": "1.0.0",
+      "author": {
+        "name": "NASA AMMOS",
+        "url": "https://github.com/NASA-AMMOS"
+      },
+      "category": "documentation",
+      "homepage": "https://github.com/NASA-AMMOS/slim/tree/main/static/marketplace/skills/slim-executive-summary",
+      "keywords": [
+        "ai-powered",
+        "reporting",
+        "analysis",
+        "project-management",
+        "workspace"
+      ]
+    },
+    {
+      "name": "slim-github-mcp-server",
+      "source": "./mcp-servers/github-mcp-server",
+      "description": "MCP server providing GitHub repository access and management capabilities including issues, PRs, and repository operations",
+      "version": "1.0.0",
+      "author": {
+        "name": "NASA AMMOS",
+        "url": "https://github.com/NASA-AMMOS"
+      },
+      "category": "integrations",
+      "homepage": "https://github.com/NASA-AMMOS/slim/tree/main/static/marketplace/mcp-servers/github-mcp-server",
+      "keywords": [
+        "github",
+        "git",
+        "integration"
+      ]
+    },
+    {
+      "name": "slim-governance",
+      "source": "./skills/slim-governance",
+      "description": "Team governance templates for government-sponsored open source projects (small, medium, large teams)",
+      "version": "1.0.0",
+      "author": {
+        "name": "NASA AMMOS",
+        "url": "https://github.com/NASA-AMMOS"
+      },
+      "category": "governance",
+      "homepage": "https://github.com/NASA-AMMOS/slim/tree/main/static/marketplace/skills/slim-governance",
+      "keywords": [
+        "governance",
+        "templates",
+        "project-setup",
+        "open-source",
+        "community"
+      ]
+    },
+    {
+      "name": "slim-issue-templates",
+      "source": "./skills/slim-issue-templates",
+      "description": "Add standardized GitHub issue templates for bug reports and feature requests in both Markdown and Form formats",
+      "version": "1.0.0",
+      "author": {
+        "name": "NASA AMMOS",
+        "url": "https://github.com/NASA-AMMOS"
+      },
+      "category": "governance",
+      "homepage": "https://github.com/NASA-AMMOS/slim/tree/main/static/marketplace/skills/slim-issue-templates",
+      "keywords": [
+        "governance",
+        "templates",
+        "project-setup",
+        "github"
+      ]
+    },
+    {
+      "name": "slim-license",
+      "source": "./skills/slim-license",
+      "description": "Detect project type and add appropriate NASA/Open Source licenses (Apache 2.0 or MIT)",
+      "version": "1.0.0",
+      "author": {
+        "name": "NASA AMMOS",
+        "url": "https://github.com/NASA-AMMOS"
+      },
+      "category": "governance",
+      "homepage": "https://github.com/NASA-AMMOS/slim/tree/main/static/marketplace/skills/slim-license",
+      "keywords": [
+        "project-setup",
+        "legal",
+        "open-source",
+        "templates"
+      ]
+    },
+    {
+      "name": "slim-meeting-agenda",
+      "source": "./skills/slim-meeting-agenda",
+      "description": "Generate comprehensive meeting agendas by orchestrating context gathering from previous summaries, querying external services (GitHub, Slack, etc. via TECH.md), and matching custom format templates. Automatically identifies and suggests generation of missing meeting summaries.",
+      "version": "1.0.0",
+      "author": {
+        "name": "NASA AMMOS",
+        "url": "https://github.com/NASA-AMMOS"
+      },
+      "category": "collaboration",
+      "homepage": "https://github.com/NASA-AMMOS/slim/tree/main/static/marketplace/skills/slim-meeting-agenda",
+      "keywords": [
+        "collaboration",
+        "project-management",
+        "ai-powered",
+        "workflow",
+        "integration"
+      ]
+    },
+    {
+      "name": "slim-meeting-summary",
+      "source": "./skills/slim-meeting-summary",
+      "description": "Generate comprehensive meeting summaries with action items from meeting notes, transcripts, or agendas. Automatically fulfills actionable tasks using tools discovered from TECH.md (MCP servers, APIs, local scripts) and provides guidance for manual tasks.",
+      "version": "1.0.0",
+      "author": {
+        "name": "NASA AMMOS",
+        "url": "https://github.com/NASA-AMMOS"
+      },
+      "category": "collaboration",
+      "homepage": "https://github.com/NASA-AMMOS/slim/tree/main/static/marketplace/skills/slim-meeting-summary",
+      "keywords": [
+        "collaboration",
+        "reporting",
+        "automation",
+        "ai-powered",
+        "project-management",
+        "integration"
+      ]
+    },
+    {
+      "name": "slim-project-aware-workspace",
+      "source": "./skills/slim-project-aware-workspace",
+      "description": "Set up a project-aware workspace with date-organized dynamic folders for project-aware skill execution, tool integration tracking (MCP servers, APIs, scripts), and daily work organization",
+      "version": "1.0.0",
+      "author": {
+        "name": "NASA AMMOS",
+        "url": "https://github.com/NASA-AMMOS"
+      },
+      "category": "project-setup",
+      "homepage": "https://github.com/NASA-AMMOS/slim/tree/main/static/marketplace/skills/slim-project-aware-workspace",
+      "keywords": [
+        "ai-powered",
+        "project-setup",
+        "project-management",
+        "integration",
+        "workflow"
+      ]
+    },
+    {
+      "name": "slim-readme",
+      "source": "./skills/slim-readme",
+      "description": "Create a comprehensive README.md template to help developers and users understand your project",
+      "version": "1.0.0",
+      "author": {
+        "name": "NASA AMMOS",
+        "url": "https://github.com/NASA-AMMOS"
+      },
+      "category": "documentation",
+      "homepage": "https://github.com/NASA-AMMOS/slim/tree/main/static/marketplace/skills/slim-readme",
+      "keywords": [
+        "documentation",
+        "project-setup",
+        "templates",
+        "onboarding"
+      ]
+    },
+    {
+      "name": "slim-rebranding-agent",
+      "source": "./agents/slim-rebranding-agent",
+      "description": "Comprehensive autonomous rebranding agent for projects. Handles all aspects of rebranding including text/naming, documentation, visual assets, colors/theming, and configuration files. Works with any codebase (Node, Python, Java, C++, Rust, Go, etc.). Auto-integrates free Phosphor icons. Presents detailed plan for approval before executing changes. Creates git branch and commits with clear messages. Validates changes with linters and build systems. Use when rebranding a project, changing project name, updating visual identity, or modernizing brand assets.",
+      "version": "1.0.0",
+      "author": {
+        "name": "NASA AMMOS",
+        "url": "https://github.com/NASA-AMMOS"
+      },
+      "category": "project-setup",
+      "homepage": "https://github.com/NASA-AMMOS/slim/tree/main/static/marketplace/agents/slim-rebranding-agent",
+      "keywords": [
+        "branding",
+        "documentation",
+        "automation",
+        "git",
+        "code-quality",
+        "workflow"
+      ]
+    },
+    {
+      "name": "slim-skill-creator",
+      "source": "./skills/slim-skill-creator",
+      "description": "Meta-skill for creating and integrating new best practices (skills, agents, MCP servers) into the SLIM marketplace with dependency tracking and automated registry updates",
+      "version": "1.0.0",
+      "author": {
+        "name": "NASA AMMOS",
+        "url": "https://github.com/NASA-AMMOS"
+      },
+      "category": "project-setup",
+      "homepage": "https://github.com/NASA-AMMOS/slim/tree/main/static/marketplace/skills/slim-skill-creator",
+      "keywords": [
+        "skill-development",
+        "marketplace",
+        "automation",
+        "templates",
+        "workflow",
+        "agents",
+        "mcp-servers"
+      ]
+    },
+    {
+      "name": "slim-website",
+      "source": "./skills/slim-website",
+      "description": "Project website generator that analyzes your project content and creates customized Docusaurus documentation websites",
+      "version": "1.0.0",
+      "author": {
+        "name": "NASA AMMOS",
+        "url": "https://github.com/NASA-AMMOS"
+      },
+      "category": "documentation",
+      "homepage": "https://github.com/NASA-AMMOS/slim/tree/main/static/marketplace/skills/slim-website",
+      "keywords": [
+        "documentation",
+        "ai-powered",
+        "analysis",
+        "templates",
+        "deployment"
+      ]
+    },
+    {
+      "name": "slim-website-maker-agent",
+      "source": "./agents/slim-website-maker-agent",
+      "description": "Autonomous website generator agent for creating customized Docusaurus documentation websites. Analyzes project content, generates intelligent website structure, and validates changes with iterative build testing until successful. Creates git branch and commits with clear messages. Auto-detects project type and customizes accordingly. Use when generating project documentation websites, creating content-driven sites, or automating website creation with build validation.",
+      "version": "1.0.0",
+      "author": {
+        "name": "NASA AMMOS",
+        "url": "https://github.com/NASA-AMMOS"
+      },
+      "category": "documentation",
+      "homepage": "https://github.com/NASA-AMMOS/slim/tree/main/static/marketplace/agents/slim-website-maker-agent",
+      "keywords": [
+        "documentation",
+        "ai-powered",
+        "automation",
+        "git",
+        "build-validation",
+        "workflow",
+        "deployment"
+      ]
+    }
+  ]
+}

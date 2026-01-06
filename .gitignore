@@ -1,8 +1,10 @@
 # auto-generated files
 .docusaurus/
+.claude/
 
 # development environment
 **/node_modules
 **/package-lock.json
 /build/**
 .DS_Store
+static/assets/zip/
