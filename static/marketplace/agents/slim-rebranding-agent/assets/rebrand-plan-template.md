@@ -548,3 +548,236 @@ If you have any questions about this plan or want to modify any aspect of it, pl
 
 **Version**: 1.0.0
 **Template Last Updated**: 2026-01-04
+
+---
+
+## SLIM Website-Specific Sections
+
+**Note**: The following sections are added for SLIM website rebranding projects and complement the general rebranding sections above.
+
+---
+
+### SLIM 1. Hero Section Modifications
+
+**Scope**: Customize hero section (remove SLIM-specific corner features, update branding)
+
+**File**: `src/components/HubHero.js`
+
+| Component | Current | New | Risk |
+|-----------|---------|-----|------|
+| Logo | `/img/logo.svg` | `/img/[new-logo].svg` or auto-generated | Low |
+| Tagline | "[Current tagline]" | "[New tagline]" | Low |
+| Corner Features | 4 sidebars (AI, Community, Open Source, Scope) | **REMOVED** | Medium |
+| Corner CSS | ~175 lines in custom.css | **REMOVED** | Low |
+| Center Layout | Logo, tagline, 3 buttons, search box | **PRESERVED** | Low |
+
+**Changes**:
+- **HubHero.js**:
+  - Remove lines 57-78 (cornerFeatures array)
+  - Remove lines 83-88 (corner feature rendering)
+  - Update line 93 (logo path)
+  - Update lines 96-98 (tagline text)
+
+- **custom.css**:
+  - Remove `.corner-feature` styles (~lines 501-675)
+  - Remove positioning classes
+  - Remove dark theme support for corners
+  - Remove responsive media queries for corners
+
+- **Logo Handling**:
+  - **If user-provided**: Copy to `static/img/[project-name]-logo.svg`
+  - **If auto-generated**: Fetch Phosphor icon matching project keywords
+    - Keywords: "[keywords]"
+    - Selected icon: "[icon-name]"
+    - Source: `https://unpkg.com/@phosphor-icons/web@2.0.3/src/regular/[icon-name].svg`
+
+**Validation**:
+- ✓ JSX syntax valid
+- ✓ CSS syntax valid  
+- ✓ Logo file exists and displays
+- ✓ No corner features visible
+- ✓ Center content renders correctly
+
+**Commit Message**:
+```
+Rebrand: Update hero section (remove corners, update branding)
+```
+
+---
+
+### SLIM 2. Registry & Marketplace Changes
+
+**Scope**: Manage registry entries and marketplace files (import external, clear local)
+
+**File**: `static/data/registry.json`
+
+#### Import Summary
+
+| Source | Entries Imported | Transformation | Status |
+|--------|------------------|----------------|--------|
+| [GitHub URL 1] | [X skills, Y agents, Z MCPs] | Renamed to "[project]-*" | ✓ Success |
+| [GitHub URL 2] | [X skills, Y agents, Z MCPs] | Renamed to "[project]-*" | ✓ Success |
+| **Total** | **[Total entries]** | **All marked external_only: true** | ✓ Ready |
+
+#### Registry Actions
+
+| Action | Details | Count | Risk |
+|--------|---------|-------|------|
+| Import external entries | From [N] SLIM instances | [X] entries | Low |
+| Transform names | "slim-*" → "[project]-*" | [X] renamed | Low |
+| Add external flags | `external_only: true` + `repository.url` | [X] marked | Low |
+| Clear local entries | Remove all local marketplace files | [Y] removed | High |
+| Clear marketplace folders | Empty `skills/`, `agents/`, `mcp-servers/` | [Y] folders | High |
+
+#### Transformed Entry Example
+
+**Before** (from NASA-AMMOS/slim):
+```json
+{
+  "name": "slim-readme",
+  "skill_file_url": "/slim/marketplace/skills/slim-readme/SKILL.md"
+}
+```
+
+**After** (for [ProjectName]):
+```json
+{
+  "name": "[project]-readme",
+  "skill_file_url": "https://raw.githubusercontent.com/NASA-AMMOS/slim/main/static/marketplace/skills/slim-readme/SKILL.md",
+  "external_only": true,
+  "repository": {
+    "url": "https://github.com/NASA-AMMOS/slim",
+    "type": "git"
+  }
+}
+```
+
+**Note**: Existing build infrastructure automatically handles `external_only: true` entries (no build script changes needed).
+
+**Final Registry**:
+- **Skills**: [X] external entries
+- **Agents**: [Y] external entries
+- **MCPs**: [Z] external entries
+- **Local entries**: 0 (fresh start)
+
+**Validation**:
+- ✓ registry.json is valid JSON
+- ✓ All external `skill_file_url` accessible
+- ✓ All entries have required fields
+- ✓ Marketplace folders empty (except .gitkeep)
+
+**Commit Message**:
+```
+Rebrand: Update registry and marketplace (import external entries)
+```
+
+---
+
+### SLIM 3. Page Template Generation
+
+**Scope**: Generate lightweight documentation pages from templates
+
+**Files**: `docs/contribute/`, `docs/faq/`, `docs/about/`
+
+| Page | Template | Customizations | Risk |
+|------|----------|----------------|------|
+| `docs/contribute/submit-best-practice.md` | Generic contribution workflow | Project-specific links | Low |
+| `docs/faq/README.md` | Single example question | Project description | Low |
+| `docs/about/README.md` | Simple project overview | Team info, features | Low |
+
+**Placeholders Replaced**:
+- `{PROJECT_NAME}` → "[ProjectName]"
+- `{TAGLINE}` → "[New tagline]"
+- `{PROJECT_DESCRIPTION}` → "[User-provided description]"
+
+**Validation**:
+- ✓ Markdown syntax valid
+- ✓ Frontmatter correct
+- ✓ Internal links work
+- ✓ All placeholders replaced
+
+**Commit Message**:
+```
+Rebrand: Generate page templates (contribute, FAQ, about)
+```
+
+---
+
+### SLIM 4. Configuration Updates
+
+**Scope**: Update SLIM website configuration files
+
+| File | Fields Updated | Risk |
+|------|----------------|------|
+| `docusaurus.config.js` | title, tagline, url, baseUrl, organizationName, projectName | High |
+| `package.json` | name, description, homepage | Medium |
+| `README.md` | SLIM → [ProjectName] references (if exists) | Low |
+
+**Commit Message**:
+```
+Rebrand: Update configuration files
+```
+
+---
+
+### SLIM 5. Empty Marketplace Handling
+
+**Scope**: Add UI component for empty marketplace state
+
+**File**: `src/components/SkillBrowser.js`
+
+**Changes**:
+- Add empty state check after loading registry
+- Display friendly message when `allItems.length === 0`
+- Provide call-to-action buttons
+
+**Validation**:
+- ✓ React/JSX syntax valid
+- ✓ Links work correctly
+- ✓ Displays for empty marketplace
+- ✓ Normal rendering when entries exist
+
+**Commit Message**:
+```
+Rebrand: Handle empty marketplace in SkillBrowser
+```
+
+---
+
+### SLIM 6. Build Validation
+
+**Scope**: Validate changes with iterative build testing (up to 5 attempts)
+
+**Validation Report**:
+```
+Validation Results
+==================
+✓ JSON files valid ([N] files)
+✓ React components valid ([N] files)  
+✓ CSS files valid ([N] files)
+✓ Build successful ([N] attempts, [X]s)
+
+Status: PASS
+```
+
+**Commit Message** (if fixes needed):
+```
+Rebrand: Fix build errors (attempt [N])
+```
+
+---
+
+## SLIM Website Success Criteria
+
+After rebranding, verify:
+
+- ✅ Hero: Logo displays, tagline correct, no corners visible
+- ✅ Registry: Valid JSON, external entries marked correctly
+- ✅ Marketplace: Empty folders or external references as intended
+- ✅ Pages: Contribute, FAQ, About all render correctly
+- ✅ Configuration: Build succeeds, URLs correct
+- ✅ Empty State: Friendly message displays if marketplace empty
+
+---
+
+_End of SLIM Website-Specific Sections_

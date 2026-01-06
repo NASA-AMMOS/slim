@@ -1,212 +1,343 @@
 ---
 name: slim-rebranding-agent
-description: Comprehensive autonomous rebranding agent for projects. Handles all aspects of rebranding including text/naming, documentation, visual assets, colors/theming, and configuration files. Works with any codebase (Node, Python, Java, C++, Rust, Go, etc.). Auto-integrates free Phosphor icons. Presents detailed plan for approval before executing changes. Creates git branch and commits with clear messages. Validates changes with linters and build systems. Use when rebranding a project, changing project name, updating visual identity, or modernizing brand assets.
+description: Specialized autonomous agent for rebranding SLIM-based Docusaurus websites for domain-specific projects. Handles hero customization, registry imports from external SLIM instances, page template generation, and complete website configuration. Creates customized SLIM forks with domain-specific branding, marketplace entries, and documentation. Presents detailed plan for approval before executing changes. Creates git branch and commits with clear messages. Validates changes with iterative build testing.
 ---
 
-# SLIM Rebranding Agent
+# SLIM Website Rebranding Agent
 
 ## Overview
 
-The SLIM Rebranding Agent is a comprehensive, semi-autonomous tool designed to rebrand software projects across any technology stack. It handles all aspects of rebranding including text/naming updates, documentation changes, visual asset replacement, color scheme transformations, and configuration file updates.
+The SLIM Website Rebranding Agent is a specialized, semi-autonomous tool designed to help users fork and rebrand SLIM-based Docusaurus documentation websites for their own domain-specific projects. It streamlines the process of creating customized SLIM instances with unique branding, curated marketplace entries, and tailored documentation.
 
 **Key Features**:
-- 🌐 **Universal Compatibility**: Works with any codebase (Node, Python, Java, C++, Rust, Go, Ruby, PHP, .NET, etc.)
-- 🤖 **Runtime Code Generation**: Writes optimized, project-specific code at runtime (no pre-existing scripts)
-- 🎨 **Smart Imagery**: Fill-in-the-gaps approach using user-provided files + auto-generated Phosphor Icons
-- ✅ **Linter & Build Validation**: Auto-detects and runs file-type linters and build systems
+- 🎨 **Hero Customization**: Removes corner sidebars, updates logo/tagline, streamlines branding
+- 📦 **Registry Management**: Import best practices from external SLIM instances as references (no file downloads)
+- 📄 **Page Templates**: Generates customizable contribute, FAQ, and about pages
+- 🔧 **Website Configuration**: Updates Docusaurus config, package.json, and build scripts
+- 🌐 **Empty State Handling**: Gracefully handles empty marketplace with friendly UI
+- ✅ **Build Validation**: Iterative build loop ensures website builds successfully
 - 🔒 **Git Safety**: Creates isolated branch, incremental commits, easy rollback
 - 📋 **Semi-Autonomous**: Presents plan for approval before execution
+- 🚀 **Best Practice Integration**: Optionally invoke slim-skill-creator to share your customized instance
 
-##
+## When to Use
 
- When to Use
-
-- Rebranding a project with a new name or identity
-- Changing project name across entire codebase
-- Updating visual identity (logos, icons, colors)
-- Modernizing brand assets
-- Preparing for product launch with new branding
+- Forking SLIM for a domain-specific project or organization
+- Creating a customized best practices hub for your team
+- Rebranding SLIM with your project's identity and logo
+- Building a curated marketplace from multiple SLIM sources
+- Launching a new best practices website based on SLIM architecture
 
 ## Dependencies
 
-**None** - This agent works standalone with any codebase. No marketplace dependencies required.
+**None** - This agent works standalone with SLIM-based Docusaurus websites. No marketplace dependencies required.
+
+**Optional**: `slim-skill-creator` - Can be invoked at the end to create a new SLIM best practice from your customized instance.
 
 ## Prerequisites
 
+- **SLIM-based Docusaurus website** (fork of slim repository)
 - Git repository initialized
 - Write access to project files
 - Clean working directory (recommended)
+- Node.js and npm installed (for build validation)
 
 ## Interactive Workflow
 
-### Step 1: Context Gathering
+### Step 1: Context Gathering & Detection
 
-**I will verify your project setup and detect the project type:**
+**I will verify your SLIM website setup and extract current metadata:**
 
 1. **Git Repository Check**:
    - Verify git repository exists
    - Check working directory status
    - Warn if there are uncommitted changes
+   - Suggest committing or stashing changes
 
-2. **Project Type Detection**:
-   - Write runtime code to scan for config files:
-     - **Node.js**: package.json, package-lock.json, yarn.lock, pnpm-lock.yaml
-     - **Python**: pyproject.toml, setup.py, requirements.txt, Pipfile, poetry.lock
-     - **Java**: pom.xml, build.gradle, settings.gradle
-     - **Rust**: Cargo.toml, Cargo.lock
-     - **Go**: go.mod, go.sum
-     - **Ruby**: Gemfile, Gemfile.lock, .gemspec
-     - **PHP**: composer.json, composer.lock
-     - **.NET**: *.csproj, *.sln, packages.config
-     - **C/C++**: CMakeLists.txt, Makefile, configure.ac
-     - **Web frameworks**: docusaurus.config.js, gatsby-config.js, next.config.js, app.json
-     - **Static HTML**: index.html, index.htm
-   - Extract current project metadata (name, version, etc.)
-   - Identify project type(s) - can be multiple for polyglot projects
+2. **Docusaurus Website Detection**:
+   - Search for `docusaurus.config.js`
+   - Verify this is a Docusaurus-based website
+   - If not found, error: "This agent requires a Docusaurus website. Consider using the general slim-rebranding-agent instead."
+
+3. **Current Metadata Extraction**:
+   - Read `docusaurus.config.js`:
+     - Extract current title (project name)
+     - Extract current tagline
+     - Extract url and baseUrl
+   - Read `static/data/registry.json`:
+     - Count skills, agents, MCP servers
+     - Identify entry naming pattern (e.g., "slim-*" prefix)
+   - Read `package.json`:
+     - Extract package name
+     - Extract description
+
+4. **Website Structure Verification**:
+   - Verify hero component exists: `src/components/HubHero.js`
+   - Verify registry exists: `static/data/registry.json`
+   - Verify marketplace structure: `static/marketplace/`
+   - Verify documentation pages: `docs/contribute/`, `docs/faq/`, `docs/about/`
+
+**Output Example**:
+```
+✓ Detected SLIM-based Docusaurus website
+✓ Current name: "SLIM"
+✓ Current tagline: "Modernizing software through the automated infusion of best practices"
+✓ Registry: 14 skills, 2 agents, 1 MCP server (all with "slim-" prefix)
+✓ Working directory clean
+```
 
 ---
 
-### Step 2: Brand Questionnaire
+### Step 2: SLIM Website Questionnaire
 
-**I will ask essential questions to understand your rebranding needs:**
+**I will ask essential questions specific to SLIM website rebranding:**
 
-Using the brand questionnaire template (`assets/brand-questionnaire.md`), I'll ask up to 8 questions:
+Using the SLIM website questionnaire template (`assets/slim-website-questionnaire.md`), I'll ask up to 10 questions:
 
-1. **Current project name**: What is the exact current name?
-2. **New project name**: What should the new name be?
-3. **New primary color** (optional): Hex color code (e.g., #FF5733) or leave blank to keep current
-4. **Custom imagery**: Upload any custom logo/icon/image files to the chat. Agent will use these where applicable and auto-generate remaining imagery using Phosphor Icons.
-5. **Configuration files**: Update package manager configs (package.json, pom.xml, etc.)? (yes/no, default: yes)
-6. **Files/folders to exclude**: Comma-separated paths or leave blank for defaults (node_modules, .git, build, dist)
-7. **Git branch name**: Custom name or leave blank for auto-generated
-8. **Special instructions**: Any specific requirements or files to handle carefully? (optional)
+1. **Current project name** (auto-detected): Confirmed as "{DETECTED_NAME}"
+2. **New project name**: What should the new project name be? (e.g., "AutoDocs", "TeamHub", "DevBestPractices")
+3. **New tagline**: What should the new tagline be? (leave blank to keep current: "{CURRENT_TAGLINE}")
+4. **New logo file**: Upload logo file (SVG/PNG) or leave blank to auto-generate from Phosphor icons
+5. **Project purpose/domain**: Describe your project's purpose in 2-3 sentences (for About page)
+6. **Team/organization info**: Who maintains this project? (organization name, GitHub org, contact info)
+7. **Import from external SLIM instances?**: Do you want to import best practices from other SLIM instances? (yes/no, default: no)
+8. **GitHub URLs for import** (if yes to #7): Provide comma-separated GitHub URLs (e.g., "https://github.com/NASA-AMMOS/slim, https://github.com/other-org/slim-fork")
+9. **Keep existing marketplace entries?**: Keep current local marketplace entries? (yes/no, default: no - fresh start)
+10. **Git branch name**: Custom git branch name or leave blank for auto-generated (default: `rebrand/website-{old-slug}-to-{new-slug}`)
 
 **Automatic Defaults** (no questions needed):
-- **Scope**: Full codebase rebrand (unless files excluded)
-- **Code comments**: Always update project name in code comments
-- **Icon names**: Auto-generate from project name for Phosphor icons
+- **Hero corners**: Always remove 4 corner feature sidebars
+- **Page generation**: Always generate contribute, FAQ, and about page templates
+- **Empty marketplace**: Always handle gracefully with friendly UI
+- **Build validation**: Always run iterative build loop
+
+**Output Example**:
+```
+Questionnaire complete:
+- New name: "AutoDocs"
+- New tagline: "AI-powered documentation automation for software projects"
+- Logo: Auto-generate from Phosphor icons (project keywords: "docs", "automation")
+- Project purpose: "AutoDocs helps development teams automate documentation..."
+- Organization: "AutoDocs Team (https://github.com/autodocs)"
+- Import from: https://github.com/NASA-AMMOS/slim
+- Keep existing: no (fresh start)
+- Branch: rebrand/website-slim-to-autodocs
+```
 
 ---
 
-### Step 3: Discovery Phase
+### Step 3: Discovery & Import Phase
 
-**I will write runtime code to scan your project and identify all rebrandable elements:**
+**I will scan your SLIM website structure and optionally import from external sources:**
 
-Based on the detected project type, I'll create custom discovery code that:
+#### A. Website Structure Discovery
 
-1. **Text Reference Detection**:
-   - Search for current project name in all case variations:
-     - Original: "OldName"
-     - lowercase: "oldname"
-     - kebab-case: "old-name"
-     - snake_case: "old_name"
-     - camelCase: "oldName"
-     - PascalCase: "OldName"
-     - UPPERCASE: "OLDNAME"
-   - Record file path, line number, context
-   - Count occurrences per file
-   - Categorize by file type
+1. **Hero Component Analysis**:
+   - Read `src/components/HubHero.js`
+   - Identify corner features array (lines 57-78)
+   - Identify corner feature rendering (lines 83-88)
+   - Identify logo path (line 93)
+   - Identify tagline text (lines 96-98)
 
-2. **Documentation Identification**:
-   - Find: README.md, CHANGELOG.md, CONTRIBUTING.md, LICENSE, etc.
-   - Find docs/ directory and all markdown files
-   - Find website/ or wiki/ directories
+2. **CSS Analysis**:
+   - Read `src/css/custom.css`
+   - Identify corner feature styles (~lines 501-675)
+   - Note: These styles will be removed
 
-3. **Visual Asset Discovery**:
-   - Search for: logo.*, favicon.*, icon.*, [project-name].*
-   - Look in: static/, public/, assets/, src/images/, root directory
-   - File types: .png, .svg, .ico, .jpg, .jpeg, .webp, .gif
-   - Identify: favicons, app icons, social cards, brand imagery
+3. **Current Registry Analysis**:
+   - Read `static/data/registry.json`
+   - Count local vs external entries
+   - Identify naming patterns
+   - Note dependencies between entries
 
-4. **Color Extraction**:
-   - Find CSS files (.css, .scss, .less, .sass)
-   - Extract CSS custom properties: `--*`
-   - Extract hex colors: `#RRGGBB`
-   - Extract rgb/rgba, hsl/hsla
-   - Find design token files (tokens.json, theme.json, tailwind.config.js)
+4. **Marketplace Analysis**:
+   - Scan `static/marketplace/skills/`
+   - Scan `static/marketplace/agents/`
+   - Scan `static/marketplace/mcp-servers/`
+   - Count local files vs external references
 
-5. **Configuration File Detection** (project-type specific):
-   - For Node: package.json, package-lock.json
-   - For Python: pyproject.toml, setup.py
-   - For Java: pom.xml, build.gradle
-   - For Rust: Cargo.toml
-   - For Go: go.mod
-   - For web frameworks: docusaurus.config.js, gatsby-config.js, next.config.js, etc.
+#### B. External Registry Import (if requested)
 
-**Output**: Generate findings report showing:
-- Total files with references
-- Occurrences by category (text, docs, assets, colors, config)
-- Risk assessment (high/medium/low)
+**Using the registry import guide (`assets/registry-import-guide.md`):**
 
-After discovery, I'll present the summary and ask: **"Proceed with plan generation? (yes/no)"**
+**For each GitHub URL provided**:
+
+1. **Parse GitHub URL**:
+   ```
+   Input: https://github.com/NASA-AMMOS/slim
+   Extract: org="NASA-AMMOS", repo="slim"
+   ```
+
+2. **Construct Raw URL**:
+   ```
+   https://raw.githubusercontent.com/NASA-AMMOS/slim/main/static/data/registry.json
+   ```
+
+3. **Fetch External Registry**:
+   - Send HTTP GET request
+   - Handle errors (404, network failures)
+   - Parse JSON
+   - Validate structure
+
+4. **Transform Entries** (using existing `external_only: true` support):
+   - For each skill/agent/mcp in external registry:
+     ```json
+     {
+       "name": "autodocs-readme",  // Renamed from "slim-readme"
+       "displayName": "README Writer",
+       "description": "...",
+       "category": "documentation",
+       "tags": ["..."],
+       "lastUpdated": "2024-08-02",
+       "skill_file_url": "https://raw.githubusercontent.com/NASA-AMMOS/slim/main/static/marketplace/skills/slim-readme/SKILL.md",
+       "external_only": true,  // NEW: marks as external
+       "repository": {  // NEW: points to source
+         "url": "https://github.com/NASA-AMMOS/slim",
+         "type": "git"
+       },
+       "type": "skill",
+       "example": "..."
+     }
+     ```
+   - Rename: "slim-*" → "{new-project-name}-*"
+   - Add `external_only: true` flag
+   - Add `repository.url` field
+   - Keep original `skill_file_url` (points to external source)
+
+5. **Merge & Deduplicate**:
+   - Combine all imported entries
+   - Remove duplicates by name
+   - Sort alphabetically
+
+**Validation**:
+- Verify all transformed entries have required fields
+- Validate `skill_file_url` accessibility (HTTP HEAD requests)
+- Report import statistics
+
+**Output Example**:
+```
+Discovery Results:
+✓ Hero component: 4 corner sidebars identified (will be removed)
+✓ CSS styles: ~175 lines of corner styling (will be removed)
+✓ Current registry: 14 local skills, 2 local agents, 1 external MCP
+✓ Marketplace: 16 local item folders
+
+Import Results:
+✓ Fetched registry from: https://github.com/NASA-AMMOS/slim
+✓ Imported 17 entries (14 skills, 2 agents, 1 MCP)
+✓ Transformed: "slim-*" → "autodocs-*"
+✓ All entries marked as external_only: true
+✓ All skill_file_url validated and accessible
+```
 
 ---
 
 ### Step 4: Plan Generation
 
-**I will generate a comprehensive, detailed rebranding plan:**
+**I will generate a comprehensive SLIM website rebranding plan:**
 
-Using the rebrand-plan-template (`assets/rebrand-plan-template.md`), I'll create a plan showing:
+Using the SLIM rebrand plan template (`assets/rebrand-plan-template.md`), I'll create a detailed plan:
 
 **Plan Structure**:
 ```markdown
-# Rebranding Plan: [Old Name] → [New Name]
+# SLIM Website Rebranding Plan: SLIM → AutoDocs
 
 ## Summary
-- Total files to modify: X
-- Text replacements: Y occurrences across Z files
-- Visual assets: N images
-- Color transformations: M definitions
-- Configuration updates: P files
+- Hero section: Remove 4 corners, update logo/tagline
+- Registry: Import 17 external entries, clear 16 local entries
+- Marketplace: Clear local folders (fresh start)
+- Pages: Generate contribute, FAQ, about from templates
+- Configuration: Update 3 files (docusaurus.config.js, package.json, etc.)
+- Build: Validate with iterative build loop
 
-## Changes by Category
+## Changes by Section
 
-### 1. Text/Naming Changes
-| File | Current | New | Occurrences | Risk |
-|------|---------|-----|-------------|------|
-| ... | ... | ... | ... | ... |
+### 1. Hero Section Modifications
+| Component | Current | New | Risk |
+|-----------|---------|-----|------|
+| Logo | /img/logo.svg | Auto-generate (Phosphor: "file-doc") | Low |
+| Tagline | "Modernizing software..." | "AI-powered documentation..." | Low |
+| Corner features | 4 sidebars (top-left, bottom-left, top-right, bottom-right) | REMOVED | Medium |
+| Corner CSS | ~175 lines (custom.css lines 501-675) | REMOVED | Low |
+| Center layout | Logo, tagline, 3 buttons, search | PRESERVED | Low |
 
-### 2. Documentation Updates
+### 2. Registry & Marketplace Changes
+| Action | Details | Count | Risk |
+|--------|---------|-------|------|
+| Import external | NASA-AMMOS/slim | 17 entries | Low |
+| Transform names | "slim-*" → "autodocs-*" | 17 renamed | Low |
+| Mark as external | Add external_only: true + repository.url | 17 marked | Low |
+| Clear local registry | Remove all local entries | 16 removed | High |
+| Clear marketplace folders | Delete skills/, agents/, mcp-servers/ contents | 16 folders | High |
+
+**Note**: Existing `generate-claude-marketplace.js` already handles `external_only: true` entries correctly (lines 40-56, 86-103, 129-147). No build script changes needed.
+
+### 3. Page Template Generation
+| Page | Template | Customizations | Risk |
+|------|----------|----------------|------|
+| docs/contribute/submit-best-practice.md | Contribution workflow | AutoDocs specifics, GitHub links | Low |
+| docs/faq/README.md | Standard Q&A | Project description, use cases | Low |
+| docs/about/README.md | Project overview | Purpose, team info, features | Low |
+
+### 4. Configuration Updates
 | File | Changes | Risk |
 |------|---------|------|
-| ... | ... | ... |
+| docusaurus.config.js | title: "AutoDocs", tagline, url, baseUrl | High |
+| package.json | name: "autodocs-website", description | Medium |
+| README.md (if exists) | Update project references | Low |
 
-### 3. Visual Asset Changes
-| Current | New/Source | Location | Risk |
-|---------|------------|----------|------|
-| logo.svg | [User-provided / Phosphor: "sparkle"] | static/img/ | Medium |
-| ... | ... | ... | ... |
+### 5. Empty Marketplace Handling
+| Component | Changes | Risk |
+|-----------|---------|------|
+| SkillBrowser.js | Add empty state check + friendly message | Low |
+| src/components/ | Empty state component (if allItems.length === 0) | Low |
 
-### 4. Color/Theming Updates
-| File | Properties | Changes | Risk |
-|------|------------|---------|------|
-| custom.css | --primary-color | #old → #new | Low |
-| ... | ... | ... | ... |
-
-### 5. Configuration File Updates
-| File | Fields | Risk |
-|------|--------|------|
-| package.json | name, description | High |
-| ... | ... | ... |
+### 6. Build Validation
+| Step | Details | Risk |
+|------|---------|------|
+| npm run build | Iterative loop (max 5 attempts) | Medium |
+| Auto-fix errors | Import paths, syntax, config issues | Medium |
+| Final validation | Ensure clean build | Low |
 
 ## Git Strategy
-Branch: rebrand/[old-name]-to-[new-name]
-Commits: 5 (text, docs, assets, colors, config)
+- Branch: rebrand/website-slim-to-autodocs
+- Commits: 6 incremental commits
+  1. Rebrand: Update hero section (remove corners, update branding)
+  2. Rebrand: Update registry and marketplace (import external entries)
+  3. Rebrand: Generate page templates (contribute, FAQ, about)
+  4. Rebrand: Update configuration files
+  5. Rebrand: Handle empty marketplace in SkillBrowser
+  6. Rebrand: Fix build errors (if any, iterative fixes)
 
 ## Risk Assessment
-- High Risk: X files
-- Medium Risk: Y files
-- Low Risk: Z files
+- High Risk: 2 items (clear local registry, clear marketplace folders)
+- Medium Risk: 4 items (corner removal, config updates, build validation)
+- Low Risk: 12 items
 
 ## Rollback Plan
-git checkout main && git branch -D rebrand/[branch-name]
+```bash
+git checkout main
+git branch -D rebrand/website-slim-to-autodocs
 ```
+All changes are isolated on branch. Easy to discard if needed.
+
+## Success Criteria
+✓ Hero displays without corner sidebars
+✓ Logo and tagline updated (or auto-generated)
+✓ Registry contains 17 external entries (autodocs-* prefix)
+✓ Marketplace folders empty (or only external references)
+✓ Pages render correctly (contribute, FAQ, about)
+✓ Build succeeds: npm run build
+✓ Empty marketplace shows friendly UI message
+```
+
+**After presenting the plan, I'll ask**: **"Approve this plan? (yes/no/modify)"**
 
 ---
 
 ### Step 5: Plan Approval
 
-**I will present the plan and wait for your approval:**
+**I will wait for your explicit approval:**
 
 **Options**:
 1. **"yes"** - Approve and proceed with rebranding
@@ -215,7 +346,12 @@ git checkout main && git branch -D rebrand/[branch-name]
 
 **If "modify"**:
 - I'll ask what you'd like to adjust
-- Options: change scope, exclude files, adjust colors, modify git branch name
+- Options:
+  - Keep certain local marketplace entries
+  - Change import sources
+  - Modify logo generation
+  - Adjust page templates
+  - Change git branch name
 - Regenerate plan with changes
 - Present updated plan for approval
 
@@ -228,12 +364,13 @@ git checkout main && git branch -D rebrand/[branch-name]
 **I will create a safe working branch:**
 
 1. Generate branch name:
-   - Auto: `rebrand/[old-slug]-to-[new-slug]`
+   - Auto: `rebrand/website-{old-slug}-to-{new-slug}`
+   - Example: `rebrand/website-slim-to-autodocs`
    - Or use your custom branch name from questionnaire
 
 2. Create branch:
    ```bash
-   git checkout -b rebrand/old-name-to-new-name
+   git checkout -b rebrand/website-slim-to-autodocs
    ```
 
 3. Verify branch creation successful
@@ -245,437 +382,685 @@ git checkout main && git branch -D rebrand/[branch-name]
 
 ### Step 7: Execute Changes
 
-**I will write runtime-optimized code to apply changes in safe, validated order:**
+**I will apply changes in 6 safe, incremental sub-steps:**
 
-#### 7.1 Text/Naming Changes
-- Write custom replacement code for your project type
-- Strategy:
-  - **Whole-word matching**: Use `\b` regex boundaries (avoid partial matches like "Slim" → "Slimmer")
-  - **Case-preserving**: Detect and preserve case (OldName → NewName, oldname → newname, OLDNAME → NEWNAME)
-  - **Context-aware**:
-    - JSON: Update values only, not keys (unless specified)
-    - YAML: Update values, preserve keys
-    - Code: Update strings and comments
-    - Markdown: Update all text
-- Create backups before modification (`.rebrand_backups/`)
-- Validate syntax after each file
-- Rollback file if validation fails
-- **Commit**: `"Rebrand: Update text and naming references"`
+#### 7.1 Hero Section Modifications
 
-#### 7.2 Documentation Updates
-- Apply same text replacement to documentation files
-- Update README, CHANGELOG, CONTRIBUTING, docs/
-- Validate markdown rendering
-- **Commit**: `"Rebrand: Update documentation"`
+**Using hero customization guide (`assets/hero-customization-guide.md`):**
 
-#### 7.3 Visual Assets (Smart Imagery Integration)
-Using phosphor-icons-guide (`assets/phosphor-icons-guide.md`):
+**File: `src/components/HubHero.js`**:
+1. Remove lines 57-78 (cornerFeatures array definition)
+2. Remove lines 83-88 (corner features mapping/rendering)
+3. Update line 93 (logo path):
+   - If user uploaded logo: `/img/autodocs-logo.svg`
+   - If auto-generated: `/img/logo.svg` (will be replaced with Phosphor icon)
+4. Update lines 96-98 (tagline text):
+   ```jsx
+   <p style={{ padding: "15px", fontSize: "1.1rem", paddingBottom: "30px" }}>
+     AI-powered documentation automation for software projects.
+   </p>
+   ```
 
-**Step A: Identify imagery needs**
-- Scan for: logo.svg, favicon.ico, icon-*.png, social cards, etc.
+**File: `src/css/custom.css`**:
+1. Remove corner feature styles (estimated lines 501-675)
+   - Remove `.corner-feature` class
+   - Remove `.corner-top-left`, `.corner-bottom-left`, etc.
+   - Remove associated media queries
 
-**Step B: Match user-provided imagery**
-- If user uploaded files to chat:
-  - Match "my-logo.svg" → use for logo
-  - Match "my-icon.png" → resize for all icon sizes
-  - Match "social-card.jpg" → use for social cards
-- Track which needs are fulfilled
+**Logo Handling**:
+- **If user uploaded**: Copy to `static/img/`
+- **If auto-generate**:
+  - Use Phosphor Icons Guide (`assets/phosphor-icons-guide.md`)
+  - Extract keywords from project name: "AutoDocs" → "file-doc" or "files"
+  - Fetch SVG from Phosphor CDN: `https://unpkg.com/@phosphor-icons/web@2.0.3/src/regular/file-doc.svg`
+  - Save as `static/img/logo.svg`
+  - Generate favicon from SVG
 
-**Step C: Fill gaps with Phosphor Icons**
-- For imagery NOT provided by user:
-  1. Auto-generate icon name from project name:
-     - Extract keywords: "DataAnalyzer" → "chart-line" or "database"
-     - Match to Phosphor categories (tech, business, communication, creative, generic)
-     - Examples: "ChatApp" → "chat-circle", "DevTools" → "code", "Generic" → "sparkle"
-  2. Fetch SVG from Phosphor CDN:
-     ```
-     https://unpkg.com/@phosphor-icons/web@2.0.3/src/regular/[icon-name].svg
-     ```
-  3. Convert to needed formats:
-     - SVG → logo.svg
-     - SVG → PNG → logo.png, icon-16x16.png, icon-32x32.png, favicon.ico
-  4. Place in appropriate locations
-  5. Update all references in HTML, config files
+**Validation**:
+- Verify JSX syntax (HubHero.js)
+- Verify CSS syntax (custom.css)
+- Verify logo file exists
 
-**Step D: Summary**
-- Report: "Logo from user upload, favicon from Phosphor (sparkle), icons from Phosphor (sparkle)"
-- **Commit**: `"Rebrand: Replace visual assets"`
-
-#### 7.4 Colors/Theming
-- Write code to transform color scheme
-- Update CSS custom properties
-- Update design tokens
-- Validate CSS syntax
-- **Commit**: `"Rebrand: Update color scheme"`
-
-#### 7.5 Configuration Files
-- Write project-type-specific code to update configs:
-  - Node: package.json (name, description, homepage, repository)
-  - Python: pyproject.toml (name, description, urls)
-  - Java: pom.xml (groupId, artifactId, name, description)
-  - Rust: Cargo.toml (name, description, homepage)
-  - Go: go.mod (module path)
-  - Web frameworks: docusaurus.config.js, gatsby-config.js (title, tagline, url)
-- Validate JSON/YAML/TOML syntax
-- **Commit**: `"Rebrand: Update configuration files"`
-
-Each step includes validation before committing.
+**Commit**: `"Rebrand: Update hero section (remove corners, update branding)"`
 
 ---
 
-### Step 8: Icon Integration
+#### 7.2 Registry & Marketplace Updates
 
-(This step is integrated into Step 7.3 above - see Visual Assets section)
+**Using registry import guide (`assets/registry-import-guide.md`):**
+
+**If importing external registries**:
+
+1. **Fetch & Transform** (already done in Step 3):
+   - Use transformed entries from discovery phase
+   - Entries already have `external_only: true` and `repository.url`
+
+2. **Clear Local Entries** (if "keep existing" = no):
+   - Empty `static/marketplace/skills/` (except `.gitkeep`)
+   - Empty `static/marketplace/agents/` (except `.gitkeep`)
+   - Empty `static/marketplace/mcp-servers/` (except `.gitkeep`)
+   - Or: Create `.gitkeep` files if they don't exist
+
+3. **Write New Registry**:
+   - Write `static/data/registry.json` with:
+     - Imported external entries (with external_only: true)
+     - Or empty arrays if no imports
+     ```json
+     {
+       "skills": [...imported and transformed...],
+       "agents": [...imported and transformed...],
+       "mcp": [...imported and transformed...]
+     }
+     ```
+
+**If NOT importing** (fresh start):
+- Write empty registry:
+  ```json
+  {
+    "skills": [],
+    "agents": [],
+    "mcp": []
+  }
+  ```
+- Clear marketplace folders
+
+**Validation**:
+- Verify registry.json is valid JSON
+- Verify all `skill_file_url` in external entries are accessible (if network available)
+- Verify marketplace folders are empty or have .gitkeep
+
+**Commit**: `"Rebrand: Update registry and marketplace (import external entries)" `
+
+**Note**: The existing `generate-claude-marketplace.js` already handles `external_only: true` entries (lines 40-56 for skills, 86-103 for agents, 129-147 for MCPs). It will:
+- Skip external entries when building local marketplace.json
+- Show appropriate install instructions in UI
+- No changes to build script needed!
 
 ---
 
-### Step 9: Validation with Iterative Build Loop
+#### 7.3 Page Template Generation
 
-**I will run comprehensive validation using linter-validation-guide (`assets/linter-validation-guide.md`):**
+**Using page template guide (`assets/page-template-guide.md`):**
 
-#### A. File-Type Linter Detection & Execution
+**File 1: `docs/contribute/submit-best-practice.md`**:
 
-**JSON files**:
-```bash
-python -m json.tool file.json  # or jq
+Generate from template with substitutions:
+- `{PROJECT_NAME}` → "AutoDocs"
+- `{GITHUB_ISSUES_URL}` → inferred from repository or asked
+- `{GITHUB_DISCUSSIONS_URL}` → inferred or asked
+- `{CUSTOM_RESOURCES}` → from user's "project purpose" input
+
+Example output:
+```markdown
+---
+sidebar_position: 1
+---
+
+# Submit a Best Practice
+
+Want to share your expertise with the AutoDocs community? Here's how to contribute.
+
+## Quick Start
+
+**3 simple steps:**
+
+1. **Create an issue** - [Start here](https://github.com/autodocs/autodocs/issues) to discuss your idea
+2. **Build your contribution** - Create a skill, agent, or guide
+3. **Submit a pull request** - We'll review and help you merge it
+
+[... rest of template ...]
 ```
 
-**YAML files**:
-```bash
-yamllint file.yml  # or python yaml.safe_load()
+**File 2: `docs/faq/README.md`**:
+
+Generate from template with substitutions:
+- `{PROJECT_NAME}` → "AutoDocs"
+- `{PROJECT_DESCRIPTION}` → from user's "project purpose" input
+- `{USE_CASES}` → inferred from project purpose
+- `{PREREQUISITES}` → "Node.js, npm, basic command line knowledge"
+- `{CUSTOM_FAQ}` → additional Q&A if provided
+
+**File 3: `docs/about/README.md`**:
+
+Generate from template with substitutions:
+- `{PROJECT_NAME}` → "AutoDocs"
+- `{TAGLINE}` → "AI-powered documentation automation..."
+- `{PROJECT_DESCRIPTION}` → from user input
+- `{FEATURES}` → inferred or from user input ("1. Automatic README generation", "2. API docs from code", etc.)
+- `{TEAM_INFO}` → from user's "organization" input
+- `{RESOURCES}` → inferred (GitHub, docs site, etc.)
+
+**Validation**:
+- Verify markdown syntax
+- Verify frontmatter is correct
+- Verify all internal links are valid
+- Verify placeholders are replaced
+
+**Commit**: `"Rebrand: Generate page templates (contribute, FAQ, about)"`
+
+---
+
+#### 7.4 Configuration Updates
+
+**File 1: `docusaurus.config.js`**:
+
+Update configuration object:
+```javascript
+{
+  title: 'AutoDocs',  // was 'SLIM'
+  tagline: 'AI-powered documentation automation for software projects',
+  url: 'https://autodocs-team.github.io',  // prompt user or infer
+  baseUrl: '/autodocs/',  // infer from project name
+  organizationName: 'autodocs-team',  // from user input
+  projectName: 'autodocs',  // from user input
+  // ... rest preserved
+}
 ```
 
-**JavaScript/TypeScript**:
-- Detect: `.eslintrc`, `eslint.config.js`
-- Run: `npx eslint .` or `eslint --fix`
+**File 2: `package.json`**:
 
-**Python**:
-- Detect: `.flake8`, `pyproject.toml`
-- Run: `flake8` or `pylint`
-
-**CSS/SCSS**:
-- Detect: `.stylelintrc`
-- Run: `stylelint` or basic validation
-
-**Parse linter output, identify errors, auto-fix common issues**
-
-#### B. Build System Detection & Iterative Build Loop
-
-**IMPORTANT: I will loop over the build process until it succeeds.**
-
-**Build System Detection:**
-
-**Node.js**:
-```bash
-npm run build  # or yarn build or pnpm build
+Update fields:
+```json
+{
+  "name": "autodocs-website",
+  "description": "AutoDocs documentation website and best practices hub",
+  "homepage": "https://autodocs-team.github.io/autodocs",
+  // ... rest preserved
+}
 ```
 
-**Python**:
-```bash
-python setup.py build  # or pip install -e . or python -m build
+**File 3: `README.md` (if exists)**:
+
+Replace "SLIM" references with "AutoDocs" using intelligent text replacement:
+- Whole-word matching (avoid partial matches)
+- Preserve case patterns (SLIM → AUTODOCS, Slim → AutoDocs, slim → autodocs)
+- Update links and URLs
+
+**Validation**:
+- Verify JavaScript syntax (docusaurus.config.js)
+- Verify JSON syntax (package.json)
+- Verify URLs are well-formed
+- Verify markdown syntax (README.md)
+
+**Commit**: `"Rebrand: Update configuration files"`
+
+---
+
+#### 7.5 Empty Marketplace Handling
+
+**Using empty marketplace guide (`assets/empty-marketplace-guide.md`):**
+
+**File: `src/components/SkillBrowser.js`**:
+
+Add empty state handling after data loading (around line 970-1000):
+
+```javascript
+// After loading registry data
+if (allItems.length === 0) {
+  return (
+    <Container className="mt-5">
+      <Card className="text-center p-5 shadow-sm">
+        <Card.Body>
+          <div style={{ fontSize: "4rem", marginBottom: "1rem" }}>
+            📦
+          </div>
+          <h3>No best practices available yet</h3>
+          <p className="text-muted mb-4" style={{ maxWidth: "500px", margin: "0 auto 1.5rem" }}>
+            Get started by importing from other SLIM instances or creating your own!
+          </p>
+          <div>
+            <Button
+              variant="primary"
+              onClick={() => window.location.href = '/docs/contribute/submit-best-practice'}
+              className="me-2"
+            >
+              Learn How to Contribute
+            </Button>
+            <Button
+              variant="outline-secondary"
+              onClick={() => window.location.href = '/docs/about'}
+            >
+              About {PROJECT_NAME}
+            </Button>
+          </div>
+        </Card.Body>
+      </Card>
+    </Container>
+  );
+}
+
+// ... rest of SkillBrowser component
 ```
 
-**Java/Maven**:
-```bash
-mvn compile  # or mvn package
+**Validation**:
+- Verify React/JSX syntax
+- Verify links are correct (`/docs/contribute/submit-best-practice`, `/docs/about`)
+- Test rendering (if possible)
+
+**Commit**: `"Rebrand: Handle empty marketplace in SkillBrowser"`
+
+**Note**: The existing `generate-claude-marketplace.js` already handles empty arrays gracefully. It will generate valid `marketplace.json` with empty plugins array if no local entries exist.
+
+---
+
+#### 7.6 Build Validation (Iterative Loop)
+
+**Using linter validation guide (`assets/linter-validation-guide.md`):**
+
+**A. Pre-Build Linting**:
+
+1. **JSON Validation**:
+   ```bash
+   node -e "JSON.parse(require('fs').readFileSync('static/data/registry.json', 'utf8'))"
+   ```
+
+2. **JavaScript/React Validation**:
+   - If ESLint detected: `npx eslint src/components/HubHero.js src/components/SkillBrowser.js`
+   - Auto-fix if possible: `npx eslint --fix`
+
+3. **CSS Validation**:
+   - Basic syntax check on custom.css
+
+**B. Iterative Build Loop** (max 5 attempts):
+
+```
+Attempt 1:
+  Run: npm run build
+
+  If SUCCEEDS → DONE, proceed to validation report
+
+  If FAILS:
+    1. Parse error output:
+       - Import errors (broken paths)
+       - React syntax errors
+       - Missing dependencies
+       - CSS errors
+       - Config errors
+
+    2. Attempt automatic fixes:
+       - Fix import paths in modified files
+       - Update component props if needed
+       - Fix JSX syntax errors
+       - Restore configs if corrupted
+
+    3. Commit fixes: "Rebrand: Fix build errors (attempt 1)"
+
+    4. Retry → Attempt 2
+
+Attempt 2-5: Repeat process
+
+If max attempts reached (5) and still failing:
+  - Present errors to user with context
+  - Provide manual fix guidance
+  - Ask: "Continue despite build failures? (yes/no)"
+  - If yes → proceed with warnings
+  - If no → pause for manual intervention
 ```
 
-**Rust**:
-```bash
-cargo build
-```
-
-**Go**:
-```bash
-go build
-```
-
-**.NET**:
-```bash
-dotnet build
-```
-
-**C/C++**:
-```bash
-make  # or cmake . && make
-```
-
-**Iterative Build Loop Algorithm:**
-
-```
-1. Detect build system (check for package.json, Cargo.toml, go.mod, pom.xml, etc.)
-2. If NO build system detected → SKIP build validation, proceed to linting only
-3. If build system detected → START LOOP:
-
-   Loop (max 5 attempts):
-     a. Run build command
-
-     b. If build SUCCEEDS → BREAK LOOP, continue to validation report
-
-     c. If build FAILS:
-        i.   Parse error output to identify issues:
-             - Import/require path errors (old name references)
-             - Module not found errors (package name changes)
-             - Syntax errors introduced by text replacement
-             - Type errors from renamed variables/functions
-             - Missing dependencies
-
-        ii.  Attempt automatic fixes:
-             - Fix import paths referencing old name
-             - Update package.json name if imports break
-             - Revert problematic text replacements if needed
-             - Fix JSON/YAML syntax errors
-             - Update TypeScript types if needed
-
-        iii. Commit fixes: "Rebrand: Fix build errors (attempt N)"
-
-        iv.  Re-run build (next loop iteration)
-
-     d. If max attempts reached (5) and still failing:
-        - Present errors to user
-        - Provide manual fix guidance
-        - Ask: "Continue despite build failures? (yes/no)"
-        - If yes → proceed with warnings
-        - If no → pause for manual intervention
-
-4. Generate validation report
-```
-
-**Example Build Loop Execution:**
-
+**Example Execution**:
 ```
 Attempt 1: Running build...
-❌ Build failed: Cannot find module './old-name'
-   → Auto-fixing import paths...
-   → Fixed 3 import statements in src/
+✓ Build successful (npm run build - 35s)
+  No errors detected
+```
+
+Or:
+```
+Attempt 1: Running build...
+❌ Build failed: Cannot resolve './components/CornerFeature' in HubHero.js
+   → Auto-fixing: Removed orphaned import statement
    ✓ Committed fixes
 
 Attempt 2: Running build...
-❌ Build failed: Package name mismatch in imports
-   → Updating internal imports to use new package name...
-   → Fixed 8 import statements
-   ✓ Committed fixes
-
-Attempt 3: Running build...
-✓ Build successful (npm run build - 52s)
-   Loop complete after 3 attempts
+✓ Build successful (npm run build - 38s)
+  Loop complete after 2 attempts
 ```
 
-#### C. Validation Report
+**C. Validation Report**:
 ```
 Validation Results
 ==================
-✓ All JSON files valid (5 files)
-✓ All YAML files valid (2 files)
-✓ ESLint passed with auto-fixes (42 files)
-⚠ Found "OldName" in 2 archived comments (non-critical)
-✓ Build successful after 3 attempts (npm run build - 52s)
-  - Attempt 1: Fixed import paths (3 files)
-  - Attempt 2: Fixed package name in imports (8 files)
-  - Attempt 3: Build succeeded
+✓ All JSON files valid (1 file: registry.json)
+✓ React components valid (2 files modified)
+✓ CSS files valid (1 file: custom.css)
+✓ Build successful after 2 attempts (npm run build - 38s)
+  - Attempt 1: Fixed orphaned import (1 file)
+  - Attempt 2: Build succeeded
 
-Status: PASS with warnings
-Build Loop: 3 iterations, all errors auto-resolved
+Status: PASS
+Build Loop: 2 iterations, all errors auto-resolved
 ```
 
-**If linting errors found**: I'll write code to auto-correct common issues or present errors for manual review.
-
-**If build system not detected**: Validation report will note "No build system detected - skipping build validation"
-
-**If build succeeds**: Continue to finalization
+**If build succeeds**: Continue to Step 9
 
 **If build fails after 5 attempts**: Present errors and ask for user decision
 
-After validation, I'll ask: **"Proceed to finalization? (yes/no)"**
+---
+
+### Step 8: Validation & Testing
+
+**Covered by Step 7.6 - Build Validation**
+
+All validation happens as part of the iterative build loop. This step number is preserved for consistency with the original agent structure.
 
 ---
 
-### Step 10: Summary Report
+### Step 9: Summary Report
 
 **I will generate a comprehensive completion report:**
 
-Using example-rebrand-report (`assets/example-rebrand-report.md`):
-
 ```markdown
-# Rebranding Complete: [Old Name] → [New Name]
+# SLIM Website Rebranding Complete: SLIM → AutoDocs
 
 ## Summary
-✓ 58 files modified
-✓ 5 commits created
+✓ 18 files modified
+✓ 6 commits created
 ✓ All validation checks passed
-✓ Branch: rebrand/old-to-new
+✓ Branch: rebrand/website-slim-to-autodocs
 
 ## Changes Applied
-- Text/naming: 342 occurrences across 42 files
-- Documentation: 8 files updated
-- Visual assets: 12 images (5 user-provided, 7 Phosphor-generated)
-- Colors: 45 definitions in 6 CSS files
-- Configuration: 5 files updated
 
-## Imagery Summary
-- Logo: user-provided (my-logo.svg)
-- Favicon: Phosphor (sparkle icon)
-- Icons: Phosphor (sparkle icon, various sizes)
-- Social cards: Phosphor (sparkle icon)
+### Hero Section
+- Removed: 4 corner sidebars (lines 57-78, 83-88 in HubHero.js)
+- Removed: ~175 lines of corner CSS (custom.css)
+- Updated: Logo (auto-generated from Phosphor: "file-doc")
+- Updated: Tagline ("AI-powered documentation automation for software projects")
+- Preserved: Center layout (logo, tagline, buttons, search)
 
-## Validation Results
-✓ Linters: All passed
-✓ Build: Successful (npm run build)
-⚠ Warnings: 2 archived comments (non-critical)
+### Registry & Marketplace
+- Imported: 17 entries from NASA-AMMOS/slim
+  - 14 skills: autodocs-readme, autodocs-license, autodocs-changelog, ...
+  - 2 agents: autodocs-rebranding-agent, autodocs-website-maker-agent
+  - 1 MCP: autodocs-github-mcp-server
+- Transformed: All entries marked with external_only: true
+- Repository links: All point to https://github.com/NASA-AMMOS/slim
+- Cleared: Local marketplace folders (fresh start)
+- New registry: 17 external entries, 0 local entries
+
+### Page Templates
+- Generated: docs/contribute/submit-best-practice.md (AutoDocs contribution workflow)
+- Generated: docs/faq/README.md (AutoDocs Q&A with domain-specific content)
+- Generated: docs/about/README.md (AutoDocs overview with team info)
+
+### Configuration
+- Updated: docusaurus.config.js (title: "AutoDocs", tagline, url, baseUrl)
+- Updated: package.json (name: "autodocs-website", description)
+- Updated: README.md (SLIM → AutoDocs references)
+
+### Empty Marketplace Handling
+- Added: Empty state component in SkillBrowser.js
+- Renders: Friendly message when allItems.length === 0
+- Provides: "Learn How to Contribute" and "About AutoDocs" buttons
+
+### Build Validation
+✓ Build successful after 2 attempts (npm run build - 38s)
+  - Attempt 1: Fixed orphaned import (1 file)
+  - Attempt 2: Build succeeded
+✓ All linters passed
+✓ No warnings or errors
 
 ## Git Information
-Branch: rebrand/old-name-to-new-name
+Branch: rebrand/website-slim-to-autodocs
 Status: Clean (all committed)
+Commits:
+1. Rebrand: Update hero section (remove corners, update branding)
+2. Rebrand: Update registry and marketplace (import external entries)
+3. Rebrand: Generate page templates (contribute, FAQ, about)
+4. Rebrand: Update configuration files
+5. Rebrand: Handle empty marketplace in SkillBrowser
+6. Rebrand: Fix build errors (attempt 1)
 
 ## Next Steps
-1. Review changes: git diff main...rebrand/old-name-to-new-name
-2. Test locally: npm run build && npm start
-3. Create PR: gh pr create --title "Rebrand: Old to New"
-4. After approval: merge to main
 
-## Rollback if needed
-git checkout main
-git branch -D rebrand/old-name-to-new-name
+### 1. Review Changes Locally
+```bash
+cd /path/to/rebrand-agent
+git diff main...rebrand/website-slim-to-autodocs
 ```
 
-**Final question**: **"Would you like help creating a pull request? (yes/no)"**
+### 2. Test Website Locally
+```bash
+npm start
+# Preview at http://localhost:3000/autodocs/
+```
+
+**Test Checklist**:
+- ✓ Hero section displays without corner sidebars
+- ✓ Logo and tagline are updated
+- ✓ Marketplace shows 17 imported entries (if any)
+- ✓ Empty marketplace shows friendly message (if applicable)
+- ✓ All pages render: contribute, FAQ, about
+- ✓ Navigation works
+- ✓ Search functions correctly
+- ✓ External entries show correct install instructions
+
+### 3. Deploy Preview (Optional)
+Enable GitHub Pages on your fork:
+```
+Settings → Pages → Source: gh-pages branch
+Preview: https://autodocs-team.github.io/autodocs/
+```
+
+### 4. Create Pull Request
+```bash
+gh pr create \
+  --title "Rebrand: SLIM → AutoDocs" \
+  --body "Complete SLIM website rebrand including hero, registry, and page templates.\n\nSee commits for detailed changes."
+```
+
+### 5. Merge to Main
+After testing and approval:
+```bash
+git checkout main
+git merge rebrand/website-slim-to-autodocs
+git push origin main
+```
+
+## Rollback if Needed
+```bash
+git checkout main
+git branch -D rebrand/website-slim-to-autodocs
+```
+
+All changes are isolated on the branch and can be easily discarded.
+
+## Support & Documentation
+- AutoDocs About: /docs/about
+- Contribution Guide: /docs/contribute/submit-best-practice
+- FAQ: /docs/faq
+- GitHub: https://github.com/autodocs-team/autodocs
+```
+
+---
+
+### Step 10: Next Steps Prompt
+
+**I will ask if you'd like help with next steps:**
+
+**Question**: "Would you like help with any of the following?"
+
+**Options**:
+1. **Test the website locally** - I can guide you through running `npm start` and testing
+2. **Create a pull request** - I can help create a PR using `gh` CLI
+3. **Deploy to GitHub Pages** - I can help configure GitHub Pages deployment
+4. **Create a new SLIM best practice** - Share your customized instance (proceeds to Step 11)
+5. **None** - I'm all set, thanks!
+
+If user selects **"Create a new SLIM best practice"** → Proceed to Step 11
+
+Otherwise → End workflow
+
+---
+
+### Step 11: Create SLIM Best Practice (Optional)
+
+**Using create-best-practice guide (`assets/create-best-practice-guide.md`):**
+
+**I will help you create a new SLIM best practice to share your customized instance:**
+
+1. **Check for slim-skill-creator availability**:
+   - Search for `slim-skill-creator` in installed skills
+   - Or check if available in marketplace
+
+2. **If NOT available**:
+   ```
+   The slim-skill-creator is not installed. Would you like to install it?
+
+   Install with:
+   /plugin install slim-skill-creator@slim-marketplace
+
+   After installation, you can run this step again or manually invoke:
+   "Help me create a new SLIM best practice for my AutoDocs website"
+   ```
+
+3. **If available**:
+   ```
+   Great! The slim-skill-creator is available. I'll help you create a new best practice.
+
+   What type of best practice would you like to create?
+   1. Skill - A reusable workflow or template
+   2. Agent - An autonomous multi-step process
+   3. MCP Server - Integration with external services
+
+   Recommended: "Agent" - to share your complete SLIM website rebanding workflow
+   ```
+
+4. **Invoke slim-skill-creator**:
+   - If user selects "Agent":
+     ```
+     I'm invoking the slim-skill-creator to create a new agent best practice
+     for your AutoDocs customized SLIM instance.
+
+     Context being provided:
+     - Type: Agent
+     - Name: autodocs-website-template
+     - Description: Customized SLIM instance for documentation automation
+     - Base: Your rebranded website at rebrand/website-slim-to-autodocs
+     - Registry: 17 imported best practices
+     - Documentation: Custom contribute, FAQ, about pages
+
+     The slim-skill-creator will now guide you through the rest of the process...
+     ```
+   - Hand off to slim-skill-creator with context
+
+5. **If user declines**:
+   ```
+   No problem! You can create a best practice later by running:
+
+   /plugin install slim-skill-creator@slim-marketplace
+
+   Then: "Help me create a new SLIM best practice"
+   ```
+
+**End of workflow**
 
 ---
 
 ## Best Practices
 
 ### For Users
-1. **Always use git branches** - Never rebrand directly on main/master
-2. **Commit recent work** - Ensure clean state before rebranding
-3. **Test thoroughly** - Verify build and functionality after rebrand
-4. **Review plan carefully** - Understand all changes before approval
-5. **Start with documentation** - Consider docs-only scope first to test
 
-### For Safety
-1. **Backup critical files** - Agent creates backups, but extra safety helps
-2. **Check name availability** - Verify npm/PyPI/etc. name available before rebranding
-3. **Inform team** - Coordinate with team on timing
-4. **Test in staging** - Don't rebrand production directly
+1. **Start with a clean git state** - Commit or stash changes before rebranding
+2. **Test locally first** - Always run `npm start` and test thoroughly before deploying
+3. **Review the plan carefully** - Understand what will be changed, especially high-risk items
+4. **Keep backups** - The git branch isolation provides rollback capability
+5. **Customize page templates** - After generation, edit contribute/FAQ/about to your specific needs
+6. **Import selectively** - You can import from multiple SLIM instances and cherry-pick entries
+7. **Start fresh** - For most forks, starting with an empty marketplace is cleaner than keeping all SLIM entries
 
----
+### For the Agent
 
-## FAQ
-
-**Q: Can I rebrand just documentation without touching code?**
-A: Yes! In the questionnaire, specify which files/folders to exclude (e.g., "src/, exclude everything except docs/").
-
-**Q: What if I want to undo the rebrand?**
-A: All changes are on a git branch. Simply:
-```bash
-git checkout main
-git branch -D rebrand/[branch-name]
-```
-
-**Q: Can this handle monorepos or multi-package projects?**
-A: Yes! The agent detects multiple project types and handles polyglot codebases. Review the plan carefully for each package.
-
-**Q: What about database names, API endpoints, infrastructure?**
-A: The agent focuses on codebase files. Infrastructure changes (databases, DNS, APIs) require manual updates.
-
-**Q: How do I verify the new package name is available?**
-A: Check before rebranding:
-- npm: `npm search [new-name]`
-- PyPI: `pip search [new-name]` or visit pypi.org
-- Maven: search central.maven.org
-- crates.io: search crates.io
-
-**Q: Can I customize which files get rebranded?**
-A: Yes! Use the "Files/folders to exclude" question to specify exclusions like "node_modules, .git, test/fixtures, docs/archive".
-
-**Q: What if I don't have any custom imagery?**
-A: No problem! Just don't upload any files. The agent will auto-generate all imagery using Phosphor Icons based on your project name.
-
-**Q: What if I only have a logo but need icons too?**
-A: Perfect! Upload your logo, and the agent will use it for the logo while auto-generating icons/favicons/social cards from Phosphor.
+1. **Always validate before committing** - Never commit broken JSON, JSX, or CSS
+2. **Leverage existing infrastructure** - Use `external_only: true` support already in codebase
+3. **Provide helpful error messages** - Guide users to fix issues if auto-fix fails
+4. **Preserve user work** - Never delete uncommitted changes
+5. **Test external URLs** - Verify `skill_file_url` accessibility before trusting imports
+6. **Handle edge cases** - Empty marketplace, no imports, missing logo, etc.
+7. **Iterative build loop** - Keep trying to fix build errors up to 5 attempts
 
 ---
 
 ## Troubleshooting
 
-**Issue: Git branch creation fails**
-- **Cause**: Uncommitted changes or dirty working directory
-- **Solution**:
-  ```bash
-  git status  # Check status
-  git add . && git commit -m "Save work before rebrand"
-  ```
+### Common Issues
 
-**Issue: Syntax errors after text replacement**
-- **Cause**: Complex replacement patterns or edge cases
-- **Solution**: Agent auto-validates and rolls back. Review validation report for details.
+**Q: Build fails after rebranding**
+A: Check the build error output. Common causes:
+- Orphaned import statements (removed components)
+- Incorrect file paths
+- Syntax errors in modified files
+- The agent will auto-fix these in the iterative build loop (up to 5 attempts)
 
-**Issue: New logo not displaying**
-- **Cause**: Path mismatch or caching
-- **Solution**:
-  - Verify new logo path matches old path
-  - Check image format compatibility
-  - Clear browser cache
-  - Rebuild project
+**Q: External registry import fails**
+A: Check:
+- GitHub URL is correct and accessible
+- Registry.json exists at `static/data/registry.json` in target repo
+- Network connection is stable
+- The agent will skip failed imports and continue
 
-**Issue: Color changes not visible**
-- **Cause**: CSS caching or build not refreshed
-- **Solution**:
-  - Run build: `npm run build`
-  - Clear browser cache
-  - Verify CSS custom property names
+**Q: Logo doesn't generate correctly**
+A: The agent uses Phosphor Icons. If auto-generation fails:
+- Upload your own logo file
+- Or manually place logo in `static/img/logo.svg` after rebranding
+- Supported formats: SVG, PNG
 
-**Issue: Package name conflicts**
-- **Cause**: Name already taken in registry
-- **Solution**:
-  - Check availability first
-  - Use scoped packages: `@org/package-name`
-  - Choose alternative name
+**Q: Empty marketplace shows error instead of friendly message**
+A: Verify:
+- SkillBrowser.js has the empty state component
+- registry.json is valid JSON (even if empty arrays)
+- Build succeeded without errors
 
-**Issue: Build fails after rebrand**
-- **Cause**: Missed reference or syntax error
-- **Solution**: Agent attempts auto-fix. If unsuccessful, check validation report for specific errors and fix manually.
-
-**Issue: Linter errors**
-- **Cause**: Linter rules violated by new name
-- **Solution**: Agent runs `eslint --fix` or equivalent. For persistent errors, review and fix manually or adjust linter config.
+**Q: Want to keep some local entries while importing**
+A: When asked "Keep existing marketplace entries?" say "yes"
+- The agent will merge imported + existing
+- Deduplication by name (imported takes precedence)
 
 ---
 
-## Advanced Tips
+## Asset Files Reference
 
-### Partial Rebranding
-To rebrand only specific parts:
-1. Use "Files/folders to exclude" to exclude what you don't want changed
-2. Example: Rebrand only docs: exclude "src/, test/, scripts/"
+This agent uses 6 asset files for detailed instructions:
 
-### Staged Rebranding
-For large projects, rebrand in stages:
-1. Stage 1: Documentation only
-2. Stage 2: Source code
-3. Stage 3: Configuration and build files
+1. **slim-website-questionnaire.md** - SLIM-specific rebranding questions
+2. **registry-import-guide.md** - External registry fetch/transform logic with `external_only: true` examples
+3. **hero-customization-guide.md** - HubHero.js and CSS modification instructions
+4. **page-template-guide.md** - Templates for contribute, FAQ, and about pages
+5. **empty-marketplace-guide.md** - SkillBrowser.js empty state handling
+6. **create-best-practice-guide.md** - Step 11 slim-skill-creator integration instructions
 
-### Custom Icon Selection
-If auto-generated icon doesn't match:
-1. Browse https://phosphoricons.com/
-2. Upload your preferred icon SVG to chat
-3. Agent will use your selection instead
-
-### Color Palette Generation
-To generate a full palette from one color:
-- Provide just the primary color
-- Agent extracts and transforms related colors
-- Or manually specify all colors in questionnaire
+All asset files are located in `assets/` directory relative to this AGENT.md file.
 
 ---
 
-## Asset Files
+## Version History
 
-This agent uses the following instruction guides (located in `assets/`):
+- **v2.0.0** (2025-01-05): Refactored to focus on SLIM website rebranding specifically
+  - Added hero customization (remove corner sidebars)
+  - Added registry import from external SLIM instances
+  - Added page template generation (contribute, FAQ, about)
+  - Added empty marketplace handling
+  - Added slim-skill-creator integration (Step 11)
+  - Leverages existing `external_only: true` support in codebase
+  - 11-step workflow tailored to SLIM/Docusaurus websites
 
-1. **brand-questionnaire.md** - Template for essential questions (max 8)
-2. **phosphor-icons-guide.md** - Smart imagery integration guide
-3. **linter-validation-guide.md** - File-type linting and build testing guide
-4. **rebrand-plan-template.md** - Plan format template
-5. **example-rebrand-report.md** - Completion report example
+- **v1.0.0** (2024-??-??): Original general-purpose rebranding agent
+  - Universal compatibility (any codebase)
+  - 10-step workflow
+  - Phosphor Icons integration
+  - Iterative build validation
 
-These guides provide instructions for runtime code generation, ensuring flexibility across different project types.
+---
+
+## License
+
+This agent is part of the SLIM (Software Lifecycle Improvement & Modernization) project.
+
+See repository LICENSE file for details.
+
+---
+
+## Contributing
+
+Found a bug or have a suggestion? Create an issue or submit a pull request!
+
+See `docs/contribute/submit-best-practice.md` after rebranding for contribution guidelines.
