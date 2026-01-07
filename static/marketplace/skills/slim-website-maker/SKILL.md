@@ -1,13 +1,13 @@
 ---
-name: slim-website-maker-agent
-description: Autonomous website generator agent for creating customized Docusaurus documentation websites. Analyzes project content, generates intelligent website structure, and validates changes with iterative build testing until successful. Creates git branch and commits with clear messages. Auto-detects project type and customizes accordingly. Use when generating project documentation websites, creating content-driven sites, or automating website creation with build validation.
+name: slim-website-maker
+description: Autonomous website generator skill for creating customized Docusaurus documentation websites. Analyzes project content, generates intelligent website structure, and validates changes with iterative build testing until successful. Creates git branch and commits with clear messages. Auto-detects project type and customizes accordingly. Use when generating project documentation websites, creating content-driven sites, or automating website creation with build validation.
 ---
 
-# SLIM Project Website Maker Agent
+# SLIM Project Website Maker
 
 ## Overview
 
-The SLIM Project Website Maker Agent is a comprehensive, semi-autonomous tool designed to generate professional Docusaurus documentation websites for any project. It analyzes your project content, creates intelligent customizations, and validates the website with iterative build testing to ensure everything works correctly.
+The SLIM Project Website Maker Skill is a comprehensive, semi-autonomous tool designed to generate professional Docusaurus documentation websites for any project. It analyzes your project content, creates intelligent customizations, and validates the website with iterative build testing to ensure everything works correctly.
 
 **Key Features**:
 - 🌐 **Universal Compatibility**: Works with any project type (Node, Python, Java, C++, Rust, Go, etc.)
@@ -27,7 +27,7 @@ The SLIM Project Website Maker Agent is a comprehensive, semi-autonomous tool de
 
 ## Dependencies
 
-**None** - This agent works standalone with any project. No marketplace dependencies required.
+**None** - This skill works standalone with any project. No marketplace dependencies required.
 
 ## Prerequisites
 
@@ -495,19 +495,19 @@ git branch -D website/project-name-docusaurus
 ## FAQ
 
 **Q: What if I don't have project materials to analyze?**
-A: No problem! The agent will create a basic Docusaurus template that you can customize manually with guidance.
+A: No problem! The skill will create a basic Docusaurus template that you can customize manually with guidance.
 
 **Q: Can I customize the website after it's generated?**
 A: Absolutely! The generated website is a standard Docusaurus project that you can fully customize.
 
 **Q: What if the build fails after 5 attempts?**
-A: The agent will present the errors and provide guidance for manual fixes. You can then continue or pause for intervention.
+A: The skill will present the errors and provide guidance for manual fixes. You can then continue or pause for intervention.
 
 **Q: Can I use this for non-technical projects?**
-A: Yes! The agent works with any type of project content, including business, research, creative, and educational materials.
+A: Yes! The skill works with any type of project content, including business, research, creative, and educational materials.
 
 **Q: How do I deploy the website?**
-A: The agent provides deployment guidance. GitHub Pages is recommended and pre-configured via GitHub Actions workflow.
+A: The skill provides deployment guidance. GitHub Pages is recommended and pre-configured via GitHub Actions workflow.
 
 **Q: What if I want to undo the website generation?**
 A: All changes are on a git branch. Simply:
@@ -517,7 +517,7 @@ git branch -D website/[branch-name]
 ```
 
 **Q: Can I regenerate the website later?**
-A: Yes! Run the agent again with updated source materials to regenerate with new content.
+A: Yes! Run the skill again with updated source materials to regenerate with new content.
 
 ---
 
@@ -544,7 +544,7 @@ A: Yes! Run the agent again with updated source materials to regenerate with new
 
 **Issue: Build fails after generation**
 - **Cause**: Customization errors or dependency issues
-- **Solution**: Agent auto-fixes via build loop. If unsuccessful, check error messages and fix manually.
+- **Solution**: Skill auto-fixes via build loop. If unsuccessful, check error messages and fix manually.
 
 **Issue: Development server won't start**
 - **Cause**: Port conflict (default: 3000) or dependency issues
@@ -555,7 +555,7 @@ A: Yes! Run the agent again with updated source materials to regenerate with new
 
 **Issue: Broken links or missing pages**
 - **Cause**: Content structure mismatch or incorrect paths
-- **Solution**: Agent detects and fixes during build loop. Review navigation configuration if issues persist.
+- **Solution**: Skill detects and fixes during build loop. Review navigation configuration if issues persist.
 
 **Issue: Deployment fails**
 - **Cause**: Configuration errors or GitHub Pages settings
@@ -582,14 +582,14 @@ For complex projects, customize in stages:
 
 ### Content Updates
 To update website with new project content:
-1. Run agent again with updated source directory
+1. Run skill again with updated source directory
 2. Compare new generation with existing
 3. Merge desired updates
 
 ### Custom Styling
 To apply custom branding:
 1. Provide brand guidelines in source directory
-2. Agent will detect and apply where possible
+2. Skill will detect and apply where possible
 3. Further customize `src/css/custom.css` after generation
 
 ---

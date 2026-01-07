@@ -550,15 +550,15 @@
       ],
       "fileCount": 10
     },
-    "slim-website": {
-      "name": "slim-website",
+    "slim-website-maker": {
+      "name": "slim-website-maker",
       "type": "directory",
       "children": [
         {
           "name": "SKILL.md",
           "type": "file",
           "path": "SKILL.md",
-          "size": 13432
+          "size": 19190
         },
         {
           "name": "assets",
@@ -566,16 +566,52 @@
           "path": "assets",
           "children": [
             {
+              "name": "build-validation-guide.md",
+              "type": "file",
+              "path": "assets/build-validation-guide.md",
+              "size": 6472
+            },
+            {
+              "name": "config-customization-guide.md",
+              "type": "file",
+              "path": "assets/config-customization-guide.md",
+              "size": 12813
+            },
+            {
+              "name": "docs-structure-guide.md",
+              "type": "file",
+              "path": "assets/docs-structure-guide.md",
+              "size": 9615
+            },
+            {
               "name": "docusaurus-guide.md",
               "type": "file",
               "path": "assets/docusaurus-guide.md",
               "size": 4532
+            },
+            {
+              "name": "example-website-report.md",
+              "type": "file",
+              "path": "assets/example-website-report.md",
+              "size": 9955
+            },
+            {
+              "name": "homepage-customization-guide.md",
+              "type": "file",
+              "path": "assets/homepage-customization-guide.md",
+              "size": 9199
+            },
+            {
+              "name": "website-generation-plan.md",
+              "type": "file",
+              "path": "assets/website-generation-plan.md",
+              "size": 7079
             }
           ],
-          "fileCount": 1
+          "fileCount": 7
         }
       ],
-      "fileCount": 2
+      "fileCount": 8
     }
   },
   "mcp-servers": {}

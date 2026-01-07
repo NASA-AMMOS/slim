@@ -108,14 +108,7 @@
       "skills": ["./skills/slim-skill-creator"]
     },
     {
-      "name": "slim-website",
-      "description": "Project website generator that analyzes your project content and creates customized Docusaurus documentation websites",
-      "source": "./static/marketplace",
-      "strict": false,
-      "skills": ["./skills/slim-website"]
-    },
-    {
-      "name": "slim-github-mcp-server",
+      "name": "github-mcp-server",
       "source": {
         "source": "github",
         "repo": "https://github.com/github/github-mcp-server"
@@ -154,16 +147,16 @@
       "agents": "./agents/slim-rebranding-agent/slim-rebranding-agent.md"
     },
     {
-      "name": "slim-website-maker-agent",
+      "name": "slim-website-maker",
       "version": "1.0.0",
-      "description": "Autonomous website generator agent for creating customized Docusaurus documentation websites. Analyzes project content, generates intelligent website structure, and validates changes with iterative build testing until successful. Creates git branch and commits with clear messages. Auto-detects project type and customizes accordingly. Use when generating project documentation websites, creating content-driven sites, or automating website creation with build validation.",
+      "description": "Autonomous website generator skill for creating customized Docusaurus documentation websites. Analyzes project content, generates intelligent website structure, and validates changes with iterative build testing until successful. Creates git branch and commits with clear messages. Auto-detects project type and customizes accordingly. Use when generating project documentation websites, creating content-driven sites, or automating website creation with build validation.",
       "source": "./static/marketplace",
       "author": {
         "name": "NASA AMMOS",
         "email": "slim@jpl.nasa.gov",
         "url": "https://github.com/NASA-AMMOS"
       },
-      "homepage": "https://github.com/NASA-AMMOS/slim/tree/main/static/marketplace/agents/slim-website-maker-agent",
+      "homepage": "https://github.com/NASA-AMMOS/slim/tree/main/static/marketplace/agents/slim-website-maker",
       "repository": "https://github.com/NASA-AMMOS/slim",
       "license": "Apache-2.0",
       "keywords": [
@@ -175,7 +168,7 @@
         "workflow",
         "deployment"
       ],
-      "agents": "./agents/slim-website-maker-agent/slim-website-maker-agent.md"
+      "skills": "./skills/slim-website-maker"
     }
   ]
 }

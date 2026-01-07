@@ -250,23 +250,6 @@
       "skill_file_url": "/slim/marketplace/skills/slim-skill-creator/SKILL.md",
       "type": "skill",
       "example": "Help me create a new SLIM best practice for automated testing workflows"
-    },
-    {
-      "name": "slim-website",
-      "displayName": "Project Website Generator",
-      "description": "Project website generator that analyzes your project content and creates customized Docusaurus documentation websites",
-      "category": "documentation",
-      "tags": [
-        "documentation",
-        "ai-powered",
-        "analysis",
-        "templates",
-        "deployment"
-      ],
-      "lastUpdated": "2025-01-05",
-      "skill_file_url": "/slim/marketplace/skills/slim-website/SKILL.md",
-      "type": "skill",
-      "example": "Generate a Docusaurus documentation website for this project"
     }
   ],
   "agents": [
@@ -296,39 +279,11 @@
       "homepage": "https://github.com/NASA-AMMOS/slim/tree/main/static/marketplace/agents/slim-rebranding-agent",
       "repository": "https://github.com/NASA-AMMOS/slim",
       "license": "Apache-2.0"
-    },
-    {
-      "name": "slim-website-maker-agent",
-      "displayName": "Project Website Maker",
-      "description": "Autonomous website generator agent for creating customized Docusaurus documentation websites. Analyzes project content, generates intelligent website structure, and validates changes with iterative build testing until successful. Creates git branch and commits with clear messages. Auto-detects project type and customizes accordingly. Use when generating project documentation websites, creating content-driven sites, or automating website creation with build validation.",
-      "category": "documentation",
-      "tags": [
-        "documentation",
-        "ai-powered",
-        "automation",
-        "git",
-        "build-validation",
-        "workflow",
-        "deployment"
-      ],
-      "lastUpdated": "2025-01-05",
-      "skill_file_url": "/slim/marketplace/./agents/slim-website-maker-agent/slim-website-maker-agent.md",
-      "type": "agent",
-      "example": "Generate a Docusaurus documentation website for this project with automatic build validation",
-      "version": "1.0.0",
-      "author": {
-        "name": "NASA AMMOS",
-        "email": "slim@jpl.nasa.gov",
-        "url": "https://github.com/NASA-AMMOS"
-      },
-      "homepage": "https://github.com/NASA-AMMOS/slim/tree/main/static/marketplace/agents/slim-website-maker-agent",
-      "repository": "https://github.com/NASA-AMMOS/slim",
-      "license": "Apache-2.0"
     }
   ],
   "mcp": [
     {
-      "name": "slim-github-mcp-server",
+      "name": "github-mcp-server",
       "description": "MCP server providing GitHub repository access and management capabilities including issues, PRs, and repository operations",
       "tags": [
         "github",
@@ -345,31 +300,10 @@
         "url": "https://github.com/github/github-mcp-server"
       },
       "homepage": "https://github.com/github/github-mcp-server",
-      "displayName": "GitHub MCP Server",
-      "example": "Show me open pull requests in this repository",
-      "category": "integrations",
-      "lastUpdated": "2025-01-05"
-    },
-    {
-      "name": "github-mcp-server",
-      "displayName": "GitHub MCP Server",
-      "description": "MCP server providing GitHub repository access and management capabilities including issues, PRs, and repository operations",
-      "category": "integrations",
-      "tags": [
-        "github",
-        "git",
-        "integration"
-      ],
-      "lastUpdated": "2025-01-05",
-      "repository": {
-        "url": "https://github.com/github/github-mcp-server",
-        "type": "git"
-      },
-      "skill_file_url": "https://raw.githubusercontent.com/github/github-mcp-server/main/README.md",
-      "external_only": true,
-      "type": "mcp",
-      "npm_package": "@github/github-mcp-server",
-      "example": "Show me open pull requests in this repository"
+      "displayName": "",
+      "example": "",
+      "category": "",
+      "lastUpdated": ""
     }
   ],
   "local_marketplace_path": "/Users/rverma/src/slim/slim2/slim-ai/static/marketplace"
