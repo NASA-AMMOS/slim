@@ -166,6 +166,20 @@ const config = {
       async: true,
     },
   ],
+
+  // Custom fields for SLIM configuration
+  customFields: {
+    slimConfig: {
+      registrySources: [
+        {
+          type: 'marketplace-json',
+          path: './.claude-plugin/marketplace.json',
+          enabled: true
+        }
+        // Future: Support for other types and URLs
+      ]
+    }
+  },
 };
 
 module.exports = config;
