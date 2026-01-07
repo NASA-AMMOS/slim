@@ -11,7 +11,7 @@ const path = require('path');
 const registryPath = path.join(__dirname, '../../static/data/registry.json');
 
 // Output: marketplace.json
-const outputPath = path.join(__dirname, '../../static/marketplace/.claude-plugin/marketplace.json');
+const outputPath = path.join(__dirname, '../../.claude-plugin/marketplace.json');
 
 /**
  * Generate the marketplace.json file from registry data
@@ -58,7 +58,7 @@ function generateMarketplace() {
       } else {
         plugins.push({
           name: pluginName,
-          source: `./skills/${skill.name}`,
+          source: `./static/marketplace/skills/${skill.name}`,
           description: skill.description || '',
           version: skill.version || '1.0.0',
           author: {
@@ -104,7 +104,7 @@ function generateMarketplace() {
       } else {
         plugins.push({
           name: pluginName,
-          source: `./agents/${agent.name}`,
+          source: `./static/marketplace/agents/${agent.name}`,
           description: agent.description || '',
           version: agent.version || '1.0.0',
           author: {
@@ -148,7 +148,7 @@ function generateMarketplace() {
       } else {
         plugins.push({
           name: `slim-${mcp.name}`,
-          source: `./mcp-servers/${mcp.name}`,
+          source: `./static/marketplace/mcp-servers/${mcp.name}`,
           description: mcp.description || '',
           version: mcp.version || '1.0.0',
           author: {
