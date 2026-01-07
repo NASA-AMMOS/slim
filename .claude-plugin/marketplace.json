@@ -164,6 +164,7 @@
       "name": "slim-rebranding-agent",
       "version": "1.0.0",
       "description": "Comprehensive autonomous rebranding agent for projects. Handles all aspects of rebranding including text/naming, documentation, visual assets, colors/theming, and configuration files. Works with any codebase (Node, Python, Java, C++, Rust, Go, etc.). Auto-integrates free Phosphor icons. Presents detailed plan for approval before executing changes. Creates git branch and commits with clear messages. Validates changes with linters and build systems. Use when rebranding a project, changing project name, updating visual identity, or modernizing brand assets.",
+      "source": "./static/marketplace",
       "author": {
         "name": "NASA AMMOS",
         "email": "slim@jpl.nasa.gov",
@@ -180,12 +181,13 @@
         "code-quality",
         "workflow"
       ],
-      "agents": "./static/marketplace/agents/slim-rebranding-agent"
+      "agents": "./agents/slim-rebranding-agent/slim-rebranding-agent.md"
     },
     {
       "name": "slim-website-maker-agent",
       "version": "1.0.0",
       "description": "Autonomous website generator agent for creating customized Docusaurus documentation websites. Analyzes project content, generates intelligent website structure, and validates changes with iterative build testing until successful. Creates git branch and commits with clear messages. Auto-detects project type and customizes accordingly. Use when generating project documentation websites, creating content-driven sites, or automating website creation with build validation.",
+      "source": "./static/marketplace",
       "author": {
         "name": "NASA AMMOS",
         "email": "slim@jpl.nasa.gov",
@@ -203,7 +205,7 @@
         "workflow",
         "deployment"
       ],
-      "agents": "./static/marketplace/agents/slim-website-maker-agent"
+      "agents": "./agents/slim-website-maker-agent/slim-website-maker-agent.md"
     }
   ]
 }
