@@ -467,6 +467,93 @@
       ],
       "fileCount": 2
     },
+    "slim-rebranding": {
+      "name": "slim-rebranding",
+      "type": "directory",
+      "children": [
+        {
+          "name": "SKILL.md",
+          "type": "file",
+          "path": "SKILL.md",
+          "size": 36400
+        },
+        {
+          "name": "assets",
+          "type": "directory",
+          "path": "assets",
+          "children": [
+            {
+              "name": "brand-questionnaire.md",
+              "type": "file",
+              "path": "assets/brand-questionnaire.md",
+              "size": 6445
+            },
+            {
+              "name": "create-best-practice-guide.md",
+              "type": "file",
+              "path": "assets/create-best-practice-guide.md",
+              "size": 8693
+            },
+            {
+              "name": "empty-marketplace-guide.md",
+              "type": "file",
+              "path": "assets/empty-marketplace-guide.md",
+              "size": 4796
+            },
+            {
+              "name": "example-rebrand-report.md",
+              "type": "file",
+              "path": "assets/example-rebrand-report.md",
+              "size": 24554
+            },
+            {
+              "name": "hero-customization-guide.md",
+              "type": "file",
+              "path": "assets/hero-customization-guide.md",
+              "size": 10921
+            },
+            {
+              "name": "linter-validation-guide.md",
+              "type": "file",
+              "path": "assets/linter-validation-guide.md",
+              "size": 19884
+            },
+            {
+              "name": "page-template-guide.md",
+              "type": "file",
+              "path": "assets/page-template-guide.md",
+              "size": 3529
+            },
+            {
+              "name": "phosphor-icons-guide.md",
+              "type": "file",
+              "path": "assets/phosphor-icons-guide.md",
+              "size": 11222
+            },
+            {
+              "name": "rebrand-plan-template.md",
+              "type": "file",
+              "path": "assets/rebrand-plan-template.md",
+              "size": 24142
+            },
+            {
+              "name": "registry-import-guide.md",
+              "type": "file",
+              "path": "assets/registry-import-guide.md",
+              "size": 20155
+            },
+            {
+              "name": "slim-website-questionnaire.md",
+              "type": "file",
+              "path": "assets/slim-website-questionnaire.md",
+              "size": 14058
+            }
+          ],
+          "fileCount": 11
+        }
+      ],
+      "fileCount": 12
+    },
     "slim-skill-creator": {
       "name": "slim-skill-creator",
       "type": "directory",

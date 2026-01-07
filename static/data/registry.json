@@ -250,14 +250,10 @@
       "skill_file_url": "/slim/marketplace/skills/slim-skill-creator/SKILL.md",
       "type": "skill",
       "example": "Help me create a new SLIM best practice for automated testing workflows"
-    }
-  ],
-  "agents": [
+    },
     {
-      "name": "slim-rebranding-agent",
-      "displayName": "Rebranding Agent",
-      "description": "Comprehensive autonomous rebranding agent for projects. Handles all aspects of rebranding including text/naming, documentation, visual assets, colors/theming, and configuration files. Works with any codebase (Node, Python, Java, C++, Rust, Go, etc.). Auto-integrates free Phosphor icons. Presents detailed plan for approval before executing changes. Creates git branch and commits with clear messages. Validates changes with linters and build systems. Use when rebranding a project, changing project name, updating visual identity, or modernizing brand assets.",
-      "category": "project-setup",
+      "name": "slim-rebranding",
+      "description": "Comprehensive autonomous rebranding skill for projects. Handles all aspects of rebranding including text/naming, documentation, visual assets, colors/theming, and configuration files. Works with any codebase (Node, Python, Java, C++, Rust, Go, etc.). Auto-integrates free Phosphor icons. Presents detailed plan for approval before executing changes. Creates git branch and commits with clear messages. Validates changes with linters and build systems. Use when rebranding a project, changing project name, updating visual identity, or modernizing brand assets.",
       "tags": [
         "branding",
         "documentation",
@@ -266,21 +262,52 @@
         "code-quality",
         "workflow"
       ],
-      "lastUpdated": "2025-01-05",
-      "skill_file_url": "/slim/marketplace/./agents/slim-rebranding-agent/slim-rebranding-agent.md",
-      "type": "agent",
-      "example": "Rebrand this project from 'OldName' to 'NewName' including all documentation, visual assets, and color scheme",
+      "type": "skill",
+      "skill_file_url": "/slim/marketplace/skills/slim-rebranding/SKILL.md",
       "version": "1.0.0",
       "author": {
         "name": "NASA AMMOS",
         "email": "slim@jpl.nasa.gov",
         "url": "https://github.com/NASA-AMMOS"
       },
-      "homepage": "https://github.com/NASA-AMMOS/slim/tree/main/static/marketplace/agents/slim-rebranding-agent",
+      "homepage": "https://github.com/NASA-AMMOS/slim/tree/main/static/marketplace/skills/slim-rebranding",
       "repository": "https://github.com/NASA-AMMOS/slim",
-      "license": "Apache-2.0"
+      "license": "Apache-2.0",
+      "displayName": "SLIM Rebranding",
+      "example": "Help me rebrand this slim website. ",
+      "category": "project-setup",
+      "lastUpdated": "2026-01-05"
+    },
+    {
+      "name": "slim-website-maker",
+      "description": "Autonomous website generator skill for creating customized Docusaurus documentation websites. Analyzes project content, generates intelligent website structure, and validates changes with iterative build testing until successful. Creates git branch and commits with clear messages. Auto-detects project type and customizes accordingly. Use when generating project documentation websites, creating content-driven sites, or automating website creation with build validation.",
+      "tags": [
+        "documentation",
+        "ai-powered",
+        "automation",
+        "git",
+        "build-validation",
+        "workflow",
+        "deployment"
+      ],
+      "type": "skill",
+      "skill_file_url": "/slim/marketplace/skills/slim-website-maker/SKILL.md",
+      "version": "1.0.0",
+      "author": {
+        "name": "NASA AMMOS",
+        "email": "slim@jpl.nasa.gov",
+        "url": "https://github.com/NASA-AMMOS"
+      },
+      "homepage": "https://github.com/NASA-AMMOS/slim/tree/main/static/marketplace/agents/slim-website-maker",
+      "repository": "https://github.com/NASA-AMMOS/slim",
+      "license": "Apache-2.0",
+      "displayName": "SLIM Website Maker",
+      "example": "Help me make a product website using SLIM best practices.",
+      "category": "project-setup",
+      "lastUpdated": "2025-08-12"
     }
   ],
+  "agents": [],
   "mcp": [
     {
       "name": "github-mcp-server",
@@ -300,11 +327,10 @@
         "url": "https://github.com/github/github-mcp-server"
       },
       "homepage": "https://github.com/github/github-mcp-server",
-      "displayName": "",
-      "example": "",
-      "category": "",
-      "lastUpdated": ""
+      "displayName": "GitHub MCP Server",
+      "example": "Give me information about this repository from GitHub. ",
+      "category": "collaboration",
+      "lastUpdated": "2026-01-05"
     }
-  ],
-  "local_marketplace_path": "/Users/rverma/src/slim/slim2/slim-ai/static/marketplace"
+  ]
 }
