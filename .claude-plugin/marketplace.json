@@ -20,12 +20,7 @@
       },
       "category": "documentation",
       "homepage": "https://github.com/NASA-AMMOS/slim/tree/main/static/marketplace/skills/slim-changelog",
-      "keywords": [
-        "documentation",
-        "versioning",
-        "templates",
-        "project-setup"
-      ]
+      "keywords": ["documentation", "versioning", "templates", "project-setup"]
     },
     {
       "name": "slim-code-of-conduct",
@@ -57,11 +52,7 @@
       },
       "category": "security",
       "homepage": "https://github.com/NASA-AMMOS/slim/tree/main/static/marketplace/skills/slim-container-vulnerability-scanning",
-      "keywords": [
-        "security",
-        "containers",
-        "automation"
-      ]
+      "keywords": ["security", "containers", "automation"]
     },
     {
       "name": "slim-continuous-testing",
@@ -74,12 +65,7 @@
       },
       "category": "testing",
       "homepage": "https://github.com/NASA-AMMOS/slim/tree/main/static/marketplace/skills/slim-continuous-testing",
-      "keywords": [
-        "testing",
-        "automation",
-        "code-quality",
-        "deployment"
-      ]
+      "keywords": ["testing", "automation", "code-quality", "deployment"]
     },
     {
       "name": "slim-contributing-guide",
@@ -122,7 +108,10 @@
     },
     {
       "name": "slim-github-mcp-server",
-      "source": "https://github.com/github/github-mcp-server",
+      "source": {
+        "source": "github",
+        "repo": "https://github.com/github/github-mcp-server"
+      },
       "description": "MCP server providing GitHub repository access and management capabilities including issues, PRs, and repository operations",
       "version": "1.0.0",
       "author": {
@@ -131,16 +120,7 @@
       },
       "category": "integrations",
       "homepage": "https://github.com/github/github-mcp-server",
-      "keywords": [
-        "github",
-        "git",
-        "integration",
-        "external",
-        "third-party"
-      ],
-      "external_only": true,
-      "npm_package": "@github/github-mcp-server",
-      "install_command": "npm install -g @github/github-mcp-server"
+      "keywords": ["github", "git", "integration", "external", "third-party"]
     },
     {
       "name": "slim-governance",
@@ -172,12 +152,7 @@
       },
       "category": "governance",
       "homepage": "https://github.com/NASA-AMMOS/slim/tree/main/static/marketplace/skills/slim-issue-templates",
-      "keywords": [
-        "governance",
-        "templates",
-        "project-setup",
-        "github"
-      ]
+      "keywords": ["governance", "templates", "project-setup", "github"]
     },
     {
       "name": "slim-license",
@@ -190,12 +165,7 @@
       },
       "category": "governance",
       "homepage": "https://github.com/NASA-AMMOS/slim/tree/main/static/marketplace/skills/slim-license",
-      "keywords": [
-        "project-setup",
-        "legal",
-        "open-source",
-        "templates"
-      ]
+      "keywords": ["project-setup", "legal", "open-source", "templates"]
     },
     {
       "name": "slim-meeting-agenda",
@@ -266,12 +236,7 @@
       },
       "category": "documentation",
       "homepage": "https://github.com/NASA-AMMOS/slim/tree/main/static/marketplace/skills/slim-readme",
-      "keywords": [
-        "documentation",
-        "project-setup",
-        "templates",
-        "onboarding"
-      ]
+      "keywords": ["documentation", "project-setup", "templates", "onboarding"]
     },
     {
       "name": "slim-rebranding-agent",
