@@ -6,6 +6,7 @@
       "description": "Create and maintain human-readable changelogs for software projects using Keep a Changelog standards",
       "category": "documentation",
       "tags": [
+        "changelog",
         "documentation",
         "versioning",
         "templates",
@@ -22,11 +23,12 @@
       "description": "Create and implement code of conduct and collaboration policies using Contributor Covenant standards, with specialized templates for scientific research environments and academic citation",
       "category": "governance",
       "tags": [
+        "code-of-conduct",
         "governance",
-        "project-setup",
-        "templates",
         "collaboration",
-        "community"
+        "templates",
+        "community",
+        "contributor-covenant"
       ],
       "lastUpdated": "2024-04-30",
       "skill_file_url": "/slim/marketplace/skills/slim-code-of-conduct/SKILL.md",
@@ -39,9 +41,12 @@
       "description": "Implement Grype-based container and dependency vulnerability scanning with automated pre-commit hooks",
       "category": "security",
       "tags": [
+        "vulnerability-scanning",
+        "container",
         "security",
-        "containers",
-        "automation"
+        "grype",
+        "automation",
+        "pre-commit"
       ],
       "lastUpdated": "2025-01-05",
       "skill_file_url": "/slim/marketplace/skills/slim-container-vulnerability-scanning/SKILL.md",
@@ -55,9 +60,11 @@
       "category": "testing",
       "tags": [
         "testing",
+        "continuous-testing",
         "automation",
-        "code-quality",
-        "deployment"
+        "static-analysis",
+        "security-scanning",
+        "code-quality"
       ],
       "lastUpdated": "2024-08-30",
       "skill_file_url": "/slim/marketplace/skills/slim-continuous-testing/SKILL.md",
@@ -70,12 +77,12 @@
       "description": "Create comprehensive contributing guides for open source projects with workflow guidance and customizable templates",
       "category": "governance",
       "tags": [
-        "governance",
-        "templates",
-        "project-setup",
+        "contributing",
+        "open-source",
         "workflow",
-        "community",
-        "onboarding"
+        "templates",
+        "governance",
+        "community"
       ],
       "lastUpdated": "2024-08-19",
       "skill_file_url": "/slim/marketplace/skills/slim-contributing-guide/SKILL.md",
@@ -88,11 +95,12 @@
       "description": "Generate comprehensive executive summaries from workspace communication files using AI analysis with automatic context discovery",
       "category": "documentation",
       "tags": [
+        "executive-summary",
         "ai-powered",
         "reporting",
         "analysis",
-        "project-management",
-        "workspace"
+        "workspace",
+        "communication"
       ],
       "lastUpdated": "2025-01-05",
       "dependencies": {
@@ -112,9 +120,10 @@
       "tags": [
         "governance",
         "templates",
-        "project-setup",
         "open-source",
-        "community"
+        "government",
+        "team-management",
+        "project-setup"
       ],
       "lastUpdated": "2024-03-28",
       "skill_file_url": "/slim/marketplace/skills/slim-governance/SKILL.md",
@@ -127,10 +136,12 @@
       "description": "Add standardized GitHub issue templates for bug reports and feature requests in both Markdown and Form formats",
       "category": "governance",
       "tags": [
-        "governance",
+        "issue-templates",
+        "github",
+        "bug-reports",
+        "feature-requests",
         "templates",
-        "project-setup",
-        "github"
+        "governance"
       ],
       "lastUpdated": "2024-08-02",
       "skill_file_url": "/slim/marketplace/skills/slim-issue-templates/SKILL.md",
@@ -143,10 +154,13 @@
       "description": "Detect project type and add appropriate NASA/Open Source licenses (Apache 2.0 or MIT)",
       "category": "governance",
       "tags": [
-        "project-setup",
-        "legal",
+        "license",
         "open-source",
-        "templates"
+        "apache",
+        "mit",
+        "nasa",
+        "legal",
+        "project-setup"
       ],
       "lastUpdated": "2024-06-19",
       "skill_file_url": "/slim/marketplace/skills/slim-license/SKILL.md",
@@ -159,11 +173,13 @@
       "description": "Generate comprehensive meeting agendas by orchestrating context gathering from previous summaries, querying external services (GitHub, Slack, etc. via TECH.md), and matching custom format templates. Automatically identifies and suggests generation of missing meeting summaries.",
       "category": "collaboration",
       "tags": [
+        "meeting-agenda",
         "collaboration",
         "project-management",
         "ai-powered",
-        "workflow",
-        "integration"
+        "integration",
+        "github",
+        "slack"
       ],
       "lastUpdated": "2025-01-05",
       "dependencies": {
@@ -182,12 +198,12 @@
       "description": "Generate comprehensive meeting summaries with action items from meeting notes, transcripts, or agendas. Automatically fulfills actionable tasks using tools discovered from TECH.md (MCP servers, APIs, local scripts) and provides guidance for manual tasks.",
       "category": "collaboration",
       "tags": [
+        "meeting-summary",
         "collaboration",
         "reporting",
         "automation",
         "ai-powered",
-        "project-management",
-        "integration"
+        "action-items"
       ],
       "lastUpdated": "2025-01-05",
       "dependencies": {
@@ -205,11 +221,13 @@
       "description": "Set up a project-aware workspace with date-organized dynamic folders for project-aware skill execution, tool integration tracking (MCP servers, APIs, scripts), and daily work organization",
       "category": "project-setup",
       "tags": [
+        "workspace",
+        "project-aware",
         "ai-powered",
         "project-setup",
-        "project-management",
         "integration",
-        "workflow"
+        "workflow",
+        "organization"
       ],
       "lastUpdated": "2025-01-05",
       "skill_file_url": "/slim/marketplace/skills/slim-project-aware-workspace/SKILL.md",
@@ -222,6 +240,7 @@
       "description": "Create a comprehensive README.md template to help developers and users understand your project",
       "category": "documentation",
       "tags": [
+        "readme",
         "documentation",
         "project-setup",
         "templates",
@@ -238,12 +257,12 @@
       "description": "Meta-skill for creating and integrating new best practices (skills, agents, MCP servers) into the SLIM marketplace with dependency tracking and automated registry updates",
       "category": "project-setup",
       "tags": [
-        "skill-development",
+        "skill-creator",
         "marketplace",
         "automation",
         "templates",
         "workflow",
-        "agents",
+        "best-practices",
         "mcp-servers"
       ],
       "lastUpdated": "2025-01-05",
@@ -255,7 +274,9 @@
       "name": "slim-rebranding",
       "description": "Comprehensive autonomous rebranding skill for projects. Handles all aspects of rebranding including text/naming, documentation, visual assets, colors/theming, and configuration files. Works with any codebase (Node, Python, Java, C++, Rust, Go, etc.). Auto-integrates free Phosphor icons. Presents detailed plan for approval before executing changes. Creates git branch and commits with clear messages. Validates changes with linters and build systems. Use when rebranding a project, changing project name, updating visual identity, or modernizing brand assets.",
       "tags": [
+        "rebranding",
         "branding",
+        "visual-assets",
         "documentation",
         "automation",
         "git",
@@ -282,6 +303,8 @@
       "name": "slim-website-maker",
       "description": "Autonomous website generator skill for creating customized Docusaurus documentation websites. Analyzes project content, generates intelligent website structure, and validates changes with iterative build testing until successful. Creates git branch and commits with clear messages. Auto-detects project type and customizes accordingly. Use when generating project documentation websites, creating content-driven sites, or automating website creation with build validation.",
       "tags": [
+        "website-maker",
+        "docusaurus",
         "documentation",
         "ai-powered",
         "automation",
@@ -317,7 +340,9 @@
         "git",
         "integration",
         "external",
-        "third-party"
+        "third-party",
+        "mcp-server",
+        "repository"
       ],
       "type": "mcp",
       "skill_file_url": "https://github.com/github/github-mcp-server",
