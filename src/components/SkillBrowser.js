@@ -38,6 +38,8 @@ const SkillCard = ({ skill, onTagClick, isHighlighted, currentFilters }) => {
     content: false,
     git: false,
     link: false,
+    example: false,
+    slash: false,
   });
   const [showModal, setShowModal] = useState(false);
   const [markdownContent, setMarkdownContent] = useState("");
@@ -102,7 +104,37 @@ const SkillCard = ({ skill, onTagClick, isHighlighted, currentFilters }) => {
     setTimeout(() => setCopied({ ...copied, link: false }), 2000);
   };
 
-  // Generate zip download URL for localhost
+  // Extract repository info from current deployment
+  const getRepositoryInfo = () => {
+    const hostname = window.location.hostname;
+    const baseUrl = window.location.origin;
+
+    // For GitHub Pages deployments (format: username.github.io or org.github.io)
+    if (hostname.endsWith('.github.io')) {
+      const orgName = hostname.replace('.github.io', '');
+      const pathParts = window.location.pathname.split('/').filter(part => part);
+      const projectName = pathParts.length > 0 ? pathParts[0] : 'slim';
+
+      return {
+        organization: orgName,
+        project: projectName,
+        githubUrl: `https://github.com/${orgName}/${projectName}`,
+        baseUrl: baseUrl,
+        assetsUrl: `${baseUrl}/${projectName}/assets/zip`
+      };
+    }
+
+    // Fallback for other deployments or localhost
+    return {
+      organization: 'nasa-ammos',
+      project: 'slim',
+      githubUrl: 'https://github.com/nasa-ammos/slim',
+      baseUrl: baseUrl,
+      assetsUrl: `${baseUrl}/slim/assets/zip`
+    };
+  };
+
+  // Generate zip download URL
   const getZipDownloadUrl = (itemName) => {
     const isLocalhost =
       window.location.hostname === "localhost" ||
@@ -110,8 +142,10 @@ const SkillCard = ({ skill, onTagClick, isHighlighted, currentFilters }) => {
 
     if (isLocalhost) {
       return `${window.location.origin}/slim/assets/zip/${itemName}.zip`;
+    } else {
+      const repoInfo = getRepositoryInfo();
+      return `${repoInfo.assetsUrl}/${itemName}.zip`;
     }
-    return null;
   };
 
   // Get install directory path (Claude Code tab vs Manual tab)
@@ -153,7 +187,7 @@ const SkillCard = ({ skill, onTagClick, isHighlighted, currentFilters }) => {
     }
   };
 
-  // Generate manual install command for localhost
+  // Generate manual install command
   const getManualInstallCommand = (item) => {
     // For external-only entries, use npm or direct repository instructions
     if (item.external_only) {
@@ -174,8 +208,10 @@ const SkillCard = ({ skill, onTagClick, isHighlighted, currentFilters }) => {
       const defaultPath = getInstallPath(item, false); // Pass false for Manual tab (returns ~/)
       return `curl -L ${zipUrl} | tar -xf - -C ${defaultPath}`;
     } else {
-      // Deployed: Return existing git clone command
-      return getGitCloneCommand(item);
+      // Deployed: Use curl with zip download instead of git clone
+      const zipUrl = getZipDownloadUrl(item.name);
+      const defaultPath = getInstallPath(item, false); // Pass false for Manual tab (returns ~/)
+      return `curl -L ${zipUrl} | tar -xf - -C ${defaultPath}`;
     }
   };
 
@@ -209,8 +245,9 @@ const SkillCard = ({ skill, onTagClick, isHighlighted, currentFilters }) => {
       return "/plugin marketplace add [YOUR_SLIM_REPO_PATH]/static/marketplace";
     }
 
-    // For deployed sites, use GitHub command
-    return "/plugin marketplace add https://github.com/nasa-ammos/slim/tree/main/static/marketplace";
+    // For deployed sites, use dynamic GitHub command based on current deployment
+    const repoInfo = getRepositoryInfo();
+    return `/plugin marketplace add ${repoInfo.githubUrl}/tree/main/static/marketplace`;
   };
 
   // Generate command for manual installation
@@ -224,8 +261,9 @@ const SkillCard = ({ skill, onTagClick, isHighlighted, currentFilters }) => {
       // For localhost, use local file system path with user-fillable placeholder
       return `cp -r [YOUR_SLIM_REPO_PATH]/static/marketplace/${pathType}/${item.name} ./`;
     } else {
-      // For deployed version, use GitHub sparse-checkout
-      return `git clone --depth 1 --filter=blob:none --sparse https://github.com/nasa-ammos/slim.git && cd slim && git sparse-checkout set static/marketplace/${pathType}/${item.name}`;
+      // For deployed version, use dynamic GitHub sparse-checkout based on current deployment
+      const repoInfo = getRepositoryInfo();
+      return `git clone --depth 1 --filter=blob:none --sparse ${repoInfo.githubUrl}.git && cd ${repoInfo.project} && git sparse-checkout set static/marketplace/${pathType}/${item.name}`;
     }
   };
 
@@ -451,16 +489,68 @@ const SkillCard = ({ skill, onTagClick, isHighlighted, currentFilters }) => {
                                 <strong>Example usage:</strong>
                               </small>
                               <div
-                                className="p-2"
+                                className="p-2 mb-2"
                                 style={{
-                                  backgroundColor: "var(--ifm-background-surface-color)",
+                                  backgroundColor: "var(--ifm-code-background)",
                                   borderRadius: "4px",
-                                  borderLeft: "3px solid var(--ifm-color-primary)",
                                 }}
                               >
-                                <small style={{ fontSize: "0.85rem", fontStyle: "italic" }}>
-                                  {skill.example}
+                                <div className="d-flex align-items-center gap-2">
+                                  <code
+                                    style={{
+                                      fontSize: "0.8rem",
+                                      flex: 1,
+                                      wordBreak: "break-word",
+                                      backgroundColor: "transparent"
+                                    }}
+                                  >
+                                    {skill.example}
+                                  </code>
+                                  <Button
+                                    size="sm"
+                                    variant="outline-primary"
+                                    onClick={() =>
+                                      copyToClipboard(skill.example, "example")
+                                    }
+                                    style={{
+                                      fontSize: "0.75rem",
+                                      whiteSpace: "nowrap",
+                                    }}
+                                  >
+                                    {copied.example ? "✓ Copied" : "Copy"}
+                                  </Button>
+                                </div>
+                              </div>
+                              <div>
+                                <small className="text-muted d-block mb-2">
+                                  <strong>Or use the slash command:</strong>
                                 </small>
+                                <div
+                                  className="p-2"
+                                  style={{
+                                    backgroundColor: "var(--ifm-code-background)",
+                                    borderRadius: "4px",
+                                  }}
+                                >
+                                  <div className="d-flex align-items-center gap-2">
+                                    <code style={{ fontSize: "0.8rem", flex: 1 }}>
+                                      /{skill.name}
+                                    </code>
+                                    <Button
+                                      size="sm"
+                                      variant="outline-primary"
+                                      onClick={() =>
+                                        copyToClipboard(`/${skill.name}`, "slash")
+                                      }
+                                      style={{
+                                        fontSize: "0.75rem",
+                                        whiteSpace: "nowrap",
+                                      }}
+                                    >
+                                      {copied.slash ? "✓ Copied" : "Copy"}
+                                    </Button>
+                                  </div>
+                                </div>
                               </div>
                             </div>
                           )}
@@ -559,16 +649,68 @@ const SkillCard = ({ skill, onTagClick, isHighlighted, currentFilters }) => {
                                 <strong>Step 3: Try it out</strong>
                               </small>
                               <div
-                                className="p-2"
+                                className="p-2 mb-2"
                                 style={{
-                                  backgroundColor: "var(--ifm-background-surface-color)",
+                                  backgroundColor: "var(--ifm-code-background)",
                                   borderRadius: "4px",
-                                  borderLeft: "3px solid var(--ifm-color-primary)",
                                 }}
                               >
-                                <small style={{ fontSize: "0.85rem", fontStyle: "italic" }}>
-                                  {skill.example}
+                                <div className="d-flex align-items-center gap-2">
+                                  <code
+                                    style={{
+                                      fontSize: "0.8rem",
+                                      flex: 1,
+                                      wordBreak: "break-word",
+                                      backgroundColor: "transparent"
+                                    }}
+                                  >
+                                    {skill.example}
+                                  </code>
+                                  <Button
+                                    size="sm"
+                                    variant="outline-primary"
+                                    onClick={() =>
+                                      copyToClipboard(skill.example, "example")
+                                    }
+                                    style={{
+                                      fontSize: "0.75rem",
+                                      whiteSpace: "nowrap",
+                                    }}
+                                  >
+                                    {copied.example ? "✓ Copied" : "Copy"}
+                                  </Button>
+                                </div>
+                              </div>
+                              <div>
+                                <small className="text-muted d-block mb-2">
+                                  <strong>Or use the slash command:</strong>
                                 </small>
+                                <div
+                                  className="p-2"
+                                  style={{
+                                    backgroundColor: "var(--ifm-code-background)",
+                                    borderRadius: "4px",
+                                  }}
+                                >
+                                  <div className="d-flex align-items-center gap-2">
+                                    <code style={{ fontSize: "0.8rem", flex: 1 }}>
+                                      /{skill.name}
+                                    </code>
+                                    <Button
+                                      size="sm"
+                                      variant="outline-primary"
+                                      onClick={() =>
+                                        copyToClipboard(`/${skill.name}`, "slash")
+                                      }
+                                      style={{
+                                        fontSize: "0.75rem",
+                                        whiteSpace: "nowrap",
+                                      }}
+                                    >
+                                      {copied.slash ? "✓ Copied" : "Copy"}
+                                    </Button>
+                                  </div>
+                                </div>
                               </div>
                             </div>
                           )}

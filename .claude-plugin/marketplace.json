@@ -12,9 +12,9 @@
     {
       "name": "slim-changelog",
       "description": "Create and maintain human-readable changelogs for software projects using Keep a Changelog standards",
-      "source": "./",
+      "source": "./static/marketplace",
       "strict": false,
-      "skills": ["./static/marketplace/skills/slim-changelog"]
+      "skills": ["./skills/slim-changelog"]
     },
     {
       "name": "slim-code-of-conduct",
