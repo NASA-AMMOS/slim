@@ -12,137 +12,107 @@
     {
       "name": "slim-changelog",
       "description": "Create and maintain human-readable changelogs for software projects using Keep a Changelog standards",
-      "source": "./static/marketplace",
+      "source": "./",
       "strict": false,
-      "skills": [
-        "./skills/slim-changelog"
-      ]
+      "skills": ["./static/marketplace/skills/slim-changelog"]
     },
     {
       "name": "slim-code-of-conduct",
       "description": "Create and implement code of conduct and collaboration policies using Contributor Covenant standards, with specialized templates for scientific research environments and academic citation",
       "source": "./static/marketplace",
       "strict": false,
-      "skills": [
-        "./skills/slim-code-of-conduct"
-      ]
+      "skills": ["./skills/slim-code-of-conduct"]
     },
     {
       "name": "slim-container-vulnerability-scanning",
       "description": "Implement Grype-based container and dependency vulnerability scanning with automated pre-commit hooks",
       "source": "./static/marketplace",
       "strict": false,
-      "skills": [
-        "./skills/slim-container-vulnerability-scanning"
-      ]
+      "skills": ["./skills/slim-container-vulnerability-scanning"]
     },
     {
       "name": "slim-continuous-testing",
       "description": "Implement comprehensive testing strategies with documentation and automation templates for static analysis, security scanning, and code quality checks",
       "source": "./static/marketplace",
       "strict": false,
-      "skills": [
-        "./skills/slim-continuous-testing"
-      ]
+      "skills": ["./skills/slim-continuous-testing"]
     },
     {
       "name": "slim-contributing-guide",
       "description": "Create comprehensive contributing guides for open source projects with workflow guidance and customizable templates",
       "source": "./static/marketplace",
       "strict": false,
-      "skills": [
-        "./skills/slim-contributing-guide"
-      ]
+      "skills": ["./skills/slim-contributing-guide"]
     },
     {
       "name": "slim-executive-summary",
       "description": "Generate comprehensive executive summaries from workspace communication files using AI analysis with automatic context discovery",
       "source": "./static/marketplace",
       "strict": false,
-      "skills": [
-        "./skills/slim-executive-summary"
-      ]
+      "skills": ["./skills/slim-executive-summary"]
     },
     {
       "name": "slim-governance",
       "description": "Team governance templates for government-sponsored open source projects (small, medium, large teams)",
       "source": "./static/marketplace",
       "strict": false,
-      "skills": [
-        "./skills/slim-governance"
-      ]
+      "skills": ["./skills/slim-governance"]
     },
     {
       "name": "slim-issue-templates",
       "description": "Add standardized GitHub issue templates for bug reports and feature requests in both Markdown and Form formats",
       "source": "./static/marketplace",
       "strict": false,
-      "skills": [
-        "./skills/slim-issue-templates"
-      ]
+      "skills": ["./skills/slim-issue-templates"]
     },
     {
       "name": "slim-license",
       "description": "Detect project type and add appropriate NASA/Open Source licenses (Apache 2.0 or MIT)",
       "source": "./static/marketplace",
       "strict": false,
-      "skills": [
-        "./skills/slim-license"
-      ]
+      "skills": ["./skills/slim-license"]
     },
     {
       "name": "slim-meeting-agenda",
       "description": "Generate comprehensive meeting agendas by orchestrating context gathering from previous summaries, querying external services (GitHub, Slack, etc. via TECH.md), and matching custom format templates. Automatically identifies and suggests generation of missing meeting summaries.",
       "source": "./static/marketplace",
       "strict": false,
-      "skills": [
-        "./skills/slim-meeting-agenda"
-      ]
+      "skills": ["./skills/slim-meeting-agenda"]
     },
     {
       "name": "slim-meeting-summary",
       "description": "Generate comprehensive meeting summaries with action items from meeting notes, transcripts, or agendas. Automatically fulfills actionable tasks using tools discovered from TECH.md (MCP servers, APIs, local scripts) and provides guidance for manual tasks.",
       "source": "./static/marketplace",
       "strict": false,
-      "skills": [
-        "./skills/slim-meeting-summary"
-      ]
+      "skills": ["./skills/slim-meeting-summary"]
     },
     {
       "name": "slim-project-aware-workspace",
       "description": "Set up a project-aware workspace with date-organized dynamic folders for project-aware skill execution, tool integration tracking (MCP servers, APIs, scripts), and daily work organization",
       "source": "./static/marketplace",
       "strict": false,
-      "skills": [
-        "./skills/slim-project-aware-workspace"
-      ]
+      "skills": ["./skills/slim-project-aware-workspace"]
     },
     {
       "name": "slim-readme",
       "description": "Create a comprehensive README.md template to help developers and users understand your project",
       "source": "./static/marketplace",
       "strict": false,
-      "skills": [
-        "./skills/slim-readme"
-      ]
+      "skills": ["./skills/slim-readme"]
     },
     {
       "name": "slim-skill-creator",
       "description": "Meta-skill for creating and integrating new best practices (skills, agents, MCP servers) into the SLIM marketplace with dependency tracking and automated registry updates",
       "source": "./static/marketplace",
       "strict": false,
-      "skills": [
-        "./skills/slim-skill-creator"
-      ]
+      "skills": ["./skills/slim-skill-creator"]
     },
     {
       "name": "slim-website",
       "description": "Project website generator that analyzes your project content and creates customized Docusaurus documentation websites",
       "source": "./static/marketplace",
       "strict": false,
-      "skills": [
-        "./skills/slim-website"
-      ]
+      "skills": ["./skills/slim-website"]
     },
     {
       "name": "slim-github-mcp-server",
