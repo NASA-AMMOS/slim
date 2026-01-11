@@ -26,7 +26,7 @@ import "bootstrap/dist/css/bootstrap.min.css";
 import "@site/src/css/markdown-modal.css";
 import FileBrowserSection from "./FileBrowserSection";
 
-const SkillCard = ({ skill, onTagClick, isHighlighted, currentFilters }) => {
+const SkillCard = ({ skill, onTagClick, isHighlighted, currentFilters, registryBaseUrl }) => {
   const [showDetails, setShowDetails] = useState(false);
   const [showInstall, setShowInstall] = useState(false);
   const [showFileBrowser, setShowFileBrowser] = useState(false);
@@ -45,6 +45,33 @@ const SkillCard = ({ skill, onTagClick, isHighlighted, currentFilters }) => {
   const [markdownContent, setMarkdownContent] = useState("");
   const [loading, setLoading] = useState(false);
   const cardRef = React.useRef(null);
+
+  // Generate zip download URL for this skill
+  const getSkillZipUrl = () => {
+    // Use zip_file_path if available
+    if (skill.zip_file_path) {
+      // If zip_file_path is absolute URL, use as-is
+      if (skill.zip_file_path.startsWith('http://') || skill.zip_file_path.startsWith('https://')) {
+        console.log(`Using absolute zip path for ${skill.name}:`, skill.zip_file_path);
+        return skill.zip_file_path;
+      }
+
+      // If zip_file_path is relative, resolve against registry base URL
+      let resolvedUrl;
+      if (skill.zip_file_path.startsWith('/')) {
+        resolvedUrl = `${registryBaseUrl}${skill.zip_file_path}`;
+      } else {
+        resolvedUrl = `${registryBaseUrl}/${skill.zip_file_path}`;
+      }
+      console.log(`Resolved zip URL for ${skill.name}: ${skill.zip_file_path} -> ${resolvedUrl}`);
+      return resolvedUrl;
+    }
+
+    // Fallback: always use the current registry's base URL
+    const fallbackUrl = `${registryBaseUrl}/assets/zip/${skill.name}.zip`;
+    console.log(`Using fallback zip URL for ${skill.name}:`, fallbackUrl);
+    return fallbackUrl;
+  };
 
   // Scroll to card when highlighted
   useEffect(() => {
@@ -134,19 +161,6 @@ const SkillCard = ({ skill, onTagClick, isHighlighted, currentFilters }) => {
     };
   };
 
-  // Generate zip download URL
-  const getZipDownloadUrl = (itemName) => {
-    const isLocalhost =
-      window.location.hostname === "localhost" ||
-      window.location.hostname === "127.0.0.1";
-
-    if (isLocalhost) {
-      return `${window.location.origin}/slim/assets/zip/${itemName}.zip`;
-    } else {
-      const repoInfo = getRepositoryInfo();
-      return `${repoInfo.assetsUrl}/${itemName}.zip`;
-    }
-  };
 
   // Get install directory path (Claude Code tab vs Manual tab)
   // Only returns Claude-specific paths when explicitly on Claude Code tab
@@ -177,7 +191,7 @@ const SkillCard = ({ skill, onTagClick, isHighlighted, currentFilters }) => {
       window.location.hostname === "127.0.0.1";
 
     if (isLocalhost) {
-      const zipUrl = getZipDownloadUrl(item.name);
+      const zipUrl = getSkillZipUrl();
       const installPath = getInstallPath(item, true); // Pass true for Claude Code tab
 
       return `curl -L ${zipUrl} | tar -xf - -C ${installPath}`;
@@ -204,12 +218,12 @@ const SkillCard = ({ skill, onTagClick, isHighlighted, currentFilters }) => {
       window.location.hostname === "127.0.0.1";
 
     if (isLocalhost) {
-      const zipUrl = getZipDownloadUrl(item.name);
+      const zipUrl = getSkillZipUrl();
       const defaultPath = getInstallPath(item, false); // Pass false for Manual tab (returns ~/)
       return `curl -L ${zipUrl} | tar -xf - -C ${defaultPath}`;
     } else {
       // Deployed: Use curl with zip download instead of git clone
-      const zipUrl = getZipDownloadUrl(item.name);
+      const zipUrl = getSkillZipUrl();
       const defaultPath = getInstallPath(item, false); // Pass false for Manual tab (returns ~/)
       return `curl -L ${zipUrl} | tar -xf - -C ${defaultPath}`;
     }
@@ -1079,6 +1093,69 @@ const SkillBrowser = ({ searchTerm, setSearchTerm, isSearchActive }) => {
   const [localMarketplacePath, setLocalMarketplacePath] = useState("");
   const [highlightedSkill, setHighlightedSkill] = useState(null);
 
+  // New state for registry switching
+  const [availableRegistries, setAvailableRegistries] = useState([]);
+  const [selectedRegistry, setSelectedRegistry] = useState(0);
+  const [isLoadingRegistry, setIsLoadingRegistry] = useState(false);
+
+  // Helper function to get registry URL (defined early to avoid initialization issues)
+  const getRegistryUrl = React.useCallback((registryPath) => {
+    if (registryPath.startsWith('http://') || registryPath.startsWith('https://')) {
+      return registryPath;
+    }
+    // Local path - convert to Docusaurus static file URL
+    if (registryPath.startsWith('./static/')) {
+      // Remove './static/' prefix since Docusaurus serves static files directly
+      const staticPath = registryPath.substring('./static/'.length);
+      return `${baseUrl}/slim/${staticPath}`;
+    }
+    if (registryPath.startsWith('./')) {
+      return `${baseUrl}/slim/${registryPath.substring(2)}`;
+    }
+    return `${baseUrl}/slim/${registryPath}`;
+  }, [baseUrl]);
+
+  // Helper function to get registry base URL for zip resolution
+  const getRegistryBaseUrl = React.useCallback((registryPath) => {
+    if (registryPath.startsWith('http://') || registryPath.startsWith('https://')) {
+      const url = new URL(registryPath);
+      return `${url.protocol}//${url.host}`;
+    }
+    // Local path
+    return baseUrl;
+  }, [baseUrl]);
+
+  // Load available registries from config
+  useEffect(() => {
+    const loadRegistryConfig = async () => {
+      try {
+        console.log('Loading registry config...');
+        console.log('window.docusaurus:', typeof window !== "undefined" ? !!window.docusaurus : 'no window');
+
+        // In Docusaurus, try to access config through the global docusaurus object
+        if (typeof window !== "undefined" && window.docusaurus?.siteConfig?.customFields?.slimConfig) {
+          const config = window.docusaurus.siteConfig.customFields.slimConfig;
+          const registries = config.registries || ['./static/data/registry.json'];
+          console.log('✓ Loaded registries from Docusaurus config:', registries);
+          setAvailableRegistries(registries);
+        } else {
+          // For development, hardcode the registries if config isn't available
+          const hardcodedRegistries = [
+            './static/data/registry.json',
+            'https://riverma.github.io/slim/data/registry.json'
+          ];
+          console.log('⚠️  Config not available, using hardcoded registries:', hardcodedRegistries);
+          setAvailableRegistries(hardcodedRegistries);
+        }
+      } catch (error) {
+        console.warn('Could not load registry config, using fallback:', error);
+        setAvailableRegistries(['./static/data/registry.json']);
+      }
+    };
+
+    loadRegistryConfig();
+  }, []);
+
   useEffect(() => {
     // Set base URL from window if available
     if (typeof window !== "undefined") {
@@ -1124,8 +1201,15 @@ const SkillBrowser = ({ searchTerm, setSearchTerm, isSearchActive }) => {
       }
     }
 
-    // Load registry from static JSON
-    fetch("/slim/data/registry.json")
+    // Load registry data when selectedRegistry changes
+    if (availableRegistries.length === 0) return;
+
+    setIsLoadingRegistry(true);
+    const registryPath = availableRegistries[selectedRegistry];
+    const registryUrl = getRegistryUrl(registryPath);
+    console.log('Loading registry from:', registryPath, '-> URL:', registryUrl);
+
+    fetch(registryUrl)
       .then((res) => res.json())
       .then((data) => {
         // Get the base URL for install commands (safe for SSR)
@@ -1166,6 +1250,8 @@ const SkillBrowser = ({ searchTerm, setSearchTerm, isSearchActive }) => {
         const mcps = (data.mcp || []).map((m) => ({ ...m, type: m.type || "mcp" }));
         const combined = [...skills, ...agents, ...mcps];
 
+        console.log('Loaded registry data:', data);
+        console.log('Combined items:', combined);
         setAllItems(combined);
         // Store in window for access by dependency links
         window.allMarketplaceItems = combined;
@@ -1176,11 +1262,13 @@ const SkillBrowser = ({ searchTerm, setSearchTerm, isSearchActive }) => {
         if (data.local_marketplace_path) {
           setLocalMarketplacePath(data.local_marketplace_path);
         }
+        setIsLoadingRegistry(false);
       })
       .catch((err) => {
         console.error("Failed to load registry:", err);
+        setIsLoadingRegistry(false);
       });
-  }, []);
+  }, [availableRegistries, selectedRegistry, getRegistryUrl]);
 
   // Update URL when any filter state changes
   useEffect(() => {
@@ -1311,8 +1399,41 @@ const SkillBrowser = ({ searchTerm, setSearchTerm, isSearchActive }) => {
       <Row className={isSearchActive ? "mb-4 mt-0" : "mb-5"}>
         <Col>
           <div className="d-flex justify-content-center align-items-center flex-wrap gap-3">
+            {/* Registry Selection Dropdown - Show as leftmost button if multiple registries available */}
+            {availableRegistries.length > 1 && (
+              <Dropdown>
+                <Dropdown.Toggle variant="outline-secondary">
+                  Registry: {availableRegistries[selectedRegistry]?.includes('http')
+                    ? new URL(availableRegistries[selectedRegistry]).hostname
+                    : 'Local'}
+                  {isLoadingRegistry && <span className="ms-2 spinner-border spinner-border-sm" />}
+                </Dropdown.Toggle>
+                <Dropdown.Menu>
+                  {availableRegistries.map((registry, index) => (
+                    <Dropdown.Item
+                      key={index}
+                      onClick={() => setSelectedRegistry(index)}
+                      className="d-flex align-items-start gap-2"
+                    >
+                      <Form.Check
+                        type="checkbox"
+                        checked={index === selectedRegistry}
+                        onChange={() => setSelectedRegistry(index)}
+                        onClick={(e) => e.stopPropagation()}
+                        style={{ marginTop: '2px' }}
+                      />
+                      <div>
+                        {registry.includes('http') ? new URL(registry).hostname : 'Local'}
+                        <small className="text-muted d-block">{registry}</small>
+                      </div>
+                    </Dropdown.Item>
+                  ))}
+                </Dropdown.Menu>
+              </Dropdown>
+            )}
+
             <Dropdown>
-              <Dropdown.Toggle variant="outline-primary">
+              <Dropdown.Toggle variant="outline-secondary">
                 Category:{" "}
                 {selectedType === "All"
                   ? "All"
@@ -1336,7 +1457,7 @@ const SkillBrowser = ({ searchTerm, setSearchTerm, isSearchActive }) => {
             </Dropdown>
 
             <Dropdown>
-              <Dropdown.Toggle variant="outline-success">
+              <Dropdown.Toggle variant="outline-secondary">
                 {Object.values(selectedTags).filter(Boolean).length > 0
                   ? `Tags (${Object.values(selectedTags).filter(Boolean).length})`
                   : "Tags"}
@@ -1442,34 +1563,13 @@ const SkillBrowser = ({ searchTerm, setSearchTerm, isSearchActive }) => {
                   sortBy,
                   sortOrder
                 }}
+                registryBaseUrl={getRegistryBaseUrl(availableRegistries[selectedRegistry])}
               />
             ))
           )}
         </Col>
       </Row>
 
-      <Row className="mt-5">
-        <Col>
-          <small className="text-muted">
-            UI components adapted from{" "}
-            <a
-              href="https://aitmpl.com"
-              target="_blank"
-              rel="noopener noreferrer"
-            >
-              aitmpl.com
-            </a>{" "}
-            (MIT License) | Maintained by{" "}
-            <a
-              href="https://github.com/NASA-AMMOS"
-              target="_blank"
-              rel="noopener noreferrer"
-            >
-              NASA AMMOS
-            </a>
-          </small>
-        </Col>
-      </Row>
     </Container>
   );
 };

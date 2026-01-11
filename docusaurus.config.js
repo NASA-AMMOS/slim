@@ -1,50 +1,50 @@
 // @ts-check
 // Note: type annotations allow type checking and IDEs autocompletion
 
-const {themes} = require('prism-react-renderer');
+const { themes } = require("prism-react-renderer");
 const lightCodeTheme = themes.github;
 const darkCodeTheme = themes.dracula;
 
 /** @type {import('@docusaurus/types').Config} */
 const config = {
-  title: 'SLIM',
-  tagline: 'Software Lifecycle Improvement & Modernization (SLIM)',
-  favicon: '/img/favicon.ico',
+  title: "SLIM",
+  tagline: "Software Lifecycle Improvement & Modernization (SLIM)",
+  favicon: "/img/favicon.ico",
 
   // Set the production url of your site here
-  url: 'https://nasa-ammos.github.io',
+  url: "https://nasa-ammos.github.io",
   // Set the /<baseUrl>/ pathname under which your site is served
-  baseUrl: '/slim/',
+  baseUrl: "/slim/",
 
   // GitHub pages deployment config.
-  organizationName: 'nasa-ammos',
-  projectName: 'slim',
+  organizationName: "nasa-ammos",
+  projectName: "slim",
 
-  onBrokenLinks: 'warn',
-  onBrokenMarkdownLinks: 'warn',
+  onBrokenLinks: "warn",
+  onBrokenMarkdownLinks: "warn",
 
   i18n: {
-    defaultLocale: 'en',
-    locales: ['en'],
+    defaultLocale: "en",
+    locales: ["en"],
   },
 
   presets: [
     [
-      'classic',
+      "classic",
       /** @type {import('@docusaurus/preset-classic').Options} */
       ({
         docs: {
-          sidebarPath: require.resolve('./sidebars.js'),
-          editUrl: 'https://github.com/nasa-ammos/slim/tree/main/',
+          sidebarPath: require.resolve("./sidebars.js"),
+          editUrl: "https://github.com/nasa-ammos/slim/tree/main/",
           sidebarCollapsed: true,
         },
         blog: {
           showReadingTime: true,
-          editUrl: 'https://github.com/nasa-ammos/slim/tree/main/',
+          editUrl: "https://github.com/nasa-ammos/slim/tree/main/",
         },
         theme: {
-          customCss: require.resolve('./src/css/custom.css'),
-        }
+          customCss: require.resolve("./src/css/custom.css"),
+        },
       }),
     ],
   ],
@@ -52,79 +52,79 @@ const config = {
   themeConfig:
     /** @type {import('@docusaurus/preset-classic').ThemeConfig} */
     ({
-      image: 'img/docusaurus-social-card.jpg',
+      image: "img/docusaurus-social-card.jpg",
       navbar: {
-        title: 'SLIM',
+        title: "SLIM",
         logo: {
-          alt: 'Software Lifecycle Improvement & Modernization (SLIM)',
-          src: 'img/nasa-jpl.png',
+          alt: "Software Lifecycle Improvement & Modernization (SLIM)",
+          src: "img/nasa-jpl.png",
         },
         items: [
           {
-            type: 'docSidebar',
-            sidebarId: 'contributeSidebar',
-            position: 'left',
-            label: 'Contribute',
+            type: "docSidebar",
+            sidebarId: "contributeSidebar",
+            position: "left",
+            label: "Contribute",
           },
           {
-            type: 'docSidebar',
-            sidebarId: 'faqSidebar',
-            position: 'left',
-            label: 'FAQ',
+            type: "docSidebar",
+            sidebarId: "faqSidebar",
+            position: "left",
+            label: "FAQ",
           },
           {
-            type: 'docSidebar',
-            sidebarId: 'aboutSidebar',
-            position: 'left',
-            label: 'About',
+            type: "docSidebar",
+            sidebarId: "aboutSidebar",
+            position: "left",
+            label: "About",
           },
           {
-            href: 'https://github.com/nasa-ammos/slim',
-            label: 'GitHub',
-            position: 'right',
+            href: "https://github.com/nasa-ammos/slim",
+            label: "GitHub",
+            position: "right",
           },
         ],
       },
       footer: {
-        style: 'dark',
+        style: "dark",
         links: [
           {
-            title: 'Resources',
+            title: "Resources",
             items: [
               {
-                label: 'Contribute',
-                to: '/docs/contribute/contributing/',
+                label: "Contribute",
+                to: "/docs/contribute/contributing/",
               },
               {
-                label: 'FAQ',
-                to: '/docs/faq',
+                label: "FAQ",
+                to: "/docs/faq",
               },
               {
-                label: 'About',
-                to: '/docs/about',
-              }
+                label: "About",
+                to: "/docs/about",
+              },
             ],
           },
           {
-            title: 'Community',
+            title: "Community",
             items: [
               {
-                label: 'GitHub Discussions',
-                href: 'https://github.com/NASA-AMMOS/slim/discussions',
-              }
+                label: "GitHub Discussions",
+                href: "https://github.com/NASA-AMMOS/slim/discussions",
+              },
             ],
           },
           {
-            title: 'More',
+            title: "More",
             items: [
               {
-                label: 'GitHub',
-                href: 'https://github.com/nasa-ammos/slim',
+                label: "GitHub",
+                href: "https://github.com/nasa-ammos/slim",
               },
             ],
           },
         ],
-        copyright: `Copyright © ${new Date().getFullYear()} California Institute of Technology ("Caltech"). U.S. Government sponsorship acknowledged. Contents licensed under Apache License Version 2.0.`,
+        copyright: `Copyright © ${new Date().getFullYear()} California Institute of Technology ("Caltech"). U.S. Government sponsorship acknowledged. Contents licensed under Apache License Version 2.0.<br/>Based on the SLIM project <a href="https://nasa-ammos.github.io/slim/" style="color: cyan;">https://nasa-ammos.github.io/slim/</a>`,
       },
       prism: {
         theme: lightCodeTheme,
@@ -132,8 +132,8 @@ const config = {
       },
       colorMode: {
         disableSwitch: false,
-        defaultMode: 'dark',
-        respectPrefersColorScheme: false
+        defaultMode: "dark",
+        respectPrefersColorScheme: false,
       },
     }),
 
@@ -141,19 +141,19 @@ const config = {
     mermaid: true,
   },
 
-  themes: ['@docusaurus/theme-mermaid'],
+  themes: ["@docusaurus/theme-mermaid"],
 
   plugins: [
     [
-      '@docusaurus/plugin-client-redirects',
+      "@docusaurus/plugin-client-redirects",
       {
         redirects: [
           {
             from: [
-              '/continuous-testing/starter-kits', // without baseUrl
-              '/slim/continuous-testing/starter-kits', // with baseUrl
+              "/continuous-testing/starter-kits", // without baseUrl
+              "/slim/continuous-testing/starter-kits", // with baseUrl
             ],
-            to: '/', // Redirect to marketplace hub
+            to: "/", // Redirect to marketplace hub
           },
         ],
       },
@@ -162,7 +162,7 @@ const config = {
 
   scripts: [
     {
-      src: '/js/redirect-handler.js',
+      src: "/js/redirect-handler.js",
       async: true,
     },
   ],
@@ -170,15 +170,20 @@ const config = {
   // Custom fields for SLIM configuration
   customFields: {
     slimConfig: {
-      registrySources: [
+      localRegistrySources: [
         {
-          type: 'marketplace-json',
-          path: './.claude-plugin/marketplace.json',
-          enabled: true
-        }
+          type: "marketplace-json",
+          path: "./.claude-plugin/marketplace.json",
+          enabled: true,
+        },
         // Future: Support for other types and URLs
-      ]
-    }
+      ],
+      registries: [
+        "./static/data/registry.json", // Local registry (generated from marketplace.json)
+        "https://riverma.github.io/slim/data/registry.json",
+        // Future: Add remote registries like 'https://example.com/registry.json'
+      ],
+    },
   },
 };
 

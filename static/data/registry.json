@@ -15,7 +15,8 @@
       "lastUpdated": "2024-08-02",
       "skill_file_url": "/slim/marketplace/skills/slim-changelog/SKILL.md",
       "type": "skill",
-      "example": "Create a CHANGELOG.md"
+      "example": "Create a CHANGELOG.md",
+      "zip_file_path": "assets/zip/slim-changelog.zip"
     },
     {
       "name": "slim-code-of-conduct",
@@ -33,7 +34,8 @@
       "lastUpdated": "2024-04-30",
       "skill_file_url": "/slim/marketplace/skills/slim-code-of-conduct/SKILL.md",
       "type": "skill",
-      "example": "Add a code of conduct with citation guidelines for scientific projects"
+      "example": "Add a code of conduct with citation guidelines for scientific projects",
+      "zip_file_path": "assets/zip/slim-code-of-conduct.zip"
     },
     {
       "name": "slim-container-vulnerability-scanning",
@@ -51,7 +53,8 @@
       "lastUpdated": "2025-01-05",
       "skill_file_url": "/slim/marketplace/skills/slim-container-vulnerability-scanning/SKILL.md",
       "type": "skill",
-      "example": "Add Grype-based container vulnerability scanning to this project"
+      "example": "Add Grype-based container vulnerability scanning to this project",
+      "zip_file_path": "assets/zip/slim-container-vulnerability-scanning.zip"
     },
     {
       "name": "slim-continuous-testing",
@@ -69,7 +72,8 @@
       "lastUpdated": "2024-08-30",
       "skill_file_url": "/slim/marketplace/skills/slim-continuous-testing/SKILL.md",
       "type": "skill",
-      "example": "Set up pre-commit hooks for automated testing and code quality checks"
+      "example": "Set up pre-commit hooks for automated testing and code quality checks",
+      "zip_file_path": "assets/zip/slim-continuous-testing.zip"
     },
     {
       "name": "slim-contributing-guide",
@@ -87,7 +91,8 @@
       "lastUpdated": "2024-08-19",
       "skill_file_url": "/slim/marketplace/skills/slim-contributing-guide/SKILL.md",
       "type": "skill",
-      "example": "Generate a CONTRIBUTING.md guide for this repository"
+      "example": "Generate a CONTRIBUTING.md guide for this repository",
+      "zip_file_path": "assets/zip/slim-contributing-guide.zip"
     },
     {
       "name": "slim-executive-summary",
@@ -110,7 +115,8 @@
       },
       "skill_file_url": "/slim/marketplace/skills/slim-executive-summary/SKILL.md",
       "type": "skill",
-      "example": "Generate an executive summary from the 2024-12-15 folder"
+      "example": "Generate an executive summary from the 2024-12-15 folder",
+      "zip_file_path": "assets/zip/slim-executive-summary.zip"
     },
     {
       "name": "slim-governance",
@@ -128,7 +134,8 @@
       "lastUpdated": "2024-03-28",
       "skill_file_url": "/slim/marketplace/skills/slim-governance/SKILL.md",
       "type": "skill",
-      "example": "Add a governance model for our medium-sized team"
+      "example": "Add a governance model for our medium-sized team",
+      "zip_file_path": "assets/zip/slim-governance.zip"
     },
     {
       "name": "slim-issue-templates",
@@ -146,7 +153,8 @@
       "lastUpdated": "2024-08-02",
       "skill_file_url": "/slim/marketplace/skills/slim-issue-templates/SKILL.md",
       "type": "skill",
-      "example": "Add GitHub issue templates for bug reports and feature requests"
+      "example": "Add GitHub issue templates for bug reports and feature requests",
+      "zip_file_path": "assets/zip/slim-issue-templates.zip"
     },
     {
       "name": "slim-license",
@@ -165,7 +173,8 @@
       "lastUpdated": "2024-06-19",
       "skill_file_url": "/slim/marketplace/skills/slim-license/SKILL.md",
       "type": "skill",
-      "example": "Add an Apache 2.0 license to this project"
+      "example": "Add an Apache 2.0 license to this project",
+      "zip_file_path": "assets/zip/slim-license.zip"
     },
     {
       "name": "slim-meeting-agenda",
@@ -190,7 +199,8 @@
       },
       "skill_file_url": "/slim/marketplace/skills/slim-meeting-agenda/SKILL.md",
       "type": "skill",
-      "example": "Create an agenda for tomorrow's sprint planning meeting"
+      "example": "Create an agenda for tomorrow's sprint planning meeting",
+      "zip_file_path": "assets/zip/slim-meeting-agenda.zip"
     },
     {
       "name": "slim-meeting-summary",
@@ -213,7 +223,8 @@
       },
       "skill_file_url": "/slim/marketplace/skills/slim-meeting-summary/SKILL.md",
       "type": "skill",
-      "example": "Generate a meeting summary with action items from @meeting-transcript.md"
+      "example": "Generate a meeting summary with action items from @meeting-transcript.md",
+      "zip_file_path": "assets/zip/slim-meeting-summary.zip"
     },
     {
       "name": "slim-project-aware-workspace",
@@ -232,7 +243,8 @@
       "lastUpdated": "2025-01-05",
       "skill_file_url": "/slim/marketplace/skills/slim-project-aware-workspace/SKILL.md",
       "type": "skill",
-      "example": "Set up a new project-aware workspace"
+      "example": "Set up a new project-aware workspace",
+      "zip_file_path": "assets/zip/slim-project-aware-workspace.zip"
     },
     {
       "name": "slim-readme",
@@ -249,7 +261,8 @@
       "lastUpdated": "2024-08-02",
       "skill_file_url": "/slim/marketplace/skills/slim-readme/SKILL.md",
       "type": "skill",
-      "example": "Create a comprehensive README for this project"
+      "example": "Create a comprehensive README for this project",
+      "zip_file_path": "assets/zip/slim-readme.zip"
     },
     {
       "name": "slim-skill-creator",
@@ -268,7 +281,8 @@
       "lastUpdated": "2025-01-05",
       "skill_file_url": "/slim/marketplace/skills/slim-skill-creator/SKILL.md",
       "type": "skill",
-      "example": "Help me create a new SLIM best practice for automated testing workflows"
+      "example": "Help me create a new SLIM best practice for automated testing workflows",
+      "zip_file_path": "assets/zip/slim-skill-creator.zip"
     },
     {
       "name": "slim-rebranding",
@@ -297,7 +311,8 @@
       "displayName": "SLIM Rebranding",
       "example": "Help me rebrand this slim website. ",
       "category": "project-setup",
-      "lastUpdated": "2026-01-05"
+      "lastUpdated": "2026-01-05",
+      "zip_file_path": "assets/zip/slim-rebranding.zip"
     },
     {
       "name": "slim-website-maker",
@@ -327,7 +342,8 @@
       "displayName": "SLIM Website Maker",
       "example": "Help me make a product website using SLIM best practices.",
       "category": "project-setup",
-      "lastUpdated": "2025-08-12"
+      "lastUpdated": "2025-08-12",
+      "zip_file_path": "assets/zip/slim-website-maker.zip"
     }
   ],
   "agents": [],
@@ -355,7 +371,8 @@
       "displayName": "GitHub MCP Server",
       "example": "Give me information about this repository from GitHub. ",
       "category": "collaboration",
-      "lastUpdated": "2026-01-05"
+      "lastUpdated": "2026-01-05",
+      "zip_file_path": "assets/zip/github-mcp-server.zip"
     }
   ]
 }

@@ -15,12 +15,12 @@ const registryPath = path.join(__dirname, '../../static/data/registry.json');
 
 /**
  * Load registry sources from configuration
- * @param {Object} config - Configuration object with slimConfig.registrySources
+ * @param {Object} config - Configuration object with slimConfig.localRegistrySources
  * @returns {Promise<Array>} Array of parsed marketplace objects with metadata
  */
 async function loadRegistrySources(config) {
   const sources = [];
-  const registrySources = config.slimConfig?.registrySources || [];
+  const registrySources = config.slimConfig?.localRegistrySources || [];
 
   console.log(`📂 Loading ${registrySources.length} registry source(s)...\n`);
 
@@ -178,6 +178,11 @@ function createRegistryEntry(plugin, type, itemPath, sourceMetadata) {
     skill_file_url: constructSkillFileUrl(plugin, type, itemPath, sourceMetadata),
   };
 
+  // Add zip file path for local entries
+  if (!plugin.external_only) {
+    entry.zip_file_path = `assets/zip/${plugin.name}.zip`;
+  }
+
   // Copy additional marketplace fields
   if (plugin.version) entry.version = plugin.version;
   if (plugin.author) entry.author = plugin.author;
@@ -260,7 +265,7 @@ function mergeWithExisting(generated, existing) {
 
   // Fields that are marketplace-managed (always update)
   const marketplaceManagedFields = [
-    'name', 'description', 'tags', 'type', 'skill_file_url',
+    'name', 'description', 'tags', 'type', 'skill_file_url', 'zip_file_path',
     'version', 'author', 'homepage', 'repository', 'license',
     'external_only', 'npm_package'
   ];
@@ -532,8 +537,8 @@ async function generateRegistry() {
     }
 
     const config = require(configPath);
-    if (!config.customFields?.slimConfig?.registrySources) {
-      throw new Error('No customFields.slimConfig.registrySources found in docusaurus.config.js');
+    if (!config.customFields?.slimConfig?.localRegistrySources) {
+      throw new Error('No customFields.slimConfig.localRegistrySources found in docusaurus.config.js');
     }
 
     // 2. Load existing registry (required)
