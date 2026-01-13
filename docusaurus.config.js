@@ -124,7 +124,7 @@ const config = {
             ],
           },
         ],
-        copyright: `Copyright © ${new Date().getFullYear()} California Institute of Technology ("Caltech"). U.S. Government sponsorship acknowledged. Contents licensed under Apache License Version 2.0.<br/>Based on the SLIM project <a href="https://nasa-ammos.github.io/slim/" style="color: cyan;">https://nasa-ammos.github.io/slim/</a>`,
+        copyright: `Based on the Software Lifecycle Improvement & Modernization (SLIM) project <a href="https://nasa-ammos.github.io/slim/" style="color: cyan;">https://nasa-ammos.github.io/slim/</a><br/>Copyright © ${new Date().getFullYear()} California Institute of Technology ("Caltech"). U.S. Government sponsorship acknowledged. Contents licensed under Apache License Version 2.0.<br/>`,
       },
       prism: {
         theme: lightCodeTheme,
