@@ -25,6 +25,7 @@ import remarkGfm from "remark-gfm";
 import "bootstrap/dist/css/bootstrap.min.css";
 import "@site/src/css/markdown-modal.css";
 import FileBrowserSection from "./FileBrowserSection";
+import CategoryTreeNode from "./CategoryTreeNode";
 
 const SkillCard = ({ skill, onTagClick, isHighlighted, currentFilters, registryBaseUrl }) => {
   const [showDetails, setShowDetails] = useState(false);
@@ -44,6 +45,7 @@ const SkillCard = ({ skill, onTagClick, isHighlighted, currentFilters, registryB
   const [showModal, setShowModal] = useState(false);
   const [markdownContent, setMarkdownContent] = useState("");
   const [loading, setLoading] = useState(false);
+  const [showAllTags, setShowAllTags] = useState(false);
   const cardRef = React.useRef(null);
 
   // Generate zip download URL for this skill
@@ -895,7 +897,7 @@ const SkillCard = ({ skill, onTagClick, isHighlighted, currentFilters, registryB
             >
               {skill.category}
             </Badge>
-            {skill.tags.slice(0, 5).map((tag, idx) => (
+            {(showAllTags ? skill.tags : skill.tags.slice(0, 5)).map((tag, idx) => (
               <Badge
                 key={idx}
                 bg="secondary"
@@ -914,9 +916,16 @@ const SkillCard = ({ skill, onTagClick, isHighlighted, currentFilters, registryB
               <Badge
                 bg="light"
                 text="muted"
-                style={{ fontSize: "0.7rem", fontWeight: "400" }}
+                style={{
+                  fontSize: "0.7rem",
+                  fontWeight: "400",
+                  cursor: "pointer",
+                  textDecoration: "underline"
+                }}
+                onClick={() => setShowAllTags(!showAllTags)}
+                title={showAllTags ? "Show fewer tags" : `Click to see all ${skill.tags.length} tags`}
               >
-                +{skill.tags.length - 5} more
+                {showAllTags ? "show less" : `+${skill.tags.length - 5} more`}
               </Badge>
             )}
           </div>
@@ -1032,17 +1041,35 @@ const FilterPills = ({
   );
 };
 
-const CategoryTree = ({ items, selectedCategory, onCategorySelect }) => {
-  const categoryCounts = useMemo(() => {
-    const counts = {};
-    items.forEach((item) => {
-      const category = item.category;
-      if (!counts[category]) counts[category] = 0;
-      counts[category]++;
-    });
-    return counts;
-  }, [items]);
+// Utility functions for hierarchical category parsing
+const resolveCategoryIcon = (category, metadata, fallbackLabels = {}) => {
+  // 1. Try metadata.categoryIcons first
+  if (metadata?.categoryIcons?.[category]) {
+    return metadata.categoryIcons[category];
+  }
 
+  // 2. Try existing hardcoded categoryLabels
+  const fallbackLabel = fallbackLabels[category];
+  if (fallbackLabel && fallbackLabel.includes(' ')) {
+    // Extract icon from label like "🏛 Governance" -> "🏛"
+    const parts = fallbackLabel.split(' ');
+    const potentialIcon = parts[0];
+    // Simple emoji detection - most emojis are longer than 1 character in length
+    if (potentialIcon.length > 1) {
+      return potentialIcon;
+    }
+  }
+
+  // 3. Default fallback
+  return "📁";
+};
+
+const buildCategoryTree = (items, metadata = {}) => {
+  // Extract all unique categories
+  const categories = [...new Set(items.map(item => item.category))];
+
+  // Build tree structure
+  const tree = {};
   const categoryLabels = {
     governance: "🏛 Governance",
     documentation: "📚 Documentation",
@@ -1051,6 +1078,120 @@ const CategoryTree = ({ items, selectedCategory, onCategorySelect }) => {
     security: "🔒 Security",
     integrations: "🔌 Integrations",
     "project-setup": "🛠 Project Setup",
+  };
+
+  categories.forEach(category => {
+    const parts = category.split('/');
+    let current = tree;
+
+    parts.forEach((part, index) => {
+      const fullPath = parts.slice(0, index + 1).join('/');
+
+      if (!current[part]) {
+        current[part] = {
+          id: fullPath,
+          name: prettifyTag(part),
+          icon: resolveCategoryIcon(fullPath, metadata, categoryLabels),
+          level: index,
+          children: {},
+          directItems: [],
+          allItems: []
+        };
+      }
+      current = current[part].children;
+    });
+  });
+
+  // Add items to appropriate categories and calculate counts
+  items.forEach(item => {
+    const parts = item.category.split('/');
+    let current = tree;
+
+    // Add to each level in the hierarchy
+    parts.forEach((part, index) => {
+      if (current[part]) {
+        current[part].allItems.push(item);
+
+        // Add to direct items only at the deepest level
+        if (index === parts.length - 1) {
+          current[part].directItems.push(item);
+        }
+
+        current = current[part].children;
+      }
+    });
+  });
+
+  // Convert tree structure to array format for rendering
+  const convertTreeToArray = (treeObj, level = 0) => {
+    return Object.entries(treeObj)
+      .sort(([a], [b]) => a.localeCompare(b))
+      .map(([key, node]) => ({
+        ...node,
+        level,
+        count: node.allItems.length,
+        directCount: node.directItems.length,
+        children: convertTreeToArray(node.children, level + 1)
+      }));
+  };
+
+  return convertTreeToArray(tree);
+};
+
+const CategoryTree = ({ items, selectedCategory, onCategorySelect, metadata = {} }) => {
+  // State for expansion management
+  const [expandedCategories, setExpandedCategories] = useState(new Set());
+
+  // Update expanded categories when items change
+  useEffect(() => {
+    if (items.length > 0) {
+      // Initialize ALL categories at ALL levels as expanded by default
+      const allCategoryPaths = new Set();
+
+      items.forEach(item => {
+        const parts = item.category.split('/');
+        // Add all partial paths (e.g., for "collaboration/meetings/team", add "collaboration" and "collaboration/meetings")
+        for (let i = 1; i <= parts.length; i++) {
+          const path = parts.slice(0, i).join('/');
+          allCategoryPaths.add(path);
+        }
+      });
+
+      console.log('Setting expanded categories:', Array.from(allCategoryPaths));
+      setExpandedCategories(allCategoryPaths);
+    }
+  }, [items]);
+
+  // Build hierarchical category tree
+  const categoryTree = useMemo(() => {
+    const tree = buildCategoryTree(items, metadata);
+    console.log('Built category tree:', tree);
+    return tree;
+  }, [items, metadata]);
+
+  const handleToggleExpand = (categoryId) => {
+    setExpandedCategories(prev => {
+      const newSet = new Set(prev);
+      if (newSet.has(categoryId)) {
+        newSet.delete(categoryId);
+      } else {
+        newSet.add(categoryId);
+      }
+      return newSet;
+    });
+  };
+
+  const renderCategoryNodes = (nodes) => {
+    return nodes.map(node => (
+      <CategoryTreeNode
+        key={node.id}
+        node={node}
+        selectedCategory={selectedCategory}
+        onCategorySelect={onCategorySelect}
+        onToggleExpand={handleToggleExpand}
+        expandedCategories={expandedCategories}
+      />
+    ));
   };
 
   return (
@@ -1064,18 +1205,7 @@ const CategoryTree = ({ items, selectedCategory, onCategorySelect }) => {
         >
           All Best Practices ({items.length})
         </ListGroup.Item>
-        {Object.entries(categoryCounts)
-          .sort(([a], [b]) => a.localeCompare(b))
-          .map(([category, count]) => (
-            <ListGroup.Item
-              key={category}
-              active={selectedCategory === category}
-              onClick={() => onCategorySelect(category)}
-              style={{ cursor: "pointer" }}
-            >
-              {categoryLabels[category] || prettifyTag(category)} ({count})
-            </ListGroup.Item>
-          ))}
+        {renderCategoryNodes(categoryTree)}
       </ListGroup>
     </div>
   );
@@ -1097,6 +1227,9 @@ const SkillBrowser = ({ searchTerm, setSearchTerm, isSearchActive }) => {
   const [availableRegistries, setAvailableRegistries] = useState([]);
   const [selectedRegistry, setSelectedRegistry] = useState(0);
   const [isLoadingRegistry, setIsLoadingRegistry] = useState(false);
+
+  // State for registry metadata (icons, etc.)
+  const [registryMetadata, setRegistryMetadata] = useState({});
 
   // Helper function to get registry URL (defined early to avoid initialization issues)
   const getRegistryUrl = React.useCallback((registryPath) => {
@@ -1253,6 +1386,16 @@ const SkillBrowser = ({ searchTerm, setSearchTerm, isSearchActive }) => {
         console.log('Loaded registry data:', data);
         console.log('Combined items:', combined);
         setAllItems(combined);
+
+        // Extract and store metadata (icons, etc.)
+        if (data.metadata) {
+          console.log('Loaded registry metadata:', data.metadata);
+          setRegistryMetadata(data.metadata);
+        } else {
+          console.log('No metadata found in registry, using defaults');
+          setRegistryMetadata({});
+        }
+
         // Store in window for access by dependency links
         window.allMarketplaceItems = combined;
         const tags = [...new Set(combined.flatMap((item) => item.tags || []))];
@@ -1352,7 +1495,8 @@ const SkillBrowser = ({ searchTerm, setSearchTerm, isSearchActive }) => {
 
       const matchesCategory =
         selectedCategory === "All" ||
-        item.category === selectedCategory;
+        item.category === selectedCategory ||
+        item.category.startsWith(selectedCategory + "/"); // Include subcategories
 
       const matchesTags = Object.entries(selectedTags).every(
         ([tag, selected]) =>
@@ -1527,6 +1671,7 @@ const SkillBrowser = ({ searchTerm, setSearchTerm, isSearchActive }) => {
             items={allItems}
             selectedCategory={selectedCategory}
             onCategorySelect={setSelectedCategory}
+            metadata={registryMetadata}
           />
         </Col>
         <Col md={9}>

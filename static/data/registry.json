@@ -4,7 +4,7 @@
       "name": "slim-changelog",
       "displayName": "Changelog Writer",
       "description": "Create and maintain human-readable changelogs for software projects using Keep a Changelog standards",
-      "category": "documentation",
+      "category": "collaboration/versioning",
       "tags": [
         "changelog",
         "documentation",
@@ -22,7 +22,7 @@
       "name": "slim-code-of-conduct",
       "displayName": "Code of Conduct Writer",
       "description": "Create and implement code of conduct and collaboration policies using Contributor Covenant standards, with specialized templates for scientific research environments and academic citation",
-      "category": "governance",
+      "category": "collaboration/policy",
       "tags": [
         "code-of-conduct",
         "governance",
@@ -60,7 +60,7 @@
       "name": "slim-continuous-testing",
       "displayName": "Continuous Testing Framework",
       "description": "Implement comprehensive testing strategies with documentation and automation templates for static analysis, security scanning, and code quality checks",
-      "category": "testing",
+      "category": "continuous-pipelines/testing",
       "tags": [
         "testing",
         "continuous-testing",
@@ -79,7 +79,7 @@
       "name": "slim-contributing-guide",
       "displayName": "Contributing Guide Writer",
       "description": "Create comprehensive contributing guides for open source projects with workflow guidance and customizable templates",
-      "category": "governance",
+      "category": "collaboration/policy",
       "tags": [
         "contributing",
         "open-source",
@@ -98,7 +98,7 @@
       "name": "slim-executive-summary",
       "displayName": "Executive Summary Writer",
       "description": "Generate comprehensive executive summaries from workspace communication files using AI analysis with automatic context discovery",
-      "category": "documentation",
+      "category": "collaboration/meetings",
       "tags": [
         "executive-summary",
         "ai-powered",
@@ -122,7 +122,7 @@
       "name": "slim-governance",
       "displayName": "Governance Model Writer",
       "description": "Team governance templates for government-sponsored open source projects (small, medium, large teams)",
-      "category": "governance",
+      "category": "collaboration/policy",
       "tags": [
         "governance",
         "templates",
@@ -141,7 +141,7 @@
       "name": "slim-issue-templates",
       "displayName": "Issue Template Writer",
       "description": "Add standardized GitHub issue templates for bug reports and feature requests in both Markdown and Form formats",
-      "category": "governance",
+      "category": "collaboration/templates",
       "tags": [
         "issue-templates",
         "github",
@@ -160,7 +160,7 @@
       "name": "slim-license",
       "displayName": "License Writer",
       "description": "Detect project type and add appropriate NASA/Open Source licenses (Apache 2.0 or MIT)",
-      "category": "governance",
+      "category": "collaboration/policy",
       "tags": [
         "license",
         "open-source",
@@ -180,7 +180,7 @@
       "name": "slim-meeting-agenda",
       "displayName": "Meeting Agenda Writer",
       "description": "Generate comprehensive meeting agendas by orchestrating context gathering from previous summaries, querying external services (GitHub, Slack, etc. via TECH.md), and matching custom format templates. Automatically identifies and suggests generation of missing meeting summaries.",
-      "category": "collaboration",
+      "category": "collaboration/meetings",
       "tags": [
         "meeting-agenda",
         "collaboration",
@@ -206,7 +206,7 @@
       "name": "slim-meeting-summary",
       "displayName": "Meeting Summary Writer",
       "description": "Generate comprehensive meeting summaries with action items from meeting notes, transcripts, or agendas. Automatically fulfills actionable tasks using tools discovered from TECH.md (MCP servers, APIs, local scripts) and provides guidance for manual tasks.",
-      "category": "collaboration",
+      "category": "collaboration/meetings",
       "tags": [
         "meeting-summary",
         "collaboration",
@@ -230,7 +230,7 @@
       "name": "slim-project-aware-workspace",
       "displayName": "SLIM Project-Aware Workspace",
       "description": "Set up a project-aware workspace with date-organized dynamic folders for project-aware skill execution, tool integration tracking (MCP servers, APIs, scripts), and daily work organization. This is an essential skill for building advanced AI-driven workflows customized for your project. A number of other skills depend on this as a prerequisite.",
-      "category": "project-setup",
+      "category": "infrastructure",
       "tags": [
         "workspace",
         "project-aware",
@@ -250,7 +250,7 @@
       "name": "slim-readme",
       "displayName": "README Writer",
       "description": "Create a comprehensive README.md template to help developers and users understand your project",
-      "category": "documentation",
+      "category": "collaboration/templates",
       "tags": [
         "readme",
         "documentation",
@@ -268,7 +268,7 @@
       "name": "slim-skill-creator",
       "displayName": "SLIM Best Practice Creator",
       "description": "Meta-skill for creating and integrating new best practices (skills, agents, MCP servers) into the SLIM marketplace with dependency tracking and automated registry updates",
-      "category": "project-setup",
+      "category": "infrastructure",
       "tags": [
         "skill-creator",
         "marketplace",
@@ -310,7 +310,7 @@
       "license": "Apache-2.0",
       "displayName": "SLIM Rebranding",
       "example": "Help me rebrand this slim website. ",
-      "category": "project-setup",
+      "category": "user-interface",
       "lastUpdated": "2026-01-05",
       "zip_file_path": "assets/zip/slim-rebranding.zip"
     },
@@ -341,7 +341,7 @@
       "license": "Apache-2.0",
       "displayName": "SLIM Website Maker",
       "example": "Help me make a product website using SLIM best practices.",
-      "category": "project-setup",
+      "category": "user-interface",
       "lastUpdated": "2025-08-12",
       "zip_file_path": "assets/zip/slim-website-maker.zip"
     }
@@ -370,9 +370,23 @@
       "homepage": "https://github.com/github/github-mcp-server",
       "displayName": "GitHub MCP Server",
       "example": "Give me information about this repository from GitHub. ",
-      "category": "collaboration",
+      "category": "infrastructure",
       "lastUpdated": "2026-01-05",
       "zip_file_path": "assets/zip/github-mcp-server.zip"
     }
-  ]
+  ],
+  "metadata": {
+    "categoryIcons": {
+      "collaboration": "🤝",
+      "collaboration/meetings": "📅",
+      "collaboration/policy": "🏛",
+      "collaboration/templates": "📄",
+      "collaboration/versioning": "🔄",
+      "continuous-pipelines": "⚡",
+      "continuous-pipelines/testing": "✅",
+      "infrastructure": "🏗",
+      "security": "🔒",
+      "user-interface": "🎨"
+    }
+  }
 }

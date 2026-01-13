@@ -263,6 +263,12 @@ function mergeWithExisting(generated, existing) {
     merged.local_marketplace_path = existing.local_marketplace_path;
   }
 
+  // Preserve metadata if it exists (for category icons, etc.)
+  if (existing.metadata) {
+    merged.metadata = existing.metadata;
+    console.log(`✓ Preserved existing metadata section`);
+  }
+
   // Fields that are marketplace-managed (always update)
   const marketplaceManagedFields = [
     'name', 'description', 'tags', 'type', 'skill_file_url', 'zip_file_path',
