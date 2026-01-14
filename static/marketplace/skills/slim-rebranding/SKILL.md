@@ -21,10 +21,9 @@ description: Comprehensive autonomous rebranding skill for projects. Handles all
 - Place logo file if provided
 
 ### Step 4: Registry Processing
-- Fetch external registries if requested
-- Transform entries with `external_only: true` and `repository.url`
-- Clear or merge local marketplace based on user choice
-- Write updated `static/data/registry.json`
+- Fetch external registry URLs if requested
+- Insert external registry entries with `external_only: true` and `repository.url` into `docusaurus.config.js` section for `slimConfig`
+- Clear local marketplace `.claude-plugin/marketplace.json` and `static/data/registry.json` based on user choice
 
 ### Step 5: Documentation Generation
 - Generate `docs/contribute/submit-best-practice.md`
@@ -34,7 +33,7 @@ description: Comprehensive autonomous rebranding skill for projects. Handles all
 ### Step 6: Final Updates
 - Update `README.md` references
 - Update `package.json` if needed
-- Run `npm run build`
+- Run `npm install; npm run build`
 - Commit changes
 
 ## Dependencies
