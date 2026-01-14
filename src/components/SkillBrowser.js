@@ -27,7 +27,6 @@ import "@site/src/css/markdown-modal.css";
 import FileBrowserSection from "./FileBrowserSection";
 import CategoryTreeNode from "./CategoryTreeNode";
 import { useBrandingConfig } from "../hooks/useBrandingConfig";
-import useBaseUrl from "@docusaurus/useBaseUrl";
 
 const SkillCard = ({ skill, onTagClick, isHighlighted, currentFilters, registryBaseUrl }) => {
   const [showDetails, setShowDetails] = useState(false);
@@ -1214,20 +1213,8 @@ const CategoryTree = ({ items, selectedCategory, onCategorySelect, metadata = {}
 };
 
 const SkillBrowser = ({ searchTerm, setSearchTerm, isSearchActive }) => {
-  // Get branding configuration and base URL
+  // Get branding configuration
   const branding = useBrandingConfig();
-
-  // Get base URL from Docusaurus config
-  const getFullUrl = (path) => {
-    if (typeof window !== "undefined" && window.docusaurus?.siteConfig?.baseUrl) {
-      const baseUrl = window.docusaurus.siteConfig.baseUrl;
-      return `${baseUrl}${path.startsWith('/') ? path.slice(1) : path}`;
-    }
-    return path;
-  };
-
-  const contributeUrl = getFullUrl('docs/contribute/submit-best-practice');
-  const aboutUrl = getFullUrl('docs/about');
 
   const [allItems, setAllItems] = useState([]);
   const [selectedCategory, setSelectedCategory] = useState("All");
@@ -1705,18 +1692,6 @@ const SkillBrowser = ({ searchTerm, setSearchTerm, isSearchActive }) => {
                 <p className="text-muted mb-4" style={{ maxWidth: "500px", margin: "0 auto 1.5rem" }}>
                   Get started by importing from other SLIM instances or creating your own!
                 </p>
-                <div>
-                  <Button
-                    variant="primary"
-                    href={contributeUrl}
-                    className="me-2"
-                  >
-                    Learn How to Contribute
-                  </Button>
-                  <Button variant="outline-secondary" href={aboutUrl}>
-                    About {branding.getProjectName()}
-                  </Button>
-                </div>
               </Card.Body>
             </Card>
           ) : (
