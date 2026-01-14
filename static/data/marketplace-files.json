@@ -475,7 +475,7 @@
           "name": "SKILL.md",
           "type": "file",
           "path": "SKILL.md",
-          "size": 7047
+          "size": 2005
         },
         {
           "name": "assets",
@@ -504,7 +504,7 @@
               "name": "shared-patterns.md",
               "type": "file",
               "path": "assets/shared-patterns.md",
-              "size": 7088
+              "size": 7470
             },
             {
               "name": "workflow-steps.md",

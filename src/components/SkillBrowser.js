@@ -27,6 +27,7 @@ import "@site/src/css/markdown-modal.css";
 import FileBrowserSection from "./FileBrowserSection";
 import CategoryTreeNode from "./CategoryTreeNode";
 import { useBrandingConfig } from "../hooks/useBrandingConfig";
+import useBaseUrl from "@docusaurus/useBaseUrl";
 
 const SkillCard = ({ skill, onTagClick, isHighlighted, currentFilters, registryBaseUrl }) => {
   const [showDetails, setShowDetails] = useState(false);
@@ -1213,8 +1214,10 @@ const CategoryTree = ({ items, selectedCategory, onCategorySelect, metadata = {}
 };
 
 const SkillBrowser = ({ searchTerm, setSearchTerm, isSearchActive }) => {
-  // Get branding configuration
+  // Get branding configuration and base URL
   const branding = useBrandingConfig();
+  const contributeUrl = useBaseUrl('/docs/contribute/submit-best-practice');
+  const aboutUrl = useBaseUrl('/docs/about');
 
   const [allItems, setAllItems] = useState([]);
   const [selectedCategory, setSelectedCategory] = useState("All");
@@ -1695,12 +1698,12 @@ const SkillBrowser = ({ searchTerm, setSearchTerm, isSearchActive }) => {
                 <div>
                   <Button
                     variant="primary"
-                    href="/docs/contribute/submit-best-practice"
+                    href={contributeUrl}
                     className="me-2"
                   >
                     Learn How to Contribute
                   </Button>
-                  <Button variant="outline-secondary" href="/docs/about">
+                  <Button variant="outline-secondary" href={aboutUrl}>
                     About {branding.getProjectName()}
                   </Button>
                 </div>
