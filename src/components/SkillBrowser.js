@@ -1341,6 +1341,10 @@ const SkillBrowser = ({ searchTerm, setSearchTerm, isSearchActive }) => {
     // Load registry data when selectedRegistry changes
     if (availableRegistries.length === 0) return;
 
+    // Clear existing items before loading new registry
+    setAllItems([]);
+    setAllTags([]);
+    setRegistryMetadata({});
     setIsLoadingRegistry(true);
     const registryPath = availableRegistries[selectedRegistry];
     const registryUrl = getRegistryUrl(registryPath);
