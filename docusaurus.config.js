@@ -224,7 +224,6 @@ const config = {
       ],
       registries: [
         "./static/data/registry.json", // Local registry (generated from marketplace.json)
-        "https://riverma.github.io/slim/data/registry.json",
         // Future: Add remote registries like 'https://example.com/registry.json'
       ],
     },

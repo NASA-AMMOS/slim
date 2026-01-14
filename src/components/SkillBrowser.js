@@ -27,6 +27,7 @@ import "@site/src/css/markdown-modal.css";
 import FileBrowserSection from "./FileBrowserSection";
 import CategoryTreeNode from "./CategoryTreeNode";
 import { useBrandingConfig } from "../hooks/useBrandingConfig";
+import siteConfig from "../../docusaurus.config";
 
 const SkillCard = ({ skill, onTagClick, isHighlighted, currentFilters, registryBaseUrl }) => {
   const [showDetails, setShowDetails] = useState(false);
@@ -1262,35 +1263,12 @@ const SkillBrowser = ({ searchTerm, setSearchTerm, isSearchActive }) => {
     return baseUrl;
   }, [baseUrl]);
 
-  // Load available registries from config
+  // Load available registries from build-time config
   useEffect(() => {
-    const loadRegistryConfig = async () => {
-      try {
-        console.log('Loading registry config...');
-        console.log('window.docusaurus:', typeof window !== "undefined" ? !!window.docusaurus : 'no window');
-
-        // In Docusaurus, try to access config through the global docusaurus object
-        if (typeof window !== "undefined" && window.docusaurus?.siteConfig?.customFields?.slimConfig) {
-          const config = window.docusaurus.siteConfig.customFields.slimConfig;
-          const registries = config.registries || ['./static/data/registry.json'];
-          console.log('✓ Loaded registries from Docusaurus config:', registries);
-          setAvailableRegistries(registries);
-        } else {
-          // For development, hardcode the registries if config isn't available
-          const hardcodedRegistries = [
-            './static/data/registry.json',
-            'https://riverma.github.io/slim/data/registry.json'
-          ];
-          console.log('⚠️  Config not available, using hardcoded registries:', hardcodedRegistries);
-          setAvailableRegistries(hardcodedRegistries);
-        }
-      } catch (error) {
-        console.warn('Could not load registry config, using fallback:', error);
-        setAvailableRegistries(['./static/data/registry.json']);
-      }
-    };
-
-    loadRegistryConfig();
+    // Load registry list from build-time config (static site generation)
+    const registries = siteConfig.customFields?.slimConfig?.registries || ['./static/data/registry.json'];
+    console.log('✓ Loaded registries from build-time config:', registries);
+    setAvailableRegistries(registries);
   }, []);
 
   useEffect(() => {
