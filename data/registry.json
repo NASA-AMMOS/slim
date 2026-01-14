@@ -1,263 +1,325 @@
 {
   "skills": [
     {
-      "name": "slim-license",
-      "displayName": "License Writer",
-      "description": "Detect project type and add appropriate NASA/Open Source licenses (Apache 2.0 or MIT)",
-      "category": "governance",
-      "tags": ["project-setup", "legal", "open-source", "templates"],
-      "lastUpdated": "2024-06-19",
-      "skill_file_url": "/slim/marketplace/skills/slim-license/SKILL.md",
-      "type": "skill",
-      "example": "Add an Apache 2.0 license to this project"
-    },
-    {
-      "name": "slim-executive-summary",
-      "displayName": "Executive Summary Writer",
-      "description": "Generate comprehensive executive summaries from workspace communication files using AI analysis with automatic context discovery",
-      "category": "documentation",
-      "tags": [
-        "ai-powered",
-        "reporting",
-        "analysis",
-        "project-management",
-        "workspace"
-      ],
-      "lastUpdated": "2025-01-05",
-      "dependencies": {
-        "skills": ["slim-project-aware-workspace"]
-      },
-      "skill_file_url": "/slim/marketplace/skills/slim-executive-summary/SKILL.md",
-      "type": "skill",
-      "example": "Generate an executive summary from the 2024-12-15 folder"
-    },
-    {
-      "name": "slim-readme",
-      "displayName": "README Writer",
-      "description": "Create a comprehensive README.md template to help developers and users understand your project",
-      "category": "documentation",
-      "tags": ["documentation", "project-setup", "templates", "onboarding"],
-      "lastUpdated": "2024-08-02",
-      "skill_file_url": "/slim/marketplace/skills/slim-readme/SKILL.md",
-      "type": "skill",
-      "example": "Create a comprehensive README for this project"
-    },
-    {
-      "name": "slim-skill-creator",
-      "displayName": "SLIM Best Practice Creator",
-      "description": "Meta-skill for creating and integrating new best practices (skills, agents, MCP servers) into the SLIM marketplace with dependency tracking and automated registry updates",
-      "category": "project-setup",
-      "tags": [
-        "skill-development",
-        "marketplace",
-        "automation",
-        "templates",
-        "workflow",
-        "agents",
-        "mcp-servers"
-      ],
-      "lastUpdated": "2025-01-05",
-      "skill_file_url": "/slim/marketplace/skills/slim-skill-creator/SKILL.md",
-      "type": "skill",
-      "example": "Help me create a new SLIM best practice for automated testing workflows"
-    },
-    {
-      "name": "slim-project-aware-workspace",
-      "displayName": "SLIM Project-Aware Workspace",
-      "description": "Set up a project-aware workspace with date-organized dynamic folders for project-aware skill execution, tool integration tracking (MCP servers, APIs, scripts), and daily work organization",
-      "category": "project-setup",
-      "tags": [
-        "ai-powered",
-        "project-setup",
-        "project-management",
-        "integration",
-        "workflow"
-      ],
-      "lastUpdated": "2025-01-05",
-      "skill_file_url": "/slim/marketplace/skills/slim-project-aware-workspace/SKILL.md",
-      "type": "skill",
-      "example": "Set up a new project-aware workspace"
-    },
-    {
-      "name": "slim-issue-templates",
-      "displayName": "Issue Template Writer",
-      "description": "Add standardized GitHub issue templates for bug reports and feature requests in both Markdown and Form formats",
-      "category": "governance",
-      "tags": ["governance", "templates", "project-setup", "github"],
-      "lastUpdated": "2024-08-02",
-      "skill_file_url": "/slim/marketplace/skills/slim-issue-templates/SKILL.md",
-      "type": "skill",
-      "example": "Add GitHub issue templates for bug reports and feature requests"
-    },
-    {
-      "name": "slim-governance",
-      "displayName": "Governance Model Writer",
-      "description": "Team governance templates for government-sponsored open source projects (small, medium, large teams)",
-      "category": "governance",
-      "tags": [
-        "governance",
-        "templates",
-        "project-setup",
-        "open-source",
-        "community"
-      ],
-      "lastUpdated": "2024-03-28",
-      "skill_file_url": "/slim/marketplace/skills/slim-governance/SKILL.md",
-      "type": "skill",
-      "example": "Add a governance model for our medium-sized team"
-    },
-    {
       "name": "slim-changelog",
       "displayName": "Changelog Writer",
       "description": "Create and maintain human-readable changelogs for software projects using Keep a Changelog standards",
-      "category": "documentation",
-      "tags": ["documentation", "versioning", "templates", "project-setup"],
+      "category": "collaboration/versioning",
+      "tags": [
+        "changelog",
+        "documentation",
+        "versioning",
+        "templates",
+        "project-setup"
+      ],
       "lastUpdated": "2024-08-02",
       "skill_file_url": "/slim/marketplace/skills/slim-changelog/SKILL.md",
       "type": "skill",
-      "example": "Create a CHANGELOG.md"
+      "example": "Create a CHANGELOG.md",
+      "zip_file_path": "assets/zip/slim-changelog.zip"
     },
     {
       "name": "slim-code-of-conduct",
       "displayName": "Code of Conduct Writer",
       "description": "Create and implement code of conduct and collaboration policies using Contributor Covenant standards, with specialized templates for scientific research environments and academic citation",
-      "category": "governance",
+      "category": "collaboration/policy",
       "tags": [
+        "code-of-conduct",
         "governance",
-        "project-setup",
-        "templates",
         "collaboration",
-        "community"
+        "templates",
+        "community",
+        "contributor-covenant"
       ],
       "lastUpdated": "2024-04-30",
       "skill_file_url": "/slim/marketplace/skills/slim-code-of-conduct/SKILL.md",
       "type": "skill",
-      "example": "Add a code of conduct with citation guidelines for scientific projects"
-    },
-    {
-      "name": "slim-contributing-guide",
-      "displayName": "Contributing Guide Writer",
-      "description": "Create comprehensive contributing guides for open source projects with workflow guidance and customizable templates",
-      "category": "governance",
-      "tags": [
-        "governance",
-        "templates",
-        "project-setup",
-        "workflow",
-        "community",
-        "onboarding"
-      ],
-      "lastUpdated": "2024-08-19",
-      "skill_file_url": "/slim/marketplace/skills/slim-contributing-guide/SKILL.md",
-      "type": "skill",
-      "example": "Generate a CONTRIBUTING.md guide for this repository"
-    },
-    {
-      "name": "slim-continuous-testing",
-      "displayName": "Continuous Testing Framework",
-      "description": "Implement comprehensive testing strategies with documentation and automation templates for static analysis, security scanning, and code quality checks",
-      "category": "testing",
-      "tags": ["testing", "automation", "code-quality", "deployment"],
-      "lastUpdated": "2024-08-30",
-      "skill_file_url": "/slim/marketplace/skills/slim-continuous-testing/SKILL.md",
-      "type": "skill",
-      "example": "Set up pre-commit hooks for automated testing and code quality checks"
+      "example": "Add a code of conduct with citation guidelines for scientific projects",
+      "zip_file_path": "assets/zip/slim-code-of-conduct.zip"
     },
     {
       "name": "slim-container-vulnerability-scanning",
       "displayName": "Container Vulnerability Scanner",
       "description": "Implement Grype-based container and dependency vulnerability scanning with automated pre-commit hooks",
       "category": "security",
-      "tags": ["security", "containers", "automation"],
+      "tags": [
+        "vulnerability-scanning",
+        "container",
+        "security",
+        "grype",
+        "automation",
+        "pre-commit"
+      ],
       "lastUpdated": "2025-01-05",
       "skill_file_url": "/slim/marketplace/skills/slim-container-vulnerability-scanning/SKILL.md",
       "type": "skill",
-      "example": "Add Grype-based container vulnerability scanning to this project"
+      "example": "Add Grype-based container vulnerability scanning to this project",
+      "zip_file_path": "assets/zip/slim-container-vulnerability-scanning.zip"
     },
     {
-      "name": "slim-meeting-summary",
-      "displayName": "Meeting Summary Writer",
-      "description": "Generate comprehensive meeting summaries with action items from meeting notes, transcripts, or agendas. Automatically fulfills actionable tasks using tools discovered from TECH.md (MCP servers, APIs, local scripts) and provides guidance for manual tasks.",
-      "category": "collaboration",
+      "name": "slim-continuous-testing",
+      "displayName": "Continuous Testing Framework",
+      "description": "Implement comprehensive testing strategies with documentation and automation templates for static analysis, security scanning, and code quality checks",
+      "category": "continuous-pipelines/testing",
       "tags": [
-        "collaboration",
-        "reporting",
+        "testing",
+        "continuous-testing",
         "automation",
+        "static-analysis",
+        "security-scanning",
+        "code-quality"
+      ],
+      "lastUpdated": "2024-08-30",
+      "skill_file_url": "/slim/marketplace/skills/slim-continuous-testing/SKILL.md",
+      "type": "skill",
+      "example": "Set up pre-commit hooks for automated testing and code quality checks",
+      "zip_file_path": "assets/zip/slim-continuous-testing.zip"
+    },
+    {
+      "name": "slim-contributing-guide",
+      "displayName": "Contributing Guide Writer",
+      "description": "Create comprehensive contributing guides for open source projects with workflow guidance and customizable templates",
+      "category": "collaboration/policy",
+      "tags": [
+        "contributing",
+        "open-source",
+        "workflow",
+        "templates",
+        "governance",
+        "community"
+      ],
+      "lastUpdated": "2024-08-19",
+      "skill_file_url": "/slim/marketplace/skills/slim-contributing-guide/SKILL.md",
+      "type": "skill",
+      "example": "Generate a CONTRIBUTING.md guide for this repository",
+      "zip_file_path": "assets/zip/slim-contributing-guide.zip"
+    },
+    {
+      "name": "slim-executive-summary",
+      "displayName": "Executive Summary Writer",
+      "description": "Generate comprehensive executive summaries from workspace communication files using AI analysis with automatic context discovery",
+      "category": "collaboration/meetings",
+      "tags": [
+        "executive-summary",
         "ai-powered",
-        "project-management",
-        "integration"
+        "reporting",
+        "analysis",
+        "workspace",
+        "communication"
       ],
       "lastUpdated": "2025-01-05",
       "dependencies": {
-        "skills": ["slim-project-aware-workspace"]
+        "skills": [
+          "slim-project-aware-workspace"
+        ]
       },
-      "skill_file_url": "/slim/marketplace/skills/slim-meeting-summary/SKILL.md",
+      "skill_file_url": "/slim/marketplace/skills/slim-executive-summary/SKILL.md",
       "type": "skill",
-      "example": "Generate a meeting summary with action items from @meeting-transcript.md"
+      "example": "Generate an executive summary from the 2024-12-15 folder",
+      "zip_file_path": "assets/zip/slim-executive-summary.zip"
+    },
+    {
+      "name": "slim-governance",
+      "displayName": "Governance Model Writer",
+      "description": "Team governance templates for government-sponsored open source projects (small, medium, large teams)",
+      "category": "collaboration/policy",
+      "tags": [
+        "governance",
+        "templates",
+        "open-source",
+        "government",
+        "team-management",
+        "project-setup"
+      ],
+      "lastUpdated": "2024-03-28",
+      "skill_file_url": "/slim/marketplace/skills/slim-governance/SKILL.md",
+      "type": "skill",
+      "example": "Add a governance model for our medium-sized team",
+      "zip_file_path": "assets/zip/slim-governance.zip"
+    },
+    {
+      "name": "slim-issue-templates",
+      "displayName": "Issue Template Writer",
+      "description": "Add standardized GitHub issue templates for bug reports and feature requests in both Markdown and Form formats",
+      "category": "collaboration/templates",
+      "tags": [
+        "issue-templates",
+        "github",
+        "bug-reports",
+        "feature-requests",
+        "templates",
+        "governance"
+      ],
+      "lastUpdated": "2024-08-02",
+      "skill_file_url": "/slim/marketplace/skills/slim-issue-templates/SKILL.md",
+      "type": "skill",
+      "example": "Add GitHub issue templates for bug reports and feature requests",
+      "zip_file_path": "assets/zip/slim-issue-templates.zip"
+    },
+    {
+      "name": "slim-license",
+      "displayName": "License Writer",
+      "description": "Detect project type and add appropriate NASA/Open Source licenses (Apache 2.0 or MIT)",
+      "category": "collaboration/policy",
+      "tags": [
+        "license",
+        "open-source",
+        "apache",
+        "mit",
+        "nasa",
+        "legal",
+        "project-setup"
+      ],
+      "lastUpdated": "2024-06-19",
+      "skill_file_url": "/slim/marketplace/skills/slim-license/SKILL.md",
+      "type": "skill",
+      "example": "Add an Apache 2.0 license to this project",
+      "zip_file_path": "assets/zip/slim-license.zip"
     },
     {
       "name": "slim-meeting-agenda",
       "displayName": "Meeting Agenda Writer",
       "description": "Generate comprehensive meeting agendas by orchestrating context gathering from previous summaries, querying external services (GitHub, Slack, etc. via TECH.md), and matching custom format templates. Automatically identifies and suggests generation of missing meeting summaries.",
-      "category": "collaboration",
+      "category": "collaboration/meetings",
       "tags": [
+        "meeting-agenda",
         "collaboration",
         "project-management",
         "ai-powered",
-        "workflow",
-        "integration"
+        "integration",
+        "github",
+        "slack"
       ],
       "lastUpdated": "2025-01-05",
       "dependencies": {
-        "skills": ["slim-project-aware-workspace", "slim-meeting-summary"]
+        "skills": [
+          "slim-project-aware-workspace",
+          "slim-meeting-summary"
+        ]
       },
       "skill_file_url": "/slim/marketplace/skills/slim-meeting-agenda/SKILL.md",
       "type": "skill",
-      "example": "Create an agenda for tomorrow's sprint planning meeting"
+      "example": "Create an agenda for tomorrow's sprint planning meeting",
+      "zip_file_path": "assets/zip/slim-meeting-agenda.zip"
     },
     {
-      "name": "slim-website",
-      "displayName": "Project Website Generator",
-      "description": "Project website generator that analyzes your project content and creates customized Docusaurus documentation websites",
-      "category": "documentation",
+      "name": "slim-meeting-summary",
+      "displayName": "Meeting Summary Writer",
+      "description": "Generate comprehensive meeting summaries with action items from meeting notes, transcripts, or agendas. Automatically fulfills actionable tasks using tools discovered from TECH.md (MCP servers, APIs, local scripts) and provides guidance for manual tasks.",
+      "category": "collaboration/meetings",
       "tags": [
-        "documentation",
+        "meeting-summary",
+        "collaboration",
+        "reporting",
+        "automation",
         "ai-powered",
-        "analysis",
-        "templates",
-        "deployment"
+        "action-items"
       ],
       "lastUpdated": "2025-01-05",
-      "skill_file_url": "/slim/marketplace/skills/slim-website/SKILL.md",
+      "dependencies": {
+        "skills": [
+          "slim-project-aware-workspace"
+        ]
+      },
+      "skill_file_url": "/slim/marketplace/skills/slim-meeting-summary/SKILL.md",
       "type": "skill",
-      "example": "Generate a Docusaurus documentation website for this project"
-    }
-  ],
-  "agents": [
+      "example": "Generate a meeting summary with action items from @meeting-transcript.md",
+      "zip_file_path": "assets/zip/slim-meeting-summary.zip"
+    },
     {
-      "name": "slim-rebranding-agent",
-      "displayName": "Rebranding Agent",
-      "description": "Comprehensive autonomous rebranding agent for projects. Handles all aspects of rebranding including text/naming, documentation, visual assets, colors/theming, and configuration files. Works with any codebase (Node, Python, Java, C++, Rust, Go, etc.). Auto-integrates free Phosphor icons. Presents detailed plan for approval before executing changes. Creates git branch and commits with clear messages. Validates changes with linters and build systems. Use when rebranding a project, changing project name, updating visual identity, or modernizing brand assets.",
-      "category": "project-setup",
+      "name": "slim-project-aware-workspace",
+      "displayName": "SLIM Project-Aware Workspace",
+      "description": "Set up a project-aware workspace with date-organized dynamic folders for project-aware skill execution, tool integration tracking (MCP servers, APIs, scripts), and daily work organization. This is an essential skill for building advanced AI-driven workflows customized for your project. A number of other skills depend on this as a prerequisite.",
+      "category": "infrastructure",
       "tags": [
+        "workspace",
+        "project-aware",
+        "ai-powered",
+        "project-setup",
+        "integration",
+        "workflow",
+        "organization"
+      ],
+      "lastUpdated": "2025-01-05",
+      "skill_file_url": "/slim/marketplace/skills/slim-project-aware-workspace/SKILL.md",
+      "type": "skill",
+      "example": "Set up a new project-aware workspace",
+      "zip_file_path": "assets/zip/slim-project-aware-workspace.zip"
+    },
+    {
+      "name": "slim-readme",
+      "displayName": "README Writer",
+      "description": "Create a comprehensive README.md template to help developers and users understand your project",
+      "category": "collaboration/templates",
+      "tags": [
+        "readme",
+        "documentation",
+        "project-setup",
+        "templates",
+        "onboarding"
+      ],
+      "lastUpdated": "2024-08-02",
+      "skill_file_url": "/slim/marketplace/skills/slim-readme/SKILL.md",
+      "type": "skill",
+      "example": "Create a comprehensive README for this project",
+      "zip_file_path": "assets/zip/slim-readme.zip"
+    },
+    {
+      "name": "slim-skill-creator",
+      "displayName": "SLIM Best Practice Creator",
+      "description": "Meta-skill for creating and integrating new best practices (skills, agents, MCP servers) into the SLIM marketplace with dependency tracking and automated registry updates",
+      "category": "infrastructure",
+      "tags": [
+        "skill-creator",
+        "marketplace",
+        "automation",
+        "templates",
+        "workflow",
+        "best-practices",
+        "mcp-servers"
+      ],
+      "lastUpdated": "2025-01-05",
+      "skill_file_url": "/slim/marketplace/skills/slim-skill-creator/SKILL.md",
+      "type": "skill",
+      "example": "Help me create a new SLIM best practice for automated testing workflows",
+      "zip_file_path": "assets/zip/slim-skill-creator.zip"
+    },
+    {
+      "name": "slim-rebranding",
+      "description": "Comprehensive autonomous rebranding skill for projects. Handles all aspects of rebranding including text/naming, documentation, visual assets, colors/theming, and configuration files. Works with any codebase (Node, Python, Java, C++, Rust, Go, etc.). Auto-integrates free Phosphor icons. Presents detailed plan for approval before executing changes. Creates git branch and commits with clear messages. Validates changes with linters and build systems. Use when rebranding a project, changing project name, updating visual identity, or modernizing brand assets.",
+      "tags": [
+        "rebranding",
         "branding",
+        "visual-assets",
         "documentation",
         "automation",
         "git",
         "code-quality",
         "workflow"
       ],
-      "lastUpdated": "2025-01-05",
-      "skill_file_url": "/slim/marketplace/agents/slim-rebranding-agent/AGENT.md",
-      "type": "agent",
-      "example": "Rebrand this project from 'OldName' to 'NewName' including all documentation, visual assets, and color scheme"
+      "type": "skill",
+      "skill_file_url": "/slim/marketplace/skills/slim-rebranding/SKILL.md",
+      "version": "1.0.1",
+      "author": {
+        "name": "NASA AMMOS",
+        "email": "slim@jpl.nasa.gov",
+        "url": "https://github.com/NASA-AMMOS"
+      },
+      "homepage": "https://github.com/NASA-AMMOS/slim/tree/main/static/marketplace/skills/slim-rebranding",
+      "repository": "https://github.com/NASA-AMMOS/slim",
+      "license": "Apache-2.0",
+      "displayName": "SLIM Rebranding",
+      "example": "Help me rebrand this slim website.",
+      "category": "user-interface",
+      "lastUpdated": "2026-01-13",
+      "zip_file_path": "assets/zip/slim-rebranding.zip"
     },
     {
-      "name": "slim-website-maker-agent",
-      "displayName": "Project Website Maker",
-      "description": "Autonomous website generator agent for creating customized Docusaurus documentation websites. Analyzes project content, generates intelligent website structure, and validates changes with iterative build testing until successful. Creates git branch and commits with clear messages. Auto-detects project type and customizes accordingly. Use when generating project documentation websites, creating content-driven sites, or automating website creation with build validation.",
-      "category": "documentation",
+      "name": "slim-website-maker",
+      "description": "Autonomous website generator skill for creating customized Docusaurus documentation websites. Analyzes project content, generates intelligent website structure, and validates changes with iterative build testing until successful. Creates git branch and commits with clear messages. Auto-detects project type and customizes accordingly. Use when generating project documentation websites, creating content-driven sites, or automating website creation with build validation.",
       "tags": [
+        "website-maker",
+        "docusaurus",
         "documentation",
         "ai-powered",
         "automation",
@@ -266,29 +328,65 @@
         "workflow",
         "deployment"
       ],
-      "lastUpdated": "2025-01-05",
-      "skill_file_url": "/slim/marketplace/agents/slim-website-maker-agent/AGENT.md",
-      "type": "agent",
-      "example": "Generate a Docusaurus documentation website for this project with automatic build validation"
+      "type": "skill",
+      "skill_file_url": "/slim/marketplace/skills/slim-website-maker/SKILL.md",
+      "version": "1.0.0",
+      "author": {
+        "name": "NASA AMMOS",
+        "email": "slim@jpl.nasa.gov",
+        "url": "https://github.com/NASA-AMMOS"
+      },
+      "homepage": "https://github.com/NASA-AMMOS/slim/tree/main/static/marketplace/agents/slim-website-maker",
+      "repository": "https://github.com/NASA-AMMOS/slim",
+      "license": "Apache-2.0",
+      "displayName": "SLIM Website Maker",
+      "example": "Help me make a product website using SLIM best practices.",
+      "category": "user-interface",
+      "lastUpdated": "2025-08-12",
+      "zip_file_path": "assets/zip/slim-website-maker.zip"
     }
   ],
+  "agents": [],
   "mcp": [
     {
       "name": "github-mcp-server",
-      "displayName": "GitHub MCP Server",
       "description": "MCP server providing GitHub repository access and management capabilities including issues, PRs, and repository operations",
-      "category": "integrations",
-      "tags": ["github", "git", "integration"],
-      "lastUpdated": "2025-01-05",
-      "repository": {
-        "url": "https://github.com/github/github-mcp-server",
-        "type": "git"
-      },
-      "skill_file_url": "/slim/marketplace/mcp-servers/github-mcp-server/MCP.md",
+      "tags": [
+        "github",
+        "git",
+        "integration",
+        "external",
+        "third-party",
+        "mcp-server",
+        "repository"
+      ],
       "type": "mcp",
-      "npm_package": "@github/github-mcp-server",
-      "example": "Show me open pull requests in this repository"
+      "skill_file_url": "https://github.com/github/github-mcp-server",
+      "version": "1.0.0",
+      "author": {
+        "name": "GitHub",
+        "url": "https://github.com/github/github-mcp-server"
+      },
+      "homepage": "https://github.com/github/github-mcp-server",
+      "displayName": "GitHub MCP Server",
+      "example": "Give me information about this repository from GitHub. ",
+      "category": "infrastructure",
+      "lastUpdated": "2026-01-05",
+      "zip_file_path": "assets/zip/github-mcp-server.zip"
     }
   ],
-  "local_marketplace_path": "/Users/rverma/src/slim/slim2/slim-ai/static/marketplace"
+  "metadata": {
+    "categoryIcons": {
+      "collaboration": "🤝",
+      "collaboration/meetings": "📅",
+      "collaboration/policy": "🏛",
+      "collaboration/templates": "📄",
+      "collaboration/versioning": "🔄",
+      "continuous-pipelines": "⚡",
+      "continuous-pipelines/testing": "✅",
+      "infrastructure": "🏗",
+      "security": "🔒",
+      "user-interface": "🎨"
+    }
+  }
 }

@@ -1,1 +1,0 @@
-"use strict";(globalThis.webpackChunkdocusaurus=globalThis.webpackChunkdocusaurus||[]).push([[3516],{313(a){a.exports=JSON.parse('{"metadata":{"permalink":"/slim/blog","page":1,"postsPerPage":10,"totalPages":1,"totalCount":4,"blogDescription":"Blog","blogTitle":"Blog"}}')}}]);

@@ -467,6 +467,144 @@
       ],
       "fileCount": 2
     },
+    "slim-rebranding": {
+      "name": "slim-rebranding",
+      "type": "directory",
+      "children": [
+        {
+          "name": "SKILL.md",
+          "type": "file",
+          "path": "SKILL.md",
+          "size": 2005
+        },
+        {
+          "name": "assets",
+          "type": "directory",
+          "path": "assets",
+          "children": [
+            {
+              "name": "data-schemas.md",
+              "type": "file",
+              "path": "assets/data-schemas.md",
+              "size": 8183
+            },
+            {
+              "name": "error-reference.md",
+              "type": "file",
+              "path": "assets/error-reference.md",
+              "size": 5403
+            },
+            {
+              "name": "file-operations.md",
+              "type": "file",
+              "path": "assets/file-operations.md",
+              "size": 10825
+            },
+            {
+              "name": "shared-patterns.md",
+              "type": "file",
+              "path": "assets/shared-patterns.md",
+              "size": 7470
+            },
+            {
+              "name": "workflow-steps.md",
+              "type": "file",
+              "path": "assets/workflow-steps.md",
+              "size": 15936
+            }
+          ],
+          "fileCount": 5
+        }
+      ],
+      "fileCount": 6
+    },
+    "slim-rebranding-original": {
+      "name": "slim-rebranding-original",
+      "type": "directory",
+      "children": [
+        {
+          "name": "SKILL.md",
+          "type": "file",
+          "path": "SKILL.md",
+          "size": 34478
+        },
+        {
+          "name": "assets",
+          "type": "directory",
+          "path": "assets",
+          "children": [
+            {
+              "name": "brand-questionnaire.md",
+              "type": "file",
+              "path": "assets/brand-questionnaire.md",
+              "size": 6445
+            },
+            {
+              "name": "create-best-practice-guide.md",
+              "type": "file",
+              "path": "assets/create-best-practice-guide.md",
+              "size": 8693
+            },
+            {
+              "name": "empty-marketplace-guide.md",
+              "type": "file",
+              "path": "assets/empty-marketplace-guide.md",
+              "size": 4796
+            },
+            {
+              "name": "example-rebrand-report.md",
+              "type": "file",
+              "path": "assets/example-rebrand-report.md",
+              "size": 24554
+            },
+            {
+              "name": "hero-customization-guide.md",
+              "type": "file",
+              "path": "assets/hero-customization-guide.md",
+              "size": 10921
+            },
+            {
+              "name": "linter-validation-guide.md",
+              "type": "file",
+              "path": "assets/linter-validation-guide.md",
+              "size": 19884
+            },
+            {
+              "name": "page-template-guide.md",
+              "type": "file",
+              "path": "assets/page-template-guide.md",
+              "size": 3529
+            },
+            {
+              "name": "phosphor-icons-guide.md",
+              "type": "file",
+              "path": "assets/phosphor-icons-guide.md",
+              "size": 11222
+            },
+            {
+              "name": "rebrand-plan-template.md",
+              "type": "file",
+              "path": "assets/rebrand-plan-template.md",
+              "size": 24142
+            },
+            {
+              "name": "registry-import-guide.md",
+              "type": "file",
+              "path": "assets/registry-import-guide.md",
+              "size": 20155
+            },
+            {
+              "name": "slim-website-questionnaire.md",
+              "type": "file",
+              "path": "assets/slim-website-questionnaire.md",
+              "size": 14058
+            }
+          ],
+          "fileCount": 11
+        }
+      ],
+      "fileCount": 12
+    },
     "slim-skill-creator": {
       "name": "slim-skill-creator",
       "type": "directory",
@@ -550,61 +688,69 @@
       ],
       "fileCount": 10
     },
-    "slim-website": {
-      "name": "slim-website",
+    "slim-website-maker": {
+      "name": "slim-website-maker",
       "type": "directory",
       "children": [
         {
           "name": "SKILL.md",
           "type": "file",
           "path": "SKILL.md",
-          "size": 13432
+          "size": 19190
         },
         {
           "name": "assets",
           "type": "directory",
           "path": "assets",
           "children": [
+            {
+              "name": "build-validation-guide.md",
+              "type": "file",
+              "path": "assets/build-validation-guide.md",
+              "size": 6472
+            },
+            {
+              "name": "config-customization-guide.md",
+              "type": "file",
+              "path": "assets/config-customization-guide.md",
+              "size": 12813
+            },
+            {
+              "name": "docs-structure-guide.md",
+              "type": "file",
+              "path": "assets/docs-structure-guide.md",
+              "size": 9615
+            },
             {
               "name": "docusaurus-guide.md",
               "type": "file",
               "path": "assets/docusaurus-guide.md",
               "size": 4532
+            },
+            {
+              "name": "example-website-report.md",
+              "type": "file",
+              "path": "assets/example-website-report.md",
+              "size": 9955
+            },
+            {
+              "name": "homepage-customization-guide.md",
+              "type": "file",
+              "path": "assets/homepage-customization-guide.md",
+              "size": 9199
+            },
+            {
+              "name": "website-generation-plan.md",
+              "type": "file",
+              "path": "assets/website-generation-plan.md",
+              "size": 7079
             }
           ],
-          "fileCount": 1
+          "fileCount": 7
         }
       ],
-      "fileCount": 2
+      "fileCount": 8
     }
   },
-  "mcp-servers": {
-    "github-mcp-server": {
-      "name": "github-mcp-server",
-      "type": "directory",
-      "children": [
-        {
-          "name": "MCP.md",
-          "type": "file",
-          "path": "MCP.md",
-          "size": 4385
-        },
-        {
-          "name": "assets",
-          "type": "directory",
-          "path": "assets",
-          "children": [
-            {
-              "name": "claude-code-config.example",
-              "type": "file",
-              "path": "assets/claude-code-config.example",
-              "size": 2050
-            }
-          ],
-          "fileCount": 1
-        }
-      ],
-      "fileCount": 2
-    }
-  }
+  "mcp-servers": {}
 }
