@@ -26,6 +26,7 @@ import "bootstrap/dist/css/bootstrap.min.css";
 import "@site/src/css/markdown-modal.css";
 import FileBrowserSection from "./FileBrowserSection";
 import CategoryTreeNode from "./CategoryTreeNode";
+import { useBrandingConfig } from "../hooks/useBrandingConfig";
 
 const SkillCard = ({ skill, onTagClick, isHighlighted, currentFilters, registryBaseUrl }) => {
   const [showDetails, setShowDetails] = useState(false);
@@ -1212,6 +1213,9 @@ const CategoryTree = ({ items, selectedCategory, onCategorySelect, metadata = {}
 };
 
 const SkillBrowser = ({ searchTerm, setSearchTerm, isSearchActive }) => {
+  // Get branding configuration
+  const branding = useBrandingConfig();
+
   const [allItems, setAllItems] = useState([]);
   const [selectedCategory, setSelectedCategory] = useState("All");
   const [selectedType, setSelectedType] = useState("All");
@@ -1675,12 +1679,37 @@ const SkillBrowser = ({ searchTerm, setSearchTerm, isSearchActive }) => {
           />
         </Col>
         <Col md={9}>
-          <FilterPills
-            selectedType={selectedType}
-            selectedTags={selectedTags}
-            onRemoveType={handleRemoveType}
-            onRemoveTag={handleRemoveTag}
-          />
+          {/* Check for completely empty marketplace */}
+          {allItems.length === 0 && !isLoadingRegistry && branding.shouldShowEmptyState() ? (
+            <Card className="text-center p-5 shadow-sm">
+              <Card.Body>
+                <div style={{ fontSize: "4rem", marginBottom: "1rem" }}>📦</div>
+                <h3>No best practices available yet</h3>
+                <p className="text-muted mb-4" style={{ maxWidth: "500px", margin: "0 auto 1.5rem" }}>
+                  Get started by importing from other SLIM instances or creating your own!
+                </p>
+                <div>
+                  <Button
+                    variant="primary"
+                    href="/docs/contribute/submit-best-practice"
+                    className="me-2"
+                  >
+                    Learn How to Contribute
+                  </Button>
+                  <Button variant="outline-secondary" href="/docs/about">
+                    About {branding.getProjectName()}
+                  </Button>
+                </div>
+              </Card.Body>
+            </Card>
+          ) : (
+            <>
+              <FilterPills
+                selectedType={selectedType}
+                selectedTags={selectedTags}
+                onRemoveType={handleRemoveType}
+                onRemoveTag={handleRemoveTag}
+              />
           <h4 className="mb-3">
             {filteredItems.length} best practice
             {filteredItems.length !== 1 ? "s" : ""} available
@@ -1711,6 +1740,8 @@ const SkillBrowser = ({ searchTerm, setSearchTerm, isSearchActive }) => {
                 registryBaseUrl={getRegistryBaseUrl(availableRegistries[selectedRegistry])}
               />
             ))
+          )}
+            </>
           )}
         </Col>
       </Row>

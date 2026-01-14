@@ -4,8 +4,12 @@ import Link from "@docusaurus/Link";
 import useBaseUrl from "@docusaurus/useBaseUrl";
 import clsx from "clsx";
 import styles from "@site/src/pages/index.module.css";
+import { useBrandingConfig } from "../hooks/useBrandingConfig";
 
 function HubHero({ searchTerm, setSearchTerm, isSearchActive, setIsSearchActive }) {
+  // Get branding configuration
+  const branding = useBrandingConfig();
+
   const scrollToHub = () => {
     setIsSearchActive(true);
     const hubSection = document.getElementById("hub-content");
@@ -54,33 +58,14 @@ function HubHero({ searchTerm, setSearchTerm, isSearchActive, setIsSearchActive 
     }
   };
 
-  const cornerFeatures = [
-    {
-      position: "top-left",
-      icon: "ai-centric.png",
-      text: "AI-powered automation for instant best practice infusion",
-    },
-    {
-      position: "bottom-left",
-      icon: "community.svg",
-      text: "Made by the community for the community",
-    },
-    {
-      position: "top-right",
-      icon: "iterative.svg",
-      text: "Fully open source and free of charge",
-    },
-    {
-      position: "bottom-right",
-      icon: "scope.svg",
-      text: "Skills, agents, and MCP servers for governance, lifecycle, and communication",
-    },
-  ];
+  // Get corner features from branding configuration
+  const shouldShowCorners = branding.shouldShowCorners();
+  const cornerFeatures = branding.getCornerFeatures();
 
   return (
     <div className={clsx("hero hero--info", styles.heroBanner, "hub-hero")}>
-      {/* Corner features */}
-      {cornerFeatures.map((feature, idx) => (
+      {/* Corner features - conditionally rendered based on config */}
+      {shouldShowCorners && cornerFeatures.map((feature, idx) => (
         <div key={idx} className={`corner-feature corner-${feature.position}`}>
           <img src={useBaseUrl(`img/${feature.icon}`)} alt="" />
           <p>{feature.text}</p>
@@ -89,12 +74,16 @@ function HubHero({ searchTerm, setSearchTerm, isSearchActive, setIsSearchActive 
 
       {/* Center content */}
       <div className="container hub-hero-center">
-        {/* Logo */}
-        <img src={useBaseUrl("img/logo.svg")} height="275" alt="SLIM Logo" />
+        {/* Logo - dynamic path from config */}
+        <img
+          src={useBaseUrl(branding.getLogoPath())}
+          height="275"
+          alt={`${branding.getProjectName()} Logo`}
+        />
 
-        {/* Tagline */}
+        {/* Tagline - dynamic content from config */}
         <p style={{ padding: "15px", fontSize: "1.1rem", paddingBottom: "30px" }}>
-          Modernizing software through the automated infusion of best practices.
+          {branding.getTagline()}
         </p>
 
         {/* Three action buttons */}

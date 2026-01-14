@@ -169,6 +169,50 @@ const config = {
 
   // Custom fields for SLIM configuration
   customFields: {
+    // Enhanced branding configuration for easy customization
+    brandingConfig: {
+      // Visual Assets
+      logoPath: "/img/logo.svg",
+
+      // Hero Section Control
+      hero: {
+        showCornerFeatures: true, // Toggle corner features display
+        cornerFeatures: [
+          {
+            position: "top-left",
+            icon: "ai-centric.png",
+            text: "AI-powered automation for instant best practice infusion",
+            enabled: true,
+          },
+          {
+            position: "bottom-left",
+            icon: "community.svg",
+            text: "Made by the community for the community",
+            enabled: true,
+          },
+          {
+            position: "top-right",
+            icon: "iterative.svg",
+            text: "Fully open source and free of charge",
+            enabled: true,
+          },
+          {
+            position: "bottom-right",
+            icon: "scope.svg",
+            text: "Skills, agents, and MCP servers for governance, lifecycle, and communication",
+            enabled: true,
+          },
+        ],
+        customTagline: null, // Override global tagline specifically for hero
+      },
+
+      // Marketplace Control
+      marketplace: {
+        showEmptyState: true, // Show friendly message when marketplace is empty
+        // Note: External registries are handled by slimConfig.registries
+      },
+    },
+
     slimConfig: {
       localRegistrySources: [
         {

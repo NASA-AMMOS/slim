@@ -475,7 +475,58 @@
           "name": "SKILL.md",
           "type": "file",
           "path": "SKILL.md",
-          "size": 36400
+          "size": 7047
+        },
+        {
+          "name": "assets",
+          "type": "directory",
+          "path": "assets",
+          "children": [
+            {
+              "name": "data-schemas.md",
+              "type": "file",
+              "path": "assets/data-schemas.md",
+              "size": 8183
+            },
+            {
+              "name": "error-reference.md",
+              "type": "file",
+              "path": "assets/error-reference.md",
+              "size": 5403
+            },
+            {
+              "name": "file-operations.md",
+              "type": "file",
+              "path": "assets/file-operations.md",
+              "size": 10825
+            },
+            {
+              "name": "shared-patterns.md",
+              "type": "file",
+              "path": "assets/shared-patterns.md",
+              "size": 7088
+            },
+            {
+              "name": "workflow-steps.md",
+              "type": "file",
+              "path": "assets/workflow-steps.md",
+              "size": 15936
+            }
+          ],
+          "fileCount": 5
+        }
+      ],
+      "fileCount": 6
+    },
+    "slim-rebranding-original": {
+      "name": "slim-rebranding-original",
+      "type": "directory",
+      "children": [
+        {
+          "name": "SKILL.md",
+          "type": "file",
+          "path": "SKILL.md",
+          "size": 34478
         },
         {
           "name": "assets",
