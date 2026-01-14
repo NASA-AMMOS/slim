@@ -1216,8 +1216,18 @@ const CategoryTree = ({ items, selectedCategory, onCategorySelect, metadata = {}
 const SkillBrowser = ({ searchTerm, setSearchTerm, isSearchActive }) => {
   // Get branding configuration and base URL
   const branding = useBrandingConfig();
-  const contributeUrl = useBaseUrl('/docs/contribute/submit-best-practice');
-  const aboutUrl = useBaseUrl('/docs/about');
+
+  // Get base URL from Docusaurus config
+  const getFullUrl = (path) => {
+    if (typeof window !== "undefined" && window.docusaurus?.siteConfig?.baseUrl) {
+      const baseUrl = window.docusaurus.siteConfig.baseUrl;
+      return `${baseUrl}${path.startsWith('/') ? path.slice(1) : path}`;
+    }
+    return path;
+  };
+
+  const contributeUrl = getFullUrl('docs/contribute/submit-best-practice');
+  const aboutUrl = getFullUrl('docs/about');
 
   const [allItems, setAllItems] = useState([]);
   const [selectedCategory, setSelectedCategory] = useState("All");
