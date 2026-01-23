@@ -286,7 +286,7 @@
     },
     {
       "name": "slim-rebranding",
-      "description": "Comprehensive autonomous rebranding skill for projects. Handles all aspects of rebranding including text/naming, documentation, visual assets, colors/theming, and configuration files. Works with any codebase (Node, Python, Java, C++, Rust, Go, etc.). Auto-integrates free Phosphor icons. Presents detailed plan for approval before executing changes. Creates git branch and commits with clear messages. Validates changes with linters and build systems. Use when rebranding a project, changing project name, updating visual identity, or modernizing brand assets.",
+      "description": "Rebranding agent for branding the slim framework for a new project customized for a specific domain. main. Use this skill whenever you'd like to leverage the Slim Marketplace framework for a customized project, but you don't want to keep the slim branding.",
       "tags": [
         "rebranding",
         "branding",
@@ -299,7 +299,7 @@
       ],
       "type": "skill",
       "skill_file_url": "/slim/marketplace/skills/slim-rebranding/SKILL.md",
-      "version": "1.0.1",
+      "version": "1.0.2",
       "author": {
         "name": "NASA AMMOS",
         "email": "slim@jpl.nasa.gov",
@@ -311,7 +311,7 @@
       "displayName": "SLIM Rebranding",
       "example": "Help me rebrand this slim website.",
       "category": "user-interface",
-      "lastUpdated": "2026-01-13",
+      "lastUpdated": "2026-01-22",
       "zip_file_path": "assets/zip/slim-rebranding.zip"
     },
     {
