@@ -299,7 +299,7 @@
       ],
       "type": "skill",
       "skill_file_url": "/slim/marketplace/skills/slim-rebranding/SKILL.md",
-      "version": "1.0.1",
+      "version": "1.0.2",
       "author": {
         "name": "NASA AMMOS",
         "email": "slim@jpl.nasa.gov",
@@ -311,7 +311,7 @@
       "displayName": "SLIM Rebranding",
       "example": "Help me rebrand this slim website.",
       "category": "user-interface",
-      "lastUpdated": "2026-01-13",
+      "lastUpdated": "2026-01-22",
       "zip_file_path": "assets/zip/slim-rebranding.zip"
     },
     {
