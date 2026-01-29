@@ -1,15 +1,17 @@
 ---
 name: slim-skill-creator
-description: Meta-skill for creating and integrating new best practices (skills, agents, MCP servers) into the SLIM marketplace with dependency tracking and automated registry updates. Use when users want to create custom skills, develop specialized workflows, build skill templates, add new capabilities to SLIM, create project-specific tools, or integrate skills with marketplace infrastructure.
+description: Meta-skill for creating and integrating new Claude skills into the SLIM marketplace with dependency tracking and automated registry updates. Use when users want to create custom skills, develop specialized workflows, build skill templates, add new capabilities to SLIM, or integrate skills with marketplace infrastructure.
 ---
 
-# SLIM Best Practice Creator
+# SLIM Skill Creator
 
 ## Overview
 
-Create and integrate new Claude skills, autonomous agents, and MCP servers into the SLIM marketplace through an automated, guided workflow. This meta-skill combines the power of Claude's skill-creator with SLIM-specific marketplace patterns, dependency management, and automatic registry integration.
+Create and integrate new Claude skills into the SLIM marketplace through an automated, guided workflow. This meta-skill combines the power of Claude's skill-creator with SLIM-specific marketplace patterns, dependency management, and registry integration.
 
-Unlike standalone creation tools, this skill ensures your new best practices follow SLIM marketplace conventions, include proper dependency tracking, integrate seamlessly with the marketplace infrastructure, and are automatically registered for distribution.
+Unlike standalone creation tools, this skill ensures your new skills follow SLIM marketplace conventions, include proper dependency tracking, integrate seamlessly with the marketplace infrastructure, and are properly registered for distribution.
+
+**Note**: This skill currently focuses on creating Claude skills. Support for autonomous agents and MCP servers will be added in future versions.
 
 ## Prerequisites
 
@@ -18,51 +20,29 @@ Unlike standalone creation tools, this skill ensures your new best practices fol
 - **Python environment**: For running management scripts
 - **Git repository access**: For committing new best practices to marketplace
 
-## Artifact Type Selection
+## Skill Creation Process
 
-### Step 0: Choose Your Best Practice Type
-
-**I will first help you determine which type of best practice to create:**
-
-**Option A: Claude Code Skill**
-- Interactive step-by-step workflows that guide users through specific tasks
-- User-facing functionality with prompts and decision points
-- Use when: You want to create reusable workflows, templates, or guided procedures
-- Examples: Documentation generators, setup wizards, analysis tools
-
-**Option B: Autonomous Agent**
-- Semi-autonomous tools that execute complex tasks with minimal user intervention
-- Plan-execute workflows with built-in validation and error handling
-- Use when: You want to automate complex multi-step processes
-- Examples: Rebranding agents, migration tools, comprehensive auditing systems
-
-**Option C: MCP Server**
-- Model Context Protocol servers that provide external service integration
-- API wrappers and service connectors for Claude Code
-- Use when: You want to integrate external services, databases, or APIs
-- Examples: GitHub integration, database connections, third-party service APIs
-
-*Which type of best practice would you like to create? Please specify A, B, or C, or describe your specific needs.*
+This skill will guide you through creating a new Claude skill that integrates properly with the SLIM marketplace infrastructure. The process includes requirement gathering, skill creation, marketplace integration, and validation.
 
 ## Interactive Workflow
 
 ### Step 1: Requirements Gathering
 
-**I will gather comprehensive information about your best practice requirements:**
+**I will gather comprehensive information about your skill requirements:**
 
 **Core Information:**
-- What is the name? (use lowercase with hyphens, e.g., 'pdf-analyzer', 'data-migration-agent', 'slack-mcp-server')
-- What is the display name for the marketplace? (e.g., 'PDF Document Analyzer', 'Data Migration Agent', 'Slack MCP Server')
-- What does this best practice do? (comprehensive description of functionality)
+- What is the name? (use lowercase with hyphens, e.g., 'pdf-analyzer', 'license-generator', 'readme-writer')
+- What is the display name for the marketplace? (e.g., 'PDF Document Analyzer', 'License Generator', 'README Writer')
+- What does this skill do? (comprehensive description of functionality)
 - When should this be used? (specific use cases and contexts)
 
 **Functionality Requirements:**
-- What are the main capabilities this should provide?
-- What types of user needs or automation requirements does this address?
+- What are the main capabilities this skill should provide?
+- What types of user needs or workflows does this address?
 - Are there specific file types, formats, domains, or services this works with?
 
 **Dependencies and Integration:**
-- Does this require other SLIM skills, agents, or MCP servers to function?
+- Does this require other SLIM skills to function?
 - Does this need specific external services, APIs, or tools?
 - Are there any special authentication, credentials, or access requirements?
 
@@ -71,62 +51,28 @@ Unlike standalone creation tools, this skill ensures your new best practices fol
 - Do you have template files, configuration files, or assets to include?
 - Do you have reference documentation, API guides, or setup instructions to bundle?
 
-### Step 2: Type-Specific Creation
+### Step 2: Skill Creation
 
-Based on your selection from Step 0, I will follow the appropriate creation path:
-
-## Path A: Claude Code Skill Creation
-
-**For interactive step-by-step workflows:**
+**I will create your Claude skill using the following process:**
 
 1. **Invoke skill-creator**: Use document-skills:skill-creator to create the foundational skill structure
 2. **Generate base SKILL.md**: Create comprehensive workflow instructions with user interaction patterns
 3. **Establish resource structure**: Set up scripts/, assets/, and initial file organization
 4. **Implement interactive workflows**: Develop user prompting and decision point logic
 
-## Path B: Autonomous Agent Creation
-
-**For semi-autonomous task automation:**
-
-1. **Design agent architecture**: Plan the autonomous workflow with validation checkpoints
-2. **Generate base AGENT.md**: Create agent description with capabilities and dependencies
-3. **Establish agent structure**: Set up autonomous workflows, error handling, and validation
-4. **Implement planning logic**: Develop plan-execute patterns with user approval gates
-
-## Path C: MCP Server Creation
-
-**For external service integration:**
-
-1. **Design MCP interface**: Plan the server capabilities and API endpoints
-2. **Generate base MCP.md**: Create server description with setup and authentication instructions
-3. **Establish server structure**: Set up MCP protocol implementation and API wrappers
-4. **Implement service integration**: Develop external service connections and error handling
-
 ### Step 3: SLIM Marketplace Integration
 
 **Transform the base creation for SLIM marketplace compatibility:**
 
-#### A. Directory Structure Alignment
+#### A. Directory Structure Setup
 
-Based on the selected type, I will establish the appropriate SLIM marketplace structure:
+I will establish the appropriate SLIM marketplace structure for your skill:
 
-**For Skills:**
+**Skill Directory Creation:**
 ```bash
 python scripts/create-skill-directory.py [name]
 ```
 Creates: `static/marketplace/skills/[name]/SKILL.md`, `scripts/`, `assets/`
-
-**For Agents:**
-```bash
-python scripts/create-agent-directory.py [name]
-```
-Creates: `static/marketplace/agents/[name]/AGENT.md`, `scripts/`, `assets/`
-
-**For MCP Servers:**
-```bash
-python scripts/create-mcp-directory.py [name]
-```
-Creates: `static/marketplace/mcp-servers/[name]/MCP.md`, `src/`, `assets/`
 
 #### B. Enhanced Documentation Creation
 

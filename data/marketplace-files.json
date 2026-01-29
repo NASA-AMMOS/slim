@@ -613,7 +613,7 @@
           "name": "SKILL.md",
           "type": "file",
           "path": "SKILL.md",
-          "size": 22703
+          "size": 20410
         },
         {
           "name": "assets",
@@ -630,7 +630,7 @@
               "name": "registry-entry-template.json",
               "type": "file",
               "path": "assets/registry-entry-template.json",
-              "size": 1584
+              "size": 650
             },
             {
               "name": "registry-management.md",
@@ -674,7 +674,7 @@
               "name": "update-registry.py",
               "type": "file",
               "path": "scripts/update-registry.py",
-              "size": 9304
+              "size": 9178
             },
             {
               "name": "validate-skill.py",

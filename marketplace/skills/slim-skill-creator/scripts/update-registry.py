@@ -55,7 +55,7 @@ def check_skill_exists(registry_data, skill_name):
             return True
     return False
 
-def generate_skill_entry(skill_name, display_name, description, category, tags, version="1.0.0"):
+def generate_skill_entry(skill_name, display_name, description, category, tags, example="", version="1.0.0"):
     """Generate a complete registry entry for a skill."""
     return {
         "name": skill_name,
@@ -63,19 +63,14 @@ def generate_skill_entry(skill_name, display_name, description, category, tags, 
         "description": description,
         "category": category,
         "tags": tags if isinstance(tags, list) else tags.split(','),
-        "version": version,
-        "install_commands": {
-            "plugin": f"/plugin install slim-{skill_name}@slim-marketplace",
-            "marketplace_add_local_template": "/plugin marketplace add {{MARKETPLACE_PATH}}",
-            "marketplace_add_github": "/plugin marketplace add https://github.com/nasa-ammos/slim/tree/main/website/static/marketplace"
-        },
-        "download_url": f"/slim/downloads/skills/{skill_name}.zip",
+        "lastUpdated": datetime.now().strftime("%Y-%m-%d"),
         "skill_file_url": f"/slim/marketplace/skills/{skill_name}/SKILL.md",
-        "readme_url": f"/slim/marketplace/skills/{skill_name}/README.md",
-        "type": "skill"
+        "type": "skill",
+        "example": example or f"Create {display_name.lower()} for this project",
+        "zip_file_path": f"assets/zip/{skill_name}.zip"
     }
 
-def add_skill_to_registry(registry_path, skill_name, display_name, description, category, tags, version="1.0.0"):
+def add_skill_to_registry(registry_path, skill_name, display_name, description, category, tags, example="", version="1.0.0"):
     """Add a new skill entry to the registry."""
 
     # Create backup
@@ -97,7 +92,7 @@ def add_skill_to_registry(registry_path, skill_name, display_name, description, 
         print(f"🔄 Removed existing entry for '{skill_name}'")
 
     # Generate new skill entry
-    skill_entry = generate_skill_entry(skill_name, display_name, description, category, tags, version)
+    skill_entry = generate_skill_entry(skill_name, display_name, description, category, tags, example, version)
 
     # Add to registry
     if 'skills' not in registry_data:
@@ -151,7 +146,7 @@ def interactive_skill_creation():
     print("=" * 50)
 
     # Get registry path
-    registry_path = Path("website/static/data/registry.json")
+    registry_path = Path("static/data/registry.json")
     if not registry_path.exists():
         registry_path = Path(input("Registry file path: "))
 
@@ -176,6 +171,7 @@ def interactive_skill_creation():
     description = input("Description: ").strip()
     category = input("Category: ").strip()
     tags_input = input("Tags (comma-separated): ").strip()
+    example = input("Example usage: ").strip()
     version = input("Version [1.0.0]: ").strip() or "1.0.0"
 
     # Convert tags to list
@@ -188,6 +184,7 @@ def interactive_skill_creation():
     print(f"  Description: {description}")
     print(f"  Category: {category}")
     print(f"  Tags: {tags}")
+    print(f"  Example: {example}")
     print(f"  Version: {version}")
 
     confirm = input("\nAdd this skill to registry? (y/N): ").lower().strip()
@@ -195,11 +192,11 @@ def interactive_skill_creation():
         print("Cancelled")
         return False
 
-    return add_skill_to_registry(registry_path, skill_name, display_name, description, category, tags, version)
+    return add_skill_to_registry(registry_path, skill_name, display_name, description, category, tags, example, version)
 
 def main():
     parser = argparse.ArgumentParser(description="Update SLIM marketplace registry with new skill")
-    parser.add_argument("--registry", default="website/static/data/registry.json",
+    parser.add_argument("--registry", default="static/data/registry.json",
                        help="Path to registry.json file")
     parser.add_argument("--interactive", "-i", action="store_true",
                        help="Run in interactive mode")
@@ -208,6 +205,7 @@ def main():
     parser.add_argument("--description", help="Skill description")
     parser.add_argument("--category", help="Skill category")
     parser.add_argument("--tags", help="Comma-separated tags")
+    parser.add_argument("--example", help="Example usage string")
     parser.add_argument("--version", default="1.0.0", help="Skill version")
     parser.add_argument("--list-categories", action="store_true",
                        help="List existing categories")
@@ -243,7 +241,7 @@ def main():
 
     success = add_skill_to_registry(
         registry_path, args.skill_name, args.display_name,
-        args.description, args.category, args.tags, args.version
+        args.description, args.category, args.tags, args.example or "", args.version
     )
 
     sys.exit(0 if success else 1)
