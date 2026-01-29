@@ -29,7 +29,13 @@ import CategoryTreeNode from "./CategoryTreeNode";
 import { useBrandingConfig } from "../hooks/useBrandingConfig";
 import siteConfig from "../../docusaurus.config";
 
-const SkillCard = ({ skill, onTagClick, isHighlighted, currentFilters, registryBaseUrl }) => {
+const SkillCard = ({
+  skill,
+  onTagClick,
+  isHighlighted,
+  currentFilters,
+  registryBaseUrl,
+}) => {
   const [showDetails, setShowDetails] = useState(false);
   const [showInstall, setShowInstall] = useState(false);
   const [showFileBrowser, setShowFileBrowser] = useState(false);
@@ -55,19 +61,27 @@ const SkillCard = ({ skill, onTagClick, isHighlighted, currentFilters, registryB
     // Use zip_file_path if available
     if (skill.zip_file_path) {
       // If zip_file_path is absolute URL, use as-is
-      if (skill.zip_file_path.startsWith('http://') || skill.zip_file_path.startsWith('https://')) {
-        console.log(`Using absolute zip path for ${skill.name}:`, skill.zip_file_path);
+      if (
+        skill.zip_file_path.startsWith("http://") ||
+        skill.zip_file_path.startsWith("https://")
+      ) {
+        console.log(
+          `Using absolute zip path for ${skill.name}:`,
+          skill.zip_file_path,
+        );
         return skill.zip_file_path;
       }
 
       // If zip_file_path is relative, resolve against registry base URL
       let resolvedUrl;
-      if (skill.zip_file_path.startsWith('/')) {
+      if (skill.zip_file_path.startsWith("/")) {
         resolvedUrl = `${registryBaseUrl}${skill.zip_file_path}`;
       } else {
         resolvedUrl = `${registryBaseUrl}/${skill.zip_file_path}`;
       }
-      console.log(`Resolved zip URL for ${skill.name}: ${skill.zip_file_path} -> ${resolvedUrl}`);
+      console.log(
+        `Resolved zip URL for ${skill.name}: ${skill.zip_file_path} -> ${resolvedUrl}`,
+      );
       return resolvedUrl;
     }
 
@@ -81,7 +95,7 @@ const SkillCard = ({ skill, onTagClick, isHighlighted, currentFilters, registryB
   useEffect(() => {
     if (isHighlighted && cardRef.current) {
       setTimeout(() => {
-        cardRef.current.scrollIntoView({ behavior: 'smooth', block: 'center' });
+        cardRef.current.scrollIntoView({ behavior: "smooth", block: "center" });
       }, 300);
     }
   }, [isHighlighted]);
@@ -141,30 +155,31 @@ const SkillCard = ({ skill, onTagClick, isHighlighted, currentFilters, registryB
     const baseUrl = window.location.origin;
 
     // For GitHub Pages deployments (format: username.github.io or org.github.io)
-    if (hostname.endsWith('.github.io')) {
-      const orgName = hostname.replace('.github.io', '');
-      const pathParts = window.location.pathname.split('/').filter(part => part);
-      const projectName = pathParts.length > 0 ? pathParts[0] : 'slim';
+    if (hostname.endsWith(".github.io")) {
+      const orgName = hostname.replace(".github.io", "");
+      const pathParts = window.location.pathname
+        .split("/")
+        .filter((part) => part);
+      const projectName = pathParts.length > 0 ? pathParts[0] : "slim";
 
       return {
         organization: orgName,
         project: projectName,
         githubUrl: `https://github.com/${orgName}/${projectName}`,
         baseUrl: baseUrl,
-        assetsUrl: `${baseUrl}/${projectName}/assets/zip`
+        assetsUrl: `${baseUrl}/${projectName}/assets/zip`,
       };
     }
 
     // Fallback for other deployments or localhost
     return {
-      organization: 'nasa-ammos',
-      project: 'slim',
-      githubUrl: 'https://github.com/nasa-ammos/slim',
+      organization: "nasa-ammos",
+      project: "slim",
+      githubUrl: "https://github.com/nasa-ammos/slim",
       baseUrl: baseUrl,
-      assetsUrl: `${baseUrl}/slim/assets/zip`
+      assetsUrl: `${baseUrl}/slim/assets/zip`,
     };
   };
-
 
   // Get install directory path (Claude Code tab vs Manual tab)
   // Only returns Claude-specific paths when explicitly on Claude Code tab
@@ -209,12 +224,12 @@ const SkillCard = ({ skill, onTagClick, isHighlighted, currentFilters, registryB
   const getManualInstallCommand = (item) => {
     // For external-only entries, use npm or direct repository instructions
     if (item.external_only) {
-      if (item.type === 'mcp' && item.npm_package) {
+      if (item.type === "mcp" && item.npm_package) {
         return `npm install -g ${item.npm_package}`;
       } else if (item.repository?.url) {
         return `git clone ${item.repository.url}`;
       }
-      return `# Visit ${item.repository?.url || 'the official repository'} for installation instructions`;
+      return `# Visit ${item.repository?.url || "the official repository"} for installation instructions`;
     }
 
     const isLocalhost =
@@ -242,7 +257,7 @@ const SkillCard = ({ skill, onTagClick, isHighlighted, currentFilters, registryB
       // Extract package name from npm_package and generate command
       if (item.npm_package) {
         // Remove scope prefix if present for command
-        const pkgName = item.npm_package.replace(/^@[\w-]+\//, '');
+        const pkgName = item.npm_package.replace(/^@[\w-]+\//, "");
         return `/plugin install ${pkgName}@slim-marketplace`;
       }
       // Fallback to name-based command
@@ -260,12 +275,12 @@ const SkillCard = ({ skill, onTagClick, isHighlighted, currentFilters, registryB
 
     if (isLocalhost) {
       // For localhost, use local path with user-fillable placeholder
-      return "/plugin marketplace add [YOUR_SLIM_REPO_PATH]/static/marketplace";
+      return "/plugin marketplace add [YOUR_SLIM_REPO_PATH]";
     }
 
     // For deployed sites, use dynamic GitHub command based on current deployment
     const repoInfo = getRepositoryInfo();
-    return `/plugin marketplace add ${repoInfo.githubUrl}/tree/main/static/marketplace`;
+    return `/plugin marketplace add ${repoInfo.githubUrl}`;
   };
 
   // Generate command for manual installation
@@ -323,8 +338,12 @@ const SkillCard = ({ skill, onTagClick, isHighlighted, currentFilters, registryB
         style={{
           borderLeft: `8px solid ${getBorderColor(skill.type)}`,
           overflow: "hidden",
-          boxShadow: isHighlighted ? "0 0 0 3px var(--ifm-color-primary-light), 0 4px 12px rgba(0,0,0,0.15)" : undefined,
-          backgroundColor: isHighlighted ? "var(--ifm-background-surface-color)" : undefined,
+          boxShadow: isHighlighted
+            ? "0 0 0 3px var(--ifm-color-primary-light), 0 4px 12px rgba(0,0,0,0.15)"
+            : undefined,
+          backgroundColor: isHighlighted
+            ? "var(--ifm-background-surface-color)"
+            : undefined,
           transition: "box-shadow 0.3s ease, background-color 0.3s ease",
         }}
       >
@@ -354,7 +373,11 @@ const SkillCard = ({ skill, onTagClick, isHighlighted, currentFilters, registryB
             text="dark"
             style={{ fontSize: "0.7rem", fontWeight: "normal" }}
           >
-            {new Date(skill.lastUpdated).toLocaleDateString('en-US', { month: 'short', day: 'numeric', year: 'numeric' })}
+            {new Date(skill.lastUpdated).toLocaleDateString("en-US", {
+              month: "short",
+              day: "numeric",
+              year: "numeric",
+            })}
           </Badge>
         </Card.Header>
         <Card.Body>
@@ -400,7 +423,8 @@ const SkillCard = ({ skill, onTagClick, isHighlighted, currentFilters, registryB
             >
               {copied.link ? "✓ Copied" : "🔗 Copy Link"}
             </Button>
-            {(skill.dependencies?.skills?.length > 0 || skill.dependencies?.mcp?.length > 0) && (
+            {(skill.dependencies?.skills?.length > 0 ||
+              skill.dependencies?.mcp?.length > 0) && (
               <Button
                 variant={showDependencies ? "warning" : "outline-warning"}
                 size="sm"
@@ -426,165 +450,50 @@ const SkillCard = ({ skill, onTagClick, isHighlighted, currentFilters, registryB
                 activeKey={installMode}
                 onSelect={(k) => setInstallMode(k)}
               >
-              <Nav variant="tabs" className="mb-3">
-                <Nav.Item>
-                  <Nav.Link
-                    eventKey="claude-code"
-                    className="d-flex align-items-center gap-2"
-                  >
-                    <img
-                      src="https://uxwing.com/wp-content/themes/uxwing/download/brands-and-social-media/claude-ai-icon.png"
-                      alt="Claude AI"
-                      width="16"
-                      height="16"
-                    />
-                    Claude Code
-                  </Nav.Link>
-                </Nav.Item>
-                <Nav.Item>
-                  <Nav.Link
-                    eventKey="manual"
-                    className="d-flex align-items-center gap-2"
-                  >
-                    ⚙️ Manual
-                  </Nav.Link>
-                </Nav.Item>
-              </Nav>
+                <Nav variant="tabs" className="mb-3">
+                  <Nav.Item>
+                    <Nav.Link
+                      eventKey="claude-code"
+                      className="d-flex align-items-center gap-2"
+                    >
+                      <img
+                        src="https://uxwing.com/wp-content/themes/uxwing/download/brands-and-social-media/claude-ai-icon.png"
+                        alt="Claude AI"
+                        width="16"
+                        height="16"
+                      />
+                      Claude Code
+                    </Nav.Link>
+                  </Nav.Item>
+                  <Nav.Item>
+                    <Nav.Link
+                      eventKey="manual"
+                      className="d-flex align-items-center gap-2"
+                    >
+                      ⚙️ Manual
+                    </Nav.Link>
+                  </Nav.Item>
+                </Nav>
 
-              <Tab.Content>
-                <Tab.Pane eventKey="claude-code">
-                  {(() => {
-                    const isLocalhost =
-                      typeof window !== "undefined" &&
-                      (window.location.hostname === "localhost" ||
-                        window.location.hostname === "127.0.0.1");
+                <Tab.Content>
+                  <Tab.Pane eventKey="claude-code">
+                    {(() => {
+                      const isLocalhost =
+                        typeof window !== "undefined" &&
+                        (window.location.hostname === "localhost" ||
+                          window.location.hostname === "127.0.0.1");
 
-                    if (isLocalhost) {
-                      // Localhost: Single-step installation via curl
-                      return (
-                        <div>
-                          <small className="text-muted d-block mb-2">
-                            <strong>Install this {skill.type} directly:</strong>
-                          </small>
-                          <div
-                            className="p-2 mb-3"
-                            style={{
-                              backgroundColor: "var(--ifm-code-background)",
-                              borderRadius: "4px",
-                            }}
-                          >
-                            <div className="d-flex align-items-center gap-2">
-                              <code
-                                style={{
-                                  fontSize: "0.8rem",
-                                  flex: 1,
-                                  wordBreak: "break-all",
-                                }}
-                              >
-                                {getClaudeCodeInstallCommand(skill)}
-                              </code>
-                              <Button
-                                size="sm"
-                                variant="outline-primary"
-                                onClick={() =>
-                                  copyToClipboard(
-                                    getClaudeCodeInstallCommand(skill),
-                                    "plugin",
-                                  )
-                                }
-                                style={{
-                                  fontSize: "0.75rem",
-                                  whiteSpace: "nowrap",
-                                }}
-                              >
-                                {copied.plugin ? "✓ Copied" : "Copy"}
-                              </Button>
-                            </div>
-                          </div>
-                          {skill.example && (
-                            <div>
-                              <small className="text-muted d-block mb-2">
-                                <strong>Example usage:</strong>
-                              </small>
-                              <div
-                                className="p-2 mb-2"
-                                style={{
-                                  backgroundColor: "var(--ifm-code-background)",
-                                  borderRadius: "4px",
-                                }}
-                              >
-                                <div className="d-flex align-items-center gap-2">
-                                  <code
-                                    style={{
-                                      fontSize: "0.8rem",
-                                      flex: 1,
-                                      wordBreak: "break-word",
-                                      backgroundColor: "transparent"
-                                    }}
-                                  >
-                                    {skill.example}
-                                  </code>
-                                  <Button
-                                    size="sm"
-                                    variant="outline-primary"
-                                    onClick={() =>
-                                      copyToClipboard(skill.example, "example")
-                                    }
-                                    style={{
-                                      fontSize: "0.75rem",
-                                      whiteSpace: "nowrap",
-                                    }}
-                                  >
-                                    {copied.example ? "✓ Copied" : "Copy"}
-                                  </Button>
-                                </div>
-                              </div>
-                              <div>
-                                <small className="text-muted d-block mb-2">
-                                  <strong>Or use the slash command:</strong>
-                                </small>
-                                <div
-                                  className="p-2"
-                                  style={{
-                                    backgroundColor: "var(--ifm-code-background)",
-                                    borderRadius: "4px",
-                                  }}
-                                >
-                                  <div className="d-flex align-items-center gap-2">
-                                    <code style={{ fontSize: "0.8rem", flex: 1 }}>
-                                      /{skill.name}
-                                    </code>
-                                    <Button
-                                      size="sm"
-                                      variant="outline-primary"
-                                      onClick={() =>
-                                        copyToClipboard(`/${skill.name}`, "slash")
-                                      }
-                                      style={{
-                                        fontSize: "0.75rem",
-                                        whiteSpace: "nowrap",
-                                      }}
-                                    >
-                                      {copied.slash ? "✓ Copied" : "Copy"}
-                                    </Button>
-                                  </div>
-                                </div>
-                              </div>
-                            </div>
-                          )}
-                        </div>
-                      );
-                    } else {
-                      // Deployed: Two-step marketplace installation
-                      return (
-                        <>
-                          <div className="mb-3">
+                      if (isLocalhost) {
+                        // Localhost: Single-step installation via curl
+                        return (
+                          <div>
                             <small className="text-muted d-block mb-2">
-                              <strong>Step 1:</strong> Add marketplace (one-time
-                              setup)
+                              <strong>
+                                Install this {skill.type} directly:
+                              </strong>
                             </small>
                             <div
-                              className="p-2"
+                              className="p-2 mb-3"
                               style={{
                                 backgroundColor: "var(--ifm-code-background)",
                                 borderRadius: "4px",
@@ -598,55 +507,14 @@ const SkillCard = ({ skill, onTagClick, isHighlighted, currentFilters, registryB
                                     wordBreak: "break-all",
                                   }}
                                 >
-                                  {getMarketplaceCommand(skill)}
+                                  {getClaudeCodeInstallCommand(skill)}
                                 </code>
                                 <Button
                                   size="sm"
                                   variant="outline-primary"
                                   onClick={() =>
                                     copyToClipboard(
-                                      getMarketplaceCommand(skill),
-                                      "marketplace",
-                                    )
-                                  }
-                                  style={{
-                                    fontSize: "0.75rem",
-                                    whiteSpace: "nowrap",
-                                  }}
-                                >
-                                  {copied.marketplace ? "✓ Copied" : "Copy"}
-                                </Button>
-                              </div>
-                            </div>
-                          </div>
-
-                          <div className="mb-3">
-                            <small className="text-muted d-block mb-2">
-                              <strong>Step 2:</strong> Install this {skill.type}
-                            </small>
-                            <div
-                              className="p-2"
-                              style={{
-                                backgroundColor: "var(--ifm-code-background)",
-                                borderRadius: "4px",
-                              }}
-                            >
-                              <div className="d-flex align-items-center gap-2">
-                                <code
-                                  style={{
-                                    fontSize: "0.8rem",
-                                    flex: 1,
-                                    wordBreak: "break-all",
-                                  }}
-                                >
-                                  {getClaudeCodeCommand(skill)}
-                                </code>
-                                <Button
-                                  size="sm"
-                                  variant="outline-primary"
-                                  onClick={() =>
-                                    copyToClipboard(
-                                      getClaudeCodeCommand(skill),
+                                      getClaudeCodeInstallCommand(skill),
                                       "plugin",
                                     )
                                   }
@@ -659,15 +527,100 @@ const SkillCard = ({ skill, onTagClick, isHighlighted, currentFilters, registryB
                                 </Button>
                               </div>
                             </div>
+                            {skill.example && (
+                              <div>
+                                <small className="text-muted d-block mb-2">
+                                  <strong>Example usage:</strong>
+                                </small>
+                                <div
+                                  className="p-2 mb-2"
+                                  style={{
+                                    backgroundColor:
+                                      "var(--ifm-code-background)",
+                                    borderRadius: "4px",
+                                  }}
+                                >
+                                  <div className="d-flex align-items-center gap-2">
+                                    <code
+                                      style={{
+                                        fontSize: "0.8rem",
+                                        flex: 1,
+                                        wordBreak: "break-word",
+                                        backgroundColor: "transparent",
+                                      }}
+                                    >
+                                      {skill.example}
+                                    </code>
+                                    <Button
+                                      size="sm"
+                                      variant="outline-primary"
+                                      onClick={() =>
+                                        copyToClipboard(
+                                          skill.example,
+                                          "example",
+                                        )
+                                      }
+                                      style={{
+                                        fontSize: "0.75rem",
+                                        whiteSpace: "nowrap",
+                                      }}
+                                    >
+                                      {copied.example ? "✓ Copied" : "Copy"}
+                                    </Button>
+                                  </div>
+                                </div>
+                                <div>
+                                  <small className="text-muted d-block mb-2">
+                                    <strong>Or use the slash command:</strong>
+                                  </small>
+                                  <div
+                                    className="p-2"
+                                    style={{
+                                      backgroundColor:
+                                        "var(--ifm-code-background)",
+                                      borderRadius: "4px",
+                                    }}
+                                  >
+                                    <div className="d-flex align-items-center gap-2">
+                                      <code
+                                        style={{ fontSize: "0.8rem", flex: 1 }}
+                                      >
+                                        /{skill.name}
+                                      </code>
+                                      <Button
+                                        size="sm"
+                                        variant="outline-primary"
+                                        onClick={() =>
+                                          copyToClipboard(
+                                            `/${skill.name}`,
+                                            "slash",
+                                          )
+                                        }
+                                        style={{
+                                          fontSize: "0.75rem",
+                                          whiteSpace: "nowrap",
+                                        }}
+                                      >
+                                        {copied.slash ? "✓ Copied" : "Copy"}
+                                      </Button>
+                                    </div>
+                                  </div>
+                                </div>
+                              </div>
+                            )}
                           </div>
-
-                          {skill.example && (
-                            <div>
+                        );
+                      } else {
+                        // Deployed: Two-step marketplace installation
+                        return (
+                          <>
+                            <div className="mb-3">
                               <small className="text-muted d-block mb-2">
-                                <strong>Step 3: Try it out</strong>
+                                <strong>Step 1:</strong> Add marketplace
+                                (one-time setup)
                               </small>
                               <div
-                                className="p-2 mb-2"
+                                className="p-2"
                                 style={{
                                   backgroundColor: "var(--ifm-code-background)",
                                   borderRadius: "4px",
@@ -678,123 +631,219 @@ const SkillCard = ({ skill, onTagClick, isHighlighted, currentFilters, registryB
                                     style={{
                                       fontSize: "0.8rem",
                                       flex: 1,
-                                      wordBreak: "break-word",
-                                      backgroundColor: "transparent"
+                                      wordBreak: "break-all",
                                     }}
                                   >
-                                    {skill.example}
+                                    {getMarketplaceCommand(skill)}
                                   </code>
                                   <Button
                                     size="sm"
                                     variant="outline-primary"
                                     onClick={() =>
-                                      copyToClipboard(skill.example, "example")
+                                      copyToClipboard(
+                                        getMarketplaceCommand(skill),
+                                        "marketplace",
+                                      )
                                     }
                                     style={{
                                       fontSize: "0.75rem",
                                       whiteSpace: "nowrap",
                                     }}
                                   >
-                                    {copied.example ? "✓ Copied" : "Copy"}
+                                    {copied.marketplace ? "✓ Copied" : "Copy"}
                                   </Button>
                                 </div>
                               </div>
+                            </div>
+
+                            <div className="mb-3">
+                              <small className="text-muted d-block mb-2">
+                                <strong>Step 2:</strong> Install this{" "}
+                                {skill.type}
+                              </small>
+                              <div
+                                className="p-2"
+                                style={{
+                                  backgroundColor: "var(--ifm-code-background)",
+                                  borderRadius: "4px",
+                                }}
+                              >
+                                <div className="d-flex align-items-center gap-2">
+                                  <code
+                                    style={{
+                                      fontSize: "0.8rem",
+                                      flex: 1,
+                                      wordBreak: "break-all",
+                                    }}
+                                  >
+                                    {getClaudeCodeCommand(skill)}
+                                  </code>
+                                  <Button
+                                    size="sm"
+                                    variant="outline-primary"
+                                    onClick={() =>
+                                      copyToClipboard(
+                                        getClaudeCodeCommand(skill),
+                                        "plugin",
+                                      )
+                                    }
+                                    style={{
+                                      fontSize: "0.75rem",
+                                      whiteSpace: "nowrap",
+                                    }}
+                                  >
+                                    {copied.plugin ? "✓ Copied" : "Copy"}
+                                  </Button>
+                                </div>
+                              </div>
+                            </div>
+
+                            {skill.example && (
                               <div>
                                 <small className="text-muted d-block mb-2">
-                                  <strong>Or use the slash command:</strong>
+                                  <strong>Step 3: Try it out</strong>
                                 </small>
                                 <div
-                                  className="p-2"
+                                  className="p-2 mb-2"
                                   style={{
-                                    backgroundColor: "var(--ifm-code-background)",
+                                    backgroundColor:
+                                      "var(--ifm-code-background)",
                                     borderRadius: "4px",
                                   }}
                                 >
                                   <div className="d-flex align-items-center gap-2">
-                                    <code style={{ fontSize: "0.8rem", flex: 1 }}>
-                                      /{skill.name}
+                                    <code
+                                      style={{
+                                        fontSize: "0.8rem",
+                                        flex: 1,
+                                        wordBreak: "break-word",
+                                        backgroundColor: "transparent",
+                                      }}
+                                    >
+                                      {skill.example}
                                     </code>
                                     <Button
                                       size="sm"
                                       variant="outline-primary"
                                       onClick={() =>
-                                        copyToClipboard(`/${skill.name}`, "slash")
+                                        copyToClipboard(
+                                          skill.example,
+                                          "example",
+                                        )
                                       }
                                       style={{
                                         fontSize: "0.75rem",
                                         whiteSpace: "nowrap",
                                       }}
                                     >
-                                      {copied.slash ? "✓ Copied" : "Copy"}
+                                      {copied.example ? "✓ Copied" : "Copy"}
                                     </Button>
                                   </div>
                                 </div>
+                                <div>
+                                  <small className="text-muted d-block mb-2">
+                                    <strong>Or use the slash command:</strong>
+                                  </small>
+                                  <div
+                                    className="p-2"
+                                    style={{
+                                      backgroundColor:
+                                        "var(--ifm-code-background)",
+                                      borderRadius: "4px",
+                                    }}
+                                  >
+                                    <div className="d-flex align-items-center gap-2">
+                                      <code
+                                        style={{ fontSize: "0.8rem", flex: 1 }}
+                                      >
+                                        /{skill.name}
+                                      </code>
+                                      <Button
+                                        size="sm"
+                                        variant="outline-primary"
+                                        onClick={() =>
+                                          copyToClipboard(
+                                            `/${skill.name}`,
+                                            "slash",
+                                          )
+                                        }
+                                        style={{
+                                          fontSize: "0.75rem",
+                                          whiteSpace: "nowrap",
+                                        }}
+                                      >
+                                        {copied.slash ? "✓ Copied" : "Copy"}
+                                      </Button>
+                                    </div>
+                                  </div>
+                                </div>
                               </div>
-                            </div>
-                          )}
-                        </>
-                      );
-                    }
-                  })()}
-                </Tab.Pane>
+                            )}
+                          </>
+                        );
+                      }
+                    })()}
+                  </Tab.Pane>
 
-                <Tab.Pane eventKey="manual">
-                  <div>
-                    <small className="text-muted d-block mb-2">
-                      <strong>
-                        {skill.type === "skill"
-                          ? "Download and install:"
-                          : "Install globally:"}
-                      </strong>
-                    </small>
-                    <div
-                      className="p-2 mb-3"
-                      style={{
-                        backgroundColor: "var(--ifm-code-background)",
-                        borderRadius: "4px",
-                      }}
-                    >
-                      <div className="d-flex align-items-center gap-2">
-                        <code
-                          style={{
-                            fontSize: "0.8rem",
-                            flex: 1,
-                            wordBreak: "break-all",
-                          }}
-                        >
-                          {getManualInstallCommand(skill)}
-                        </code>
-                        <Button
-                          size="sm"
-                          variant="outline-primary"
-                          onClick={() =>
-                            copyToClipboard(
-                              getManualInstallCommand(skill),
-                              "git",
-                            )
-                          }
-                          style={{
-                            fontSize: "0.75rem",
-                            whiteSpace: "nowrap",
-                          }}
-                        >
-                          {copied.git ? "✓ Copied" : "Copy"}
-                        </Button>
-                      </div>
-                    </div>
+                  <Tab.Pane eventKey="manual">
                     <div>
                       <small className="text-muted d-block mb-2">
-                        <strong>Example usage:</strong>
+                        <strong>
+                          {skill.type === "skill"
+                            ? "Download and install:"
+                            : "Install globally:"}
+                        </strong>
                       </small>
-                      <ul style={{ fontSize: "0.85rem", marginBottom: 0 }}>
-                        <li>Manually review the instructions and follow along</li>
-                      </ul>
+                      <div
+                        className="p-2 mb-3"
+                        style={{
+                          backgroundColor: "var(--ifm-code-background)",
+                          borderRadius: "4px",
+                        }}
+                      >
+                        <div className="d-flex align-items-center gap-2">
+                          <code
+                            style={{
+                              fontSize: "0.8rem",
+                              flex: 1,
+                              wordBreak: "break-all",
+                            }}
+                          >
+                            {getManualInstallCommand(skill)}
+                          </code>
+                          <Button
+                            size="sm"
+                            variant="outline-primary"
+                            onClick={() =>
+                              copyToClipboard(
+                                getManualInstallCommand(skill),
+                                "git",
+                              )
+                            }
+                            style={{
+                              fontSize: "0.75rem",
+                              whiteSpace: "nowrap",
+                            }}
+                          >
+                            {copied.git ? "✓ Copied" : "Copy"}
+                          </Button>
+                        </div>
+                      </div>
+                      <div>
+                        <small className="text-muted d-block mb-2">
+                          <strong>Example usage:</strong>
+                        </small>
+                        <ul style={{ fontSize: "0.85rem", marginBottom: 0 }}>
+                          <li>
+                            Manually review the instructions and follow along
+                          </li>
+                        </ul>
+                      </div>
                     </div>
-                  </div>
-                </Tab.Pane>
-              </Tab.Content>
-            </Tab.Container>
-          </div>
+                  </Tab.Pane>
+                </Tab.Content>
+              </Tab.Container>
+            </div>
           )}
 
           {/* File Browser Section */}
@@ -803,93 +852,114 @@ const SkillCard = ({ skill, onTagClick, isHighlighted, currentFilters, registryB
           </div>
 
           {/* Dependencies Section */}
-          {showDependencies && (skill.dependencies?.skills?.length > 0 || skill.dependencies?.mcp?.length > 0) && (
-            <div className="mb-3 p-3" style={{
-              backgroundColor: "var(--ifm-background-surface-color)",
-              borderRadius: "6px",
-              border: "1px solid var(--ifm-color-warning-dark)",
-              borderLeft: "4px solid var(--ifm-color-warning)"
-            }}>
-              <div className="d-flex align-items-start gap-2">
-                <span style={{ fontSize: "0.9rem" }}>⚠️</span>
-                <div style={{ flex: 1 }}>
-                  <strong style={{ fontSize: "0.85rem", color: "var(--ifm-color-warning-darker)" }}>
-                    Dependencies Required:
-                  </strong>
-                  <div className="mt-2 d-flex flex-column gap-2">
-                    {skill.dependencies?.skills?.length > 0 && (
-                      <div>
-                        <small className="text-muted d-block mb-1" style={{ fontSize: "0.75rem" }}>
-                          Required Skills:
-                        </small>
-                        <div className="d-flex gap-2 flex-wrap">
-                          {skill.dependencies.skills.map((dep, idx) => {
-                            // Find the actual skill to get its displayName
-                            const depSkill = window.allMarketplaceItems?.find(item => item.name === dep);
-                            const depDisplayName = depSkill?.displayName || dep;
-                            return (
-                              <Badge
-                                key={idx}
-                                bg="primary"
-                                as="a"
-                                href={`${window.location.pathname}?search=${encodeURIComponent(depDisplayName)}`}
-                                target="_blank"
-                                rel="noopener noreferrer"
-                                style={{
-                                  fontSize: "0.75rem",
-                                  fontWeight: "500",
-                                  padding: "0.3rem 0.6rem",
-                                  cursor: "pointer",
-                                  textDecoration: "none"
-                                }}
-                                title={`Open ${depDisplayName} in new tab`}
-                              >
-                                {dep} 🔗
-                              </Badge>
-                            );
-                          })}
+          {showDependencies &&
+            (skill.dependencies?.skills?.length > 0 ||
+              skill.dependencies?.mcp?.length > 0) && (
+              <div
+                className="mb-3 p-3"
+                style={{
+                  backgroundColor: "var(--ifm-background-surface-color)",
+                  borderRadius: "6px",
+                  border: "1px solid var(--ifm-color-warning-dark)",
+                  borderLeft: "4px solid var(--ifm-color-warning)",
+                }}
+              >
+                <div className="d-flex align-items-start gap-2">
+                  <span style={{ fontSize: "0.9rem" }}>⚠️</span>
+                  <div style={{ flex: 1 }}>
+                    <strong
+                      style={{
+                        fontSize: "0.85rem",
+                        color: "var(--ifm-color-warning-darker)",
+                      }}
+                    >
+                      Dependencies Required:
+                    </strong>
+                    <div className="mt-2 d-flex flex-column gap-2">
+                      {skill.dependencies?.skills?.length > 0 && (
+                        <div>
+                          <small
+                            className="text-muted d-block mb-1"
+                            style={{ fontSize: "0.75rem" }}
+                          >
+                            Required Skills:
+                          </small>
+                          <div className="d-flex gap-2 flex-wrap">
+                            {skill.dependencies.skills.map((dep, idx) => {
+                              // Find the actual skill to get its displayName
+                              const depSkill = window.allMarketplaceItems?.find(
+                                (item) => item.name === dep,
+                              );
+                              const depDisplayName =
+                                depSkill?.displayName || dep;
+                              return (
+                                <Badge
+                                  key={idx}
+                                  bg="primary"
+                                  as="a"
+                                  href={`${window.location.pathname}?search=${encodeURIComponent(depDisplayName)}`}
+                                  target="_blank"
+                                  rel="noopener noreferrer"
+                                  style={{
+                                    fontSize: "0.75rem",
+                                    fontWeight: "500",
+                                    padding: "0.3rem 0.6rem",
+                                    cursor: "pointer",
+                                    textDecoration: "none",
+                                  }}
+                                  title={`Open ${depDisplayName} in new tab`}
+                                >
+                                  {dep} 🔗
+                                </Badge>
+                              );
+                            })}
+                          </div>
                         </div>
-                      </div>
-                    )}
-                    {skill.dependencies?.mcp?.length > 0 && (
-                      <div>
-                        <small className="text-muted d-block mb-1" style={{ fontSize: "0.75rem" }}>
-                          Required MCP Servers:
-                        </small>
-                        <div className="d-flex gap-2 flex-wrap">
-                          {skill.dependencies.mcp.map((dep, idx) => {
-                            // Find the actual MCP server to get its displayName
-                            const depMcp = window.allMarketplaceItems?.find(item => item.name === dep);
-                            const depDisplayName = depMcp?.displayName || dep;
-                            return (
-                              <Badge
-                                key={idx}
-                                bg="success"
-                                as="a"
-                                href={`${window.location.pathname}?search=${encodeURIComponent(depDisplayName)}`}
-                                target="_blank"
-                                rel="noopener noreferrer"
-                                style={{
-                                  fontSize: "0.75rem",
-                                  fontWeight: "500",
-                                  padding: "0.3rem 0.6rem",
-                                  cursor: "pointer",
-                                  textDecoration: "none"
-                                }}
-                                title={`Open ${depDisplayName} in new tab`}
-                              >
-                                {dep} 🔗
-                              </Badge>
-                            );
-                          })}
+                      )}
+                      {skill.dependencies?.mcp?.length > 0 && (
+                        <div>
+                          <small
+                            className="text-muted d-block mb-1"
+                            style={{ fontSize: "0.75rem" }}
+                          >
+                            Required MCP Servers:
+                          </small>
+                          <div className="d-flex gap-2 flex-wrap">
+                            {skill.dependencies.mcp.map((dep, idx) => {
+                              // Find the actual MCP server to get its displayName
+                              const depMcp = window.allMarketplaceItems?.find(
+                                (item) => item.name === dep,
+                              );
+                              const depDisplayName = depMcp?.displayName || dep;
+                              return (
+                                <Badge
+                                  key={idx}
+                                  bg="success"
+                                  as="a"
+                                  href={`${window.location.pathname}?search=${encodeURIComponent(depDisplayName)}`}
+                                  target="_blank"
+                                  rel="noopener noreferrer"
+                                  style={{
+                                    fontSize: "0.75rem",
+                                    fontWeight: "500",
+                                    padding: "0.3rem 0.6rem",
+                                    cursor: "pointer",
+                                    textDecoration: "none",
+                                  }}
+                                  title={`Open ${depDisplayName} in new tab`}
+                                >
+                                  {dep} 🔗
+                                </Badge>
+                              );
+                            })}
+                          </div>
                         </div>
-                      </div>
-                    )}
+                      )}
+                    </div>
                   </div>
                 </div>
               </div>
-            </div>
-          )}
+            )}
 
           <div className="mt-3 d-flex gap-2 align-items-center flex-wrap">
             <Badge
@@ -899,21 +969,23 @@ const SkillCard = ({ skill, onTagClick, isHighlighted, currentFilters, registryB
             >
               {skill.category}
             </Badge>
-            {(showAllTags ? skill.tags : skill.tags.slice(0, 5)).map((tag, idx) => (
-              <Badge
-                key={idx}
-                bg="secondary"
-                className="me-0"
-                style={{
-                  fontSize: "0.7rem",
-                  cursor: "pointer",
-                  fontWeight: "400",
-                }}
-                onClick={() => onTagClick(tag)}
-              >
-                {prettifyTag(tag)}
-              </Badge>
-            ))}
+            {(showAllTags ? skill.tags : skill.tags.slice(0, 5)).map(
+              (tag, idx) => (
+                <Badge
+                  key={idx}
+                  bg="secondary"
+                  className="me-0"
+                  style={{
+                    fontSize: "0.7rem",
+                    cursor: "pointer",
+                    fontWeight: "400",
+                  }}
+                  onClick={() => onTagClick(tag)}
+                >
+                  {prettifyTag(tag)}
+                </Badge>
+              ),
+            )}
             {skill.tags.length > 5 && (
               <Badge
                 bg="light"
@@ -922,10 +994,14 @@ const SkillCard = ({ skill, onTagClick, isHighlighted, currentFilters, registryB
                   fontSize: "0.7rem",
                   fontWeight: "400",
                   cursor: "pointer",
-                  textDecoration: "underline"
+                  textDecoration: "underline",
                 }}
                 onClick={() => setShowAllTags(!showAllTags)}
-                title={showAllTags ? "Show fewer tags" : `Click to see all ${skill.tags.length} tags`}
+                title={
+                  showAllTags
+                    ? "Show fewer tags"
+                    : `Click to see all ${skill.tags.length} tags`
+                }
               >
                 {showAllTags ? "show less" : `+${skill.tags.length - 5} more`}
               </Badge>
@@ -1052,9 +1128,9 @@ const resolveCategoryIcon = (category, metadata, fallbackLabels = {}) => {
 
   // 2. Try existing hardcoded categoryLabels
   const fallbackLabel = fallbackLabels[category];
-  if (fallbackLabel && fallbackLabel.includes(' ')) {
+  if (fallbackLabel && fallbackLabel.includes(" ")) {
     // Extract icon from label like "🏛 Governance" -> "🏛"
-    const parts = fallbackLabel.split(' ');
+    const parts = fallbackLabel.split(" ");
     const potentialIcon = parts[0];
     // Simple emoji detection - most emojis are longer than 1 character in length
     if (potentialIcon.length > 1) {
@@ -1068,7 +1144,7 @@ const resolveCategoryIcon = (category, metadata, fallbackLabels = {}) => {
 
 const buildCategoryTree = (items, metadata = {}) => {
   // Extract all unique categories
-  const categories = [...new Set(items.map(item => item.category))];
+  const categories = [...new Set(items.map((item) => item.category))];
 
   // Build tree structure
   const tree = {};
@@ -1082,12 +1158,12 @@ const buildCategoryTree = (items, metadata = {}) => {
     "project-setup": "🛠 Project Setup",
   };
 
-  categories.forEach(category => {
-    const parts = category.split('/');
+  categories.forEach((category) => {
+    const parts = category.split("/");
     let current = tree;
 
     parts.forEach((part, index) => {
-      const fullPath = parts.slice(0, index + 1).join('/');
+      const fullPath = parts.slice(0, index + 1).join("/");
 
       if (!current[part]) {
         current[part] = {
@@ -1097,7 +1173,7 @@ const buildCategoryTree = (items, metadata = {}) => {
           level: index,
           children: {},
           directItems: [],
-          allItems: []
+          allItems: [],
         };
       }
       current = current[part].children;
@@ -1105,8 +1181,8 @@ const buildCategoryTree = (items, metadata = {}) => {
   });
 
   // Add items to appropriate categories and calculate counts
-  items.forEach(item => {
-    const parts = item.category.split('/');
+  items.forEach((item) => {
+    const parts = item.category.split("/");
     let current = tree;
 
     // Add to each level in the hierarchy
@@ -1133,14 +1209,19 @@ const buildCategoryTree = (items, metadata = {}) => {
         level,
         count: node.allItems.length,
         directCount: node.directItems.length,
-        children: convertTreeToArray(node.children, level + 1)
+        children: convertTreeToArray(node.children, level + 1),
       }));
   };
 
   return convertTreeToArray(tree);
 };
 
-const CategoryTree = ({ items, selectedCategory, onCategorySelect, metadata = {} }) => {
+const CategoryTree = ({
+  items,
+  selectedCategory,
+  onCategorySelect,
+  metadata = {},
+}) => {
   // State for expansion management
   const [expandedCategories, setExpandedCategories] = useState(new Set());
 
@@ -1150,16 +1231,16 @@ const CategoryTree = ({ items, selectedCategory, onCategorySelect, metadata = {}
       // Initialize ALL categories at ALL levels as expanded by default
       const allCategoryPaths = new Set();
 
-      items.forEach(item => {
-        const parts = item.category.split('/');
+      items.forEach((item) => {
+        const parts = item.category.split("/");
         // Add all partial paths (e.g., for "collaboration/meetings/team", add "collaboration" and "collaboration/meetings")
         for (let i = 1; i <= parts.length; i++) {
-          const path = parts.slice(0, i).join('/');
+          const path = parts.slice(0, i).join("/");
           allCategoryPaths.add(path);
         }
       });
 
-      console.log('Setting expanded categories:', Array.from(allCategoryPaths));
+      console.log("Setting expanded categories:", Array.from(allCategoryPaths));
       setExpandedCategories(allCategoryPaths);
     }
   }, [items]);
@@ -1167,12 +1248,12 @@ const CategoryTree = ({ items, selectedCategory, onCategorySelect, metadata = {}
   // Build hierarchical category tree
   const categoryTree = useMemo(() => {
     const tree = buildCategoryTree(items, metadata);
-    console.log('Built category tree:', tree);
+    console.log("Built category tree:", tree);
     return tree;
   }, [items, metadata]);
 
   const handleToggleExpand = (categoryId) => {
-    setExpandedCategories(prev => {
+    setExpandedCategories((prev) => {
       const newSet = new Set(prev);
       if (newSet.has(categoryId)) {
         newSet.delete(categoryId);
@@ -1184,7 +1265,7 @@ const CategoryTree = ({ items, selectedCategory, onCategorySelect, metadata = {}
   };
 
   const renderCategoryNodes = (nodes) => {
-    return nodes.map(node => (
+    return nodes.map((node) => (
       <CategoryTreeNode
         key={node.id}
         node={node}
@@ -1237,37 +1318,51 @@ const SkillBrowser = ({ searchTerm, setSearchTerm, isSearchActive }) => {
   const [registryMetadata, setRegistryMetadata] = useState({});
 
   // Helper function to get registry URL (defined early to avoid initialization issues)
-  const getRegistryUrl = React.useCallback((registryPath) => {
-    if (registryPath.startsWith('http://') || registryPath.startsWith('https://')) {
-      return registryPath;
-    }
-    // Local path - convert to Docusaurus static file URL
-    if (registryPath.startsWith('./static/')) {
-      // Remove './static/' prefix since Docusaurus serves static files directly
-      const staticPath = registryPath.substring('./static/'.length);
-      return `${baseUrl}/slim/${staticPath}`;
-    }
-    if (registryPath.startsWith('./')) {
-      return `${baseUrl}/slim/${registryPath.substring(2)}`;
-    }
-    return `${baseUrl}/slim/${registryPath}`;
-  }, [baseUrl]);
+  const getRegistryUrl = React.useCallback(
+    (registryPath) => {
+      if (
+        registryPath.startsWith("http://") ||
+        registryPath.startsWith("https://")
+      ) {
+        return registryPath;
+      }
+      // Local path - convert to Docusaurus static file URL
+      if (registryPath.startsWith("./static/")) {
+        // Remove './static/' prefix since Docusaurus serves static files directly
+        const staticPath = registryPath.substring("./static/".length);
+        return `${baseUrl}/slim/${staticPath}`;
+      }
+      if (registryPath.startsWith("./")) {
+        return `${baseUrl}/slim/${registryPath.substring(2)}`;
+      }
+      return `${baseUrl}/slim/${registryPath}`;
+    },
+    [baseUrl],
+  );
 
   // Helper function to get registry base URL for zip resolution
-  const getRegistryBaseUrl = React.useCallback((registryPath) => {
-    if (registryPath.startsWith('http://') || registryPath.startsWith('https://')) {
-      const url = new URL(registryPath);
-      return `${url.protocol}//${url.host}`;
-    }
-    // Local path
-    return baseUrl;
-  }, [baseUrl]);
+  const getRegistryBaseUrl = React.useCallback(
+    (registryPath) => {
+      if (
+        registryPath.startsWith("http://") ||
+        registryPath.startsWith("https://")
+      ) {
+        const url = new URL(registryPath);
+        return `${url.protocol}//${url.host}`;
+      }
+      // Local path
+      return baseUrl;
+    },
+    [baseUrl],
+  );
 
   // Load available registries from build-time config
   useEffect(() => {
     // Load registry list from build-time config (static site generation)
-    const registries = siteConfig.customFields?.slimConfig?.registries || ['./static/data/registry.json'];
-    console.log('✓ Loaded registries from build-time config:', registries);
+    const registries = siteConfig.customFields?.slimConfig?.registries || [
+      "./static/data/registry.json",
+    ];
+    console.log("✓ Loaded registries from build-time config:", registries);
     setAvailableRegistries(registries);
   }, []);
 
@@ -1299,7 +1394,7 @@ const SkillBrowser = ({ searchTerm, setSearchTerm, isSearchActive }) => {
       if (tagsParam) {
         const tagArray = tagsParam.split(",");
         const tagObject = {};
-        tagArray.forEach(tag => {
+        tagArray.forEach((tag) => {
           tagObject[tag] = true;
         });
         setSelectedTags(tagObject);
@@ -1326,7 +1421,7 @@ const SkillBrowser = ({ searchTerm, setSearchTerm, isSearchActive }) => {
     setIsLoadingRegistry(true);
     const registryPath = availableRegistries[selectedRegistry];
     const registryUrl = getRegistryUrl(registryPath);
-    console.log('Loading registry from:', registryPath, '-> URL:', registryUrl);
+    console.log("Loading registry from:", registryPath, "-> URL:", registryUrl);
 
     fetch(registryUrl)
       .then((res) => res.json())
@@ -1358,27 +1453,35 @@ const SkillBrowser = ({ searchTerm, setSearchTerm, isSearchActive }) => {
         const getLocalMarketplacePath = () => {
           // Use the actual path injected by the build script, or fall back to template
           return (
-            localMarketplacePath ||
-            "[YOUR_PROJECT_PATH]/static/marketplace"
+            localMarketplacePath || "[YOUR_PROJECT_PATH]/static/marketplace"
           );
         };
 
         // Combine all types into one array - no need to process install commands
-        const skills = (data.skills || []).map((s) => ({ ...s, type: s.type || "skill" }));
-        const agents = (data.agents || []).map((a) => ({ ...a, type: a.type || "agent" }));
-        const mcps = (data.mcp || []).map((m) => ({ ...m, type: m.type || "mcp" }));
+        const skills = (data.skills || []).map((s) => ({
+          ...s,
+          type: s.type || "skill",
+        }));
+        const agents = (data.agents || []).map((a) => ({
+          ...a,
+          type: a.type || "agent",
+        }));
+        const mcps = (data.mcp || []).map((m) => ({
+          ...m,
+          type: m.type || "mcp",
+        }));
         const combined = [...skills, ...agents, ...mcps];
 
-        console.log('Loaded registry data:', data);
-        console.log('Combined items:', combined);
+        console.log("Loaded registry data:", data);
+        console.log("Combined items:", combined);
         setAllItems(combined);
 
         // Extract and store metadata (icons, etc.)
         if (data.metadata) {
-          console.log('Loaded registry metadata:', data.metadata);
+          console.log("Loaded registry metadata:", data.metadata);
           setRegistryMetadata(data.metadata);
         } else {
-          console.log('No metadata found in registry, using defaults');
+          console.log("No metadata found in registry, using defaults");
           setRegistryMetadata({});
         }
 
@@ -1451,7 +1554,14 @@ const SkillBrowser = ({ searchTerm, setSearchTerm, isSearchActive }) => {
 
       window.history.replaceState({}, "", url);
     }
-  }, [searchTerm, selectedCategory, selectedType, selectedTags, sortBy, sortOrder]);
+  }, [
+    searchTerm,
+    selectedCategory,
+    selectedType,
+    selectedTags,
+    sortBy,
+    sortOrder,
+  ]);
 
   const handleTagChange = (tag) => {
     setSelectedTags((prev) => ({
@@ -1525,7 +1635,11 @@ const SkillBrowser = ({ searchTerm, setSearchTerm, isSearchActive }) => {
   ]);
 
   return (
-    <Container fluid className={isSearchActive ? "" : "mt-4"} style={isSearchActive ? { marginTop: "-20px", paddingTop: "0" } : {}}>
+    <Container
+      fluid
+      className={isSearchActive ? "" : "mt-4"}
+      style={isSearchActive ? { marginTop: "-20px", paddingTop: "0" } : {}}
+    >
       <Row className={isSearchActive ? "mb-4 mt-0" : "mb-5"}>
         <Col>
           <div className="d-flex justify-content-center align-items-center flex-wrap gap-3">
@@ -1533,10 +1647,13 @@ const SkillBrowser = ({ searchTerm, setSearchTerm, isSearchActive }) => {
             {availableRegistries.length > 1 && (
               <Dropdown>
                 <Dropdown.Toggle variant="outline-secondary">
-                  Registry: {availableRegistries[selectedRegistry]?.includes('http')
+                  Registry:{" "}
+                  {availableRegistries[selectedRegistry]?.includes("http")
                     ? new URL(availableRegistries[selectedRegistry]).hostname
-                    : 'Local'}
-                  {isLoadingRegistry && <span className="ms-2 spinner-border spinner-border-sm" />}
+                    : "Local"}
+                  {isLoadingRegistry && (
+                    <span className="ms-2 spinner-border spinner-border-sm" />
+                  )}
                 </Dropdown.Toggle>
                 <Dropdown.Menu>
                   {availableRegistries.map((registry, index) => (
@@ -1550,10 +1667,12 @@ const SkillBrowser = ({ searchTerm, setSearchTerm, isSearchActive }) => {
                         checked={index === selectedRegistry}
                         onChange={() => setSelectedRegistry(index)}
                         onClick={(e) => e.stopPropagation()}
-                        style={{ marginTop: '2px' }}
+                        style={{ marginTop: "2px" }}
                       />
                       <div>
-                        {registry.includes('http') ? new URL(registry).hostname : 'Local'}
+                        {registry.includes("http")
+                          ? new URL(registry).hostname
+                          : "Local"}
                         <small className="text-muted d-block">{registry}</small>
                       </div>
                     </Dropdown.Item>
@@ -1662,13 +1781,19 @@ const SkillBrowser = ({ searchTerm, setSearchTerm, isSearchActive }) => {
         </Col>
         <Col md={9}>
           {/* Check for completely empty marketplace */}
-          {allItems.length === 0 && !isLoadingRegistry && branding.shouldShowEmptyState() ? (
+          {allItems.length === 0 &&
+          !isLoadingRegistry &&
+          branding.shouldShowEmptyState() ? (
             <Card className="text-center p-5 shadow-sm">
               <Card.Body>
                 <div style={{ fontSize: "4rem", marginBottom: "1rem" }}>📦</div>
                 <h3>No best practices available yet</h3>
-                <p className="text-muted mb-4" style={{ maxWidth: "500px", margin: "0 auto 1.5rem" }}>
-                  Get started by importing from other SLIM instances or creating your own!
+                <p
+                  className="text-muted mb-4"
+                  style={{ maxWidth: "500px", margin: "0 auto 1.5rem" }}
+                >
+                  Get started by importing from other SLIM instances or creating
+                  your own!
                 </p>
               </Card.Body>
             </Card>
@@ -1680,42 +1805,46 @@ const SkillBrowser = ({ searchTerm, setSearchTerm, isSearchActive }) => {
                 onRemoveType={handleRemoveType}
                 onRemoveTag={handleRemoveTag}
               />
-          <h4 className="mb-3">
-            {filteredItems.length} best practice
-            {filteredItems.length !== 1 ? "s" : ""} available
-          </h4>
-          {filteredItems.length === 0 ? (
-            <Card className="text-center p-5">
-              <Card.Body>
-                <h5>No best practices found</h5>
-                <p className="text-muted">
-                  Try adjusting your search or filters
-                </p>
-              </Card.Body>
-            </Card>
-          ) : (
-            filteredItems.map((item, idx) => (
-              <SkillCard
-                key={idx}
-                skill={item}
-                onTagClick={handleTagClick}
-                isHighlighted={highlightedSkill === item.name || highlightedSkill === item.displayName}
-                currentFilters={{
-                  selectedCategory,
-                  selectedType,
-                  selectedTags,
-                  sortBy,
-                  sortOrder
-                }}
-                registryBaseUrl={getRegistryBaseUrl(availableRegistries[selectedRegistry])}
-              />
-            ))
-          )}
+              <h4 className="mb-3">
+                {filteredItems.length} best practice
+                {filteredItems.length !== 1 ? "s" : ""} available
+              </h4>
+              {filteredItems.length === 0 ? (
+                <Card className="text-center p-5">
+                  <Card.Body>
+                    <h5>No best practices found</h5>
+                    <p className="text-muted">
+                      Try adjusting your search or filters
+                    </p>
+                  </Card.Body>
+                </Card>
+              ) : (
+                filteredItems.map((item, idx) => (
+                  <SkillCard
+                    key={idx}
+                    skill={item}
+                    onTagClick={handleTagClick}
+                    isHighlighted={
+                      highlightedSkill === item.name ||
+                      highlightedSkill === item.displayName
+                    }
+                    currentFilters={{
+                      selectedCategory,
+                      selectedType,
+                      selectedTags,
+                      sortBy,
+                      sortOrder,
+                    }}
+                    registryBaseUrl={getRegistryBaseUrl(
+                      availableRegistries[selectedRegistry],
+                    )}
+                  />
+                ))
+              )}
             </>
           )}
         </Col>
       </Row>
-
     </Container>
   );
 };
@@ -1723,18 +1852,43 @@ const SkillBrowser = ({ searchTerm, setSearchTerm, isSearchActive }) => {
 function prettifyTag(tag) {
   // Define acronyms and special cases that should be all uppercase
   const acronyms = new Set([
-    'ai', 'api', 'mcp', 'ci', 'cd', 'ui', 'ux', 'sdk', 'cli', 'ide',
-    'git', 'sql', 'nosql', 'html', 'css', 'js', 'ts', 'json', 'yaml',
-    'xml', 'rest', 'http', 'https', 'ssh', 'ssl', 'tls', 'url', 'uri'
+    "ai",
+    "api",
+    "mcp",
+    "ci",
+    "cd",
+    "ui",
+    "ux",
+    "sdk",
+    "cli",
+    "ide",
+    "git",
+    "sql",
+    "nosql",
+    "html",
+    "css",
+    "js",
+    "ts",
+    "json",
+    "yaml",
+    "xml",
+    "rest",
+    "http",
+    "https",
+    "ssh",
+    "ssl",
+    "tls",
+    "url",
+    "uri",
   ]);
 
   // Define special cases with specific capitalization
   const specialCases = {
-    'github': 'GitHub',
-    'gitlab': 'GitLab',
-    'devops': 'DevOps',
-    'javascript': 'JavaScript',
-    'typescript': 'TypeScript'
+    github: "GitHub",
+    gitlab: "GitLab",
+    devops: "DevOps",
+    javascript: "JavaScript",
+    typescript: "TypeScript",
   };
 
   return tag

@@ -59,19 +59,25 @@ marketplace/skills/your-skill-name/
 ```
 
 **Registry entry:**
-Add to `/static/data/registry.json`:
+Add to `.claude-plugin/marketplace.json`:
 ```json
 {
   "name": "your-skill-name",
-  "displayName": "Your Skill Name",
   "description": "What it does and when to use it",
-  "category": "governance|software-lifecycle|communication",
-  "tags": ["relevant", "searchable", "keywords"],
-  "version": "1.0.0",
-  "type": "skill",
-  "skill_file_url": "/slim/marketplace/skills/your-skill-name/SKILL.md"
+  "source": "./static/marketplace",
+  "strict": false,
+  "skills": ["./skills/your-skill-name"],
+  "keywords": [
+    "readme",
+    "documentation",
+    "project-setup",
+    "templates",
+    "onboarding"
+  ]
 }
 ```
+
+NOTE: make sure to add your entry to the marketplace place JSON - that will ensure it gets properly detected and then inserted or updated into the `/maap-ai/static/data/registry.json` file.
 
 **Need help?** See [skill development best practices](https://platform.claude.com/docs/en/agents-and-tools/agent-skills/best-practices)
 
