@@ -91,7 +91,7 @@ function HubHero({ searchTerm, setSearchTerm, isSearchActive, setIsSearchActive 
           <Col xs={12} md="auto" className={styles.buttonWrapper}>
             <Link
               className="button button--secondary button--lg"
-              to="/docs/contribute/submit-ai-plugin"
+              to="/docs/contribute/submit-best-practice"
             >
               ⬆️ Contribute
             </Link>

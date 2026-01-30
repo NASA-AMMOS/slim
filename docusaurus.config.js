@@ -7,19 +7,18 @@ const darkCodeTheme = themes.dracula;
 
 /** @type {import('@docusaurus/types').Config} */
 const config = {
-  title: "GenAI Marketplace",
-  tagline:
-    "AI-powered skills, agents, and MCP servers for GenAI development at JPL",
+  title: "SLIM",
+  tagline: "Software Lifecycle Improvement & Modernization (SLIM)",
   favicon: "/img/favicon.ico",
 
   // Set the production url of your site here
-  url: "https://github.jpl.nasa.gov",
+  url: "https://nasa-ammos.github.io",
   // Set the /<baseUrl>/ pathname under which your site is served
-  baseUrl: "/pages/GenAI/genai-marketplace/",
+  baseUrl: "/slim/",
 
   // GitHub pages deployment config.
-  organizationName: "GenAI",
-  projectName: "genai-marketplace",
+  organizationName: "nasa-ammos",
+  projectName: "slim",
 
   onBrokenLinks: "warn",
   onBrokenMarkdownLinks: "warn",
@@ -36,14 +35,12 @@ const config = {
       ({
         docs: {
           sidebarPath: require.resolve("./sidebars.js"),
-          editUrl:
-            "https://github.jpl.nasa.gov/GenAI/genai-marketplace/tree/main/",
+          editUrl: "https://github.com/nasa-ammos/slim/tree/main/",
           sidebarCollapsed: true,
         },
         blog: {
           showReadingTime: true,
-          editUrl:
-            "https://github.jpl.nasa.gov/GenAI/genai-marketplace/tree/main/",
+          editUrl: "https://github.com/nasa-ammos/slim/tree/main/",
         },
         theme: {
           customCss: require.resolve("./src/css/custom.css"),
@@ -57,10 +54,10 @@ const config = {
     ({
       image: "img/docusaurus-social-card.jpg",
       navbar: {
-        title: "GenAI Marketplace",
+        title: "SLIM",
         logo: {
-          alt: "GenAI Marketplace - Jet Propulsion Laboratory",
-          src: "img/genai-logo.png",
+          alt: "Software Lifecycle Improvement & Modernization (SLIM)",
+          src: "img/nasa-jpl.png",
         },
         items: [
           {
@@ -82,7 +79,7 @@ const config = {
             label: "About",
           },
           {
-            href: "https://github.jpl.nasa.gov/GenAI/genai-marketplace",
+            href: "https://github.com/nasa-ammos/slim",
             label: "GitHub",
             position: "right",
           },
@@ -113,7 +110,7 @@ const config = {
             items: [
               {
                 label: "GitHub Discussions",
-                href: "https://github.jpl.nasa.gov/GenAI/genai-marketplace/discussions",
+                href: "https://github.com/NASA-AMMOS/slim/discussions",
               },
             ],
           },
@@ -122,12 +119,12 @@ const config = {
             items: [
               {
                 label: "GitHub",
-                href: "https://github.jpl.nasa.gov/GenAI/genai-marketplace",
+                href: "https://github.com/nasa-ammos/slim",
               },
             ],
           },
         ],
-        copyright: `GenAI Marketplace - Jet Propulsion Laboratory | Based on <a href="https://nasa-ammos.github.io/slim/" style="color: cyan;">SLIM</a><br/>Copyright © ${new Date().getFullYear()} California Institute of Technology ("Caltech"). U.S. Government sponsorship acknowledged.<br/>`,
+        copyright: `Based on the Software Lifecycle Improvement & Modernization (SLIM) project <a href="https://nasa-ammos.github.io/slim/" style="color: cyan;">https://nasa-ammos.github.io/slim/</a><br/>Copyright © ${new Date().getFullYear()} California Institute of Technology ("Caltech"). U.S. Government sponsorship acknowledged. Contents licensed under Apache License Version 2.0.<br/>`,
       },
       prism: {
         theme: lightCodeTheme,
@@ -175,11 +172,11 @@ const config = {
     // Enhanced branding configuration for easy customization
     brandingConfig: {
       // Visual Assets
-      logoPath: "/img/genai-logo.png",
+      logoPath: "/img/logo.svg",
 
       // Hero Section Control
       hero: {
-        showCornerFeatures: false, // Toggle corner features display
+        showCornerFeatures: true, // Toggle corner features display
         cornerFeatures: [
           {
             position: "top-left",
@@ -196,13 +193,13 @@ const config = {
           {
             position: "top-right",
             icon: "iterative.svg",
-            text: "Internal JPL resource for GenAI development",
+            text: "Fully open source and free of charge",
             enabled: true,
           },
           {
             position: "bottom-right",
             icon: "scope.svg",
-            text: "Skills, agents, and MCP servers for GenAI governance and development",
+            text: "Skills, agents, and MCP servers for governance, lifecycle, and communication",
             enabled: true,
           },
         ],
@@ -227,7 +224,7 @@ const config = {
       ],
       registries: [
         "./static/data/registry.json", // Local registry (generated from marketplace.json)
-        "https://nasa-ammos.github.io/slim/data/registry.json", // External SLIM registry
+        // Future: Add remote registries like 'https://example.com/registry.json'
       ],
     },
   },
