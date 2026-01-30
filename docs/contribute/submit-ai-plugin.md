@@ -31,13 +31,12 @@ Want to share your expertise with the JPL GenAI community? Here's how to contrib
 
 ## Step 2: Build Your Contribution
 
-### Option A: Use the Skill Creator (Recommended)
+### Option A: Use the SLIM Best Practice Creator Skill Creator (Recommended)
 
-The easiest way to create a new skill is with **[skill-creator](/?search=Skill%20Creator)**:
-
-1. Install: [View in marketplace](/?search=Skill%20Creator)
+The easiest way to create a new skill is with **[SLIM best practice creator skill](https://nasa-ammos.github.io/slim/?search=SLIM%20Best%20Practice%20Creator)**
+1. Install: [View in marketplace](https://nasa-ammos.github.io/slim/?search=SLIM%20Best%20Practice%20Creator)
 2. Open your AI tool (Claude Code, Cursor, Windsurf, Aider, etc.)
-3. Ask: "Create a new skill for [your best practice]"
+3. Ask: "Create a new skill for [your ai plugin]"
 4. Follow the interactive prompts
 
 The skill creator handles everything: folder structure, templates, registry updates, and validation.

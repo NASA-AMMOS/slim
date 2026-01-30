@@ -1,5 +1,5 @@
 ---
-title: Contributing to GenAI Marketplace
+title: Contributing Guide
 ---
 
 # Contributing to GenAI Marketplace
