@@ -1,12 +1,12 @@
 # Frequently Asked Questions (FAQ)
 
-> _Common questions about SLIM, the catalog, and how to get started with AI-powered best practices._
+> _Common questions about GenAI Marketplace, the catalog, and how to get started with AI-powered best practices._
 
 ---
 
-### Q: What use cases is SLIM for?
+### Q: What use cases is GenAI Marketplace for?
 
-SLIM automates best practices across the entire software development lifecycle. Use SLIM to:
+GenAI Marketplace automates best practices across the entire GenAI development lifecycle. Use GenAI Marketplace to:
 
 - Generate and maintain changelogs, READMEs, and documentation
 - Create meeting agendas and summaries with action items
@@ -20,13 +20,13 @@ SLIM automates best practices across the entire software development lifecycle. 
 - Create custom workflows and skill templates
 - and more...
 
-SLIM is ideal for standardizing practices across projects, onboarding teams faster, and modernizing codebases without manual implementation.
+GenAI Marketplace is ideal for standardizing practices across projects, onboarding teams faster, and modernizing codebases without manual implementation.
 
 ---
 
-### Q: What do I need to leverage SLIM best practices?
+### Q: What do I need to leverage GenAI Marketplace best practices?
 
-To use SLIM best practices effectively, you're recommended to have an AI agent installed such as:
+To use GenAI Marketplace best practices effectively, you're recommended to have an AI agent installed such as:
 
 - **Claude Code** - Command-line AI agent by Anthropic
 - **Cursor** - AI-powered code editor
@@ -47,26 +47,26 @@ Once you have an AI agent installed, browse the [marketplace](/) and select any 
 
 **Combining Multiple Best Practices:**
 
-The real power of SLIM comes from combining multiple best practices in a single request. Your AI agent will intelligently invoke the appropriate tools and skills as needed. For example, you can say:
+The real power of GenAI Marketplace comes from combining multiple best practices in a single request. Your AI agent will intelligently invoke the appropriate tools and skills as needed. For example, you can say:
 
 - _"Set up my project with a README, changelog, and MIT license"_ - The AI will automatically use the README Generator, Changelog Manager, and License Setup skills
 - _"Initialize governance for my project including a code of conduct, contributing guidelines, and issue templates"_ - The AI orchestrates multiple governance artifacts
 - _"Prepare my project for open source with proper documentation, licensing, and governance"_ - The AI determines which best practices are needed and applies them in the right order
 
-Your AI agent understands the context and dependencies, automatically chaining together the necessary SLIM artifacts to accomplish your goal. This makes it easy to modernize entire aspects of your project with a single natural language request.
+Your AI agent understands the context and dependencies, automatically chaining together the necessary artifacts to accomplish your goal. This makes it easy to modernize entire aspects of your project with a single natural language request.
 
 ---
 
-### Q: I want to use SLIM for project-specific tasks that involve knowing about my project - not just the code, but the team, scope, requirements, experiments, etc. How do I get started?
+### Q: I want to use GenAI Marketplace for project-specific tasks that involve knowing about my project - not just the code, but the team, scope, requirements, experiments, etc. How do I get started?
 
-For project-aware tasks that go beyond just code, we recommend starting with the **[SLIM Project-Aware Workspace](/?search=New%20Project-Aware%20Workspace)** skill. This skill sets up a project-ready workspace environment with:
+For project-aware tasks that go beyond just code, we recommend starting with the **[Project-Aware Workspace](/?search=New%20Project-Aware%20Workspace)** skill. This skill sets up a project-ready workspace environment with:
 
 - **Date-organized dynamic folders** for daily work
 - **A static folder** for project context (team info, requirements, scope, etc.)
 - **Integration tracking** for tools and services (MCP servers, APIs, scripts)
 - **Organized structure** for meeting notes, summaries, and action items
 
-Once you have the workspace set up, you can leverage several other SLIM artifacts that depend on it:
+Once you have the workspace set up, you can leverage several other artifacts that depend on it:
 
 - **[Meeting Summary Generator](/?search=Meeting%20Summary)** - Automatically generates comprehensive meeting summaries with action items, using context from your project workspace
 - **[Meeting Agenda Generator](/?search=Meeting%20Agenda)** - Creates meeting agendas by pulling context from previous summaries, GitHub issues, Slack discussions, and other project information
@@ -75,17 +75,17 @@ Once you have the workspace set up, you can leverage several other SLIM artifact
 
 ---
 
-### Q: I want to customize the SLIM website for my own project and provide a catalog for my own AI skills, agents, MCP servers, etc. How do I do that?
+### Q: I want to customize the GenAI Marketplace website for my own project and provide a catalog for my own AI skills, agents, MCP servers, etc. How do I do that?
 
-You can easily customize the SLIM website for your own organization! Here's how:
+You can easily customize the GenAI Marketplace website for your own organization! Here's how:
 
 **Step 1: Fork or Clone the Repository**
 
-Start by forking or cloning the [SLIM GitHub repository](https://github.com/nasa-ammos/slim). This gives you a complete copy of the website that you can customize.
+Start by forking or cloning the [GenAI Marketplace GitHub repository](https://github.jpl.nasa.gov/GenAI/genai-marketplace). This gives you a complete copy of the website that you can customize.
 
 **Step 2: Rebrand the Website (Optional)**
 
-If you want to update the look and feel to match your organization's branding, you can use the **[SLIM Rebranding Agent](/?search=Rebranding)** from the catalog. This agent can help you update colors, logos, names, and other visual elements throughout the site.
+If you want to update the look and feel to match your organization's branding, you can use the **[Rebranding Agent](/?search=Rebranding)** from the catalog. This agent can help you update colors, logos, names, and other visual elements throughout the site.
 
 **Step 3: Customize Your Catalog**
 
@@ -101,15 +101,15 @@ To add your own artifacts:
 
 **Step 4: Deploy**
 
-You can host your customized SLIM website for free using **GitHub Pages**. Just enable GitHub Pages in your repository settings, and your catalog will be live!
+You can host your customized website using **GitHub Pages**. Just enable GitHub Pages in your repository settings, and your catalog will be live!
 
 **Pro tip:** Check out the existing artifacts in the marketplace folder to see examples of how to structure your own.
 
 ---
 
-### Q: What's the difference between Skills, Agents, and MCP Servers in the SLIM catalog?
+### Q: What's the difference between Skills, Agents, and MCP Servers in the catalog?
 
-SLIM provides three types of AI artifacts, each serving different purposes:
+GenAI Marketplace provides three types of AI artifacts, each serving different purposes:
 
 **Skills**
 
@@ -127,25 +127,25 @@ MCP (Model Context Protocol) Servers are integrations that connect AI agents to 
 
 ---
 
-### Q: How do I contribute my own best practice to the SLIM catalog?
+### Q: How do I contribute my own best practice to the catalog?
 
-We welcome contributions from the community! Here's how to add your own best practice:
+We welcome contributions from the JPL GenAI community! Here's how to add your own best practice:
 
 1. **Review the guidelines:** Check out the [Submit a Best Practice](/docs/contribute/submit-best-practice) documentation to understand the requirements and structure
-2. **Create your artifact:** Develop your skill, agent, or MCP server following SLIM's structure and conventions
+2. **Create your artifact:** Develop your skill, agent, or MCP server following the structure and conventions
 3. **Test thoroughly:** Make sure your artifact works as expected and includes clear documentation
 4. **Submit a pull request:** Add your artifact to the appropriate marketplace folder and update the registry.json file
-5. **Community review:** The SLIM team and community will review your submission and provide feedback
+5. **Community review:** The GenAI team will review your submission and provide feedback
 
-Your contribution helps the entire software engineering community modernize their practices. Thank you for giving back!
+Your contribution helps the entire JPL GenAI community modernize their practices. Thank you for giving back!
 
 **→ [Full contribution guide](/docs/contribute/submit-best-practice)**
 
 ---
 
-### Q: Can I use SLIM best practices with my existing CI/CD pipeline?
+### Q: Can I use GenAI Marketplace best practices with my existing CI/CD pipeline?
 
-Yes! SLIM best practices are designed to complement and enhance your existing workflows. Many SLIM artifacts can be:
+Yes! GenAI Marketplace best practices are designed to complement and enhance your existing workflows. Many artifacts can be:
 
 - Integrated into GitHub Actions or other CI/CD tools
 - Run as part of pre-commit hooks
@@ -153,7 +153,7 @@ Yes! SLIM best practices are designed to complement and enhance your existing wo
 - Used for code review automation
 - Incorporated into release processes
 
-The artifacts are flexible and can be adapted to fit your team's specific workflow. Many organizations use SLIM to automate repetitive tasks like generating changelogs, creating documentation, enforcing governance policies, and maintaining consistency across projects.
+The artifacts are flexible and can be adapted to fit your team's specific workflow. Many teams use GenAI Marketplace to automate repetitive tasks like generating changelogs, creating documentation, enforcing governance policies, and maintaining consistency across projects.
 
 **Tip:** Start small by integrating one or two artifacts that address your team's biggest pain points, then expand from there.
 
@@ -163,4 +163,6 @@ The artifacts are flexible and can be adapted to fit your team's specific workfl
 
 Join our community discussions or reach out on GitHub!
 
-**→ [GitHub Discussions](https://github.com/NASA-AMMOS/slim/discussions)**
+**→ [GitHub Discussions](https://github.jpl.nasa.gov/GenAI/genai-marketplace/discussions)**
+
+**→ Contact: [rishi.verma@jpl.nasa.gov](mailto:rishi.verma@jpl.nasa.gov)**

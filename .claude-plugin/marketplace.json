@@ -1,11 +1,11 @@
 {
-  "name": "slim-marketplace",
+  "name": "genai-marketplace",
   "owner": {
-    "name": "NASA AMMOS",
-    "email": "slim@jpl.nasa.gov"
+    "name": "Jet Propulsion Laboratory",
+    "email": "rishi.verma@jpl.nasa.gov"
   },
   "metadata": {
-    "description": "SLIM - Software Lifecycle Improvement & Modernization best practices",
+    "description": "GenAI Marketplace - AI-powered skills, agents, and MCP servers for GenAI development at JPL",
     "version": "1.0.0"
   },
   "plugins": [

@@ -4,13 +4,13 @@ sidebar_position: 1
 
 # Submit a Best Practice
 
-Want to share your expertise with the SLIM community? Here's how to contribute a best practice as a skill, agent, or guide.
+Want to share your expertise with the JPL GenAI community? Here's how to contribute a best practice as a skill, agent, or guide.
 
 ## Quick Start
 
 **3 simple steps:**
 
-1. **Create an issue** - [Start here](https://github.com/NASA-AMMOS/slim/issues/new) to discuss your idea
+1. **Create an issue** - [Start here](https://github.jpl.nasa.gov/GenAI/genai-marketplace/issues/new) to discuss your idea
 2. **Build your contribution** - Create a skill, agent, or guide
 3. **Submit a pull request** - We'll review and help you merge it
 
@@ -19,8 +19,8 @@ Want to share your expertise with the SLIM community? Here's how to contribute a
 ## Step 1: Create an Issue
 
 **Before coding, discuss your idea:**
-- [Browse existing issues](https://github.com/NASA-AMMOS/slim/issues) to avoid duplicates
-- [Create a new issue](https://github.com/NASA-AMMOS/slim/issues/new/choose) using a template:
+- [Browse existing issues](https://github.jpl.nasa.gov/GenAI/genai-marketplace/issues) to avoid duplicates
+- [Create a new issue](https://github.jpl.nasa.gov/GenAI/genai-marketplace/issues/new/choose) using a template:
   - "New Best Practice Guide"
   - "Improve Existing Guide"
   - "New Process Improvement Need"
@@ -33,18 +33,18 @@ Want to share your expertise with the SLIM community? Here's how to contribute a
 
 ### Option A: Use the Skill Creator (Recommended)
 
-The easiest way to create a new skill is with **[slim-skill-creator](https://nasa-ammos.github.io/slim/?search=SLIM%20Skill%20Creator)**:
+The easiest way to create a new skill is with **[skill-creator](/?search=Skill%20Creator)**:
 
-1. Install: [View in marketplace](https://nasa-ammos.github.io/slim/?search=SLIM%20Skill%20Creator)
+1. Install: [View in marketplace](/?search=Skill%20Creator)
 2. Open your AI tool (Claude Code, Cursor, Windsurf, Aider, etc.)
-3. Ask: "Create a new SLIM skill for [your best practice]"
+3. Ask: "Create a new skill for [your best practice]"
 4. Follow the interactive prompts
 
 The skill creator handles everything: folder structure, templates, registry updates, and validation.
 
 ### Option B: Create Manually
 
-**SLIM emphasizes automation through:**
+**GenAI Marketplace emphasizes automation through:**
 - **Skills** - AI-powered workflows for best practices ([learn more](https://agentskills.io/home))
 - **Agents** - Autonomous multi-step operations
 - **MCP Servers** - External service integrations
@@ -77,7 +77,7 @@ Add to `.claude-plugin/marketplace.json`:
 }
 ```
 
-NOTE: make sure to add your entry to the marketplace place JSON - that will ensure it gets properly detected and then inserted or updated into the `/maap-ai/static/data/registry.json` file.
+NOTE: make sure to add your entry to the marketplace JSON - that will ensure it gets properly detected and then inserted or updated into the `/static/data/registry.json` file.
 
 **Need help?** See [skill development best practices](https://platform.claude.com/docs/en/agents-and-tools/agent-skills/best-practices)
 
@@ -86,10 +86,10 @@ NOTE: make sure to add your entry to the marketplace place JSON - that will ensu
 ## Step 3: Submit Your Pull Request
 
 **Set up your fork:**
-1. Fork [NASA-AMMOS/slim](https://github.com/NASA-AMMOS/slim)
-2. Clone: `git clone https://github.com/YourUsername/slim.git`
+1. Fork [GenAI/genai-marketplace](https://github.jpl.nasa.gov/GenAI/genai-marketplace)
+2. Clone: `git clone https://github.jpl.nasa.gov/YourUsername/genai-marketplace.git`
 3. Work on the `main` branch
-4. Enable GitHub Pages for preview at `https://your-username.github.io/slim`
+4. Enable GitHub Pages for preview
 
 **Submit as draft:**
 1. Push your changes to your fork
@@ -99,8 +99,8 @@ NOTE: make sure to add your entry to the marketplace place JSON - that will ensu
 5. Mark "Ready for review" when complete
 
 **Get feedback:**
-- Tag `@slim-community` or `@slim-committers` for faster review
-- Share in [discussions](https://github.com/NASA-AMMOS/slim/discussions)
+- Tag team members for faster review
+- Share in [discussions](https://github.jpl.nasa.gov/GenAI/genai-marketplace/discussions)
 - Address review comments promptly
 
 **Stay synced:**
@@ -115,7 +115,7 @@ git merge upstream/main
 
 **We'll check for:**
 - ✅ Clear purpose and documentation
-- ✅ Follows SLIM standards
+- ✅ Follows marketplace standards
 - ✅ Works with multiple AI tools
 - ✅ Proper registry entry
 - ✅ Live demo link provided
@@ -127,15 +127,14 @@ git merge upstream/main
 ## Resources
 
 ### Skill Development
-- [slim-skill-creator](https://nasa-ammos.github.io/slim/?search=SLIM%20Skill%20Creator) - Automate skill creation (recommended)
+- [skill-creator](/?search=Skill%20Creator) - Automate skill creation (recommended)
 - [AgentSkills.io](https://agentskills.io/home) - Community patterns & best practices
 - [Claude Skills Guide](https://platform.claude.com/docs/en/agents-and-tools/agent-skills/best-practices) - Official documentation
-- [SLIM Process Overview](/slim/docs/about/#our-process) - High-level workflow
+- [Process Overview](/docs/about/#our-process) - High-level workflow
 
 ### Getting Help
-- [Discussions](https://github.com/NASA-AMMOS/slim/discussions) - Ask questions
-- [Issues](https://github.com/NASA-AMMOS/slim/issues) - Report problems
-- [Planning Board](https://github.com/orgs/NASA-AMMOS/projects/3/views/4) - Current priorities
+- [Discussions](https://github.jpl.nasa.gov/GenAI/genai-marketplace/discussions) - Ask questions
+- [Issues](https://github.jpl.nasa.gov/GenAI/genai-marketplace/issues) - Report problems
 
 ---
 
@@ -156,4 +155,4 @@ git merge upstream/main
 
 ---
 
-**Questions?** Ask in [discussions](https://github.com/NASA-AMMOS/slim/discussions) or create an [issue](https://github.com/NASA-AMMOS/slim/issues).
+**Questions?** Ask in [discussions](https://github.jpl.nasa.gov/GenAI/genai-marketplace/discussions), create an [issue](https://github.jpl.nasa.gov/GenAI/genai-marketplace/issues), or contact [rishi.verma@jpl.nasa.gov](mailto:rishi.verma@jpl.nasa.gov).
