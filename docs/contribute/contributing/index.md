@@ -25,7 +25,7 @@ Share your expertise by creating a new skill, agent, or guide.
 
 **Quick start:** Use [skill-creator](/?search=Skill%20Creator) to automate the process.
 
-**→ [See the full guide](/docs/contribute/submit-best-practice)**
+**→ [See the full guide](/docs/contribute/submit-ai-plugin)**
 
 ### 🐛 Report a Bug
 Found something broken? [Create an issue](https://github.jpl.nasa.gov/GenAI/genai-marketplace/issues/new) with details.

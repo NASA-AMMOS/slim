@@ -131,7 +131,7 @@ MCP (Model Context Protocol) Servers are integrations that connect AI agents to 
 
 We welcome contributions from the JPL GenAI community! Here's how to add your own best practice:
 
-1. **Review the guidelines:** Check out the [Submit a Best Practice](/docs/contribute/submit-best-practice) documentation to understand the requirements and structure
+1. **Review the guidelines:** Check out the [Submit an AI Plugin](/docs/contribute/submit-ai-plugin) documentation to understand the requirements and structure
 2. **Create your artifact:** Develop your skill, agent, or MCP server following the structure and conventions
 3. **Test thoroughly:** Make sure your artifact works as expected and includes clear documentation
 4. **Submit a pull request:** Add your artifact to the appropriate marketplace folder and update the registry.json file
@@ -139,7 +139,7 @@ We welcome contributions from the JPL GenAI community! Here's how to add your ow
 
 Your contribution helps the entire JPL GenAI community modernize their practices. Thank you for giving back!
 
-**→ [Full contribution guide](/docs/contribute/submit-best-practice)**
+**→ [Full contribution guide](/docs/contribute/submit-ai-plugin)**
 
 ---
 

@@ -2,7 +2,7 @@
 sidebar_position: 1
 ---
 
-# Submit a Best Practice
+# Submit a an AI marketplace plugin
 
 Want to share your expertise with the JPL GenAI community? Here's how to contribute a best practice as a skill, agent, or guide.
 

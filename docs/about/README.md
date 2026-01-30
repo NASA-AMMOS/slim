@@ -59,7 +59,7 @@ Our marketplace includes best practices across numerous categories related to Ge
 
 ### For Contributors
 
-GenAI Marketplace is community-driven. [Contribute](/docs/contribute/submit-best-practice) by:
+GenAI Marketplace is community-driven. [Contribute](/docs/contribute/submit-ai-plugin) by:
 - Creating new skills or agents
 - Improving existing best practices
 - Sharing your expertise
@@ -93,6 +93,6 @@ Solutions are available via the marketplace.
 **Get Started:**
 - [Browse Marketplace](https://github.jpl.nasa.gov/pages/GenAI/genai-marketplace/)
 - [Contribute](/docs/contribute/contributing)
-- [Submit a Best Practice](/docs/contribute/submit-best-practice)
+- [Submit an AI Plugin](/docs/contribute/submit-ai-plugin)
 
 **Contact:** [rishi.verma@jpl.nasa.gov](mailto:rishi.verma@jpl.nasa.gov)
