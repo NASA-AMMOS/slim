@@ -1,0 +1,1 @@
+"use strict";(globalThis.webpackChunkgenai_marketplace=globalThis.webpackChunkgenai_marketplace||[]).push([[4361],{5962:a=>{a.exports=JSON.parse('{"metadata":{"permalink":"/pages/GenAI/genai-marketplace/blog","page":1,"postsPerPage":10,"totalPages":1,"totalCount":4,"blogDescription":"Blog","blogTitle":"Blog"}}')}}]);

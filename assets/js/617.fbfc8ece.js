@@ -1,0 +1,1 @@
+"use strict";(globalThis.webpackChunkgenai_marketplace=globalThis.webpackChunkgenai_marketplace||[]).push([[617],{617:(e,a,c)=>{c.d(a,{createPieServices:()=>i.f});var i=c(9150);c(7960)}}]);
