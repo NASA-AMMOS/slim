@@ -1,1 +1,0 @@
-"use strict";(globalThis.webpackChunkgenai_marketplace=globalThis.webpackChunkgenai_marketplace||[]).push([[1903],{1912:a=>{a.exports=JSON.parse('{"blogBasePath":"/pages/GenAI/genai-marketplace/blog","blogTitle":"Blog","authorsListPath":"/pages/GenAI/genai-marketplace/blog/authors"}')}}]);

@@ -1,1 +1,0 @@
-"use strict";(globalThis.webpackChunkgenai_marketplace=globalThis.webpackChunkgenai_marketplace||[]).push([[6366],{6366:(e,a,c)=>{c.d(a,{createArchitectureServices:()=>r.S});var r=c(8980);c(7960)}}]);

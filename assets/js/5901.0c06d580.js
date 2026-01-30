@@ -1,1 +1,0 @@
-"use strict";(globalThis.webpackChunkgenai_marketplace=globalThis.webpackChunkgenai_marketplace||[]).push([[5901],{5901:(e,a,c)=>{c.d(a,{createTreemapServices:()=>r.d});var r=c(1633);c(7960)}}]);
