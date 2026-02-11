@@ -1327,17 +1327,18 @@ const SkillBrowser = ({ searchTerm, setSearchTerm, isSearchActive }) => {
         return registryPath;
       }
       // Local path - convert to Docusaurus static file URL
+      const docBaseUrl = siteConfig.baseUrl || "/";
       if (registryPath.startsWith("./static/")) {
         // Remove './static/' prefix since Docusaurus serves static files directly
         const staticPath = registryPath.substring("./static/".length);
-        return `${baseUrl}/slim/${staticPath}`;
+        return `${baseUrl}${docBaseUrl}${staticPath}`;
       }
       if (registryPath.startsWith("./")) {
-        return `${baseUrl}/slim/${registryPath.substring(2)}`;
+        return `${baseUrl}${docBaseUrl}${registryPath.substring(2)}`;
       }
-      return `${baseUrl}/slim/${registryPath}`;
+      return `${baseUrl}${docBaseUrl}${registryPath}`;
     },
-    [baseUrl],
+    [baseUrl, siteConfig.baseUrl],
   );
 
   // Helper function to get registry base URL for zip resolution
@@ -1350,10 +1351,11 @@ const SkillBrowser = ({ searchTerm, setSearchTerm, isSearchActive }) => {
         const url = new URL(registryPath);
         return `${url.protocol}//${url.host}`;
       }
-      // Local path
-      return baseUrl;
+      // Local path - include the docusaurus baseUrl
+      const docBaseUrl = siteConfig.baseUrl || "/";
+      return `${baseUrl}${docBaseUrl}`.replace(/\/$/, ""); // Remove trailing slash
     },
-    [baseUrl],
+    [baseUrl, siteConfig.baseUrl],
   );
 
   // Load available registries from build-time config
