@@ -51,6 +51,11 @@ def create_ai_workspace_structure(workspace_name, base_path=".", templates_path=
     today_path.mkdir(exist_ok=True)
     print(f"✅ Created today's folder: {today_path} ({today})")
 
+    # Create assets subdirectory for code repositories
+    assets_path = workspace_path / "assets"
+    assets_path.mkdir(exist_ok=True)
+    print(f"✅ Created assets directory: {assets_path}")
+
     # Create static subdirectory
     static_path = workspace_path / "static"
     static_path.mkdir(exist_ok=True)
@@ -99,6 +104,7 @@ def create_ai_workspace_structure(workspace_name, base_path=".", templates_path=
     print(f"📁 Workspace location: {workspace_path.resolve()}")
     print(f"   ├── AGENTS.md            # AI agent workspace guide")
     print(f"   ├── CLAUDE.md            # Symbolic link to AGENTS.md")
+    print(f"   ├── assets/              # Git repositories")
     print(f"   ├── dynamic/")
     print(f"   │   └── {today}/          # Today's work folder")
     print(f"   └── static/")
