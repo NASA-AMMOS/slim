@@ -229,7 +229,7 @@
     {
       "name": "slim-project-aware-workspace",
       "displayName": "SLIM Project-Aware Workspace",
-      "description": "Set up a project-aware workspace with date-organized dynamic folders for project-aware skill execution, tool integration tracking (MCP servers, APIs, scripts), and daily work organization. This is an essential skill for building advanced AI-driven workflows customized for your project. A number of other skills depend on this as a prerequisite.",
+      "description": "Set up a project-aware workspace with date-organized dynamic folders for project-aware skill execution, a dedicated assets directory for code repositories, tool integration tracking (MCP servers, APIs, scripts), and daily work organization. This is an essential skill for building advanced AI-driven workflows customized for your project. A number of other skills depend on this as a prerequisite.",
       "category": "infrastructure",
       "tags": [
         "workspace",
@@ -240,7 +240,7 @@
         "workflow",
         "organization"
       ],
-      "lastUpdated": "2025-01-05",
+      "lastUpdated": "2026-04-15",
       "skill_file_url": "/slim/marketplace/skills/slim-project-aware-workspace/SKILL.md",
       "type": "skill",
       "example": "Set up a new project-aware workspace",
