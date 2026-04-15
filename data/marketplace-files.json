@@ -377,7 +377,7 @@
           "name": "SKILL.md",
           "type": "file",
           "path": "SKILL.md",
-          "size": 5637
+          "size": 5796
         },
         {
           "name": "assets",
@@ -388,7 +388,7 @@
               "name": "AGENTS.md",
               "type": "file",
               "path": "assets/AGENTS.md",
-              "size": 5488
+              "size": 6152
             },
             {
               "name": "MEETINGS.md",
@@ -432,7 +432,7 @@
               "name": "create_ai_workspace.py",
               "type": "file",
               "path": "scripts/create_ai_workspace.py",
-              "size": 6508
+              "size": 6770
             }
           ],
           "fileCount": 1

@@ -7,7 +7,7 @@ description: Sets up a folder based project-aware workspace area on local disk w
 
 ## Overview
 
-Initialize an AI-powered task workspace folder strucuture that provides organization for running multiple skills within a project-aware environment. This skill creates a workspace foundation with date-based organization that enables other skills to operate efficiently while maintaining project context and daily work organization.
+Initialize an AI-powered task workspace folder structure that provides organization for running multiple skills within a project-aware environment. This skill creates a workspace foundation with date-based organization and a dedicated `assets/` directory for cloning and branching code repositories, enabling other skills to operate efficiently while maintaining project context and daily work organization.
 
 This skill should be used when:
 - Starting a new AI project or task that needs organized workspace structure
@@ -22,6 +22,7 @@ Example project-aware workspace folder structure that will be created:
 WorkspaceName/
 ├── AGENTS.md                  # AI agent workspace guide
 ├── CLAUDE.md                  # Symbolic link to AGENTS.md
+├── assets/                    # Git repositories (clone & modify code HERE)
 ├── dynamic/                   # Date-organized dynamic content
 │   └── 2024-12-24/           # Today's folder (YYYY-MM-DD format)
 │       └── [ready for skill subfolders]

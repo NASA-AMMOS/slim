@@ -14,6 +14,7 @@ Workspace/
 │   ├── MEETINGS.md     # Meeting notes and decisions
 │   ├── PRODUCTS.md     # Deliverables and product information
 │   └── TECH.md         # Technology stack and tool integrations
+├── assets/              # Git repositories (clone & modify code HERE)
 ├── dynamic/            # Agent work area (READ-WRITE for outputs)
 │   └── [DATE]/         # Today's folder (YYYY-MM-DD format)
 │       └── [task-folders] # Create subfolders for each task
@@ -21,6 +22,20 @@ Workspace/
 ```
 
 ## Agent Workflow
+
+### Step 0: Clone or Branch in `assets/`
+**ALL CODE WORK HAPPENS HERE** - Before modifying any code:
+
+1. **Clone repositories into `assets/`**:
+   - If the repo does not exist in `assets/`, clone it there
+   - Example: `git clone https://github.com/myorg/myrepo.git assets/myrepo`
+
+2. **If the repo already exists in `assets/`**:
+   - Do NOT re-clone — use the existing checkout
+   - Create a new branch for your work: `git checkout -b <descriptive-branch-name>`
+   - Branch names should describe the task (e.g., `fix-auth-timeout-bug`)
+
+3. **Never modify code outside of `assets/`**
 
 ### Step 1: Review Static Information
 **ALWAYS START HERE** - Before beginning any task:
