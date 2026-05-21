@@ -1,4 +1,16 @@
 {
+  "marketplace": {
+    "name": "slim-marketplace",
+    "owner": {
+      "name": "NASA AMMOS",
+      "email": "slim@jpl.nasa.gov"
+    },
+    "metadata": {
+      "description": "SLIM - Software Lifecycle Improvement & Modernization best practices",
+      "version": "1.0.0"
+    },
+    "source": "./static/marketplace"
+  },
   "skills": [
     {
       "name": "slim-changelog",
@@ -351,6 +363,11 @@
     {
       "name": "github-mcp-server",
       "description": "MCP server providing GitHub repository access and management capabilities including issues, PRs, and repository operations",
+      "external_only": true,
+      "source": {
+        "source": "github",
+        "repo": "https://github.com/github/github-mcp-server"
+      },
       "tags": [
         "github",
         "git",
@@ -371,8 +388,7 @@
       "displayName": "GitHub MCP Server",
       "example": "Give me information about this repository from GitHub. ",
       "category": "infrastructure",
-      "lastUpdated": "2026-01-05",
-      "zip_file_path": "assets/zip/github-mcp-server.zip"
+      "lastUpdated": "2026-01-05"
     }
   ],
   "metadata": {

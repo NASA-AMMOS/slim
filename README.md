@@ -7,7 +7,8 @@ An AI-native platform where DevOps best practices are discoverable and executabl
 This repository follows a "Single Source of Truth" philosophy:
 
 - **static/marketplace/**: Complete skills, agents, and MCP servers with content only (no metadata files)
-- **static/data/registry.json**: Manually curated marketplace metadata registry
+- **static/data/registry.json**: Hand-authored **source of truth** for all marketplace metadata
+- **.claude-plugin/marketplace.json**: Claude Code plugin manifest, **generated** from `registry.json` by `src/conf/generate-marketplace.js` (runs during `npm run prebuild`)
 - **website/**: Docusaurus-based website for browsing and discovering best practices
 
 ## Getting Started
@@ -29,11 +30,12 @@ gem install slim-<skill-name>
 ### For Contributors
 
 1. Add your skill content to `static/marketplace/skills/<skill-name>/` (SKILL.md, assets, scripts, etc.)
-2. Manually add/update the skill entry in `static/data/registry.json`
-3. Test the website: `cd website && npm run serve`
-4. Submit a pull request
+2. Add/update the skill entry in `static/data/registry.json`
+3. Run `npm run prebuild` to regenerate `.claude-plugin/marketplace.json`
+4. Test the website: `npm run serve`
+5. Commit both `registry.json` and `marketplace.json`, then submit a pull request
 
-**Note:** Skills contain only content files (SKILL.md, assets, scripts, references). All metadata is maintained in registry.json.
+**Note:** Skills contain only content files (SKILL.md, assets, scripts, references). All metadata is hand-authored in `registry.json`; `marketplace.json` is generated from it.
 
 ## Available Skills
 
