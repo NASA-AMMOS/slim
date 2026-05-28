@@ -59,25 +59,30 @@ marketplace/skills/your-skill-name/
 ```
 
 **Registry entry:**
-Add to `.claude-plugin/marketplace.json`:
+Add an entry to the `skills` array in `static/data/registry.json` — the
+hand-authored source of truth:
 ```json
 {
   "name": "your-skill-name",
+  "displayName": "Your Skill Display Name",
   "description": "What it does and when to use it",
-  "source": "./static/marketplace",
-  "strict": false,
-  "skills": ["./skills/your-skill-name"],
-  "keywords": [
+  "category": "documentation",
+  "tags": [
     "readme",
     "documentation",
     "project-setup",
     "templates",
     "onboarding"
-  ]
+  ],
+  "example": "Generate a README for this project",
+  "lastUpdated": "2026-01-01"
 }
 ```
 
-NOTE: make sure to add your entry to the marketplace place JSON - that will ensure it gets properly detected and then inserted or updated into the `/maap-ai/static/data/registry.json` file.
+NOTE: `static/data/registry.json` is the single source of truth. The Claude Code
+manifest `.claude-plugin/marketplace.json` is generated from it — run
+`npm run prebuild` after editing the registry, and commit both files. Derived
+fields (`type`, `skill_file_url`, `zip_file_path`) are filled in by the build.
 
 **Need help?** See [skill development best practices](https://platform.claude.com/docs/en/agents-and-tools/agent-skills/best-practices)
 

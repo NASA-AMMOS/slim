@@ -14,7 +14,9 @@
       "description": "Create and maintain human-readable changelogs for software projects using Keep a Changelog standards",
       "source": "./static/marketplace",
       "strict": false,
-      "skills": ["./skills/slim-changelog"],
+      "skills": [
+        "./skills/slim-changelog"
+      ],
       "keywords": [
         "changelog",
         "documentation",
@@ -28,7 +30,9 @@
       "description": "Create and implement code of conduct and collaboration policies using Contributor Covenant standards, with specialized templates for scientific research environments and academic citation",
       "source": "./static/marketplace",
       "strict": false,
-      "skills": ["./skills/slim-code-of-conduct"],
+      "skills": [
+        "./skills/slim-code-of-conduct"
+      ],
       "keywords": [
         "code-of-conduct",
         "governance",
@@ -43,7 +47,9 @@
       "description": "Implement Grype-based container and dependency vulnerability scanning with automated pre-commit hooks",
       "source": "./static/marketplace",
       "strict": false,
-      "skills": ["./skills/slim-container-vulnerability-scanning"],
+      "skills": [
+        "./skills/slim-container-vulnerability-scanning"
+      ],
       "keywords": [
         "vulnerability-scanning",
         "container",
@@ -58,7 +64,9 @@
       "description": "Implement comprehensive testing strategies with documentation and automation templates for static analysis, security scanning, and code quality checks",
       "source": "./static/marketplace",
       "strict": false,
-      "skills": ["./skills/slim-continuous-testing"],
+      "skills": [
+        "./skills/slim-continuous-testing"
+      ],
       "keywords": [
         "testing",
         "continuous-testing",
@@ -73,7 +81,9 @@
       "description": "Create comprehensive contributing guides for open source projects with workflow guidance and customizable templates",
       "source": "./static/marketplace",
       "strict": false,
-      "skills": ["./skills/slim-contributing-guide"],
+      "skills": [
+        "./skills/slim-contributing-guide"
+      ],
       "keywords": [
         "contributing",
         "open-source",
@@ -88,7 +98,9 @@
       "description": "Generate comprehensive executive summaries from workspace communication files using AI analysis with automatic context discovery",
       "source": "./static/marketplace",
       "strict": false,
-      "skills": ["./skills/slim-executive-summary"],
+      "skills": [
+        "./skills/slim-executive-summary"
+      ],
       "keywords": [
         "executive-summary",
         "ai-powered",
@@ -103,7 +115,9 @@
       "description": "Team governance templates for government-sponsored open source projects (small, medium, large teams)",
       "source": "./static/marketplace",
       "strict": false,
-      "skills": ["./skills/slim-governance"],
+      "skills": [
+        "./skills/slim-governance"
+      ],
       "keywords": [
         "governance",
         "templates",
@@ -118,7 +132,9 @@
       "description": "Add standardized GitHub issue templates for bug reports and feature requests in both Markdown and Form formats",
       "source": "./static/marketplace",
       "strict": false,
-      "skills": ["./skills/slim-issue-templates"],
+      "skills": [
+        "./skills/slim-issue-templates"
+      ],
       "keywords": [
         "issue-templates",
         "github",
@@ -133,7 +149,9 @@
       "description": "Detect project type and add appropriate NASA/Open Source licenses (Apache 2.0 or MIT)",
       "source": "./static/marketplace",
       "strict": false,
-      "skills": ["./skills/slim-license"],
+      "skills": [
+        "./skills/slim-license"
+      ],
       "keywords": [
         "license",
         "open-source",
@@ -149,7 +167,9 @@
       "description": "Generate comprehensive meeting agendas by orchestrating context gathering from previous summaries, querying external services (GitHub, Slack, etc. via TECH.md), and matching custom format templates. Automatically identifies and suggests generation of missing meeting summaries.",
       "source": "./static/marketplace",
       "strict": false,
-      "skills": ["./skills/slim-meeting-agenda"],
+      "skills": [
+        "./skills/slim-meeting-agenda"
+      ],
       "keywords": [
         "meeting-agenda",
         "collaboration",
@@ -165,7 +185,9 @@
       "description": "Generate comprehensive meeting summaries with action items from meeting notes, transcripts, or agendas. Automatically fulfills actionable tasks using tools discovered from TECH.md (MCP servers, APIs, local scripts) and provides guidance for manual tasks.",
       "source": "./static/marketplace",
       "strict": false,
-      "skills": ["./skills/slim-meeting-summary"],
+      "skills": [
+        "./skills/slim-meeting-summary"
+      ],
       "keywords": [
         "meeting-summary",
         "collaboration",
@@ -180,7 +202,9 @@
       "description": "Set up a project-aware workspace with date-organized dynamic folders for project-aware skill execution, a dedicated assets directory for code repositories, tool integration tracking (MCP servers, APIs, scripts), and daily work organization. This is an essential skill for building advanced AI-driven workflows customized for your project. A number of other skills depend on this as a prerequisite.",
       "source": "./static/marketplace",
       "strict": false,
-      "skills": ["./skills/slim-project-aware-workspace"],
+      "skills": [
+        "./skills/slim-project-aware-workspace"
+      ],
       "keywords": [
         "workspace",
         "project-aware",
@@ -196,7 +220,9 @@
       "description": "Create a comprehensive README.md template to help developers and users understand your project",
       "source": "./static/marketplace",
       "strict": false,
-      "skills": ["./skills/slim-readme"],
+      "skills": [
+        "./skills/slim-readme"
+      ],
       "keywords": [
         "readme",
         "documentation",
@@ -210,7 +236,9 @@
       "description": "Meta-skill for creating and integrating new best practices (skills, agents, MCP servers) into the SLIM marketplace with dependency tracking and automated registry updates",
       "source": "./static/marketplace",
       "strict": false,
-      "skills": ["./skills/slim-skill-creator"],
+      "skills": [
+        "./skills/slim-skill-creator"
+      ],
       "keywords": [
         "skill-creator",
         "marketplace",
@@ -222,42 +250,13 @@
       ]
     },
     {
-      "name": "github-mcp-server",
-      "source": {
-        "source": "github",
-        "repo": "https://github.com/github/github-mcp-server"
-      },
-      "description": "MCP server providing GitHub repository access and management capabilities including issues, PRs, and repository operations",
-      "version": "1.0.0",
-      "author": {
-        "name": "GitHub",
-        "url": "https://github.com/github/github-mcp-server"
-      },
-      "category": "integrations",
-      "homepage": "https://github.com/github/github-mcp-server",
-      "keywords": [
-        "github",
-        "git",
-        "integration",
-        "external",
-        "third-party",
-        "mcp-server",
-        "repository"
-      ]
-    },
-    {
       "name": "slim-rebranding",
-      "version": "1.0.2",
       "description": "Rebranding agent for branding the slim framework for a new project customized for a specific domain. main. Use this skill whenever you'd like to leverage the Slim Marketplace framework for a customized project, but you don't want to keep the slim branding.",
       "source": "./static/marketplace",
-      "author": {
-        "name": "NASA AMMOS",
-        "email": "slim@jpl.nasa.gov",
-        "url": "https://github.com/NASA-AMMOS"
-      },
-      "homepage": "https://github.com/NASA-AMMOS/slim/tree/main/static/marketplace/skills/slim-rebranding",
-      "repository": "https://github.com/NASA-AMMOS/slim",
-      "license": "Apache-2.0",
+      "strict": false,
+      "skills": [
+        "./skills/slim-rebranding"
+      ],
       "keywords": [
         "rebranding",
         "branding",
@@ -268,21 +267,24 @@
         "code-quality",
         "workflow"
       ],
-      "skills": ["./skills/slim-rebranding"]
-    },
-    {
-      "name": "slim-website-maker",
-      "version": "1.0.0",
-      "description": "Autonomous website generator skill for creating customized Docusaurus documentation websites. Analyzes project content, generates intelligent website structure, and validates changes with iterative build testing until successful. Creates git branch and commits with clear messages. Auto-detects project type and customizes accordingly. Use when generating project documentation websites, creating content-driven sites, or automating website creation with build validation.",
-      "source": "./static/marketplace",
+      "version": "1.0.2",
       "author": {
         "name": "NASA AMMOS",
         "email": "slim@jpl.nasa.gov",
         "url": "https://github.com/NASA-AMMOS"
       },
-      "homepage": "https://github.com/NASA-AMMOS/slim/tree/main/static/marketplace/agents/slim-website-maker",
+      "homepage": "https://github.com/NASA-AMMOS/slim/tree/main/static/marketplace/skills/slim-rebranding",
       "repository": "https://github.com/NASA-AMMOS/slim",
-      "license": "Apache-2.0",
+      "license": "Apache-2.0"
+    },
+    {
+      "name": "slim-website-maker",
+      "description": "Autonomous website generator skill for creating customized Docusaurus documentation websites. Analyzes project content, generates intelligent website structure, and validates changes with iterative build testing until successful. Creates git branch and commits with clear messages. Auto-detects project type and customizes accordingly. Use when generating project documentation websites, creating content-driven sites, or automating website creation with build validation.",
+      "source": "./static/marketplace",
+      "strict": false,
+      "skills": [
+        "./skills/slim-website-maker"
+      ],
       "keywords": [
         "website-maker",
         "docusaurus",
@@ -294,7 +296,39 @@
         "workflow",
         "deployment"
       ],
-      "skills": ["./skills/slim-website-maker"]
+      "version": "1.0.0",
+      "author": {
+        "name": "NASA AMMOS",
+        "email": "slim@jpl.nasa.gov",
+        "url": "https://github.com/NASA-AMMOS"
+      },
+      "homepage": "https://github.com/NASA-AMMOS/slim/tree/main/static/marketplace/agents/slim-website-maker",
+      "repository": "https://github.com/NASA-AMMOS/slim",
+      "license": "Apache-2.0"
+    },
+    {
+      "name": "github-mcp-server",
+      "description": "MCP server providing GitHub repository access and management capabilities including issues, PRs, and repository operations",
+      "source": {
+        "source": "github",
+        "repo": "https://github.com/github/github-mcp-server"
+      },
+      "external_only": true,
+      "keywords": [
+        "github",
+        "git",
+        "integration",
+        "external",
+        "third-party",
+        "mcp-server",
+        "repository"
+      ],
+      "version": "1.0.0",
+      "author": {
+        "name": "GitHub",
+        "url": "https://github.com/github/github-mcp-server"
+      },
+      "homepage": "https://github.com/github/github-mcp-server"
     }
   ]
 }

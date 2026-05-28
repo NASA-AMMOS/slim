@@ -1,0 +1,29 @@
+name: Registry sync check
+
+# registry.json is the hand-authored source of truth; marketplace.json is
+# generated from it. This check fails if the committed marketplace.json is
+# stale — contributors must run `npm run prebuild` and commit the result.
+
+on:
+  pull_request:
+  push:
+    branches:
+      - main
+
+jobs:
+  check:
+    name: Verify marketplace.json is in sync with registry.json
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 20
+
+      - name: Regenerate marketplace.json from registry.json
+        run: node src/conf/generate-marketplace.js
+
+      - name: Fail if marketplace.json / registry.json are out of sync
+        run: |
+          git diff --exit-code .claude-plugin/marketplace.json static/data/registry.json \
+            || (echo "::error::marketplace.json / registry.json out of sync — run 'npm run prebuild' and commit the result." && exit 1)

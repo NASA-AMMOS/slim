@@ -11,6 +11,8 @@ jobs:
   deploy:
     name: Deploy to GitHub Pages
     runs-on: ubuntu-latest
+    permissions:
+      contents: write # required for peaceiris/actions-gh-pages to publish to gh-pages
     steps:
       - uses: actions/checkout@v3
       - uses: actions/setup-node@v3

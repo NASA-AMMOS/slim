@@ -214,16 +214,8 @@ const config = {
     },
 
     slimConfig: {
-      localRegistrySources: [
-        {
-          type: "marketplace-json",
-          path: "./.claude-plugin/marketplace.json",
-          enabled: true,
-        },
-        // Future: Support for other types and URLs
-      ],
       registries: [
-        "./static/data/registry.json", // Local registry (generated from marketplace.json)
+        "./static/data/registry.json", // Local registry (hand-authored source of truth)
         // Future: Add remote registries like 'https://example.com/registry.json'
       ],
     },

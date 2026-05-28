@@ -373,7 +373,7 @@ const SkillCard = ({
             text="dark"
             style={{ fontSize: "0.7rem", fontWeight: "normal" }}
           >
-            {new Date(skill.lastUpdated).toLocaleDateString("en-US", {
+            {new Date(`${skill.lastUpdated}T00:00:00`).toLocaleDateString("en-US", {
               month: "short",
               day: "numeric",
               year: "numeric",
