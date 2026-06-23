@@ -356,6 +356,25 @@
       "category": "user-interface",
       "lastUpdated": "2025-08-12",
       "zip_file_path": "assets/zip/slim-website-maker.zip"
+    },
+    {
+      "name": "slim-badges",
+      "displayName": "Badges",
+      "description": "Add badges (the small status labels shown at the top of a README) to a repository, README, or document. Includes authorship badges that disclose how content was created (fully human-written, written with AI assistance, or AI-generated), a badge for crediting projects that follow SLIM best practices, and more. Badges are generated as shields.io images.",
+      "category": "collaboration/templates",
+      "tags": [
+        "badges",
+        "shields",
+        "authorship",
+        "ai",
+        "ai-disclosure",
+        "documentation"
+      ],
+      "lastUpdated": "2026-06-22",
+      "example": "Add a 100% Human Made badge to this README",
+      "type": "skill",
+      "skill_file_url": "/slim/marketplace/skills/slim-badges/SKILL.md",
+      "zip_file_path": "assets/zip/slim-badges.zip"
     }
   ],
   "agents": [],
