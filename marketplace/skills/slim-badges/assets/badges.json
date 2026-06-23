@@ -1,0 +1,49 @@
+{
+  "$comment": "Extensible badge catalog for the slim-badges skill. Each badge is generated via img.shields.io; a static SVG snapshot lives alongside this file. Add new badges by appending an entry that follows the same shape. Capitalization rule: title case, but the element after a hyphen stays lowercase unless it is an acronym or proper noun (e.g. 'AI-assisted', 'AI-generated').",
+  "badges": [
+    {
+      "id": "human-made",
+      "category": "authorship",
+      "label": "✍️ 100% Human Made",
+      "color": "green",
+      "image_url": "https://img.shields.io/badge/%E2%9C%8D%EF%B8%8F%20100%25%20Human%20Made-green",
+      "link_url": "https://nasa-ammos.github.io/slim/?search=slim-badges",
+      "snapshot": "human-made.svg",
+      "keywords": ["human", "human made", "human written", "human created", "100%", "no ai", "authorship"],
+      "description": "Signals a document written entirely by a human, with no AI generation."
+    },
+    {
+      "id": "ai-assisted",
+      "category": "authorship",
+      "label": "🧑‍💻 AI-assisted",
+      "color": "gold",
+      "image_url": "https://img.shields.io/badge/%F0%9F%A7%91%E2%80%8D%F0%9F%92%BB%20AI--assisted-gold",
+      "link_url": "https://nasa-ammos.github.io/slim/?search=slim-badges",
+      "snapshot": "ai-assisted.svg",
+      "keywords": ["ai assisted", "ai-assisted", "assisted", "human with ai", "copilot", "authorship"],
+      "description": "Signals a human-authored document created with AI help (drafting, editing, or suggestions)."
+    },
+    {
+      "id": "ai-generated",
+      "category": "authorship",
+      "label": "🤖 AI-generated",
+      "color": "red",
+      "image_url": "https://img.shields.io/badge/%F0%9F%A4%96%20AI--generated-red",
+      "link_url": "https://nasa-ammos.github.io/slim/?search=slim-badges",
+      "snapshot": "ai-generated.svg",
+      "keywords": ["ai generated", "ai-generated", "generated", "machine generated", "llm", "authorship"],
+      "description": "Signals a document primarily produced by an AI model."
+    },
+    {
+      "id": "slim-best-practices",
+      "category": "project",
+      "label": "Best Practices from SLIM",
+      "color": "blue",
+      "image_url": "https://img.shields.io/badge/Best%20Practices%20from-SLIM-blue",
+      "link_url": "https://nasa-ammos.github.io/slim/",
+      "snapshot": "slim-best-practices.svg",
+      "keywords": ["slim", "best practices", "nasa", "ammos", "project"],
+      "description": "Signals a project that follows SLIM (Software Lifecycle Improvement & Modernization) best practices."
+    }
+  ]
+}
