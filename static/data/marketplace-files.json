@@ -1,5 +1,56 @@
 {
   "skills": {
+    "slim-badges": {
+      "name": "slim-badges",
+      "type": "directory",
+      "children": [
+        {
+          "name": "SKILL.md",
+          "type": "file",
+          "path": "SKILL.md",
+          "size": 5845
+        },
+        {
+          "name": "assets",
+          "type": "directory",
+          "path": "assets",
+          "children": [
+            {
+              "name": "ai-assisted.svg",
+              "type": "file",
+              "path": "assets/ai-assisted.svg",
+              "size": 1076
+            },
+            {
+              "name": "ai-generated.svg",
+              "type": "file",
+              "path": "assets/ai-generated.svg",
+              "size": 1043
+            },
+            {
+              "name": "badges.json",
+              "type": "file",
+              "path": "assets/badges.json",
+              "size": 2567
+            },
+            {
+              "name": "human-made.svg",
+              "type": "file",
+              "path": "assets/human-made.svg",
+              "size": 1075
+            },
+            {
+              "name": "slim-best-practices.svg",
+              "type": "file",
+              "path": "assets/slim-best-practices.svg",
+              "size": 1351
+            }
+          ],
+          "fileCount": 5
+        }
+      ],
+      "fileCount": 6
+    },
     "slim-changelog": {
       "name": "slim-changelog",
       "type": "directory",
