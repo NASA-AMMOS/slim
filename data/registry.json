@@ -370,7 +370,7 @@
         "ai-disclosure",
         "documentation"
       ],
-      "lastUpdated": "2026-06-25",
+      "lastUpdated": "2026-06-26",
       "example": "Add an AI-assisted badge to this README",
       "type": "skill",
       "skill_file_url": "/slim/marketplace/skills/slim-badges/SKILL.md",
