@@ -371,7 +371,7 @@
         "documentation"
       ],
       "lastUpdated": "2026-06-25",
-      "example": "Add a 100% Human Made badge to this README",
+      "example": "Add an AI-assisted badge to this README",
       "type": "skill",
       "skill_file_url": "/slim/marketplace/skills/slim-badges/SKILL.md",
       "zip_file_path": "assets/zip/slim-badges.zip"
