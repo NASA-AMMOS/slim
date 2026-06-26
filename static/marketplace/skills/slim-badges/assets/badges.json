@@ -4,10 +4,10 @@
     {
       "id": "human-made",
       "category": "authorship",
-      "label": "Human-made",
+      "label": "100% Human Made",
       "alt": "Human-made: written entirely by a human, with no AI generation",
       "color": "green",
-      "image_url": "https://img.shields.io/static/v1?label=&message=Human-made&color=green",
+      "image_url": "https://img.shields.io/static/v1?label=&message=100%25%20Human%20Made&color=green",
       "link_url": "https://nasa-ammos.github.io/slim/?search=Badges",
       "snapshot": "human-made.svg",
       "keywords": ["human", "human made", "human written", "human created", "no ai", "authorship"],

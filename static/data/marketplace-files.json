@@ -8,7 +8,7 @@
           "name": "SKILL.md",
           "type": "file",
           "path": "SKILL.md",
-          "size": 7272
+          "size": 7309
         },
         {
           "name": "assets",
@@ -37,13 +37,13 @@
               "name": "badges.json",
               "type": "file",
               "path": "assets/badges.json",
-              "size": 3397
+              "size": 3413
             },
             {
               "name": "human-made.svg",
               "type": "file",
               "path": "assets/human-made.svg",
-              "size": 1008
+              "size": 1040
             },
             {
               "name": "slim-best-practices.svg",
