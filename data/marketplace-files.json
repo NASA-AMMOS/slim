@@ -8,7 +8,7 @@
           "name": "SKILL.md",
           "type": "file",
           "path": "SKILL.md",
-          "size": 5845
+          "size": 7272
         },
         {
           "name": "assets",
@@ -19,25 +19,31 @@
               "name": "ai-assisted.svg",
               "type": "file",
               "path": "assets/ai-assisted.svg",
-              "size": 1076
+              "size": 1016
+            },
+            {
+              "name": "ai-autonomous.svg",
+              "type": "file",
+              "path": "assets/ai-autonomous.svg",
+              "size": 1023
             },
             {
               "name": "ai-generated.svg",
               "type": "file",
               "path": "assets/ai-generated.svg",
-              "size": 1043
+              "size": 1018
             },
             {
               "name": "badges.json",
               "type": "file",
               "path": "assets/badges.json",
-              "size": 2567
+              "size": 3397
             },
             {
               "name": "human-made.svg",
               "type": "file",
               "path": "assets/human-made.svg",
-              "size": 1075
+              "size": 1008
             },
             {
               "name": "slim-best-practices.svg",
@@ -46,10 +52,10 @@
               "size": 1351
             }
           ],
-          "fileCount": 5
+          "fileCount": 6
         }
       ],
-      "fileCount": 6
+      "fileCount": 7
     },
     "slim-changelog": {
       "name": "slim-changelog",
